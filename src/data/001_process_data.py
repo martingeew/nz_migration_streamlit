@@ -61,6 +61,9 @@ def generalize_direction(value):
 # Apply the generalize_direction function to a specific column
 df_melted['Direction'] = df_melted['Direction'].apply(generalize_direction)
 
+# Convert the value column to int type
+df_melted['Value'] = df_melted['Value'].astype(int)
+
 # Display the modified DataFrame
 print(df_melted.head())
 
@@ -73,3 +76,4 @@ df_melted.dtypes
 # --------------------------------------------------------------
 
 df_melted.to_pickle("../../data/interim/df_citizenship_direction.pkl")
+df_melted.to_csv("../../data/interim/df_citizenship_direction.csv", index=False)
