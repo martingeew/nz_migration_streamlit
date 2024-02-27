@@ -70,10 +70,10 @@ print(df_arrivals_visa.dtypes)
 # Export
 # --------------------------------------------------------------
 
-df_raw_direction_citizen.to_pickle(
+df_direction_citizen.to_pickle(
     "../../data/interim/df_citizenship_direction_202312.pkl"
 )
-df_raw_direction_citizen.to_csv(
+df_direction_citizen.to_csv(
     "../../data/interim/df_citizenship_direction_202312.csv", index=False
 )
 
