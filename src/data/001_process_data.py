@@ -23,6 +23,11 @@ df_raw_direction_age_sex = pd.read_csv(
     "../../data/raw/direction_age_sex_202312.csv", header=[0, 1, 2]
 )
 
+# Load the new dataset
+df_raw_arrivals_visa = pd.read_csv(
+    "../../data/raw/arrivals_visa_202312.csv", header=[0, 1]
+)
+
 # --------------------------------------------------------------
 # 3. Process data
 # --------------------------------------------------------------
@@ -49,6 +54,18 @@ print(df_direction_age_sex.head())
 # Print dtypes
 print(df_direction_age_sex.dtypes)
 
+
+# Process the direction_citizenship data file into long format
+df_arrivals_visa = transform_dataframe_to_long_format(
+    df_raw_arrivals_visa, attributes=["Direction", "Visa"]
+)
+
+# Display the first few rows of the long-form DataFrame to verify the transformation
+print(df_arrivals_visa.head())
+
+# Print dtypes
+print(df_arrivals_visa.dtypes)
+
 # --------------------------------------------------------------
 # Export
 # --------------------------------------------------------------
@@ -64,3 +81,6 @@ df_direction_age_sex.to_pickle("../../data/interim/df_direction_age_sex_202312.p
 df_direction_age_sex.to_csv(
     "../../data/interim/df_direction_age_sex_202312.csv", index=False
 )
+
+df_arrivals_visa.to_pickle("../../data/interim/df_direction_visa_202312.pkl")
+df_arrivals_visa.to_csv("../../data/interim/df_direction_visa_202312.csv", index=False)

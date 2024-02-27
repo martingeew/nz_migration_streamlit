@@ -1,0 +1,1933 @@
+Month,Count,Direction,Visa
+2001-01-01,0,Arrivals,Residence
+2001-02-01,0,Arrivals,Residence
+2001-03-01,0,Arrivals,Residence
+2001-04-01,0,Arrivals,Residence
+2001-05-01,0,Arrivals,Residence
+2001-06-01,0,Arrivals,Residence
+2001-07-01,0,Arrivals,Residence
+2001-08-01,0,Arrivals,Residence
+2001-09-01,0,Arrivals,Residence
+2001-10-01,0,Arrivals,Residence
+2001-11-01,0,Arrivals,Residence
+2001-12-01,0,Arrivals,Residence
+2002-01-01,0,Arrivals,Residence
+2002-02-01,0,Arrivals,Residence
+2002-03-01,0,Arrivals,Residence
+2002-04-01,0,Arrivals,Residence
+2002-05-01,0,Arrivals,Residence
+2002-06-01,0,Arrivals,Residence
+2002-07-01,0,Arrivals,Residence
+2002-08-01,0,Arrivals,Residence
+2002-09-01,0,Arrivals,Residence
+2002-10-01,0,Arrivals,Residence
+2002-11-01,0,Arrivals,Residence
+2002-12-01,0,Arrivals,Residence
+2003-01-01,0,Arrivals,Residence
+2003-02-01,0,Arrivals,Residence
+2003-03-01,0,Arrivals,Residence
+2003-04-01,0,Arrivals,Residence
+2003-05-01,0,Arrivals,Residence
+2003-06-01,0,Arrivals,Residence
+2003-07-01,1894,Arrivals,Residence
+2003-08-01,1926,Arrivals,Residence
+2003-09-01,1741,Arrivals,Residence
+2003-10-01,1829,Arrivals,Residence
+2003-11-01,1834,Arrivals,Residence
+2003-12-01,1692,Arrivals,Residence
+2004-01-01,2100,Arrivals,Residence
+2004-02-01,1744,Arrivals,Residence
+2004-03-01,1235,Arrivals,Residence
+2004-04-01,1103,Arrivals,Residence
+2004-05-01,1217,Arrivals,Residence
+2004-06-01,1160,Arrivals,Residence
+2004-07-01,1449,Arrivals,Residence
+2004-08-01,1213,Arrivals,Residence
+2004-09-01,1403,Arrivals,Residence
+2004-10-01,1247,Arrivals,Residence
+2004-11-01,1355,Arrivals,Residence
+2004-12-01,1451,Arrivals,Residence
+2005-01-01,1845,Arrivals,Residence
+2005-02-01,1477,Arrivals,Residence
+2005-03-01,1302,Arrivals,Residence
+2005-04-01,1484,Arrivals,Residence
+2005-05-01,1418,Arrivals,Residence
+2005-06-01,1361,Arrivals,Residence
+2005-07-01,1502,Arrivals,Residence
+2005-08-01,1529,Arrivals,Residence
+2005-09-01,1732,Arrivals,Residence
+2005-10-01,1533,Arrivals,Residence
+2005-11-01,1679,Arrivals,Residence
+2005-12-01,1595,Arrivals,Residence
+2006-01-01,2013,Arrivals,Residence
+2006-02-01,1472,Arrivals,Residence
+2006-03-01,1496,Arrivals,Residence
+2006-04-01,1314,Arrivals,Residence
+2006-05-01,1391,Arrivals,Residence
+2006-06-01,1543,Arrivals,Residence
+2006-07-01,1657,Arrivals,Residence
+2006-08-01,1779,Arrivals,Residence
+2006-09-01,1902,Arrivals,Residence
+2006-10-01,1674,Arrivals,Residence
+2006-11-01,1646,Arrivals,Residence
+2006-12-01,1480,Arrivals,Residence
+2007-01-01,1967,Arrivals,Residence
+2007-02-01,1451,Arrivals,Residence
+2007-03-01,1338,Arrivals,Residence
+2007-04-01,1031,Arrivals,Residence
+2007-05-01,1046,Arrivals,Residence
+2007-06-01,1298,Arrivals,Residence
+2007-07-01,1336,Arrivals,Residence
+2007-08-01,1596,Arrivals,Residence
+2007-09-01,1532,Arrivals,Residence
+2007-10-01,1454,Arrivals,Residence
+2007-11-01,1375,Arrivals,Residence
+2007-12-01,1334,Arrivals,Residence
+2008-01-01,1662,Arrivals,Residence
+2008-02-01,1391,Arrivals,Residence
+2008-03-01,1241,Arrivals,Residence
+2008-04-01,1157,Arrivals,Residence
+2008-05-01,1183,Arrivals,Residence
+2008-06-01,1252,Arrivals,Residence
+2008-07-01,1196,Arrivals,Residence
+2008-08-01,1433,Arrivals,Residence
+2008-09-01,1474,Arrivals,Residence
+2008-10-01,1348,Arrivals,Residence
+2008-11-01,1350,Arrivals,Residence
+2008-12-01,1278,Arrivals,Residence
+2009-01-01,1728,Arrivals,Residence
+2009-02-01,1231,Arrivals,Residence
+2009-03-01,1195,Arrivals,Residence
+2009-04-01,1031,Arrivals,Residence
+2009-05-01,1065,Arrivals,Residence
+2009-06-01,1127,Arrivals,Residence
+2009-07-01,1192,Arrivals,Residence
+2009-08-01,1239,Arrivals,Residence
+2009-09-01,1389,Arrivals,Residence
+2009-10-01,1125,Arrivals,Residence
+2009-11-01,1211,Arrivals,Residence
+2009-12-01,1285,Arrivals,Residence
+2010-01-01,1498,Arrivals,Residence
+2010-02-01,975,Arrivals,Residence
+2010-03-01,1127,Arrivals,Residence
+2010-04-01,976,Arrivals,Residence
+2010-05-01,992,Arrivals,Residence
+2010-06-01,983,Arrivals,Residence
+2010-07-01,1042,Arrivals,Residence
+2010-08-01,1318,Arrivals,Residence
+2010-09-01,1233,Arrivals,Residence
+2010-10-01,1131,Arrivals,Residence
+2010-11-01,1110,Arrivals,Residence
+2010-12-01,1150,Arrivals,Residence
+2011-01-01,1350,Arrivals,Residence
+2011-02-01,1108,Arrivals,Residence
+2011-03-01,1176,Arrivals,Residence
+2011-04-01,983,Arrivals,Residence
+2011-05-01,1052,Arrivals,Residence
+2011-06-01,1088,Arrivals,Residence
+2011-07-01,1089,Arrivals,Residence
+2011-08-01,1202,Arrivals,Residence
+2011-09-01,1130,Arrivals,Residence
+2011-10-01,1175,Arrivals,Residence
+2011-11-01,1190,Arrivals,Residence
+2011-12-01,1241,Arrivals,Residence
+2012-01-01,1359,Arrivals,Residence
+2012-02-01,1061,Arrivals,Residence
+2012-03-01,1250,Arrivals,Residence
+2012-04-01,937,Arrivals,Residence
+2012-05-01,1157,Arrivals,Residence
+2012-06-01,1172,Arrivals,Residence
+2012-07-01,879,Arrivals,Residence
+2012-08-01,1280,Arrivals,Residence
+2012-09-01,1100,Arrivals,Residence
+2012-10-01,1186,Arrivals,Residence
+2012-11-01,1260,Arrivals,Residence
+2012-12-01,1211,Arrivals,Residence
+2013-01-01,1371,Arrivals,Residence
+2013-02-01,1036,Arrivals,Residence
+2013-03-01,1224,Arrivals,Residence
+2013-04-01,1050,Arrivals,Residence
+2013-05-01,962,Arrivals,Residence
+2013-06-01,974,Arrivals,Residence
+2013-07-01,988,Arrivals,Residence
+2013-08-01,1128,Arrivals,Residence
+2013-09-01,1189,Arrivals,Residence
+2013-10-01,1093,Arrivals,Residence
+2013-11-01,1187,Arrivals,Residence
+2013-12-01,1306,Arrivals,Residence
+2014-01-01,1307,Arrivals,Residence
+2014-02-01,1202,Arrivals,Residence
+2014-03-01,1320,Arrivals,Residence
+2014-04-01,1060,Arrivals,Residence
+2014-05-01,1011,Arrivals,Residence
+2014-06-01,1243,Arrivals,Residence
+2014-07-01,968,Arrivals,Residence
+2014-08-01,1347,Arrivals,Residence
+2014-09-01,1205,Arrivals,Residence
+2014-10-01,1331,Arrivals,Residence
+2014-11-01,1338,Arrivals,Residence
+2014-12-01,1179,Arrivals,Residence
+2015-01-01,1354,Arrivals,Residence
+2015-02-01,1133,Arrivals,Residence
+2015-03-01,1289,Arrivals,Residence
+2015-04-01,1012,Arrivals,Residence
+2015-05-01,1235,Arrivals,Residence
+2015-06-01,1201,Arrivals,Residence
+2015-07-01,996,Arrivals,Residence
+2015-08-01,1340,Arrivals,Residence
+2015-09-01,1270,Arrivals,Residence
+2015-10-01,1399,Arrivals,Residence
+2015-11-01,1314,Arrivals,Residence
+2015-12-01,1439,Arrivals,Residence
+2016-01-01,1413,Arrivals,Residence
+2016-02-01,1486,Arrivals,Residence
+2016-03-01,1621,Arrivals,Residence
+2016-04-01,1284,Arrivals,Residence
+2016-05-01,1340,Arrivals,Residence
+2016-06-01,1310,Arrivals,Residence
+2016-07-01,1340,Arrivals,Residence
+2016-08-01,1396,Arrivals,Residence
+2016-09-01,1504,Arrivals,Residence
+2016-10-01,1584,Arrivals,Residence
+2016-11-01,1450,Arrivals,Residence
+2016-12-01,1433,Arrivals,Residence
+2017-01-01,1528,Arrivals,Residence
+2017-02-01,1452,Arrivals,Residence
+2017-03-01,1438,Arrivals,Residence
+2017-04-01,1151,Arrivals,Residence
+2017-05-01,1311,Arrivals,Residence
+2017-06-01,1309,Arrivals,Residence
+2017-07-01,1268,Arrivals,Residence
+2017-08-01,1345,Arrivals,Residence
+2017-09-01,1184,Arrivals,Residence
+2017-10-01,1244,Arrivals,Residence
+2017-11-01,1169,Arrivals,Residence
+2017-12-01,1202,Arrivals,Residence
+2018-01-01,1504,Arrivals,Residence
+2018-02-01,933,Arrivals,Residence
+2018-03-01,1203,Arrivals,Residence
+2018-04-01,908,Arrivals,Residence
+2018-05-01,1167,Arrivals,Residence
+2018-06-01,956,Arrivals,Residence
+2018-07-01,998,Arrivals,Residence
+2018-08-01,1170,Arrivals,Residence
+2018-09-01,1005,Arrivals,Residence
+2018-10-01,1171,Arrivals,Residence
+2018-11-01,1055,Arrivals,Residence
+2018-12-01,1198,Arrivals,Residence
+2019-01-01,1302,Arrivals,Residence
+2019-02-01,960,Arrivals,Residence
+2019-03-01,1235,Arrivals,Residence
+2019-04-01,798,Arrivals,Residence
+2019-05-01,1075,Arrivals,Residence
+2019-06-01,1211,Arrivals,Residence
+2019-07-01,1064,Arrivals,Residence
+2019-08-01,1286,Arrivals,Residence
+2019-09-01,1329,Arrivals,Residence
+2019-10-01,1357,Arrivals,Residence
+2019-11-01,1417,Arrivals,Residence
+2019-12-01,1465,Arrivals,Residence
+2020-01-01,1423,Arrivals,Residence
+2020-02-01,1244,Arrivals,Residence
+2020-03-01,1027,Arrivals,Residence
+2020-04-01,88,Arrivals,Residence
+2020-05-01,135,Arrivals,Residence
+2020-06-01,339,Arrivals,Residence
+2020-07-01,440,Arrivals,Residence
+2020-08-01,584,Arrivals,Residence
+2020-09-01,526,Arrivals,Residence
+2020-10-01,730,Arrivals,Residence
+2020-11-01,545,Arrivals,Residence
+2020-12-01,569,Arrivals,Residence
+2021-01-01,659,Arrivals,Residence
+2021-02-01,614,Arrivals,Residence
+2021-03-01,732,Arrivals,Residence
+2021-04-01,753,Arrivals,Residence
+2021-05-01,765,Arrivals,Residence
+2021-06-01,805,Arrivals,Residence
+2021-07-01,762,Arrivals,Residence
+2021-08-01,560,Arrivals,Residence
+2021-09-01,395,Arrivals,Residence
+2021-10-01,574,Arrivals,Residence
+2021-11-01,648,Arrivals,Residence
+2021-12-01,707,Arrivals,Residence
+2022-01-01,543,Arrivals,Residence
+2022-02-01,318,Arrivals,Residence
+2022-03-01,1097,Arrivals,Residence
+2022-04-01,1362,Arrivals,Residence
+2022-05-01,1193,Arrivals,Residence
+2022-06-01,1289,Arrivals,Residence
+2022-07-01,1308,Arrivals,Residence
+2022-08-01,1576,Arrivals,Residence
+2022-09-01,1703,Arrivals,Residence
+2022-10-01,1409,Arrivals,Residence
+2022-11-01,2084,Arrivals,Residence
+2022-12-01,1883,Arrivals,Residence
+2023-01-01,1677,Arrivals,Residence
+2023-02-01,2214,Arrivals,Residence
+2023-03-01,3464,Arrivals,Residence
+2023-04-01,2604,Arrivals,Residence
+2023-05-01,2825,Arrivals,Residence
+2023-06-01,3060,Arrivals,Residence
+2023-07-01,2581,Arrivals,Residence
+2023-08-01,3473,Arrivals,Residence
+2023-09-01,2582,Arrivals,Residence
+2023-10-01,2037,Arrivals,Residence
+2023-11-01,2657,Arrivals,Residence
+2023-12-01,2278,Arrivals,Residence
+2001-01-01,0,Arrivals,Student
+2001-02-01,0,Arrivals,Student
+2001-03-01,0,Arrivals,Student
+2001-04-01,0,Arrivals,Student
+2001-05-01,0,Arrivals,Student
+2001-06-01,0,Arrivals,Student
+2001-07-01,0,Arrivals,Student
+2001-08-01,0,Arrivals,Student
+2001-09-01,0,Arrivals,Student
+2001-10-01,0,Arrivals,Student
+2001-11-01,0,Arrivals,Student
+2001-12-01,0,Arrivals,Student
+2002-01-01,0,Arrivals,Student
+2002-02-01,0,Arrivals,Student
+2002-03-01,0,Arrivals,Student
+2002-04-01,0,Arrivals,Student
+2002-05-01,0,Arrivals,Student
+2002-06-01,0,Arrivals,Student
+2002-07-01,0,Arrivals,Student
+2002-08-01,0,Arrivals,Student
+2002-09-01,0,Arrivals,Student
+2002-10-01,0,Arrivals,Student
+2002-11-01,0,Arrivals,Student
+2002-12-01,0,Arrivals,Student
+2003-01-01,0,Arrivals,Student
+2003-02-01,0,Arrivals,Student
+2003-03-01,0,Arrivals,Student
+2003-04-01,0,Arrivals,Student
+2003-05-01,0,Arrivals,Student
+2003-06-01,0,Arrivals,Student
+2003-07-01,2072,Arrivals,Student
+2003-08-01,940,Arrivals,Student
+2003-09-01,922,Arrivals,Student
+2003-10-01,643,Arrivals,Student
+2003-11-01,585,Arrivals,Student
+2003-12-01,354,Arrivals,Student
+2004-01-01,1464,Arrivals,Student
+2004-02-01,1865,Arrivals,Student
+2004-03-01,554,Arrivals,Student
+2004-04-01,777,Arrivals,Student
+2004-05-01,388,Arrivals,Student
+2004-06-01,539,Arrivals,Student
+2004-07-01,1259,Arrivals,Student
+2004-08-01,546,Arrivals,Student
+2004-09-01,559,Arrivals,Student
+2004-10-01,453,Arrivals,Student
+2004-11-01,417,Arrivals,Student
+2004-12-01,271,Arrivals,Student
+2005-01-01,1123,Arrivals,Student
+2005-02-01,1608,Arrivals,Student
+2005-03-01,510,Arrivals,Student
+2005-04-01,571,Arrivals,Student
+2005-05-01,375,Arrivals,Student
+2005-06-01,454,Arrivals,Student
+2005-07-01,1115,Arrivals,Student
+2005-08-01,578,Arrivals,Student
+2005-09-01,551,Arrivals,Student
+2005-10-01,415,Arrivals,Student
+2005-11-01,404,Arrivals,Student
+2005-12-01,354,Arrivals,Student
+2006-01-01,983,Arrivals,Student
+2006-02-01,1910,Arrivals,Student
+2006-03-01,610,Arrivals,Student
+2006-04-01,621,Arrivals,Student
+2006-05-01,406,Arrivals,Student
+2006-06-01,544,Arrivals,Student
+2006-07-01,1448,Arrivals,Student
+2006-08-01,616,Arrivals,Student
+2006-09-01,684,Arrivals,Student
+2006-10-01,581,Arrivals,Student
+2006-11-01,631,Arrivals,Student
+2006-12-01,500,Arrivals,Student
+2007-01-01,1254,Arrivals,Student
+2007-02-01,2257,Arrivals,Student
+2007-03-01,887,Arrivals,Student
+2007-04-01,845,Arrivals,Student
+2007-05-01,509,Arrivals,Student
+2007-06-01,856,Arrivals,Student
+2007-07-01,1722,Arrivals,Student
+2007-08-01,975,Arrivals,Student
+2007-09-01,947,Arrivals,Student
+2007-10-01,812,Arrivals,Student
+2007-11-01,823,Arrivals,Student
+2007-12-01,676,Arrivals,Student
+2008-01-01,1588,Arrivals,Student
+2008-02-01,2920,Arrivals,Student
+2008-03-01,1106,Arrivals,Student
+2008-04-01,970,Arrivals,Student
+2008-05-01,1006,Arrivals,Student
+2008-06-01,1031,Arrivals,Student
+2008-07-01,2522,Arrivals,Student
+2008-08-01,1289,Arrivals,Student
+2008-09-01,1114,Arrivals,Student
+2008-10-01,1062,Arrivals,Student
+2008-11-01,927,Arrivals,Student
+2008-12-01,679,Arrivals,Student
+2009-01-01,1706,Arrivals,Student
+2009-02-01,3298,Arrivals,Student
+2009-03-01,1240,Arrivals,Student
+2009-04-01,1139,Arrivals,Student
+2009-05-01,882,Arrivals,Student
+2009-06-01,897,Arrivals,Student
+2009-07-01,2460,Arrivals,Student
+2009-08-01,1053,Arrivals,Student
+2009-09-01,1183,Arrivals,Student
+2009-10-01,1008,Arrivals,Student
+2009-11-01,751,Arrivals,Student
+2009-12-01,497,Arrivals,Student
+2010-01-01,1711,Arrivals,Student
+2010-02-01,2884,Arrivals,Student
+2010-03-01,1067,Arrivals,Student
+2010-04-01,1006,Arrivals,Student
+2010-05-01,749,Arrivals,Student
+2010-06-01,985,Arrivals,Student
+2010-07-01,2612,Arrivals,Student
+2010-08-01,1496,Arrivals,Student
+2010-09-01,1478,Arrivals,Student
+2010-10-01,1360,Arrivals,Student
+2010-11-01,1019,Arrivals,Student
+2010-12-01,648,Arrivals,Student
+2011-01-01,1805,Arrivals,Student
+2011-02-01,3197,Arrivals,Student
+2011-03-01,1236,Arrivals,Student
+2011-04-01,1133,Arrivals,Student
+2011-05-01,836,Arrivals,Student
+2011-06-01,960,Arrivals,Student
+2011-07-01,2617,Arrivals,Student
+2011-08-01,1208,Arrivals,Student
+2011-09-01,1195,Arrivals,Student
+2011-10-01,988,Arrivals,Student
+2011-11-01,1039,Arrivals,Student
+2011-12-01,560,Arrivals,Student
+2012-01-01,1816,Arrivals,Student
+2012-02-01,3382,Arrivals,Student
+2012-03-01,1611,Arrivals,Student
+2012-04-01,924,Arrivals,Student
+2012-05-01,780,Arrivals,Student
+2012-06-01,880,Arrivals,Student
+2012-07-01,2398,Arrivals,Student
+2012-08-01,945,Arrivals,Student
+2012-09-01,1069,Arrivals,Student
+2012-10-01,1008,Arrivals,Student
+2012-11-01,820,Arrivals,Student
+2012-12-01,512,Arrivals,Student
+2013-01-01,1757,Arrivals,Student
+2013-02-01,2707,Arrivals,Student
+2013-03-01,1338,Arrivals,Student
+2013-04-01,914,Arrivals,Student
+2013-05-01,1006,Arrivals,Student
+2013-06-01,923,Arrivals,Student
+2013-07-01,2421,Arrivals,Student
+2013-08-01,1256,Arrivals,Student
+2013-09-01,1085,Arrivals,Student
+2013-10-01,1290,Arrivals,Student
+2013-11-01,1061,Arrivals,Student
+2013-12-01,686,Arrivals,Student
+2014-01-01,2162,Arrivals,Student
+2014-02-01,3464,Arrivals,Student
+2014-03-01,1760,Arrivals,Student
+2014-04-01,1435,Arrivals,Student
+2014-05-01,1471,Arrivals,Student
+2014-06-01,1653,Arrivals,Student
+2014-07-01,3873,Arrivals,Student
+2014-08-01,2389,Arrivals,Student
+2014-09-01,2373,Arrivals,Student
+2014-10-01,1966,Arrivals,Student
+2014-11-01,1917,Arrivals,Student
+2014-12-01,860,Arrivals,Student
+2015-01-01,3198,Arrivals,Student
+2015-02-01,4474,Arrivals,Student
+2015-03-01,2238,Arrivals,Student
+2015-04-01,1634,Arrivals,Student
+2015-05-01,1344,Arrivals,Student
+2015-06-01,1754,Arrivals,Student
+2015-07-01,4752,Arrivals,Student
+2015-08-01,2430,Arrivals,Student
+2015-09-01,2584,Arrivals,Student
+2015-10-01,2439,Arrivals,Student
+2015-11-01,2240,Arrivals,Student
+2015-12-01,975,Arrivals,Student
+2016-01-01,3098,Arrivals,Student
+2016-02-01,4621,Arrivals,Student
+2016-03-01,1845,Arrivals,Student
+2016-04-01,1558,Arrivals,Student
+2016-05-01,1482,Arrivals,Student
+2016-06-01,1517,Arrivals,Student
+2016-07-01,4030,Arrivals,Student
+2016-08-01,1637,Arrivals,Student
+2016-09-01,1846,Arrivals,Student
+2016-10-01,1689,Arrivals,Student
+2016-11-01,1619,Arrivals,Student
+2016-12-01,924,Arrivals,Student
+2017-01-01,2878,Arrivals,Student
+2017-02-01,4301,Arrivals,Student
+2017-03-01,1784,Arrivals,Student
+2017-04-01,1464,Arrivals,Student
+2017-05-01,1310,Arrivals,Student
+2017-06-01,1742,Arrivals,Student
+2017-07-01,4063,Arrivals,Student
+2017-08-01,1733,Arrivals,Student
+2017-09-01,1723,Arrivals,Student
+2017-10-01,1622,Arrivals,Student
+2017-11-01,1587,Arrivals,Student
+2017-12-01,1003,Arrivals,Student
+2018-01-01,2846,Arrivals,Student
+2018-02-01,4228,Arrivals,Student
+2018-03-01,1756,Arrivals,Student
+2018-04-01,1387,Arrivals,Student
+2018-05-01,1283,Arrivals,Student
+2018-06-01,1665,Arrivals,Student
+2018-07-01,4088,Arrivals,Student
+2018-08-01,1719,Arrivals,Student
+2018-09-01,1757,Arrivals,Student
+2018-10-01,1518,Arrivals,Student
+2018-11-01,1361,Arrivals,Student
+2018-12-01,1056,Arrivals,Student
+2019-01-01,2743,Arrivals,Student
+2019-02-01,3973,Arrivals,Student
+2019-03-01,1711,Arrivals,Student
+2019-04-01,1337,Arrivals,Student
+2019-05-01,1296,Arrivals,Student
+2019-06-01,1805,Arrivals,Student
+2019-07-01,4344,Arrivals,Student
+2019-08-01,2126,Arrivals,Student
+2019-09-01,1981,Arrivals,Student
+2019-10-01,2234,Arrivals,Student
+2019-11-01,1976,Arrivals,Student
+2019-12-01,1218,Arrivals,Student
+2020-01-01,3809,Arrivals,Student
+2020-02-01,5135,Arrivals,Student
+2020-03-01,1371,Arrivals,Student
+2020-04-01,3,Arrivals,Student
+2020-05-01,15,Arrivals,Student
+2020-06-01,37,Arrivals,Student
+2020-07-01,19,Arrivals,Student
+2020-08-01,46,Arrivals,Student
+2020-09-01,61,Arrivals,Student
+2020-10-01,32,Arrivals,Student
+2020-11-01,20,Arrivals,Student
+2020-12-01,20,Arrivals,Student
+2021-01-01,19,Arrivals,Student
+2021-02-01,31,Arrivals,Student
+2021-03-01,90,Arrivals,Student
+2021-04-01,65,Arrivals,Student
+2021-05-01,56,Arrivals,Student
+2021-06-01,323,Arrivals,Student
+2021-07-01,163,Arrivals,Student
+2021-08-01,135,Arrivals,Student
+2021-09-01,119,Arrivals,Student
+2021-10-01,101,Arrivals,Student
+2021-11-01,100,Arrivals,Student
+2021-12-01,143,Arrivals,Student
+2022-01-01,75,Arrivals,Student
+2022-02-01,96,Arrivals,Student
+2022-03-01,230,Arrivals,Student
+2022-04-01,297,Arrivals,Student
+2022-05-01,254,Arrivals,Student
+2022-06-01,671,Arrivals,Student
+2022-07-01,2046,Arrivals,Student
+2022-08-01,869,Arrivals,Student
+2022-09-01,1516,Arrivals,Student
+2022-10-01,1643,Arrivals,Student
+2022-11-01,1668,Arrivals,Student
+2022-12-01,1533,Arrivals,Student
+2023-01-01,2496,Arrivals,Student
+2023-02-01,4618,Arrivals,Student
+2023-03-01,2625,Arrivals,Student
+2023-04-01,2281,Arrivals,Student
+2023-05-01,1934,Arrivals,Student
+2023-06-01,2679,Arrivals,Student
+2023-07-01,4717,Arrivals,Student
+2023-08-01,2622,Arrivals,Student
+2023-09-01,2660,Arrivals,Student
+2023-10-01,2260,Arrivals,Student
+2023-11-01,1882,Arrivals,Student
+2023-12-01,1912,Arrivals,Student
+2001-01-01,0,Arrivals,Visitor
+2001-02-01,0,Arrivals,Visitor
+2001-03-01,0,Arrivals,Visitor
+2001-04-01,0,Arrivals,Visitor
+2001-05-01,0,Arrivals,Visitor
+2001-06-01,0,Arrivals,Visitor
+2001-07-01,0,Arrivals,Visitor
+2001-08-01,0,Arrivals,Visitor
+2001-09-01,0,Arrivals,Visitor
+2001-10-01,0,Arrivals,Visitor
+2001-11-01,0,Arrivals,Visitor
+2001-12-01,0,Arrivals,Visitor
+2002-01-01,0,Arrivals,Visitor
+2002-02-01,0,Arrivals,Visitor
+2002-03-01,0,Arrivals,Visitor
+2002-04-01,0,Arrivals,Visitor
+2002-05-01,0,Arrivals,Visitor
+2002-06-01,0,Arrivals,Visitor
+2002-07-01,0,Arrivals,Visitor
+2002-08-01,0,Arrivals,Visitor
+2002-09-01,0,Arrivals,Visitor
+2002-10-01,0,Arrivals,Visitor
+2002-11-01,0,Arrivals,Visitor
+2002-12-01,0,Arrivals,Visitor
+2003-01-01,0,Arrivals,Visitor
+2003-02-01,0,Arrivals,Visitor
+2003-03-01,0,Arrivals,Visitor
+2003-04-01,0,Arrivals,Visitor
+2003-05-01,0,Arrivals,Visitor
+2003-06-01,0,Arrivals,Visitor
+2003-07-01,2375,Arrivals,Visitor
+2003-08-01,2092,Arrivals,Visitor
+2003-09-01,2288,Arrivals,Visitor
+2003-10-01,2443,Arrivals,Visitor
+2003-11-01,2688,Arrivals,Visitor
+2003-12-01,2892,Arrivals,Visitor
+2004-01-01,2994,Arrivals,Visitor
+2004-02-01,2467,Arrivals,Visitor
+2004-03-01,2102,Arrivals,Visitor
+2004-04-01,1936,Arrivals,Visitor
+2004-05-01,1836,Arrivals,Visitor
+2004-06-01,1913,Arrivals,Visitor
+2004-07-01,2041,Arrivals,Visitor
+2004-08-01,2040,Arrivals,Visitor
+2004-09-01,2150,Arrivals,Visitor
+2004-10-01,2340,Arrivals,Visitor
+2004-11-01,2727,Arrivals,Visitor
+2004-12-01,3105,Arrivals,Visitor
+2005-01-01,3024,Arrivals,Visitor
+2005-02-01,2572,Arrivals,Visitor
+2005-03-01,2465,Arrivals,Visitor
+2005-04-01,2200,Arrivals,Visitor
+2005-05-01,2093,Arrivals,Visitor
+2005-06-01,2048,Arrivals,Visitor
+2005-07-01,2124,Arrivals,Visitor
+2005-08-01,2180,Arrivals,Visitor
+2005-09-01,2261,Arrivals,Visitor
+2005-10-01,2296,Arrivals,Visitor
+2005-11-01,2398,Arrivals,Visitor
+2005-12-01,2948,Arrivals,Visitor
+2006-01-01,2725,Arrivals,Visitor
+2006-02-01,2807,Arrivals,Visitor
+2006-03-01,2447,Arrivals,Visitor
+2006-04-01,2305,Arrivals,Visitor
+2006-05-01,1923,Arrivals,Visitor
+2006-06-01,2216,Arrivals,Visitor
+2006-07-01,2319,Arrivals,Visitor
+2006-08-01,2371,Arrivals,Visitor
+2006-09-01,2433,Arrivals,Visitor
+2006-10-01,2515,Arrivals,Visitor
+2006-11-01,2967,Arrivals,Visitor
+2006-12-01,3470,Arrivals,Visitor
+2007-01-01,3025,Arrivals,Visitor
+2007-02-01,2874,Arrivals,Visitor
+2007-03-01,2962,Arrivals,Visitor
+2007-04-01,2517,Arrivals,Visitor
+2007-05-01,2238,Arrivals,Visitor
+2007-06-01,2312,Arrivals,Visitor
+2007-07-01,2293,Arrivals,Visitor
+2007-08-01,2591,Arrivals,Visitor
+2007-09-01,2562,Arrivals,Visitor
+2007-10-01,2462,Arrivals,Visitor
+2007-11-01,3028,Arrivals,Visitor
+2007-12-01,3254,Arrivals,Visitor
+2008-01-01,2828,Arrivals,Visitor
+2008-02-01,3246,Arrivals,Visitor
+2008-03-01,2953,Arrivals,Visitor
+2008-04-01,2783,Arrivals,Visitor
+2008-05-01,2621,Arrivals,Visitor
+2008-06-01,2761,Arrivals,Visitor
+2008-07-01,2608,Arrivals,Visitor
+2008-08-01,2677,Arrivals,Visitor
+2008-09-01,2526,Arrivals,Visitor
+2008-10-01,2595,Arrivals,Visitor
+2008-11-01,2766,Arrivals,Visitor
+2008-12-01,3256,Arrivals,Visitor
+2009-01-01,2801,Arrivals,Visitor
+2009-02-01,2615,Arrivals,Visitor
+2009-03-01,2208,Arrivals,Visitor
+2009-04-01,1834,Arrivals,Visitor
+2009-05-01,1670,Arrivals,Visitor
+2009-06-01,1743,Arrivals,Visitor
+2009-07-01,1748,Arrivals,Visitor
+2009-08-01,1680,Arrivals,Visitor
+2009-09-01,1705,Arrivals,Visitor
+2009-10-01,1621,Arrivals,Visitor
+2009-11-01,1975,Arrivals,Visitor
+2009-12-01,2131,Arrivals,Visitor
+2010-01-01,1970,Arrivals,Visitor
+2010-02-01,2016,Arrivals,Visitor
+2010-03-01,1830,Arrivals,Visitor
+2010-04-01,1503,Arrivals,Visitor
+2010-05-01,1393,Arrivals,Visitor
+2010-06-01,1415,Arrivals,Visitor
+2010-07-01,1528,Arrivals,Visitor
+2010-08-01,1557,Arrivals,Visitor
+2010-09-01,1442,Arrivals,Visitor
+2010-10-01,1634,Arrivals,Visitor
+2010-11-01,1632,Arrivals,Visitor
+2010-12-01,1920,Arrivals,Visitor
+2011-01-01,1754,Arrivals,Visitor
+2011-02-01,2046,Arrivals,Visitor
+2011-03-01,1758,Arrivals,Visitor
+2011-04-01,1455,Arrivals,Visitor
+2011-05-01,1289,Arrivals,Visitor
+2011-06-01,1316,Arrivals,Visitor
+2011-07-01,1623,Arrivals,Visitor
+2011-08-01,1571,Arrivals,Visitor
+2011-09-01,1648,Arrivals,Visitor
+2011-10-01,1576,Arrivals,Visitor
+2011-11-01,1750,Arrivals,Visitor
+2011-12-01,1903,Arrivals,Visitor
+2012-01-01,1882,Arrivals,Visitor
+2012-02-01,1756,Arrivals,Visitor
+2012-03-01,1600,Arrivals,Visitor
+2012-04-01,1236,Arrivals,Visitor
+2012-05-01,1289,Arrivals,Visitor
+2012-06-01,1413,Arrivals,Visitor
+2012-07-01,1267,Arrivals,Visitor
+2012-08-01,1473,Arrivals,Visitor
+2012-09-01,1390,Arrivals,Visitor
+2012-10-01,1468,Arrivals,Visitor
+2012-11-01,1550,Arrivals,Visitor
+2012-12-01,1768,Arrivals,Visitor
+2013-01-01,1700,Arrivals,Visitor
+2013-02-01,1592,Arrivals,Visitor
+2013-03-01,1538,Arrivals,Visitor
+2013-04-01,1335,Arrivals,Visitor
+2013-05-01,1285,Arrivals,Visitor
+2013-06-01,1273,Arrivals,Visitor
+2013-07-01,1352,Arrivals,Visitor
+2013-08-01,1367,Arrivals,Visitor
+2013-09-01,1361,Arrivals,Visitor
+2013-10-01,1554,Arrivals,Visitor
+2013-11-01,1824,Arrivals,Visitor
+2013-12-01,1921,Arrivals,Visitor
+2014-01-01,1824,Arrivals,Visitor
+2014-02-01,1990,Arrivals,Visitor
+2014-03-01,1866,Arrivals,Visitor
+2014-04-01,1565,Arrivals,Visitor
+2014-05-01,1614,Arrivals,Visitor
+2014-06-01,1555,Arrivals,Visitor
+2014-07-01,1713,Arrivals,Visitor
+2014-08-01,1957,Arrivals,Visitor
+2014-09-01,1676,Arrivals,Visitor
+2014-10-01,1649,Arrivals,Visitor
+2014-11-01,1797,Arrivals,Visitor
+2014-12-01,2063,Arrivals,Visitor
+2015-01-01,2114,Arrivals,Visitor
+2015-02-01,1775,Arrivals,Visitor
+2015-03-01,2047,Arrivals,Visitor
+2015-04-01,1767,Arrivals,Visitor
+2015-05-01,1634,Arrivals,Visitor
+2015-06-01,1719,Arrivals,Visitor
+2015-07-01,1745,Arrivals,Visitor
+2015-08-01,2238,Arrivals,Visitor
+2015-09-01,1953,Arrivals,Visitor
+2015-10-01,1990,Arrivals,Visitor
+2015-11-01,2083,Arrivals,Visitor
+2015-12-01,2480,Arrivals,Visitor
+2016-01-01,2381,Arrivals,Visitor
+2016-02-01,2527,Arrivals,Visitor
+2016-03-01,2318,Arrivals,Visitor
+2016-04-01,1933,Arrivals,Visitor
+2016-05-01,2012,Arrivals,Visitor
+2016-06-01,2108,Arrivals,Visitor
+2016-07-01,2181,Arrivals,Visitor
+2016-08-01,2180,Arrivals,Visitor
+2016-09-01,2183,Arrivals,Visitor
+2016-10-01,2208,Arrivals,Visitor
+2016-11-01,2380,Arrivals,Visitor
+2016-12-01,2403,Arrivals,Visitor
+2017-01-01,2379,Arrivals,Visitor
+2017-02-01,2303,Arrivals,Visitor
+2017-03-01,2181,Arrivals,Visitor
+2017-04-01,1736,Arrivals,Visitor
+2017-05-01,1898,Arrivals,Visitor
+2017-06-01,1950,Arrivals,Visitor
+2017-07-01,2111,Arrivals,Visitor
+2017-08-01,2195,Arrivals,Visitor
+2017-09-01,2068,Arrivals,Visitor
+2017-10-01,2205,Arrivals,Visitor
+2017-11-01,2079,Arrivals,Visitor
+2017-12-01,2411,Arrivals,Visitor
+2018-01-01,2403,Arrivals,Visitor
+2018-02-01,2196,Arrivals,Visitor
+2018-03-01,2370,Arrivals,Visitor
+2018-04-01,1786,Arrivals,Visitor
+2018-05-01,2022,Arrivals,Visitor
+2018-06-01,2062,Arrivals,Visitor
+2018-07-01,2173,Arrivals,Visitor
+2018-08-01,2482,Arrivals,Visitor
+2018-09-01,2301,Arrivals,Visitor
+2018-10-01,2296,Arrivals,Visitor
+2018-11-01,2252,Arrivals,Visitor
+2018-12-01,2499,Arrivals,Visitor
+2019-01-01,2416,Arrivals,Visitor
+2019-02-01,2187,Arrivals,Visitor
+2019-03-01,2151,Arrivals,Visitor
+2019-04-01,1726,Arrivals,Visitor
+2019-05-01,2143,Arrivals,Visitor
+2019-06-01,2088,Arrivals,Visitor
+2019-07-01,2528,Arrivals,Visitor
+2019-08-01,2816,Arrivals,Visitor
+2019-09-01,2833,Arrivals,Visitor
+2019-10-01,3286,Arrivals,Visitor
+2019-11-01,4061,Arrivals,Visitor
+2019-12-01,4757,Arrivals,Visitor
+2020-01-01,4426,Arrivals,Visitor
+2020-02-01,4279,Arrivals,Visitor
+2020-03-01,3738,Arrivals,Visitor
+2020-04-01,135,Arrivals,Visitor
+2020-05-01,80,Arrivals,Visitor
+2020-06-01,256,Arrivals,Visitor
+2020-07-01,272,Arrivals,Visitor
+2020-08-01,557,Arrivals,Visitor
+2020-09-01,628,Arrivals,Visitor
+2020-10-01,640,Arrivals,Visitor
+2020-11-01,655,Arrivals,Visitor
+2020-12-01,669,Arrivals,Visitor
+2021-01-01,709,Arrivals,Visitor
+2021-02-01,726,Arrivals,Visitor
+2021-03-01,917,Arrivals,Visitor
+2021-04-01,803,Arrivals,Visitor
+2021-05-01,577,Arrivals,Visitor
+2021-06-01,730,Arrivals,Visitor
+2021-07-01,807,Arrivals,Visitor
+2021-08-01,871,Arrivals,Visitor
+2021-09-01,1044,Arrivals,Visitor
+2021-10-01,923,Arrivals,Visitor
+2021-11-01,969,Arrivals,Visitor
+2021-12-01,1002,Arrivals,Visitor
+2022-01-01,787,Arrivals,Visitor
+2022-02-01,839,Arrivals,Visitor
+2022-03-01,1410,Arrivals,Visitor
+2022-04-01,1235,Arrivals,Visitor
+2022-05-01,2505,Arrivals,Visitor
+2022-06-01,3020,Arrivals,Visitor
+2022-07-01,4248,Arrivals,Visitor
+2022-08-01,3204,Arrivals,Visitor
+2022-09-01,2641,Arrivals,Visitor
+2022-10-01,3144,Arrivals,Visitor
+2022-11-01,4493,Arrivals,Visitor
+2022-12-01,5006,Arrivals,Visitor
+2023-01-01,4556,Arrivals,Visitor
+2023-02-01,3480,Arrivals,Visitor
+2023-03-01,5043,Arrivals,Visitor
+2023-04-01,4219,Arrivals,Visitor
+2023-05-01,4800,Arrivals,Visitor
+2023-06-01,5032,Arrivals,Visitor
+2023-07-01,3953,Arrivals,Visitor
+2023-08-01,6426,Arrivals,Visitor
+2023-09-01,5415,Arrivals,Visitor
+2023-10-01,5564,Arrivals,Visitor
+2023-11-01,7083,Arrivals,Visitor
+2023-12-01,7969,Arrivals,Visitor
+2001-01-01,0,Arrivals,Work
+2001-02-01,0,Arrivals,Work
+2001-03-01,0,Arrivals,Work
+2001-04-01,0,Arrivals,Work
+2001-05-01,0,Arrivals,Work
+2001-06-01,0,Arrivals,Work
+2001-07-01,0,Arrivals,Work
+2001-08-01,0,Arrivals,Work
+2001-09-01,0,Arrivals,Work
+2001-10-01,0,Arrivals,Work
+2001-11-01,0,Arrivals,Work
+2001-12-01,0,Arrivals,Work
+2002-01-01,0,Arrivals,Work
+2002-02-01,0,Arrivals,Work
+2002-03-01,0,Arrivals,Work
+2002-04-01,0,Arrivals,Work
+2002-05-01,0,Arrivals,Work
+2002-06-01,0,Arrivals,Work
+2002-07-01,0,Arrivals,Work
+2002-08-01,0,Arrivals,Work
+2002-09-01,0,Arrivals,Work
+2002-10-01,0,Arrivals,Work
+2002-11-01,0,Arrivals,Work
+2002-12-01,0,Arrivals,Work
+2003-01-01,0,Arrivals,Work
+2003-02-01,0,Arrivals,Work
+2003-03-01,0,Arrivals,Work
+2003-04-01,0,Arrivals,Work
+2003-05-01,0,Arrivals,Work
+2003-06-01,0,Arrivals,Work
+2003-07-01,747,Arrivals,Work
+2003-08-01,745,Arrivals,Work
+2003-09-01,842,Arrivals,Work
+2003-10-01,873,Arrivals,Work
+2003-11-01,868,Arrivals,Work
+2003-12-01,674,Arrivals,Work
+2004-01-01,1101,Arrivals,Work
+2004-02-01,763,Arrivals,Work
+2004-03-01,922,Arrivals,Work
+2004-04-01,652,Arrivals,Work
+2004-05-01,769,Arrivals,Work
+2004-06-01,800,Arrivals,Work
+2004-07-01,892,Arrivals,Work
+2004-08-01,839,Arrivals,Work
+2004-09-01,1091,Arrivals,Work
+2004-10-01,1050,Arrivals,Work
+2004-11-01,1017,Arrivals,Work
+2004-12-01,773,Arrivals,Work
+2005-01-01,1143,Arrivals,Work
+2005-02-01,854,Arrivals,Work
+2005-03-01,829,Arrivals,Work
+2005-04-01,830,Arrivals,Work
+2005-05-01,855,Arrivals,Work
+2005-06-01,859,Arrivals,Work
+2005-07-01,777,Arrivals,Work
+2005-08-01,884,Arrivals,Work
+2005-09-01,1121,Arrivals,Work
+2005-10-01,1115,Arrivals,Work
+2005-11-01,1093,Arrivals,Work
+2005-12-01,861,Arrivals,Work
+2006-01-01,1399,Arrivals,Work
+2006-02-01,1058,Arrivals,Work
+2006-03-01,1092,Arrivals,Work
+2006-04-01,943,Arrivals,Work
+2006-05-01,881,Arrivals,Work
+2006-06-01,996,Arrivals,Work
+2006-07-01,1016,Arrivals,Work
+2006-08-01,1141,Arrivals,Work
+2006-09-01,1397,Arrivals,Work
+2006-10-01,1374,Arrivals,Work
+2006-11-01,1444,Arrivals,Work
+2006-12-01,1141,Arrivals,Work
+2007-01-01,1481,Arrivals,Work
+2007-02-01,1166,Arrivals,Work
+2007-03-01,1394,Arrivals,Work
+2007-04-01,1124,Arrivals,Work
+2007-05-01,1192,Arrivals,Work
+2007-06-01,1292,Arrivals,Work
+2007-07-01,1140,Arrivals,Work
+2007-08-01,1490,Arrivals,Work
+2007-09-01,1580,Arrivals,Work
+2007-10-01,1355,Arrivals,Work
+2007-11-01,1419,Arrivals,Work
+2007-12-01,1267,Arrivals,Work
+2008-01-01,1590,Arrivals,Work
+2008-02-01,1588,Arrivals,Work
+2008-03-01,1556,Arrivals,Work
+2008-04-01,1311,Arrivals,Work
+2008-05-01,1402,Arrivals,Work
+2008-06-01,1401,Arrivals,Work
+2008-07-01,1319,Arrivals,Work
+2008-08-01,1613,Arrivals,Work
+2008-09-01,1477,Arrivals,Work
+2008-10-01,1506,Arrivals,Work
+2008-11-01,1516,Arrivals,Work
+2008-12-01,1172,Arrivals,Work
+2009-01-01,1602,Arrivals,Work
+2009-02-01,1357,Arrivals,Work
+2009-03-01,1356,Arrivals,Work
+2009-04-01,1108,Arrivals,Work
+2009-05-01,1165,Arrivals,Work
+2009-06-01,1119,Arrivals,Work
+2009-07-01,1058,Arrivals,Work
+2009-08-01,1234,Arrivals,Work
+2009-09-01,1262,Arrivals,Work
+2009-10-01,1245,Arrivals,Work
+2009-11-01,1261,Arrivals,Work
+2009-12-01,964,Arrivals,Work
+2010-01-01,1175,Arrivals,Work
+2010-02-01,1099,Arrivals,Work
+2010-03-01,1112,Arrivals,Work
+2010-04-01,842,Arrivals,Work
+2010-05-01,911,Arrivals,Work
+2010-06-01,903,Arrivals,Work
+2010-07-01,885,Arrivals,Work
+2010-08-01,1129,Arrivals,Work
+2010-09-01,1320,Arrivals,Work
+2010-10-01,1470,Arrivals,Work
+2010-11-01,1466,Arrivals,Work
+2010-12-01,1094,Arrivals,Work
+2011-01-01,1327,Arrivals,Work
+2011-02-01,1296,Arrivals,Work
+2011-03-01,1326,Arrivals,Work
+2011-04-01,1067,Arrivals,Work
+2011-05-01,1198,Arrivals,Work
+2011-06-01,1067,Arrivals,Work
+2011-07-01,1118,Arrivals,Work
+2011-08-01,1464,Arrivals,Work
+2011-09-01,1530,Arrivals,Work
+2011-10-01,1442,Arrivals,Work
+2011-11-01,1607,Arrivals,Work
+2011-12-01,1161,Arrivals,Work
+2012-01-01,1407,Arrivals,Work
+2012-02-01,1642,Arrivals,Work
+2012-03-01,1527,Arrivals,Work
+2012-04-01,1084,Arrivals,Work
+2012-05-01,1288,Arrivals,Work
+2012-06-01,1381,Arrivals,Work
+2012-07-01,1167,Arrivals,Work
+2012-08-01,1530,Arrivals,Work
+2012-09-01,1867,Arrivals,Work
+2012-10-01,1708,Arrivals,Work
+2012-11-01,1833,Arrivals,Work
+2012-12-01,1271,Arrivals,Work
+2013-01-01,1660,Arrivals,Work
+2013-02-01,1739,Arrivals,Work
+2013-03-01,1768,Arrivals,Work
+2013-04-01,1479,Arrivals,Work
+2013-05-01,1446,Arrivals,Work
+2013-06-01,1607,Arrivals,Work
+2013-07-01,1412,Arrivals,Work
+2013-08-01,1796,Arrivals,Work
+2013-09-01,1843,Arrivals,Work
+2013-10-01,2013,Arrivals,Work
+2013-11-01,2064,Arrivals,Work
+2013-12-01,1490,Arrivals,Work
+2014-01-01,1805,Arrivals,Work
+2014-02-01,2000,Arrivals,Work
+2014-03-01,1979,Arrivals,Work
+2014-04-01,1519,Arrivals,Work
+2014-05-01,1518,Arrivals,Work
+2014-06-01,1630,Arrivals,Work
+2014-07-01,1494,Arrivals,Work
+2014-08-01,1915,Arrivals,Work
+2014-09-01,2213,Arrivals,Work
+2014-10-01,2266,Arrivals,Work
+2014-11-01,2171,Arrivals,Work
+2014-12-01,1516,Arrivals,Work
+2015-01-01,2115,Arrivals,Work
+2015-02-01,1868,Arrivals,Work
+2015-03-01,2230,Arrivals,Work
+2015-04-01,1741,Arrivals,Work
+2015-05-01,1782,Arrivals,Work
+2015-06-01,1769,Arrivals,Work
+2015-07-01,1715,Arrivals,Work
+2015-08-01,2165,Arrivals,Work
+2015-09-01,2531,Arrivals,Work
+2015-10-01,2606,Arrivals,Work
+2015-11-01,2568,Arrivals,Work
+2015-12-01,1836,Arrivals,Work
+2016-01-01,2281,Arrivals,Work
+2016-02-01,2256,Arrivals,Work
+2016-03-01,2119,Arrivals,Work
+2016-04-01,1874,Arrivals,Work
+2016-05-01,1832,Arrivals,Work
+2016-06-01,1800,Arrivals,Work
+2016-07-01,1804,Arrivals,Work
+2016-08-01,2083,Arrivals,Work
+2016-09-01,2672,Arrivals,Work
+2016-10-01,2756,Arrivals,Work
+2016-11-01,2634,Arrivals,Work
+2016-12-01,2000,Arrivals,Work
+2017-01-01,2675,Arrivals,Work
+2017-02-01,2560,Arrivals,Work
+2017-03-01,2512,Arrivals,Work
+2017-04-01,1949,Arrivals,Work
+2017-05-01,2034,Arrivals,Work
+2017-06-01,2150,Arrivals,Work
+2017-07-01,2083,Arrivals,Work
+2017-08-01,2451,Arrivals,Work
+2017-09-01,2832,Arrivals,Work
+2017-10-01,2950,Arrivals,Work
+2017-11-01,3013,Arrivals,Work
+2017-12-01,1974,Arrivals,Work
+2018-01-01,3069,Arrivals,Work
+2018-02-01,2478,Arrivals,Work
+2018-03-01,2711,Arrivals,Work
+2018-04-01,2083,Arrivals,Work
+2018-05-01,2238,Arrivals,Work
+2018-06-01,2219,Arrivals,Work
+2018-07-01,2337,Arrivals,Work
+2018-08-01,2923,Arrivals,Work
+2018-09-01,3243,Arrivals,Work
+2018-10-01,3104,Arrivals,Work
+2018-11-01,3168,Arrivals,Work
+2018-12-01,2294,Arrivals,Work
+2019-01-01,3284,Arrivals,Work
+2019-02-01,2963,Arrivals,Work
+2019-03-01,2882,Arrivals,Work
+2019-04-01,2224,Arrivals,Work
+2019-05-01,2884,Arrivals,Work
+2019-06-01,2938,Arrivals,Work
+2019-07-01,2610,Arrivals,Work
+2019-08-01,3618,Arrivals,Work
+2019-09-01,4032,Arrivals,Work
+2019-10-01,4431,Arrivals,Work
+2019-11-01,4448,Arrivals,Work
+2019-12-01,3428,Arrivals,Work
+2020-01-01,4666,Arrivals,Work
+2020-02-01,4336,Arrivals,Work
+2020-03-01,2813,Arrivals,Work
+2020-04-01,82,Arrivals,Work
+2020-05-01,51,Arrivals,Work
+2020-06-01,131,Arrivals,Work
+2020-07-01,103,Arrivals,Work
+2020-08-01,150,Arrivals,Work
+2020-09-01,242,Arrivals,Work
+2020-10-01,167,Arrivals,Work
+2020-11-01,93,Arrivals,Work
+2020-12-01,125,Arrivals,Work
+2021-01-01,115,Arrivals,Work
+2021-02-01,215,Arrivals,Work
+2021-03-01,285,Arrivals,Work
+2021-04-01,186,Arrivals,Work
+2021-05-01,127,Arrivals,Work
+2021-06-01,159,Arrivals,Work
+2021-07-01,142,Arrivals,Work
+2021-08-01,192,Arrivals,Work
+2021-09-01,206,Arrivals,Work
+2021-10-01,193,Arrivals,Work
+2021-11-01,199,Arrivals,Work
+2021-12-01,256,Arrivals,Work
+2022-01-01,162,Arrivals,Work
+2022-02-01,133,Arrivals,Work
+2022-03-01,245,Arrivals,Work
+2022-04-01,1070,Arrivals,Work
+2022-05-01,798,Arrivals,Work
+2022-06-01,838,Arrivals,Work
+2022-07-01,1008,Arrivals,Work
+2022-08-01,2036,Arrivals,Work
+2022-09-01,4149,Arrivals,Work
+2022-10-01,4046,Arrivals,Work
+2022-11-01,6486,Arrivals,Work
+2022-12-01,5582,Arrivals,Work
+2023-01-01,5523,Arrivals,Work
+2023-02-01,7986,Arrivals,Work
+2023-03-01,10932,Arrivals,Work
+2023-04-01,8458,Arrivals,Work
+2023-05-01,8698,Arrivals,Work
+2023-06-01,7916,Arrivals,Work
+2023-07-01,6218,Arrivals,Work
+2023-08-01,8437,Arrivals,Work
+2023-09-01,7905,Arrivals,Work
+2023-10-01,6537,Arrivals,Work
+2023-11-01,6071,Arrivals,Work
+2023-12-01,4236,Arrivals,Work
+2001-01-01,3328,Arrivals,New Zealand and Australian citizens
+2001-02-01,2379,Arrivals,New Zealand and Australian citizens
+2001-03-01,2133,Arrivals,New Zealand and Australian citizens
+2001-04-01,2064,Arrivals,New Zealand and Australian citizens
+2001-05-01,1927,Arrivals,New Zealand and Australian citizens
+2001-06-01,2299,Arrivals,New Zealand and Australian citizens
+2001-07-01,2453,Arrivals,New Zealand and Australian citizens
+2001-08-01,2376,Arrivals,New Zealand and Australian citizens
+2001-09-01,2986,Arrivals,New Zealand and Australian citizens
+2001-10-01,3293,Arrivals,New Zealand and Australian citizens
+2001-11-01,3611,Arrivals,New Zealand and Australian citizens
+2001-12-01,5738,Arrivals,New Zealand and Australian citizens
+2002-01-01,3441,Arrivals,New Zealand and Australian citizens
+2002-02-01,2734,Arrivals,New Zealand and Australian citizens
+2002-03-01,2424,Arrivals,New Zealand and Australian citizens
+2002-04-01,2071,Arrivals,New Zealand and Australian citizens
+2002-05-01,2229,Arrivals,New Zealand and Australian citizens
+2002-06-01,2486,Arrivals,New Zealand and Australian citizens
+2002-07-01,2623,Arrivals,New Zealand and Australian citizens
+2002-08-01,2827,Arrivals,New Zealand and Australian citizens
+2002-09-01,3159,Arrivals,New Zealand and Australian citizens
+2002-10-01,3282,Arrivals,New Zealand and Australian citizens
+2002-11-01,3926,Arrivals,New Zealand and Australian citizens
+2002-12-01,6255,Arrivals,New Zealand and Australian citizens
+2003-01-01,3991,Arrivals,New Zealand and Australian citizens
+2003-02-01,3180,Arrivals,New Zealand and Australian citizens
+2003-03-01,2784,Arrivals,New Zealand and Australian citizens
+2003-04-01,2524,Arrivals,New Zealand and Australian citizens
+2003-05-01,2586,Arrivals,New Zealand and Australian citizens
+2003-06-01,2649,Arrivals,New Zealand and Australian citizens
+2003-07-01,2888,Arrivals,New Zealand and Australian citizens
+2003-08-01,3064,Arrivals,New Zealand and Australian citizens
+2003-09-01,3483,Arrivals,New Zealand and Australian citizens
+2003-10-01,3468,Arrivals,New Zealand and Australian citizens
+2003-11-01,3872,Arrivals,New Zealand and Australian citizens
+2003-12-01,6288,Arrivals,New Zealand and Australian citizens
+2004-01-01,4017,Arrivals,New Zealand and Australian citizens
+2004-02-01,2959,Arrivals,New Zealand and Australian citizens
+2004-03-01,2478,Arrivals,New Zealand and Australian citizens
+2004-04-01,2288,Arrivals,New Zealand and Australian citizens
+2004-05-01,2350,Arrivals,New Zealand and Australian citizens
+2004-06-01,2522,Arrivals,New Zealand and Australian citizens
+2004-07-01,2785,Arrivals,New Zealand and Australian citizens
+2004-08-01,2890,Arrivals,New Zealand and Australian citizens
+2004-09-01,3229,Arrivals,New Zealand and Australian citizens
+2004-10-01,3209,Arrivals,New Zealand and Australian citizens
+2004-11-01,3489,Arrivals,New Zealand and Australian citizens
+2004-12-01,6071,Arrivals,New Zealand and Australian citizens
+2005-01-01,3729,Arrivals,New Zealand and Australian citizens
+2005-02-01,2838,Arrivals,New Zealand and Australian citizens
+2005-03-01,2305,Arrivals,New Zealand and Australian citizens
+2005-04-01,2291,Arrivals,New Zealand and Australian citizens
+2005-05-01,2158,Arrivals,New Zealand and Australian citizens
+2005-06-01,2398,Arrivals,New Zealand and Australian citizens
+2005-07-01,2630,Arrivals,New Zealand and Australian citizens
+2005-08-01,2706,Arrivals,New Zealand and Australian citizens
+2005-09-01,3121,Arrivals,New Zealand and Australian citizens
+2005-10-01,3171,Arrivals,New Zealand and Australian citizens
+2005-11-01,3218,Arrivals,New Zealand and Australian citizens
+2005-12-01,5913,Arrivals,New Zealand and Australian citizens
+2006-01-01,3683,Arrivals,New Zealand and Australian citizens
+2006-02-01,2784,Arrivals,New Zealand and Australian citizens
+2006-03-01,2380,Arrivals,New Zealand and Australian citizens
+2006-04-01,2226,Arrivals,New Zealand and Australian citizens
+2006-05-01,2097,Arrivals,New Zealand and Australian citizens
+2006-06-01,2247,Arrivals,New Zealand and Australian citizens
+2006-07-01,2647,Arrivals,New Zealand and Australian citizens
+2006-08-01,2656,Arrivals,New Zealand and Australian citizens
+2006-09-01,3201,Arrivals,New Zealand and Australian citizens
+2006-10-01,3114,Arrivals,New Zealand and Australian citizens
+2006-11-01,3552,Arrivals,New Zealand and Australian citizens
+2006-12-01,5590,Arrivals,New Zealand and Australian citizens
+2007-01-01,3527,Arrivals,New Zealand and Australian citizens
+2007-02-01,2766,Arrivals,New Zealand and Australian citizens
+2007-03-01,2319,Arrivals,New Zealand and Australian citizens
+2007-04-01,2101,Arrivals,New Zealand and Australian citizens
+2007-05-01,2119,Arrivals,New Zealand and Australian citizens
+2007-06-01,2230,Arrivals,New Zealand and Australian citizens
+2007-07-01,2355,Arrivals,New Zealand and Australian citizens
+2007-08-01,2669,Arrivals,New Zealand and Australian citizens
+2007-09-01,3025,Arrivals,New Zealand and Australian citizens
+2007-10-01,3161,Arrivals,New Zealand and Australian citizens
+2007-11-01,3484,Arrivals,New Zealand and Australian citizens
+2007-12-01,5226,Arrivals,New Zealand and Australian citizens
+2008-01-01,3331,Arrivals,New Zealand and Australian citizens
+2008-02-01,2746,Arrivals,New Zealand and Australian citizens
+2008-03-01,2219,Arrivals,New Zealand and Australian citizens
+2008-04-01,2062,Arrivals,New Zealand and Australian citizens
+2008-05-01,2198,Arrivals,New Zealand and Australian citizens
+2008-06-01,2284,Arrivals,New Zealand and Australian citizens
+2008-07-01,2478,Arrivals,New Zealand and Australian citizens
+2008-08-01,2628,Arrivals,New Zealand and Australian citizens
+2008-09-01,2956,Arrivals,New Zealand and Australian citizens
+2008-10-01,3271,Arrivals,New Zealand and Australian citizens
+2008-11-01,3446,Arrivals,New Zealand and Australian citizens
+2008-12-01,5618,Arrivals,New Zealand and Australian citizens
+2009-01-01,3630,Arrivals,New Zealand and Australian citizens
+2009-02-01,2937,Arrivals,New Zealand and Australian citizens
+2009-03-01,2390,Arrivals,New Zealand and Australian citizens
+2009-04-01,2223,Arrivals,New Zealand and Australian citizens
+2009-05-01,2336,Arrivals,New Zealand and Australian citizens
+2009-06-01,2447,Arrivals,New Zealand and Australian citizens
+2009-07-01,2720,Arrivals,New Zealand and Australian citizens
+2009-08-01,2892,Arrivals,New Zealand and Australian citizens
+2009-09-01,3081,Arrivals,New Zealand and Australian citizens
+2009-10-01,3434,Arrivals,New Zealand and Australian citizens
+2009-11-01,3551,Arrivals,New Zealand and Australian citizens
+2009-12-01,5708,Arrivals,New Zealand and Australian citizens
+2010-01-01,3668,Arrivals,New Zealand and Australian citizens
+2010-02-01,2779,Arrivals,New Zealand and Australian citizens
+2010-03-01,2456,Arrivals,New Zealand and Australian citizens
+2010-04-01,2262,Arrivals,New Zealand and Australian citizens
+2010-05-01,2171,Arrivals,New Zealand and Australian citizens
+2010-06-01,2367,Arrivals,New Zealand and Australian citizens
+2010-07-01,2667,Arrivals,New Zealand and Australian citizens
+2010-08-01,2716,Arrivals,New Zealand and Australian citizens
+2010-09-01,3039,Arrivals,New Zealand and Australian citizens
+2010-10-01,2974,Arrivals,New Zealand and Australian citizens
+2010-11-01,3174,Arrivals,New Zealand and Australian citizens
+2010-12-01,5340,Arrivals,New Zealand and Australian citizens
+2011-01-01,3454,Arrivals,New Zealand and Australian citizens
+2011-02-01,2568,Arrivals,New Zealand and Australian citizens
+2011-03-01,2193,Arrivals,New Zealand and Australian citizens
+2011-04-01,2159,Arrivals,New Zealand and Australian citizens
+2011-05-01,2002,Arrivals,New Zealand and Australian citizens
+2011-06-01,2052,Arrivals,New Zealand and Australian citizens
+2011-07-01,2528,Arrivals,New Zealand and Australian citizens
+2011-08-01,2772,Arrivals,New Zealand and Australian citizens
+2011-09-01,2882,Arrivals,New Zealand and Australian citizens
+2011-10-01,2778,Arrivals,New Zealand and Australian citizens
+2011-11-01,2990,Arrivals,New Zealand and Australian citizens
+2011-12-01,4883,Arrivals,New Zealand and Australian citizens
+2012-01-01,3015,Arrivals,New Zealand and Australian citizens
+2012-02-01,2483,Arrivals,New Zealand and Australian citizens
+2012-03-01,2217,Arrivals,New Zealand and Australian citizens
+2012-04-01,1954,Arrivals,New Zealand and Australian citizens
+2012-05-01,1847,Arrivals,New Zealand and Australian citizens
+2012-06-01,2290,Arrivals,New Zealand and Australian citizens
+2012-07-01,2543,Arrivals,New Zealand and Australian citizens
+2012-08-01,2792,Arrivals,New Zealand and Australian citizens
+2012-09-01,3204,Arrivals,New Zealand and Australian citizens
+2012-10-01,3075,Arrivals,New Zealand and Australian citizens
+2012-11-01,3486,Arrivals,New Zealand and Australian citizens
+2012-12-01,5779,Arrivals,New Zealand and Australian citizens
+2013-01-01,3628,Arrivals,New Zealand and Australian citizens
+2013-02-01,2823,Arrivals,New Zealand and Australian citizens
+2013-03-01,2603,Arrivals,New Zealand and Australian citizens
+2013-04-01,2480,Arrivals,New Zealand and Australian citizens
+2013-05-01,2404,Arrivals,New Zealand and Australian citizens
+2013-06-01,2665,Arrivals,New Zealand and Australian citizens
+2013-07-01,3297,Arrivals,New Zealand and Australian citizens
+2013-08-01,3256,Arrivals,New Zealand and Australian citizens
+2013-09-01,3555,Arrivals,New Zealand and Australian citizens
+2013-10-01,3611,Arrivals,New Zealand and Australian citizens
+2013-11-01,3754,Arrivals,New Zealand and Australian citizens
+2013-12-01,6444,Arrivals,New Zealand and Australian citizens
+2014-01-01,3896,Arrivals,New Zealand and Australian citizens
+2014-02-01,3358,Arrivals,New Zealand and Australian citizens
+2014-03-01,2811,Arrivals,New Zealand and Australian citizens
+2014-04-01,2785,Arrivals,New Zealand and Australian citizens
+2014-05-01,2598,Arrivals,New Zealand and Australian citizens
+2014-06-01,2788,Arrivals,New Zealand and Australian citizens
+2014-07-01,3425,Arrivals,New Zealand and Australian citizens
+2014-08-01,3446,Arrivals,New Zealand and Australian citizens
+2014-09-01,3812,Arrivals,New Zealand and Australian citizens
+2014-10-01,3844,Arrivals,New Zealand and Australian citizens
+2014-11-01,3975,Arrivals,New Zealand and Australian citizens
+2014-12-01,6834,Arrivals,New Zealand and Australian citizens
+2015-01-01,4436,Arrivals,New Zealand and Australian citizens
+2015-02-01,3219,Arrivals,New Zealand and Australian citizens
+2015-03-01,3116,Arrivals,New Zealand and Australian citizens
+2015-04-01,2824,Arrivals,New Zealand and Australian citizens
+2015-05-01,2924,Arrivals,New Zealand and Australian citizens
+2015-06-01,2919,Arrivals,New Zealand and Australian citizens
+2015-07-01,3521,Arrivals,New Zealand and Australian citizens
+2015-08-01,3623,Arrivals,New Zealand and Australian citizens
+2015-09-01,3880,Arrivals,New Zealand and Australian citizens
+2015-10-01,4032,Arrivals,New Zealand and Australian citizens
+2015-11-01,3997,Arrivals,New Zealand and Australian citizens
+2015-12-01,6674,Arrivals,New Zealand and Australian citizens
+2016-01-01,4690,Arrivals,New Zealand and Australian citizens
+2016-02-01,3482,Arrivals,New Zealand and Australian citizens
+2016-03-01,3217,Arrivals,New Zealand and Australian citizens
+2016-04-01,2830,Arrivals,New Zealand and Australian citizens
+2016-05-01,2799,Arrivals,New Zealand and Australian citizens
+2016-06-01,3031,Arrivals,New Zealand and Australian citizens
+2016-07-01,3567,Arrivals,New Zealand and Australian citizens
+2016-08-01,3725,Arrivals,New Zealand and Australian citizens
+2016-09-01,3984,Arrivals,New Zealand and Australian citizens
+2016-10-01,3916,Arrivals,New Zealand and Australian citizens
+2016-11-01,4077,Arrivals,New Zealand and Australian citizens
+2016-12-01,6678,Arrivals,New Zealand and Australian citizens
+2017-01-01,4620,Arrivals,New Zealand and Australian citizens
+2017-02-01,3386,Arrivals,New Zealand and Australian citizens
+2017-03-01,2859,Arrivals,New Zealand and Australian citizens
+2017-04-01,2738,Arrivals,New Zealand and Australian citizens
+2017-05-01,2732,Arrivals,New Zealand and Australian citizens
+2017-06-01,2960,Arrivals,New Zealand and Australian citizens
+2017-07-01,3334,Arrivals,New Zealand and Australian citizens
+2017-08-01,3413,Arrivals,New Zealand and Australian citizens
+2017-09-01,3662,Arrivals,New Zealand and Australian citizens
+2017-10-01,3667,Arrivals,New Zealand and Australian citizens
+2017-11-01,3809,Arrivals,New Zealand and Australian citizens
+2017-12-01,6333,Arrivals,New Zealand and Australian citizens
+2018-01-01,4173,Arrivals,New Zealand and Australian citizens
+2018-02-01,2971,Arrivals,New Zealand and Australian citizens
+2018-03-01,2870,Arrivals,New Zealand and Australian citizens
+2018-04-01,2533,Arrivals,New Zealand and Australian citizens
+2018-05-01,2590,Arrivals,New Zealand and Australian citizens
+2018-06-01,2625,Arrivals,New Zealand and Australian citizens
+2018-07-01,3226,Arrivals,New Zealand and Australian citizens
+2018-08-01,3381,Arrivals,New Zealand and Australian citizens
+2018-09-01,3610,Arrivals,New Zealand and Australian citizens
+2018-10-01,3611,Arrivals,New Zealand and Australian citizens
+2018-11-01,3790,Arrivals,New Zealand and Australian citizens
+2018-12-01,5962,Arrivals,New Zealand and Australian citizens
+2019-01-01,4148,Arrivals,New Zealand and Australian citizens
+2019-02-01,2937,Arrivals,New Zealand and Australian citizens
+2019-03-01,2769,Arrivals,New Zealand and Australian citizens
+2019-04-01,2552,Arrivals,New Zealand and Australian citizens
+2019-05-01,2807,Arrivals,New Zealand and Australian citizens
+2019-06-01,3070,Arrivals,New Zealand and Australian citizens
+2019-07-01,3680,Arrivals,New Zealand and Australian citizens
+2019-08-01,4019,Arrivals,New Zealand and Australian citizens
+2019-09-01,4412,Arrivals,New Zealand and Australian citizens
+2019-10-01,4608,Arrivals,New Zealand and Australian citizens
+2019-11-01,5164,Arrivals,New Zealand and Australian citizens
+2019-12-01,8295,Arrivals,New Zealand and Australian citizens
+2020-01-01,5181,Arrivals,New Zealand and Australian citizens
+2020-02-01,4465,Arrivals,New Zealand and Australian citizens
+2020-03-01,5937,Arrivals,New Zealand and Australian citizens
+2020-04-01,819,Arrivals,New Zealand and Australian citizens
+2020-05-01,1099,Arrivals,New Zealand and Australian citizens
+2020-06-01,1655,Arrivals,New Zealand and Australian citizens
+2020-07-01,2896,Arrivals,New Zealand and Australian citizens
+2020-08-01,3636,Arrivals,New Zealand and Australian citizens
+2020-09-01,3929,Arrivals,New Zealand and Australian citizens
+2020-10-01,3455,Arrivals,New Zealand and Australian citizens
+2020-11-01,3495,Arrivals,New Zealand and Australian citizens
+2020-12-01,3678,Arrivals,New Zealand and Australian citizens
+2021-01-01,2990,Arrivals,New Zealand and Australian citizens
+2021-02-01,2614,Arrivals,New Zealand and Australian citizens
+2021-03-01,2642,Arrivals,New Zealand and Australian citizens
+2021-04-01,3775,Arrivals,New Zealand and Australian citizens
+2021-05-01,3693,Arrivals,New Zealand and Australian citizens
+2021-06-01,2762,Arrivals,New Zealand and Australian citizens
+2021-07-01,3601,Arrivals,New Zealand and Australian citizens
+2021-08-01,1100,Arrivals,New Zealand and Australian citizens
+2021-09-01,1032,Arrivals,New Zealand and Australian citizens
+2021-10-01,1901,Arrivals,New Zealand and Australian citizens
+2021-11-01,1858,Arrivals,New Zealand and Australian citizens
+2021-12-01,2756,Arrivals,New Zealand and Australian citizens
+2022-01-01,1879,Arrivals,New Zealand and Australian citizens
+2022-02-01,1244,Arrivals,New Zealand and Australian citizens
+2022-03-01,3998,Arrivals,New Zealand and Australian citizens
+2022-04-01,3142,Arrivals,New Zealand and Australian citizens
+2022-05-01,2525,Arrivals,New Zealand and Australian citizens
+2022-06-01,2279,Arrivals,New Zealand and Australian citizens
+2022-07-01,2754,Arrivals,New Zealand and Australian citizens
+2022-08-01,2408,Arrivals,New Zealand and Australian citizens
+2022-09-01,2469,Arrivals,New Zealand and Australian citizens
+2022-10-01,2490,Arrivals,New Zealand and Australian citizens
+2022-11-01,2819,Arrivals,New Zealand and Australian citizens
+2022-12-01,3817,Arrivals,New Zealand and Australian citizens
+2023-01-01,3400,Arrivals,New Zealand and Australian citizens
+2023-02-01,2187,Arrivals,New Zealand and Australian citizens
+2023-03-01,1999,Arrivals,New Zealand and Australian citizens
+2023-04-01,2160,Arrivals,New Zealand and Australian citizens
+2023-05-01,1908,Arrivals,New Zealand and Australian citizens
+2023-06-01,2064,Arrivals,New Zealand and Australian citizens
+2023-07-01,2283,Arrivals,New Zealand and Australian citizens
+2023-08-01,2424,Arrivals,New Zealand and Australian citizens
+2023-09-01,3059,Arrivals,New Zealand and Australian citizens
+2023-10-01,3083,Arrivals,New Zealand and Australian citizens
+2023-11-01,3680,Arrivals,New Zealand and Australian citizens
+2023-12-01,6205,Arrivals,New Zealand and Australian citizens
+2001-01-01,7213,Arrivals,Other
+2001-02-01,8069,Arrivals,Other
+2001-03-01,5737,Arrivals,Other
+2001-04-01,5602,Arrivals,Other
+2001-05-01,4839,Arrivals,Other
+2001-06-01,5521,Arrivals,Other
+2001-07-01,7415,Arrivals,Other
+2001-08-01,6500,Arrivals,Other
+2001-09-01,7359,Arrivals,Other
+2001-10-01,7256,Arrivals,Other
+2001-11-01,7779,Arrivals,Other
+2001-12-01,6720,Arrivals,Other
+2002-01-01,10515,Arrivals,Other
+2002-02-01,9248,Arrivals,Other
+2002-03-01,8521,Arrivals,Other
+2002-04-01,7267,Arrivals,Other
+2002-05-01,6142,Arrivals,Other
+2002-06-01,7045,Arrivals,Other
+2002-07-01,8692,Arrivals,Other
+2002-08-01,7924,Arrivals,Other
+2002-09-01,8244,Arrivals,Other
+2002-10-01,7793,Arrivals,Other
+2002-11-01,8241,Arrivals,Other
+2002-12-01,6957,Arrivals,Other
+2003-01-01,10193,Arrivals,Other
+2003-02-01,8929,Arrivals,Other
+2003-03-01,7230,Arrivals,Other
+2003-04-01,6048,Arrivals,Other
+2003-05-01,5091,Arrivals,Other
+2003-06-01,5557,Arrivals,Other
+2003-07-01,126,Arrivals,Other
+2003-08-01,164,Arrivals,Other
+2003-09-01,123,Arrivals,Other
+2003-10-01,124,Arrivals,Other
+2003-11-01,111,Arrivals,Other
+2003-12-01,159,Arrivals,Other
+2004-01-01,102,Arrivals,Other
+2004-02-01,78,Arrivals,Other
+2004-03-01,100,Arrivals,Other
+2004-04-01,66,Arrivals,Other
+2004-05-01,52,Arrivals,Other
+2004-06-01,89,Arrivals,Other
+2004-07-01,95,Arrivals,Other
+2004-08-01,102,Arrivals,Other
+2004-09-01,109,Arrivals,Other
+2004-10-01,109,Arrivals,Other
+2004-11-01,111,Arrivals,Other
+2004-12-01,107,Arrivals,Other
+2005-01-01,126,Arrivals,Other
+2005-02-01,107,Arrivals,Other
+2005-03-01,96,Arrivals,Other
+2005-04-01,92,Arrivals,Other
+2005-05-01,94,Arrivals,Other
+2005-06-01,111,Arrivals,Other
+2005-07-01,84,Arrivals,Other
+2005-08-01,95,Arrivals,Other
+2005-09-01,63,Arrivals,Other
+2005-10-01,100,Arrivals,Other
+2005-11-01,83,Arrivals,Other
+2005-12-01,108,Arrivals,Other
+2006-01-01,118,Arrivals,Other
+2006-02-01,79,Arrivals,Other
+2006-03-01,90,Arrivals,Other
+2006-04-01,87,Arrivals,Other
+2006-05-01,100,Arrivals,Other
+2006-06-01,75,Arrivals,Other
+2006-07-01,105,Arrivals,Other
+2006-08-01,111,Arrivals,Other
+2006-09-01,104,Arrivals,Other
+2006-10-01,121,Arrivals,Other
+2006-11-01,125,Arrivals,Other
+2006-12-01,114,Arrivals,Other
+2007-01-01,102,Arrivals,Other
+2007-02-01,96,Arrivals,Other
+2007-03-01,69,Arrivals,Other
+2007-04-01,113,Arrivals,Other
+2007-05-01,87,Arrivals,Other
+2007-06-01,61,Arrivals,Other
+2007-07-01,90,Arrivals,Other
+2007-08-01,92,Arrivals,Other
+2007-09-01,124,Arrivals,Other
+2007-10-01,78,Arrivals,Other
+2007-11-01,102,Arrivals,Other
+2007-12-01,115,Arrivals,Other
+2008-01-01,99,Arrivals,Other
+2008-02-01,135,Arrivals,Other
+2008-03-01,103,Arrivals,Other
+2008-04-01,143,Arrivals,Other
+2008-05-01,121,Arrivals,Other
+2008-06-01,127,Arrivals,Other
+2008-07-01,165,Arrivals,Other
+2008-08-01,144,Arrivals,Other
+2008-09-01,127,Arrivals,Other
+2008-10-01,116,Arrivals,Other
+2008-11-01,121,Arrivals,Other
+2008-12-01,106,Arrivals,Other
+2009-01-01,90,Arrivals,Other
+2009-02-01,138,Arrivals,Other
+2009-03-01,148,Arrivals,Other
+2009-04-01,117,Arrivals,Other
+2009-05-01,145,Arrivals,Other
+2009-06-01,126,Arrivals,Other
+2009-07-01,158,Arrivals,Other
+2009-08-01,158,Arrivals,Other
+2009-09-01,166,Arrivals,Other
+2009-10-01,134,Arrivals,Other
+2009-11-01,60,Arrivals,Other
+2009-12-01,82,Arrivals,Other
+2010-01-01,89,Arrivals,Other
+2010-02-01,111,Arrivals,Other
+2010-03-01,88,Arrivals,Other
+2010-04-01,80,Arrivals,Other
+2010-05-01,76,Arrivals,Other
+2010-06-01,66,Arrivals,Other
+2010-07-01,103,Arrivals,Other
+2010-08-01,93,Arrivals,Other
+2010-09-01,95,Arrivals,Other
+2010-10-01,105,Arrivals,Other
+2010-11-01,82,Arrivals,Other
+2010-12-01,102,Arrivals,Other
+2011-01-01,71,Arrivals,Other
+2011-02-01,95,Arrivals,Other
+2011-03-01,98,Arrivals,Other
+2011-04-01,72,Arrivals,Other
+2011-05-01,64,Arrivals,Other
+2011-06-01,70,Arrivals,Other
+2011-07-01,127,Arrivals,Other
+2011-08-01,101,Arrivals,Other
+2011-09-01,102,Arrivals,Other
+2011-10-01,92,Arrivals,Other
+2011-11-01,102,Arrivals,Other
+2011-12-01,101,Arrivals,Other
+2012-01-01,115,Arrivals,Other
+2012-02-01,131,Arrivals,Other
+2012-03-01,119,Arrivals,Other
+2012-04-01,76,Arrivals,Other
+2012-05-01,78,Arrivals,Other
+2012-06-01,90,Arrivals,Other
+2012-07-01,96,Arrivals,Other
+2012-08-01,107,Arrivals,Other
+2012-09-01,100,Arrivals,Other
+2012-10-01,126,Arrivals,Other
+2012-11-01,116,Arrivals,Other
+2012-12-01,129,Arrivals,Other
+2013-01-01,110,Arrivals,Other
+2013-02-01,135,Arrivals,Other
+2013-03-01,86,Arrivals,Other
+2013-04-01,66,Arrivals,Other
+2013-05-01,81,Arrivals,Other
+2013-06-01,90,Arrivals,Other
+2013-07-01,114,Arrivals,Other
+2013-08-01,128,Arrivals,Other
+2013-09-01,130,Arrivals,Other
+2013-10-01,138,Arrivals,Other
+2013-11-01,160,Arrivals,Other
+2013-12-01,153,Arrivals,Other
+2014-01-01,144,Arrivals,Other
+2014-02-01,182,Arrivals,Other
+2014-03-01,109,Arrivals,Other
+2014-04-01,75,Arrivals,Other
+2014-05-01,70,Arrivals,Other
+2014-06-01,78,Arrivals,Other
+2014-07-01,102,Arrivals,Other
+2014-08-01,164,Arrivals,Other
+2014-09-01,113,Arrivals,Other
+2014-10-01,162,Arrivals,Other
+2014-11-01,154,Arrivals,Other
+2014-12-01,126,Arrivals,Other
+2015-01-01,139,Arrivals,Other
+2015-02-01,170,Arrivals,Other
+2015-03-01,124,Arrivals,Other
+2015-04-01,86,Arrivals,Other
+2015-05-01,86,Arrivals,Other
+2015-06-01,114,Arrivals,Other
+2015-07-01,113,Arrivals,Other
+2015-08-01,97,Arrivals,Other
+2015-09-01,101,Arrivals,Other
+2015-10-01,157,Arrivals,Other
+2015-11-01,126,Arrivals,Other
+2015-12-01,132,Arrivals,Other
+2016-01-01,101,Arrivals,Other
+2016-02-01,116,Arrivals,Other
+2016-03-01,119,Arrivals,Other
+2016-04-01,67,Arrivals,Other
+2016-05-01,83,Arrivals,Other
+2016-06-01,90,Arrivals,Other
+2016-07-01,96,Arrivals,Other
+2016-08-01,92,Arrivals,Other
+2016-09-01,89,Arrivals,Other
+2016-10-01,81,Arrivals,Other
+2016-11-01,131,Arrivals,Other
+2016-12-01,111,Arrivals,Other
+2017-01-01,93,Arrivals,Other
+2017-02-01,96,Arrivals,Other
+2017-03-01,110,Arrivals,Other
+2017-04-01,85,Arrivals,Other
+2017-05-01,43,Arrivals,Other
+2017-06-01,57,Arrivals,Other
+2017-07-01,68,Arrivals,Other
+2017-08-01,95,Arrivals,Other
+2017-09-01,93,Arrivals,Other
+2017-10-01,101,Arrivals,Other
+2017-11-01,118,Arrivals,Other
+2017-12-01,120,Arrivals,Other
+2018-01-01,107,Arrivals,Other
+2018-02-01,118,Arrivals,Other
+2018-03-01,120,Arrivals,Other
+2018-04-01,52,Arrivals,Other
+2018-05-01,51,Arrivals,Other
+2018-06-01,44,Arrivals,Other
+2018-07-01,82,Arrivals,Other
+2018-08-01,90,Arrivals,Other
+2018-09-01,85,Arrivals,Other
+2018-10-01,94,Arrivals,Other
+2018-11-01,99,Arrivals,Other
+2018-12-01,89,Arrivals,Other
+2019-01-01,115,Arrivals,Other
+2019-02-01,190,Arrivals,Other
+2019-03-01,111,Arrivals,Other
+2019-04-01,65,Arrivals,Other
+2019-05-01,61,Arrivals,Other
+2019-06-01,73,Arrivals,Other
+2019-07-01,81,Arrivals,Other
+2019-08-01,88,Arrivals,Other
+2019-09-01,202,Arrivals,Other
+2019-10-01,913,Arrivals,Other
+2019-11-01,1157,Arrivals,Other
+2019-12-01,248,Arrivals,Other
+2020-01-01,398,Arrivals,Other
+2020-02-01,1614,Arrivals,Other
+2020-03-01,1357,Arrivals,Other
+2020-04-01,8,Arrivals,Other
+2020-05-01,1,Arrivals,Other
+2020-06-01,32,Arrivals,Other
+2020-07-01,53,Arrivals,Other
+2020-08-01,52,Arrivals,Other
+2020-09-01,51,Arrivals,Other
+2020-10-01,39,Arrivals,Other
+2020-11-01,40,Arrivals,Other
+2020-12-01,42,Arrivals,Other
+2021-01-01,539,Arrivals,Other
+2021-02-01,825,Arrivals,Other
+2021-03-01,242,Arrivals,Other
+2021-04-01,31,Arrivals,Other
+2021-05-01,41,Arrivals,Other
+2021-06-01,54,Arrivals,Other
+2021-07-01,260,Arrivals,Other
+2021-08-01,181,Arrivals,Other
+2021-09-01,31,Arrivals,Other
+2021-10-01,242,Arrivals,Other
+2021-11-01,366,Arrivals,Other
+2021-12-01,251,Arrivals,Other
+2022-01-01,121,Arrivals,Other
+2022-02-01,286,Arrivals,Other
+2022-03-01,213,Arrivals,Other
+2022-04-01,186,Arrivals,Other
+2022-05-01,126,Arrivals,Other
+2022-06-01,69,Arrivals,Other
+2022-07-01,71,Arrivals,Other
+2022-08-01,105,Arrivals,Other
+2022-09-01,81,Arrivals,Other
+2022-10-01,91,Arrivals,Other
+2022-11-01,117,Arrivals,Other
+2022-12-01,94,Arrivals,Other
+2023-01-01,50,Arrivals,Other
+2023-02-01,104,Arrivals,Other
+2023-03-01,147,Arrivals,Other
+2023-04-01,108,Arrivals,Other
+2023-05-01,222,Arrivals,Other
+2023-06-01,200,Arrivals,Other
+2023-07-01,148,Arrivals,Other
+2023-08-01,76,Arrivals,Other
+2023-09-01,152,Arrivals,Other
+2023-10-01,1052,Arrivals,Other
+2023-11-01,1157,Arrivals,Other
+2023-12-01,192,Arrivals,Other
+2001-01-01,10541,Arrivals,TOTAL
+2001-02-01,10448,Arrivals,TOTAL
+2001-03-01,7870,Arrivals,TOTAL
+2001-04-01,7666,Arrivals,TOTAL
+2001-05-01,6766,Arrivals,TOTAL
+2001-06-01,7820,Arrivals,TOTAL
+2001-07-01,9868,Arrivals,TOTAL
+2001-08-01,8876,Arrivals,TOTAL
+2001-09-01,10345,Arrivals,TOTAL
+2001-10-01,10549,Arrivals,TOTAL
+2001-11-01,11390,Arrivals,TOTAL
+2001-12-01,12458,Arrivals,TOTAL
+2002-01-01,13956,Arrivals,TOTAL
+2002-02-01,11982,Arrivals,TOTAL
+2002-03-01,10945,Arrivals,TOTAL
+2002-04-01,9338,Arrivals,TOTAL
+2002-05-01,8371,Arrivals,TOTAL
+2002-06-01,9531,Arrivals,TOTAL
+2002-07-01,11315,Arrivals,TOTAL
+2002-08-01,10751,Arrivals,TOTAL
+2002-09-01,11403,Arrivals,TOTAL
+2002-10-01,11075,Arrivals,TOTAL
+2002-11-01,12167,Arrivals,TOTAL
+2002-12-01,13212,Arrivals,TOTAL
+2003-01-01,14184,Arrivals,TOTAL
+2003-02-01,12109,Arrivals,TOTAL
+2003-03-01,10014,Arrivals,TOTAL
+2003-04-01,8572,Arrivals,TOTAL
+2003-05-01,7677,Arrivals,TOTAL
+2003-06-01,8206,Arrivals,TOTAL
+2003-07-01,10102,Arrivals,TOTAL
+2003-08-01,8931,Arrivals,TOTAL
+2003-09-01,9399,Arrivals,TOTAL
+2003-10-01,9380,Arrivals,TOTAL
+2003-11-01,9958,Arrivals,TOTAL
+2003-12-01,12059,Arrivals,TOTAL
+2004-01-01,11778,Arrivals,TOTAL
+2004-02-01,9876,Arrivals,TOTAL
+2004-03-01,7391,Arrivals,TOTAL
+2004-04-01,6822,Arrivals,TOTAL
+2004-05-01,6612,Arrivals,TOTAL
+2004-06-01,7023,Arrivals,TOTAL
+2004-07-01,8521,Arrivals,TOTAL
+2004-08-01,7630,Arrivals,TOTAL
+2004-09-01,8541,Arrivals,TOTAL
+2004-10-01,8408,Arrivals,TOTAL
+2004-11-01,9116,Arrivals,TOTAL
+2004-12-01,11778,Arrivals,TOTAL
+2005-01-01,10990,Arrivals,TOTAL
+2005-02-01,9456,Arrivals,TOTAL
+2005-03-01,7507,Arrivals,TOTAL
+2005-04-01,7468,Arrivals,TOTAL
+2005-05-01,6993,Arrivals,TOTAL
+2005-06-01,7231,Arrivals,TOTAL
+2005-07-01,8232,Arrivals,TOTAL
+2005-08-01,7972,Arrivals,TOTAL
+2005-09-01,8849,Arrivals,TOTAL
+2005-10-01,8630,Arrivals,TOTAL
+2005-11-01,8875,Arrivals,TOTAL
+2005-12-01,11779,Arrivals,TOTAL
+2006-01-01,10921,Arrivals,TOTAL
+2006-02-01,10110,Arrivals,TOTAL
+2006-03-01,8115,Arrivals,TOTAL
+2006-04-01,7496,Arrivals,TOTAL
+2006-05-01,6798,Arrivals,TOTAL
+2006-06-01,7621,Arrivals,TOTAL
+2006-07-01,9192,Arrivals,TOTAL
+2006-08-01,8674,Arrivals,TOTAL
+2006-09-01,9721,Arrivals,TOTAL
+2006-10-01,9379,Arrivals,TOTAL
+2006-11-01,10365,Arrivals,TOTAL
+2006-12-01,12295,Arrivals,TOTAL
+2007-01-01,11356,Arrivals,TOTAL
+2007-02-01,10610,Arrivals,TOTAL
+2007-03-01,8969,Arrivals,TOTAL
+2007-04-01,7731,Arrivals,TOTAL
+2007-05-01,7191,Arrivals,TOTAL
+2007-06-01,8049,Arrivals,TOTAL
+2007-07-01,8936,Arrivals,TOTAL
+2007-08-01,9413,Arrivals,TOTAL
+2007-09-01,9770,Arrivals,TOTAL
+2007-10-01,9322,Arrivals,TOTAL
+2007-11-01,10231,Arrivals,TOTAL
+2007-12-01,11872,Arrivals,TOTAL
+2008-01-01,11098,Arrivals,TOTAL
+2008-02-01,12026,Arrivals,TOTAL
+2008-03-01,9178,Arrivals,TOTAL
+2008-04-01,8426,Arrivals,TOTAL
+2008-05-01,8531,Arrivals,TOTAL
+2008-06-01,8856,Arrivals,TOTAL
+2008-07-01,10288,Arrivals,TOTAL
+2008-08-01,9784,Arrivals,TOTAL
+2008-09-01,9674,Arrivals,TOTAL
+2008-10-01,9898,Arrivals,TOTAL
+2008-11-01,10126,Arrivals,TOTAL
+2008-12-01,12109,Arrivals,TOTAL
+2009-01-01,11557,Arrivals,TOTAL
+2009-02-01,11576,Arrivals,TOTAL
+2009-03-01,8537,Arrivals,TOTAL
+2009-04-01,7452,Arrivals,TOTAL
+2009-05-01,7263,Arrivals,TOTAL
+2009-06-01,7459,Arrivals,TOTAL
+2009-07-01,9336,Arrivals,TOTAL
+2009-08-01,8256,Arrivals,TOTAL
+2009-09-01,8786,Arrivals,TOTAL
+2009-10-01,8567,Arrivals,TOTAL
+2009-11-01,8809,Arrivals,TOTAL
+2009-12-01,10667,Arrivals,TOTAL
+2010-01-01,10111,Arrivals,TOTAL
+2010-02-01,9864,Arrivals,TOTAL
+2010-03-01,7680,Arrivals,TOTAL
+2010-04-01,6669,Arrivals,TOTAL
+2010-05-01,6292,Arrivals,TOTAL
+2010-06-01,6719,Arrivals,TOTAL
+2010-07-01,8837,Arrivals,TOTAL
+2010-08-01,8309,Arrivals,TOTAL
+2010-09-01,8607,Arrivals,TOTAL
+2010-10-01,8674,Arrivals,TOTAL
+2010-11-01,8483,Arrivals,TOTAL
+2010-12-01,10254,Arrivals,TOTAL
+2011-01-01,9761,Arrivals,TOTAL
+2011-02-01,10310,Arrivals,TOTAL
+2011-03-01,7787,Arrivals,TOTAL
+2011-04-01,6869,Arrivals,TOTAL
+2011-05-01,6441,Arrivals,TOTAL
+2011-06-01,6553,Arrivals,TOTAL
+2011-07-01,9102,Arrivals,TOTAL
+2011-08-01,8318,Arrivals,TOTAL
+2011-09-01,8487,Arrivals,TOTAL
+2011-10-01,8051,Arrivals,TOTAL
+2011-11-01,8678,Arrivals,TOTAL
+2011-12-01,9849,Arrivals,TOTAL
+2012-01-01,9594,Arrivals,TOTAL
+2012-02-01,10455,Arrivals,TOTAL
+2012-03-01,8324,Arrivals,TOTAL
+2012-04-01,6211,Arrivals,TOTAL
+2012-05-01,6439,Arrivals,TOTAL
+2012-06-01,7226,Arrivals,TOTAL
+2012-07-01,8350,Arrivals,TOTAL
+2012-08-01,8127,Arrivals,TOTAL
+2012-09-01,8730,Arrivals,TOTAL
+2012-10-01,8571,Arrivals,TOTAL
+2012-11-01,9065,Arrivals,TOTAL
+2012-12-01,10670,Arrivals,TOTAL
+2013-01-01,10226,Arrivals,TOTAL
+2013-02-01,10032,Arrivals,TOTAL
+2013-03-01,8557,Arrivals,TOTAL
+2013-04-01,7324,Arrivals,TOTAL
+2013-05-01,7184,Arrivals,TOTAL
+2013-06-01,7532,Arrivals,TOTAL
+2013-07-01,9584,Arrivals,TOTAL
+2013-08-01,8931,Arrivals,TOTAL
+2013-09-01,9163,Arrivals,TOTAL
+2013-10-01,9699,Arrivals,TOTAL
+2013-11-01,10050,Arrivals,TOTAL
+2013-12-01,12000,Arrivals,TOTAL
+2014-01-01,11138,Arrivals,TOTAL
+2014-02-01,12196,Arrivals,TOTAL
+2014-03-01,9845,Arrivals,TOTAL
+2014-04-01,8439,Arrivals,TOTAL
+2014-05-01,8282,Arrivals,TOTAL
+2014-06-01,8947,Arrivals,TOTAL
+2014-07-01,11575,Arrivals,TOTAL
+2014-08-01,11218,Arrivals,TOTAL
+2014-09-01,11392,Arrivals,TOTAL
+2014-10-01,11218,Arrivals,TOTAL
+2014-11-01,11352,Arrivals,TOTAL
+2014-12-01,12578,Arrivals,TOTAL
+2015-01-01,13356,Arrivals,TOTAL
+2015-02-01,12639,Arrivals,TOTAL
+2015-03-01,11044,Arrivals,TOTAL
+2015-04-01,9064,Arrivals,TOTAL
+2015-05-01,9005,Arrivals,TOTAL
+2015-06-01,9476,Arrivals,TOTAL
+2015-07-01,12842,Arrivals,TOTAL
+2015-08-01,11893,Arrivals,TOTAL
+2015-09-01,12319,Arrivals,TOTAL
+2015-10-01,12623,Arrivals,TOTAL
+2015-11-01,12328,Arrivals,TOTAL
+2015-12-01,13536,Arrivals,TOTAL
+2016-01-01,13964,Arrivals,TOTAL
+2016-02-01,14488,Arrivals,TOTAL
+2016-03-01,11239,Arrivals,TOTAL
+2016-04-01,9546,Arrivals,TOTAL
+2016-05-01,9548,Arrivals,TOTAL
+2016-06-01,9856,Arrivals,TOTAL
+2016-07-01,13018,Arrivals,TOTAL
+2016-08-01,11113,Arrivals,TOTAL
+2016-09-01,12278,Arrivals,TOTAL
+2016-10-01,12234,Arrivals,TOTAL
+2016-11-01,12291,Arrivals,TOTAL
+2016-12-01,13549,Arrivals,TOTAL
+2017-01-01,14173,Arrivals,TOTAL
+2017-02-01,14098,Arrivals,TOTAL
+2017-03-01,10884,Arrivals,TOTAL
+2017-04-01,9123,Arrivals,TOTAL
+2017-05-01,9328,Arrivals,TOTAL
+2017-06-01,10168,Arrivals,TOTAL
+2017-07-01,12927,Arrivals,TOTAL
+2017-08-01,11232,Arrivals,TOTAL
+2017-09-01,11562,Arrivals,TOTAL
+2017-10-01,11789,Arrivals,TOTAL
+2017-11-01,11775,Arrivals,TOTAL
+2017-12-01,13043,Arrivals,TOTAL
+2018-01-01,14102,Arrivals,TOTAL
+2018-02-01,12924,Arrivals,TOTAL
+2018-03-01,11030,Arrivals,TOTAL
+2018-04-01,8749,Arrivals,TOTAL
+2018-05-01,9351,Arrivals,TOTAL
+2018-06-01,9571,Arrivals,TOTAL
+2018-07-01,12904,Arrivals,TOTAL
+2018-08-01,11765,Arrivals,TOTAL
+2018-09-01,12001,Arrivals,TOTAL
+2018-10-01,11794,Arrivals,TOTAL
+2018-11-01,11725,Arrivals,TOTAL
+2018-12-01,13098,Arrivals,TOTAL
+2019-01-01,14008,Arrivals,TOTAL
+2019-02-01,13210,Arrivals,TOTAL
+2019-03-01,10859,Arrivals,TOTAL
+2019-04-01,8702,Arrivals,TOTAL
+2019-05-01,10266,Arrivals,TOTAL
+2019-06-01,11185,Arrivals,TOTAL
+2019-07-01,14307,Arrivals,TOTAL
+2019-08-01,13953,Arrivals,TOTAL
+2019-09-01,14789,Arrivals,TOTAL
+2019-10-01,16829,Arrivals,TOTAL
+2019-11-01,18223,Arrivals,TOTAL
+2019-12-01,19411,Arrivals,TOTAL
+2020-01-01,19903,Arrivals,TOTAL
+2020-02-01,21073,Arrivals,TOTAL
+2020-03-01,16243,Arrivals,TOTAL
+2020-04-01,1135,Arrivals,TOTAL
+2020-05-01,1381,Arrivals,TOTAL
+2020-06-01,2450,Arrivals,TOTAL
+2020-07-01,3783,Arrivals,TOTAL
+2020-08-01,5025,Arrivals,TOTAL
+2020-09-01,5437,Arrivals,TOTAL
+2020-10-01,5063,Arrivals,TOTAL
+2020-11-01,4848,Arrivals,TOTAL
+2020-12-01,5103,Arrivals,TOTAL
+2021-01-01,5031,Arrivals,TOTAL
+2021-02-01,5025,Arrivals,TOTAL
+2021-03-01,4908,Arrivals,TOTAL
+2021-04-01,5613,Arrivals,TOTAL
+2021-05-01,5259,Arrivals,TOTAL
+2021-06-01,4833,Arrivals,TOTAL
+2021-07-01,5735,Arrivals,TOTAL
+2021-08-01,3039,Arrivals,TOTAL
+2021-09-01,2827,Arrivals,TOTAL
+2021-10-01,3934,Arrivals,TOTAL
+2021-11-01,4140,Arrivals,TOTAL
+2021-12-01,5115,Arrivals,TOTAL
+2022-01-01,3567,Arrivals,TOTAL
+2022-02-01,2916,Arrivals,TOTAL
+2022-03-01,7193,Arrivals,TOTAL
+2022-04-01,7292,Arrivals,TOTAL
+2022-05-01,7401,Arrivals,TOTAL
+2022-06-01,8166,Arrivals,TOTAL
+2022-07-01,11435,Arrivals,TOTAL
+2022-08-01,10198,Arrivals,TOTAL
+2022-09-01,12559,Arrivals,TOTAL
+2022-10-01,12823,Arrivals,TOTAL
+2022-11-01,17668,Arrivals,TOTAL
+2022-12-01,17914,Arrivals,TOTAL
+2023-01-01,17702,Arrivals,TOTAL
+2023-02-01,20591,Arrivals,TOTAL
+2023-03-01,24210,Arrivals,TOTAL
+2023-04-01,19830,Arrivals,TOTAL
+2023-05-01,20386,Arrivals,TOTAL
+2023-06-01,20950,Arrivals,TOTAL
+2023-07-01,19899,Arrivals,TOTAL
+2023-08-01,23457,Arrivals,TOTAL
+2023-09-01,21773,Arrivals,TOTAL
+2023-10-01,20534,Arrivals,TOTAL
+2023-11-01,22530,Arrivals,TOTAL
+2023-12-01,22793,Arrivals,TOTAL
