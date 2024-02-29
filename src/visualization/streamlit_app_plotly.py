@@ -10,6 +10,8 @@ def load_data(breakdown):
         df = pd.read_pickle("../../data/interim/df_citizenship_direction_202312.pkl")
     elif breakdown == "Direction, Age, Sex":
         df = pd.read_pickle("../../data/interim/df_direction_age_sex_202312.pkl")
+    elif breakdown == "Direction, Visa":
+        df = pd.read_pickle("../../data/interim/df_direction_visa_202312.pkl")
     df["Month"] = pd.to_datetime(
         df["Month"]
     )  # Ensure the Month column is datetime type
@@ -18,7 +20,8 @@ def load_data(breakdown):
 
 # Select breakdown type
 breakdown_type = st.selectbox(
-    "Select breakdown", ["Direction, Citizenship", "Direction, Age, Sex"]
+    "Select breakdown",
+    ["Direction, Citizenship", "Direction, Age, Sex", "Direction, Visa"],
 )
 
 # Load the selected dataset
@@ -33,8 +36,10 @@ with tab1:
     def create_label(row):
         if breakdown_type == "Direction, Citizenship":
             return f"{row['Direction']}, {row['Citizenship']}"
-        else:  # Direction, Age, Sex
+        elif breakdown_type == "Direction, Age, Sex":
             return f"{row['Direction']}, {row['Sex']}, {row['Age Group']}"
+        elif breakdown_type == "Direction, Visa":  # New condition for Direction, Visa
+            return f"{row['Direction']}, {row['Visa']}"
 
     if breakdown_type == "Direction, Citizenship":
         directions = st.multiselect(
@@ -46,7 +51,7 @@ with tab1:
         filtered_df = df[
             (df["Direction"].isin(directions)) & (df["Citizenship"].isin(citizenship))
         ]
-    else:  # Direction, Age, Sex
+    elif breakdown_type == "Direction, Age, Sex":
         directions = st.multiselect(
             "Select Directions:",
             df["Direction"].unique(),
@@ -65,6 +70,16 @@ with tab1:
             & df["Sex"].isin(sex)
             & df["Age Group"].isin(age_group)
         ]
+    elif breakdown_type == "Direction, Visa":  # New inclusion for Direction, Visa
+        directions = st.multiselect(
+            "Select Directions:",
+            df["Direction"].unique(),
+            default=df["Direction"].unique()[0],
+        )
+        visa = st.multiselect(
+            "Select Visa Type:", df["Visa"].unique(), default=df["Visa"].unique()[:2]
+        )
+        filtered_df = df[df["Direction"].isin(directions) & df["Visa"].isin(visa)]
 
     # Apply the function to create a new column 'Label' for plotting
     filtered_df["Label"] = filtered_df.apply(create_label, axis=1)
@@ -95,53 +110,68 @@ with tab1:
 
 # Stacked Area Plots Tab
 with tab2:
+    direction = st.selectbox(
+        "Select Direction:",
+        df["Direction"].unique(),
+        key="direction_select",  # Use a consistent key for the direction selectbox across conditions
+    )
+
     if breakdown_type == "Direction, Citizenship":
-        direction = st.selectbox("Select Direction:", df["Direction"].unique())
         citizenships = st.multiselect(
-            "Select Citizenships:",
-            df["Citizenship"].unique(),
-            default=df["Citizenship"].unique()[:2],
+            "Select Citizenships:", df["Citizenship"].unique(), key="citizenships"
         )
         filtered_df = df[
             (df["Direction"] == direction) & (df["Citizenship"].isin(citizenships))
         ]
-        # Preparing data for the plot
-        pivot_df = filtered_df.pivot_table(
-            index="Month", columns="Citizenship", values="Count", aggfunc="sum"
-        ).fillna(0)
+        pivot_columns = "Citizenship"
+        plot_title = f"Stacked Area Plot of {direction} by Citizenship"
 
-    else:  # Direction, Age, Sex
-        direction = st.selectbox("Select Direction:", df["Direction"].unique())
-        sex = st.selectbox("Select Sex:", df["Sex"].unique())
+    elif breakdown_type == "Direction, Age, Sex":
+        sex = st.selectbox("Select Sex:", df["Sex"].unique(), key="sex_age_sex")
         age_groups = st.multiselect(
-            "Select Age Groups:",
-            df["Age Group"].unique(),
-            default=df["Age Group"].unique()[:2],
+            "Select Age Groups:", df["Age Group"].unique(), key="age_groups_age_sex"
         )
         filtered_df = df[
             (df["Direction"] == direction)
             & (df["Sex"] == sex)
             & (df["Age Group"].isin(age_groups))
         ]
-        # Preparing data for the plot
-        pivot_df = filtered_df.pivot_table(
-            index="Month", columns="Age Group", values="Count", aggfunc="sum"
-        ).fillna(0)
+        pivot_columns = "Age Group"
+        plot_title = f"Stacked Area Plot of {direction} by age group ({sex}) "
+
+    elif breakdown_type == "Direction, Visa":
+        visas = st.multiselect(
+            "Select Visa Type:", df["Visa"].unique(), key="visas_visa"
+        )
+        filtered_df = df[(df["Direction"] == direction) & (df["Visa"].isin(visas))]
+        pivot_columns = "Visa"
+        plot_title = f"Stacked Area Plot of {direction} by Visa type"
+
+    # Preparing data for the plot
+    pivot_df = filtered_df.pivot_table(
+        index="Month", columns=pivot_columns, values="Count", aggfunc="sum"
+    ).fillna(0)
 
     # Plotting with Plotly
     fig = px.area(pivot_df, facet_col_wrap=2)
 
+    # Define a dictionary mapping breakdown types to legend title texts
+    legend_title_map = {
+        "Direction, Citizenship": "Citizenship",
+        "Direction, Age, Sex": "Age Group",
+        "Direction, Visa": "Visa",
+    }
+
+    # Use the breakdown_type to get the corresponding legend title text from the dictionary
+    legend_title_text = legend_title_map.get(
+        breakdown_type, "Category"
+    )  # Default to "Category" if breakdown_type is not in the map
+
     fig.update_layout(
         xaxis_title="Month",
         yaxis_title="Count",
-        title=(
-            "Stacked Area Plot"
-            if breakdown_type == "Direction, Citizenship"
-            else "Stacked Area Plot for Direction, Age, Sex"
-        ),
-        legend_title_text=(
-            "Age Group" if breakdown_type == "Direction, Age, Sex" else "Citizenship"
-        ),
+        title=plot_title,
+        legend_title_text=legend_title_text,
         hovermode="x unified",
     )
 
