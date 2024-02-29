@@ -75,7 +75,12 @@ with tab1:
     for label in unique_labels:
         df_plot = filtered_df[filtered_df["Label"] == label]
         ax.plot(
-            df_plot["Month"], df_plot["Count"], marker="o", linestyle="-", label=label
+            df_plot["Month"],
+            df_plot["Count"],
+            marker="o",
+            linestyle="-",
+            label=label,
+            markersize=4,
         )
 
     ax.set_xlabel("Month")
@@ -134,26 +139,5 @@ with tab2:
         else "Stacked Area Plot for Direction, Age, Sex"
     )
     ax.set_title(title)
-    ax.legend(loc="upper left")
+    ax.legend(loc="upper left", bbox_to_anchor=(1, 1))  # Adjust legend position
     st.pyplot(fig)
-
-
-# Add large title
-# add source
-# add logo and blog link
-# add readme with blog link and a image of the dashboard
-# add new column prime age
-# allow smoothing - 3 month or raw
-
-# Time series
-# Need a note saying how countries and regions total up
-# Add tool tip
-# make markers smaller
-# put the leged box to the right outside the plot area
-
-# Stacked area
-# add tool tip
-# Use cool colour pallette
-# have some very light grid lines
-# allow smoothing - 3 month or raw
-# put the leged box to the right outside the plot area
