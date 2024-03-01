@@ -2,6 +2,13 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+# Main title for the dashboard
+st.title("New Zealand Migration Trends")
+st.markdown(
+    "A dashboard for analysing trends in Permanant and Long-term Migration data from Statistics NZ. Refer the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home).",
+    unsafe_allow_html=True,
+)
+
 
 # Function to create a label for each unique combination
 def create_label(row):
@@ -116,6 +123,16 @@ with tab1:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+    # Using st.markdown to create a flex container with two text elements, with adjusted font size
+    st.markdown(
+        """
+    <div style="text-align: right; font-size: 12px;">  <!-- Apply text alignment and font size here -->
+        <div>Source: Statistics NZ</div>
+        <div>autonomousecon.substack.com</div>  <!-- Each <div> will be on its own line -->
+    </div>
+    """,
+        unsafe_allow_html=True,
+    )
 
 
 # Stacked Area Plots Tab
@@ -205,3 +222,14 @@ with tab2:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+    # Using st.markdown to create a flex container with two text elements, with adjusted font size
+    st.markdown(
+        """
+    <div style="text-align: right; font-size: 12px;">  <!-- Apply text alignment and font size here -->
+        <div>Source: Statistics NZ</div>
+        <div>autonomousecon.substack.com</div>  <!-- Each <div> will be on its own line -->
+    </div>
+    """,
+        unsafe_allow_html=True,
+    )
