@@ -3,6 +3,16 @@ import pandas as pd
 import plotly.express as px
 
 
+# Function to create a label for each unique combination
+def create_label(row):
+    if breakdown_type == "Direction, Citizenship":
+        return f"{row['Direction']}, {row['Citizenship']}"
+    elif breakdown_type == "Direction, Age, Sex":
+        return f"{row['Direction']}, {row['Sex']}, {row['Age Group']}"
+    elif breakdown_type == "Direction, Visa":  # New condition for Direction, Visa
+        return f"{row['Direction']}, {row['Visa']}"
+
+
 # Function to load datasets
 @st.cache_data  # Use Streamlit's cache to load the data only once
 def load_data(breakdown):
@@ -32,25 +42,21 @@ tab1, tab2 = st.tabs(["Time Series Plot", "Stacked Area Plots"])
 
 # Time Series Plot Tab
 with tab1:
-    # Define a function to create a label for each unique combination
-    def create_label(row):
-        if breakdown_type == "Direction, Citizenship":
-            return f"{row['Direction']}, {row['Citizenship']}"
-        elif breakdown_type == "Direction, Age, Sex":
-            return f"{row['Direction']}, {row['Sex']}, {row['Age Group']}"
-        elif breakdown_type == "Direction, Visa":  # New condition for Direction, Visa
-            return f"{row['Direction']}, {row['Visa']}"
-
     if breakdown_type == "Direction, Citizenship":
         directions = st.multiselect(
             "Select Directions:",
             df["Direction"].unique(),
             default=df["Direction"].unique()[0],
         )
-        citizenship = st.multiselect("Select Citizenship:", df["Citizenship"].unique())
+        citizenship = st.multiselect(
+            "Select Citizenship:",
+            df["Citizenship"].unique(),
+            default=df["Citizenship"].unique()[0],
+        )
         filtered_df = df[
             (df["Direction"].isin(directions)) & (df["Citizenship"].isin(citizenship))
         ]
+        plot_title = "Permanent and long term migration by Citizenship"
     elif breakdown_type == "Direction, Age, Sex":
         directions = st.multiselect(
             "Select Directions:",
@@ -70,6 +76,7 @@ with tab1:
             & df["Sex"].isin(sex)
             & df["Age Group"].isin(age_group)
         ]
+        plot_title = f"Permanent and long term migration by age group"
     elif breakdown_type == "Direction, Visa":  # New inclusion for Direction, Visa
         directions = st.multiselect(
             "Select Directions:",
@@ -77,9 +84,12 @@ with tab1:
             default=df["Direction"].unique()[0],
         )
         visa = st.multiselect(
-            "Select Visa Type:", df["Visa"].unique(), default=df["Visa"].unique()[:2]
+            "Select Visa Type:",
+            df["Visa"].unique(),
+            default=df["Visa"].unique()[:2],
         )
         filtered_df = df[df["Direction"].isin(directions) & df["Visa"].isin(visa)]
+        plot_title = f"Permanent and long term arrivals by Visa type"
 
     # Apply the function to create a new column 'Label' for plotting
     filtered_df["Label"] = filtered_df.apply(create_label, axis=1)
@@ -90,7 +100,7 @@ with tab1:
         x="Month",
         y="Count",
         color="Label",
-        title="Time Series with Multiple Selections",
+        title=plot_title,
         markers=True,
     )
     fig.update_traces(marker=dict(size=4))
@@ -118,7 +128,10 @@ with tab2:
 
     if breakdown_type == "Direction, Citizenship":
         citizenships = st.multiselect(
-            "Select Citizenships:", df["Citizenship"].unique(), key="citizenships"
+            "Select Citizenships:",
+            df["Citizenship"].unique(),
+            default=df["Citizenship"].unique()[:2],
+            key="citizenships",
         )
         filtered_df = df[
             (df["Direction"] == direction) & (df["Citizenship"].isin(citizenships))
@@ -129,7 +142,10 @@ with tab2:
     elif breakdown_type == "Direction, Age, Sex":
         sex = st.selectbox("Select Sex:", df["Sex"].unique(), key="sex_age_sex")
         age_groups = st.multiselect(
-            "Select Age Groups:", df["Age Group"].unique(), key="age_groups_age_sex"
+            "Select Age Groups:",
+            df["Age Group"].unique(),
+            default=df["Age Group"].unique()[:2],
+            key="age_groups_age_sex",
         )
         filtered_df = df[
             (df["Direction"] == direction)
@@ -141,7 +157,10 @@ with tab2:
 
     elif breakdown_type == "Direction, Visa":
         visas = st.multiselect(
-            "Select Visa Type:", df["Visa"].unique(), key="visas_visa"
+            "Select Visa Type:",
+            df["Visa"].unique(),
+            default=df["Visa"].unique()[:2],
+            key="visas_visa",
         )
         filtered_df = df[(df["Direction"] == direction) & (df["Visa"].isin(visas))]
         pivot_columns = "Visa"
