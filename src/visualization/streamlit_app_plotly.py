@@ -37,7 +37,7 @@ def load_data(breakdown):
 
 # Select breakdown type
 breakdown_type = st.selectbox(
-    "Select breakdown",
+    "Select the breakdown to explore:",
     ["Direction, Citizenship", "Direction, Age, Sex", "Direction, Visa"],
 )
 
@@ -51,7 +51,7 @@ tab1, tab2 = st.tabs(["Time Series Plot", "Stacked Area Plots"])
 with tab1:
     if breakdown_type == "Direction, Citizenship":
         directions = st.multiselect(
-            "Select Directions:",
+            "Select directions:",
             df["Direction"].unique(),
             default=df["Direction"].unique()[0],
         )
@@ -66,7 +66,7 @@ with tab1:
         plot_title = "Permanent and long term migration by Citizenship"
     elif breakdown_type == "Direction, Age, Sex":
         directions = st.multiselect(
-            "Select Directions:",
+            "Select directions:",
             df["Direction"].unique(),
             default=df["Direction"].unique()[0],
         )
@@ -74,7 +74,7 @@ with tab1:
             "Select Sex:", df["Sex"].unique(), default=df["Sex"].unique()[0]
         )
         age_group = st.multiselect(
-            "Select Age Group:",
+            "Select age group:",
             df["Age Group"].unique(),
             default=df["Age Group"].unique()[:2],
         )
@@ -86,17 +86,17 @@ with tab1:
         plot_title = f"Permanent and long term migration by age group"
     elif breakdown_type == "Direction, Visa":  # New inclusion for Direction, Visa
         directions = st.multiselect(
-            "Select Directions:",
+            "Select directions:",
             df["Direction"].unique(),
             default=df["Direction"].unique()[0],
         )
         visa = st.multiselect(
-            "Select Visa Type:",
+            "Select visa type:",
             df["Visa"].unique(),
             default=df["Visa"].unique()[:2],
         )
         filtered_df = df[df["Direction"].isin(directions) & df["Visa"].isin(visa)]
-        plot_title = f"Permanent and long term arrivals by Visa type"
+        plot_title = f"Permanent and long term arrivals by visa type"
 
     # Apply the function to create a new column 'Label' for plotting
     filtered_df["Label"] = filtered_df.apply(create_label, axis=1)
@@ -109,7 +109,8 @@ with tab1:
         color="Label",
         title=plot_title,
         markers=True,
-    )
+    )  # Adding a horizontal line at y=0
+    fig.add_hline(y=0, line_dash="dash", line_color="grey")
     fig.update_traces(marker=dict(size=4))
     fig.update_layout(hovermode="closest")
     fig.update_layout(
