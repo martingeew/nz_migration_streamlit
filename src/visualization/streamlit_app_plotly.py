@@ -35,11 +35,17 @@ def load_data(breakdown):
 
     # Construct the path to the data file based on the breakdown
     if breakdown == "Direction, Citizenship":
-        data_path = os.path.join(current_dir, "df_citizenship_direction_202312.pkl")
+        data_path = os.path.join(
+            current_dir, "../../data/interim/df_citizenship_direction_202312.pkl"
+        )
     elif breakdown == "Direction, Age, Sex":
-        data_path = os.path.join(current_dir, "df_direction_age_sex_202312.pkl")
+        data_path = os.path.join(
+            current_dir, "../../data/interim/df_direction_age_sex_202312.pkl"
+        )
     elif breakdown == "Direction, Visa":
-        data_path = os.path.join(current_dir, "df_direction_visa_202312.pkl")
+        data_path = os.path.join(
+            current_dir, "../../data/interim/df_direction_visa_202312.pkl"
+        )
 
     # Load the data from the constructed path
     df = pd.read_pickle(data_path)
