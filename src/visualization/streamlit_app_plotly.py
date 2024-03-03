@@ -4,8 +4,11 @@ import plotly.express as px
 
 # Main title for the dashboard
 st.title("New Zealand Migration Trends")
+st.subheader(
+    "A dashboard for vizualising permanant and long-term migration data from Statistics NZ"
+)
 st.markdown(
-    "A dashboard for analysing trends in Permanant and Long-term Migration data from Statistics NZ. Refer the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home).",
+    "Refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home). Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot.",
     unsafe_allow_html=True,
 )
 
