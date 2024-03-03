@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+import os
+
+current_dir = os.path.dirname(__file__)
+
 # Main title for the dashboard
 st.title("New Zealand Migration Trends")
 st.subheader(
@@ -26,17 +30,23 @@ def create_label(row):
 # Function to load datasets
 @st.cache_data  # Use Streamlit's cache to load the data only once
 def load_data(breakdown):
+    # Get the current directory where the script is running
+    current_dir = os.path.dirname(__file__)
+
+    # Construct the path to the data file based on the breakdown
     if breakdown == "Direction, Citizenship":
-        df = pd.read_pickle(
-            "../../src/visualization/df_citizenship_direction_202312.pkl"
-        )
+        data_path = os.path.join(current_dir, "df_citizenship_direction_202312.pkl")
     elif breakdown == "Direction, Age, Sex":
-        df = pd.read_pickle("../../src/visualization/df_direction_age_sex_202312.pkl")
+        data_path = os.path.join(current_dir, "df_direction_age_sex_202312.pkl")
     elif breakdown == "Direction, Visa":
-        df = pd.read_pickle("../../src/visualization/df_direction_visa_202312.pkl")
-    df["Month"] = pd.to_datetime(
-        df["Month"]
-    )  # Ensure the Month column is datetime type
+        data_path = os.path.join(current_dir, "df_direction_visa_202312.pkl")
+
+    # Load the data from the constructed path
+    df = pd.read_pickle(data_path)
+
+    # Ensure the Month column is datetime type
+    df["Month"] = pd.to_datetime(df["Month"])
+
     return df
 
 
