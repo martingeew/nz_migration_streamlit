@@ -27,11 +27,11 @@ def create_label(row):
 @st.cache_data  # Use Streamlit's cache to load the data only once
 def load_data(breakdown):
     if breakdown == "Direction, Citizenship":
-        df = pd.read_pickle("../../data/interim/df_citizenship_direction_202312.pkl")
+        df = pd.read_pickle("df_citizenship_direction_202312.pkl")
     elif breakdown == "Direction, Age, Sex":
-        df = pd.read_pickle("../../data/interim/df_direction_age_sex_202312.pkl")
+        df = pd.read_pickle("df_direction_age_sex_202312.pkl")
     elif breakdown == "Direction, Visa":
-        df = pd.read_pickle("../../data/interim/df_direction_visa_202312.pkl")
+        df = pd.read_pickle("df_direction_visa_202312.pkl")
     df["Month"] = pd.to_datetime(
         df["Month"]
     )  # Ensure the Month column is datetime type
