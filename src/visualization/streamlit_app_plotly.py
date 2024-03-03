@@ -87,7 +87,7 @@ with tab1:
             & df["Age Group"].isin(age_group)
         ]
         plot_title = f"Permanent and long term migration by age group"
-    elif breakdown_type == "Direction, Visa":  # New inclusion for Direction, Visa
+    elif breakdown_type == "Direction, Visa":
         directions = st.multiselect(
             "Select directions:",
             df["Direction"].unique(),
