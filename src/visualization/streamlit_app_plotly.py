@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
+from datetime import datetime
 
 import os
 
@@ -8,13 +10,20 @@ current_dir = os.path.dirname(__file__)
 
 # Main title for the dashboard
 st.title("New Zealand Migration Trends")
-st.subheader(
-    "A dashboard for vizualising permanant and long-term migration data from Statistics NZ"
-)
+
 st.markdown(
-    "Refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home). Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot.",
+    "A dashboard for visualizing permanent and long-term migration data from Statistics NZ. <br><br>Refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home). Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot. <br><br>Data last updated: 15 Feb 2024",
     unsafe_allow_html=True,
 )
+
+
+# Define the footer text
+footer_text = """
+<div style="text-align: right; font-size: 12px;">  <!-- Apply text alignment and font size here -->
+    <div>Source: Statistics NZ</div>
+    <div>autonomousecon.substack.com</div>  <!-- Each <div> will be on its own line -->
+</div>
+"""
 
 
 # Function to create a label for each unique combination
@@ -66,7 +75,7 @@ breakdown_type = st.selectbox(
 df = load_data(breakdown_type)
 
 # Create tabs
-tab1, tab2 = st.tabs(["Time Series Plot", "Stacked Area Plots"])
+tab1, tab2, tab3 = st.tabs(["Time Series Plot", "Stacked Area Plots", "Tree Maps"])
 
 # Time Series Plot Tab
 with tab1:
@@ -146,15 +155,7 @@ with tab1:
 
     st.plotly_chart(fig, use_container_width=True)
     # Using st.markdown to create a flex container with two text elements, with adjusted font size
-    st.markdown(
-        """
-    <div style="text-align: right; font-size: 12px;">  <!-- Apply text alignment and font size here -->
-        <div>Source: Statistics NZ</div>
-        <div>autonomousecon.substack.com</div>  <!-- Each <div> will be on its own line -->
-    </div>
-    """,
-        unsafe_allow_html=True,
-    )
+    st.markdown(footer_text,unsafe_allow_html=True)
 
 
 # Stacked Area Plots Tab
@@ -246,12 +247,137 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
     # Using st.markdown to create a flex container with two text elements, with adjusted font size
-    st.markdown(
-        """
-    <div style="text-align: right; font-size: 12px;">  <!-- Apply text alignment and font size here -->
-        <div>Source: Statistics NZ</div>
-        <div>autonomousecon.substack.com</div>  <!-- Each <div> will be on its own line -->
-    </div>
-    """,
-        unsafe_allow_html=True,
-    )
+    st.markdown(footer_text,unsafe_allow_html=True)
+    
+# Treemap Tab
+with tab3:
+    if breakdown_type == "Direction, Citizenship":
+    # User input widgets
+        direction = st.selectbox(
+            "Select Direction:",
+            df["Direction"].unique(),
+            key="direction_treemap"
+        )
+
+        start_month = st.date_input(
+            "Start month",
+            value=datetime(2010, 1, 1),
+            key="start_month"
+        )
+
+        end_month = st.date_input(
+            "End month",
+            value=datetime(2020, 3, 1),
+            key="end_month"
+        )
+
+        exclude_nz = st.checkbox("Exclude New Zealand", value=True, key="exclude_nz")
+
+        # Adjust the non_countries list based on checkbox
+        non_countries = [
+            'Oceania and Antarctica', 'North-East Asia',
+            'Southern and Central Asia', 'South-East Asia', 'Asia',
+            'North-West Europe', 'Southern and Eastern Europe', 'Europe',
+            'The Americas', 'North Africa and the Middle East',
+            'Sub-Saharan Africa', 'Africa and the Middle East',
+            'Non-New Zealand', 'TOTAL ALL CITIZENSHIPS'
+        ]
+        
+        if exclude_nz:
+            non_countries.append('New Zealand')
+
+        # Filtering DataFrame
+        filtered_df = df[
+        (df['Direction'] == direction) &
+        (df['Month']>= pd.to_datetime(start_month)) &
+        (df['Month'] <= pd.to_datetime(end_month)) &
+        (~df['Citizenship'].isin(non_countries))
+        ]
+
+        # Grouping and calculating percentage
+        grouped_df = filtered_df.groupby(['Direction', 'Citizenship'], as_index=False)['Count'].sum()
+        total_counts_by_direction = grouped_df.groupby('Direction')['Count'].transform('sum')
+        grouped_df['Percentage'] = (grouped_df['Count'] / total_counts_by_direction * 100).round(1)
+
+        # Creating the Treemap
+        fig = go.Figure(go.Treemap(
+            labels=grouped_df['Citizenship'],
+            parents=grouped_df['Direction'],
+            values=grouped_df['Count'],
+            customdata=grouped_df['Percentage'],
+            texttemplate="<b>%{label}</b><br>Count: %{value}</b><br>Share: %{customdata}%",
+            hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+            branchvalues="total"
+        ))
+    
+    elif breakdown_type == "Direction, Age, Sex":
+        # User input widgets for Direction, Start month, and End month
+        direction = st.selectbox("Select Direction:", df["Direction"].unique(), key="direction_treemap_age")
+        sex = st.selectbox("Select Sex:", df["Sex"].unique(), key="direction_treemap_sex")
+        start_month = st.date_input("Start month", value=datetime(2010, 1, 1), key="start_month_age")
+        end_month = st.date_input("End month", value=datetime(2020, 3, 1), key="end_month_age")
+
+        # Filtering DataFrame for the selected direction and month range, excluding 'Total All Ages'
+        filtered_df = df[
+            (df['Direction'] == direction) &
+            (df['Sex'] == sex) &
+            (df['Month'] >= pd.to_datetime(start_month)) &
+            (df['Month'] <= pd.to_datetime(end_month)) &
+            (df['Age Group'] != 'Total All Ages')  # Exclude 'Total All Ages'
+        ]
+
+        # Grouping by 'Direction' and 'Age', then calculating the count and percentage
+        grouped_df = filtered_df.groupby(['Direction', 'Age Group'], as_index=False)['Count'].sum()
+        total_counts_by_direction = grouped_df.groupby('Direction')['Count'].transform('sum')
+        grouped_df['Percentage'] = (grouped_df['Count'] / total_counts_by_direction * 100).round(1)
+
+        # Creating the Treemap visualization for Age
+        fig = go.Figure(go.Treemap(
+            labels=grouped_df['Age Group'],
+            parents=grouped_df['Direction'],
+            values=grouped_df['Count'],
+            customdata=grouped_df['Percentage'],
+            texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
+            hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+            branchvalues="total"
+        ))
+    
+    elif breakdown_type == "Direction, Visa":
+        # User input widgets for Direction, Start month, and End month
+        direction = st.selectbox("Select Direction:", df["Direction"].unique(), key="direction_treemap_visa")
+        start_month = st.date_input("Start month", value=datetime(2010, 1, 1), key="start_month_age")
+        end_month = st.date_input("End month", value=datetime(2020, 3, 1), key="end_month_age")
+
+        # Filtering DataFrame for the selected direction and month range, excluding 'Total All Ages'
+        filtered_df = df[
+            (df['Direction'] == direction) &
+            (df['Month'] >= pd.to_datetime(start_month)) &
+            (df['Month'] <= pd.to_datetime(end_month)) &
+            (df['Visa'] != 'TOTAL')  # Exclude 'Total'
+        ]
+
+        # Grouping by 'Direction' and 'Visa', then calculating the count and percentage
+        grouped_df = filtered_df.groupby(['Direction', 'Visa'], as_index=False)['Count'].sum()
+        total_counts_by_direction = grouped_df.groupby('Direction')['Count'].transform('sum')
+        grouped_df['Percentage'] = (grouped_df['Count'] / total_counts_by_direction * 100).round(1)
+
+        # Creating the Treemap visualization for Visa
+        fig = go.Figure(go.Treemap(
+            labels=grouped_df['Visa'],
+            parents=grouped_df['Direction'],
+            values=grouped_df['Count'],
+            customdata=grouped_df['Percentage'],
+            texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
+            hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+            branchvalues="total"
+        ))
+
+    fig.update_layout(margin=dict(t=0, l=0, r=0, b=0))
+    st.plotly_chart(fig, use_container_width=True)
+
+    # Using st.markdown to create a flex container with two text elements, with adjusted font size
+    st.markdown(footer_text,unsafe_allow_html=True)
+    
+
+
+        
