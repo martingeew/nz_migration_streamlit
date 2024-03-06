@@ -251,6 +251,9 @@ with tab2:
 
 # Treemap Tab
 with tab3:
+    # Setting up the minimum and maximum dates the user can select
+    min_date = datetime(2001, 1, 1)
+    max_date = datetime(2026, 12, 31)
     if breakdown_type == "Direction, Citizenship":
         # User input widgets
         direction = st.selectbox(
@@ -258,11 +261,19 @@ with tab3:
         )
 
         start_month = st.date_input(
-            "Start month", value=datetime(2010, 1, 1), key="start_month"
+            "Start month",
+            value=datetime(2022, 1, 1),
+            key="start_month",
+            min_value=min_date,
+            max_value=max_date,
         )
 
         end_month = st.date_input(
-            "End month", value=datetime(2020, 3, 1), key="end_month"
+            "End month",
+            value=datetime(2023, 12, 1),
+            key="end_month",
+            min_value=min_date,
+            max_value=max_date,
         )
 
         exclude_nz = st.checkbox("Exclude New Zealand", value=True, key="exclude_nz")
@@ -329,10 +340,19 @@ with tab3:
             "Select Sex:", df["Sex"].unique(), key="direction_treemap_sex"
         )
         start_month = st.date_input(
-            "Start month", value=datetime(2010, 1, 1), key="start_month_age"
+            "Start month",
+            value=datetime(2022, 1, 1),
+            key="start_month",
+            min_value=min_date,
+            max_value=max_date,
         )
+
         end_month = st.date_input(
-            "End month", value=datetime(2020, 3, 1), key="end_month_age"
+            "End month",
+            value=datetime(2023, 12, 1),
+            key="end_month",
+            min_value=min_date,
+            max_value=max_date,
         )
 
         # Filtering DataFrame for the selected direction and month range, excluding 'Total All Ages'
@@ -374,10 +394,19 @@ with tab3:
             "Select Direction:", df["Direction"].unique(), key="direction_treemap_visa"
         )
         start_month = st.date_input(
-            "Start month", value=datetime(2010, 1, 1), key="start_month_age"
+            "Start month",
+            value=datetime(2022, 1, 1),
+            key="start_month",
+            min_value=min_date,
+            max_value=max_date,
         )
+
         end_month = st.date_input(
-            "End month", value=datetime(2020, 3, 1), key="end_month_age"
+            "End month",
+            value=datetime(2023, 12, 1),
+            key="end_month",
+            min_value=min_date,
+            max_value=max_date,
         )
 
         # Filtering DataFrame for the selected direction and month range, excluding 'Total All Ages'
