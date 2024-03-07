@@ -275,6 +275,40 @@ with tab3:
             min_value=min_date,
             max_value=max_date,
         )
+        color_map = {
+            "New Zealand": "#2ca02c",  # Forest green
+            "Australia": "#e7ba52",  # Gold
+            "Fiji": "#8ca252",  # Sage
+            "Tonga": "#ffbb78",  # Peach
+            "Samoa": "#1f77b4",  # Vivid blue
+            "China, People's Republic of": "#d62728",  # Brick red
+            "Hong Kong (Special Administrative Region)": "#e377c2",  # Pink
+            "Indonesia": "#ff9896",  # Salmon pink
+            "India": "#9467bd",  # Medium purple
+            "Japan": "#c5b0d5",  # Lavender
+            "Korea, Republic of": "#8c564b",  # Brownish pink
+            "Sri Lanka": "#c49c94",  # Rosy brown
+            "Malaysia": "#98df8a",  # Soft lime
+            "Nepal": "#f7b6d2",  # Pale pink
+            "Philippines": "#7f7f7f",  # Grey
+            "Pakistan": "#c7c7c7",  # Silver
+            "Thailand": "#6b6ecf",  # Soft indigo
+            "Taiwan": "#dbdb8d",  # Pale olive
+            "Viet Nam": "#17becf",  # Cyan
+            "Czechia": "#9edae5",  # Pale cyan
+            "Germany": "#bcbd22",  # Olive green
+            "France": "#5254a3",  # Indigo
+            "United Kingdom": "#393b79",  # Dark blue
+            "Ireland": "#9c9ede",  # Periwinkle
+            "Italy": "#637939",  # Moss green
+            "Netherlands": "#ff7f0e",  # Bright orange
+            "Argentina": "#b5cf6b",  # Light olive
+            "Brazil": "#cedb9c",  # Pale lime
+            "Canada": "#8c6d31",  # Mustard
+            "Chile": "#bd9e39",  # Bronze
+            "United States of America": "#aec7e8",  # Light blue
+            "South Africa": "#e7cb94",  # Khaki
+        }
 
         exclude_nz = st.checkbox("Exclude New Zealand", value=True, key="exclude_nz")
 
@@ -318,6 +352,8 @@ with tab3:
             grouped_df["Count"] / total_counts_by_direction * 100
         ).round(1)
 
+        grouped_df["Color"] = grouped_df["Citizenship"].map(color_map)
+
         # Creating the Treemap
         fig = go.Figure(
             go.Treemap(
@@ -325,6 +361,7 @@ with tab3:
                 parents=grouped_df["Direction"],
                 values=grouped_df["Count"],
                 customdata=grouped_df["Percentage"],
+                marker_colors=grouped_df["Color"],
                 texttemplate="<b>%{label}</b><br>Count: %{value}</b><br>Share: %{customdata}%",
                 hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
                 branchvalues="total",
@@ -354,6 +391,20 @@ with tab3:
             min_value=min_date,
             max_value=max_date,
         )
+        color_map = {
+            "15-19 Years": "#e41a1c",  # Red
+            "20-24 Years": "#377eb8",  # Blue
+            "25-29 Years": "#4daf4a",  # Green
+            "30-34 Years": "#984ea3",  # Purple
+            "35-39 Years": "#ff7f00",  # Orange
+            "40-44 Years": "#ffff33",  # Yellow
+            "45-49 Years": "#a65628",  # Brown
+            "50-54 Years": "#f781bf",  # Pink
+            "55-59 Years": "#999999",  # Grey
+            "60-64 Years": "#a6cee3",  # Light blue
+            "Under 15 Years": "#b2df8a",  # Light green
+            "65 Years and Over": "#fb9a99",  # Light red
+        }
 
         # Filtering DataFrame for the selected direction and month range, excluding 'Total All Ages'
         filtered_df = df[
@@ -374,6 +425,7 @@ with tab3:
         grouped_df["Percentage"] = (
             grouped_df["Count"] / total_counts_by_direction * 100
         ).round(1)
+        grouped_df["Color"] = grouped_df["Age Group"].map(color_map)
 
         # Creating the Treemap visualization for Age
         fig = go.Figure(
@@ -382,6 +434,7 @@ with tab3:
                 parents=grouped_df["Direction"],
                 values=grouped_df["Count"],
                 customdata=grouped_df["Percentage"],
+                marker_colors=grouped_df["Color"],
                 texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
                 hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
                 branchvalues="total",
@@ -408,6 +461,14 @@ with tab3:
             min_value=min_date,
             max_value=max_date,
         )
+        color_map = {
+            "Residence": "#E63946",  # Bright red
+            "Student": "#F1C40F",  # Vivid yellow
+            "Visitor": "#2ECC71",  # Emerald green
+            "Work": "#3498DB",  # Bright blue
+            "New Zealand and Australian citizens": "#9B59B6",  # Amethyst purple
+            "Other": "#E67E22",  # Pumpkin orange
+        }
 
         # Filtering DataFrame for the selected direction and month range, excluding 'Total All Ages'
         filtered_df = df[
@@ -427,6 +488,7 @@ with tab3:
         grouped_df["Percentage"] = (
             grouped_df["Count"] / total_counts_by_direction * 100
         ).round(1)
+        grouped_df["Color"] = grouped_df["Visa"].map(color_map)
 
         # Creating the Treemap visualization for Visa
         fig = go.Figure(
@@ -435,6 +497,7 @@ with tab3:
                 parents=grouped_df["Direction"],
                 values=grouped_df["Count"],
                 customdata=grouped_df["Percentage"],
+                marker_colors=grouped_df["Color"],
                 texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
                 hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
                 branchvalues="total",
