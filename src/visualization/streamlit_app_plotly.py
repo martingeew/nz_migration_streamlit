@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
+from io import StringIO
 
 import os
 
@@ -154,6 +155,19 @@ with tab1:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+    # Convert DataFrame to CSV string
+    csv = filtered_df.to_csv(index=False)
+    csv_file = StringIO(csv)
+    csv_filename = "migration_data.csv"
+
+    # Add a download button and specify the method to download the data
+    st.download_button(
+        label="Download Data as CSV",
+        data=csv_file.getvalue(),
+        file_name=csv_filename,
+        mime="text/csv",
+        key="download_timeseries",
+    )
     # Using st.markdown to create a flex container with two text elements, with adjusted font size
     st.markdown(footer_text, unsafe_allow_html=True)
 
@@ -245,6 +259,20 @@ with tab2:
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+    # Convert DataFrame to CSV string
+    csv = filtered_df.to_csv(index=False)
+    csv_file = StringIO(csv)
+    csv_filename = "migration_data.csv"
+
+    # Add a download button and specify the method to download the data
+    st.download_button(
+        label="Download Data as CSV",
+        data=csv_file.getvalue(),
+        file_name=csv_filename,
+        mime="text/csv",
+        key="download_stackarea",
+    )
 
     # Using st.markdown to create a flex container with two text elements, with adjusted font size
     st.markdown(footer_text, unsafe_allow_html=True)
@@ -506,6 +534,19 @@ with tab3:
 
     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0))
     st.plotly_chart(fig, use_container_width=True)
+    # Convert DataFrame to CSV string
+    csv = grouped_df.to_csv(index=False)
+    csv_file = StringIO(csv)
+    csv_filename = "migration_data.csv"
+
+    # Add a download button and specify the method to download the data
+    st.download_button(
+        label="Download Data as CSV",
+        data=csv_file.getvalue(),
+        file_name=csv_filename,
+        mime="text/csv",
+        key="download_treemap",
+    )
 
     # Using st.markdown to create a flex container with two text elements, with adjusted font size
     st.markdown(footer_text, unsafe_allow_html=True)
