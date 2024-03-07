@@ -12,7 +12,7 @@ current_dir = os.path.dirname(__file__)
 st.title("New Zealand Migration Trends")
 
 st.markdown(
-    "A dashboard for visualizing permanent and long-term migration data from Statistics NZ. <br><br>Refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home). Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot. <br><br>Data last updated: 15 Feb 2024",
+    "A dashboard for visualizing monthly permanent and long-term migration data from Statistics NZ. <br><br>Refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home). <br><br>Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot. <br><br>Data last updated: 15 Feb 2024",
     unsafe_allow_html=True,
 )
 
@@ -20,7 +20,7 @@ st.markdown(
 # Define the footer text
 footer_text = """
 <div style="text-align: right; font-size: 12px;">  <!-- Apply text alignment and font size here -->
-    <div>Source: Statistics NZ</div>
+    <div>Source: Stats NZ</div>
     <div>autonomousecon.substack.com</div>  <!-- Each <div> will be on its own line -->
 </div>
 """
