@@ -153,10 +153,10 @@ with tab1:
             x=0.5,  # Centers the legend horizontally
         )
     )
-    # Using st.markdown to create a flex container with two text elements, with adjusted font size
-    st.markdown(footer_text, unsafe_allow_html=True)
 
     st.plotly_chart(fig, use_container_width=True)
+    # Using st.markdown to create a flex container with two text elements, with adjusted font size
+    st.markdown(footer_text, unsafe_allow_html=True)
     # Convert DataFrame to CSV string
     csv = filtered_df.to_csv(index=False)
     csv_file = StringIO(csv)
