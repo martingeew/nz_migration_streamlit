@@ -153,6 +153,8 @@ with tab1:
             x=0.5,  # Centers the legend horizontally
         )
     )
+    # Using st.markdown to create a flex container with two text elements, with adjusted font size
+    st.markdown(footer_text, unsafe_allow_html=True)
 
     st.plotly_chart(fig, use_container_width=True)
     # Convert DataFrame to CSV string
@@ -168,8 +170,6 @@ with tab1:
         mime="text/csv",
         key="download_timeseries",
     )
-    # Using st.markdown to create a flex container with two text elements, with adjusted font size
-    st.markdown(footer_text, unsafe_allow_html=True)
 
 
 # Stacked Area Plots Tab
@@ -260,6 +260,9 @@ with tab2:
 
     st.plotly_chart(fig, use_container_width=True)
 
+    # Using st.markdown to create a flex container with two text elements, with adjusted font size
+    st.markdown(footer_text, unsafe_allow_html=True)
+
     # Convert DataFrame to CSV string
     csv = filtered_df.to_csv(index=False)
     csv_file = StringIO(csv)
@@ -274,8 +277,6 @@ with tab2:
         key="download_stackarea",
     )
 
-    # Using st.markdown to create a flex container with two text elements, with adjusted font size
-    st.markdown(footer_text, unsafe_allow_html=True)
 
 # Treemap Tab
 with tab3:
@@ -534,6 +535,8 @@ with tab3:
 
     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0))
     st.plotly_chart(fig, use_container_width=True)
+    # Using st.markdown to create a flex container with two text elements, with adjusted font size
+    st.markdown(footer_text, unsafe_allow_html=True)
     # Convert DataFrame to CSV string
     csv = grouped_df.to_csv(index=False)
     csv_file = StringIO(csv)
@@ -547,6 +550,3 @@ with tab3:
         mime="text/csv",
         key="download_treemap",
     )
-
-    # Using st.markdown to create a flex container with two text elements, with adjusted font size
-    st.markdown(footer_text, unsafe_allow_html=True)
