@@ -13,7 +13,7 @@ current_dir = os.path.dirname(__file__)
 st.title("New Zealand Migration Trends")
 
 st.markdown(
-    "A dashboard for visualizing monthly permanent and long-term migration data from Statistics NZ. <br><br>Refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/publish/home). <br><br>Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot. <br><br>Data last updated: 15 Feb 2024",
+    "A dashboard for visualizing monthly permanent and long-term migration data from Statistics NZ. <br><br>For a detailed insight into the data from this dashboard, refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/p/new-zealands-millennial-migration). <br><br>Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot. <br><br>Data last updated: 15 Feb 2024",
     unsafe_allow_html=True,
 )
 
