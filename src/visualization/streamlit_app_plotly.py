@@ -13,7 +13,7 @@ current_dir = os.path.dirname(__file__)
 st.title("New Zealand Migration Trends")
 
 st.markdown(
-    "A dashboard for visualizing monthly permanent and long-term migration data from Statistics NZ. <br><br>For a detailed insight into the data from this dashboard, refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/p/new-zealands-millennial-migration). <br><br>Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot. <br><br>Data last updated: 15 Feb 2024",
+    "A dashboard for visualizing monthly permanent and long-term migration data from Statistics NZ. <br><br>For a detailed insight into the data from this dashboard, refer to the article in [Autonomous Econ](https://autonomousecon.substack.com/p/new-zealands-millennial-migration). <br><br>Note: you can highlight a selected area of the plot to zoom in. You can also make the plot full screen by clicking on the expand icon in the top right hand corner of the plot. <br><br>Data last updated: 28 Sep 2025",
     unsafe_allow_html=True,
 )
 
@@ -46,7 +46,7 @@ def load_data(breakdown):
     # Construct the path to the data file based on the breakdown
     if breakdown == "Direction, Citizenship":
         data_path = os.path.join(
-            current_dir, "../../data/interim/df_citizenship_direction_202312.pkl"
+            current_dir, "../../data/interim/df_citizenship_direction_202509.pkl"
         )
     elif breakdown == "Direction, Age, Sex":
         data_path = os.path.join(
