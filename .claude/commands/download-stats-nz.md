@@ -14,78 +14,76 @@ Wait for the browse tree to be visible before proceeding.
 
 **2. Expand Tourism**
 
-Take a `browser_snapshot` to get current element refs. Find the "Tourism" link inside the browse tree (`#ctl00_MainContent_tvBrowseNodes`) and click it. Wait for the page to fully reload (`browser_wait_for` networkidle or until the ITM link is visible) before clicking anything else.
-
-> Important: Each tree click triggers an ASP.NET postback that regenerates EVENTVALIDATION. You must wait for the page to reload between clicks or the next click will fail with a fatal server error.
+Use `browser_click` on the "Tourism" link in the browse tree. The response snapshot will contain the expanded subtree — use the ref from that snapshot for the next step.
 
 **3. Expand International Travel and Migration - ITM**
 
-Take a fresh `browser_snapshot`. Find the "International Travel and Migration - ITM" link in the tree and click it. Wait for the page to fully reload before proceeding.
+Use `browser_click` on the "International Travel and Migration - ITM" link.
+
+> The ITM subtree is large — the snapshot will exceed the inline limit and be saved to a file. Immediately follow up with `browser_snapshot` (using `filename: "itm-snapshot.md"`) to get a searchable markdown file, then use Grep to find the ITM552301 ref:
+> ```
+> Grep pattern="ITM552301" path="itm-snapshot.md" output_mode="content" -C=2
+> ```
+> Look for the `link [ref=eXXXX]` on the line with `sTourism\\...ITM552301.px` — that's the ref for step 4.
 
 **4. Navigate to the dataset**
 
-Take a fresh `browser_snapshot`. Find and click the link with exact text:
-`Estimated migration by direction and country of citizenship, 12/16-month rule (Monthly)`
+Use `browser_click` on the ref found in step 3 (the ITM552301 dataset link). The page will navigate to SelectVariables.aspx.
 
-Wait for the URL to change to `SelectVariables.aspx` before proceeding.
+> Each `browser_click` on a tree node waits for navigation to settle before returning, so no extra `browser_wait_for` calls are needed between steps.
 
-**5. Select all Travel Direction options**
+**5. Select all variables and set CSV format (single call)**
 
-Use `browser_evaluate` to select all options in the Travel Direction listbox:
+Use one `browser_evaluate` call to set all listboxes and the format dropdown at once:
 ```javascript
-const lb = document.getElementById('ctl00_MainContent_ctl02_lbVariableOptions');
-for (let i = 0; i < lb.options.length; i++) { lb.options[i].selected = true; }
-lb.dispatchEvent(new Event('change', {bubbles: true}));
+const ids = {
+  dir:  'ctl00_MainContent_ctl02_lbVariableOptions',
+  cit:  'ctl00_MainContent_ctl04_lbVariableOptions',
+  est:  'ctl00_MainContent_ctl07_lbVariableOptions',
+  time: 'ctl00_MainContent_ctl09_lbVariableOptions',
+  fmt:  'ctl00_MainContent_dlOutputOptions',
+};
+['dir','cit','time'].forEach(k => {
+  const lb = document.getElementById(ids[k]);
+  for (let i = 0; i < lb.options.length; i++) lb.options[i].selected = true;
+  lb.dispatchEvent(new Event('change', {bubbles: true}));
+});
+const lb3 = document.getElementById(ids.est);
+for (let i = 0; i < lb3.options.length; i++)
+  lb3.options[i].selected = (lb3.options[i].text === 'Estimate');
+lb3.dispatchEvent(new Event('change', {bubbles: true}));
+const dd = document.getElementById(ids.fmt);
+for (let i = 0; i < dd.options.length; i++)
+  if (dd.options[i].text.includes('Comma delimited')) dd.options[i].selected = true;
+dd.dispatchEvent(new Event('change', {bubbles: true}));
 ```
 
-**6. Select all Citizenship options**
+> Do NOT select all 4 estimate types — that results in ~166,000 cells, exceeding the 100,000 cell limit. "Estimate" only = ~41,538 cells.
 
-Use `browser_evaluate` to select all options in the Citizenship listbox:
+**6. Submit and capture download**
+
+Use `browser_evaluate` to click btnGo by its stable element ID — no snapshot needed:
 ```javascript
-const lb = document.getElementById('ctl00_MainContent_ctl04_lbVariableOptions');
-for (let i = 0; i < lb.options.length; i++) { lb.options[i].selected = true; }
-lb.dispatchEvent(new Event('change', {bubbles: true}));
+() => { document.getElementById('ctl00_MainContent_btnGo').click(); return 'clicked'; }
 ```
+The file will download automatically to the `.playwright-mcp/` folder. Look for `Downloading file ITM552301_...csv` in the events.
 
-**7. Select "Estimate" only for Estimate type**
-
-Use `browser_select_option` on `#ctl00_MainContent_ctl07_lbVariableOptions` with value `Estimate` only. Do NOT select all — selecting all 4 estimate types results in ~166,000 cells which exceeds the 100,000 cell download limit.
-
-**8. Select all Time options**
-
-Use `browser_evaluate` to select all options in the Time listbox:
-```javascript
-const lb = document.getElementById('ctl00_MainContent_ctl09_lbVariableOptions');
-for (let i = 0; i < lb.options.length; i++) { lb.options[i].selected = true; }
-lb.dispatchEvent(new Event('change', {bubbles: true}));
-```
-
-**9. Set format to CSV**
-
-Use `browser_select_option` on `#ctl00_MainContent_dlOutputOptions` with value `Comma delimited (.csv)`.
-
-**10. Submit and capture download**
-
-Click `#ctl00_MainContent_btnGo`. The file will download automatically to the `.playwright-mcp/` folder.
-
-> Important: There are TWO Submit buttons on this page. The first (`btnOptions`) navigates to an intermediate options page. The second (`btnGo`) triggers the direct download — use this one. Find it by ref using `browser_snapshot`, it appears after the format dropdown in the row labelled "Submit HelpHelp Comma delimited (.csv) HelpHelp Submit".
-
-**11. Copy to data/raw/**
+**7. Copy to data/raw/**
 
 Use Bash to copy the downloaded file to `data/raw/`:
 ```bash
-# Find the most recently downloaded ITM file and copy it
+# Windows PowerShell
 $file = Get-ChildItem ".playwright-mcp/ITM552301*.csv" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
-Copy-Item $file.FullName "data/raw/$($file.Name)"
+Copy-Item $file.FullName "data/raw/$($file.Name -replace '-','_')"
 ```
-Or on Unix (note: Playwright MCP saves with hyphens; rename to underscores to match existing files):
+Or on Unix (Playwright MCP saves with hyphens; rename to underscores to match existing files):
 ```bash
 src=$(ls -t .playwright-mcp/ITM552301*.csv | head -1)
 dest="data/raw/$(basename "$src" | tr '-' '_')"
 cp "$src" "$dest"
 ```
 
-**12. Confirm**
+**8. Confirm**
 
 Print the filename that was saved to `data/raw/`, e.g.:
 ```
