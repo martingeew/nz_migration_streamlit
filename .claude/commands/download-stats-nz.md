@@ -25,12 +25,16 @@ Use `browser_click` on the "Tourism" link in the browse tree. The response snaps
 
 Use `browser_click` on the "International Travel and Migration - ITM" link.
 
-> The ITM subtree is large — the snapshot will exceed the inline limit and be saved to a file. Immediately follow up with `browser_snapshot` (using `filename: "itm-snapshot.md"`) to get a searchable markdown file, then use Grep to find the dataset ref:
+> The ITM subtree is large — the snapshot will exceed the inline limit and be saved to a temp file (this is expected and harmless; the click still succeeds).
+>
+> **Do NOT call `browser_snapshot` again.** Instead, Grep the existing `itm-snapshot.md` directly — it persists between sessions and the refs are stable (assigned by DOM order, which doesn't change unless Stats NZ restructures their tree):
 > ```
 > Grep pattern="<PATTERN>" path="itm-snapshot.md" output_mode="content" -C=2
 > ```
 > Use the pattern for your argument (see table in step 4).
 > Look for the `link [ref=eXXXX]` on the matching line — that's the ref for step 4.
+>
+> If `itm-snapshot.md` is missing (first run ever), call `browser_snapshot` once with `filename: "itm-snapshot.md"` to create it, then Grep as above.
 
 **4. Navigate to the dataset**
 
@@ -52,6 +56,7 @@ Use one `browser_evaluate` call. The JS varies by dataset:
 
 **`direction-citizenship` and `arrivals-visatype`** — generic block (select all listboxes, narrow Estimate type):
 ```javascript
+() => {
 const allListboxes = Array.from(document.querySelectorAll('[id$="_lbVariableOptions"]'));
 allListboxes.forEach(lb => {
   for (let i = 0; i < lb.options.length; i++) lb.options[i].selected = true;
@@ -68,10 +73,13 @@ const dd = document.getElementById('ctl00_MainContent_dlOutputOptions');
 for (let i = 0; i < dd.options.length; i++)
   if (dd.options[i].text.includes('Comma delimited')) dd.options[i].selected = true;
 dd.dispatchEvent(new Event('change', {bubbles: true}));
+return 'done';
+}
 ```
 
 **`direction-age-sex`** — must use explicit age selection: the age listbox contains individual years (0–89) plus grouped bands; selecting all would exceed the 100,000 cell limit (~354k cells). Select only the 13 grouped bands that match the existing raw file:
 ```javascript
+() => {
 const ageTarget = new Set([
   'Under 15 Years','15-19 Years','20-24 Years','25-29 Years','30-34 Years',
   '35-39 Years','40-44 Years','45-49 Years','50-54 Years','55-59 Years',
@@ -98,6 +106,8 @@ const dd = document.getElementById('ctl00_MainContent_dlOutputOptions');
 for (let i = 0; i < dd.options.length; i++)
   if (dd.options[i].text.includes('Comma delimited')) dd.options[i].selected = true;
 dd.dispatchEvent(new Event('change', {bubbles: true}));
+return 'done';
+}
 ```
 
 > Selecting "Estimate" only avoids exceeding the 100,000 cell limit.
