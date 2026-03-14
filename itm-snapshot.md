@@ -1,0 +1,5418 @@
+- generic [active] [ref=e1]:
+  - table [ref=e3]:
+    - rowgroup [ref=e4]:
+      - row "Go to Statistics New Zealand's website. Go to the Infoshare browse page. Browse Search Load query Export direct Help Glossary" [ref=e5]:
+        - cell "Go to Statistics New Zealand's website. Go to the Infoshare browse page. Browse Search Load query Export direct Help Glossary" [ref=e6]:
+          - table [ref=e7]:
+            - rowgroup [ref=e8]:
+              - row "Go to Statistics New Zealand's website. Go to the Infoshare browse page." [ref=e9]:
+                - cell "Go to Statistics New Zealand's website. Go to the Infoshare browse page." [ref=e10]:
+                  - link "Go to Statistics New Zealand's website." [ref=e11] [cursor=pointer]:
+                    - /url: http://www.stats.govt.nz/
+                    - img "Go to Statistics New Zealand's website." [ref=e12]
+                  - link "Go to the Infoshare browse page." [ref=e13] [cursor=pointer]:
+                    - /url: Default.aspx
+                    - img "Go to the Infoshare browse page." [ref=e14]
+          - table [ref=e15]:
+            - rowgroup [ref=e16]:
+              - row "Browse Search Load query Export direct Help Glossary" [ref=e17]:
+                - cell [ref=e18]
+                - cell "Browse Search Load query Export direct Help Glossary" [ref=e19]:
+                  - generic:
+                    - generic [ref=e20] [cursor=pointer]: Browse
+                    - link "Search" [ref=e22] [cursor=pointer]:
+                      - /url: SearchPage.aspx
+                    - link "Load query" [ref=e24] [cursor=pointer]:
+                      - /url: QueryUpload.aspx
+                    - link "Export direct" [ref=e26] [cursor=pointer]:
+                      - /url: ExportDirect.aspx
+                    - link "Help" [ref=e28] [cursor=pointer]:
+                      - /url: javascript:help('Help/help-main.asp?PLanguage=1');
+                    - link "Glossary" [ref=e30] [cursor=pointer]:
+                      - /url: javascript:help('Help/further-help.asp#gloss');
+                - cell [ref=e31]
+      - row [ref=e331]:
+        - cell [ref=e332]:
+          - table [ref=e35]:
+            - rowgroup [ref=e36]:
+              - 'row "We are changing our data tools Infoshare has served us for many years, but we know today''s demands are high and it’s time for something new to better serve our customers. Click on the link above to learn more. Infoshare: Connecting you to a wealth of information You can either Browse for data by category or use Search. Once you have chosen a subject category or a result, select variables to customise the data, and view on screen or download. Help has a complete guide to using Infoshare. Data changes and unscheduled releases can be viewed by date. To stay informed about data changes and unscheduled releases, please subscribe to our email notification service here You can provide us with feedback comments here" [ref=e37]':
+                - 'cell "We are changing our data tools Infoshare has served us for many years, but we know today''s demands are high and it’s time for something new to better serve our customers. Click on the link above to learn more. Infoshare: Connecting you to a wealth of information You can either Browse for data by category or use Search. Once you have chosen a subject category or a result, select variables to customise the data, and view on screen or download. Help has a complete guide to using Infoshare. Data changes and unscheduled releases can be viewed by date. To stay informed about data changes and unscheduled releases, please subscribe to our email notification service here You can provide us with feedback comments here" [ref=e38]':
+                  - heading "We are changing our data tools" [level=1] [ref=e39]:
+                    - link "We are changing our data tools" [ref=e41] [cursor=pointer]:
+                      - /url: https://www.stats.govt.nz/tools/we-are-changing-our-data-tools
+                  - text: Infoshare has served us for many years, but we know today's demands are high and it’s time for something new to better serve our customers. Click on the link above to learn more.
+                  - 'heading "Infoshare: Connecting you to a wealth of information" [level=6] [ref=e42]'
+                  - text: You can either Browse for data by category or use Search.
+                  - text: Once you have chosen a subject category or a result, select variables to customise the data, and view on screen or download.
+                  - text: Help has a complete guide to using Infoshare.
+                  - text: Data changes and unscheduled releases can be viewed by
+                  - link "date" [ref=e43] [cursor=pointer]:
+                    - /url: https://www.stats.govt.nz/large-datasets/infoshare-changes-by-date/
+                  - text: .
+                  - text: To stay informed about data changes and unscheduled releases, please subscribe to our email notification service
+                  - link "here" [ref=e44] [cursor=pointer]:
+                    - /url: http://archive.stats.govt.nz/infoshare/DataChangesSubscription.aspx
+                  - text: You can provide us with feedback comments
+                  - link "here" [ref=e45] [cursor=pointer]:
+                    - /url: http://archive.stats.govt.nz/infoshare/FeedbackForm.aspx
+              - row [ref=e46]:
+                - cell [ref=e47]:
+                  - heading [level=5]
+              - row "Subject categories" [ref=e48]:
+                - cell "Subject categories" [ref=e49]:
+                  - heading "Subject categories" [level=1] [ref=e50]
+              - row [ref=e333]:
+                - cell [ref=e334]:
+                  - generic [ref=e53]:
+                    - link "Show discontinued" [ref=e335] [cursor=pointer]:
+                      - /url: javascript:__doPostBack('ctl00$MainContent$lbShowDiscontinued','')
+                    - link "Skip Navigation Links.":
+                      - /url: "#ctl00_MainContent_tvBrowseNodes_SkipLink"
+                      - img "Skip Navigation Links."
+                    - generic [ref=e336]:
+                      - table [ref=e337]:
+                        - rowgroup [ref=e338]:
+                          - row "Businesses" [ref=e339]:
+                            - cell [ref=e340]:
+                              - link [ref=e341] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tBusinesses')
+                            - cell [ref=e342]:
+                              - link [ref=e343] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sBusinesses')
+                            - cell "Businesses" [ref=e344]:
+                              - link "Businesses" [ref=e345] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sBusinesses')
+                      - table [ref=e346]:
+                        - rowgroup [ref=e347]:
+                          - row "Economic indicators" [ref=e348]:
+                            - cell [ref=e349]:
+                              - link [ref=e350] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tEconomic indicators')
+                            - cell [ref=e351]:
+                              - link [ref=e352] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sEconomic indicators')
+                            - cell "Economic indicators" [ref=e353]:
+                              - link "Economic indicators" [ref=e354] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sEconomic indicators')
+                      - table [ref=e355]:
+                        - rowgroup [ref=e356]:
+                          - row "Government finance" [ref=e357]:
+                            - cell [ref=e358]:
+                              - link [ref=e359] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tGovernment finance')
+                            - cell [ref=e360]:
+                              - link [ref=e361] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sGovernment finance')
+                            - cell "Government finance" [ref=e362]:
+                              - link "Government finance" [ref=e363] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sGovernment finance')
+                      - table [ref=e364]:
+                        - rowgroup [ref=e365]:
+                          - row "Health" [ref=e366]:
+                            - cell [ref=e367]:
+                              - link [ref=e368] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tHealth')
+                            - cell [ref=e369]:
+                              - link [ref=e370] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sHealth')
+                            - cell "Health" [ref=e371]:
+                              - link "Health" [ref=e372] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sHealth')
+                      - table [ref=e373]:
+                        - rowgroup [ref=e374]:
+                          - row "Imports and exports" [ref=e375]:
+                            - cell [ref=e376]:
+                              - link [ref=e377] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tImports and exports')
+                            - cell [ref=e378]:
+                              - link [ref=e379] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sImports and exports')
+                            - cell "Imports and exports" [ref=e380]:
+                              - link "Imports and exports" [ref=e381] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sImports and exports')
+                      - table [ref=e382]:
+                        - rowgroup [ref=e383]:
+                          - row "Industry sectors" [ref=e384]:
+                            - cell [ref=e385]:
+                              - link [ref=e386] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tIndustry sectors')
+                            - cell [ref=e387]:
+                              - link [ref=e388] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sIndustry sectors')
+                            - cell "Industry sectors" [ref=e389]:
+                              - link "Industry sectors" [ref=e390] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sIndustry sectors')
+                      - table [ref=e391]:
+                        - rowgroup [ref=e392]:
+                          - row "Long-term data series" [ref=e393]:
+                            - cell [ref=e394]:
+                              - link [ref=e395] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tLong-term data series')
+                            - cell [ref=e396]:
+                              - link [ref=e397] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sLong-term data series')
+                            - cell "Long-term data series" [ref=e398]:
+                              - link "Long-term data series" [ref=e399] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sLong-term data series')
+                      - table [ref=e400]:
+                        - rowgroup [ref=e401]:
+                          - row "People and communities" [ref=e402]:
+                            - cell [ref=e403]:
+                              - link [ref=e404] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tPeople and communities')
+                            - cell [ref=e405]:
+                              - link [ref=e406] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sPeople and communities')
+                            - cell "People and communities" [ref=e407]:
+                              - link "People and communities" [ref=e408] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sPeople and communities')
+                      - table [ref=e409]:
+                        - rowgroup [ref=e410]:
+                          - row "Population" [ref=e411]:
+                            - cell [ref=e412]:
+                              - link [ref=e413] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tPopulation')
+                            - cell [ref=e414]:
+                              - link [ref=e415] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sPopulation')
+                            - cell "Population" [ref=e416]:
+                              - link "Population" [ref=e417] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sPopulation')
+                      - table [ref=e418]:
+                        - rowgroup [ref=e419]:
+                          - row "Tourism" [ref=e420]:
+                            - cell [ref=e421]:
+                              - link [ref=e422] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism')
+                            - cell [ref=e423]:
+                              - link [ref=e424] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism')
+                            - cell "Tourism" [ref=e425]:
+                              - link "Tourism" [ref=e426] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism')
+                      - generic [ref=e427]:
+                        - table [ref=e428]:
+                          - rowgroup [ref=e429]:
+                            - row "Accommodation Survey - ACS" [ref=e430]:
+                              - cell [ref=e431]
+                              - cell [ref=e433]:
+                                - link [ref=e434] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\Accommodation Survey - ACS')
+                              - cell [ref=e435]:
+                                - link [ref=e436] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\Accommodation Survey - ACS')
+                              - cell "Accommodation Survey - ACS" [ref=e437]:
+                                - link "Accommodation Survey - ACS" [ref=e438] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\Accommodation Survey - ACS')
+                        - table [ref=e439]:
+                          - rowgroup [ref=e440]:
+                            - row "International Travel and Migration - ITM" [ref=e441]:
+                              - cell [ref=e442]
+                              - cell [ref=e444]:
+                                - link [ref=e445] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM')
+                              - cell [ref=e446]:
+                                - link [ref=e447] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM')
+                              - cell "International Travel and Migration - ITM" [ref=e448]:
+                                - link "International Travel and Migration - ITM" [ref=e449] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM')
+                        - generic [ref=e450]:
+                          - table [ref=e451]:
+                            - rowgroup [ref=e452]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Apr)" [ref=e453]:
+                                - cell [ref=e454]
+                                - cell [ref=e456]
+                                - cell [ref=e458]:
+                                  - link [ref=e459] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553006.px')
+                                - cell [ref=e460]:
+                                  - link [ref=e461] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553006.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Apr)" [ref=e462]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Apr)" [ref=e463] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553006.px')
+                          - table [ref=e464]:
+                            - rowgroup [ref=e465]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Aug)" [ref=e466]:
+                                - cell [ref=e467]
+                                - cell [ref=e469]
+                                - cell [ref=e471]:
+                                  - link [ref=e472] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553010.px')
+                                - cell [ref=e473]:
+                                  - link [ref=e474] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553010.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Aug)" [ref=e475]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Aug)" [ref=e476] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553010.px')
+                          - table [ref=e477]:
+                            - rowgroup [ref=e478]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Dec)" [ref=e479]:
+                                - cell [ref=e480]
+                                - cell [ref=e482]
+                                - cell [ref=e484]:
+                                  - link [ref=e485] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553014.px')
+                                - cell [ref=e486]:
+                                  - link [ref=e487] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553014.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Dec)" [ref=e488]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Dec)" [ref=e489] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553014.px')
+                          - table [ref=e490]:
+                            - rowgroup [ref=e491]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Feb)" [ref=e492]:
+                                - cell [ref=e493]
+                                - cell [ref=e495]
+                                - cell [ref=e497]:
+                                  - link [ref=e498] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553004.px')
+                                - cell [ref=e499]:
+                                  - link [ref=e500] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553004.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Feb)" [ref=e501]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Feb)" [ref=e502] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553004.px')
+                          - table [ref=e503]:
+                            - rowgroup [ref=e504]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jan)" [ref=e505]:
+                                - cell [ref=e506]
+                                - cell [ref=e508]
+                                - cell [ref=e510]:
+                                  - link [ref=e511] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553003.px')
+                                - cell [ref=e512]:
+                                  - link [ref=e513] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553003.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jan)" [ref=e514]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jan)" [ref=e515] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553003.px')
+                          - table [ref=e516]:
+                            - rowgroup [ref=e517]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jul)" [ref=e518]:
+                                - cell [ref=e519]
+                                - cell [ref=e521]
+                                - cell [ref=e523]:
+                                  - link [ref=e524] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553009.px')
+                                - cell [ref=e525]:
+                                  - link [ref=e526] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553009.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jul)" [ref=e527]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jul)" [ref=e528] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553009.px')
+                          - table [ref=e529]:
+                            - rowgroup [ref=e530]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jun)" [ref=e531]:
+                                - cell [ref=e532]
+                                - cell [ref=e534]
+                                - cell [ref=e536]:
+                                  - link [ref=e537] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553008.px')
+                                - cell [ref=e538]:
+                                  - link [ref=e539] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553008.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jun)" [ref=e540]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Jun)" [ref=e541] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553008.px')
+                          - table [ref=e542]:
+                            - rowgroup [ref=e543]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Mar)" [ref=e544]:
+                                - cell [ref=e545]
+                                - cell [ref=e547]
+                                - cell [ref=e549]:
+                                  - link [ref=e550] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553005.px')
+                                - cell [ref=e551]:
+                                  - link [ref=e552] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553005.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Mar)" [ref=e553]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Mar)" [ref=e554] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553005.px')
+                          - table [ref=e555]:
+                            - rowgroup [ref=e556]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-May)" [ref=e557]:
+                                - cell [ref=e558]
+                                - cell [ref=e560]
+                                - cell [ref=e562]:
+                                  - link [ref=e563] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553007.px')
+                                - cell [ref=e564]:
+                                  - link [ref=e565] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553007.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-May)" [ref=e566]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-May)" [ref=e567] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553007.px')
+                          - table [ref=e568]:
+                            - rowgroup [ref=e569]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Nov)" [ref=e570]:
+                                - cell [ref=e571]
+                                - cell [ref=e573]
+                                - cell [ref=e575]:
+                                  - link [ref=e576] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553013.px')
+                                - cell [ref=e577]:
+                                  - link [ref=e578] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553013.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Nov)" [ref=e579]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Nov)" [ref=e580] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553013.px')
+                          - table [ref=e581]:
+                            - rowgroup [ref=e582]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Oct)" [ref=e583]:
+                                - cell [ref=e584]
+                                - cell [ref=e586]
+                                - cell [ref=e588]:
+                                  - link [ref=e589] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553012.px')
+                                - cell [ref=e590]:
+                                  - link [ref=e591] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553012.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Oct)" [ref=e592]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Oct)" [ref=e593] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553012.px')
+                          - table [ref=e594]:
+                            - rowgroup [ref=e595]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Sep)" [ref=e596]:
+                                - cell [ref=e597]
+                                - cell [ref=e599]
+                                - cell [ref=e601]:
+                                  - link [ref=e602] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553011.px')
+                                - cell [ref=e603]:
+                                  - link [ref=e604] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553011.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Sep)" [ref=e605]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Annual-Sep)" [ref=e606] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553011.px')
+                          - table [ref=e607]:
+                            - rowgroup [ref=e608]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Monthly)" [ref=e609]:
+                                - cell [ref=e610]
+                                - cell [ref=e612]
+                                - cell [ref=e614]:
+                                  - link [ref=e615] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553001.px')
+                                - cell [ref=e616]:
+                                  - link [ref=e617] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553001.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Monthly)" [ref=e618]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Monthly)" [ref=e619] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553001.px')
+                          - table [ref=e620]:
+                            - rowgroup [ref=e621]:
+                              - row "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e622]:
+                                - cell [ref=e623]
+                                - cell [ref=e625]
+                                - cell [ref=e627]:
+                                  - link [ref=e628] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553002.px')
+                                - cell [ref=e629]:
+                                  - link [ref=e630] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553002.px')
+                                - cell "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e631]:
+                                  - link "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e632] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553002.px')
+                          - table [ref=e633]:
+                            - rowgroup [ref=e634]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Apr)" [ref=e635]:
+                                - cell [ref=e636]
+                                - cell [ref=e638]
+                                - cell [ref=e640]:
+                                  - link [ref=e641] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552206.px')
+                                - cell [ref=e642]:
+                                  - link [ref=e643] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552206.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Apr)" [ref=e644]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Apr)" [ref=e645] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552206.px')
+                          - table [ref=e646]:
+                            - rowgroup [ref=e647]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Aug)" [ref=e648]:
+                                - cell [ref=e649]
+                                - cell [ref=e651]
+                                - cell [ref=e653]:
+                                  - link [ref=e654] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552210.px')
+                                - cell [ref=e655]:
+                                  - link [ref=e656] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552210.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Aug)" [ref=e657]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Aug)" [ref=e658] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552210.px')
+                          - table [ref=e659]:
+                            - rowgroup [ref=e660]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Dec)" [ref=e661]:
+                                - cell [ref=e662]
+                                - cell [ref=e664]
+                                - cell [ref=e666]:
+                                  - link [ref=e667] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552214.px')
+                                - cell [ref=e668]:
+                                  - link [ref=e669] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552214.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Dec)" [ref=e670]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Dec)" [ref=e671] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552214.px')
+                          - table [ref=e672]:
+                            - rowgroup [ref=e673]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Feb)" [ref=e674]:
+                                - cell [ref=e675]
+                                - cell [ref=e677]
+                                - cell [ref=e679]:
+                                  - link [ref=e680] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552204.px')
+                                - cell [ref=e681]:
+                                  - link [ref=e682] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552204.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Feb)" [ref=e683]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Feb)" [ref=e684] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552204.px')
+                          - table [ref=e685]:
+                            - rowgroup [ref=e686]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jan)" [ref=e687]:
+                                - cell [ref=e688]
+                                - cell [ref=e690]
+                                - cell [ref=e692]:
+                                  - link [ref=e693] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552203.px')
+                                - cell [ref=e694]:
+                                  - link [ref=e695] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552203.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jan)" [ref=e696]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jan)" [ref=e697] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552203.px')
+                          - table [ref=e698]:
+                            - rowgroup [ref=e699]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jul)" [ref=e700]:
+                                - cell [ref=e701]
+                                - cell [ref=e703]
+                                - cell [ref=e705]:
+                                  - link [ref=e706] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552209.px')
+                                - cell [ref=e707]:
+                                  - link [ref=e708] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552209.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jul)" [ref=e709]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jul)" [ref=e710] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552209.px')
+                          - table [ref=e711]:
+                            - rowgroup [ref=e712]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jun)" [ref=e713]:
+                                - cell [ref=e714]
+                                - cell [ref=e716]
+                                - cell [ref=e718]:
+                                  - link [ref=e719] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552208.px')
+                                - cell [ref=e720]:
+                                  - link [ref=e721] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552208.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jun)" [ref=e722]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Jun)" [ref=e723] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552208.px')
+                          - table [ref=e724]:
+                            - rowgroup [ref=e725]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Mar)" [ref=e726]:
+                                - cell [ref=e727]
+                                - cell [ref=e729]
+                                - cell [ref=e731]:
+                                  - link [ref=e732] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552205.px')
+                                - cell [ref=e733]:
+                                  - link [ref=e734] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552205.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Mar)" [ref=e735]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Mar)" [ref=e736] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552205.px')
+                          - table [ref=e737]:
+                            - rowgroup [ref=e738]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-May)" [ref=e739]:
+                                - cell [ref=e740]
+                                - cell [ref=e742]
+                                - cell [ref=e744]:
+                                  - link [ref=e745] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552207.px')
+                                - cell [ref=e746]:
+                                  - link [ref=e747] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552207.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-May)" [ref=e748]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-May)" [ref=e749] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552207.px')
+                          - table [ref=e750]:
+                            - rowgroup [ref=e751]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Nov)" [ref=e752]:
+                                - cell [ref=e753]
+                                - cell [ref=e755]
+                                - cell [ref=e757]:
+                                  - link [ref=e758] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552213.px')
+                                - cell [ref=e759]:
+                                  - link [ref=e760] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552213.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Nov)" [ref=e761]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Nov)" [ref=e762] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552213.px')
+                          - table [ref=e763]:
+                            - rowgroup [ref=e764]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Oct)" [ref=e765]:
+                                - cell [ref=e766]
+                                - cell [ref=e768]
+                                - cell [ref=e770]:
+                                  - link [ref=e771] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552212.px')
+                                - cell [ref=e772]:
+                                  - link [ref=e773] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552212.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Oct)" [ref=e774]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Oct)" [ref=e775] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552212.px')
+                          - table [ref=e776]:
+                            - rowgroup [ref=e777]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Sep)" [ref=e778]:
+                                - cell [ref=e779]
+                                - cell [ref=e781]
+                                - cell [ref=e783]:
+                                  - link [ref=e784] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552211.px')
+                                - cell [ref=e785]:
+                                  - link [ref=e786] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552211.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Sep)" [ref=e787]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Annual-Sep)" [ref=e788] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552211.px')
+                          - table [ref=e789]:
+                            - rowgroup [ref=e790]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Monthly)" [ref=e791]:
+                                - cell [ref=e792]
+                                - cell [ref=e794]
+                                - cell [ref=e796]:
+                                  - link [ref=e797] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552201.px')
+                                - cell [ref=e798]:
+                                  - link [ref=e799] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552201.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Monthly)" [ref=e800]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Monthly)" [ref=e801] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552201.px')
+                          - table [ref=e802]:
+                            - rowgroup [ref=e803]:
+                              - row "Estimated migrant arrivals by visa type, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e804]:
+                                - cell [ref=e805]
+                                - cell [ref=e807]
+                                - cell [ref=e809]:
+                                  - link [ref=e810] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552202.px')
+                                - cell [ref=e811]:
+                                  - link [ref=e812] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552202.px')
+                                - cell "Estimated migrant arrivals by visa type, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e813]:
+                                  - link "Estimated migrant arrivals by visa type, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e814] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552202.px')
+                          - table [ref=e815]:
+                            - rowgroup [ref=e816]:
+                              - row "Estimated migrant arrivals to Australia by CLPR, citizenship and birthplace (Qrtly-Mar/Jun/Sep/Dec)" [ref=e817]:
+                                - cell [ref=e818]
+                                - cell [ref=e820]
+                                - cell [ref=e822]:
+                                  - link [ref=e823] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM555301.px')
+                                - cell [ref=e824]:
+                                  - link [ref=e825] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM555301.px')
+                                - cell "Estimated migrant arrivals to Australia by CLPR, citizenship and birthplace (Qrtly-Mar/Jun/Sep/Dec)" [ref=e826]:
+                                  - link "Estimated migrant arrivals to Australia by CLPR, citizenship and birthplace (Qrtly-Mar/Jun/Sep/Dec)" [ref=e827] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM555301.px')
+                          - table [ref=e828]:
+                            - rowgroup [ref=e829]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Apr)" [ref=e830]:
+                                - cell [ref=e831]
+                                - cell [ref=e833]
+                                - cell [ref=e835]:
+                                  - link [ref=e836] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552306.px')
+                                - cell [ref=e837]:
+                                  - link [ref=e838] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552306.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Apr)" [ref=e839]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Apr)" [ref=e840] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552306.px')
+                          - table [ref=e841]:
+                            - rowgroup [ref=e842]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Aug)" [ref=e843]:
+                                - cell [ref=e844]
+                                - cell [ref=e846]
+                                - cell [ref=e848]:
+                                  - link [ref=e849] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552310.px')
+                                - cell [ref=e850]:
+                                  - link [ref=e851] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552310.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Aug)" [ref=e852]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Aug)" [ref=e853] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552310.px')
+                          - table [ref=e854]:
+                            - rowgroup [ref=e855]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Dec)" [ref=e856]:
+                                - cell [ref=e857]
+                                - cell [ref=e859]
+                                - cell [ref=e861]:
+                                  - link [ref=e862] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552314.px')
+                                - cell [ref=e863]:
+                                  - link [ref=e864] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552314.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Dec)" [ref=e865]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Dec)" [ref=e866] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552314.px')
+                          - table [ref=e867]:
+                            - rowgroup [ref=e868]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Feb)" [ref=e869]:
+                                - cell [ref=e870]
+                                - cell [ref=e872]
+                                - cell [ref=e874]:
+                                  - link [ref=e875] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552304.px')
+                                - cell [ref=e876]:
+                                  - link [ref=e877] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552304.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Feb)" [ref=e878]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Feb)" [ref=e879] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552304.px')
+                          - table [ref=e880]:
+                            - rowgroup [ref=e881]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jan)" [ref=e882]:
+                                - cell [ref=e883]
+                                - cell [ref=e885]
+                                - cell [ref=e887]:
+                                  - link [ref=e888] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552303.px')
+                                - cell [ref=e889]:
+                                  - link [ref=e890] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552303.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jan)" [ref=e891]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jan)" [ref=e892] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552303.px')
+                          - table [ref=e893]:
+                            - rowgroup [ref=e894]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jul)" [ref=e895]:
+                                - cell [ref=e896]
+                                - cell [ref=e898]
+                                - cell [ref=e900]:
+                                  - link [ref=e901] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552309.px')
+                                - cell [ref=e902]:
+                                  - link [ref=e903] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552309.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jul)" [ref=e904]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jul)" [ref=e905] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552309.px')
+                          - table [ref=e906]:
+                            - rowgroup [ref=e907]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jun)" [ref=e908]:
+                                - cell [ref=e909]
+                                - cell [ref=e911]
+                                - cell [ref=e913]:
+                                  - link [ref=e914] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552308.px')
+                                - cell [ref=e915]:
+                                  - link [ref=e916] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552308.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jun)" [ref=e917]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Jun)" [ref=e918] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552308.px')
+                          - table [ref=e919]:
+                            - rowgroup [ref=e920]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Mar)" [ref=e921]:
+                                - cell [ref=e922]
+                                - cell [ref=e924]
+                                - cell [ref=e926]:
+                                  - link [ref=e927] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552305.px')
+                                - cell [ref=e928]:
+                                  - link [ref=e929] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552305.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Mar)" [ref=e930]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Mar)" [ref=e931] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552305.px')
+                          - table [ref=e932]:
+                            - rowgroup [ref=e933]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-May)" [ref=e934]:
+                                - cell [ref=e935]
+                                - cell [ref=e937]
+                                - cell [ref=e939]:
+                                  - link [ref=e940] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552307.px')
+                                - cell [ref=e941]:
+                                  - link [ref=e942] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552307.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-May)" [ref=e943]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-May)" [ref=e944] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552307.px')
+                          - table [ref=e945]:
+                            - rowgroup [ref=e946]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Nov)" [ref=e947]:
+                                - cell [ref=e948]
+                                - cell [ref=e950]
+                                - cell [ref=e952]:
+                                  - link [ref=e953] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552313.px')
+                                - cell [ref=e954]:
+                                  - link [ref=e955] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552313.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Nov)" [ref=e956]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Nov)" [ref=e957] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552313.px')
+                          - table [ref=e958]:
+                            - rowgroup [ref=e959]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Oct)" [ref=e960]:
+                                - cell [ref=e961]
+                                - cell [ref=e963]
+                                - cell [ref=e965]:
+                                  - link [ref=e966] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552312.px')
+                                - cell [ref=e967]:
+                                  - link [ref=e968] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552312.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Oct)" [ref=e969]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Oct)" [ref=e970] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552312.px')
+                          - table [ref=e971]:
+                            - rowgroup [ref=e972]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Sep)" [ref=e973]:
+                                - cell [ref=e974]
+                                - cell [ref=e976]
+                                - cell [ref=e978]:
+                                  - link [ref=e979] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552311.px')
+                                - cell [ref=e980]:
+                                  - link [ref=e981] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552311.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Sep)" [ref=e982]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Annual-Sep)" [ref=e983] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552311.px')
+                          - table [ref=e984]:
+                            - rowgroup [ref=e985]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Monthly)" [ref=e986]:
+                                - cell [ref=e987]
+                                - cell [ref=e989]
+                                - cell [ref=e991]:
+                                  - link [ref=e992] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552301.px')
+                                - cell [ref=e993]:
+                                  - link [ref=e994] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552301.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Monthly)" [ref=e995]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Monthly)" [ref=e996] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552301.px')
+                          - table [ref=e997]:
+                            - rowgroup [ref=e998]:
+                              - row "Estimated migration by direction and country of citizenship, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e999]:
+                                - cell [ref=e1000]
+                                - cell [ref=e1002]
+                                - cell [ref=e1004]:
+                                  - link [ref=e1005] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552302.px')
+                                - cell [ref=e1006]:
+                                  - link [ref=e1007] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552302.px')
+                                - cell "Estimated migration by direction and country of citizenship, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1008]:
+                                  - link "Estimated migration by direction and country of citizenship, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1009] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552302.px')
+                          - table [ref=e1010]:
+                            - rowgroup [ref=e1011]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Apr)" [ref=e1012]:
+                                - cell [ref=e1013]
+                                - cell [ref=e1015]
+                                - cell [ref=e1017]:
+                                  - link [ref=e1018] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552006.px')
+                                - cell [ref=e1019]:
+                                  - link [ref=e1020] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552006.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Apr)" [ref=e1021]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Apr)" [ref=e1022] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552006.px')
+                          - table [ref=e1023]:
+                            - rowgroup [ref=e1024]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Aug)" [ref=e1025]:
+                                - cell [ref=e1026]
+                                - cell [ref=e1028]
+                                - cell [ref=e1030]:
+                                  - link [ref=e1031] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552010.px')
+                                - cell [ref=e1032]:
+                                  - link [ref=e1033] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552010.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Aug)" [ref=e1034]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Aug)" [ref=e1035] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552010.px')
+                          - table [ref=e1036]:
+                            - rowgroup [ref=e1037]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Dec)" [ref=e1038]:
+                                - cell [ref=e1039]
+                                - cell [ref=e1041]
+                                - cell [ref=e1043]:
+                                  - link [ref=e1044] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552014.px')
+                                - cell [ref=e1045]:
+                                  - link [ref=e1046] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552014.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Dec)" [ref=e1047]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Dec)" [ref=e1048] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552014.px')
+                          - table [ref=e1049]:
+                            - rowgroup [ref=e1050]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Feb)" [ref=e1051]:
+                                - cell [ref=e1052]
+                                - cell [ref=e1054]
+                                - cell [ref=e1056]:
+                                  - link [ref=e1057] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552004.px')
+                                - cell [ref=e1058]:
+                                  - link [ref=e1059] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552004.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Feb)" [ref=e1060]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Feb)" [ref=e1061] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552004.px')
+                          - table [ref=e1062]:
+                            - rowgroup [ref=e1063]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Jan)" [ref=e1064]:
+                                - cell [ref=e1065]
+                                - cell [ref=e1067]
+                                - cell [ref=e1069]:
+                                  - link [ref=e1070] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552003.px')
+                                - cell [ref=e1071]:
+                                  - link [ref=e1072] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552003.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Jan)" [ref=e1073]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Jan)" [ref=e1074] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552003.px')
+                          - table [ref=e1075]:
+                            - rowgroup [ref=e1076]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Jul)" [ref=e1077]:
+                                - cell [ref=e1078]
+                                - cell [ref=e1080]
+                                - cell [ref=e1082]:
+                                  - link [ref=e1083] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552009.px')
+                                - cell [ref=e1084]:
+                                  - link [ref=e1085] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552009.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Jul)" [ref=e1086]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Jul)" [ref=e1087] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552009.px')
+                          - table [ref=e1088]:
+                            - rowgroup [ref=e1089]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Jun)" [ref=e1090]:
+                                - cell [ref=e1091]
+                                - cell [ref=e1093]
+                                - cell [ref=e1095]:
+                                  - link [ref=e1096] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552008.px')
+                                - cell [ref=e1097]:
+                                  - link [ref=e1098] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552008.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Jun)" [ref=e1099]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Jun)" [ref=e1100] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552008.px')
+                          - table [ref=e1101]:
+                            - rowgroup [ref=e1102]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Mar)" [ref=e1103]:
+                                - cell [ref=e1104]
+                                - cell [ref=e1106]
+                                - cell [ref=e1108]:
+                                  - link [ref=e1109] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552005.px')
+                                - cell [ref=e1110]:
+                                  - link [ref=e1111] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552005.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Mar)" [ref=e1112]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Mar)" [ref=e1113] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552005.px')
+                          - table [ref=e1114]:
+                            - rowgroup [ref=e1115]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-May)" [ref=e1116]:
+                                - cell [ref=e1117]
+                                - cell [ref=e1119]
+                                - cell [ref=e1121]:
+                                  - link [ref=e1122] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552007.px')
+                                - cell [ref=e1123]:
+                                  - link [ref=e1124] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552007.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-May)" [ref=e1125]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-May)" [ref=e1126] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552007.px')
+                          - table [ref=e1127]:
+                            - rowgroup [ref=e1128]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Nov)" [ref=e1129]:
+                                - cell [ref=e1130]
+                                - cell [ref=e1132]
+                                - cell [ref=e1134]:
+                                  - link [ref=e1135] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552013.px')
+                                - cell [ref=e1136]:
+                                  - link [ref=e1137] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552013.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Nov)" [ref=e1138]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Nov)" [ref=e1139] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552013.px')
+                          - table [ref=e1140]:
+                            - rowgroup [ref=e1141]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Oct)" [ref=e1142]:
+                                - cell [ref=e1143]
+                                - cell [ref=e1145]
+                                - cell [ref=e1147]:
+                                  - link [ref=e1148] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552012.px')
+                                - cell [ref=e1149]:
+                                  - link [ref=e1150] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552012.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Oct)" [ref=e1151]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Oct)" [ref=e1152] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552012.px')
+                          - table [ref=e1153]:
+                            - rowgroup [ref=e1154]:
+                              - row "Estimated migration by direction, 12/16-month rule (Annual-Sep)" [ref=e1155]:
+                                - cell [ref=e1156]
+                                - cell [ref=e1158]
+                                - cell [ref=e1160]:
+                                  - link [ref=e1161] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552011.px')
+                                - cell [ref=e1162]:
+                                  - link [ref=e1163] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552011.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Annual-Sep)" [ref=e1164]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Annual-Sep)" [ref=e1165] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552011.px')
+                          - table [ref=e1166]:
+                            - rowgroup [ref=e1167]:
+                              - row "Estimated migration by direction, 12/16-month rule (Monthly)" [ref=e1168]:
+                                - cell [ref=e1169]
+                                - cell [ref=e1171]
+                                - cell [ref=e1173]:
+                                  - link [ref=e1174] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552001.px')
+                                - cell [ref=e1175]:
+                                  - link [ref=e1176] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552001.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Monthly)" [ref=e1177]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Monthly)" [ref=e1178] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552001.px')
+                          - table [ref=e1179]:
+                            - rowgroup [ref=e1180]:
+                              - row "Estimated migration by direction, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1181]:
+                                - cell [ref=e1182]
+                                - cell [ref=e1184]
+                                - cell [ref=e1186]:
+                                  - link [ref=e1187] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552002.px')
+                                - cell [ref=e1188]:
+                                  - link [ref=e1189] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552002.px')
+                                - cell "Estimated migration by direction, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1190]:
+                                  - link "Estimated migration by direction, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1191] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552002.px')
+                          - table [ref=e1192]:
+                            - rowgroup [ref=e1193]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Apr)" [ref=e1194]:
+                                - cell [ref=e1195]
+                                - cell [ref=e1197]
+                                - cell [ref=e1199]:
+                                  - link [ref=e1200] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552106.px')
+                                - cell [ref=e1201]:
+                                  - link [ref=e1202] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552106.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Apr)" [ref=e1203]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Apr)" [ref=e1204] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552106.px')
+                          - table [ref=e1205]:
+                            - rowgroup [ref=e1206]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Aug)" [ref=e1207]:
+                                - cell [ref=e1208]
+                                - cell [ref=e1210]
+                                - cell [ref=e1212]:
+                                  - link [ref=e1213] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552110.px')
+                                - cell [ref=e1214]:
+                                  - link [ref=e1215] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552110.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Aug)" [ref=e1216]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Aug)" [ref=e1217] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552110.px')
+                          - table [ref=e1218]:
+                            - rowgroup [ref=e1219]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Dec)" [ref=e1220]:
+                                - cell [ref=e1221]
+                                - cell [ref=e1223]
+                                - cell [ref=e1225]:
+                                  - link [ref=e1226] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552114.px')
+                                - cell [ref=e1227]:
+                                  - link [ref=e1228] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552114.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Dec)" [ref=e1229]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Dec)" [ref=e1230] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552114.px')
+                          - table [ref=e1231]:
+                            - rowgroup [ref=e1232]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Feb)" [ref=e1233]:
+                                - cell [ref=e1234]
+                                - cell [ref=e1236]
+                                - cell [ref=e1238]:
+                                  - link [ref=e1239] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552104.px')
+                                - cell [ref=e1240]:
+                                  - link [ref=e1241] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552104.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Feb)" [ref=e1242]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Feb)" [ref=e1243] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552104.px')
+                          - table [ref=e1244]:
+                            - rowgroup [ref=e1245]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jan)" [ref=e1246]:
+                                - cell [ref=e1247]
+                                - cell [ref=e1249]
+                                - cell [ref=e1251]:
+                                  - link [ref=e1252] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552103.px')
+                                - cell [ref=e1253]:
+                                  - link [ref=e1254] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552103.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jan)" [ref=e1255]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jan)" [ref=e1256] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552103.px')
+                          - table [ref=e1257]:
+                            - rowgroup [ref=e1258]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jul)" [ref=e1259]:
+                                - cell [ref=e1260]
+                                - cell [ref=e1262]
+                                - cell [ref=e1264]:
+                                  - link [ref=e1265] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552109.px')
+                                - cell [ref=e1266]:
+                                  - link [ref=e1267] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552109.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jul)" [ref=e1268]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jul)" [ref=e1269] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552109.px')
+                          - table [ref=e1270]:
+                            - rowgroup [ref=e1271]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jun)" [ref=e1272]:
+                                - cell [ref=e1273]
+                                - cell [ref=e1275]
+                                - cell [ref=e1277]:
+                                  - link [ref=e1278] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552108.px')
+                                - cell [ref=e1279]:
+                                  - link [ref=e1280] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552108.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jun)" [ref=e1281]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Jun)" [ref=e1282] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552108.px')
+                          - table [ref=e1283]:
+                            - rowgroup [ref=e1284]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Mar)" [ref=e1285]:
+                                - cell [ref=e1286]
+                                - cell [ref=e1288]
+                                - cell [ref=e1290]:
+                                  - link [ref=e1291] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552105.px')
+                                - cell [ref=e1292]:
+                                  - link [ref=e1293] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552105.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Mar)" [ref=e1294]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Mar)" [ref=e1295] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552105.px')
+                          - table [ref=e1296]:
+                            - rowgroup [ref=e1297]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-May)" [ref=e1298]:
+                                - cell [ref=e1299]
+                                - cell [ref=e1301]
+                                - cell [ref=e1303]:
+                                  - link [ref=e1304] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552107.px')
+                                - cell [ref=e1305]:
+                                  - link [ref=e1306] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552107.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-May)" [ref=e1307]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-May)" [ref=e1308] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552107.px')
+                          - table [ref=e1309]:
+                            - rowgroup [ref=e1310]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Nov)" [ref=e1311]:
+                                - cell [ref=e1312]
+                                - cell [ref=e1314]
+                                - cell [ref=e1316]:
+                                  - link [ref=e1317] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552113.px')
+                                - cell [ref=e1318]:
+                                  - link [ref=e1319] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552113.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Nov)" [ref=e1320]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Nov)" [ref=e1321] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552113.px')
+                          - table [ref=e1322]:
+                            - rowgroup [ref=e1323]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Oct)" [ref=e1324]:
+                                - cell [ref=e1325]
+                                - cell [ref=e1327]
+                                - cell [ref=e1329]:
+                                  - link [ref=e1330] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552112.px')
+                                - cell [ref=e1331]:
+                                  - link [ref=e1332] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552112.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Oct)" [ref=e1333]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Oct)" [ref=e1334] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552112.px')
+                          - table [ref=e1335]:
+                            - rowgroup [ref=e1336]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Sep)" [ref=e1337]:
+                                - cell [ref=e1338]
+                                - cell [ref=e1340]
+                                - cell [ref=e1342]:
+                                  - link [ref=e1343] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552111.px')
+                                - cell [ref=e1344]:
+                                  - link [ref=e1345] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552111.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Sep)" [ref=e1346]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Annual-Sep)" [ref=e1347] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552111.px')
+                          - table [ref=e1348]:
+                            - rowgroup [ref=e1349]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Monthly)" [ref=e1350]:
+                                - cell [ref=e1351]
+                                - cell [ref=e1353]
+                                - cell [ref=e1355]:
+                                  - link [ref=e1356] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552101.px')
+                                - cell [ref=e1357]:
+                                  - link [ref=e1358] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552101.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Monthly)" [ref=e1359]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Monthly)" [ref=e1360] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552101.px')
+                          - table [ref=e1361]:
+                            - rowgroup [ref=e1362]:
+                              - row "Estimated migration by direction, age group and sex, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1363]:
+                                - cell [ref=e1364]
+                                - cell [ref=e1366]
+                                - cell [ref=e1368]:
+                                  - link [ref=e1369] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552102.px')
+                                - cell [ref=e1370]:
+                                  - link [ref=e1371] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552102.px')
+                                - cell "Estimated migration by direction, age group and sex, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1372]:
+                                  - link "Estimated migration by direction, age group and sex, 12/16-month rule (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1373] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM552102.px')
+                          - table [ref=e1374]:
+                            - rowgroup [ref=e1375]:
+                              - row "Estimated migration by direction, citizenship and NZ area, 12/16-month rule (Monthly)" [ref=e1376]:
+                                - cell [ref=e1377]
+                                - cell [ref=e1379]
+                                - cell [ref=e1381]:
+                                  - link [ref=e1382] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553701.px')
+                                - cell [ref=e1383]:
+                                  - link [ref=e1384] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553701.px')
+                                - cell "Estimated migration by direction, citizenship and NZ area, 12/16-month rule (Monthly)" [ref=e1385]:
+                                  - link "Estimated migration by direction, citizenship and NZ area, 12/16-month rule (Monthly)" [ref=e1386] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553701.px')
+                          - table [ref=e1387]:
+                            - rowgroup [ref=e1388]:
+                              - row "Number of flights by direction and overseas port (Annual-Dec)" [ref=e1389]:
+                                - cell [ref=e1390]
+                                - cell [ref=e1392]
+                                - cell [ref=e1394]:
+                                  - link [ref=e1395] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346606.px')
+                                - cell [ref=e1396]:
+                                  - link [ref=e1397] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346606.px')
+                                - cell "Number of flights by direction and overseas port (Annual-Dec)" [ref=e1398]:
+                                  - link "Number of flights by direction and overseas port (Annual-Dec)" [ref=e1399] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346606.px')
+                          - table [ref=e1400]:
+                            - rowgroup [ref=e1401]:
+                              - row "Number of flights by direction and overseas port (Annual-Jun)" [ref=e1402]:
+                                - cell [ref=e1403]
+                                - cell [ref=e1405]
+                                - cell [ref=e1407]:
+                                  - link [ref=e1408] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346604.px')
+                                - cell [ref=e1409]:
+                                  - link [ref=e1410] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346604.px')
+                                - cell "Number of flights by direction and overseas port (Annual-Jun)" [ref=e1411]:
+                                  - link "Number of flights by direction and overseas port (Annual-Jun)" [ref=e1412] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346604.px')
+                          - table [ref=e1413]:
+                            - rowgroup [ref=e1414]:
+                              - row "Number of flights by direction and overseas port (Annual-Mar)" [ref=e1415]:
+                                - cell [ref=e1416]
+                                - cell [ref=e1418]
+                                - cell [ref=e1420]:
+                                  - link [ref=e1421] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346603.px')
+                                - cell [ref=e1422]:
+                                  - link [ref=e1423] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346603.px')
+                                - cell "Number of flights by direction and overseas port (Annual-Mar)" [ref=e1424]:
+                                  - link "Number of flights by direction and overseas port (Annual-Mar)" [ref=e1425] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346603.px')
+                          - table [ref=e1426]:
+                            - rowgroup [ref=e1427]:
+                              - row "Number of flights by direction and overseas port (Annual-Sep)" [ref=e1428]:
+                                - cell [ref=e1429]
+                                - cell [ref=e1431]
+                                - cell [ref=e1433]:
+                                  - link [ref=e1434] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346605.px')
+                                - cell [ref=e1435]:
+                                  - link [ref=e1436] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346605.px')
+                                - cell "Number of flights by direction and overseas port (Annual-Sep)" [ref=e1437]:
+                                  - link "Number of flights by direction and overseas port (Annual-Sep)" [ref=e1438] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346605.px')
+                          - table [ref=e1439]:
+                            - rowgroup [ref=e1440]:
+                              - row "Number of flights by direction and overseas port (Monthly)" [ref=e1441]:
+                                - cell [ref=e1442]
+                                - cell [ref=e1444]
+                                - cell [ref=e1446]:
+                                  - link [ref=e1447] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346601.px')
+                                - cell [ref=e1448]:
+                                  - link [ref=e1449] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346601.px')
+                                - cell "Number of flights by direction and overseas port (Monthly)" [ref=e1450]:
+                                  - link "Number of flights by direction and overseas port (Monthly)" [ref=e1451] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346601.px')
+                          - table [ref=e1452]:
+                            - rowgroup [ref=e1453]:
+                              - row "Number of flights by direction and overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1454]:
+                                - cell [ref=e1455]
+                                - cell [ref=e1457]
+                                - cell [ref=e1459]:
+                                  - link [ref=e1460] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346602.px')
+                                - cell [ref=e1461]:
+                                  - link [ref=e1462] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346602.px')
+                                - cell "Number of flights by direction and overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1463]:
+                                  - link "Number of flights by direction and overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1464] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346602.px')
+                          - table [ref=e1465]:
+                            - rowgroup [ref=e1466]:
+                              - row "NZ-resident traveller arrival totals (Annual-Dec)" [ref=e1467]:
+                                - cell [ref=e1468]
+                                - cell [ref=e1470]
+                                - cell [ref=e1472]:
+                                  - link [ref=e1473] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331006.px')
+                                - cell [ref=e1474]:
+                                  - link [ref=e1475] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331006.px')
+                                - cell "NZ-resident traveller arrival totals (Annual-Dec)" [ref=e1476]:
+                                  - link "NZ-resident traveller arrival totals (Annual-Dec)" [ref=e1477] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331006.px')
+                          - table [ref=e1478]:
+                            - rowgroup [ref=e1479]:
+                              - row "NZ-resident traveller arrival totals (Annual-Jun)" [ref=e1480]:
+                                - cell [ref=e1481]
+                                - cell [ref=e1483]
+                                - cell [ref=e1485]:
+                                  - link [ref=e1486] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331004.px')
+                                - cell [ref=e1487]:
+                                  - link [ref=e1488] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331004.px')
+                                - cell "NZ-resident traveller arrival totals (Annual-Jun)" [ref=e1489]:
+                                  - link "NZ-resident traveller arrival totals (Annual-Jun)" [ref=e1490] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331004.px')
+                          - table [ref=e1491]:
+                            - rowgroup [ref=e1492]:
+                              - row "NZ-resident traveller arrival totals (Annual-Mar)" [ref=e1493]:
+                                - cell [ref=e1494]
+                                - cell [ref=e1496]
+                                - cell [ref=e1498]:
+                                  - link [ref=e1499] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331003.px')
+                                - cell [ref=e1500]:
+                                  - link [ref=e1501] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331003.px')
+                                - cell "NZ-resident traveller arrival totals (Annual-Mar)" [ref=e1502]:
+                                  - link "NZ-resident traveller arrival totals (Annual-Mar)" [ref=e1503] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331003.px')
+                          - table [ref=e1504]:
+                            - rowgroup [ref=e1505]:
+                              - row "NZ-resident traveller arrival totals (Annual-Sep)" [ref=e1506]:
+                                - cell [ref=e1507]
+                                - cell [ref=e1509]
+                                - cell [ref=e1511]:
+                                  - link [ref=e1512] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331005.px')
+                                - cell [ref=e1513]:
+                                  - link [ref=e1514] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331005.px')
+                                - cell "NZ-resident traveller arrival totals (Annual-Sep)" [ref=e1515]:
+                                  - link "NZ-resident traveller arrival totals (Annual-Sep)" [ref=e1516] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331005.px')
+                          - table [ref=e1517]:
+                            - rowgroup [ref=e1518]:
+                              - row "NZ-resident traveller arrival totals (Monthly)" [ref=e1519]:
+                                - cell [ref=e1520]
+                                - cell [ref=e1522]
+                                - cell [ref=e1524]:
+                                  - link [ref=e1525] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331001.px')
+                                - cell [ref=e1526]:
+                                  - link [ref=e1527] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331001.px')
+                                - cell "NZ-resident traveller arrival totals (Monthly)" [ref=e1528]:
+                                  - link "NZ-resident traveller arrival totals (Monthly)" [ref=e1529] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331001.px')
+                          - table [ref=e1530]:
+                            - rowgroup [ref=e1531]:
+                              - row "NZ-resident traveller arrival totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1532]:
+                                - cell [ref=e1533]
+                                - cell [ref=e1535]
+                                - cell [ref=e1537]:
+                                  - link [ref=e1538] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331002.px')
+                                - cell [ref=e1539]:
+                                  - link [ref=e1540] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331002.px')
+                                - cell "NZ-resident traveller arrival totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1541]:
+                                  - link "NZ-resident traveller arrival totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1542] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331002.px')
+                          - table [ref=e1543]:
+                            - rowgroup [ref=e1544]:
+                              - row "NZ-resident traveller arrivals by closest overseas port (Annual-Dec)" [ref=e1545]:
+                                - cell [ref=e1546]
+                                - cell [ref=e1548]
+                                - cell [ref=e1550]:
+                                  - link [ref=e1551] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551906.px')
+                                - cell [ref=e1552]:
+                                  - link [ref=e1553] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551906.px')
+                                - cell "NZ-resident traveller arrivals by closest overseas port (Annual-Dec)" [ref=e1554]:
+                                  - link "NZ-resident traveller arrivals by closest overseas port (Annual-Dec)" [ref=e1555] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551906.px')
+                          - table [ref=e1556]:
+                            - rowgroup [ref=e1557]:
+                              - row "NZ-resident traveller arrivals by closest overseas port (Annual-Jun)" [ref=e1558]:
+                                - cell [ref=e1559]
+                                - cell [ref=e1561]
+                                - cell [ref=e1563]:
+                                  - link [ref=e1564] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551904.px')
+                                - cell [ref=e1565]:
+                                  - link [ref=e1566] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551904.px')
+                                - cell "NZ-resident traveller arrivals by closest overseas port (Annual-Jun)" [ref=e1567]:
+                                  - link "NZ-resident traveller arrivals by closest overseas port (Annual-Jun)" [ref=e1568] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551904.px')
+                          - table [ref=e1569]:
+                            - rowgroup [ref=e1570]:
+                              - row "NZ-resident traveller arrivals by closest overseas port (Annual-Mar)" [ref=e1571]:
+                                - cell [ref=e1572]
+                                - cell [ref=e1574]
+                                - cell [ref=e1576]:
+                                  - link [ref=e1577] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551903.px')
+                                - cell [ref=e1578]:
+                                  - link [ref=e1579] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551903.px')
+                                - cell "NZ-resident traveller arrivals by closest overseas port (Annual-Mar)" [ref=e1580]:
+                                  - link "NZ-resident traveller arrivals by closest overseas port (Annual-Mar)" [ref=e1581] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551903.px')
+                          - table [ref=e1582]:
+                            - rowgroup [ref=e1583]:
+                              - row "NZ-resident traveller arrivals by closest overseas port (Annual-Sep)" [ref=e1584]:
+                                - cell [ref=e1585]
+                                - cell [ref=e1587]
+                                - cell [ref=e1589]:
+                                  - link [ref=e1590] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551905.px')
+                                - cell [ref=e1591]:
+                                  - link [ref=e1592] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551905.px')
+                                - cell "NZ-resident traveller arrivals by closest overseas port (Annual-Sep)" [ref=e1593]:
+                                  - link "NZ-resident traveller arrivals by closest overseas port (Annual-Sep)" [ref=e1594] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551905.px')
+                          - table [ref=e1595]:
+                            - rowgroup [ref=e1596]:
+                              - row "NZ-resident traveller arrivals by closest overseas port (Monthly)" [ref=e1597]:
+                                - cell [ref=e1598]
+                                - cell [ref=e1600]
+                                - cell [ref=e1602]:
+                                  - link [ref=e1603] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551901.px')
+                                - cell [ref=e1604]:
+                                  - link [ref=e1605] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551901.px')
+                                - cell "NZ-resident traveller arrivals by closest overseas port (Monthly)" [ref=e1606]:
+                                  - link "NZ-resident traveller arrivals by closest overseas port (Monthly)" [ref=e1607] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551901.px')
+                          - table [ref=e1608]:
+                            - rowgroup [ref=e1609]:
+                              - row "NZ-resident traveller arrivals by closest overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1610]:
+                                - cell [ref=e1611]
+                                - cell [ref=e1613]
+                                - cell [ref=e1615]:
+                                  - link [ref=e1616] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551902.px')
+                                - cell [ref=e1617]:
+                                  - link [ref=e1618] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551902.px')
+                                - cell "NZ-resident traveller arrivals by closest overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1619]:
+                                  - link "NZ-resident traveller arrivals by closest overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1620] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551902.px')
+                          - table [ref=e1621]:
+                            - rowgroup [ref=e1622]:
+                              - row "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Dec)" [ref=e1623]:
+                                - cell [ref=e1624]
+                                - cell [ref=e1626]
+                                - cell [ref=e1628]:
+                                  - link [ref=e1629] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551306.px')
+                                - cell [ref=e1630]:
+                                  - link [ref=e1631] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551306.px')
+                                - cell "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Dec)" [ref=e1632]:
+                                  - link "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Dec)" [ref=e1633] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551306.px')
+                          - table [ref=e1634]:
+                            - rowgroup [ref=e1635]:
+                              - row "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Jun)" [ref=e1636]:
+                                - cell [ref=e1637]
+                                - cell [ref=e1639]
+                                - cell [ref=e1641]:
+                                  - link [ref=e1642] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551304.px')
+                                - cell [ref=e1643]:
+                                  - link [ref=e1644] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551304.px')
+                                - cell "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Jun)" [ref=e1645]:
+                                  - link "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Jun)" [ref=e1646] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551304.px')
+                          - table [ref=e1647]:
+                            - rowgroup [ref=e1648]:
+                              - row "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Mar)" [ref=e1649]:
+                                - cell [ref=e1650]
+                                - cell [ref=e1652]
+                                - cell [ref=e1654]:
+                                  - link [ref=e1655] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551303.px')
+                                - cell [ref=e1656]:
+                                  - link [ref=e1657] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551303.px')
+                                - cell "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Mar)" [ref=e1658]:
+                                  - link "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Mar)" [ref=e1659] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551303.px')
+                          - table [ref=e1660]:
+                            - rowgroup [ref=e1661]:
+                              - row "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Sep)" [ref=e1662]:
+                                - cell [ref=e1663]
+                                - cell [ref=e1665]
+                                - cell [ref=e1667]:
+                                  - link [ref=e1668] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551305.px')
+                                - cell [ref=e1669]:
+                                  - link [ref=e1670] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551305.px')
+                                - cell "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Sep)" [ref=e1671]:
+                                  - link "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Annual-Sep)" [ref=e1672] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551305.px')
+                          - table [ref=e1673]:
+                            - rowgroup [ref=e1674]:
+                              - row "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Monthly)" [ref=e1675]:
+                                - cell [ref=e1676]
+                                - cell [ref=e1678]
+                                - cell [ref=e1680]:
+                                  - link [ref=e1681] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551301.px')
+                                - cell [ref=e1682]:
+                                  - link [ref=e1683] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551301.px')
+                                - cell "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Monthly)" [ref=e1684]:
+                                  - link "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Monthly)" [ref=e1685] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551301.px')
+                          - table [ref=e1686]:
+                            - rowgroup [ref=e1687]:
+                              - row "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1688]:
+                                - cell [ref=e1689]
+                                - cell [ref=e1691]
+                                - cell [ref=e1693]:
+                                  - link [ref=e1694] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551302.px')
+                                - cell [ref=e1695]:
+                                  - link [ref=e1696] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551302.px')
+                                - cell "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1697]:
+                                  - link "NZ-resident traveller arrivals by EVERY country of main destination and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1698] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551302.px')
+                          - table [ref=e1699]:
+                            - rowgroup [ref=e1700]:
+                              - row "NZ-resident traveller arrivals by main destination and NZ area (Monthly)" [ref=e1701]:
+                                - cell [ref=e1702]
+                                - cell [ref=e1704]
+                                - cell [ref=e1706]:
+                                  - link [ref=e1707] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553801.px')
+                                - cell [ref=e1708]:
+                                  - link [ref=e1709] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553801.px')
+                                - cell "NZ-resident traveller arrivals by main destination and NZ area (Monthly)" [ref=e1710]:
+                                  - link "NZ-resident traveller arrivals by main destination and NZ area (Monthly)" [ref=e1711] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553801.px')
+                          - table [ref=e1712]:
+                            - rowgroup [ref=e1713]:
+                              - row "NZ-resident traveller arrivals by main destination and travel mode (Annual-Dec)" [ref=e1714]:
+                                - cell [ref=e1715]
+                                - cell [ref=e1717]
+                                - cell [ref=e1719]:
+                                  - link [ref=e1720] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551806.px')
+                                - cell [ref=e1721]:
+                                  - link [ref=e1722] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551806.px')
+                                - cell "NZ-resident traveller arrivals by main destination and travel mode (Annual-Dec)" [ref=e1723]:
+                                  - link "NZ-resident traveller arrivals by main destination and travel mode (Annual-Dec)" [ref=e1724] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551806.px')
+                          - table [ref=e1725]:
+                            - rowgroup [ref=e1726]:
+                              - row "NZ-resident traveller arrivals by main destination and travel mode (Annual-Jun)" [ref=e1727]:
+                                - cell [ref=e1728]
+                                - cell [ref=e1730]
+                                - cell [ref=e1732]:
+                                  - link [ref=e1733] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551804.px')
+                                - cell [ref=e1734]:
+                                  - link [ref=e1735] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551804.px')
+                                - cell "NZ-resident traveller arrivals by main destination and travel mode (Annual-Jun)" [ref=e1736]:
+                                  - link "NZ-resident traveller arrivals by main destination and travel mode (Annual-Jun)" [ref=e1737] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551804.px')
+                          - table [ref=e1738]:
+                            - rowgroup [ref=e1739]:
+                              - row "NZ-resident traveller arrivals by main destination and travel mode (Annual-Mar)" [ref=e1740]:
+                                - cell [ref=e1741]
+                                - cell [ref=e1743]
+                                - cell [ref=e1745]:
+                                  - link [ref=e1746] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551803.px')
+                                - cell [ref=e1747]:
+                                  - link [ref=e1748] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551803.px')
+                                - cell "NZ-resident traveller arrivals by main destination and travel mode (Annual-Mar)" [ref=e1749]:
+                                  - link "NZ-resident traveller arrivals by main destination and travel mode (Annual-Mar)" [ref=e1750] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551803.px')
+                          - table [ref=e1751]:
+                            - rowgroup [ref=e1752]:
+                              - row "NZ-resident traveller arrivals by main destination and travel mode (Annual-Sep)" [ref=e1753]:
+                                - cell [ref=e1754]
+                                - cell [ref=e1756]
+                                - cell [ref=e1758]:
+                                  - link [ref=e1759] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551805.px')
+                                - cell [ref=e1760]:
+                                  - link [ref=e1761] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551805.px')
+                                - cell "NZ-resident traveller arrivals by main destination and travel mode (Annual-Sep)" [ref=e1762]:
+                                  - link "NZ-resident traveller arrivals by main destination and travel mode (Annual-Sep)" [ref=e1763] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551805.px')
+                          - table [ref=e1764]:
+                            - rowgroup [ref=e1765]:
+                              - row "NZ-resident traveller arrivals by main destination and travel mode (Monthly)" [ref=e1766]:
+                                - cell [ref=e1767]
+                                - cell [ref=e1769]
+                                - cell [ref=e1771]:
+                                  - link [ref=e1772] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551801.px')
+                                - cell [ref=e1773]:
+                                  - link [ref=e1774] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551801.px')
+                                - cell "NZ-resident traveller arrivals by main destination and travel mode (Monthly)" [ref=e1775]:
+                                  - link "NZ-resident traveller arrivals by main destination and travel mode (Monthly)" [ref=e1776] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551801.px')
+                          - table [ref=e1777]:
+                            - rowgroup [ref=e1778]:
+                              - row "NZ-resident traveller arrivals by main destination and travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1779]:
+                                - cell [ref=e1780]
+                                - cell [ref=e1782]
+                                - cell [ref=e1784]:
+                                  - link [ref=e1785] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551802.px')
+                                - cell [ref=e1786]:
+                                  - link [ref=e1787] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551802.px')
+                                - cell "NZ-resident traveller arrivals by main destination and travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1788]:
+                                  - link "NZ-resident traveller arrivals by main destination and travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1789] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551802.px')
+                          - table [ref=e1790]:
+                            - rowgroup [ref=e1791]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Dec)" [ref=e1792]:
+                                - cell [ref=e1793]
+                                - cell [ref=e1795]
+                                - cell [ref=e1797]:
+                                  - link [ref=e1798] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551506.px')
+                                - cell [ref=e1799]:
+                                  - link [ref=e1800] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551506.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Dec)" [ref=e1801]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Dec)" [ref=e1802] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551506.px')
+                          - table [ref=e1803]:
+                            - rowgroup [ref=e1804]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Jun)" [ref=e1805]:
+                                - cell [ref=e1806]
+                                - cell [ref=e1808]
+                                - cell [ref=e1810]:
+                                  - link [ref=e1811] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551504.px')
+                                - cell [ref=e1812]:
+                                  - link [ref=e1813] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551504.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Jun)" [ref=e1814]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Jun)" [ref=e1815] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551504.px')
+                          - table [ref=e1816]:
+                            - rowgroup [ref=e1817]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Mar)" [ref=e1818]:
+                                - cell [ref=e1819]
+                                - cell [ref=e1821]
+                                - cell [ref=e1823]:
+                                  - link [ref=e1824] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551503.px')
+                                - cell [ref=e1825]:
+                                  - link [ref=e1826] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551503.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Mar)" [ref=e1827]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Mar)" [ref=e1828] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551503.px')
+                          - table [ref=e1829]:
+                            - rowgroup [ref=e1830]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Sep)" [ref=e1831]:
+                                - cell [ref=e1832]
+                                - cell [ref=e1834]
+                                - cell [ref=e1836]:
+                                  - link [ref=e1837] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551505.px')
+                                - cell [ref=e1838]:
+                                  - link [ref=e1839] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551505.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Sep)" [ref=e1840]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose & length of absence (Annual-Sep)" [ref=e1841] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551505.px')
+                          - table [ref=e1842]:
+                            - rowgroup [ref=e1843]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose & length of absence (Monthly)" [ref=e1844]:
+                                - cell [ref=e1845]
+                                - cell [ref=e1847]
+                                - cell [ref=e1849]:
+                                  - link [ref=e1850] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551501.px')
+                                - cell [ref=e1851]:
+                                  - link [ref=e1852] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551501.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose & length of absence (Monthly)" [ref=e1853]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose & length of absence (Monthly)" [ref=e1854] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551501.px')
+                          - table [ref=e1855]:
+                            - rowgroup [ref=e1856]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose & length of absence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1857]:
+                                - cell [ref=e1858]
+                                - cell [ref=e1860]
+                                - cell [ref=e1862]:
+                                  - link [ref=e1863] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551502.px')
+                                - cell [ref=e1864]:
+                                  - link [ref=e1865] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551502.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose & length of absence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1866]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose & length of absence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1867] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551502.px')
+                          - table [ref=e1868]:
+                            - rowgroup [ref=e1869]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Dec)" [ref=e1870]:
+                                - cell [ref=e1871]
+                                - cell [ref=e1873]
+                                - cell [ref=e1875]:
+                                  - link [ref=e1876] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551406.px')
+                                - cell [ref=e1877]:
+                                  - link [ref=e1878] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551406.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Dec)" [ref=e1879]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Dec)" [ref=e1880] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551406.px')
+                          - table [ref=e1881]:
+                            - rowgroup [ref=e1882]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Jun)" [ref=e1883]:
+                                - cell [ref=e1884]
+                                - cell [ref=e1886]
+                                - cell [ref=e1888]:
+                                  - link [ref=e1889] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551404.px')
+                                - cell [ref=e1890]:
+                                  - link [ref=e1891] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551404.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Jun)" [ref=e1892]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Jun)" [ref=e1893] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551404.px')
+                          - table [ref=e1894]:
+                            - rowgroup [ref=e1895]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Mar)" [ref=e1896]:
+                                - cell [ref=e1897]
+                                - cell [ref=e1899]
+                                - cell [ref=e1901]:
+                                  - link [ref=e1902] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551403.px')
+                                - cell [ref=e1903]:
+                                  - link [ref=e1904] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551403.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Mar)" [ref=e1905]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Mar)" [ref=e1906] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551403.px')
+                          - table [ref=e1907]:
+                            - rowgroup [ref=e1908]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Sep)" [ref=e1909]:
+                                - cell [ref=e1910]
+                                - cell [ref=e1912]
+                                - cell [ref=e1914]:
+                                  - link [ref=e1915] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551405.px')
+                                - cell [ref=e1916]:
+                                  - link [ref=e1917] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551405.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Sep)" [ref=e1918]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose, age and sex (Annual-Sep)" [ref=e1919] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551405.px')
+                          - table [ref=e1920]:
+                            - rowgroup [ref=e1921]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose, age and sex (Monthly)" [ref=e1922]:
+                                - cell [ref=e1923]
+                                - cell [ref=e1925]
+                                - cell [ref=e1927]:
+                                  - link [ref=e1928] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551401.px')
+                                - cell [ref=e1929]:
+                                  - link [ref=e1930] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551401.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose, age and sex (Monthly)" [ref=e1931]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose, age and sex (Monthly)" [ref=e1932] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551401.px')
+                          - table [ref=e1933]:
+                            - rowgroup [ref=e1934]:
+                              - row "NZ-resident traveller arrivals by main destination, purpose, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1935]:
+                                - cell [ref=e1936]
+                                - cell [ref=e1938]
+                                - cell [ref=e1940]:
+                                  - link [ref=e1941] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551402.px')
+                                - cell [ref=e1942]:
+                                  - link [ref=e1943] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551402.px')
+                                - cell "NZ-resident traveller arrivals by main destination, purpose, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1944]:
+                                  - link "NZ-resident traveller arrivals by main destination, purpose, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e1945] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551402.px')
+                          - table [ref=e1946]:
+                            - rowgroup [ref=e1947]:
+                              - row "NZ-resident traveller arrivals by purpose and NZ port (Annual-Dec)" [ref=e1948]:
+                                - cell [ref=e1949]
+                                - cell [ref=e1951]
+                                - cell [ref=e1953]:
+                                  - link [ref=e1954] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551606.px')
+                                - cell [ref=e1955]:
+                                  - link [ref=e1956] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551606.px')
+                                - cell "NZ-resident traveller arrivals by purpose and NZ port (Annual-Dec)" [ref=e1957]:
+                                  - link "NZ-resident traveller arrivals by purpose and NZ port (Annual-Dec)" [ref=e1958] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551606.px')
+                          - table [ref=e1959]:
+                            - rowgroup [ref=e1960]:
+                              - row "NZ-resident traveller arrivals by purpose and NZ port (Annual-Jun)" [ref=e1961]:
+                                - cell [ref=e1962]
+                                - cell [ref=e1964]
+                                - cell [ref=e1966]:
+                                  - link [ref=e1967] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551604.px')
+                                - cell [ref=e1968]:
+                                  - link [ref=e1969] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551604.px')
+                                - cell "NZ-resident traveller arrivals by purpose and NZ port (Annual-Jun)" [ref=e1970]:
+                                  - link "NZ-resident traveller arrivals by purpose and NZ port (Annual-Jun)" [ref=e1971] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551604.px')
+                          - table [ref=e1972]:
+                            - rowgroup [ref=e1973]:
+                              - row "NZ-resident traveller arrivals by purpose and NZ port (Annual-Mar)" [ref=e1974]:
+                                - cell [ref=e1975]
+                                - cell [ref=e1977]
+                                - cell [ref=e1979]:
+                                  - link [ref=e1980] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551603.px')
+                                - cell [ref=e1981]:
+                                  - link [ref=e1982] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551603.px')
+                                - cell "NZ-resident traveller arrivals by purpose and NZ port (Annual-Mar)" [ref=e1983]:
+                                  - link "NZ-resident traveller arrivals by purpose and NZ port (Annual-Mar)" [ref=e1984] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551603.px')
+                          - table [ref=e1985]:
+                            - rowgroup [ref=e1986]:
+                              - row "NZ-resident traveller arrivals by purpose and NZ port (Annual-Sep)" [ref=e1987]:
+                                - cell [ref=e1988]
+                                - cell [ref=e1990]
+                                - cell [ref=e1992]:
+                                  - link [ref=e1993] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551605.px')
+                                - cell [ref=e1994]:
+                                  - link [ref=e1995] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551605.px')
+                                - cell "NZ-resident traveller arrivals by purpose and NZ port (Annual-Sep)" [ref=e1996]:
+                                  - link "NZ-resident traveller arrivals by purpose and NZ port (Annual-Sep)" [ref=e1997] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551605.px')
+                          - table [ref=e1998]:
+                            - rowgroup [ref=e1999]:
+                              - row "NZ-resident traveller arrivals by purpose and NZ port (Monthly)" [ref=e2000]:
+                                - cell [ref=e2001]
+                                - cell [ref=e2003]
+                                - cell [ref=e2005]:
+                                  - link [ref=e2006] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551601.px')
+                                - cell [ref=e2007]:
+                                  - link [ref=e2008] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551601.px')
+                                - cell "NZ-resident traveller arrivals by purpose and NZ port (Monthly)" [ref=e2009]:
+                                  - link "NZ-resident traveller arrivals by purpose and NZ port (Monthly)" [ref=e2010] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551601.px')
+                          - table [ref=e2011]:
+                            - rowgroup [ref=e2012]:
+                              - row "NZ-resident traveller arrivals by purpose and NZ port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2013]:
+                                - cell [ref=e2014]
+                                - cell [ref=e2016]
+                                - cell [ref=e2018]:
+                                  - link [ref=e2019] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551602.px')
+                                - cell [ref=e2020]:
+                                  - link [ref=e2021] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551602.px')
+                                - cell "NZ-resident traveller arrivals by purpose and NZ port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2022]:
+                                  - link "NZ-resident traveller arrivals by purpose and NZ port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2023] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM551602.px')
+                          - table [ref=e2024]:
+                            - rowgroup [ref=e2025]:
+                              - row "NZ-resident traveller departure totals (Annual-Dec)" [ref=e2026]:
+                                - cell [ref=e2027]
+                                - cell [ref=e2029]
+                                - cell [ref=e2031]:
+                                  - link [ref=e2032] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331106.px')
+                                - cell [ref=e2033]:
+                                  - link [ref=e2034] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331106.px')
+                                - cell "NZ-resident traveller departure totals (Annual-Dec)" [ref=e2035]:
+                                  - link "NZ-resident traveller departure totals (Annual-Dec)" [ref=e2036] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331106.px')
+                          - table [ref=e2037]:
+                            - rowgroup [ref=e2038]:
+                              - row "NZ-resident traveller departure totals (Annual-Jun)" [ref=e2039]:
+                                - cell [ref=e2040]
+                                - cell [ref=e2042]
+                                - cell [ref=e2044]:
+                                  - link [ref=e2045] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331104.px')
+                                - cell [ref=e2046]:
+                                  - link [ref=e2047] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331104.px')
+                                - cell "NZ-resident traveller departure totals (Annual-Jun)" [ref=e2048]:
+                                  - link "NZ-resident traveller departure totals (Annual-Jun)" [ref=e2049] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331104.px')
+                          - table [ref=e2050]:
+                            - rowgroup [ref=e2051]:
+                              - row "NZ-resident traveller departure totals (Annual-Mar)" [ref=e2052]:
+                                - cell [ref=e2053]
+                                - cell [ref=e2055]
+                                - cell [ref=e2057]:
+                                  - link [ref=e2058] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331103.px')
+                                - cell [ref=e2059]:
+                                  - link [ref=e2060] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331103.px')
+                                - cell "NZ-resident traveller departure totals (Annual-Mar)" [ref=e2061]:
+                                  - link "NZ-resident traveller departure totals (Annual-Mar)" [ref=e2062] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331103.px')
+                          - table [ref=e2063]:
+                            - rowgroup [ref=e2064]:
+                              - row "NZ-resident traveller departure totals (Annual-Sep)" [ref=e2065]:
+                                - cell [ref=e2066]
+                                - cell [ref=e2068]
+                                - cell [ref=e2070]:
+                                  - link [ref=e2071] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331105.px')
+                                - cell [ref=e2072]:
+                                  - link [ref=e2073] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331105.px')
+                                - cell "NZ-resident traveller departure totals (Annual-Sep)" [ref=e2074]:
+                                  - link "NZ-resident traveller departure totals (Annual-Sep)" [ref=e2075] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331105.px')
+                          - table [ref=e2076]:
+                            - rowgroup [ref=e2077]:
+                              - row "NZ-resident traveller departure totals (Monthly)" [ref=e2078]:
+                                - cell [ref=e2079]
+                                - cell [ref=e2081]
+                                - cell [ref=e2083]:
+                                  - link [ref=e2084] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331101.px')
+                                - cell [ref=e2085]:
+                                  - link [ref=e2086] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331101.px')
+                                - cell "NZ-resident traveller departure totals (Monthly)" [ref=e2087]:
+                                  - link "NZ-resident traveller departure totals (Monthly)" [ref=e2088] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331101.px')
+                          - table [ref=e2089]:
+                            - rowgroup [ref=e2090]:
+                              - row "NZ-resident traveller departure totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2091]:
+                                - cell [ref=e2092]
+                                - cell [ref=e2094]
+                                - cell [ref=e2096]:
+                                  - link [ref=e2097] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331102.px')
+                                - cell [ref=e2098]:
+                                  - link [ref=e2099] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331102.px')
+                                - cell "NZ-resident traveller departure totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2100]:
+                                  - link "NZ-resident traveller departure totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2101] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331102.px')
+                          - table [ref=e2102]:
+                            - rowgroup [ref=e2103]:
+                              - row "NZ-resident travellers - average number overseas each day by main destination (Annual-Dec)" [ref=e2104]:
+                                - cell [ref=e2105]
+                                - cell [ref=e2107]
+                                - cell [ref=e2109]:
+                                  - link [ref=e2110] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346706.px')
+                                - cell [ref=e2111]:
+                                  - link [ref=e2112] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346706.px')
+                                - cell "NZ-resident travellers - average number overseas each day by main destination (Annual-Dec)" [ref=e2113]:
+                                  - link "NZ-resident travellers - average number overseas each day by main destination (Annual-Dec)" [ref=e2114] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346706.px')
+                          - table [ref=e2115]:
+                            - rowgroup [ref=e2116]:
+                              - row "NZ-resident travellers - average number overseas each day by main destination (Annual-Jun)" [ref=e2117]:
+                                - cell [ref=e2118]
+                                - cell [ref=e2120]
+                                - cell [ref=e2122]:
+                                  - link [ref=e2123] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346704.px')
+                                - cell [ref=e2124]:
+                                  - link [ref=e2125] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346704.px')
+                                - cell "NZ-resident travellers - average number overseas each day by main destination (Annual-Jun)" [ref=e2126]:
+                                  - link "NZ-resident travellers - average number overseas each day by main destination (Annual-Jun)" [ref=e2127] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346704.px')
+                          - table [ref=e2128]:
+                            - rowgroup [ref=e2129]:
+                              - row "NZ-resident travellers - average number overseas each day by main destination (Annual-Mar)" [ref=e2130]:
+                                - cell [ref=e2131]
+                                - cell [ref=e2133]
+                                - cell [ref=e2135]:
+                                  - link [ref=e2136] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346703.px')
+                                - cell [ref=e2137]:
+                                  - link [ref=e2138] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346703.px')
+                                - cell "NZ-resident travellers - average number overseas each day by main destination (Annual-Mar)" [ref=e2139]:
+                                  - link "NZ-resident travellers - average number overseas each day by main destination (Annual-Mar)" [ref=e2140] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346703.px')
+                          - table [ref=e2141]:
+                            - rowgroup [ref=e2142]:
+                              - row "NZ-resident travellers - average number overseas each day by main destination (Annual-Sep)" [ref=e2143]:
+                                - cell [ref=e2144]
+                                - cell [ref=e2146]
+                                - cell [ref=e2148]:
+                                  - link [ref=e2149] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346705.px')
+                                - cell [ref=e2150]:
+                                  - link [ref=e2151] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346705.px')
+                                - cell "NZ-resident travellers - average number overseas each day by main destination (Annual-Sep)" [ref=e2152]:
+                                  - link "NZ-resident travellers - average number overseas each day by main destination (Annual-Sep)" [ref=e2153] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346705.px')
+                          - table [ref=e2154]:
+                            - rowgroup [ref=e2155]:
+                              - row "NZ-resident travellers - average number overseas each day by main destination (Monthly)" [ref=e2156]:
+                                - cell [ref=e2157]
+                                - cell [ref=e2159]
+                                - cell [ref=e2161]:
+                                  - link [ref=e2162] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346701.px')
+                                - cell [ref=e2163]:
+                                  - link [ref=e2164] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346701.px')
+                                - cell "NZ-resident travellers - average number overseas each day by main destination (Monthly)" [ref=e2165]:
+                                  - link "NZ-resident travellers - average number overseas each day by main destination (Monthly)" [ref=e2166] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346701.px')
+                          - table [ref=e2167]:
+                            - rowgroup [ref=e2168]:
+                              - row "NZ-resident travellers - average number overseas each day by main destination (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2169]:
+                                - cell [ref=e2170]
+                                - cell [ref=e2172]
+                                - cell [ref=e2174]:
+                                  - link [ref=e2175] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346702.px')
+                                - cell [ref=e2176]:
+                                  - link [ref=e2177] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346702.px')
+                                - cell "NZ-resident travellers - average number overseas each day by main destination (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2178]:
+                                  - link "NZ-resident travellers - average number overseas each day by main destination (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2179] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346702.px')
+                          - table [ref=e2180]:
+                            - rowgroup [ref=e2181]:
+                              - row "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Dec)" [ref=e2182]:
+                                - cell [ref=e2183]
+                                - cell [ref=e2185]
+                                - cell [ref=e2187]:
+                                  - link [ref=e2188] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346806.px')
+                                - cell [ref=e2189]:
+                                  - link [ref=e2190] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346806.px')
+                                - cell "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Dec)" [ref=e2191]:
+                                  - link "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Dec)" [ref=e2192] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346806.px')
+                          - table [ref=e2193]:
+                            - rowgroup [ref=e2194]:
+                              - row "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Jun)" [ref=e2195]:
+                                - cell [ref=e2196]
+                                - cell [ref=e2198]
+                                - cell [ref=e2200]:
+                                  - link [ref=e2201] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346804.px')
+                                - cell [ref=e2202]:
+                                  - link [ref=e2203] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346804.px')
+                                - cell "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Jun)" [ref=e2204]:
+                                  - link "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Jun)" [ref=e2205] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346804.px')
+                          - table [ref=e2206]:
+                            - rowgroup [ref=e2207]:
+                              - row "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Mar)" [ref=e2208]:
+                                - cell [ref=e2209]
+                                - cell [ref=e2211]
+                                - cell [ref=e2213]:
+                                  - link [ref=e2214] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346803.px')
+                                - cell [ref=e2215]:
+                                  - link [ref=e2216] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346803.px')
+                                - cell "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Mar)" [ref=e2217]:
+                                  - link "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Mar)" [ref=e2218] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346803.px')
+                          - table [ref=e2219]:
+                            - rowgroup [ref=e2220]:
+                              - row "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Sep)" [ref=e2221]:
+                                - cell [ref=e2222]
+                                - cell [ref=e2224]
+                                - cell [ref=e2226]:
+                                  - link [ref=e2227] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346805.px')
+                                - cell [ref=e2228]:
+                                  - link [ref=e2229] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346805.px')
+                                - cell "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Sep)" [ref=e2230]:
+                                  - link "NZ-resident travellers - average number overseas each day by travel purpose (Annual-Sep)" [ref=e2231] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346805.px')
+                          - table [ref=e2232]:
+                            - rowgroup [ref=e2233]:
+                              - row "NZ-resident travellers - average number overseas each day by travel purpose (Monthly)" [ref=e2234]:
+                                - cell [ref=e2235]
+                                - cell [ref=e2237]
+                                - cell [ref=e2239]:
+                                  - link [ref=e2240] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346801.px')
+                                - cell [ref=e2241]:
+                                  - link [ref=e2242] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346801.px')
+                                - cell "NZ-resident travellers - average number overseas each day by travel purpose (Monthly)" [ref=e2243]:
+                                  - link "NZ-resident travellers - average number overseas each day by travel purpose (Monthly)" [ref=e2244] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346801.px')
+                          - table [ref=e2245]:
+                            - rowgroup [ref=e2246]:
+                              - row "NZ-resident travellers - average number overseas each day by travel purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2247]:
+                                - cell [ref=e2248]
+                                - cell [ref=e2250]
+                                - cell [ref=e2252]:
+                                  - link [ref=e2253] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346802.px')
+                                - cell [ref=e2254]:
+                                  - link [ref=e2255] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346802.px')
+                                - cell "NZ-resident travellers - average number overseas each day by travel purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2256]:
+                                  - link "NZ-resident travellers - average number overseas each day by travel purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2257] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346802.px')
+                          - table [ref=e2258]:
+                            - rowgroup [ref=e2259]:
+                              - row "Permanent & long-term arrivals by age, sex and visa type (Annual-Dec)" [ref=e2260]:
+                                - cell [ref=e2261]
+                                - cell [ref=e2263]
+                                - cell [ref=e2265]:
+                                  - link [ref=e2266] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339604.px')
+                                - cell [ref=e2267]:
+                                  - link [ref=e2268] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339604.px')
+                                - cell "Permanent & long-term arrivals by age, sex and visa type (Annual-Dec)" [ref=e2269]:
+                                  - link "Permanent & long-term arrivals by age, sex and visa type (Annual-Dec)" [ref=e2270] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339604.px')
+                          - table [ref=e2271]:
+                            - rowgroup [ref=e2272]:
+                              - row "Permanent & long-term arrivals by age, sex and visa type (Annual-Jun)" [ref=e2273]:
+                                - cell [ref=e2274]
+                                - cell [ref=e2276]
+                                - cell [ref=e2278]:
+                                  - link [ref=e2279] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339602.px')
+                                - cell [ref=e2280]:
+                                  - link [ref=e2281] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339602.px')
+                                - cell "Permanent & long-term arrivals by age, sex and visa type (Annual-Jun)" [ref=e2282]:
+                                  - link "Permanent & long-term arrivals by age, sex and visa type (Annual-Jun)" [ref=e2283] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339602.px')
+                          - table [ref=e2284]:
+                            - rowgroup [ref=e2285]:
+                              - row "Permanent & long-term arrivals by age, sex and visa type (Annual-Mar)" [ref=e2286]:
+                                - cell [ref=e2287]
+                                - cell [ref=e2289]
+                                - cell [ref=e2291]:
+                                  - link [ref=e2292] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339601.px')
+                                - cell [ref=e2293]:
+                                  - link [ref=e2294] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339601.px')
+                                - cell "Permanent & long-term arrivals by age, sex and visa type (Annual-Mar)" [ref=e2295]:
+                                  - link "Permanent & long-term arrivals by age, sex and visa type (Annual-Mar)" [ref=e2296] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339601.px')
+                          - table [ref=e2297]:
+                            - rowgroup [ref=e2298]:
+                              - row "Permanent & long-term arrivals by age, sex and visa type (Annual-Sep)" [ref=e2299]:
+                                - cell [ref=e2300]
+                                - cell [ref=e2302]
+                                - cell [ref=e2304]:
+                                  - link [ref=e2305] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339603.px')
+                                - cell [ref=e2306]:
+                                  - link [ref=e2307] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339603.px')
+                                - cell "Permanent & long-term arrivals by age, sex and visa type (Annual-Sep)" [ref=e2308]:
+                                  - link "Permanent & long-term arrivals by age, sex and visa type (Annual-Sep)" [ref=e2309] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339603.px')
+                          - table [ref=e2310]:
+                            - rowgroup [ref=e2311]:
+                              - row "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Dec)" [ref=e2312]:
+                                - cell [ref=e2313]
+                                - cell [ref=e2315]
+                                - cell [ref=e2317]:
+                                  - link [ref=e2318] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524706.px')
+                                - cell [ref=e2319]:
+                                  - link [ref=e2320] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524706.px')
+                                - cell "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Dec)" [ref=e2321]:
+                                  - link "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Dec)" [ref=e2322] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524706.px')
+                          - table [ref=e2323]:
+                            - rowgroup [ref=e2324]:
+                              - row "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Jun)" [ref=e2325]:
+                                - cell [ref=e2326]
+                                - cell [ref=e2328]
+                                - cell [ref=e2330]:
+                                  - link [ref=e2331] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524704.px')
+                                - cell [ref=e2332]:
+                                  - link [ref=e2333] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524704.px')
+                                - cell "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Jun)" [ref=e2334]:
+                                  - link "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Jun)" [ref=e2335] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524704.px')
+                          - table [ref=e2336]:
+                            - rowgroup [ref=e2337]:
+                              - row "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Mar)" [ref=e2338]:
+                                - cell [ref=e2339]
+                                - cell [ref=e2341]
+                                - cell [ref=e2343]:
+                                  - link [ref=e2344] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524703.px')
+                                - cell [ref=e2345]:
+                                  - link [ref=e2346] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524703.px')
+                                - cell "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Mar)" [ref=e2347]:
+                                  - link "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Mar)" [ref=e2348] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524703.px')
+                          - table [ref=e2349]:
+                            - rowgroup [ref=e2350]:
+                              - row "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Sep)" [ref=e2351]:
+                                - cell [ref=e2352]
+                                - cell [ref=e2354]
+                                - cell [ref=e2356]:
+                                  - link [ref=e2357] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524705.px')
+                                - cell [ref=e2358]:
+                                  - link [ref=e2359] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524705.px')
+                                - cell "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Sep)" [ref=e2360]:
+                                  - link "Permanent & long-term arrivals by country of citizenship and visa type (Annual-Sep)" [ref=e2361] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524705.px')
+                          - table [ref=e2362]:
+                            - rowgroup [ref=e2363]:
+                              - row "Permanent & long-term arrivals by country of citizenship and visa type (Monthly)" [ref=e2364]:
+                                - cell [ref=e2365]
+                                - cell [ref=e2367]
+                                - cell [ref=e2369]:
+                                  - link [ref=e2370] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524701.px')
+                                - cell [ref=e2371]:
+                                  - link [ref=e2372] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524701.px')
+                                - cell "Permanent & long-term arrivals by country of citizenship and visa type (Monthly)" [ref=e2373]:
+                                  - link "Permanent & long-term arrivals by country of citizenship and visa type (Monthly)" [ref=e2374] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524701.px')
+                          - table [ref=e2375]:
+                            - rowgroup [ref=e2376]:
+                              - row "Permanent & long-term arrivals by country of citizenship and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2377]:
+                                - cell [ref=e2378]
+                                - cell [ref=e2380]
+                                - cell [ref=e2382]:
+                                  - link [ref=e2383] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524702.px')
+                                - cell [ref=e2384]:
+                                  - link [ref=e2385] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524702.px')
+                                - cell "Permanent & long-term arrivals by country of citizenship and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2386]:
+                                  - link "Permanent & long-term arrivals by country of citizenship and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2387] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524702.px')
+                          - table [ref=e2388]:
+                            - rowgroup [ref=e2389]:
+                              - row "Permanent & long-term arrivals by country of residence and visa type (Annual-Dec)" [ref=e2390]:
+                                - cell [ref=e2391]
+                                - cell [ref=e2393]
+                                - cell [ref=e2395]:
+                                  - link [ref=e2396] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339906.px')
+                                - cell [ref=e2397]:
+                                  - link [ref=e2398] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339906.px')
+                                - cell "Permanent & long-term arrivals by country of residence and visa type (Annual-Dec)" [ref=e2399]:
+                                  - link "Permanent & long-term arrivals by country of residence and visa type (Annual-Dec)" [ref=e2400] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339906.px')
+                          - table [ref=e2401]:
+                            - rowgroup [ref=e2402]:
+                              - row "Permanent & long-term arrivals by country of residence and visa type (Annual-Jun)" [ref=e2403]:
+                                - cell [ref=e2404]
+                                - cell [ref=e2406]
+                                - cell [ref=e2408]:
+                                  - link [ref=e2409] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339904.px')
+                                - cell [ref=e2410]:
+                                  - link [ref=e2411] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339904.px')
+                                - cell "Permanent & long-term arrivals by country of residence and visa type (Annual-Jun)" [ref=e2412]:
+                                  - link "Permanent & long-term arrivals by country of residence and visa type (Annual-Jun)" [ref=e2413] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339904.px')
+                          - table [ref=e2414]:
+                            - rowgroup [ref=e2415]:
+                              - row "Permanent & long-term arrivals by country of residence and visa type (Annual-Mar)" [ref=e2416]:
+                                - cell [ref=e2417]
+                                - cell [ref=e2419]
+                                - cell [ref=e2421]:
+                                  - link [ref=e2422] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339903.px')
+                                - cell [ref=e2423]:
+                                  - link [ref=e2424] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339903.px')
+                                - cell "Permanent & long-term arrivals by country of residence and visa type (Annual-Mar)" [ref=e2425]:
+                                  - link "Permanent & long-term arrivals by country of residence and visa type (Annual-Mar)" [ref=e2426] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339903.px')
+                          - table [ref=e2427]:
+                            - rowgroup [ref=e2428]:
+                              - row "Permanent & long-term arrivals by country of residence and visa type (Annual-Sep)" [ref=e2429]:
+                                - cell [ref=e2430]
+                                - cell [ref=e2432]
+                                - cell [ref=e2434]:
+                                  - link [ref=e2435] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339905.px')
+                                - cell [ref=e2436]:
+                                  - link [ref=e2437] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339905.px')
+                                - cell "Permanent & long-term arrivals by country of residence and visa type (Annual-Sep)" [ref=e2438]:
+                                  - link "Permanent & long-term arrivals by country of residence and visa type (Annual-Sep)" [ref=e2439] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339905.px')
+                          - table [ref=e2440]:
+                            - rowgroup [ref=e2441]:
+                              - row "Permanent & long-term arrivals by country of residence and visa type (Monthly)" [ref=e2442]:
+                                - cell [ref=e2443]
+                                - cell [ref=e2445]
+                                - cell [ref=e2447]:
+                                  - link [ref=e2448] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339901.px')
+                                - cell [ref=e2449]:
+                                  - link [ref=e2450] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339901.px')
+                                - cell "Permanent & long-term arrivals by country of residence and visa type (Monthly)" [ref=e2451]:
+                                  - link "Permanent & long-term arrivals by country of residence and visa type (Monthly)" [ref=e2452] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339901.px')
+                          - table [ref=e2453]:
+                            - rowgroup [ref=e2454]:
+                              - row "Permanent & long-term arrivals by country of residence and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2455]:
+                                - cell [ref=e2456]
+                                - cell [ref=e2458]
+                                - cell [ref=e2460]:
+                                  - link [ref=e2461] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339902.px')
+                                - cell [ref=e2462]:
+                                  - link [ref=e2463] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339902.px')
+                                - cell "Permanent & long-term arrivals by country of residence and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2464]:
+                                  - link "Permanent & long-term arrivals by country of residence and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2465] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339902.px')
+                          - table [ref=e2466]:
+                            - rowgroup [ref=e2467]:
+                              - row "Permanent & long-term migration by age, sex and NZ area (Annual-Dec)" [ref=e2468]:
+                                - cell [ref=e2469]
+                                - cell [ref=e2471]
+                                - cell [ref=e2473]:
+                                  - link [ref=e2474] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340204.px')
+                                - cell [ref=e2475]:
+                                  - link [ref=e2476] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340204.px')
+                                - cell "Permanent & long-term migration by age, sex and NZ area (Annual-Dec)" [ref=e2477]:
+                                  - link "Permanent & long-term migration by age, sex and NZ area (Annual-Dec)" [ref=e2478] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340204.px')
+                          - table [ref=e2479]:
+                            - rowgroup [ref=e2480]:
+                              - row "Permanent & long-term migration by age, sex and NZ area (Annual-Jun)" [ref=e2481]:
+                                - cell [ref=e2482]
+                                - cell [ref=e2484]
+                                - cell [ref=e2486]:
+                                  - link [ref=e2487] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340202.px')
+                                - cell [ref=e2488]:
+                                  - link [ref=e2489] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340202.px')
+                                - cell "Permanent & long-term migration by age, sex and NZ area (Annual-Jun)" [ref=e2490]:
+                                  - link "Permanent & long-term migration by age, sex and NZ area (Annual-Jun)" [ref=e2491] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340202.px')
+                          - table [ref=e2492]:
+                            - rowgroup [ref=e2493]:
+                              - row "Permanent & long-term migration by age, sex and NZ area (Annual-Mar)" [ref=e2494]:
+                                - cell [ref=e2495]
+                                - cell [ref=e2497]
+                                - cell [ref=e2499]:
+                                  - link [ref=e2500] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340201.px')
+                                - cell [ref=e2501]:
+                                  - link [ref=e2502] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340201.px')
+                                - cell "Permanent & long-term migration by age, sex and NZ area (Annual-Mar)" [ref=e2503]:
+                                  - link "Permanent & long-term migration by age, sex and NZ area (Annual-Mar)" [ref=e2504] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340201.px')
+                          - table [ref=e2505]:
+                            - rowgroup [ref=e2506]:
+                              - row "Permanent & long-term migration by age, sex and NZ area (Annual-Sep)" [ref=e2507]:
+                                - cell [ref=e2508]
+                                - cell [ref=e2510]
+                                - cell [ref=e2512]:
+                                  - link [ref=e2513] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340203.px')
+                                - cell [ref=e2514]:
+                                  - link [ref=e2515] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340203.px')
+                                - cell "Permanent & long-term migration by age, sex and NZ area (Annual-Sep)" [ref=e2516]:
+                                  - link "Permanent & long-term migration by age, sex and NZ area (Annual-Sep)" [ref=e2517] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340203.px')
+                          - table [ref=e2518]:
+                            - rowgroup [ref=e2519]:
+                              - row "Permanent & long-term migration by country of residence, age and sex (Annual-Dec)" [ref=e2520]:
+                                - cell [ref=e2521]
+                                - cell [ref=e2523]
+                                - cell [ref=e2525]:
+                                  - link [ref=e2526] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339506.px')
+                                - cell [ref=e2527]:
+                                  - link [ref=e2528] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339506.px')
+                                - cell "Permanent & long-term migration by country of residence, age and sex (Annual-Dec)" [ref=e2529]:
+                                  - link "Permanent & long-term migration by country of residence, age and sex (Annual-Dec)" [ref=e2530] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339506.px')
+                          - table [ref=e2531]:
+                            - rowgroup [ref=e2532]:
+                              - row "Permanent & long-term migration by country of residence, age and sex (Annual-Jun)" [ref=e2533]:
+                                - cell [ref=e2534]
+                                - cell [ref=e2536]
+                                - cell [ref=e2538]:
+                                  - link [ref=e2539] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339504.px')
+                                - cell [ref=e2540]:
+                                  - link [ref=e2541] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339504.px')
+                                - cell "Permanent & long-term migration by country of residence, age and sex (Annual-Jun)" [ref=e2542]:
+                                  - link "Permanent & long-term migration by country of residence, age and sex (Annual-Jun)" [ref=e2543] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339504.px')
+                          - table [ref=e2544]:
+                            - rowgroup [ref=e2545]:
+                              - row "Permanent & long-term migration by country of residence, age and sex (Annual-Mar)" [ref=e2546]:
+                                - cell [ref=e2547]
+                                - cell [ref=e2549]
+                                - cell [ref=e2551]:
+                                  - link [ref=e2552] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339503.px')
+                                - cell [ref=e2553]:
+                                  - link [ref=e2554] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339503.px')
+                                - cell "Permanent & long-term migration by country of residence, age and sex (Annual-Mar)" [ref=e2555]:
+                                  - link "Permanent & long-term migration by country of residence, age and sex (Annual-Mar)" [ref=e2556] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339503.px')
+                          - table [ref=e2557]:
+                            - rowgroup [ref=e2558]:
+                              - row "Permanent & long-term migration by country of residence, age and sex (Annual-Sep)" [ref=e2559]:
+                                - cell [ref=e2560]
+                                - cell [ref=e2562]
+                                - cell [ref=e2564]:
+                                  - link [ref=e2565] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339505.px')
+                                - cell [ref=e2566]:
+                                  - link [ref=e2567] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339505.px')
+                                - cell "Permanent & long-term migration by country of residence, age and sex (Annual-Sep)" [ref=e2568]:
+                                  - link "Permanent & long-term migration by country of residence, age and sex (Annual-Sep)" [ref=e2569] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339505.px')
+                          - table [ref=e2570]:
+                            - rowgroup [ref=e2571]:
+                              - row "Permanent & long-term migration by country of residence, age and sex (Monthly)" [ref=e2572]:
+                                - cell [ref=e2573]
+                                - cell [ref=e2575]
+                                - cell [ref=e2577]:
+                                  - link [ref=e2578] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339501.px')
+                                - cell [ref=e2579]:
+                                  - link [ref=e2580] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339501.px')
+                                - cell "Permanent & long-term migration by country of residence, age and sex (Monthly)" [ref=e2581]:
+                                  - link "Permanent & long-term migration by country of residence, age and sex (Monthly)" [ref=e2582] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339501.px')
+                          - table [ref=e2583]:
+                            - rowgroup [ref=e2584]:
+                              - row "Permanent & long-term migration by country of residence, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2585]:
+                                - cell [ref=e2586]
+                                - cell [ref=e2588]
+                                - cell [ref=e2590]:
+                                  - link [ref=e2591] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339502.px')
+                                - cell [ref=e2592]:
+                                  - link [ref=e2593] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339502.px')
+                                - cell "Permanent & long-term migration by country of residence, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2594]:
+                                  - link "Permanent & long-term migration by country of residence, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2595] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM339502.px')
+                          - table [ref=e2596]:
+                            - rowgroup [ref=e2597]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Dec)" [ref=e2598]:
+                                - cell [ref=e2599]
+                                - cell [ref=e2601]
+                                - cell [ref=e2603]:
+                                  - link [ref=e2604] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340006.px')
+                                - cell [ref=e2605]:
+                                  - link [ref=e2606] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340006.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Dec)" [ref=e2607]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Dec)" [ref=e2608] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340006.px')
+                          - table [ref=e2609]:
+                            - rowgroup [ref=e2610]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Jun)" [ref=e2611]:
+                                - cell [ref=e2612]
+                                - cell [ref=e2614]
+                                - cell [ref=e2616]:
+                                  - link [ref=e2617] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340004.px')
+                                - cell [ref=e2618]:
+                                  - link [ref=e2619] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340004.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Jun)" [ref=e2620]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Jun)" [ref=e2621] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340004.px')
+                          - table [ref=e2622]:
+                            - rowgroup [ref=e2623]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Mar)" [ref=e2624]:
+                                - cell [ref=e2625]
+                                - cell [ref=e2627]
+                                - cell [ref=e2629]:
+                                  - link [ref=e2630] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340003.px')
+                                - cell [ref=e2631]:
+                                  - link [ref=e2632] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340003.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Mar)" [ref=e2633]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Mar)" [ref=e2634] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340003.px')
+                          - table [ref=e2635]:
+                            - rowgroup [ref=e2636]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Sep)" [ref=e2637]:
+                                - cell [ref=e2638]
+                                - cell [ref=e2640]
+                                - cell [ref=e2642]:
+                                  - link [ref=e2643] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340005.px')
+                                - cell [ref=e2644]:
+                                  - link [ref=e2645] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340005.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Sep)" [ref=e2646]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Annual-Sep)" [ref=e2647] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340005.px')
+                          - table [ref=e2648]:
+                            - rowgroup [ref=e2649]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Monthly)" [ref=e2650]:
+                                - cell [ref=e2651]
+                                - cell [ref=e2653]
+                                - cell [ref=e2655]:
+                                  - link [ref=e2656] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340001.px')
+                                - cell [ref=e2657]:
+                                  - link [ref=e2658] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340001.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Monthly)" [ref=e2659]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Monthly)" [ref=e2660] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340001.px')
+                          - table [ref=e2661]:
+                            - rowgroup [ref=e2662]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2663]:
+                                - cell [ref=e2664]
+                                - cell [ref=e2666]
+                                - cell [ref=e2668]:
+                                  - link [ref=e2669] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340002.px')
+                                - cell [ref=e2670]:
+                                  - link [ref=e2671] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340002.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2672]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and birthplace (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2673] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340002.px')
+                          - table [ref=e2674]:
+                            - rowgroup [ref=e2675]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Dec)" [ref=e2676]:
+                                - cell [ref=e2677]
+                                - cell [ref=e2679]
+                                - cell [ref=e2681]:
+                                  - link [ref=e2682] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340306.px')
+                                - cell [ref=e2683]:
+                                  - link [ref=e2684] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340306.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Dec)" [ref=e2685]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Dec)" [ref=e2686] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340306.px')
+                          - table [ref=e2687]:
+                            - rowgroup [ref=e2688]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Jun)" [ref=e2689]:
+                                - cell [ref=e2690]
+                                - cell [ref=e2692]
+                                - cell [ref=e2694]:
+                                  - link [ref=e2695] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340304.px')
+                                - cell [ref=e2696]:
+                                  - link [ref=e2697] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340304.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Jun)" [ref=e2698]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Jun)" [ref=e2699] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340304.px')
+                          - table [ref=e2700]:
+                            - rowgroup [ref=e2701]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Mar)" [ref=e2702]:
+                                - cell [ref=e2703]
+                                - cell [ref=e2705]
+                                - cell [ref=e2707]:
+                                  - link [ref=e2708] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340303.px')
+                                - cell [ref=e2709]:
+                                  - link [ref=e2710] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340303.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Mar)" [ref=e2711]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Mar)" [ref=e2712] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340303.px')
+                          - table [ref=e2713]:
+                            - rowgroup [ref=e2714]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Sep)" [ref=e2715]:
+                                - cell [ref=e2716]
+                                - cell [ref=e2718]
+                                - cell [ref=e2720]:
+                                  - link [ref=e2721] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340305.px')
+                                - cell [ref=e2722]:
+                                  - link [ref=e2723] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340305.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Sep)" [ref=e2724]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Annual-Sep)" [ref=e2725] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340305.px')
+                          - table [ref=e2726]:
+                            - rowgroup [ref=e2727]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Monthly)" [ref=e2728]:
+                                - cell [ref=e2729]
+                                - cell [ref=e2731]
+                                - cell [ref=e2733]:
+                                  - link [ref=e2734] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340301.px')
+                                - cell [ref=e2735]:
+                                  - link [ref=e2736] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340301.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Monthly)" [ref=e2737]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Monthly)" [ref=e2738] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340301.px')
+                          - table [ref=e2739]:
+                            - rowgroup [ref=e2740]:
+                              - row "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2741]:
+                                - cell [ref=e2742]
+                                - cell [ref=e2744]
+                                - cell [ref=e2746]:
+                                  - link [ref=e2747] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340302.px')
+                                - cell [ref=e2748]:
+                                  - link [ref=e2749] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340302.px')
+                                - cell "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2750]:
+                                  - link "Permanent & long-term migration by ctry of residence, citizenship and NZ area (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2751] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM340302.px')
+                          - table [ref=e2752]:
+                            - rowgroup [ref=e2753]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Dec)" [ref=e2754]:
+                                - cell [ref=e2755]
+                                - cell [ref=e2757]
+                                - cell [ref=e2759]:
+                                  - link [ref=e2760] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359306.px')
+                                - cell [ref=e2761]:
+                                  - link [ref=e2762] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359306.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Dec)" [ref=e2763]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Dec)" [ref=e2764] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359306.px')
+                          - table [ref=e2765]:
+                            - rowgroup [ref=e2766]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Jun)" [ref=e2767]:
+                                - cell [ref=e2768]
+                                - cell [ref=e2770]
+                                - cell [ref=e2772]:
+                                  - link [ref=e2773] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359304.px')
+                                - cell [ref=e2774]:
+                                  - link [ref=e2775] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359304.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Jun)" [ref=e2776]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Jun)" [ref=e2777] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359304.px')
+                          - table [ref=e2778]:
+                            - rowgroup [ref=e2779]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Mar)" [ref=e2780]:
+                                - cell [ref=e2781]
+                                - cell [ref=e2783]
+                                - cell [ref=e2785]:
+                                  - link [ref=e2786] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359303.px')
+                                - cell [ref=e2787]:
+                                  - link [ref=e2788] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359303.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Mar)" [ref=e2789]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Mar)" [ref=e2790] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359303.px')
+                          - table [ref=e2791]:
+                            - rowgroup [ref=e2792]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Sep)" [ref=e2793]:
+                                - cell [ref=e2794]
+                                - cell [ref=e2796]
+                                - cell [ref=e2798]:
+                                  - link [ref=e2799] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359305.px')
+                                - cell [ref=e2800]:
+                                  - link [ref=e2801] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359305.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Sep)" [ref=e2802]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Annual-Sep)" [ref=e2803] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359305.px')
+                          - table [ref=e2804]:
+                            - rowgroup [ref=e2805]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Monthly)" [ref=e2806]:
+                                - cell [ref=e2807]
+                                - cell [ref=e2809]
+                                - cell [ref=e2811]:
+                                  - link [ref=e2812] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359301.px')
+                                - cell [ref=e2813]:
+                                  - link [ref=e2814] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359301.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Monthly)" [ref=e2815]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Monthly)" [ref=e2816] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359301.px')
+                          - table [ref=e2817]:
+                            - rowgroup [ref=e2818]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2819]:
+                                - cell [ref=e2820]
+                                - cell [ref=e2822]
+                                - cell [ref=e2824]:
+                                  - link [ref=e2825] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359302.px')
+                                - cell [ref=e2826]:
+                                  - link [ref=e2827] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359302.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2828]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO major) (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2829] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359302.px')
+                          - table [ref=e2830]:
+                            - rowgroup [ref=e2831]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Dec)" [ref=e2832]:
+                                - cell [ref=e2833]
+                                - cell [ref=e2835]
+                                - cell [ref=e2837]:
+                                  - link [ref=e2838] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359406.px')
+                                - cell [ref=e2839]:
+                                  - link [ref=e2840] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359406.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Dec)" [ref=e2841]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Dec)" [ref=e2842] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359406.px')
+                          - table [ref=e2843]:
+                            - rowgroup [ref=e2844]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Jun)" [ref=e2845]:
+                                - cell [ref=e2846]
+                                - cell [ref=e2848]
+                                - cell [ref=e2850]:
+                                  - link [ref=e2851] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359404.px')
+                                - cell [ref=e2852]:
+                                  - link [ref=e2853] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359404.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Jun)" [ref=e2854]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Jun)" [ref=e2855] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359404.px')
+                          - table [ref=e2856]:
+                            - rowgroup [ref=e2857]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Mar)" [ref=e2858]:
+                                - cell [ref=e2859]
+                                - cell [ref=e2861]
+                                - cell [ref=e2863]:
+                                  - link [ref=e2864] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359403.px')
+                                - cell [ref=e2865]:
+                                  - link [ref=e2866] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359403.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Mar)" [ref=e2867]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Mar)" [ref=e2868] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359403.px')
+                          - table [ref=e2869]:
+                            - rowgroup [ref=e2870]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Sep)" [ref=e2871]:
+                                - cell [ref=e2872]
+                                - cell [ref=e2874]
+                                - cell [ref=e2876]:
+                                  - link [ref=e2877] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359405.px')
+                                - cell [ref=e2878]:
+                                  - link [ref=e2879] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359405.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Sep)" [ref=e2880]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Annual-Sep)" [ref=e2881] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359405.px')
+                          - table [ref=e2882]:
+                            - rowgroup [ref=e2883]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Monthly)" [ref=e2884]:
+                                - cell [ref=e2885]
+                                - cell [ref=e2887]
+                                - cell [ref=e2889]:
+                                  - link [ref=e2890] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359401.px')
+                                - cell [ref=e2891]:
+                                  - link [ref=e2892] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359401.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Monthly)" [ref=e2893]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Monthly)" [ref=e2894] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359401.px')
+                          - table [ref=e2895]:
+                            - rowgroup [ref=e2896]:
+                              - row "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2897]:
+                                - cell [ref=e2898]
+                                - cell [ref=e2900]
+                                - cell [ref=e2902]:
+                                  - link [ref=e2903] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359402.px')
+                                - cell [ref=e2904]:
+                                  - link [ref=e2905] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359402.px')
+                                - cell "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2906]:
+                                  - link "Permanent & long-term migration by ctry of residence, occupation (ANZSCO minor) (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2907] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM359402.px')
+                          - table [ref=e2908]:
+                            - rowgroup [ref=e2909]:
+                              - row "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Dec)" [ref=e2910]:
+                                - cell [ref=e2911]
+                                - cell [ref=e2913]
+                                - cell [ref=e2915]:
+                                  - link [ref=e2916] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331906.px')
+                                - cell [ref=e2917]:
+                                  - link [ref=e2918] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331906.px')
+                                - cell "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Dec)" [ref=e2919]:
+                                  - link "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Dec)" [ref=e2920] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331906.px')
+                          - table [ref=e2921]:
+                            - rowgroup [ref=e2922]:
+                              - row "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Jun)" [ref=e2923]:
+                                - cell [ref=e2924]
+                                - cell [ref=e2926]
+                                - cell [ref=e2928]:
+                                  - link [ref=e2929] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331904.px')
+                                - cell [ref=e2930]:
+                                  - link [ref=e2931] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331904.px')
+                                - cell "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Jun)" [ref=e2932]:
+                                  - link "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Jun)" [ref=e2933] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331904.px')
+                          - table [ref=e2934]:
+                            - rowgroup [ref=e2935]:
+                              - row "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Mar)" [ref=e2936]:
+                                - cell [ref=e2937]
+                                - cell [ref=e2939]
+                                - cell [ref=e2941]:
+                                  - link [ref=e2942] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331903.px')
+                                - cell [ref=e2943]:
+                                  - link [ref=e2944] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331903.px')
+                                - cell "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Mar)" [ref=e2945]:
+                                  - link "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Mar)" [ref=e2946] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331903.px')
+                          - table [ref=e2947]:
+                            - rowgroup [ref=e2948]:
+                              - row "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Sep)" [ref=e2949]:
+                                - cell [ref=e2950]
+                                - cell [ref=e2952]
+                                - cell [ref=e2954]:
+                                  - link [ref=e2955] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331905.px')
+                                - cell [ref=e2956]:
+                                  - link [ref=e2957] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331905.px')
+                                - cell "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Sep)" [ref=e2958]:
+                                  - link "Permanent & long-term migration by EVERY country of residence and citizenship (Annual-Sep)" [ref=e2959] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331905.px')
+                          - table [ref=e2960]:
+                            - rowgroup [ref=e2961]:
+                              - row "Permanent & long-term migration by EVERY country of residence and citizenship (Monthly)" [ref=e2962]:
+                                - cell [ref=e2963]
+                                - cell [ref=e2965]
+                                - cell [ref=e2967]:
+                                  - link [ref=e2968] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331901.px')
+                                - cell [ref=e2969]:
+                                  - link [ref=e2970] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331901.px')
+                                - cell "Permanent & long-term migration by EVERY country of residence and citizenship (Monthly)" [ref=e2971]:
+                                  - link "Permanent & long-term migration by EVERY country of residence and citizenship (Monthly)" [ref=e2972] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331901.px')
+                          - table [ref=e2973]:
+                            - rowgroup [ref=e2974]:
+                              - row "Permanent & long-term migration by EVERY country of residence and citizenship (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2975]:
+                                - cell [ref=e2976]
+                                - cell [ref=e2978]
+                                - cell [ref=e2980]:
+                                  - link [ref=e2981] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331902.px')
+                                - cell [ref=e2982]:
+                                  - link [ref=e2983] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331902.px')
+                                - cell "Permanent & long-term migration by EVERY country of residence and citizenship (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2984]:
+                                  - link "Permanent & long-term migration by EVERY country of residence and citizenship (Qrtly-Mar/Jun/Sep/Dec)" [ref=e2985] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM331902.px')
+                          - table [ref=e2986]:
+                            - rowgroup [ref=e2987]:
+                              - row "Permanent & long-term migration key series (Annual-Dec)" [ref=e2988]:
+                                - cell [ref=e2989]
+                                - cell [ref=e2991]
+                                - cell [ref=e2993]:
+                                  - link [ref=e2994] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408806.px')
+                                - cell [ref=e2995]:
+                                  - link [ref=e2996] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408806.px')
+                                - cell "Permanent & long-term migration key series (Annual-Dec)" [ref=e2997]:
+                                  - link "Permanent & long-term migration key series (Annual-Dec)" [ref=e2998] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408806.px')
+                          - table [ref=e2999]:
+                            - rowgroup [ref=e3000]:
+                              - row "Permanent & long-term migration key series (Annual-Jun)" [ref=e3001]:
+                                - cell [ref=e3002]
+                                - cell [ref=e3004]
+                                - cell [ref=e3006]:
+                                  - link [ref=e3007] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408804.px')
+                                - cell [ref=e3008]:
+                                  - link [ref=e3009] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408804.px')
+                                - cell "Permanent & long-term migration key series (Annual-Jun)" [ref=e3010]:
+                                  - link "Permanent & long-term migration key series (Annual-Jun)" [ref=e3011] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408804.px')
+                          - table [ref=e3012]:
+                            - rowgroup [ref=e3013]:
+                              - row "Permanent & long-term migration key series (Annual-Mar)" [ref=e3014]:
+                                - cell [ref=e3015]
+                                - cell [ref=e3017]
+                                - cell [ref=e3019]:
+                                  - link [ref=e3020] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408803.px')
+                                - cell [ref=e3021]:
+                                  - link [ref=e3022] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408803.px')
+                                - cell "Permanent & long-term migration key series (Annual-Mar)" [ref=e3023]:
+                                  - link "Permanent & long-term migration key series (Annual-Mar)" [ref=e3024] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408803.px')
+                          - table [ref=e3025]:
+                            - rowgroup [ref=e3026]:
+                              - row "Permanent & long-term migration key series (Annual-Sep)" [ref=e3027]:
+                                - cell [ref=e3028]
+                                - cell [ref=e3030]
+                                - cell [ref=e3032]:
+                                  - link [ref=e3033] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408805.px')
+                                - cell [ref=e3034]:
+                                  - link [ref=e3035] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408805.px')
+                                - cell "Permanent & long-term migration key series (Annual-Sep)" [ref=e3036]:
+                                  - link "Permanent & long-term migration key series (Annual-Sep)" [ref=e3037] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408805.px')
+                          - table [ref=e3038]:
+                            - rowgroup [ref=e3039]:
+                              - row "Permanent & long-term migration key series (Monthly)" [ref=e3040]:
+                                - cell [ref=e3041]
+                                - cell [ref=e3043]
+                                - cell [ref=e3045]:
+                                  - link [ref=e3046] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408801.px')
+                                - cell [ref=e3047]:
+                                  - link [ref=e3048] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408801.px')
+                                - cell "Permanent & long-term migration key series (Monthly)" [ref=e3049]:
+                                  - link "Permanent & long-term migration key series (Monthly)" [ref=e3050] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408801.px')
+                          - table [ref=e3051]:
+                            - rowgroup [ref=e3052]:
+                              - row "Permanent & long-term migration key series (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3053]:
+                                - cell [ref=e3054]
+                                - cell [ref=e3056]
+                                - cell [ref=e3058]:
+                                  - link [ref=e3059] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408802.px')
+                                - cell [ref=e3060]:
+                                  - link [ref=e3061] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408802.px')
+                                - cell "Permanent & long-term migration key series (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3062]:
+                                  - link "Permanent & long-term migration key series (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3063] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM408802.px')
+                          - table [ref=e3064]:
+                            - rowgroup [ref=e3065]:
+                              - row "Total passenger movements (Annual-Dec)" [ref=e3066]:
+                                - cell [ref=e3067]
+                                - cell [ref=e3069]
+                                - cell [ref=e3071]:
+                                  - link [ref=e3072] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332206.px')
+                                - cell [ref=e3073]:
+                                  - link [ref=e3074] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332206.px')
+                                - cell "Total passenger movements (Annual-Dec)" [ref=e3075]:
+                                  - link "Total passenger movements (Annual-Dec)" [ref=e3076] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332206.px')
+                          - table [ref=e3077]:
+                            - rowgroup [ref=e3078]:
+                              - row "Total passenger movements (Annual-Jun)" [ref=e3079]:
+                                - cell [ref=e3080]
+                                - cell [ref=e3082]
+                                - cell [ref=e3084]:
+                                  - link [ref=e3085] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332204.px')
+                                - cell [ref=e3086]:
+                                  - link [ref=e3087] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332204.px')
+                                - cell "Total passenger movements (Annual-Jun)" [ref=e3088]:
+                                  - link "Total passenger movements (Annual-Jun)" [ref=e3089] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332204.px')
+                          - table [ref=e3090]:
+                            - rowgroup [ref=e3091]:
+                              - row "Total passenger movements (Annual-Mar)" [ref=e3092]:
+                                - cell [ref=e3093]
+                                - cell [ref=e3095]
+                                - cell [ref=e3097]:
+                                  - link [ref=e3098] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332203.px')
+                                - cell [ref=e3099]:
+                                  - link [ref=e3100] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332203.px')
+                                - cell "Total passenger movements (Annual-Mar)" [ref=e3101]:
+                                  - link "Total passenger movements (Annual-Mar)" [ref=e3102] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332203.px')
+                          - table [ref=e3103]:
+                            - rowgroup [ref=e3104]:
+                              - row "Total passenger movements (Annual-Sep)" [ref=e3105]:
+                                - cell [ref=e3106]
+                                - cell [ref=e3108]
+                                - cell [ref=e3110]:
+                                  - link [ref=e3111] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332205.px')
+                                - cell [ref=e3112]:
+                                  - link [ref=e3113] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332205.px')
+                                - cell "Total passenger movements (Annual-Sep)" [ref=e3114]:
+                                  - link "Total passenger movements (Annual-Sep)" [ref=e3115] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332205.px')
+                          - table [ref=e3116]:
+                            - rowgroup [ref=e3117]:
+                              - row "Total passenger movements (Monthly)" [ref=e3118]:
+                                - cell [ref=e3119]
+                                - cell [ref=e3121]
+                                - cell [ref=e3123]:
+                                  - link [ref=e3124] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332201.px')
+                                - cell [ref=e3125]:
+                                  - link [ref=e3126] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332201.px')
+                                - cell "Total passenger movements (Monthly)" [ref=e3127]:
+                                  - link "Total passenger movements (Monthly)" [ref=e3128] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332201.px')
+                          - table [ref=e3129]:
+                            - rowgroup [ref=e3130]:
+                              - row "Total passenger movements (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3131]:
+                                - cell [ref=e3132]
+                                - cell [ref=e3134]
+                                - cell [ref=e3136]:
+                                  - link [ref=e3137] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332202.px')
+                                - cell [ref=e3138]:
+                                  - link [ref=e3139] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332202.px')
+                                - cell "Total passenger movements (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3140]:
+                                  - link "Total passenger movements (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3141] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM332202.px')
+                          - table [ref=e3142]:
+                            - rowgroup [ref=e3143]:
+                              - row "Total passenger movements by closest overseas port and selected NZ ports (Annual-Dec)" [ref=e3144]:
+                                - cell [ref=e3145]
+                                - cell [ref=e3147]
+                                - cell [ref=e3149]:
+                                  - link [ref=e3150] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431706.px')
+                                - cell [ref=e3151]:
+                                  - link [ref=e3152] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431706.px')
+                                - cell "Total passenger movements by closest overseas port and selected NZ ports (Annual-Dec)" [ref=e3153]:
+                                  - link "Total passenger movements by closest overseas port and selected NZ ports (Annual-Dec)" [ref=e3154] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431706.px')
+                          - table [ref=e3155]:
+                            - rowgroup [ref=e3156]:
+                              - row "Total passenger movements by closest overseas port and selected NZ ports (Annual-Jun)" [ref=e3157]:
+                                - cell [ref=e3158]
+                                - cell [ref=e3160]
+                                - cell [ref=e3162]:
+                                  - link [ref=e3163] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431704.px')
+                                - cell [ref=e3164]:
+                                  - link [ref=e3165] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431704.px')
+                                - cell "Total passenger movements by closest overseas port and selected NZ ports (Annual-Jun)" [ref=e3166]:
+                                  - link "Total passenger movements by closest overseas port and selected NZ ports (Annual-Jun)" [ref=e3167] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431704.px')
+                          - table [ref=e3168]:
+                            - rowgroup [ref=e3169]:
+                              - row "Total passenger movements by closest overseas port and selected NZ ports (Annual-Mar)" [ref=e3170]:
+                                - cell [ref=e3171]
+                                - cell [ref=e3173]
+                                - cell [ref=e3175]:
+                                  - link [ref=e3176] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431703.px')
+                                - cell [ref=e3177]:
+                                  - link [ref=e3178] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431703.px')
+                                - cell "Total passenger movements by closest overseas port and selected NZ ports (Annual-Mar)" [ref=e3179]:
+                                  - link "Total passenger movements by closest overseas port and selected NZ ports (Annual-Mar)" [ref=e3180] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431703.px')
+                          - table [ref=e3181]:
+                            - rowgroup [ref=e3182]:
+                              - row "Total passenger movements by closest overseas port and selected NZ ports (Annual-Sep)" [ref=e3183]:
+                                - cell [ref=e3184]
+                                - cell [ref=e3186]
+                                - cell [ref=e3188]:
+                                  - link [ref=e3189] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431705.px')
+                                - cell [ref=e3190]:
+                                  - link [ref=e3191] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431705.px')
+                                - cell "Total passenger movements by closest overseas port and selected NZ ports (Annual-Sep)" [ref=e3192]:
+                                  - link "Total passenger movements by closest overseas port and selected NZ ports (Annual-Sep)" [ref=e3193] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431705.px')
+                          - table [ref=e3194]:
+                            - rowgroup [ref=e3195]:
+                              - row "Total passenger movements by closest overseas port and selected NZ ports (Monthly)" [ref=e3196]:
+                                - cell [ref=e3197]
+                                - cell [ref=e3199]
+                                - cell [ref=e3201]:
+                                  - link [ref=e3202] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431701.px')
+                                - cell [ref=e3203]:
+                                  - link [ref=e3204] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431701.px')
+                                - cell "Total passenger movements by closest overseas port and selected NZ ports (Monthly)" [ref=e3205]:
+                                  - link "Total passenger movements by closest overseas port and selected NZ ports (Monthly)" [ref=e3206] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431701.px')
+                          - table [ref=e3207]:
+                            - rowgroup [ref=e3208]:
+                              - row "Total passenger movements by closest overseas port and selected NZ ports (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3209]:
+                                - cell [ref=e3210]
+                                - cell [ref=e3212]
+                                - cell [ref=e3214]:
+                                  - link [ref=e3215] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431702.px')
+                                - cell [ref=e3216]:
+                                  - link [ref=e3217] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431702.px')
+                                - cell "Total passenger movements by closest overseas port and selected NZ ports (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3218]:
+                                  - link "Total passenger movements by closest overseas port and selected NZ ports (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3219] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431702.px')
+                          - table [ref=e3220]:
+                            - rowgroup [ref=e3221]:
+                              - row "Total passenger movements by country of residence, age and sex (Annual-Dec)" [ref=e3222]:
+                                - cell [ref=e3223]
+                                - cell [ref=e3225]
+                                - cell [ref=e3227]:
+                                  - link [ref=e3228] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341506.px')
+                                - cell [ref=e3229]:
+                                  - link [ref=e3230] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341506.px')
+                                - cell "Total passenger movements by country of residence, age and sex (Annual-Dec)" [ref=e3231]:
+                                  - link "Total passenger movements by country of residence, age and sex (Annual-Dec)" [ref=e3232] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341506.px')
+                          - table [ref=e3233]:
+                            - rowgroup [ref=e3234]:
+                              - row "Total passenger movements by country of residence, age and sex (Annual-Jun)" [ref=e3235]:
+                                - cell [ref=e3236]
+                                - cell [ref=e3238]
+                                - cell [ref=e3240]:
+                                  - link [ref=e3241] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341504.px')
+                                - cell [ref=e3242]:
+                                  - link [ref=e3243] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341504.px')
+                                - cell "Total passenger movements by country of residence, age and sex (Annual-Jun)" [ref=e3244]:
+                                  - link "Total passenger movements by country of residence, age and sex (Annual-Jun)" [ref=e3245] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341504.px')
+                          - table [ref=e3246]:
+                            - rowgroup [ref=e3247]:
+                              - row "Total passenger movements by country of residence, age and sex (Annual-Mar)" [ref=e3248]:
+                                - cell [ref=e3249]
+                                - cell [ref=e3251]
+                                - cell [ref=e3253]:
+                                  - link [ref=e3254] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341503.px')
+                                - cell [ref=e3255]:
+                                  - link [ref=e3256] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341503.px')
+                                - cell "Total passenger movements by country of residence, age and sex (Annual-Mar)" [ref=e3257]:
+                                  - link "Total passenger movements by country of residence, age and sex (Annual-Mar)" [ref=e3258] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341503.px')
+                          - table [ref=e3259]:
+                            - rowgroup [ref=e3260]:
+                              - row "Total passenger movements by country of residence, age and sex (Annual-Sep)" [ref=e3261]:
+                                - cell [ref=e3262]
+                                - cell [ref=e3264]
+                                - cell [ref=e3266]:
+                                  - link [ref=e3267] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341505.px')
+                                - cell [ref=e3268]:
+                                  - link [ref=e3269] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341505.px')
+                                - cell "Total passenger movements by country of residence, age and sex (Annual-Sep)" [ref=e3270]:
+                                  - link "Total passenger movements by country of residence, age and sex (Annual-Sep)" [ref=e3271] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341505.px')
+                          - table [ref=e3272]:
+                            - rowgroup [ref=e3273]:
+                              - row "Total passenger movements by country of residence, age and sex (Monthly)" [ref=e3274]:
+                                - cell [ref=e3275]
+                                - cell [ref=e3277]
+                                - cell [ref=e3279]:
+                                  - link [ref=e3280] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341501.px')
+                                - cell [ref=e3281]:
+                                  - link [ref=e3282] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341501.px')
+                                - cell "Total passenger movements by country of residence, age and sex (Monthly)" [ref=e3283]:
+                                  - link "Total passenger movements by country of residence, age and sex (Monthly)" [ref=e3284] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341501.px')
+                          - table [ref=e3285]:
+                            - rowgroup [ref=e3286]:
+                              - row "Total passenger movements by country of residence, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3287]:
+                                - cell [ref=e3288]
+                                - cell [ref=e3290]
+                                - cell [ref=e3292]:
+                                  - link [ref=e3293] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341502.px')
+                                - cell [ref=e3294]:
+                                  - link [ref=e3295] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341502.px')
+                                - cell "Total passenger movements by country of residence, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3296]:
+                                  - link "Total passenger movements by country of residence, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3297] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341502.px')
+                          - table [ref=e3298]:
+                            - rowgroup [ref=e3299]:
+                              - row "Total passenger movements by EVERY country of residence (Annual-Dec)" [ref=e3300]:
+                                - cell [ref=e3301]
+                                - cell [ref=e3303]
+                                - cell [ref=e3305]:
+                                  - link [ref=e3306] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335406.px')
+                                - cell [ref=e3307]:
+                                  - link [ref=e3308] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335406.px')
+                                - cell "Total passenger movements by EVERY country of residence (Annual-Dec)" [ref=e3309]:
+                                  - link "Total passenger movements by EVERY country of residence (Annual-Dec)" [ref=e3310] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335406.px')
+                          - table [ref=e3311]:
+                            - rowgroup [ref=e3312]:
+                              - row "Total passenger movements by EVERY country of residence (Annual-Jun)" [ref=e3313]:
+                                - cell [ref=e3314]
+                                - cell [ref=e3316]
+                                - cell [ref=e3318]:
+                                  - link [ref=e3319] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335404.px')
+                                - cell [ref=e3320]:
+                                  - link [ref=e3321] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335404.px')
+                                - cell "Total passenger movements by EVERY country of residence (Annual-Jun)" [ref=e3322]:
+                                  - link "Total passenger movements by EVERY country of residence (Annual-Jun)" [ref=e3323] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335404.px')
+                          - table [ref=e3324]:
+                            - rowgroup [ref=e3325]:
+                              - row "Total passenger movements by EVERY country of residence (Annual-Mar)" [ref=e3326]:
+                                - cell [ref=e3327]
+                                - cell [ref=e3329]
+                                - cell [ref=e3331]:
+                                  - link [ref=e3332] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335403.px')
+                                - cell [ref=e3333]:
+                                  - link [ref=e3334] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335403.px')
+                                - cell "Total passenger movements by EVERY country of residence (Annual-Mar)" [ref=e3335]:
+                                  - link "Total passenger movements by EVERY country of residence (Annual-Mar)" [ref=e3336] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335403.px')
+                          - table [ref=e3337]:
+                            - rowgroup [ref=e3338]:
+                              - row "Total passenger movements by EVERY country of residence (Annual-Sep)" [ref=e3339]:
+                                - cell [ref=e3340]
+                                - cell [ref=e3342]
+                                - cell [ref=e3344]:
+                                  - link [ref=e3345] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335405.px')
+                                - cell [ref=e3346]:
+                                  - link [ref=e3347] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335405.px')
+                                - cell "Total passenger movements by EVERY country of residence (Annual-Sep)" [ref=e3348]:
+                                  - link "Total passenger movements by EVERY country of residence (Annual-Sep)" [ref=e3349] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335405.px')
+                          - table [ref=e3350]:
+                            - rowgroup [ref=e3351]:
+                              - row "Total passenger movements by EVERY country of residence (Monthly)" [ref=e3352]:
+                                - cell [ref=e3353]
+                                - cell [ref=e3355]
+                                - cell [ref=e3357]:
+                                  - link [ref=e3358] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335401.px')
+                                - cell [ref=e3359]:
+                                  - link [ref=e3360] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335401.px')
+                                - cell "Total passenger movements by EVERY country of residence (Monthly)" [ref=e3361]:
+                                  - link "Total passenger movements by EVERY country of residence (Monthly)" [ref=e3362] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335401.px')
+                          - table [ref=e3363]:
+                            - rowgroup [ref=e3364]:
+                              - row "Total passenger movements by EVERY country of residence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3365]:
+                                - cell [ref=e3366]
+                                - cell [ref=e3368]
+                                - cell [ref=e3370]:
+                                  - link [ref=e3371] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335402.px')
+                                - cell [ref=e3372]:
+                                  - link [ref=e3373] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335402.px')
+                                - cell "Total passenger movements by EVERY country of residence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3374]:
+                                  - link "Total passenger movements by EVERY country of residence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3375] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM335402.px')
+                          - table [ref=e3376]:
+                            - rowgroup [ref=e3377]:
+                              - row "Total passenger movements by NZ port and selected closest overseas ports (Annual-Dec)" [ref=e3378]:
+                                - cell [ref=e3379]
+                                - cell [ref=e3381]
+                                - cell [ref=e3383]:
+                                  - link [ref=e3384] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431606.px')
+                                - cell [ref=e3385]:
+                                  - link [ref=e3386] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431606.px')
+                                - cell "Total passenger movements by NZ port and selected closest overseas ports (Annual-Dec)" [ref=e3387]:
+                                  - link "Total passenger movements by NZ port and selected closest overseas ports (Annual-Dec)" [ref=e3388] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431606.px')
+                          - table [ref=e3389]:
+                            - rowgroup [ref=e3390]:
+                              - row "Total passenger movements by NZ port and selected closest overseas ports (Annual-Jun)" [ref=e3391]:
+                                - cell [ref=e3392]
+                                - cell [ref=e3394]
+                                - cell [ref=e3396]:
+                                  - link [ref=e3397] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431604.px')
+                                - cell [ref=e3398]:
+                                  - link [ref=e3399] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431604.px')
+                                - cell "Total passenger movements by NZ port and selected closest overseas ports (Annual-Jun)" [ref=e3400]:
+                                  - link "Total passenger movements by NZ port and selected closest overseas ports (Annual-Jun)" [ref=e3401] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431604.px')
+                          - table [ref=e3402]:
+                            - rowgroup [ref=e3403]:
+                              - row "Total passenger movements by NZ port and selected closest overseas ports (Annual-Mar)" [ref=e3404]:
+                                - cell [ref=e3405]
+                                - cell [ref=e3407]
+                                - cell [ref=e3409]:
+                                  - link [ref=e3410] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431603.px')
+                                - cell [ref=e3411]:
+                                  - link [ref=e3412] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431603.px')
+                                - cell "Total passenger movements by NZ port and selected closest overseas ports (Annual-Mar)" [ref=e3413]:
+                                  - link "Total passenger movements by NZ port and selected closest overseas ports (Annual-Mar)" [ref=e3414] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431603.px')
+                          - table [ref=e3415]:
+                            - rowgroup [ref=e3416]:
+                              - row "Total passenger movements by NZ port and selected closest overseas ports (Annual-Sep)" [ref=e3417]:
+                                - cell [ref=e3418]
+                                - cell [ref=e3420]
+                                - cell [ref=e3422]:
+                                  - link [ref=e3423] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431605.px')
+                                - cell [ref=e3424]:
+                                  - link [ref=e3425] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431605.px')
+                                - cell "Total passenger movements by NZ port and selected closest overseas ports (Annual-Sep)" [ref=e3426]:
+                                  - link "Total passenger movements by NZ port and selected closest overseas ports (Annual-Sep)" [ref=e3427] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431605.px')
+                          - table [ref=e3428]:
+                            - rowgroup [ref=e3429]:
+                              - row "Total passenger movements by NZ port and selected closest overseas ports (Monthly)" [ref=e3430]:
+                                - cell [ref=e3431]
+                                - cell [ref=e3433]
+                                - cell [ref=e3435]:
+                                  - link [ref=e3436] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431601.px')
+                                - cell [ref=e3437]:
+                                  - link [ref=e3438] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431601.px')
+                                - cell "Total passenger movements by NZ port and selected closest overseas ports (Monthly)" [ref=e3439]:
+                                  - link "Total passenger movements by NZ port and selected closest overseas ports (Monthly)" [ref=e3440] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431601.px')
+                          - table [ref=e3441]:
+                            - rowgroup [ref=e3442]:
+                              - row "Total passenger movements by NZ port and selected closest overseas ports (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3443]:
+                                - cell [ref=e3444]
+                                - cell [ref=e3446]
+                                - cell [ref=e3448]:
+                                  - link [ref=e3449] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431602.px')
+                                - cell [ref=e3450]:
+                                  - link [ref=e3451] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431602.px')
+                                - cell "Total passenger movements by NZ port and selected closest overseas ports (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3452]:
+                                  - link "Total passenger movements by NZ port and selected closest overseas ports (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3453] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431602.px')
+                          - table [ref=e3454]:
+                            - rowgroup [ref=e3455]:
+                              - row "Total passenger movements by travel mode (Annual-Dec)" [ref=e3456]:
+                                - cell [ref=e3457]
+                                - cell [ref=e3459]
+                                - cell [ref=e3461]:
+                                  - link [ref=e3462] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341606.px')
+                                - cell [ref=e3463]:
+                                  - link [ref=e3464] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341606.px')
+                                - cell "Total passenger movements by travel mode (Annual-Dec)" [ref=e3465]:
+                                  - link "Total passenger movements by travel mode (Annual-Dec)" [ref=e3466] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341606.px')
+                          - table [ref=e3467]:
+                            - rowgroup [ref=e3468]:
+                              - row "Total passenger movements by travel mode (Annual-Jun)" [ref=e3469]:
+                                - cell [ref=e3470]
+                                - cell [ref=e3472]
+                                - cell [ref=e3474]:
+                                  - link [ref=e3475] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341604.px')
+                                - cell [ref=e3476]:
+                                  - link [ref=e3477] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341604.px')
+                                - cell "Total passenger movements by travel mode (Annual-Jun)" [ref=e3478]:
+                                  - link "Total passenger movements by travel mode (Annual-Jun)" [ref=e3479] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341604.px')
+                          - table [ref=e3480]:
+                            - rowgroup [ref=e3481]:
+                              - row "Total passenger movements by travel mode (Annual-Mar)" [ref=e3482]:
+                                - cell [ref=e3483]
+                                - cell [ref=e3485]
+                                - cell [ref=e3487]:
+                                  - link [ref=e3488] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341603.px')
+                                - cell [ref=e3489]:
+                                  - link [ref=e3490] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341603.px')
+                                - cell "Total passenger movements by travel mode (Annual-Mar)" [ref=e3491]:
+                                  - link "Total passenger movements by travel mode (Annual-Mar)" [ref=e3492] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341603.px')
+                          - table [ref=e3493]:
+                            - rowgroup [ref=e3494]:
+                              - row "Total passenger movements by travel mode (Annual-Sep)" [ref=e3495]:
+                                - cell [ref=e3496]
+                                - cell [ref=e3498]
+                                - cell [ref=e3500]:
+                                  - link [ref=e3501] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341605.px')
+                                - cell [ref=e3502]:
+                                  - link [ref=e3503] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341605.px')
+                                - cell "Total passenger movements by travel mode (Annual-Sep)" [ref=e3504]:
+                                  - link "Total passenger movements by travel mode (Annual-Sep)" [ref=e3505] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341605.px')
+                          - table [ref=e3506]:
+                            - rowgroup [ref=e3507]:
+                              - row "Total passenger movements by travel mode (Monthly)" [ref=e3508]:
+                                - cell [ref=e3509]
+                                - cell [ref=e3511]
+                                - cell [ref=e3513]:
+                                  - link [ref=e3514] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341601.px')
+                                - cell [ref=e3515]:
+                                  - link [ref=e3516] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341601.px')
+                                - cell "Total passenger movements by travel mode (Monthly)" [ref=e3517]:
+                                  - link "Total passenger movements by travel mode (Monthly)" [ref=e3518] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341601.px')
+                          - table [ref=e3519]:
+                            - rowgroup [ref=e3520]:
+                              - row "Total passenger movements by travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3521]:
+                                - cell [ref=e3522]
+                                - cell [ref=e3524]
+                                - cell [ref=e3526]:
+                                  - link [ref=e3527] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341602.px')
+                                - cell [ref=e3528]:
+                                  - link [ref=e3529] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341602.px')
+                                - cell "Total passenger movements by travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3530]:
+                                  - link "Total passenger movements by travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3531] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM341602.px')
+                          - table [ref=e3532]:
+                            - rowgroup [ref=e3533]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Apr)" [ref=e3534]:
+                                - cell [ref=e3535]
+                                - cell [ref=e3537]
+                                - cell [ref=e3539]:
+                                  - link [ref=e3540] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475704.px')
+                                - cell [ref=e3541]:
+                                  - link [ref=e3542] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475704.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Apr)" [ref=e3543]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Apr)" [ref=e3544] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475704.px')
+                          - table [ref=e3545]:
+                            - rowgroup [ref=e3546]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Aug)" [ref=e3547]:
+                                - cell [ref=e3548]
+                                - cell [ref=e3550]
+                                - cell [ref=e3552]:
+                                  - link [ref=e3553] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475708.px')
+                                - cell [ref=e3554]:
+                                  - link [ref=e3555] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475708.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Aug)" [ref=e3556]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Aug)" [ref=e3557] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475708.px')
+                          - table [ref=e3558]:
+                            - rowgroup [ref=e3559]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Dec)" [ref=e3560]:
+                                - cell [ref=e3561]
+                                - cell [ref=e3563]
+                                - cell [ref=e3565]:
+                                  - link [ref=e3566] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475712.px')
+                                - cell [ref=e3567]:
+                                  - link [ref=e3568] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475712.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Dec)" [ref=e3569]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Dec)" [ref=e3570] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475712.px')
+                          - table [ref=e3571]:
+                            - rowgroup [ref=e3572]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Feb)" [ref=e3573]:
+                                - cell [ref=e3574]
+                                - cell [ref=e3576]
+                                - cell [ref=e3578]:
+                                  - link [ref=e3579] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475702.px')
+                                - cell [ref=e3580]:
+                                  - link [ref=e3581] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475702.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Feb)" [ref=e3582]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Feb)" [ref=e3583] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475702.px')
+                          - table [ref=e3584]:
+                            - rowgroup [ref=e3585]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Jan)" [ref=e3586]:
+                                - cell [ref=e3587]
+                                - cell [ref=e3589]
+                                - cell [ref=e3591]:
+                                  - link [ref=e3592] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475701.px')
+                                - cell [ref=e3593]:
+                                  - link [ref=e3594] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475701.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Jan)" [ref=e3595]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Jan)" [ref=e3596] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475701.px')
+                          - table [ref=e3597]:
+                            - rowgroup [ref=e3598]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Jul)" [ref=e3599]:
+                                - cell [ref=e3600]
+                                - cell [ref=e3602]
+                                - cell [ref=e3604]:
+                                  - link [ref=e3605] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475707.px')
+                                - cell [ref=e3606]:
+                                  - link [ref=e3607] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475707.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Jul)" [ref=e3608]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Jul)" [ref=e3609] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475707.px')
+                          - table [ref=e3610]:
+                            - rowgroup [ref=e3611]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Jun)" [ref=e3612]:
+                                - cell [ref=e3613]
+                                - cell [ref=e3615]
+                                - cell [ref=e3617]:
+                                  - link [ref=e3618] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475706.px')
+                                - cell [ref=e3619]:
+                                  - link [ref=e3620] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475706.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Jun)" [ref=e3621]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Jun)" [ref=e3622] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475706.px')
+                          - table [ref=e3623]:
+                            - rowgroup [ref=e3624]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Mar)" [ref=e3625]:
+                                - cell [ref=e3626]
+                                - cell [ref=e3628]
+                                - cell [ref=e3630]:
+                                  - link [ref=e3631] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475703.px')
+                                - cell [ref=e3632]:
+                                  - link [ref=e3633] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475703.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Mar)" [ref=e3634]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Mar)" [ref=e3635] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475703.px')
+                          - table [ref=e3636]:
+                            - rowgroup [ref=e3637]:
+                              - row "Visitor arrival total - month ended annuals (Annual-May)" [ref=e3638]:
+                                - cell [ref=e3639]
+                                - cell [ref=e3641]
+                                - cell [ref=e3643]:
+                                  - link [ref=e3644] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475705.px')
+                                - cell [ref=e3645]:
+                                  - link [ref=e3646] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475705.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-May)" [ref=e3647]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-May)" [ref=e3648] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475705.px')
+                          - table [ref=e3649]:
+                            - rowgroup [ref=e3650]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Nov)" [ref=e3651]:
+                                - cell [ref=e3652]
+                                - cell [ref=e3654]
+                                - cell [ref=e3656]:
+                                  - link [ref=e3657] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475711.px')
+                                - cell [ref=e3658]:
+                                  - link [ref=e3659] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475711.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Nov)" [ref=e3660]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Nov)" [ref=e3661] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475711.px')
+                          - table [ref=e3662]:
+                            - rowgroup [ref=e3663]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Oct)" [ref=e3664]:
+                                - cell [ref=e3665]
+                                - cell [ref=e3667]
+                                - cell [ref=e3669]:
+                                  - link [ref=e3670] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475710.px')
+                                - cell [ref=e3671]:
+                                  - link [ref=e3672] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475710.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Oct)" [ref=e3673]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Oct)" [ref=e3674] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475710.px')
+                          - table [ref=e3675]:
+                            - rowgroup [ref=e3676]:
+                              - row "Visitor arrival total - month ended annuals (Annual-Sep)" [ref=e3677]:
+                                - cell [ref=e3678]
+                                - cell [ref=e3680]
+                                - cell [ref=e3682]:
+                                  - link [ref=e3683] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475709.px')
+                                - cell [ref=e3684]:
+                                  - link [ref=e3685] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475709.px')
+                                - cell "Visitor arrival total - month ended annuals (Annual-Sep)" [ref=e3686]:
+                                  - link "Visitor arrival total - month ended annuals (Annual-Sep)" [ref=e3687] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475709.px')
+                          - table [ref=e3688]:
+                            - rowgroup [ref=e3689]:
+                              - row "Visitor arrival totals (Annual-Dec)" [ref=e3690]:
+                                - cell [ref=e3691]
+                                - cell [ref=e3693]
+                                - cell [ref=e3695]:
+                                  - link [ref=e3696] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330706.px')
+                                - cell [ref=e3697]:
+                                  - link [ref=e3698] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330706.px')
+                                - cell "Visitor arrival totals (Annual-Dec)" [ref=e3699]:
+                                  - link "Visitor arrival totals (Annual-Dec)" [ref=e3700] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330706.px')
+                          - table [ref=e3701]:
+                            - rowgroup [ref=e3702]:
+                              - row "Visitor arrival totals (Annual-Jun)" [ref=e3703]:
+                                - cell [ref=e3704]
+                                - cell [ref=e3706]
+                                - cell [ref=e3708]:
+                                  - link [ref=e3709] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330704.px')
+                                - cell [ref=e3710]:
+                                  - link [ref=e3711] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330704.px')
+                                - cell "Visitor arrival totals (Annual-Jun)" [ref=e3712]:
+                                  - link "Visitor arrival totals (Annual-Jun)" [ref=e3713] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330704.px')
+                          - table [ref=e3714]:
+                            - rowgroup [ref=e3715]:
+                              - row "Visitor arrival totals (Annual-Mar)" [ref=e3716]:
+                                - cell [ref=e3717]
+                                - cell [ref=e3719]
+                                - cell [ref=e3721]:
+                                  - link [ref=e3722] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330703.px')
+                                - cell [ref=e3723]:
+                                  - link [ref=e3724] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330703.px')
+                                - cell "Visitor arrival totals (Annual-Mar)" [ref=e3725]:
+                                  - link "Visitor arrival totals (Annual-Mar)" [ref=e3726] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330703.px')
+                          - table [ref=e3727]:
+                            - rowgroup [ref=e3728]:
+                              - row "Visitor arrival totals (Annual-Sep)" [ref=e3729]:
+                                - cell [ref=e3730]
+                                - cell [ref=e3732]
+                                - cell [ref=e3734]:
+                                  - link [ref=e3735] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330705.px')
+                                - cell [ref=e3736]:
+                                  - link [ref=e3737] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330705.px')
+                                - cell "Visitor arrival totals (Annual-Sep)" [ref=e3738]:
+                                  - link "Visitor arrival totals (Annual-Sep)" [ref=e3739] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330705.px')
+                          - table [ref=e3740]:
+                            - rowgroup [ref=e3741]:
+                              - row "Visitor arrival totals (Monthly)" [ref=e3742]:
+                                - cell [ref=e3743]
+                                - cell [ref=e3745]
+                                - cell [ref=e3747]:
+                                  - link [ref=e3748] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330701.px')
+                                - cell [ref=e3749]:
+                                  - link [ref=e3750] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330701.px')
+                                - cell "Visitor arrival totals (Monthly)" [ref=e3751]:
+                                  - link "Visitor arrival totals (Monthly)" [ref=e3752] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330701.px')
+                          - table [ref=e3753]:
+                            - rowgroup [ref=e3754]:
+                              - row "Visitor arrival totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3755]:
+                                - cell [ref=e3756]
+                                - cell [ref=e3758]
+                                - cell [ref=e3760]:
+                                  - link [ref=e3761] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330702.px')
+                                - cell [ref=e3762]:
+                                  - link [ref=e3763] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330702.px')
+                                - cell "Visitor arrival totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3764]:
+                                  - link "Visitor arrival totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e3765] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330702.px')
+                          - table [ref=e3766]:
+                            - rowgroup [ref=e3767]:
+                              - row "Visitor arrival totals percentage change (Annual-Apr)" [ref=e3768]:
+                                - cell [ref=e3769]
+                                - cell [ref=e3771]
+                                - cell [ref=e3773]:
+                                  - link [ref=e3774] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475505.px')
+                                - cell [ref=e3775]:
+                                  - link [ref=e3776] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475505.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Apr)" [ref=e3777]:
+                                  - link "Visitor arrival totals percentage change (Annual-Apr)" [ref=e3778] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475505.px')
+                          - table [ref=e3779]:
+                            - rowgroup [ref=e3780]:
+                              - row "Visitor arrival totals percentage change (Annual-Aug)" [ref=e3781]:
+                                - cell [ref=e3782]
+                                - cell [ref=e3784]
+                                - cell [ref=e3786]:
+                                  - link [ref=e3787] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475509.px')
+                                - cell [ref=e3788]:
+                                  - link [ref=e3789] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475509.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Aug)" [ref=e3790]:
+                                  - link "Visitor arrival totals percentage change (Annual-Aug)" [ref=e3791] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475509.px')
+                          - table [ref=e3792]:
+                            - rowgroup [ref=e3793]:
+                              - row "Visitor arrival totals percentage change (Annual-Dec)" [ref=e3794]:
+                                - cell [ref=e3795]
+                                - cell [ref=e3797]
+                                - cell [ref=e3799]:
+                                  - link [ref=e3800] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475513.px')
+                                - cell [ref=e3801]:
+                                  - link [ref=e3802] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475513.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Dec)" [ref=e3803]:
+                                  - link "Visitor arrival totals percentage change (Annual-Dec)" [ref=e3804] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475513.px')
+                          - table [ref=e3805]:
+                            - rowgroup [ref=e3806]:
+                              - row "Visitor arrival totals percentage change (Annual-Feb)" [ref=e3807]:
+                                - cell [ref=e3808]
+                                - cell [ref=e3810]
+                                - cell [ref=e3812]:
+                                  - link [ref=e3813] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475503.px')
+                                - cell [ref=e3814]:
+                                  - link [ref=e3815] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475503.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Feb)" [ref=e3816]:
+                                  - link "Visitor arrival totals percentage change (Annual-Feb)" [ref=e3817] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475503.px')
+                          - table [ref=e3818]:
+                            - rowgroup [ref=e3819]:
+                              - row "Visitor arrival totals percentage change (Annual-Jan)" [ref=e3820]:
+                                - cell [ref=e3821]
+                                - cell [ref=e3823]
+                                - cell [ref=e3825]:
+                                  - link [ref=e3826] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475502.px')
+                                - cell [ref=e3827]:
+                                  - link [ref=e3828] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475502.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Jan)" [ref=e3829]:
+                                  - link "Visitor arrival totals percentage change (Annual-Jan)" [ref=e3830] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475502.px')
+                          - table [ref=e3831]:
+                            - rowgroup [ref=e3832]:
+                              - row "Visitor arrival totals percentage change (Annual-Jul)" [ref=e3833]:
+                                - cell [ref=e3834]
+                                - cell [ref=e3836]
+                                - cell [ref=e3838]:
+                                  - link [ref=e3839] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475508.px')
+                                - cell [ref=e3840]:
+                                  - link [ref=e3841] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475508.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Jul)" [ref=e3842]:
+                                  - link "Visitor arrival totals percentage change (Annual-Jul)" [ref=e3843] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475508.px')
+                          - table [ref=e3844]:
+                            - rowgroup [ref=e3845]:
+                              - row "Visitor arrival totals percentage change (Annual-Jun)" [ref=e3846]:
+                                - cell [ref=e3847]
+                                - cell [ref=e3849]
+                                - cell [ref=e3851]:
+                                  - link [ref=e3852] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475507.px')
+                                - cell [ref=e3853]:
+                                  - link [ref=e3854] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475507.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Jun)" [ref=e3855]:
+                                  - link "Visitor arrival totals percentage change (Annual-Jun)" [ref=e3856] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475507.px')
+                          - table [ref=e3857]:
+                            - rowgroup [ref=e3858]:
+                              - row "Visitor arrival totals percentage change (Annual-Mar)" [ref=e3859]:
+                                - cell [ref=e3860]
+                                - cell [ref=e3862]
+                                - cell [ref=e3864]:
+                                  - link [ref=e3865] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475504.px')
+                                - cell [ref=e3866]:
+                                  - link [ref=e3867] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475504.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Mar)" [ref=e3868]:
+                                  - link "Visitor arrival totals percentage change (Annual-Mar)" [ref=e3869] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475504.px')
+                          - table [ref=e3870]:
+                            - rowgroup [ref=e3871]:
+                              - row "Visitor arrival totals percentage change (Annual-May)" [ref=e3872]:
+                                - cell [ref=e3873]
+                                - cell [ref=e3875]
+                                - cell [ref=e3877]:
+                                  - link [ref=e3878] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475506.px')
+                                - cell [ref=e3879]:
+                                  - link [ref=e3880] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475506.px')
+                                - cell "Visitor arrival totals percentage change (Annual-May)" [ref=e3881]:
+                                  - link "Visitor arrival totals percentage change (Annual-May)" [ref=e3882] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475506.px')
+                          - table [ref=e3883]:
+                            - rowgroup [ref=e3884]:
+                              - row "Visitor arrival totals percentage change (Annual-Nov)" [ref=e3885]:
+                                - cell [ref=e3886]
+                                - cell [ref=e3888]
+                                - cell [ref=e3890]:
+                                  - link [ref=e3891] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475512.px')
+                                - cell [ref=e3892]:
+                                  - link [ref=e3893] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475512.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Nov)" [ref=e3894]:
+                                  - link "Visitor arrival totals percentage change (Annual-Nov)" [ref=e3895] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475512.px')
+                          - table [ref=e3896]:
+                            - rowgroup [ref=e3897]:
+                              - row "Visitor arrival totals percentage change (Annual-Oct)" [ref=e3898]:
+                                - cell [ref=e3899]
+                                - cell [ref=e3901]
+                                - cell [ref=e3903]:
+                                  - link [ref=e3904] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475511.px')
+                                - cell [ref=e3905]:
+                                  - link [ref=e3906] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475511.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Oct)" [ref=e3907]:
+                                  - link "Visitor arrival totals percentage change (Annual-Oct)" [ref=e3908] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475511.px')
+                          - table [ref=e3909]:
+                            - rowgroup [ref=e3910]:
+                              - row "Visitor arrival totals percentage change (Annual-Sep)" [ref=e3911]:
+                                - cell [ref=e3912]
+                                - cell [ref=e3914]
+                                - cell [ref=e3916]:
+                                  - link [ref=e3917] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475510.px')
+                                - cell [ref=e3918]:
+                                  - link [ref=e3919] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475510.px')
+                                - cell "Visitor arrival totals percentage change (Annual-Sep)" [ref=e3920]:
+                                  - link "Visitor arrival totals percentage change (Annual-Sep)" [ref=e3921] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475510.px')
+                          - table [ref=e3922]:
+                            - rowgroup [ref=e3923]:
+                              - row "Visitor arrival totals percentage change (Monthly)" [ref=e3924]:
+                                - cell [ref=e3925]
+                                - cell [ref=e3927]
+                                - cell [ref=e3929]:
+                                  - link [ref=e3930] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475501.px')
+                                - cell [ref=e3931]:
+                                  - link [ref=e3932] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475501.px')
+                                - cell "Visitor arrival totals percentage change (Monthly)" [ref=e3933]:
+                                  - link "Visitor arrival totals percentage change (Monthly)" [ref=e3934] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM475501.px')
+                          - table [ref=e3935]:
+                            - rowgroup [ref=e3936]:
+                              - row "Visitor arrivals by country of citizenship and visa type (Annual-Dec)" [ref=e3937]:
+                                - cell [ref=e3938]
+                                - cell [ref=e3940]
+                                - cell [ref=e3942]:
+                                  - link [ref=e3943] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524906.px')
+                                - cell [ref=e3944]:
+                                  - link [ref=e3945] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524906.px')
+                                - cell "Visitor arrivals by country of citizenship and visa type (Annual-Dec)" [ref=e3946]:
+                                  - link "Visitor arrivals by country of citizenship and visa type (Annual-Dec)" [ref=e3947] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524906.px')
+                          - table [ref=e3948]:
+                            - rowgroup [ref=e3949]:
+                              - row "Visitor arrivals by country of citizenship and visa type (Annual-Jun)" [ref=e3950]:
+                                - cell [ref=e3951]
+                                - cell [ref=e3953]
+                                - cell [ref=e3955]:
+                                  - link [ref=e3956] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524904.px')
+                                - cell [ref=e3957]:
+                                  - link [ref=e3958] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524904.px')
+                                - cell "Visitor arrivals by country of citizenship and visa type (Annual-Jun)" [ref=e3959]:
+                                  - link "Visitor arrivals by country of citizenship and visa type (Annual-Jun)" [ref=e3960] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524904.px')
+                          - table [ref=e3961]:
+                            - rowgroup [ref=e3962]:
+                              - row "Visitor arrivals by country of citizenship and visa type (Annual-Mar)" [ref=e3963]:
+                                - cell [ref=e3964]
+                                - cell [ref=e3966]
+                                - cell [ref=e3968]:
+                                  - link [ref=e3969] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524903.px')
+                                - cell [ref=e3970]:
+                                  - link [ref=e3971] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524903.px')
+                                - cell "Visitor arrivals by country of citizenship and visa type (Annual-Mar)" [ref=e3972]:
+                                  - link "Visitor arrivals by country of citizenship and visa type (Annual-Mar)" [ref=e3973] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524903.px')
+                          - table [ref=e3974]:
+                            - rowgroup [ref=e3975]:
+                              - row "Visitor arrivals by country of citizenship and visa type (Annual-Sep)" [ref=e3976]:
+                                - cell [ref=e3977]
+                                - cell [ref=e3979]
+                                - cell [ref=e3981]:
+                                  - link [ref=e3982] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524905.px')
+                                - cell [ref=e3983]:
+                                  - link [ref=e3984] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524905.px')
+                                - cell "Visitor arrivals by country of citizenship and visa type (Annual-Sep)" [ref=e3985]:
+                                  - link "Visitor arrivals by country of citizenship and visa type (Annual-Sep)" [ref=e3986] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524905.px')
+                          - table [ref=e3987]:
+                            - rowgroup [ref=e3988]:
+                              - row "Visitor arrivals by country of citizenship and visa type (Monthly)" [ref=e3989]:
+                                - cell [ref=e3990]
+                                - cell [ref=e3992]
+                                - cell [ref=e3994]:
+                                  - link [ref=e3995] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524901.px')
+                                - cell [ref=e3996]:
+                                  - link [ref=e3997] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524901.px')
+                                - cell "Visitor arrivals by country of citizenship and visa type (Monthly)" [ref=e3998]:
+                                  - link "Visitor arrivals by country of citizenship and visa type (Monthly)" [ref=e3999] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524901.px')
+                          - table [ref=e4000]:
+                            - rowgroup [ref=e4001]:
+                              - row "Visitor arrivals by country of citizenship and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4002]:
+                                - cell [ref=e4003]
+                                - cell [ref=e4005]
+                                - cell [ref=e4007]:
+                                  - link [ref=e4008] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524902.px')
+                                - cell [ref=e4009]:
+                                  - link [ref=e4010] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524902.px')
+                                - cell "Visitor arrivals by country of citizenship and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4011]:
+                                  - link "Visitor arrivals by country of citizenship and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4012] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM524902.px')
+                          - table [ref=e4013]:
+                            - rowgroup [ref=e4014]:
+                              - row "Visitor arrivals by country of residence and closest overseas port (Annual-Dec)" [ref=e4015]:
+                                - cell [ref=e4016]
+                                - cell [ref=e4018]
+                                - cell [ref=e4020]:
+                                  - link [ref=e4021] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431806.px')
+                                - cell [ref=e4022]:
+                                  - link [ref=e4023] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431806.px')
+                                - cell "Visitor arrivals by country of residence and closest overseas port (Annual-Dec)" [ref=e4024]:
+                                  - link "Visitor arrivals by country of residence and closest overseas port (Annual-Dec)" [ref=e4025] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431806.px')
+                          - table [ref=e4026]:
+                            - rowgroup [ref=e4027]:
+                              - row "Visitor arrivals by country of residence and closest overseas port (Annual-Jun)" [ref=e4028]:
+                                - cell [ref=e4029]
+                                - cell [ref=e4031]
+                                - cell [ref=e4033]:
+                                  - link [ref=e4034] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431804.px')
+                                - cell [ref=e4035]:
+                                  - link [ref=e4036] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431804.px')
+                                - cell "Visitor arrivals by country of residence and closest overseas port (Annual-Jun)" [ref=e4037]:
+                                  - link "Visitor arrivals by country of residence and closest overseas port (Annual-Jun)" [ref=e4038] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431804.px')
+                          - table [ref=e4039]:
+                            - rowgroup [ref=e4040]:
+                              - row "Visitor arrivals by country of residence and closest overseas port (Annual-Mar)" [ref=e4041]:
+                                - cell [ref=e4042]
+                                - cell [ref=e4044]
+                                - cell [ref=e4046]:
+                                  - link [ref=e4047] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431803.px')
+                                - cell [ref=e4048]:
+                                  - link [ref=e4049] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431803.px')
+                                - cell "Visitor arrivals by country of residence and closest overseas port (Annual-Mar)" [ref=e4050]:
+                                  - link "Visitor arrivals by country of residence and closest overseas port (Annual-Mar)" [ref=e4051] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431803.px')
+                          - table [ref=e4052]:
+                            - rowgroup [ref=e4053]:
+                              - row "Visitor arrivals by country of residence and closest overseas port (Annual-Sep)" [ref=e4054]:
+                                - cell [ref=e4055]
+                                - cell [ref=e4057]
+                                - cell [ref=e4059]:
+                                  - link [ref=e4060] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431805.px')
+                                - cell [ref=e4061]:
+                                  - link [ref=e4062] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431805.px')
+                                - cell "Visitor arrivals by country of residence and closest overseas port (Annual-Sep)" [ref=e4063]:
+                                  - link "Visitor arrivals by country of residence and closest overseas port (Annual-Sep)" [ref=e4064] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431805.px')
+                          - table [ref=e4065]:
+                            - rowgroup [ref=e4066]:
+                              - row "Visitor arrivals by country of residence and closest overseas port (Monthly)" [ref=e4067]:
+                                - cell [ref=e4068]
+                                - cell [ref=e4070]
+                                - cell [ref=e4072]:
+                                  - link [ref=e4073] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431801.px')
+                                - cell [ref=e4074]:
+                                  - link [ref=e4075] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431801.px')
+                                - cell "Visitor arrivals by country of residence and closest overseas port (Monthly)" [ref=e4076]:
+                                  - link "Visitor arrivals by country of residence and closest overseas port (Monthly)" [ref=e4077] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431801.px')
+                          - table [ref=e4078]:
+                            - rowgroup [ref=e4079]:
+                              - row "Visitor arrivals by country of residence and closest overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4080]:
+                                - cell [ref=e4081]
+                                - cell [ref=e4083]
+                                - cell [ref=e4085]:
+                                  - link [ref=e4086] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431802.px')
+                                - cell [ref=e4087]:
+                                  - link [ref=e4088] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431802.px')
+                                - cell "Visitor arrivals by country of residence and closest overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4089]:
+                                  - link "Visitor arrivals by country of residence and closest overseas port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4090] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM431802.px')
+                          - table [ref=e4091]:
+                            - rowgroup [ref=e4092]:
+                              - row "Visitor arrivals by country of residence and travel mode (Annual-Dec)" [ref=e4093]:
+                                - cell [ref=e4094]
+                                - cell [ref=e4096]
+                                - cell [ref=e4098]:
+                                  - link [ref=e4099] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338106.px')
+                                - cell [ref=e4100]:
+                                  - link [ref=e4101] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338106.px')
+                                - cell "Visitor arrivals by country of residence and travel mode (Annual-Dec)" [ref=e4102]:
+                                  - link "Visitor arrivals by country of residence and travel mode (Annual-Dec)" [ref=e4103] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338106.px')
+                          - table [ref=e4104]:
+                            - rowgroup [ref=e4105]:
+                              - row "Visitor arrivals by country of residence and travel mode (Annual-Jun)" [ref=e4106]:
+                                - cell [ref=e4107]
+                                - cell [ref=e4109]
+                                - cell [ref=e4111]:
+                                  - link [ref=e4112] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338104.px')
+                                - cell [ref=e4113]:
+                                  - link [ref=e4114] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338104.px')
+                                - cell "Visitor arrivals by country of residence and travel mode (Annual-Jun)" [ref=e4115]:
+                                  - link "Visitor arrivals by country of residence and travel mode (Annual-Jun)" [ref=e4116] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338104.px')
+                          - table [ref=e4117]:
+                            - rowgroup [ref=e4118]:
+                              - row "Visitor arrivals by country of residence and travel mode (Annual-Mar)" [ref=e4119]:
+                                - cell [ref=e4120]
+                                - cell [ref=e4122]
+                                - cell [ref=e4124]:
+                                  - link [ref=e4125] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338103.px')
+                                - cell [ref=e4126]:
+                                  - link [ref=e4127] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338103.px')
+                                - cell "Visitor arrivals by country of residence and travel mode (Annual-Mar)" [ref=e4128]:
+                                  - link "Visitor arrivals by country of residence and travel mode (Annual-Mar)" [ref=e4129] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338103.px')
+                          - table [ref=e4130]:
+                            - rowgroup [ref=e4131]:
+                              - row "Visitor arrivals by country of residence and travel mode (Annual-Sep)" [ref=e4132]:
+                                - cell [ref=e4133]
+                                - cell [ref=e4135]
+                                - cell [ref=e4137]:
+                                  - link [ref=e4138] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338105.px')
+                                - cell [ref=e4139]:
+                                  - link [ref=e4140] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338105.px')
+                                - cell "Visitor arrivals by country of residence and travel mode (Annual-Sep)" [ref=e4141]:
+                                  - link "Visitor arrivals by country of residence and travel mode (Annual-Sep)" [ref=e4142] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338105.px')
+                          - table [ref=e4143]:
+                            - rowgroup [ref=e4144]:
+                              - row "Visitor arrivals by country of residence and travel mode (Monthly)" [ref=e4145]:
+                                - cell [ref=e4146]
+                                - cell [ref=e4148]
+                                - cell [ref=e4150]:
+                                  - link [ref=e4151] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338101.px')
+                                - cell [ref=e4152]:
+                                  - link [ref=e4153] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338101.px')
+                                - cell "Visitor arrivals by country of residence and travel mode (Monthly)" [ref=e4154]:
+                                  - link "Visitor arrivals by country of residence and travel mode (Monthly)" [ref=e4155] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338101.px')
+                          - table [ref=e4156]:
+                            - rowgroup [ref=e4157]:
+                              - row "Visitor arrivals by country of residence and travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4158]:
+                                - cell [ref=e4159]
+                                - cell [ref=e4161]
+                                - cell [ref=e4163]:
+                                  - link [ref=e4164] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338102.px')
+                                - cell [ref=e4165]:
+                                  - link [ref=e4166] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338102.px')
+                                - cell "Visitor arrivals by country of residence and travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4167]:
+                                  - link "Visitor arrivals by country of residence and travel mode (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4168] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338102.px')
+                          - table [ref=e4169]:
+                            - rowgroup [ref=e4170]:
+                              - row "Visitor arrivals by country of residence, age and visa type (Annual-Dec)" [ref=e4171]:
+                                - cell [ref=e4172]
+                                - cell [ref=e4174]
+                                - cell [ref=e4176]:
+                                  - link [ref=e4177] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336506.px')
+                                - cell [ref=e4178]:
+                                  - link [ref=e4179] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336506.px')
+                                - cell "Visitor arrivals by country of residence, age and visa type (Annual-Dec)" [ref=e4180]:
+                                  - link "Visitor arrivals by country of residence, age and visa type (Annual-Dec)" [ref=e4181] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336506.px')
+                          - table [ref=e4182]:
+                            - rowgroup [ref=e4183]:
+                              - row "Visitor arrivals by country of residence, age and visa type (Annual-Jun)" [ref=e4184]:
+                                - cell [ref=e4185]
+                                - cell [ref=e4187]
+                                - cell [ref=e4189]:
+                                  - link [ref=e4190] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336504.px')
+                                - cell [ref=e4191]:
+                                  - link [ref=e4192] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336504.px')
+                                - cell "Visitor arrivals by country of residence, age and visa type (Annual-Jun)" [ref=e4193]:
+                                  - link "Visitor arrivals by country of residence, age and visa type (Annual-Jun)" [ref=e4194] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336504.px')
+                          - table [ref=e4195]:
+                            - rowgroup [ref=e4196]:
+                              - row "Visitor arrivals by country of residence, age and visa type (Annual-Mar)" [ref=e4197]:
+                                - cell [ref=e4198]
+                                - cell [ref=e4200]
+                                - cell [ref=e4202]:
+                                  - link [ref=e4203] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336503.px')
+                                - cell [ref=e4204]:
+                                  - link [ref=e4205] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336503.px')
+                                - cell "Visitor arrivals by country of residence, age and visa type (Annual-Mar)" [ref=e4206]:
+                                  - link "Visitor arrivals by country of residence, age and visa type (Annual-Mar)" [ref=e4207] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336503.px')
+                          - table [ref=e4208]:
+                            - rowgroup [ref=e4209]:
+                              - row "Visitor arrivals by country of residence, age and visa type (Annual-Sep)" [ref=e4210]:
+                                - cell [ref=e4211]
+                                - cell [ref=e4213]
+                                - cell [ref=e4215]:
+                                  - link [ref=e4216] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336505.px')
+                                - cell [ref=e4217]:
+                                  - link [ref=e4218] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336505.px')
+                                - cell "Visitor arrivals by country of residence, age and visa type (Annual-Sep)" [ref=e4219]:
+                                  - link "Visitor arrivals by country of residence, age and visa type (Annual-Sep)" [ref=e4220] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336505.px')
+                          - table [ref=e4221]:
+                            - rowgroup [ref=e4222]:
+                              - row "Visitor arrivals by country of residence, age and visa type (Monthly)" [ref=e4223]:
+                                - cell [ref=e4224]
+                                - cell [ref=e4226]
+                                - cell [ref=e4228]:
+                                  - link [ref=e4229] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336501.px')
+                                - cell [ref=e4230]:
+                                  - link [ref=e4231] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336501.px')
+                                - cell "Visitor arrivals by country of residence, age and visa type (Monthly)" [ref=e4232]:
+                                  - link "Visitor arrivals by country of residence, age and visa type (Monthly)" [ref=e4233] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336501.px')
+                          - table [ref=e4234]:
+                            - rowgroup [ref=e4235]:
+                              - row "Visitor arrivals by country of residence, age and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4236]:
+                                - cell [ref=e4237]
+                                - cell [ref=e4239]
+                                - cell [ref=e4241]:
+                                  - link [ref=e4242] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336502.px')
+                                - cell [ref=e4243]:
+                                  - link [ref=e4244] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336502.px')
+                                - cell "Visitor arrivals by country of residence, age and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4245]:
+                                  - link "Visitor arrivals by country of residence, age and visa type (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4246] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336502.px')
+                          - table [ref=e4247]:
+                            - rowgroup [ref=e4248]:
+                              - row "Visitor arrivals by country of residence, purpose and length of stay (Annual-Dec)" [ref=e4249]:
+                                - cell [ref=e4250]
+                                - cell [ref=e4252]
+                                - cell [ref=e4254]:
+                                  - link [ref=e4255] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336906.px')
+                                - cell [ref=e4256]:
+                                  - link [ref=e4257] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336906.px')
+                                - cell "Visitor arrivals by country of residence, purpose and length of stay (Annual-Dec)" [ref=e4258]:
+                                  - link "Visitor arrivals by country of residence, purpose and length of stay (Annual-Dec)" [ref=e4259] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336906.px')
+                          - table [ref=e4260]:
+                            - rowgroup [ref=e4261]:
+                              - row "Visitor arrivals by country of residence, purpose and length of stay (Annual-Jun)" [ref=e4262]:
+                                - cell [ref=e4263]
+                                - cell [ref=e4265]
+                                - cell [ref=e4267]:
+                                  - link [ref=e4268] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336904.px')
+                                - cell [ref=e4269]:
+                                  - link [ref=e4270] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336904.px')
+                                - cell "Visitor arrivals by country of residence, purpose and length of stay (Annual-Jun)" [ref=e4271]:
+                                  - link "Visitor arrivals by country of residence, purpose and length of stay (Annual-Jun)" [ref=e4272] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336904.px')
+                          - table [ref=e4273]:
+                            - rowgroup [ref=e4274]:
+                              - row "Visitor arrivals by country of residence, purpose and length of stay (Annual-Mar)" [ref=e4275]:
+                                - cell [ref=e4276]
+                                - cell [ref=e4278]
+                                - cell [ref=e4280]:
+                                  - link [ref=e4281] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336903.px')
+                                - cell [ref=e4282]:
+                                  - link [ref=e4283] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336903.px')
+                                - cell "Visitor arrivals by country of residence, purpose and length of stay (Annual-Mar)" [ref=e4284]:
+                                  - link "Visitor arrivals by country of residence, purpose and length of stay (Annual-Mar)" [ref=e4285] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336903.px')
+                          - table [ref=e4286]:
+                            - rowgroup [ref=e4287]:
+                              - row "Visitor arrivals by country of residence, purpose and length of stay (Annual-Sep)" [ref=e4288]:
+                                - cell [ref=e4289]
+                                - cell [ref=e4291]
+                                - cell [ref=e4293]:
+                                  - link [ref=e4294] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336905.px')
+                                - cell [ref=e4295]:
+                                  - link [ref=e4296] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336905.px')
+                                - cell "Visitor arrivals by country of residence, purpose and length of stay (Annual-Sep)" [ref=e4297]:
+                                  - link "Visitor arrivals by country of residence, purpose and length of stay (Annual-Sep)" [ref=e4298] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336905.px')
+                          - table [ref=e4299]:
+                            - rowgroup [ref=e4300]:
+                              - row "Visitor arrivals by country of residence, purpose and length of stay (Monthly)" [ref=e4301]:
+                                - cell [ref=e4302]
+                                - cell [ref=e4304]
+                                - cell [ref=e4306]:
+                                  - link [ref=e4307] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336901.px')
+                                - cell [ref=e4308]:
+                                  - link [ref=e4309] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336901.px')
+                                - cell "Visitor arrivals by country of residence, purpose and length of stay (Monthly)" [ref=e4310]:
+                                  - link "Visitor arrivals by country of residence, purpose and length of stay (Monthly)" [ref=e4311] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336901.px')
+                          - table [ref=e4312]:
+                            - rowgroup [ref=e4313]:
+                              - row "Visitor arrivals by country of residence, purpose and length of stay (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4314]:
+                                - cell [ref=e4315]
+                                - cell [ref=e4317]
+                                - cell [ref=e4319]:
+                                  - link [ref=e4320] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336902.px')
+                                - cell [ref=e4321]:
+                                  - link [ref=e4322] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336902.px')
+                                - cell "Visitor arrivals by country of residence, purpose and length of stay (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4323]:
+                                  - link "Visitor arrivals by country of residence, purpose and length of stay (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4324] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336902.px')
+                          - table [ref=e4325]:
+                            - rowgroup [ref=e4326]:
+                              - row "Visitor arrivals by country of residence, purpose and NZ port (Annual-Dec)" [ref=e4327]:
+                                - cell [ref=e4328]
+                                - cell [ref=e4330]
+                                - cell [ref=e4332]:
+                                  - link [ref=e4333] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337506.px')
+                                - cell [ref=e4334]:
+                                  - link [ref=e4335] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337506.px')
+                                - cell "Visitor arrivals by country of residence, purpose and NZ port (Annual-Dec)" [ref=e4336]:
+                                  - link "Visitor arrivals by country of residence, purpose and NZ port (Annual-Dec)" [ref=e4337] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337506.px')
+                          - table [ref=e4338]:
+                            - rowgroup [ref=e4339]:
+                              - row "Visitor arrivals by country of residence, purpose and NZ port (Annual-Jun)" [ref=e4340]:
+                                - cell [ref=e4341]
+                                - cell [ref=e4343]
+                                - cell [ref=e4345]:
+                                  - link [ref=e4346] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337504.px')
+                                - cell [ref=e4347]:
+                                  - link [ref=e4348] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337504.px')
+                                - cell "Visitor arrivals by country of residence, purpose and NZ port (Annual-Jun)" [ref=e4349]:
+                                  - link "Visitor arrivals by country of residence, purpose and NZ port (Annual-Jun)" [ref=e4350] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337504.px')
+                          - table [ref=e4351]:
+                            - rowgroup [ref=e4352]:
+                              - row "Visitor arrivals by country of residence, purpose and NZ port (Annual-Mar)" [ref=e4353]:
+                                - cell [ref=e4354]
+                                - cell [ref=e4356]
+                                - cell [ref=e4358]:
+                                  - link [ref=e4359] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337503.px')
+                                - cell [ref=e4360]:
+                                  - link [ref=e4361] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337503.px')
+                                - cell "Visitor arrivals by country of residence, purpose and NZ port (Annual-Mar)" [ref=e4362]:
+                                  - link "Visitor arrivals by country of residence, purpose and NZ port (Annual-Mar)" [ref=e4363] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337503.px')
+                          - table [ref=e4364]:
+                            - rowgroup [ref=e4365]:
+                              - row "Visitor arrivals by country of residence, purpose and NZ port (Annual-Sep)" [ref=e4366]:
+                                - cell [ref=e4367]
+                                - cell [ref=e4369]
+                                - cell [ref=e4371]:
+                                  - link [ref=e4372] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337505.px')
+                                - cell [ref=e4373]:
+                                  - link [ref=e4374] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337505.px')
+                                - cell "Visitor arrivals by country of residence, purpose and NZ port (Annual-Sep)" [ref=e4375]:
+                                  - link "Visitor arrivals by country of residence, purpose and NZ port (Annual-Sep)" [ref=e4376] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337505.px')
+                          - table [ref=e4377]:
+                            - rowgroup [ref=e4378]:
+                              - row "Visitor arrivals by country of residence, purpose and NZ port (Monthly)" [ref=e4379]:
+                                - cell [ref=e4380]
+                                - cell [ref=e4382]
+                                - cell [ref=e4384]:
+                                  - link [ref=e4385] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337501.px')
+                                - cell [ref=e4386]:
+                                  - link [ref=e4387] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337501.px')
+                                - cell "Visitor arrivals by country of residence, purpose and NZ port (Monthly)" [ref=e4388]:
+                                  - link "Visitor arrivals by country of residence, purpose and NZ port (Monthly)" [ref=e4389] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337501.px')
+                          - table [ref=e4390]:
+                            - rowgroup [ref=e4391]:
+                              - row "Visitor arrivals by country of residence, purpose and NZ port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4392]:
+                                - cell [ref=e4393]
+                                - cell [ref=e4395]
+                                - cell [ref=e4397]:
+                                  - link [ref=e4398] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337502.px')
+                                - cell [ref=e4399]:
+                                  - link [ref=e4400] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337502.px')
+                                - cell "Visitor arrivals by country of residence, purpose and NZ port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4401]:
+                                  - link "Visitor arrivals by country of residence, purpose and NZ port (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4402] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337502.px')
+                          - table [ref=e4403]:
+                            - rowgroup [ref=e4404]:
+                              - row "Visitor arrivals by country of residence, purpose, age and sex (Annual-Dec)" [ref=e4405]:
+                                - cell [ref=e4406]
+                                - cell [ref=e4408]
+                                - cell [ref=e4410]:
+                                  - link [ref=e4411] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336406.px')
+                                - cell [ref=e4412]:
+                                  - link [ref=e4413] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336406.px')
+                                - cell "Visitor arrivals by country of residence, purpose, age and sex (Annual-Dec)" [ref=e4414]:
+                                  - link "Visitor arrivals by country of residence, purpose, age and sex (Annual-Dec)" [ref=e4415] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336406.px')
+                          - table [ref=e4416]:
+                            - rowgroup [ref=e4417]:
+                              - row "Visitor arrivals by country of residence, purpose, age and sex (Annual-Jun)" [ref=e4418]:
+                                - cell [ref=e4419]
+                                - cell [ref=e4421]
+                                - cell [ref=e4423]:
+                                  - link [ref=e4424] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336404.px')
+                                - cell [ref=e4425]:
+                                  - link [ref=e4426] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336404.px')
+                                - cell "Visitor arrivals by country of residence, purpose, age and sex (Annual-Jun)" [ref=e4427]:
+                                  - link "Visitor arrivals by country of residence, purpose, age and sex (Annual-Jun)" [ref=e4428] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336404.px')
+                          - table [ref=e4429]:
+                            - rowgroup [ref=e4430]:
+                              - row "Visitor arrivals by country of residence, purpose, age and sex (Annual-Mar)" [ref=e4431]:
+                                - cell [ref=e4432]
+                                - cell [ref=e4434]
+                                - cell [ref=e4436]:
+                                  - link [ref=e4437] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336403.px')
+                                - cell [ref=e4438]:
+                                  - link [ref=e4439] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336403.px')
+                                - cell "Visitor arrivals by country of residence, purpose, age and sex (Annual-Mar)" [ref=e4440]:
+                                  - link "Visitor arrivals by country of residence, purpose, age and sex (Annual-Mar)" [ref=e4441] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336403.px')
+                          - table [ref=e4442]:
+                            - rowgroup [ref=e4443]:
+                              - row "Visitor arrivals by country of residence, purpose, age and sex (Annual-Sep)" [ref=e4444]:
+                                - cell [ref=e4445]
+                                - cell [ref=e4447]
+                                - cell [ref=e4449]:
+                                  - link [ref=e4450] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336405.px')
+                                - cell [ref=e4451]:
+                                  - link [ref=e4452] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336405.px')
+                                - cell "Visitor arrivals by country of residence, purpose, age and sex (Annual-Sep)" [ref=e4453]:
+                                  - link "Visitor arrivals by country of residence, purpose, age and sex (Annual-Sep)" [ref=e4454] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336405.px')
+                          - table [ref=e4455]:
+                            - rowgroup [ref=e4456]:
+                              - row "Visitor arrivals by country of residence, purpose, age and sex (Monthly)" [ref=e4457]:
+                                - cell [ref=e4458]
+                                - cell [ref=e4460]
+                                - cell [ref=e4462]:
+                                  - link [ref=e4463] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336401.px')
+                                - cell [ref=e4464]:
+                                  - link [ref=e4465] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336401.px')
+                                - cell "Visitor arrivals by country of residence, purpose, age and sex (Monthly)" [ref=e4466]:
+                                  - link "Visitor arrivals by country of residence, purpose, age and sex (Monthly)" [ref=e4467] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336401.px')
+                          - table [ref=e4468]:
+                            - rowgroup [ref=e4469]:
+                              - row "Visitor arrivals by country of residence, purpose, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4470]:
+                                - cell [ref=e4471]
+                                - cell [ref=e4473]
+                                - cell [ref=e4475]:
+                                  - link [ref=e4476] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336402.px')
+                                - cell [ref=e4477]:
+                                  - link [ref=e4478] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336402.px')
+                                - cell "Visitor arrivals by country of residence, purpose, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4479]:
+                                  - link "Visitor arrivals by country of residence, purpose, age and sex (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4480] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM336402.px')
+                          - table [ref=e4481]:
+                            - rowgroup [ref=e4482]:
+                              - row "Visitor arrivals by EVERY country of residence and purpose (Annual-Dec)" [ref=e4483]:
+                                - cell [ref=e4484]
+                                - cell [ref=e4486]
+                                - cell [ref=e4488]:
+                                  - link [ref=e4489] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330806.px')
+                                - cell [ref=e4490]:
+                                  - link [ref=e4491] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330806.px')
+                                - cell "Visitor arrivals by EVERY country of residence and purpose (Annual-Dec)" [ref=e4492]:
+                                  - link "Visitor arrivals by EVERY country of residence and purpose (Annual-Dec)" [ref=e4493] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330806.px')
+                          - table [ref=e4494]:
+                            - rowgroup [ref=e4495]:
+                              - row "Visitor arrivals by EVERY country of residence and purpose (Annual-Jun)" [ref=e4496]:
+                                - cell [ref=e4497]
+                                - cell [ref=e4499]
+                                - cell [ref=e4501]:
+                                  - link [ref=e4502] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330804.px')
+                                - cell [ref=e4503]:
+                                  - link [ref=e4504] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330804.px')
+                                - cell "Visitor arrivals by EVERY country of residence and purpose (Annual-Jun)" [ref=e4505]:
+                                  - link "Visitor arrivals by EVERY country of residence and purpose (Annual-Jun)" [ref=e4506] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330804.px')
+                          - table [ref=e4507]:
+                            - rowgroup [ref=e4508]:
+                              - row "Visitor arrivals by EVERY country of residence and purpose (Annual-Mar)" [ref=e4509]:
+                                - cell [ref=e4510]
+                                - cell [ref=e4512]
+                                - cell [ref=e4514]:
+                                  - link [ref=e4515] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330803.px')
+                                - cell [ref=e4516]:
+                                  - link [ref=e4517] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330803.px')
+                                - cell "Visitor arrivals by EVERY country of residence and purpose (Annual-Mar)" [ref=e4518]:
+                                  - link "Visitor arrivals by EVERY country of residence and purpose (Annual-Mar)" [ref=e4519] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330803.px')
+                          - table [ref=e4520]:
+                            - rowgroup [ref=e4521]:
+                              - row "Visitor arrivals by EVERY country of residence and purpose (Annual-Sep)" [ref=e4522]:
+                                - cell [ref=e4523]
+                                - cell [ref=e4525]
+                                - cell [ref=e4527]:
+                                  - link [ref=e4528] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330805.px')
+                                - cell [ref=e4529]:
+                                  - link [ref=e4530] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330805.px')
+                                - cell "Visitor arrivals by EVERY country of residence and purpose (Annual-Sep)" [ref=e4531]:
+                                  - link "Visitor arrivals by EVERY country of residence and purpose (Annual-Sep)" [ref=e4532] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330805.px')
+                          - table [ref=e4533]:
+                            - rowgroup [ref=e4534]:
+                              - row "Visitor arrivals by EVERY country of residence and purpose (Monthly)" [ref=e4535]:
+                                - cell [ref=e4536]
+                                - cell [ref=e4538]
+                                - cell [ref=e4540]:
+                                  - link [ref=e4541] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330801.px')
+                                - cell [ref=e4542]:
+                                  - link [ref=e4543] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330801.px')
+                                - cell "Visitor arrivals by EVERY country of residence and purpose (Monthly)" [ref=e4544]:
+                                  - link "Visitor arrivals by EVERY country of residence and purpose (Monthly)" [ref=e4545] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330801.px')
+                          - table [ref=e4546]:
+                            - rowgroup [ref=e4547]:
+                              - row "Visitor arrivals by EVERY country of residence and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4548]:
+                                - cell [ref=e4549]
+                                - cell [ref=e4551]
+                                - cell [ref=e4553]:
+                                  - link [ref=e4554] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330802.px')
+                                - cell [ref=e4555]:
+                                  - link [ref=e4556] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330802.px')
+                                - cell "Visitor arrivals by EVERY country of residence and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4557]:
+                                  - link "Visitor arrivals by EVERY country of residence and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4558] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330802.px')
+                          - table [ref=e4559]:
+                            - rowgroup [ref=e4560]:
+                              - row "Visitor arrivals from Australia by state/territory and purpose (Annual-Dec)" [ref=e4561]:
+                                - cell [ref=e4562]
+                                - cell [ref=e4564]
+                                - cell [ref=e4566]:
+                                  - link [ref=e4567] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337606.px')
+                                - cell [ref=e4568]:
+                                  - link [ref=e4569] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337606.px')
+                                - cell "Visitor arrivals from Australia by state/territory and purpose (Annual-Dec)" [ref=e4570]:
+                                  - link "Visitor arrivals from Australia by state/territory and purpose (Annual-Dec)" [ref=e4571] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337606.px')
+                          - table [ref=e4572]:
+                            - rowgroup [ref=e4573]:
+                              - row "Visitor arrivals from Australia by state/territory and purpose (Annual-Jun)" [ref=e4574]:
+                                - cell [ref=e4575]
+                                - cell [ref=e4577]
+                                - cell [ref=e4579]:
+                                  - link [ref=e4580] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337604.px')
+                                - cell [ref=e4581]:
+                                  - link [ref=e4582] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337604.px')
+                                - cell "Visitor arrivals from Australia by state/territory and purpose (Annual-Jun)" [ref=e4583]:
+                                  - link "Visitor arrivals from Australia by state/territory and purpose (Annual-Jun)" [ref=e4584] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337604.px')
+                          - table [ref=e4585]:
+                            - rowgroup [ref=e4586]:
+                              - row "Visitor arrivals from Australia by state/territory and purpose (Annual-Mar)" [ref=e4587]:
+                                - cell [ref=e4588]
+                                - cell [ref=e4590]
+                                - cell [ref=e4592]:
+                                  - link [ref=e4593] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337603.px')
+                                - cell [ref=e4594]:
+                                  - link [ref=e4595] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337603.px')
+                                - cell "Visitor arrivals from Australia by state/territory and purpose (Annual-Mar)" [ref=e4596]:
+                                  - link "Visitor arrivals from Australia by state/territory and purpose (Annual-Mar)" [ref=e4597] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337603.px')
+                          - table [ref=e4598]:
+                            - rowgroup [ref=e4599]:
+                              - row "Visitor arrivals from Australia by state/territory and purpose (Annual-Sep)" [ref=e4600]:
+                                - cell [ref=e4601]
+                                - cell [ref=e4603]
+                                - cell [ref=e4605]:
+                                  - link [ref=e4606] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337605.px')
+                                - cell [ref=e4607]:
+                                  - link [ref=e4608] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337605.px')
+                                - cell "Visitor arrivals from Australia by state/territory and purpose (Annual-Sep)" [ref=e4609]:
+                                  - link "Visitor arrivals from Australia by state/territory and purpose (Annual-Sep)" [ref=e4610] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337605.px')
+                          - table [ref=e4611]:
+                            - rowgroup [ref=e4612]:
+                              - row "Visitor arrivals from Australia by state/territory and purpose (Monthly)" [ref=e4613]:
+                                - cell [ref=e4614]
+                                - cell [ref=e4616]
+                                - cell [ref=e4618]:
+                                  - link [ref=e4619] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337601.px')
+                                - cell [ref=e4620]:
+                                  - link [ref=e4621] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337601.px')
+                                - cell "Visitor arrivals from Australia by state/territory and purpose (Monthly)" [ref=e4622]:
+                                  - link "Visitor arrivals from Australia by state/territory and purpose (Monthly)" [ref=e4623] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337601.px')
+                          - table [ref=e4624]:
+                            - rowgroup [ref=e4625]:
+                              - row "Visitor arrivals from Australia by state/territory and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4626]:
+                                - cell [ref=e4627]
+                                - cell [ref=e4629]
+                                - cell [ref=e4631]:
+                                  - link [ref=e4632] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337602.px')
+                                - cell [ref=e4633]:
+                                  - link [ref=e4634] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337602.px')
+                                - cell "Visitor arrivals from Australia by state/territory and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4635]:
+                                  - link "Visitor arrivals from Australia by state/territory and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4636] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337602.px')
+                          - table [ref=e4637]:
+                            - rowgroup [ref=e4638]:
+                              - row "Visitor arrivals from Canada by province and purpose (Annual-Dec)" [ref=e4639]:
+                                - cell [ref=e4640]
+                                - cell [ref=e4642]
+                                - cell [ref=e4644]:
+                                  - link [ref=e4645] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337706.px')
+                                - cell [ref=e4646]:
+                                  - link [ref=e4647] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337706.px')
+                                - cell "Visitor arrivals from Canada by province and purpose (Annual-Dec)" [ref=e4648]:
+                                  - link "Visitor arrivals from Canada by province and purpose (Annual-Dec)" [ref=e4649] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337706.px')
+                          - table [ref=e4650]:
+                            - rowgroup [ref=e4651]:
+                              - row "Visitor arrivals from Canada by province and purpose (Annual-Jun)" [ref=e4652]:
+                                - cell [ref=e4653]
+                                - cell [ref=e4655]
+                                - cell [ref=e4657]:
+                                  - link [ref=e4658] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337704.px')
+                                - cell [ref=e4659]:
+                                  - link [ref=e4660] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337704.px')
+                                - cell "Visitor arrivals from Canada by province and purpose (Annual-Jun)" [ref=e4661]:
+                                  - link "Visitor arrivals from Canada by province and purpose (Annual-Jun)" [ref=e4662] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337704.px')
+                          - table [ref=e4663]:
+                            - rowgroup [ref=e4664]:
+                              - row "Visitor arrivals from Canada by province and purpose (Annual-Mar)" [ref=e4665]:
+                                - cell [ref=e4666]
+                                - cell [ref=e4668]
+                                - cell [ref=e4670]:
+                                  - link [ref=e4671] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337703.px')
+                                - cell [ref=e4672]:
+                                  - link [ref=e4673] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337703.px')
+                                - cell "Visitor arrivals from Canada by province and purpose (Annual-Mar)" [ref=e4674]:
+                                  - link "Visitor arrivals from Canada by province and purpose (Annual-Mar)" [ref=e4675] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337703.px')
+                          - table [ref=e4676]:
+                            - rowgroup [ref=e4677]:
+                              - row "Visitor arrivals from Canada by province and purpose (Annual-Sep)" [ref=e4678]:
+                                - cell [ref=e4679]
+                                - cell [ref=e4681]
+                                - cell [ref=e4683]:
+                                  - link [ref=e4684] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337705.px')
+                                - cell [ref=e4685]:
+                                  - link [ref=e4686] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337705.px')
+                                - cell "Visitor arrivals from Canada by province and purpose (Annual-Sep)" [ref=e4687]:
+                                  - link "Visitor arrivals from Canada by province and purpose (Annual-Sep)" [ref=e4688] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337705.px')
+                          - table [ref=e4689]:
+                            - rowgroup [ref=e4690]:
+                              - row "Visitor arrivals from Canada by province and purpose (Monthly)" [ref=e4691]:
+                                - cell [ref=e4692]
+                                - cell [ref=e4694]
+                                - cell [ref=e4696]:
+                                  - link [ref=e4697] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337701.px')
+                                - cell [ref=e4698]:
+                                  - link [ref=e4699] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337701.px')
+                                - cell "Visitor arrivals from Canada by province and purpose (Monthly)" [ref=e4700]:
+                                  - link "Visitor arrivals from Canada by province and purpose (Monthly)" [ref=e4701] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337701.px')
+                          - table [ref=e4702]:
+                            - rowgroup [ref=e4703]:
+                              - row "Visitor arrivals from Canada by province and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4704]:
+                                - cell [ref=e4705]
+                                - cell [ref=e4707]
+                                - cell [ref=e4709]:
+                                  - link [ref=e4710] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337702.px')
+                                - cell [ref=e4711]:
+                                  - link [ref=e4712] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337702.px')
+                                - cell "Visitor arrivals from Canada by province and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4713]:
+                                  - link "Visitor arrivals from Canada by province and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4714] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM337702.px')
+                          - table [ref=e4715]:
+                            - rowgroup [ref=e4716]:
+                              - row "Visitor arrivals from China by province and purpose (Annual-Dec)" [ref=e4717]:
+                                - cell [ref=e4718]
+                                - cell [ref=e4720]
+                                - cell [ref=e4722]:
+                                  - link [ref=e4723] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338306.px')
+                                - cell [ref=e4724]:
+                                  - link [ref=e4725] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338306.px')
+                                - cell "Visitor arrivals from China by province and purpose (Annual-Dec)" [ref=e4726]:
+                                  - link "Visitor arrivals from China by province and purpose (Annual-Dec)" [ref=e4727] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338306.px')
+                          - table [ref=e4728]:
+                            - rowgroup [ref=e4729]:
+                              - row "Visitor arrivals from China by province and purpose (Annual-Jun)" [ref=e4730]:
+                                - cell [ref=e4731]
+                                - cell [ref=e4733]
+                                - cell [ref=e4735]:
+                                  - link [ref=e4736] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338304.px')
+                                - cell [ref=e4737]:
+                                  - link [ref=e4738] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338304.px')
+                                - cell "Visitor arrivals from China by province and purpose (Annual-Jun)" [ref=e4739]:
+                                  - link "Visitor arrivals from China by province and purpose (Annual-Jun)" [ref=e4740] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338304.px')
+                          - table [ref=e4741]:
+                            - rowgroup [ref=e4742]:
+                              - row "Visitor arrivals from China by province and purpose (Annual-Mar)" [ref=e4743]:
+                                - cell [ref=e4744]
+                                - cell [ref=e4746]
+                                - cell [ref=e4748]:
+                                  - link [ref=e4749] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338303.px')
+                                - cell [ref=e4750]:
+                                  - link [ref=e4751] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338303.px')
+                                - cell "Visitor arrivals from China by province and purpose (Annual-Mar)" [ref=e4752]:
+                                  - link "Visitor arrivals from China by province and purpose (Annual-Mar)" [ref=e4753] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338303.px')
+                          - table [ref=e4754]:
+                            - rowgroup [ref=e4755]:
+                              - row "Visitor arrivals from China by province and purpose (Annual-Sep)" [ref=e4756]:
+                                - cell [ref=e4757]
+                                - cell [ref=e4759]
+                                - cell [ref=e4761]:
+                                  - link [ref=e4762] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338305.px')
+                                - cell [ref=e4763]:
+                                  - link [ref=e4764] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338305.px')
+                                - cell "Visitor arrivals from China by province and purpose (Annual-Sep)" [ref=e4765]:
+                                  - link "Visitor arrivals from China by province and purpose (Annual-Sep)" [ref=e4766] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338305.px')
+                          - table [ref=e4767]:
+                            - rowgroup [ref=e4768]:
+                              - row "Visitor arrivals from China by province and purpose (Monthly)" [ref=e4769]:
+                                - cell [ref=e4770]
+                                - cell [ref=e4772]
+                                - cell [ref=e4774]:
+                                  - link [ref=e4775] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338301.px')
+                                - cell [ref=e4776]:
+                                  - link [ref=e4777] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338301.px')
+                                - cell "Visitor arrivals from China by province and purpose (Monthly)" [ref=e4778]:
+                                  - link "Visitor arrivals from China by province and purpose (Monthly)" [ref=e4779] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338301.px')
+                          - table [ref=e4780]:
+                            - rowgroup [ref=e4781]:
+                              - row "Visitor arrivals from China by province and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4782]:
+                                - cell [ref=e4783]
+                                - cell [ref=e4785]
+                                - cell [ref=e4787]:
+                                  - link [ref=e4788] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338302.px')
+                                - cell [ref=e4789]:
+                                  - link [ref=e4790] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338302.px')
+                                - cell "Visitor arrivals from China by province and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4791]:
+                                  - link "Visitor arrivals from China by province and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4792] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338302.px')
+                          - table [ref=e4793]:
+                            - rowgroup [ref=e4794]:
+                              - row "Visitor arrivals from Japan by prefecture and purpose (Annual-Dec)" [ref=e4795]:
+                                - cell [ref=e4796]
+                                - cell [ref=e4798]
+                                - cell [ref=e4800]:
+                                  - link [ref=e4801] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338206.px')
+                                - cell [ref=e4802]:
+                                  - link [ref=e4803] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338206.px')
+                                - cell "Visitor arrivals from Japan by prefecture and purpose (Annual-Dec)" [ref=e4804]:
+                                  - link "Visitor arrivals from Japan by prefecture and purpose (Annual-Dec)" [ref=e4805] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338206.px')
+                          - table [ref=e4806]:
+                            - rowgroup [ref=e4807]:
+                              - row "Visitor arrivals from Japan by prefecture and purpose (Annual-Jun)" [ref=e4808]:
+                                - cell [ref=e4809]
+                                - cell [ref=e4811]
+                                - cell [ref=e4813]:
+                                  - link [ref=e4814] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338204.px')
+                                - cell [ref=e4815]:
+                                  - link [ref=e4816] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338204.px')
+                                - cell "Visitor arrivals from Japan by prefecture and purpose (Annual-Jun)" [ref=e4817]:
+                                  - link "Visitor arrivals from Japan by prefecture and purpose (Annual-Jun)" [ref=e4818] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338204.px')
+                          - table [ref=e4819]:
+                            - rowgroup [ref=e4820]:
+                              - row "Visitor arrivals from Japan by prefecture and purpose (Annual-Mar)" [ref=e4821]:
+                                - cell [ref=e4822]
+                                - cell [ref=e4824]
+                                - cell [ref=e4826]:
+                                  - link [ref=e4827] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338203.px')
+                                - cell [ref=e4828]:
+                                  - link [ref=e4829] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338203.px')
+                                - cell "Visitor arrivals from Japan by prefecture and purpose (Annual-Mar)" [ref=e4830]:
+                                  - link "Visitor arrivals from Japan by prefecture and purpose (Annual-Mar)" [ref=e4831] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338203.px')
+                          - table [ref=e4832]:
+                            - rowgroup [ref=e4833]:
+                              - row "Visitor arrivals from Japan by prefecture and purpose (Annual-Sep)" [ref=e4834]:
+                                - cell [ref=e4835]
+                                - cell [ref=e4837]
+                                - cell [ref=e4839]:
+                                  - link [ref=e4840] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338205.px')
+                                - cell [ref=e4841]:
+                                  - link [ref=e4842] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338205.px')
+                                - cell "Visitor arrivals from Japan by prefecture and purpose (Annual-Sep)" [ref=e4843]:
+                                  - link "Visitor arrivals from Japan by prefecture and purpose (Annual-Sep)" [ref=e4844] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338205.px')
+                          - table [ref=e4845]:
+                            - rowgroup [ref=e4846]:
+                              - row "Visitor arrivals from Japan by prefecture and purpose (Monthly)" [ref=e4847]:
+                                - cell [ref=e4848]
+                                - cell [ref=e4850]
+                                - cell [ref=e4852]:
+                                  - link [ref=e4853] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338201.px')
+                                - cell [ref=e4854]:
+                                  - link [ref=e4855] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338201.px')
+                                - cell "Visitor arrivals from Japan by prefecture and purpose (Monthly)" [ref=e4856]:
+                                  - link "Visitor arrivals from Japan by prefecture and purpose (Monthly)" [ref=e4857] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338201.px')
+                          - table [ref=e4858]:
+                            - rowgroup [ref=e4859]:
+                              - row "Visitor arrivals from Japan by prefecture and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4860]:
+                                - cell [ref=e4861]
+                                - cell [ref=e4863]
+                                - cell [ref=e4865]:
+                                  - link [ref=e4866] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338202.px')
+                                - cell [ref=e4867]:
+                                  - link [ref=e4868] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338202.px')
+                                - cell "Visitor arrivals from Japan by prefecture and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4869]:
+                                  - link "Visitor arrivals from Japan by prefecture and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4870] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338202.px')
+                          - table [ref=e4871]:
+                            - rowgroup [ref=e4872]:
+                              - row "Visitor arrivals from US by state and purpose (Annual-Dec)" [ref=e4873]:
+                                - cell [ref=e4874]
+                                - cell [ref=e4876]
+                                - cell [ref=e4878]:
+                                  - link [ref=e4879] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338006.px')
+                                - cell [ref=e4880]:
+                                  - link [ref=e4881] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338006.px')
+                                - cell "Visitor arrivals from US by state and purpose (Annual-Dec)" [ref=e4882]:
+                                  - link "Visitor arrivals from US by state and purpose (Annual-Dec)" [ref=e4883] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338006.px')
+                          - table [ref=e4884]:
+                            - rowgroup [ref=e4885]:
+                              - row "Visitor arrivals from US by state and purpose (Annual-Jun)" [ref=e4886]:
+                                - cell [ref=e4887]
+                                - cell [ref=e4889]
+                                - cell [ref=e4891]:
+                                  - link [ref=e4892] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338004.px')
+                                - cell [ref=e4893]:
+                                  - link [ref=e4894] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338004.px')
+                                - cell "Visitor arrivals from US by state and purpose (Annual-Jun)" [ref=e4895]:
+                                  - link "Visitor arrivals from US by state and purpose (Annual-Jun)" [ref=e4896] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338004.px')
+                          - table [ref=e4897]:
+                            - rowgroup [ref=e4898]:
+                              - row "Visitor arrivals from US by state and purpose (Annual-Mar)" [ref=e4899]:
+                                - cell [ref=e4900]
+                                - cell [ref=e4902]
+                                - cell [ref=e4904]:
+                                  - link [ref=e4905] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338003.px')
+                                - cell [ref=e4906]:
+                                  - link [ref=e4907] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338003.px')
+                                - cell "Visitor arrivals from US by state and purpose (Annual-Mar)" [ref=e4908]:
+                                  - link "Visitor arrivals from US by state and purpose (Annual-Mar)" [ref=e4909] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338003.px')
+                          - table [ref=e4910]:
+                            - rowgroup [ref=e4911]:
+                              - row "Visitor arrivals from US by state and purpose (Annual-Sep)" [ref=e4912]:
+                                - cell [ref=e4913]
+                                - cell [ref=e4915]
+                                - cell [ref=e4917]:
+                                  - link [ref=e4918] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338005.px')
+                                - cell [ref=e4919]:
+                                  - link [ref=e4920] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338005.px')
+                                - cell "Visitor arrivals from US by state and purpose (Annual-Sep)" [ref=e4921]:
+                                  - link "Visitor arrivals from US by state and purpose (Annual-Sep)" [ref=e4922] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338005.px')
+                          - table [ref=e4923]:
+                            - rowgroup [ref=e4924]:
+                              - row "Visitor arrivals from US by state and purpose (Monthly)" [ref=e4925]:
+                                - cell [ref=e4926]
+                                - cell [ref=e4928]
+                                - cell [ref=e4930]:
+                                  - link [ref=e4931] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338001.px')
+                                - cell [ref=e4932]:
+                                  - link [ref=e4933] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338001.px')
+                                - cell "Visitor arrivals from US by state and purpose (Monthly)" [ref=e4934]:
+                                  - link "Visitor arrivals from US by state and purpose (Monthly)" [ref=e4935] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338001.px')
+                          - table [ref=e4936]:
+                            - rowgroup [ref=e4937]:
+                              - row "Visitor arrivals from US by state and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4938]:
+                                - cell [ref=e4939]
+                                - cell [ref=e4941]
+                                - cell [ref=e4943]:
+                                  - link [ref=e4944] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338002.px')
+                                - cell [ref=e4945]:
+                                  - link [ref=e4946] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338002.px')
+                                - cell "Visitor arrivals from US by state and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4947]:
+                                  - link "Visitor arrivals from US by state and purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e4948] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM338002.px')
+                          - table [ref=e4949]:
+                            - rowgroup [ref=e4950]:
+                              - row "Visitor departure totals (Annual-Dec)" [ref=e4951]:
+                                - cell [ref=e4952]
+                                - cell [ref=e4954]
+                                - cell [ref=e4956]:
+                                  - link [ref=e4957] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330906.px')
+                                - cell [ref=e4958]:
+                                  - link [ref=e4959] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330906.px')
+                                - cell "Visitor departure totals (Annual-Dec)" [ref=e4960]:
+                                  - link "Visitor departure totals (Annual-Dec)" [ref=e4961] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330906.px')
+                          - table [ref=e4962]:
+                            - rowgroup [ref=e4963]:
+                              - row "Visitor departure totals (Annual-Jun)" [ref=e4964]:
+                                - cell [ref=e4965]
+                                - cell [ref=e4967]
+                                - cell [ref=e4969]:
+                                  - link [ref=e4970] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330904.px')
+                                - cell [ref=e4971]:
+                                  - link [ref=e4972] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330904.px')
+                                - cell "Visitor departure totals (Annual-Jun)" [ref=e4973]:
+                                  - link "Visitor departure totals (Annual-Jun)" [ref=e4974] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330904.px')
+                          - table [ref=e4975]:
+                            - rowgroup [ref=e4976]:
+                              - row "Visitor departure totals (Annual-Mar)" [ref=e4977]:
+                                - cell [ref=e4978]
+                                - cell [ref=e4980]
+                                - cell [ref=e4982]:
+                                  - link [ref=e4983] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330903.px')
+                                - cell [ref=e4984]:
+                                  - link [ref=e4985] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330903.px')
+                                - cell "Visitor departure totals (Annual-Mar)" [ref=e4986]:
+                                  - link "Visitor departure totals (Annual-Mar)" [ref=e4987] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330903.px')
+                          - table [ref=e4988]:
+                            - rowgroup [ref=e4989]:
+                              - row "Visitor departure totals (Annual-Sep)" [ref=e4990]:
+                                - cell [ref=e4991]
+                                - cell [ref=e4993]
+                                - cell [ref=e4995]:
+                                  - link [ref=e4996] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330905.px')
+                                - cell [ref=e4997]:
+                                  - link [ref=e4998] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330905.px')
+                                - cell "Visitor departure totals (Annual-Sep)" [ref=e4999]:
+                                  - link "Visitor departure totals (Annual-Sep)" [ref=e5000] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330905.px')
+                          - table [ref=e5001]:
+                            - rowgroup [ref=e5002]:
+                              - row "Visitor departure totals (Monthly)" [ref=e5003]:
+                                - cell [ref=e5004]
+                                - cell [ref=e5006]
+                                - cell [ref=e5008]:
+                                  - link [ref=e5009] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330901.px')
+                                - cell [ref=e5010]:
+                                  - link [ref=e5011] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330901.px')
+                                - cell "Visitor departure totals (Monthly)" [ref=e5012]:
+                                  - link "Visitor departure totals (Monthly)" [ref=e5013] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330901.px')
+                          - table [ref=e5014]:
+                            - rowgroup [ref=e5015]:
+                              - row "Visitor departure totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5016]:
+                                - cell [ref=e5017]
+                                - cell [ref=e5019]
+                                - cell [ref=e5021]:
+                                  - link [ref=e5022] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330902.px')
+                                - cell [ref=e5023]:
+                                  - link [ref=e5024] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330902.px')
+                                - cell "Visitor departure totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5025]:
+                                  - link "Visitor departure totals (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5026] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM330902.px')
+                          - table [ref=e5027]:
+                            - rowgroup [ref=e5028]:
+                              - row "Visitors - average number in New Zealand each day by country of residence (Annual-Dec)" [ref=e5029]:
+                                - cell [ref=e5030]
+                                - cell [ref=e5032]
+                                - cell [ref=e5034]:
+                                  - link [ref=e5035] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346906.px')
+                                - cell [ref=e5036]:
+                                  - link [ref=e5037] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346906.px')
+                                - cell "Visitors - average number in New Zealand each day by country of residence (Annual-Dec)" [ref=e5038]:
+                                  - link "Visitors - average number in New Zealand each day by country of residence (Annual-Dec)" [ref=e5039] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346906.px')
+                          - table [ref=e5040]:
+                            - rowgroup [ref=e5041]:
+                              - row "Visitors - average number in New Zealand each day by country of residence (Annual-Jun)" [ref=e5042]:
+                                - cell [ref=e5043]
+                                - cell [ref=e5045]
+                                - cell [ref=e5047]:
+                                  - link [ref=e5048] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346904.px')
+                                - cell [ref=e5049]:
+                                  - link [ref=e5050] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346904.px')
+                                - cell "Visitors - average number in New Zealand each day by country of residence (Annual-Jun)" [ref=e5051]:
+                                  - link "Visitors - average number in New Zealand each day by country of residence (Annual-Jun)" [ref=e5052] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346904.px')
+                          - table [ref=e5053]:
+                            - rowgroup [ref=e5054]:
+                              - row "Visitors - average number in New Zealand each day by country of residence (Annual-Mar)" [ref=e5055]:
+                                - cell [ref=e5056]
+                                - cell [ref=e5058]
+                                - cell [ref=e5060]:
+                                  - link [ref=e5061] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346903.px')
+                                - cell [ref=e5062]:
+                                  - link [ref=e5063] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346903.px')
+                                - cell "Visitors - average number in New Zealand each day by country of residence (Annual-Mar)" [ref=e5064]:
+                                  - link "Visitors - average number in New Zealand each day by country of residence (Annual-Mar)" [ref=e5065] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346903.px')
+                          - table [ref=e5066]:
+                            - rowgroup [ref=e5067]:
+                              - row "Visitors - average number in New Zealand each day by country of residence (Annual-Sep)" [ref=e5068]:
+                                - cell [ref=e5069]
+                                - cell [ref=e5071]
+                                - cell [ref=e5073]:
+                                  - link [ref=e5074] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346905.px')
+                                - cell [ref=e5075]:
+                                  - link [ref=e5076] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346905.px')
+                                - cell "Visitors - average number in New Zealand each day by country of residence (Annual-Sep)" [ref=e5077]:
+                                  - link "Visitors - average number in New Zealand each day by country of residence (Annual-Sep)" [ref=e5078] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346905.px')
+                          - table [ref=e5079]:
+                            - rowgroup [ref=e5080]:
+                              - row "Visitors - average number in New Zealand each day by country of residence (Monthly)" [ref=e5081]:
+                                - cell [ref=e5082]
+                                - cell [ref=e5084]
+                                - cell [ref=e5086]:
+                                  - link [ref=e5087] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346901.px')
+                                - cell [ref=e5088]:
+                                  - link [ref=e5089] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346901.px')
+                                - cell "Visitors - average number in New Zealand each day by country of residence (Monthly)" [ref=e5090]:
+                                  - link "Visitors - average number in New Zealand each day by country of residence (Monthly)" [ref=e5091] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346901.px')
+                          - table [ref=e5092]:
+                            - rowgroup [ref=e5093]:
+                              - row "Visitors - average number in New Zealand each day by country of residence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5094]:
+                                - cell [ref=e5095]
+                                - cell [ref=e5097]
+                                - cell [ref=e5099]:
+                                  - link [ref=e5100] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346902.px')
+                                - cell [ref=e5101]:
+                                  - link [ref=e5102] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346902.px')
+                                - cell "Visitors - average number in New Zealand each day by country of residence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5103]:
+                                  - link "Visitors - average number in New Zealand each day by country of residence (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5104] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM346902.px')
+                          - table [ref=e5105]:
+                            - rowgroup [ref=e5106]:
+                              - row "Visitors - average number in New Zealand each day by travel purpose (Annual-Dec)" [ref=e5107]:
+                                - cell [ref=e5108]
+                                - cell [ref=e5110]
+                                - cell [ref=e5112]:
+                                  - link [ref=e5113] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347006.px')
+                                - cell [ref=e5114]:
+                                  - link [ref=e5115] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347006.px')
+                                - cell "Visitors - average number in New Zealand each day by travel purpose (Annual-Dec)" [ref=e5116]:
+                                  - link "Visitors - average number in New Zealand each day by travel purpose (Annual-Dec)" [ref=e5117] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347006.px')
+                          - table [ref=e5118]:
+                            - rowgroup [ref=e5119]:
+                              - row "Visitors - average number in New Zealand each day by travel purpose (Annual-Jun)" [ref=e5120]:
+                                - cell [ref=e5121]
+                                - cell [ref=e5123]
+                                - cell [ref=e5125]:
+                                  - link [ref=e5126] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347004.px')
+                                - cell [ref=e5127]:
+                                  - link [ref=e5128] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347004.px')
+                                - cell "Visitors - average number in New Zealand each day by travel purpose (Annual-Jun)" [ref=e5129]:
+                                  - link "Visitors - average number in New Zealand each day by travel purpose (Annual-Jun)" [ref=e5130] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347004.px')
+                          - table [ref=e5131]:
+                            - rowgroup [ref=e5132]:
+                              - row "Visitors - average number in New Zealand each day by travel purpose (Annual-Mar)" [ref=e5133]:
+                                - cell [ref=e5134]
+                                - cell [ref=e5136]
+                                - cell [ref=e5138]:
+                                  - link [ref=e5139] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347003.px')
+                                - cell [ref=e5140]:
+                                  - link [ref=e5141] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347003.px')
+                                - cell "Visitors - average number in New Zealand each day by travel purpose (Annual-Mar)" [ref=e5142]:
+                                  - link "Visitors - average number in New Zealand each day by travel purpose (Annual-Mar)" [ref=e5143] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347003.px')
+                          - table [ref=e5144]:
+                            - rowgroup [ref=e5145]:
+                              - row "Visitors - average number in New Zealand each day by travel purpose (Annual-Sep)" [ref=e5146]:
+                                - cell [ref=e5147]
+                                - cell [ref=e5149]
+                                - cell [ref=e5151]:
+                                  - link [ref=e5152] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347005.px')
+                                - cell [ref=e5153]:
+                                  - link [ref=e5154] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347005.px')
+                                - cell "Visitors - average number in New Zealand each day by travel purpose (Annual-Sep)" [ref=e5155]:
+                                  - link "Visitors - average number in New Zealand each day by travel purpose (Annual-Sep)" [ref=e5156] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347005.px')
+                          - table [ref=e5157]:
+                            - rowgroup [ref=e5158]:
+                              - row "Visitors - average number in New Zealand each day by travel purpose (Monthly)" [ref=e5159]:
+                                - cell [ref=e5160]
+                                - cell [ref=e5162]
+                                - cell [ref=e5164]:
+                                  - link [ref=e5165] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347001.px')
+                                - cell [ref=e5166]:
+                                  - link [ref=e5167] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347001.px')
+                                - cell "Visitors - average number in New Zealand each day by travel purpose (Monthly)" [ref=e5168]:
+                                  - link "Visitors - average number in New Zealand each day by travel purpose (Monthly)" [ref=e5169] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347001.px')
+                          - table [ref=e5170]:
+                            - rowgroup [ref=e5171]:
+                              - row "Visitors - average number in New Zealand each day by travel purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5172]:
+                                - cell [ref=e5173]
+                                - cell [ref=e5175]
+                                - cell [ref=e5177]:
+                                  - link [ref=e5178] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347002.px')
+                                - cell [ref=e5179]:
+                                  - link [ref=e5180] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347002.px')
+                                - cell "Visitors - average number in New Zealand each day by travel purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5181]:
+                                  - link "Visitors - average number in New Zealand each day by travel purpose (Qrtly-Mar/Jun/Sep/Dec)" [ref=e5182] [cursor=pointer]:
+                                    - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM347002.px')
+                        - table [ref=e5183]:
+                          - rowgroup [ref=e5184]:
+                            - row "Tourism Satellite Account - TSA" [ref=e5185]:
+                              - cell [ref=e5186]
+                              - cell [ref=e5188]:
+                                - link [ref=e5189] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tTourism\\Tourism Satellite Account - TSA')
+                              - cell [ref=e5190]:
+                                - link [ref=e5191] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\Tourism Satellite Account - TSA')
+                              - cell "Tourism Satellite Account - TSA" [ref=e5192]:
+                                - link "Tourism Satellite Account - TSA" [ref=e5193] [cursor=pointer]:
+                                  - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sTourism\\Tourism Satellite Account - TSA')
+                      - table [ref=e5194]:
+                        - rowgroup [ref=e5195]:
+                          - row "Work income and spending" [ref=e5196]:
+                            - cell [ref=e5197]:
+                              - link [ref=e5198] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','tWork income and spending')
+                            - cell [ref=e5199]:
+                              - link [ref=e5200] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sWork income and spending')
+                            - cell "Work income and spending" [ref=e5201]:
+                              - link "Work income and spending" [ref=e5202] [cursor=pointer]:
+                                - /url: javascript:__doPostBack('ctl00$MainContent$tvBrowseNodes','sWork income and spending')
+              - 'row "Bullet Point: NoticesNotices Data changes and unscheduled releases can be viewed by date. Frequently asked questions. See the release calendar on stats.govt.nz for scheduled releases." [ref=e155]':
+                - 'cell "Bullet Point: NoticesNotices Data changes and unscheduled releases can be viewed by date. Frequently asked questions. See the release calendar on stats.govt.nz for scheduled releases." [ref=e156]':
+                  - table [ref=e157]:
+                    - rowgroup [ref=e158]:
+                      - 'row "Bullet Point: NoticesNotices Data changes and unscheduled releases can be viewed by date. Frequently asked questions. See the release calendar on stats.govt.nz for scheduled releases." [ref=e159]':
+                        - 'cell "Bullet Point: NoticesNotices Data changes and unscheduled releases can be viewed by date. Frequently asked questions. See the release calendar on stats.govt.nz for scheduled releases." [ref=e160]':
+                          - 'heading "Bullet Point: NoticesNotices" [level=4] [ref=e161]':
+                            - 'img "Bullet Point: Notices" [ref=e162]'
+                            - text: Notices
+                          - list [ref=e163]:
+                            - listitem [ref=e164]:
+                              - text: Data changes and unscheduled releases can be viewed by
+                              - link "date" [ref=e165] [cursor=pointer]:
+                                - /url: https://www.stats.govt.nz/large-datasets/infoshare-changes-by-date/
+                              - text: .
+                            - listitem [ref=e166]:
+                              - link "Frequently asked questions" [ref=e167] [cursor=pointer]:
+                                - /url: https://www.stats.govt.nz/large-datasets/help-using-infoshare/
+                              - text: .
+                            - listitem [ref=e168]:
+                              - text: See the
+                              - link "release calendar" [ref=e169] [cursor=pointer]:
+                                - /url: https://www.stats.govt.nz/release-calendar
+                              - text: on stats.govt.nz for scheduled releases.
+      - row "About Infoshare | Accessibility | Help | Copyright & terms of use! | Privacy | Contact us stats.govt.nz! newzealand.govt.nz - connecting you to New Zealand central & local government services." [ref=e170]:
+        - cell "About Infoshare | Accessibility | Help | Copyright & terms of use! | Privacy | Contact us stats.govt.nz! newzealand.govt.nz - connecting you to New Zealand central & local government services." [ref=e171]:
+          - table [ref=e172]:
+            - rowgroup [ref=e173]:
+              - row "About Infoshare | Accessibility | Help | Copyright & terms of use! | Privacy | Contact us stats.govt.nz! newzealand.govt.nz - connecting you to New Zealand central & local government services." [ref=e174]:
+                - cell [ref=e175]
+                - cell "About Infoshare | Accessibility | Help | Copyright & terms of use! | Privacy | Contact us" [ref=e176]:
+                  - link "About Infoshare" [ref=e177] [cursor=pointer]:
+                    - /url: javascript:help('Help/getting-started.asp#about');
+                  - text: "|"
+                  - link "Accessibility" [ref=e178] [cursor=pointer]:
+                    - /url: javascript:help('Help/getting-started.asp#access');
+                  - text: "|"
+                  - link "Help" [ref=e179] [cursor=pointer]:
+                    - /url: javascript:help('Help/help-main.asp?PLanguage=1');
+                  - text: "|"
+                  - link "Copyright & terms of use!" [ref=e180] [cursor=pointer]:
+                    - /url: https://www.stats.govt.nz/about-us/copyright/
+                  - text: "|"
+                  - link "Privacy" [ref=e181] [cursor=pointer]:
+                    - /url: https://www.stats.govt.nz/about-us/privacy-statement/
+                  - text: "|"
+                  - link "Contact us" [ref=e182] [cursor=pointer]:
+                    - /url: https://www.stats.govt.nz/contact-us/
+                - cell "stats.govt.nz!" [ref=e183]:
+                  - link "stats.govt.nz!" [ref=e184] [cursor=pointer]:
+                    - /url: http://www.stats.govt.nz/
+                - cell "newzealand.govt.nz - connecting you to New Zealand central & local government services." [ref=e185]:
+                  - link "newzealand.govt.nz - connecting you to New Zealand central & local government services." [ref=e186] [cursor=pointer]:
+                    - /url: http://newzealand.govt.nz/
+                    - img "newzealand.govt.nz - connecting you to New Zealand central & local government services." [ref=e187]
+          - link "Access keys":
+            - /url: javascript:help('Help/getting-started.asp#accesskeys');
+          - link "Infoshare landing page":
+            - /url: Default.aspx
+          - link "Infoshare help":
+            - /url: javascript:help('Help/help-main.asp?PLanguage=1');
+          - link "Infoshare search page":
+            - /url: SearchPage.aspx
+          - link "Contact us":
+            - /url: http://archive.stats.govt.nz/contact-us/default.htm
+          - link "Page contents":
+            - /url: "#contentTop"
+          - link "http://www.stats.govt.nz/":
+            - /url: http://www.stats.govt.nz/
+          - link "http://www.govt.nz/":
+            - /url: http://www.govt.nz/
+  - iframe [ref=e328]:
+    - main [ref=f4e2]:
+      - generic [ref=f4e5]:
+        - paragraph [ref=f4e6]: Want data or information? Click here to leave us a message.
+        - button "Open LiveChat chat widget" [ref=f4e7] [cursor=pointer]:
+          - img [ref=f4e9]

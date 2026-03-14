@@ -1,0 +1,2108 @@
+Month,Count,Direction,Visa
+2001-01-01,0.0,Arrivals,Residence
+2001-02-01,0.0,Arrivals,Residence
+2001-03-01,0.0,Arrivals,Residence
+2001-04-01,0.0,Arrivals,Residence
+2001-05-01,0.0,Arrivals,Residence
+2001-06-01,0.0,Arrivals,Residence
+2001-07-01,0.0,Arrivals,Residence
+2001-08-01,0.0,Arrivals,Residence
+2001-09-01,0.0,Arrivals,Residence
+2001-10-01,0.0,Arrivals,Residence
+2001-11-01,0.0,Arrivals,Residence
+2001-12-01,0.0,Arrivals,Residence
+2002-01-01,0.0,Arrivals,Residence
+2002-02-01,0.0,Arrivals,Residence
+2002-03-01,0.0,Arrivals,Residence
+2002-04-01,0.0,Arrivals,Residence
+2002-05-01,0.0,Arrivals,Residence
+2002-06-01,0.0,Arrivals,Residence
+2002-07-01,0.0,Arrivals,Residence
+2002-08-01,0.0,Arrivals,Residence
+2002-09-01,0.0,Arrivals,Residence
+2002-10-01,0.0,Arrivals,Residence
+2002-11-01,0.0,Arrivals,Residence
+2002-12-01,0.0,Arrivals,Residence
+2003-01-01,0.0,Arrivals,Residence
+2003-02-01,0.0,Arrivals,Residence
+2003-03-01,0.0,Arrivals,Residence
+2003-04-01,0.0,Arrivals,Residence
+2003-05-01,0.0,Arrivals,Residence
+2003-06-01,0.0,Arrivals,Residence
+2003-07-01,1894.0,Arrivals,Residence
+2003-08-01,1926.0,Arrivals,Residence
+2003-09-01,1741.0,Arrivals,Residence
+2003-10-01,1829.0,Arrivals,Residence
+2003-11-01,1834.0,Arrivals,Residence
+2003-12-01,1692.0,Arrivals,Residence
+2004-01-01,2100.0,Arrivals,Residence
+2004-02-01,1744.0,Arrivals,Residence
+2004-03-01,1235.0,Arrivals,Residence
+2004-04-01,1103.0,Arrivals,Residence
+2004-05-01,1217.0,Arrivals,Residence
+2004-06-01,1160.0,Arrivals,Residence
+2004-07-01,1449.0,Arrivals,Residence
+2004-08-01,1213.0,Arrivals,Residence
+2004-09-01,1403.0,Arrivals,Residence
+2004-10-01,1247.0,Arrivals,Residence
+2004-11-01,1355.0,Arrivals,Residence
+2004-12-01,1451.0,Arrivals,Residence
+2005-01-01,1845.0,Arrivals,Residence
+2005-02-01,1477.0,Arrivals,Residence
+2005-03-01,1302.0,Arrivals,Residence
+2005-04-01,1484.0,Arrivals,Residence
+2005-05-01,1418.0,Arrivals,Residence
+2005-06-01,1361.0,Arrivals,Residence
+2005-07-01,1502.0,Arrivals,Residence
+2005-08-01,1529.0,Arrivals,Residence
+2005-09-01,1732.0,Arrivals,Residence
+2005-10-01,1533.0,Arrivals,Residence
+2005-11-01,1679.0,Arrivals,Residence
+2005-12-01,1595.0,Arrivals,Residence
+2006-01-01,2013.0,Arrivals,Residence
+2006-02-01,1472.0,Arrivals,Residence
+2006-03-01,1496.0,Arrivals,Residence
+2006-04-01,1314.0,Arrivals,Residence
+2006-05-01,1391.0,Arrivals,Residence
+2006-06-01,1543.0,Arrivals,Residence
+2006-07-01,1657.0,Arrivals,Residence
+2006-08-01,1779.0,Arrivals,Residence
+2006-09-01,1902.0,Arrivals,Residence
+2006-10-01,1674.0,Arrivals,Residence
+2006-11-01,1646.0,Arrivals,Residence
+2006-12-01,1480.0,Arrivals,Residence
+2007-01-01,1967.0,Arrivals,Residence
+2007-02-01,1451.0,Arrivals,Residence
+2007-03-01,1338.0,Arrivals,Residence
+2007-04-01,1031.0,Arrivals,Residence
+2007-05-01,1046.0,Arrivals,Residence
+2007-06-01,1298.0,Arrivals,Residence
+2007-07-01,1336.0,Arrivals,Residence
+2007-08-01,1596.0,Arrivals,Residence
+2007-09-01,1532.0,Arrivals,Residence
+2007-10-01,1454.0,Arrivals,Residence
+2007-11-01,1375.0,Arrivals,Residence
+2007-12-01,1334.0,Arrivals,Residence
+2008-01-01,1662.0,Arrivals,Residence
+2008-02-01,1391.0,Arrivals,Residence
+2008-03-01,1241.0,Arrivals,Residence
+2008-04-01,1157.0,Arrivals,Residence
+2008-05-01,1183.0,Arrivals,Residence
+2008-06-01,1252.0,Arrivals,Residence
+2008-07-01,1196.0,Arrivals,Residence
+2008-08-01,1433.0,Arrivals,Residence
+2008-09-01,1474.0,Arrivals,Residence
+2008-10-01,1348.0,Arrivals,Residence
+2008-11-01,1350.0,Arrivals,Residence
+2008-12-01,1278.0,Arrivals,Residence
+2009-01-01,1728.0,Arrivals,Residence
+2009-02-01,1231.0,Arrivals,Residence
+2009-03-01,1195.0,Arrivals,Residence
+2009-04-01,1031.0,Arrivals,Residence
+2009-05-01,1065.0,Arrivals,Residence
+2009-06-01,1127.0,Arrivals,Residence
+2009-07-01,1192.0,Arrivals,Residence
+2009-08-01,1239.0,Arrivals,Residence
+2009-09-01,1389.0,Arrivals,Residence
+2009-10-01,1125.0,Arrivals,Residence
+2009-11-01,1211.0,Arrivals,Residence
+2009-12-01,1285.0,Arrivals,Residence
+2010-01-01,1498.0,Arrivals,Residence
+2010-02-01,975.0,Arrivals,Residence
+2010-03-01,1127.0,Arrivals,Residence
+2010-04-01,976.0,Arrivals,Residence
+2010-05-01,992.0,Arrivals,Residence
+2010-06-01,983.0,Arrivals,Residence
+2010-07-01,1042.0,Arrivals,Residence
+2010-08-01,1318.0,Arrivals,Residence
+2010-09-01,1233.0,Arrivals,Residence
+2010-10-01,1131.0,Arrivals,Residence
+2010-11-01,1110.0,Arrivals,Residence
+2010-12-01,1150.0,Arrivals,Residence
+2011-01-01,1350.0,Arrivals,Residence
+2011-02-01,1108.0,Arrivals,Residence
+2011-03-01,1176.0,Arrivals,Residence
+2011-04-01,983.0,Arrivals,Residence
+2011-05-01,1052.0,Arrivals,Residence
+2011-06-01,1088.0,Arrivals,Residence
+2011-07-01,1089.0,Arrivals,Residence
+2011-08-01,1202.0,Arrivals,Residence
+2011-09-01,1130.0,Arrivals,Residence
+2011-10-01,1175.0,Arrivals,Residence
+2011-11-01,1190.0,Arrivals,Residence
+2011-12-01,1241.0,Arrivals,Residence
+2012-01-01,1359.0,Arrivals,Residence
+2012-02-01,1061.0,Arrivals,Residence
+2012-03-01,1250.0,Arrivals,Residence
+2012-04-01,937.0,Arrivals,Residence
+2012-05-01,1157.0,Arrivals,Residence
+2012-06-01,1172.0,Arrivals,Residence
+2012-07-01,879.0,Arrivals,Residence
+2012-08-01,1280.0,Arrivals,Residence
+2012-09-01,1100.0,Arrivals,Residence
+2012-10-01,1186.0,Arrivals,Residence
+2012-11-01,1260.0,Arrivals,Residence
+2012-12-01,1211.0,Arrivals,Residence
+2013-01-01,1371.0,Arrivals,Residence
+2013-02-01,1036.0,Arrivals,Residence
+2013-03-01,1224.0,Arrivals,Residence
+2013-04-01,1050.0,Arrivals,Residence
+2013-05-01,962.0,Arrivals,Residence
+2013-06-01,974.0,Arrivals,Residence
+2013-07-01,988.0,Arrivals,Residence
+2013-08-01,1128.0,Arrivals,Residence
+2013-09-01,1189.0,Arrivals,Residence
+2013-10-01,1093.0,Arrivals,Residence
+2013-11-01,1187.0,Arrivals,Residence
+2013-12-01,1306.0,Arrivals,Residence
+2014-01-01,1307.0,Arrivals,Residence
+2014-02-01,1202.0,Arrivals,Residence
+2014-03-01,1320.0,Arrivals,Residence
+2014-04-01,1060.0,Arrivals,Residence
+2014-05-01,1011.0,Arrivals,Residence
+2014-06-01,1243.0,Arrivals,Residence
+2014-07-01,968.0,Arrivals,Residence
+2014-08-01,1347.0,Arrivals,Residence
+2014-09-01,1205.0,Arrivals,Residence
+2014-10-01,1331.0,Arrivals,Residence
+2014-11-01,1338.0,Arrivals,Residence
+2014-12-01,1179.0,Arrivals,Residence
+2015-01-01,1354.0,Arrivals,Residence
+2015-02-01,1133.0,Arrivals,Residence
+2015-03-01,1289.0,Arrivals,Residence
+2015-04-01,1012.0,Arrivals,Residence
+2015-05-01,1235.0,Arrivals,Residence
+2015-06-01,1201.0,Arrivals,Residence
+2015-07-01,996.0,Arrivals,Residence
+2015-08-01,1340.0,Arrivals,Residence
+2015-09-01,1270.0,Arrivals,Residence
+2015-10-01,1399.0,Arrivals,Residence
+2015-11-01,1314.0,Arrivals,Residence
+2015-12-01,1439.0,Arrivals,Residence
+2016-01-01,1413.0,Arrivals,Residence
+2016-02-01,1486.0,Arrivals,Residence
+2016-03-01,1621.0,Arrivals,Residence
+2016-04-01,1284.0,Arrivals,Residence
+2016-05-01,1340.0,Arrivals,Residence
+2016-06-01,1310.0,Arrivals,Residence
+2016-07-01,1340.0,Arrivals,Residence
+2016-08-01,1396.0,Arrivals,Residence
+2016-09-01,1504.0,Arrivals,Residence
+2016-10-01,1584.0,Arrivals,Residence
+2016-11-01,1450.0,Arrivals,Residence
+2016-12-01,1433.0,Arrivals,Residence
+2017-01-01,1528.0,Arrivals,Residence
+2017-02-01,1452.0,Arrivals,Residence
+2017-03-01,1438.0,Arrivals,Residence
+2017-04-01,1151.0,Arrivals,Residence
+2017-05-01,1311.0,Arrivals,Residence
+2017-06-01,1309.0,Arrivals,Residence
+2017-07-01,1268.0,Arrivals,Residence
+2017-08-01,1345.0,Arrivals,Residence
+2017-09-01,1184.0,Arrivals,Residence
+2017-10-01,1244.0,Arrivals,Residence
+2017-11-01,1169.0,Arrivals,Residence
+2017-12-01,1202.0,Arrivals,Residence
+2018-01-01,1504.0,Arrivals,Residence
+2018-02-01,933.0,Arrivals,Residence
+2018-03-01,1203.0,Arrivals,Residence
+2018-04-01,908.0,Arrivals,Residence
+2018-05-01,1167.0,Arrivals,Residence
+2018-06-01,956.0,Arrivals,Residence
+2018-07-01,998.0,Arrivals,Residence
+2018-08-01,1170.0,Arrivals,Residence
+2018-09-01,1005.0,Arrivals,Residence
+2018-10-01,1171.0,Arrivals,Residence
+2018-11-01,1055.0,Arrivals,Residence
+2018-12-01,1198.0,Arrivals,Residence
+2019-01-01,1302.0,Arrivals,Residence
+2019-02-01,960.0,Arrivals,Residence
+2019-03-01,1235.0,Arrivals,Residence
+2019-04-01,798.0,Arrivals,Residence
+2019-05-01,1075.0,Arrivals,Residence
+2019-06-01,1211.0,Arrivals,Residence
+2019-07-01,1064.0,Arrivals,Residence
+2019-08-01,1286.0,Arrivals,Residence
+2019-09-01,1329.0,Arrivals,Residence
+2019-10-01,1357.0,Arrivals,Residence
+2019-11-01,1417.0,Arrivals,Residence
+2019-12-01,1465.0,Arrivals,Residence
+2020-01-01,1423.0,Arrivals,Residence
+2020-02-01,1244.0,Arrivals,Residence
+2020-03-01,1027.0,Arrivals,Residence
+2020-04-01,88.0,Arrivals,Residence
+2020-05-01,135.0,Arrivals,Residence
+2020-06-01,339.0,Arrivals,Residence
+2020-07-01,440.0,Arrivals,Residence
+2020-08-01,584.0,Arrivals,Residence
+2020-09-01,526.0,Arrivals,Residence
+2020-10-01,730.0,Arrivals,Residence
+2020-11-01,545.0,Arrivals,Residence
+2020-12-01,569.0,Arrivals,Residence
+2021-01-01,659.0,Arrivals,Residence
+2021-02-01,614.0,Arrivals,Residence
+2021-03-01,732.0,Arrivals,Residence
+2021-04-01,753.0,Arrivals,Residence
+2021-05-01,765.0,Arrivals,Residence
+2021-06-01,805.0,Arrivals,Residence
+2021-07-01,762.0,Arrivals,Residence
+2021-08-01,560.0,Arrivals,Residence
+2021-09-01,395.0,Arrivals,Residence
+2021-10-01,574.0,Arrivals,Residence
+2021-11-01,648.0,Arrivals,Residence
+2021-12-01,707.0,Arrivals,Residence
+2022-01-01,543.0,Arrivals,Residence
+2022-02-01,318.0,Arrivals,Residence
+2022-03-01,1097.0,Arrivals,Residence
+2022-04-01,1362.0,Arrivals,Residence
+2022-05-01,1193.0,Arrivals,Residence
+2022-06-01,1289.0,Arrivals,Residence
+2022-07-01,1308.0,Arrivals,Residence
+2022-08-01,1576.0,Arrivals,Residence
+2022-09-01,1703.0,Arrivals,Residence
+2022-10-01,1412.0,Arrivals,Residence
+2022-11-01,2092.0,Arrivals,Residence
+2022-12-01,1922.0,Arrivals,Residence
+2023-01-01,1776.0,Arrivals,Residence
+2023-02-01,2400.0,Arrivals,Residence
+2023-03-01,3725.0,Arrivals,Residence
+2023-04-01,2618.0,Arrivals,Residence
+2023-05-01,2908.0,Arrivals,Residence
+2023-06-01,3200.0,Arrivals,Residence
+2023-07-01,2571.0,Arrivals,Residence
+2023-08-01,3684.0,Arrivals,Residence
+2023-09-01,2679.0,Arrivals,Residence
+2023-10-01,1952.0,Arrivals,Residence
+2023-11-01,2537.0,Arrivals,Residence
+2023-12-01,2136.0,Arrivals,Residence
+2024-01-01,2072.0,Arrivals,Residence
+2024-02-01,1849.0,Arrivals,Residence
+2024-03-01,1994.0,Arrivals,Residence
+2024-04-01,1621.0,Arrivals,Residence
+2024-05-01,1677.0,Arrivals,Residence
+2024-06-01,2006.0,Arrivals,Residence
+2024-07-01,1568.0,Arrivals,Residence
+2024-08-01,1731.0,Arrivals,Residence
+2024-09-01,1796.0,Arrivals,Residence
+2024-10-01,1468.0,Arrivals,Residence
+2024-11-01,1806.0,Arrivals,Residence
+2024-12-01,1626.0,Arrivals,Residence
+2025-01-01,1561.0,Arrivals,Residence
+2025-02-01,1650.0,Arrivals,Residence
+2025-03-01,1497.0,Arrivals,Residence
+2025-04-01,1238.0,Arrivals,Residence
+2025-05-01,1469.0,Arrivals,Residence
+2025-06-01,1592.0,Arrivals,Residence
+2025-07-01,1273.0,Arrivals,Residence
+2025-08-01,1512.0,Arrivals,Residence
+2025-09-01,1612.0,Arrivals,Residence
+2025-10-01,1322.0,Arrivals,Residence
+2025-11-01,1480.0,Arrivals,Residence
+2025-12-01,1501.0,Arrivals,Residence
+2026-01-01,1852.0,Arrivals,Residence
+2001-01-01,0.0,Arrivals,Student
+2001-02-01,0.0,Arrivals,Student
+2001-03-01,0.0,Arrivals,Student
+2001-04-01,0.0,Arrivals,Student
+2001-05-01,0.0,Arrivals,Student
+2001-06-01,0.0,Arrivals,Student
+2001-07-01,0.0,Arrivals,Student
+2001-08-01,0.0,Arrivals,Student
+2001-09-01,0.0,Arrivals,Student
+2001-10-01,0.0,Arrivals,Student
+2001-11-01,0.0,Arrivals,Student
+2001-12-01,0.0,Arrivals,Student
+2002-01-01,0.0,Arrivals,Student
+2002-02-01,0.0,Arrivals,Student
+2002-03-01,0.0,Arrivals,Student
+2002-04-01,0.0,Arrivals,Student
+2002-05-01,0.0,Arrivals,Student
+2002-06-01,0.0,Arrivals,Student
+2002-07-01,0.0,Arrivals,Student
+2002-08-01,0.0,Arrivals,Student
+2002-09-01,0.0,Arrivals,Student
+2002-10-01,0.0,Arrivals,Student
+2002-11-01,0.0,Arrivals,Student
+2002-12-01,0.0,Arrivals,Student
+2003-01-01,0.0,Arrivals,Student
+2003-02-01,0.0,Arrivals,Student
+2003-03-01,0.0,Arrivals,Student
+2003-04-01,0.0,Arrivals,Student
+2003-05-01,0.0,Arrivals,Student
+2003-06-01,0.0,Arrivals,Student
+2003-07-01,2072.0,Arrivals,Student
+2003-08-01,940.0,Arrivals,Student
+2003-09-01,922.0,Arrivals,Student
+2003-10-01,643.0,Arrivals,Student
+2003-11-01,585.0,Arrivals,Student
+2003-12-01,354.0,Arrivals,Student
+2004-01-01,1464.0,Arrivals,Student
+2004-02-01,1865.0,Arrivals,Student
+2004-03-01,554.0,Arrivals,Student
+2004-04-01,777.0,Arrivals,Student
+2004-05-01,388.0,Arrivals,Student
+2004-06-01,539.0,Arrivals,Student
+2004-07-01,1259.0,Arrivals,Student
+2004-08-01,546.0,Arrivals,Student
+2004-09-01,559.0,Arrivals,Student
+2004-10-01,453.0,Arrivals,Student
+2004-11-01,417.0,Arrivals,Student
+2004-12-01,271.0,Arrivals,Student
+2005-01-01,1123.0,Arrivals,Student
+2005-02-01,1608.0,Arrivals,Student
+2005-03-01,510.0,Arrivals,Student
+2005-04-01,571.0,Arrivals,Student
+2005-05-01,375.0,Arrivals,Student
+2005-06-01,454.0,Arrivals,Student
+2005-07-01,1115.0,Arrivals,Student
+2005-08-01,578.0,Arrivals,Student
+2005-09-01,551.0,Arrivals,Student
+2005-10-01,415.0,Arrivals,Student
+2005-11-01,404.0,Arrivals,Student
+2005-12-01,354.0,Arrivals,Student
+2006-01-01,983.0,Arrivals,Student
+2006-02-01,1910.0,Arrivals,Student
+2006-03-01,610.0,Arrivals,Student
+2006-04-01,621.0,Arrivals,Student
+2006-05-01,406.0,Arrivals,Student
+2006-06-01,544.0,Arrivals,Student
+2006-07-01,1448.0,Arrivals,Student
+2006-08-01,616.0,Arrivals,Student
+2006-09-01,684.0,Arrivals,Student
+2006-10-01,581.0,Arrivals,Student
+2006-11-01,631.0,Arrivals,Student
+2006-12-01,500.0,Arrivals,Student
+2007-01-01,1254.0,Arrivals,Student
+2007-02-01,2257.0,Arrivals,Student
+2007-03-01,887.0,Arrivals,Student
+2007-04-01,845.0,Arrivals,Student
+2007-05-01,509.0,Arrivals,Student
+2007-06-01,856.0,Arrivals,Student
+2007-07-01,1722.0,Arrivals,Student
+2007-08-01,975.0,Arrivals,Student
+2007-09-01,947.0,Arrivals,Student
+2007-10-01,812.0,Arrivals,Student
+2007-11-01,823.0,Arrivals,Student
+2007-12-01,676.0,Arrivals,Student
+2008-01-01,1588.0,Arrivals,Student
+2008-02-01,2920.0,Arrivals,Student
+2008-03-01,1106.0,Arrivals,Student
+2008-04-01,970.0,Arrivals,Student
+2008-05-01,1006.0,Arrivals,Student
+2008-06-01,1031.0,Arrivals,Student
+2008-07-01,2522.0,Arrivals,Student
+2008-08-01,1289.0,Arrivals,Student
+2008-09-01,1114.0,Arrivals,Student
+2008-10-01,1062.0,Arrivals,Student
+2008-11-01,927.0,Arrivals,Student
+2008-12-01,679.0,Arrivals,Student
+2009-01-01,1706.0,Arrivals,Student
+2009-02-01,3298.0,Arrivals,Student
+2009-03-01,1240.0,Arrivals,Student
+2009-04-01,1139.0,Arrivals,Student
+2009-05-01,882.0,Arrivals,Student
+2009-06-01,897.0,Arrivals,Student
+2009-07-01,2460.0,Arrivals,Student
+2009-08-01,1053.0,Arrivals,Student
+2009-09-01,1183.0,Arrivals,Student
+2009-10-01,1008.0,Arrivals,Student
+2009-11-01,751.0,Arrivals,Student
+2009-12-01,497.0,Arrivals,Student
+2010-01-01,1711.0,Arrivals,Student
+2010-02-01,2884.0,Arrivals,Student
+2010-03-01,1067.0,Arrivals,Student
+2010-04-01,1006.0,Arrivals,Student
+2010-05-01,749.0,Arrivals,Student
+2010-06-01,985.0,Arrivals,Student
+2010-07-01,2612.0,Arrivals,Student
+2010-08-01,1496.0,Arrivals,Student
+2010-09-01,1478.0,Arrivals,Student
+2010-10-01,1360.0,Arrivals,Student
+2010-11-01,1019.0,Arrivals,Student
+2010-12-01,648.0,Arrivals,Student
+2011-01-01,1805.0,Arrivals,Student
+2011-02-01,3197.0,Arrivals,Student
+2011-03-01,1236.0,Arrivals,Student
+2011-04-01,1133.0,Arrivals,Student
+2011-05-01,836.0,Arrivals,Student
+2011-06-01,960.0,Arrivals,Student
+2011-07-01,2617.0,Arrivals,Student
+2011-08-01,1208.0,Arrivals,Student
+2011-09-01,1195.0,Arrivals,Student
+2011-10-01,988.0,Arrivals,Student
+2011-11-01,1039.0,Arrivals,Student
+2011-12-01,560.0,Arrivals,Student
+2012-01-01,1816.0,Arrivals,Student
+2012-02-01,3382.0,Arrivals,Student
+2012-03-01,1611.0,Arrivals,Student
+2012-04-01,924.0,Arrivals,Student
+2012-05-01,780.0,Arrivals,Student
+2012-06-01,880.0,Arrivals,Student
+2012-07-01,2398.0,Arrivals,Student
+2012-08-01,945.0,Arrivals,Student
+2012-09-01,1069.0,Arrivals,Student
+2012-10-01,1008.0,Arrivals,Student
+2012-11-01,820.0,Arrivals,Student
+2012-12-01,512.0,Arrivals,Student
+2013-01-01,1757.0,Arrivals,Student
+2013-02-01,2707.0,Arrivals,Student
+2013-03-01,1338.0,Arrivals,Student
+2013-04-01,914.0,Arrivals,Student
+2013-05-01,1006.0,Arrivals,Student
+2013-06-01,923.0,Arrivals,Student
+2013-07-01,2421.0,Arrivals,Student
+2013-08-01,1256.0,Arrivals,Student
+2013-09-01,1085.0,Arrivals,Student
+2013-10-01,1290.0,Arrivals,Student
+2013-11-01,1061.0,Arrivals,Student
+2013-12-01,686.0,Arrivals,Student
+2014-01-01,2162.0,Arrivals,Student
+2014-02-01,3464.0,Arrivals,Student
+2014-03-01,1760.0,Arrivals,Student
+2014-04-01,1435.0,Arrivals,Student
+2014-05-01,1471.0,Arrivals,Student
+2014-06-01,1653.0,Arrivals,Student
+2014-07-01,3873.0,Arrivals,Student
+2014-08-01,2389.0,Arrivals,Student
+2014-09-01,2373.0,Arrivals,Student
+2014-10-01,1966.0,Arrivals,Student
+2014-11-01,1917.0,Arrivals,Student
+2014-12-01,860.0,Arrivals,Student
+2015-01-01,3198.0,Arrivals,Student
+2015-02-01,4474.0,Arrivals,Student
+2015-03-01,2238.0,Arrivals,Student
+2015-04-01,1634.0,Arrivals,Student
+2015-05-01,1344.0,Arrivals,Student
+2015-06-01,1754.0,Arrivals,Student
+2015-07-01,4752.0,Arrivals,Student
+2015-08-01,2430.0,Arrivals,Student
+2015-09-01,2584.0,Arrivals,Student
+2015-10-01,2439.0,Arrivals,Student
+2015-11-01,2240.0,Arrivals,Student
+2015-12-01,975.0,Arrivals,Student
+2016-01-01,3098.0,Arrivals,Student
+2016-02-01,4621.0,Arrivals,Student
+2016-03-01,1845.0,Arrivals,Student
+2016-04-01,1558.0,Arrivals,Student
+2016-05-01,1482.0,Arrivals,Student
+2016-06-01,1517.0,Arrivals,Student
+2016-07-01,4030.0,Arrivals,Student
+2016-08-01,1637.0,Arrivals,Student
+2016-09-01,1846.0,Arrivals,Student
+2016-10-01,1689.0,Arrivals,Student
+2016-11-01,1619.0,Arrivals,Student
+2016-12-01,924.0,Arrivals,Student
+2017-01-01,2878.0,Arrivals,Student
+2017-02-01,4301.0,Arrivals,Student
+2017-03-01,1784.0,Arrivals,Student
+2017-04-01,1464.0,Arrivals,Student
+2017-05-01,1310.0,Arrivals,Student
+2017-06-01,1742.0,Arrivals,Student
+2017-07-01,4063.0,Arrivals,Student
+2017-08-01,1733.0,Arrivals,Student
+2017-09-01,1723.0,Arrivals,Student
+2017-10-01,1622.0,Arrivals,Student
+2017-11-01,1587.0,Arrivals,Student
+2017-12-01,1003.0,Arrivals,Student
+2018-01-01,2846.0,Arrivals,Student
+2018-02-01,4228.0,Arrivals,Student
+2018-03-01,1756.0,Arrivals,Student
+2018-04-01,1387.0,Arrivals,Student
+2018-05-01,1283.0,Arrivals,Student
+2018-06-01,1665.0,Arrivals,Student
+2018-07-01,4088.0,Arrivals,Student
+2018-08-01,1719.0,Arrivals,Student
+2018-09-01,1757.0,Arrivals,Student
+2018-10-01,1518.0,Arrivals,Student
+2018-11-01,1361.0,Arrivals,Student
+2018-12-01,1056.0,Arrivals,Student
+2019-01-01,2743.0,Arrivals,Student
+2019-02-01,3973.0,Arrivals,Student
+2019-03-01,1711.0,Arrivals,Student
+2019-04-01,1337.0,Arrivals,Student
+2019-05-01,1296.0,Arrivals,Student
+2019-06-01,1805.0,Arrivals,Student
+2019-07-01,4344.0,Arrivals,Student
+2019-08-01,2126.0,Arrivals,Student
+2019-09-01,1981.0,Arrivals,Student
+2019-10-01,2234.0,Arrivals,Student
+2019-11-01,1976.0,Arrivals,Student
+2019-12-01,1218.0,Arrivals,Student
+2020-01-01,3809.0,Arrivals,Student
+2020-02-01,5135.0,Arrivals,Student
+2020-03-01,1371.0,Arrivals,Student
+2020-04-01,3.0,Arrivals,Student
+2020-05-01,15.0,Arrivals,Student
+2020-06-01,37.0,Arrivals,Student
+2020-07-01,19.0,Arrivals,Student
+2020-08-01,46.0,Arrivals,Student
+2020-09-01,61.0,Arrivals,Student
+2020-10-01,32.0,Arrivals,Student
+2020-11-01,20.0,Arrivals,Student
+2020-12-01,20.0,Arrivals,Student
+2021-01-01,19.0,Arrivals,Student
+2021-02-01,31.0,Arrivals,Student
+2021-03-01,90.0,Arrivals,Student
+2021-04-01,65.0,Arrivals,Student
+2021-05-01,56.0,Arrivals,Student
+2021-06-01,323.0,Arrivals,Student
+2021-07-01,163.0,Arrivals,Student
+2021-08-01,135.0,Arrivals,Student
+2021-09-01,119.0,Arrivals,Student
+2021-10-01,101.0,Arrivals,Student
+2021-11-01,100.0,Arrivals,Student
+2021-12-01,143.0,Arrivals,Student
+2022-01-01,75.0,Arrivals,Student
+2022-02-01,96.0,Arrivals,Student
+2022-03-01,230.0,Arrivals,Student
+2022-04-01,297.0,Arrivals,Student
+2022-05-01,254.0,Arrivals,Student
+2022-06-01,671.0,Arrivals,Student
+2022-07-01,2046.0,Arrivals,Student
+2022-08-01,869.0,Arrivals,Student
+2022-09-01,1516.0,Arrivals,Student
+2022-10-01,1643.0,Arrivals,Student
+2022-11-01,1695.0,Arrivals,Student
+2022-12-01,1599.0,Arrivals,Student
+2023-01-01,2920.0,Arrivals,Student
+2023-02-01,6036.0,Arrivals,Student
+2023-03-01,2883.0,Arrivals,Student
+2023-04-01,2127.0,Arrivals,Student
+2023-05-01,1937.0,Arrivals,Student
+2023-06-01,2701.0,Arrivals,Student
+2023-07-01,4169.0,Arrivals,Student
+2023-08-01,2595.0,Arrivals,Student
+2023-09-01,2601.0,Arrivals,Student
+2023-10-01,2250.0,Arrivals,Student
+2023-11-01,1937.0,Arrivals,Student
+2023-12-01,2147.0,Arrivals,Student
+2024-01-01,3070.0,Arrivals,Student
+2024-02-01,4349.0,Arrivals,Student
+2024-03-01,2144.0,Arrivals,Student
+2024-04-01,1848.0,Arrivals,Student
+2024-05-01,1480.0,Arrivals,Student
+2024-06-01,2744.0,Arrivals,Student
+2024-07-01,4808.0,Arrivals,Student
+2024-08-01,1900.0,Arrivals,Student
+2024-09-01,1886.0,Arrivals,Student
+2024-10-01,1911.0,Arrivals,Student
+2024-11-01,1330.0,Arrivals,Student
+2024-12-01,1608.0,Arrivals,Student
+2025-01-01,3035.0,Arrivals,Student
+2025-02-01,4940.0,Arrivals,Student
+2025-03-01,1842.0,Arrivals,Student
+2025-04-01,1698.0,Arrivals,Student
+2025-05-01,1359.0,Arrivals,Student
+2025-06-01,2444.0,Arrivals,Student
+2025-07-01,4813.0,Arrivals,Student
+2025-08-01,1519.0,Arrivals,Student
+2025-09-01,1798.0,Arrivals,Student
+2025-10-01,1579.0,Arrivals,Student
+2025-11-01,1177.0,Arrivals,Student
+2025-12-01,1369.0,Arrivals,Student
+2026-01-01,3581.0,Arrivals,Student
+2001-01-01,0.0,Arrivals,Visitor
+2001-02-01,0.0,Arrivals,Visitor
+2001-03-01,0.0,Arrivals,Visitor
+2001-04-01,0.0,Arrivals,Visitor
+2001-05-01,0.0,Arrivals,Visitor
+2001-06-01,0.0,Arrivals,Visitor
+2001-07-01,0.0,Arrivals,Visitor
+2001-08-01,0.0,Arrivals,Visitor
+2001-09-01,0.0,Arrivals,Visitor
+2001-10-01,0.0,Arrivals,Visitor
+2001-11-01,0.0,Arrivals,Visitor
+2001-12-01,0.0,Arrivals,Visitor
+2002-01-01,0.0,Arrivals,Visitor
+2002-02-01,0.0,Arrivals,Visitor
+2002-03-01,0.0,Arrivals,Visitor
+2002-04-01,0.0,Arrivals,Visitor
+2002-05-01,0.0,Arrivals,Visitor
+2002-06-01,0.0,Arrivals,Visitor
+2002-07-01,0.0,Arrivals,Visitor
+2002-08-01,0.0,Arrivals,Visitor
+2002-09-01,0.0,Arrivals,Visitor
+2002-10-01,0.0,Arrivals,Visitor
+2002-11-01,0.0,Arrivals,Visitor
+2002-12-01,0.0,Arrivals,Visitor
+2003-01-01,0.0,Arrivals,Visitor
+2003-02-01,0.0,Arrivals,Visitor
+2003-03-01,0.0,Arrivals,Visitor
+2003-04-01,0.0,Arrivals,Visitor
+2003-05-01,0.0,Arrivals,Visitor
+2003-06-01,0.0,Arrivals,Visitor
+2003-07-01,2375.0,Arrivals,Visitor
+2003-08-01,2092.0,Arrivals,Visitor
+2003-09-01,2288.0,Arrivals,Visitor
+2003-10-01,2443.0,Arrivals,Visitor
+2003-11-01,2688.0,Arrivals,Visitor
+2003-12-01,2892.0,Arrivals,Visitor
+2004-01-01,2994.0,Arrivals,Visitor
+2004-02-01,2467.0,Arrivals,Visitor
+2004-03-01,2102.0,Arrivals,Visitor
+2004-04-01,1936.0,Arrivals,Visitor
+2004-05-01,1836.0,Arrivals,Visitor
+2004-06-01,1913.0,Arrivals,Visitor
+2004-07-01,2041.0,Arrivals,Visitor
+2004-08-01,2040.0,Arrivals,Visitor
+2004-09-01,2150.0,Arrivals,Visitor
+2004-10-01,2340.0,Arrivals,Visitor
+2004-11-01,2727.0,Arrivals,Visitor
+2004-12-01,3105.0,Arrivals,Visitor
+2005-01-01,3024.0,Arrivals,Visitor
+2005-02-01,2572.0,Arrivals,Visitor
+2005-03-01,2465.0,Arrivals,Visitor
+2005-04-01,2200.0,Arrivals,Visitor
+2005-05-01,2093.0,Arrivals,Visitor
+2005-06-01,2048.0,Arrivals,Visitor
+2005-07-01,2124.0,Arrivals,Visitor
+2005-08-01,2180.0,Arrivals,Visitor
+2005-09-01,2261.0,Arrivals,Visitor
+2005-10-01,2296.0,Arrivals,Visitor
+2005-11-01,2398.0,Arrivals,Visitor
+2005-12-01,2948.0,Arrivals,Visitor
+2006-01-01,2725.0,Arrivals,Visitor
+2006-02-01,2807.0,Arrivals,Visitor
+2006-03-01,2447.0,Arrivals,Visitor
+2006-04-01,2305.0,Arrivals,Visitor
+2006-05-01,1923.0,Arrivals,Visitor
+2006-06-01,2216.0,Arrivals,Visitor
+2006-07-01,2319.0,Arrivals,Visitor
+2006-08-01,2371.0,Arrivals,Visitor
+2006-09-01,2433.0,Arrivals,Visitor
+2006-10-01,2515.0,Arrivals,Visitor
+2006-11-01,2967.0,Arrivals,Visitor
+2006-12-01,3470.0,Arrivals,Visitor
+2007-01-01,3025.0,Arrivals,Visitor
+2007-02-01,2874.0,Arrivals,Visitor
+2007-03-01,2962.0,Arrivals,Visitor
+2007-04-01,2517.0,Arrivals,Visitor
+2007-05-01,2238.0,Arrivals,Visitor
+2007-06-01,2312.0,Arrivals,Visitor
+2007-07-01,2293.0,Arrivals,Visitor
+2007-08-01,2591.0,Arrivals,Visitor
+2007-09-01,2562.0,Arrivals,Visitor
+2007-10-01,2462.0,Arrivals,Visitor
+2007-11-01,3028.0,Arrivals,Visitor
+2007-12-01,3254.0,Arrivals,Visitor
+2008-01-01,2828.0,Arrivals,Visitor
+2008-02-01,3246.0,Arrivals,Visitor
+2008-03-01,2953.0,Arrivals,Visitor
+2008-04-01,2783.0,Arrivals,Visitor
+2008-05-01,2621.0,Arrivals,Visitor
+2008-06-01,2761.0,Arrivals,Visitor
+2008-07-01,2608.0,Arrivals,Visitor
+2008-08-01,2677.0,Arrivals,Visitor
+2008-09-01,2526.0,Arrivals,Visitor
+2008-10-01,2595.0,Arrivals,Visitor
+2008-11-01,2766.0,Arrivals,Visitor
+2008-12-01,3256.0,Arrivals,Visitor
+2009-01-01,2801.0,Arrivals,Visitor
+2009-02-01,2615.0,Arrivals,Visitor
+2009-03-01,2208.0,Arrivals,Visitor
+2009-04-01,1834.0,Arrivals,Visitor
+2009-05-01,1670.0,Arrivals,Visitor
+2009-06-01,1743.0,Arrivals,Visitor
+2009-07-01,1748.0,Arrivals,Visitor
+2009-08-01,1680.0,Arrivals,Visitor
+2009-09-01,1705.0,Arrivals,Visitor
+2009-10-01,1621.0,Arrivals,Visitor
+2009-11-01,1975.0,Arrivals,Visitor
+2009-12-01,2131.0,Arrivals,Visitor
+2010-01-01,1970.0,Arrivals,Visitor
+2010-02-01,2016.0,Arrivals,Visitor
+2010-03-01,1830.0,Arrivals,Visitor
+2010-04-01,1503.0,Arrivals,Visitor
+2010-05-01,1393.0,Arrivals,Visitor
+2010-06-01,1415.0,Arrivals,Visitor
+2010-07-01,1528.0,Arrivals,Visitor
+2010-08-01,1557.0,Arrivals,Visitor
+2010-09-01,1442.0,Arrivals,Visitor
+2010-10-01,1634.0,Arrivals,Visitor
+2010-11-01,1632.0,Arrivals,Visitor
+2010-12-01,1920.0,Arrivals,Visitor
+2011-01-01,1754.0,Arrivals,Visitor
+2011-02-01,2046.0,Arrivals,Visitor
+2011-03-01,1758.0,Arrivals,Visitor
+2011-04-01,1455.0,Arrivals,Visitor
+2011-05-01,1289.0,Arrivals,Visitor
+2011-06-01,1316.0,Arrivals,Visitor
+2011-07-01,1623.0,Arrivals,Visitor
+2011-08-01,1571.0,Arrivals,Visitor
+2011-09-01,1648.0,Arrivals,Visitor
+2011-10-01,1576.0,Arrivals,Visitor
+2011-11-01,1750.0,Arrivals,Visitor
+2011-12-01,1903.0,Arrivals,Visitor
+2012-01-01,1882.0,Arrivals,Visitor
+2012-02-01,1756.0,Arrivals,Visitor
+2012-03-01,1600.0,Arrivals,Visitor
+2012-04-01,1236.0,Arrivals,Visitor
+2012-05-01,1289.0,Arrivals,Visitor
+2012-06-01,1413.0,Arrivals,Visitor
+2012-07-01,1267.0,Arrivals,Visitor
+2012-08-01,1473.0,Arrivals,Visitor
+2012-09-01,1390.0,Arrivals,Visitor
+2012-10-01,1468.0,Arrivals,Visitor
+2012-11-01,1550.0,Arrivals,Visitor
+2012-12-01,1768.0,Arrivals,Visitor
+2013-01-01,1700.0,Arrivals,Visitor
+2013-02-01,1592.0,Arrivals,Visitor
+2013-03-01,1538.0,Arrivals,Visitor
+2013-04-01,1335.0,Arrivals,Visitor
+2013-05-01,1285.0,Arrivals,Visitor
+2013-06-01,1273.0,Arrivals,Visitor
+2013-07-01,1352.0,Arrivals,Visitor
+2013-08-01,1367.0,Arrivals,Visitor
+2013-09-01,1361.0,Arrivals,Visitor
+2013-10-01,1554.0,Arrivals,Visitor
+2013-11-01,1824.0,Arrivals,Visitor
+2013-12-01,1921.0,Arrivals,Visitor
+2014-01-01,1824.0,Arrivals,Visitor
+2014-02-01,1990.0,Arrivals,Visitor
+2014-03-01,1866.0,Arrivals,Visitor
+2014-04-01,1565.0,Arrivals,Visitor
+2014-05-01,1614.0,Arrivals,Visitor
+2014-06-01,1555.0,Arrivals,Visitor
+2014-07-01,1713.0,Arrivals,Visitor
+2014-08-01,1957.0,Arrivals,Visitor
+2014-09-01,1676.0,Arrivals,Visitor
+2014-10-01,1649.0,Arrivals,Visitor
+2014-11-01,1797.0,Arrivals,Visitor
+2014-12-01,2063.0,Arrivals,Visitor
+2015-01-01,2114.0,Arrivals,Visitor
+2015-02-01,1775.0,Arrivals,Visitor
+2015-03-01,2047.0,Arrivals,Visitor
+2015-04-01,1767.0,Arrivals,Visitor
+2015-05-01,1634.0,Arrivals,Visitor
+2015-06-01,1719.0,Arrivals,Visitor
+2015-07-01,1745.0,Arrivals,Visitor
+2015-08-01,2238.0,Arrivals,Visitor
+2015-09-01,1953.0,Arrivals,Visitor
+2015-10-01,1990.0,Arrivals,Visitor
+2015-11-01,2083.0,Arrivals,Visitor
+2015-12-01,2480.0,Arrivals,Visitor
+2016-01-01,2381.0,Arrivals,Visitor
+2016-02-01,2527.0,Arrivals,Visitor
+2016-03-01,2318.0,Arrivals,Visitor
+2016-04-01,1933.0,Arrivals,Visitor
+2016-05-01,2012.0,Arrivals,Visitor
+2016-06-01,2108.0,Arrivals,Visitor
+2016-07-01,2181.0,Arrivals,Visitor
+2016-08-01,2180.0,Arrivals,Visitor
+2016-09-01,2183.0,Arrivals,Visitor
+2016-10-01,2208.0,Arrivals,Visitor
+2016-11-01,2380.0,Arrivals,Visitor
+2016-12-01,2403.0,Arrivals,Visitor
+2017-01-01,2379.0,Arrivals,Visitor
+2017-02-01,2303.0,Arrivals,Visitor
+2017-03-01,2181.0,Arrivals,Visitor
+2017-04-01,1736.0,Arrivals,Visitor
+2017-05-01,1898.0,Arrivals,Visitor
+2017-06-01,1950.0,Arrivals,Visitor
+2017-07-01,2111.0,Arrivals,Visitor
+2017-08-01,2195.0,Arrivals,Visitor
+2017-09-01,2068.0,Arrivals,Visitor
+2017-10-01,2205.0,Arrivals,Visitor
+2017-11-01,2079.0,Arrivals,Visitor
+2017-12-01,2411.0,Arrivals,Visitor
+2018-01-01,2403.0,Arrivals,Visitor
+2018-02-01,2196.0,Arrivals,Visitor
+2018-03-01,2370.0,Arrivals,Visitor
+2018-04-01,1786.0,Arrivals,Visitor
+2018-05-01,2022.0,Arrivals,Visitor
+2018-06-01,2062.0,Arrivals,Visitor
+2018-07-01,2173.0,Arrivals,Visitor
+2018-08-01,2482.0,Arrivals,Visitor
+2018-09-01,2301.0,Arrivals,Visitor
+2018-10-01,2296.0,Arrivals,Visitor
+2018-11-01,2252.0,Arrivals,Visitor
+2018-12-01,2499.0,Arrivals,Visitor
+2019-01-01,2416.0,Arrivals,Visitor
+2019-02-01,2187.0,Arrivals,Visitor
+2019-03-01,2151.0,Arrivals,Visitor
+2019-04-01,1726.0,Arrivals,Visitor
+2019-05-01,2143.0,Arrivals,Visitor
+2019-06-01,2088.0,Arrivals,Visitor
+2019-07-01,2528.0,Arrivals,Visitor
+2019-08-01,2816.0,Arrivals,Visitor
+2019-09-01,2833.0,Arrivals,Visitor
+2019-10-01,3286.0,Arrivals,Visitor
+2019-11-01,4061.0,Arrivals,Visitor
+2019-12-01,4757.0,Arrivals,Visitor
+2020-01-01,4426.0,Arrivals,Visitor
+2020-02-01,4279.0,Arrivals,Visitor
+2020-03-01,3738.0,Arrivals,Visitor
+2020-04-01,135.0,Arrivals,Visitor
+2020-05-01,80.0,Arrivals,Visitor
+2020-06-01,256.0,Arrivals,Visitor
+2020-07-01,272.0,Arrivals,Visitor
+2020-08-01,557.0,Arrivals,Visitor
+2020-09-01,628.0,Arrivals,Visitor
+2020-10-01,640.0,Arrivals,Visitor
+2020-11-01,655.0,Arrivals,Visitor
+2020-12-01,669.0,Arrivals,Visitor
+2021-01-01,709.0,Arrivals,Visitor
+2021-02-01,726.0,Arrivals,Visitor
+2021-03-01,917.0,Arrivals,Visitor
+2021-04-01,803.0,Arrivals,Visitor
+2021-05-01,577.0,Arrivals,Visitor
+2021-06-01,730.0,Arrivals,Visitor
+2021-07-01,807.0,Arrivals,Visitor
+2021-08-01,871.0,Arrivals,Visitor
+2021-09-01,1044.0,Arrivals,Visitor
+2021-10-01,923.0,Arrivals,Visitor
+2021-11-01,969.0,Arrivals,Visitor
+2021-12-01,1002.0,Arrivals,Visitor
+2022-01-01,787.0,Arrivals,Visitor
+2022-02-01,839.0,Arrivals,Visitor
+2022-03-01,1410.0,Arrivals,Visitor
+2022-04-01,1235.0,Arrivals,Visitor
+2022-05-01,2505.0,Arrivals,Visitor
+2022-06-01,3020.0,Arrivals,Visitor
+2022-07-01,4248.0,Arrivals,Visitor
+2022-08-01,3204.0,Arrivals,Visitor
+2022-09-01,2641.0,Arrivals,Visitor
+2022-10-01,3144.0,Arrivals,Visitor
+2022-11-01,4445.0,Arrivals,Visitor
+2022-12-01,5025.0,Arrivals,Visitor
+2023-01-01,4680.0,Arrivals,Visitor
+2023-02-01,3627.0,Arrivals,Visitor
+2023-03-01,5059.0,Arrivals,Visitor
+2023-04-01,3792.0,Arrivals,Visitor
+2023-05-01,4373.0,Arrivals,Visitor
+2023-06-01,4511.0,Arrivals,Visitor
+2023-07-01,3596.0,Arrivals,Visitor
+2023-08-01,4869.0,Arrivals,Visitor
+2023-09-01,3671.0,Arrivals,Visitor
+2023-10-01,3610.0,Arrivals,Visitor
+2023-11-01,3428.0,Arrivals,Visitor
+2023-12-01,3418.0,Arrivals,Visitor
+2024-01-01,2508.0,Arrivals,Visitor
+2024-02-01,2733.0,Arrivals,Visitor
+2024-03-01,2731.0,Arrivals,Visitor
+2024-04-01,2021.0,Arrivals,Visitor
+2024-05-01,2310.0,Arrivals,Visitor
+2024-06-01,2237.0,Arrivals,Visitor
+2024-07-01,2086.0,Arrivals,Visitor
+2024-08-01,2275.0,Arrivals,Visitor
+2024-09-01,1891.0,Arrivals,Visitor
+2024-10-01,1933.0,Arrivals,Visitor
+2024-11-01,2013.0,Arrivals,Visitor
+2024-12-01,2153.0,Arrivals,Visitor
+2025-01-01,1686.0,Arrivals,Visitor
+2025-02-01,1968.0,Arrivals,Visitor
+2025-03-01,1960.0,Arrivals,Visitor
+2025-04-01,1625.0,Arrivals,Visitor
+2025-05-01,2002.0,Arrivals,Visitor
+2025-06-01,2119.0,Arrivals,Visitor
+2025-07-01,1903.0,Arrivals,Visitor
+2025-08-01,2031.0,Arrivals,Visitor
+2025-09-01,2112.0,Arrivals,Visitor
+2025-10-01,2115.0,Arrivals,Visitor
+2025-11-01,2111.0,Arrivals,Visitor
+2025-12-01,3083.0,Arrivals,Visitor
+2026-01-01,3104.0,Arrivals,Visitor
+2001-01-01,0.0,Arrivals,Work
+2001-02-01,0.0,Arrivals,Work
+2001-03-01,0.0,Arrivals,Work
+2001-04-01,0.0,Arrivals,Work
+2001-05-01,0.0,Arrivals,Work
+2001-06-01,0.0,Arrivals,Work
+2001-07-01,0.0,Arrivals,Work
+2001-08-01,0.0,Arrivals,Work
+2001-09-01,0.0,Arrivals,Work
+2001-10-01,0.0,Arrivals,Work
+2001-11-01,0.0,Arrivals,Work
+2001-12-01,0.0,Arrivals,Work
+2002-01-01,0.0,Arrivals,Work
+2002-02-01,0.0,Arrivals,Work
+2002-03-01,0.0,Arrivals,Work
+2002-04-01,0.0,Arrivals,Work
+2002-05-01,0.0,Arrivals,Work
+2002-06-01,0.0,Arrivals,Work
+2002-07-01,0.0,Arrivals,Work
+2002-08-01,0.0,Arrivals,Work
+2002-09-01,0.0,Arrivals,Work
+2002-10-01,0.0,Arrivals,Work
+2002-11-01,0.0,Arrivals,Work
+2002-12-01,0.0,Arrivals,Work
+2003-01-01,0.0,Arrivals,Work
+2003-02-01,0.0,Arrivals,Work
+2003-03-01,0.0,Arrivals,Work
+2003-04-01,0.0,Arrivals,Work
+2003-05-01,0.0,Arrivals,Work
+2003-06-01,0.0,Arrivals,Work
+2003-07-01,747.0,Arrivals,Work
+2003-08-01,745.0,Arrivals,Work
+2003-09-01,842.0,Arrivals,Work
+2003-10-01,873.0,Arrivals,Work
+2003-11-01,868.0,Arrivals,Work
+2003-12-01,674.0,Arrivals,Work
+2004-01-01,1101.0,Arrivals,Work
+2004-02-01,763.0,Arrivals,Work
+2004-03-01,922.0,Arrivals,Work
+2004-04-01,652.0,Arrivals,Work
+2004-05-01,769.0,Arrivals,Work
+2004-06-01,800.0,Arrivals,Work
+2004-07-01,892.0,Arrivals,Work
+2004-08-01,839.0,Arrivals,Work
+2004-09-01,1091.0,Arrivals,Work
+2004-10-01,1050.0,Arrivals,Work
+2004-11-01,1017.0,Arrivals,Work
+2004-12-01,773.0,Arrivals,Work
+2005-01-01,1143.0,Arrivals,Work
+2005-02-01,854.0,Arrivals,Work
+2005-03-01,829.0,Arrivals,Work
+2005-04-01,830.0,Arrivals,Work
+2005-05-01,855.0,Arrivals,Work
+2005-06-01,859.0,Arrivals,Work
+2005-07-01,777.0,Arrivals,Work
+2005-08-01,884.0,Arrivals,Work
+2005-09-01,1121.0,Arrivals,Work
+2005-10-01,1115.0,Arrivals,Work
+2005-11-01,1093.0,Arrivals,Work
+2005-12-01,861.0,Arrivals,Work
+2006-01-01,1399.0,Arrivals,Work
+2006-02-01,1058.0,Arrivals,Work
+2006-03-01,1092.0,Arrivals,Work
+2006-04-01,943.0,Arrivals,Work
+2006-05-01,881.0,Arrivals,Work
+2006-06-01,996.0,Arrivals,Work
+2006-07-01,1016.0,Arrivals,Work
+2006-08-01,1141.0,Arrivals,Work
+2006-09-01,1397.0,Arrivals,Work
+2006-10-01,1374.0,Arrivals,Work
+2006-11-01,1444.0,Arrivals,Work
+2006-12-01,1141.0,Arrivals,Work
+2007-01-01,1481.0,Arrivals,Work
+2007-02-01,1166.0,Arrivals,Work
+2007-03-01,1394.0,Arrivals,Work
+2007-04-01,1124.0,Arrivals,Work
+2007-05-01,1192.0,Arrivals,Work
+2007-06-01,1292.0,Arrivals,Work
+2007-07-01,1140.0,Arrivals,Work
+2007-08-01,1490.0,Arrivals,Work
+2007-09-01,1580.0,Arrivals,Work
+2007-10-01,1355.0,Arrivals,Work
+2007-11-01,1419.0,Arrivals,Work
+2007-12-01,1267.0,Arrivals,Work
+2008-01-01,1590.0,Arrivals,Work
+2008-02-01,1588.0,Arrivals,Work
+2008-03-01,1556.0,Arrivals,Work
+2008-04-01,1311.0,Arrivals,Work
+2008-05-01,1402.0,Arrivals,Work
+2008-06-01,1401.0,Arrivals,Work
+2008-07-01,1319.0,Arrivals,Work
+2008-08-01,1613.0,Arrivals,Work
+2008-09-01,1477.0,Arrivals,Work
+2008-10-01,1506.0,Arrivals,Work
+2008-11-01,1516.0,Arrivals,Work
+2008-12-01,1172.0,Arrivals,Work
+2009-01-01,1602.0,Arrivals,Work
+2009-02-01,1357.0,Arrivals,Work
+2009-03-01,1356.0,Arrivals,Work
+2009-04-01,1108.0,Arrivals,Work
+2009-05-01,1165.0,Arrivals,Work
+2009-06-01,1119.0,Arrivals,Work
+2009-07-01,1058.0,Arrivals,Work
+2009-08-01,1234.0,Arrivals,Work
+2009-09-01,1262.0,Arrivals,Work
+2009-10-01,1245.0,Arrivals,Work
+2009-11-01,1261.0,Arrivals,Work
+2009-12-01,964.0,Arrivals,Work
+2010-01-01,1175.0,Arrivals,Work
+2010-02-01,1099.0,Arrivals,Work
+2010-03-01,1112.0,Arrivals,Work
+2010-04-01,842.0,Arrivals,Work
+2010-05-01,911.0,Arrivals,Work
+2010-06-01,903.0,Arrivals,Work
+2010-07-01,885.0,Arrivals,Work
+2010-08-01,1129.0,Arrivals,Work
+2010-09-01,1320.0,Arrivals,Work
+2010-10-01,1470.0,Arrivals,Work
+2010-11-01,1466.0,Arrivals,Work
+2010-12-01,1094.0,Arrivals,Work
+2011-01-01,1327.0,Arrivals,Work
+2011-02-01,1296.0,Arrivals,Work
+2011-03-01,1326.0,Arrivals,Work
+2011-04-01,1067.0,Arrivals,Work
+2011-05-01,1198.0,Arrivals,Work
+2011-06-01,1067.0,Arrivals,Work
+2011-07-01,1118.0,Arrivals,Work
+2011-08-01,1464.0,Arrivals,Work
+2011-09-01,1530.0,Arrivals,Work
+2011-10-01,1442.0,Arrivals,Work
+2011-11-01,1607.0,Arrivals,Work
+2011-12-01,1161.0,Arrivals,Work
+2012-01-01,1407.0,Arrivals,Work
+2012-02-01,1642.0,Arrivals,Work
+2012-03-01,1527.0,Arrivals,Work
+2012-04-01,1084.0,Arrivals,Work
+2012-05-01,1288.0,Arrivals,Work
+2012-06-01,1381.0,Arrivals,Work
+2012-07-01,1167.0,Arrivals,Work
+2012-08-01,1530.0,Arrivals,Work
+2012-09-01,1867.0,Arrivals,Work
+2012-10-01,1708.0,Arrivals,Work
+2012-11-01,1833.0,Arrivals,Work
+2012-12-01,1271.0,Arrivals,Work
+2013-01-01,1660.0,Arrivals,Work
+2013-02-01,1739.0,Arrivals,Work
+2013-03-01,1768.0,Arrivals,Work
+2013-04-01,1479.0,Arrivals,Work
+2013-05-01,1446.0,Arrivals,Work
+2013-06-01,1607.0,Arrivals,Work
+2013-07-01,1412.0,Arrivals,Work
+2013-08-01,1796.0,Arrivals,Work
+2013-09-01,1843.0,Arrivals,Work
+2013-10-01,2013.0,Arrivals,Work
+2013-11-01,2064.0,Arrivals,Work
+2013-12-01,1490.0,Arrivals,Work
+2014-01-01,1805.0,Arrivals,Work
+2014-02-01,2000.0,Arrivals,Work
+2014-03-01,1979.0,Arrivals,Work
+2014-04-01,1519.0,Arrivals,Work
+2014-05-01,1518.0,Arrivals,Work
+2014-06-01,1630.0,Arrivals,Work
+2014-07-01,1494.0,Arrivals,Work
+2014-08-01,1915.0,Arrivals,Work
+2014-09-01,2213.0,Arrivals,Work
+2014-10-01,2266.0,Arrivals,Work
+2014-11-01,2171.0,Arrivals,Work
+2014-12-01,1516.0,Arrivals,Work
+2015-01-01,2115.0,Arrivals,Work
+2015-02-01,1868.0,Arrivals,Work
+2015-03-01,2230.0,Arrivals,Work
+2015-04-01,1741.0,Arrivals,Work
+2015-05-01,1782.0,Arrivals,Work
+2015-06-01,1769.0,Arrivals,Work
+2015-07-01,1715.0,Arrivals,Work
+2015-08-01,2165.0,Arrivals,Work
+2015-09-01,2531.0,Arrivals,Work
+2015-10-01,2606.0,Arrivals,Work
+2015-11-01,2568.0,Arrivals,Work
+2015-12-01,1836.0,Arrivals,Work
+2016-01-01,2281.0,Arrivals,Work
+2016-02-01,2256.0,Arrivals,Work
+2016-03-01,2119.0,Arrivals,Work
+2016-04-01,1874.0,Arrivals,Work
+2016-05-01,1832.0,Arrivals,Work
+2016-06-01,1800.0,Arrivals,Work
+2016-07-01,1804.0,Arrivals,Work
+2016-08-01,2083.0,Arrivals,Work
+2016-09-01,2672.0,Arrivals,Work
+2016-10-01,2756.0,Arrivals,Work
+2016-11-01,2634.0,Arrivals,Work
+2016-12-01,2000.0,Arrivals,Work
+2017-01-01,2675.0,Arrivals,Work
+2017-02-01,2560.0,Arrivals,Work
+2017-03-01,2512.0,Arrivals,Work
+2017-04-01,1949.0,Arrivals,Work
+2017-05-01,2034.0,Arrivals,Work
+2017-06-01,2150.0,Arrivals,Work
+2017-07-01,2083.0,Arrivals,Work
+2017-08-01,2451.0,Arrivals,Work
+2017-09-01,2832.0,Arrivals,Work
+2017-10-01,2950.0,Arrivals,Work
+2017-11-01,3013.0,Arrivals,Work
+2017-12-01,1974.0,Arrivals,Work
+2018-01-01,3069.0,Arrivals,Work
+2018-02-01,2478.0,Arrivals,Work
+2018-03-01,2711.0,Arrivals,Work
+2018-04-01,2083.0,Arrivals,Work
+2018-05-01,2238.0,Arrivals,Work
+2018-06-01,2219.0,Arrivals,Work
+2018-07-01,2337.0,Arrivals,Work
+2018-08-01,2923.0,Arrivals,Work
+2018-09-01,3243.0,Arrivals,Work
+2018-10-01,3104.0,Arrivals,Work
+2018-11-01,3168.0,Arrivals,Work
+2018-12-01,2294.0,Arrivals,Work
+2019-01-01,3284.0,Arrivals,Work
+2019-02-01,2963.0,Arrivals,Work
+2019-03-01,2882.0,Arrivals,Work
+2019-04-01,2224.0,Arrivals,Work
+2019-05-01,2884.0,Arrivals,Work
+2019-06-01,2938.0,Arrivals,Work
+2019-07-01,2610.0,Arrivals,Work
+2019-08-01,3618.0,Arrivals,Work
+2019-09-01,4032.0,Arrivals,Work
+2019-10-01,4431.0,Arrivals,Work
+2019-11-01,4448.0,Arrivals,Work
+2019-12-01,3428.0,Arrivals,Work
+2020-01-01,4666.0,Arrivals,Work
+2020-02-01,4336.0,Arrivals,Work
+2020-03-01,2813.0,Arrivals,Work
+2020-04-01,82.0,Arrivals,Work
+2020-05-01,51.0,Arrivals,Work
+2020-06-01,131.0,Arrivals,Work
+2020-07-01,103.0,Arrivals,Work
+2020-08-01,150.0,Arrivals,Work
+2020-09-01,242.0,Arrivals,Work
+2020-10-01,167.0,Arrivals,Work
+2020-11-01,93.0,Arrivals,Work
+2020-12-01,125.0,Arrivals,Work
+2021-01-01,115.0,Arrivals,Work
+2021-02-01,215.0,Arrivals,Work
+2021-03-01,285.0,Arrivals,Work
+2021-04-01,186.0,Arrivals,Work
+2021-05-01,127.0,Arrivals,Work
+2021-06-01,159.0,Arrivals,Work
+2021-07-01,142.0,Arrivals,Work
+2021-08-01,192.0,Arrivals,Work
+2021-09-01,206.0,Arrivals,Work
+2021-10-01,193.0,Arrivals,Work
+2021-11-01,199.0,Arrivals,Work
+2021-12-01,256.0,Arrivals,Work
+2022-01-01,162.0,Arrivals,Work
+2022-02-01,133.0,Arrivals,Work
+2022-03-01,245.0,Arrivals,Work
+2022-04-01,1070.0,Arrivals,Work
+2022-05-01,798.0,Arrivals,Work
+2022-06-01,838.0,Arrivals,Work
+2022-07-01,1008.0,Arrivals,Work
+2022-08-01,2036.0,Arrivals,Work
+2022-09-01,4151.0,Arrivals,Work
+2022-10-01,4036.0,Arrivals,Work
+2022-11-01,6480.0,Arrivals,Work
+2022-12-01,5619.0,Arrivals,Work
+2023-01-01,5724.0,Arrivals,Work
+2023-02-01,8090.0,Arrivals,Work
+2023-03-01,11115.0,Arrivals,Work
+2023-04-01,8030.0,Arrivals,Work
+2023-05-01,8523.0,Arrivals,Work
+2023-06-01,7732.0,Arrivals,Work
+2023-07-01,5958.0,Arrivals,Work
+2023-08-01,8137.0,Arrivals,Work
+2023-09-01,7435.0,Arrivals,Work
+2023-10-01,6145.0,Arrivals,Work
+2023-11-01,5393.0,Arrivals,Work
+2023-12-01,3886.0,Arrivals,Work
+2024-01-01,3915.0,Arrivals,Work
+2024-02-01,4371.0,Arrivals,Work
+2024-03-01,4370.0,Arrivals,Work
+2024-04-01,3083.0,Arrivals,Work
+2024-05-01,2946.0,Arrivals,Work
+2024-06-01,2689.0,Arrivals,Work
+2024-07-01,2302.0,Arrivals,Work
+2024-08-01,2651.0,Arrivals,Work
+2024-09-01,2784.0,Arrivals,Work
+2024-10-01,2700.0,Arrivals,Work
+2024-11-01,2539.0,Arrivals,Work
+2024-12-01,2216.0,Arrivals,Work
+2025-01-01,2215.0,Arrivals,Work
+2025-02-01,2830.0,Arrivals,Work
+2025-03-01,2661.0,Arrivals,Work
+2025-04-01,1843.0,Arrivals,Work
+2025-05-01,2451.0,Arrivals,Work
+2025-06-01,2460.0,Arrivals,Work
+2025-07-01,2227.0,Arrivals,Work
+2025-08-01,2710.0,Arrivals,Work
+2025-09-01,3678.0,Arrivals,Work
+2025-10-01,3405.0,Arrivals,Work
+2025-11-01,3253.0,Arrivals,Work
+2025-12-01,2552.0,Arrivals,Work
+2026-01-01,2905.0,Arrivals,Work
+2001-01-01,3328.0,Arrivals,New Zealand and Australian citizens
+2001-02-01,2379.0,Arrivals,New Zealand and Australian citizens
+2001-03-01,2133.0,Arrivals,New Zealand and Australian citizens
+2001-04-01,2064.0,Arrivals,New Zealand and Australian citizens
+2001-05-01,1927.0,Arrivals,New Zealand and Australian citizens
+2001-06-01,2299.0,Arrivals,New Zealand and Australian citizens
+2001-07-01,2453.0,Arrivals,New Zealand and Australian citizens
+2001-08-01,2376.0,Arrivals,New Zealand and Australian citizens
+2001-09-01,2986.0,Arrivals,New Zealand and Australian citizens
+2001-10-01,3293.0,Arrivals,New Zealand and Australian citizens
+2001-11-01,3611.0,Arrivals,New Zealand and Australian citizens
+2001-12-01,5738.0,Arrivals,New Zealand and Australian citizens
+2002-01-01,3441.0,Arrivals,New Zealand and Australian citizens
+2002-02-01,2734.0,Arrivals,New Zealand and Australian citizens
+2002-03-01,2424.0,Arrivals,New Zealand and Australian citizens
+2002-04-01,2071.0,Arrivals,New Zealand and Australian citizens
+2002-05-01,2229.0,Arrivals,New Zealand and Australian citizens
+2002-06-01,2486.0,Arrivals,New Zealand and Australian citizens
+2002-07-01,2623.0,Arrivals,New Zealand and Australian citizens
+2002-08-01,2827.0,Arrivals,New Zealand and Australian citizens
+2002-09-01,3159.0,Arrivals,New Zealand and Australian citizens
+2002-10-01,3282.0,Arrivals,New Zealand and Australian citizens
+2002-11-01,3926.0,Arrivals,New Zealand and Australian citizens
+2002-12-01,6255.0,Arrivals,New Zealand and Australian citizens
+2003-01-01,3991.0,Arrivals,New Zealand and Australian citizens
+2003-02-01,3180.0,Arrivals,New Zealand and Australian citizens
+2003-03-01,2784.0,Arrivals,New Zealand and Australian citizens
+2003-04-01,2524.0,Arrivals,New Zealand and Australian citizens
+2003-05-01,2586.0,Arrivals,New Zealand and Australian citizens
+2003-06-01,2649.0,Arrivals,New Zealand and Australian citizens
+2003-07-01,2888.0,Arrivals,New Zealand and Australian citizens
+2003-08-01,3064.0,Arrivals,New Zealand and Australian citizens
+2003-09-01,3483.0,Arrivals,New Zealand and Australian citizens
+2003-10-01,3468.0,Arrivals,New Zealand and Australian citizens
+2003-11-01,3872.0,Arrivals,New Zealand and Australian citizens
+2003-12-01,6288.0,Arrivals,New Zealand and Australian citizens
+2004-01-01,4017.0,Arrivals,New Zealand and Australian citizens
+2004-02-01,2959.0,Arrivals,New Zealand and Australian citizens
+2004-03-01,2478.0,Arrivals,New Zealand and Australian citizens
+2004-04-01,2288.0,Arrivals,New Zealand and Australian citizens
+2004-05-01,2350.0,Arrivals,New Zealand and Australian citizens
+2004-06-01,2522.0,Arrivals,New Zealand and Australian citizens
+2004-07-01,2785.0,Arrivals,New Zealand and Australian citizens
+2004-08-01,2890.0,Arrivals,New Zealand and Australian citizens
+2004-09-01,3229.0,Arrivals,New Zealand and Australian citizens
+2004-10-01,3209.0,Arrivals,New Zealand and Australian citizens
+2004-11-01,3489.0,Arrivals,New Zealand and Australian citizens
+2004-12-01,6071.0,Arrivals,New Zealand and Australian citizens
+2005-01-01,3729.0,Arrivals,New Zealand and Australian citizens
+2005-02-01,2838.0,Arrivals,New Zealand and Australian citizens
+2005-03-01,2305.0,Arrivals,New Zealand and Australian citizens
+2005-04-01,2291.0,Arrivals,New Zealand and Australian citizens
+2005-05-01,2158.0,Arrivals,New Zealand and Australian citizens
+2005-06-01,2398.0,Arrivals,New Zealand and Australian citizens
+2005-07-01,2630.0,Arrivals,New Zealand and Australian citizens
+2005-08-01,2706.0,Arrivals,New Zealand and Australian citizens
+2005-09-01,3121.0,Arrivals,New Zealand and Australian citizens
+2005-10-01,3171.0,Arrivals,New Zealand and Australian citizens
+2005-11-01,3218.0,Arrivals,New Zealand and Australian citizens
+2005-12-01,5913.0,Arrivals,New Zealand and Australian citizens
+2006-01-01,3683.0,Arrivals,New Zealand and Australian citizens
+2006-02-01,2784.0,Arrivals,New Zealand and Australian citizens
+2006-03-01,2380.0,Arrivals,New Zealand and Australian citizens
+2006-04-01,2226.0,Arrivals,New Zealand and Australian citizens
+2006-05-01,2097.0,Arrivals,New Zealand and Australian citizens
+2006-06-01,2247.0,Arrivals,New Zealand and Australian citizens
+2006-07-01,2647.0,Arrivals,New Zealand and Australian citizens
+2006-08-01,2656.0,Arrivals,New Zealand and Australian citizens
+2006-09-01,3201.0,Arrivals,New Zealand and Australian citizens
+2006-10-01,3114.0,Arrivals,New Zealand and Australian citizens
+2006-11-01,3552.0,Arrivals,New Zealand and Australian citizens
+2006-12-01,5590.0,Arrivals,New Zealand and Australian citizens
+2007-01-01,3527.0,Arrivals,New Zealand and Australian citizens
+2007-02-01,2766.0,Arrivals,New Zealand and Australian citizens
+2007-03-01,2319.0,Arrivals,New Zealand and Australian citizens
+2007-04-01,2101.0,Arrivals,New Zealand and Australian citizens
+2007-05-01,2119.0,Arrivals,New Zealand and Australian citizens
+2007-06-01,2230.0,Arrivals,New Zealand and Australian citizens
+2007-07-01,2355.0,Arrivals,New Zealand and Australian citizens
+2007-08-01,2669.0,Arrivals,New Zealand and Australian citizens
+2007-09-01,3025.0,Arrivals,New Zealand and Australian citizens
+2007-10-01,3161.0,Arrivals,New Zealand and Australian citizens
+2007-11-01,3484.0,Arrivals,New Zealand and Australian citizens
+2007-12-01,5226.0,Arrivals,New Zealand and Australian citizens
+2008-01-01,3331.0,Arrivals,New Zealand and Australian citizens
+2008-02-01,2746.0,Arrivals,New Zealand and Australian citizens
+2008-03-01,2219.0,Arrivals,New Zealand and Australian citizens
+2008-04-01,2062.0,Arrivals,New Zealand and Australian citizens
+2008-05-01,2198.0,Arrivals,New Zealand and Australian citizens
+2008-06-01,2284.0,Arrivals,New Zealand and Australian citizens
+2008-07-01,2478.0,Arrivals,New Zealand and Australian citizens
+2008-08-01,2628.0,Arrivals,New Zealand and Australian citizens
+2008-09-01,2956.0,Arrivals,New Zealand and Australian citizens
+2008-10-01,3271.0,Arrivals,New Zealand and Australian citizens
+2008-11-01,3446.0,Arrivals,New Zealand and Australian citizens
+2008-12-01,5618.0,Arrivals,New Zealand and Australian citizens
+2009-01-01,3630.0,Arrivals,New Zealand and Australian citizens
+2009-02-01,2937.0,Arrivals,New Zealand and Australian citizens
+2009-03-01,2390.0,Arrivals,New Zealand and Australian citizens
+2009-04-01,2223.0,Arrivals,New Zealand and Australian citizens
+2009-05-01,2336.0,Arrivals,New Zealand and Australian citizens
+2009-06-01,2447.0,Arrivals,New Zealand and Australian citizens
+2009-07-01,2720.0,Arrivals,New Zealand and Australian citizens
+2009-08-01,2892.0,Arrivals,New Zealand and Australian citizens
+2009-09-01,3081.0,Arrivals,New Zealand and Australian citizens
+2009-10-01,3434.0,Arrivals,New Zealand and Australian citizens
+2009-11-01,3551.0,Arrivals,New Zealand and Australian citizens
+2009-12-01,5708.0,Arrivals,New Zealand and Australian citizens
+2010-01-01,3668.0,Arrivals,New Zealand and Australian citizens
+2010-02-01,2779.0,Arrivals,New Zealand and Australian citizens
+2010-03-01,2456.0,Arrivals,New Zealand and Australian citizens
+2010-04-01,2262.0,Arrivals,New Zealand and Australian citizens
+2010-05-01,2171.0,Arrivals,New Zealand and Australian citizens
+2010-06-01,2367.0,Arrivals,New Zealand and Australian citizens
+2010-07-01,2667.0,Arrivals,New Zealand and Australian citizens
+2010-08-01,2716.0,Arrivals,New Zealand and Australian citizens
+2010-09-01,3039.0,Arrivals,New Zealand and Australian citizens
+2010-10-01,2974.0,Arrivals,New Zealand and Australian citizens
+2010-11-01,3174.0,Arrivals,New Zealand and Australian citizens
+2010-12-01,5340.0,Arrivals,New Zealand and Australian citizens
+2011-01-01,3454.0,Arrivals,New Zealand and Australian citizens
+2011-02-01,2568.0,Arrivals,New Zealand and Australian citizens
+2011-03-01,2193.0,Arrivals,New Zealand and Australian citizens
+2011-04-01,2159.0,Arrivals,New Zealand and Australian citizens
+2011-05-01,2002.0,Arrivals,New Zealand and Australian citizens
+2011-06-01,2052.0,Arrivals,New Zealand and Australian citizens
+2011-07-01,2528.0,Arrivals,New Zealand and Australian citizens
+2011-08-01,2772.0,Arrivals,New Zealand and Australian citizens
+2011-09-01,2882.0,Arrivals,New Zealand and Australian citizens
+2011-10-01,2778.0,Arrivals,New Zealand and Australian citizens
+2011-11-01,2990.0,Arrivals,New Zealand and Australian citizens
+2011-12-01,4883.0,Arrivals,New Zealand and Australian citizens
+2012-01-01,3015.0,Arrivals,New Zealand and Australian citizens
+2012-02-01,2483.0,Arrivals,New Zealand and Australian citizens
+2012-03-01,2217.0,Arrivals,New Zealand and Australian citizens
+2012-04-01,1954.0,Arrivals,New Zealand and Australian citizens
+2012-05-01,1847.0,Arrivals,New Zealand and Australian citizens
+2012-06-01,2290.0,Arrivals,New Zealand and Australian citizens
+2012-07-01,2543.0,Arrivals,New Zealand and Australian citizens
+2012-08-01,2792.0,Arrivals,New Zealand and Australian citizens
+2012-09-01,3204.0,Arrivals,New Zealand and Australian citizens
+2012-10-01,3075.0,Arrivals,New Zealand and Australian citizens
+2012-11-01,3486.0,Arrivals,New Zealand and Australian citizens
+2012-12-01,5779.0,Arrivals,New Zealand and Australian citizens
+2013-01-01,3628.0,Arrivals,New Zealand and Australian citizens
+2013-02-01,2823.0,Arrivals,New Zealand and Australian citizens
+2013-03-01,2603.0,Arrivals,New Zealand and Australian citizens
+2013-04-01,2480.0,Arrivals,New Zealand and Australian citizens
+2013-05-01,2404.0,Arrivals,New Zealand and Australian citizens
+2013-06-01,2665.0,Arrivals,New Zealand and Australian citizens
+2013-07-01,3297.0,Arrivals,New Zealand and Australian citizens
+2013-08-01,3256.0,Arrivals,New Zealand and Australian citizens
+2013-09-01,3555.0,Arrivals,New Zealand and Australian citizens
+2013-10-01,3611.0,Arrivals,New Zealand and Australian citizens
+2013-11-01,3754.0,Arrivals,New Zealand and Australian citizens
+2013-12-01,6444.0,Arrivals,New Zealand and Australian citizens
+2014-01-01,3896.0,Arrivals,New Zealand and Australian citizens
+2014-02-01,3358.0,Arrivals,New Zealand and Australian citizens
+2014-03-01,2811.0,Arrivals,New Zealand and Australian citizens
+2014-04-01,2785.0,Arrivals,New Zealand and Australian citizens
+2014-05-01,2598.0,Arrivals,New Zealand and Australian citizens
+2014-06-01,2788.0,Arrivals,New Zealand and Australian citizens
+2014-07-01,3425.0,Arrivals,New Zealand and Australian citizens
+2014-08-01,3446.0,Arrivals,New Zealand and Australian citizens
+2014-09-01,3812.0,Arrivals,New Zealand and Australian citizens
+2014-10-01,3844.0,Arrivals,New Zealand and Australian citizens
+2014-11-01,3975.0,Arrivals,New Zealand and Australian citizens
+2014-12-01,6834.0,Arrivals,New Zealand and Australian citizens
+2015-01-01,4436.0,Arrivals,New Zealand and Australian citizens
+2015-02-01,3219.0,Arrivals,New Zealand and Australian citizens
+2015-03-01,3116.0,Arrivals,New Zealand and Australian citizens
+2015-04-01,2824.0,Arrivals,New Zealand and Australian citizens
+2015-05-01,2924.0,Arrivals,New Zealand and Australian citizens
+2015-06-01,2919.0,Arrivals,New Zealand and Australian citizens
+2015-07-01,3521.0,Arrivals,New Zealand and Australian citizens
+2015-08-01,3623.0,Arrivals,New Zealand and Australian citizens
+2015-09-01,3880.0,Arrivals,New Zealand and Australian citizens
+2015-10-01,4032.0,Arrivals,New Zealand and Australian citizens
+2015-11-01,3997.0,Arrivals,New Zealand and Australian citizens
+2015-12-01,6674.0,Arrivals,New Zealand and Australian citizens
+2016-01-01,4690.0,Arrivals,New Zealand and Australian citizens
+2016-02-01,3482.0,Arrivals,New Zealand and Australian citizens
+2016-03-01,3217.0,Arrivals,New Zealand and Australian citizens
+2016-04-01,2830.0,Arrivals,New Zealand and Australian citizens
+2016-05-01,2799.0,Arrivals,New Zealand and Australian citizens
+2016-06-01,3031.0,Arrivals,New Zealand and Australian citizens
+2016-07-01,3567.0,Arrivals,New Zealand and Australian citizens
+2016-08-01,3725.0,Arrivals,New Zealand and Australian citizens
+2016-09-01,3984.0,Arrivals,New Zealand and Australian citizens
+2016-10-01,3916.0,Arrivals,New Zealand and Australian citizens
+2016-11-01,4077.0,Arrivals,New Zealand and Australian citizens
+2016-12-01,6678.0,Arrivals,New Zealand and Australian citizens
+2017-01-01,4620.0,Arrivals,New Zealand and Australian citizens
+2017-02-01,3386.0,Arrivals,New Zealand and Australian citizens
+2017-03-01,2859.0,Arrivals,New Zealand and Australian citizens
+2017-04-01,2738.0,Arrivals,New Zealand and Australian citizens
+2017-05-01,2732.0,Arrivals,New Zealand and Australian citizens
+2017-06-01,2960.0,Arrivals,New Zealand and Australian citizens
+2017-07-01,3334.0,Arrivals,New Zealand and Australian citizens
+2017-08-01,3413.0,Arrivals,New Zealand and Australian citizens
+2017-09-01,3662.0,Arrivals,New Zealand and Australian citizens
+2017-10-01,3667.0,Arrivals,New Zealand and Australian citizens
+2017-11-01,3809.0,Arrivals,New Zealand and Australian citizens
+2017-12-01,6333.0,Arrivals,New Zealand and Australian citizens
+2018-01-01,4173.0,Arrivals,New Zealand and Australian citizens
+2018-02-01,2971.0,Arrivals,New Zealand and Australian citizens
+2018-03-01,2870.0,Arrivals,New Zealand and Australian citizens
+2018-04-01,2533.0,Arrivals,New Zealand and Australian citizens
+2018-05-01,2590.0,Arrivals,New Zealand and Australian citizens
+2018-06-01,2625.0,Arrivals,New Zealand and Australian citizens
+2018-07-01,3226.0,Arrivals,New Zealand and Australian citizens
+2018-08-01,3381.0,Arrivals,New Zealand and Australian citizens
+2018-09-01,3610.0,Arrivals,New Zealand and Australian citizens
+2018-10-01,3611.0,Arrivals,New Zealand and Australian citizens
+2018-11-01,3790.0,Arrivals,New Zealand and Australian citizens
+2018-12-01,5962.0,Arrivals,New Zealand and Australian citizens
+2019-01-01,4148.0,Arrivals,New Zealand and Australian citizens
+2019-02-01,2937.0,Arrivals,New Zealand and Australian citizens
+2019-03-01,2769.0,Arrivals,New Zealand and Australian citizens
+2019-04-01,2552.0,Arrivals,New Zealand and Australian citizens
+2019-05-01,2807.0,Arrivals,New Zealand and Australian citizens
+2019-06-01,3070.0,Arrivals,New Zealand and Australian citizens
+2019-07-01,3680.0,Arrivals,New Zealand and Australian citizens
+2019-08-01,4019.0,Arrivals,New Zealand and Australian citizens
+2019-09-01,4412.0,Arrivals,New Zealand and Australian citizens
+2019-10-01,4608.0,Arrivals,New Zealand and Australian citizens
+2019-11-01,5164.0,Arrivals,New Zealand and Australian citizens
+2019-12-01,8295.0,Arrivals,New Zealand and Australian citizens
+2020-01-01,5181.0,Arrivals,New Zealand and Australian citizens
+2020-02-01,4465.0,Arrivals,New Zealand and Australian citizens
+2020-03-01,5937.0,Arrivals,New Zealand and Australian citizens
+2020-04-01,819.0,Arrivals,New Zealand and Australian citizens
+2020-05-01,1099.0,Arrivals,New Zealand and Australian citizens
+2020-06-01,1655.0,Arrivals,New Zealand and Australian citizens
+2020-07-01,2896.0,Arrivals,New Zealand and Australian citizens
+2020-08-01,3636.0,Arrivals,New Zealand and Australian citizens
+2020-09-01,3929.0,Arrivals,New Zealand and Australian citizens
+2020-10-01,3455.0,Arrivals,New Zealand and Australian citizens
+2020-11-01,3495.0,Arrivals,New Zealand and Australian citizens
+2020-12-01,3678.0,Arrivals,New Zealand and Australian citizens
+2021-01-01,2990.0,Arrivals,New Zealand and Australian citizens
+2021-02-01,2614.0,Arrivals,New Zealand and Australian citizens
+2021-03-01,2642.0,Arrivals,New Zealand and Australian citizens
+2021-04-01,3775.0,Arrivals,New Zealand and Australian citizens
+2021-05-01,3693.0,Arrivals,New Zealand and Australian citizens
+2021-06-01,2762.0,Arrivals,New Zealand and Australian citizens
+2021-07-01,3601.0,Arrivals,New Zealand and Australian citizens
+2021-08-01,1100.0,Arrivals,New Zealand and Australian citizens
+2021-09-01,1032.0,Arrivals,New Zealand and Australian citizens
+2021-10-01,1901.0,Arrivals,New Zealand and Australian citizens
+2021-11-01,1858.0,Arrivals,New Zealand and Australian citizens
+2021-12-01,2756.0,Arrivals,New Zealand and Australian citizens
+2022-01-01,1879.0,Arrivals,New Zealand and Australian citizens
+2022-02-01,1244.0,Arrivals,New Zealand and Australian citizens
+2022-03-01,3998.0,Arrivals,New Zealand and Australian citizens
+2022-04-01,3142.0,Arrivals,New Zealand and Australian citizens
+2022-05-01,2525.0,Arrivals,New Zealand and Australian citizens
+2022-06-01,2279.0,Arrivals,New Zealand and Australian citizens
+2022-07-01,2754.0,Arrivals,New Zealand and Australian citizens
+2022-08-01,2408.0,Arrivals,New Zealand and Australian citizens
+2022-09-01,2469.0,Arrivals,New Zealand and Australian citizens
+2022-10-01,2499.0,Arrivals,New Zealand and Australian citizens
+2022-11-01,2853.0,Arrivals,New Zealand and Australian citizens
+2022-12-01,3938.0,Arrivals,New Zealand and Australian citizens
+2023-01-01,3536.0,Arrivals,New Zealand and Australian citizens
+2023-02-01,2392.0,Arrivals,New Zealand and Australian citizens
+2023-03-01,2010.0,Arrivals,New Zealand and Australian citizens
+2023-04-01,1707.0,Arrivals,New Zealand and Australian citizens
+2023-05-01,1620.0,Arrivals,New Zealand and Australian citizens
+2023-06-01,1894.0,Arrivals,New Zealand and Australian citizens
+2023-07-01,1963.0,Arrivals,New Zealand and Australian citizens
+2023-08-01,2046.0,Arrivals,New Zealand and Australian citizens
+2023-09-01,2284.0,Arrivals,New Zealand and Australian citizens
+2023-10-01,2158.0,Arrivals,New Zealand and Australian citizens
+2023-11-01,2390.0,Arrivals,New Zealand and Australian citizens
+2023-12-01,3463.0,Arrivals,New Zealand and Australian citizens
+2024-01-01,2790.0,Arrivals,New Zealand and Australian citizens
+2024-02-01,2228.0,Arrivals,New Zealand and Australian citizens
+2024-03-01,1793.0,Arrivals,New Zealand and Australian citizens
+2024-04-01,1472.0,Arrivals,New Zealand and Australian citizens
+2024-05-01,1742.0,Arrivals,New Zealand and Australian citizens
+2024-06-01,1922.0,Arrivals,New Zealand and Australian citizens
+2024-07-01,2074.0,Arrivals,New Zealand and Australian citizens
+2024-08-01,2233.0,Arrivals,New Zealand and Australian citizens
+2024-09-01,2336.0,Arrivals,New Zealand and Australian citizens
+2024-10-01,2356.0,Arrivals,New Zealand and Australian citizens
+2024-11-01,2591.0,Arrivals,New Zealand and Australian citizens
+2024-12-01,4031.0,Arrivals,New Zealand and Australian citizens
+2025-01-01,2888.0,Arrivals,New Zealand and Australian citizens
+2025-02-01,2427.0,Arrivals,New Zealand and Australian citizens
+2025-03-01,2223.0,Arrivals,New Zealand and Australian citizens
+2025-04-01,2221.0,Arrivals,New Zealand and Australian citizens
+2025-05-01,2216.0,Arrivals,New Zealand and Australian citizens
+2025-06-01,2251.0,Arrivals,New Zealand and Australian citizens
+2025-07-01,2498.0,Arrivals,New Zealand and Australian citizens
+2025-08-01,2509.0,Arrivals,New Zealand and Australian citizens
+2025-09-01,2677.0,Arrivals,New Zealand and Australian citizens
+2025-10-01,2703.0,Arrivals,New Zealand and Australian citizens
+2025-11-01,2691.0,Arrivals,New Zealand and Australian citizens
+2025-12-01,3994.0,Arrivals,New Zealand and Australian citizens
+2026-01-01,2793.0,Arrivals,New Zealand and Australian citizens
+2001-01-01,7213.0,Arrivals,Other
+2001-02-01,8069.0,Arrivals,Other
+2001-03-01,5737.0,Arrivals,Other
+2001-04-01,5602.0,Arrivals,Other
+2001-05-01,4839.0,Arrivals,Other
+2001-06-01,5521.0,Arrivals,Other
+2001-07-01,7415.0,Arrivals,Other
+2001-08-01,6500.0,Arrivals,Other
+2001-09-01,7359.0,Arrivals,Other
+2001-10-01,7256.0,Arrivals,Other
+2001-11-01,7779.0,Arrivals,Other
+2001-12-01,6720.0,Arrivals,Other
+2002-01-01,10515.0,Arrivals,Other
+2002-02-01,9248.0,Arrivals,Other
+2002-03-01,8521.0,Arrivals,Other
+2002-04-01,7267.0,Arrivals,Other
+2002-05-01,6142.0,Arrivals,Other
+2002-06-01,7045.0,Arrivals,Other
+2002-07-01,8692.0,Arrivals,Other
+2002-08-01,7924.0,Arrivals,Other
+2002-09-01,8244.0,Arrivals,Other
+2002-10-01,7793.0,Arrivals,Other
+2002-11-01,8241.0,Arrivals,Other
+2002-12-01,6957.0,Arrivals,Other
+2003-01-01,10193.0,Arrivals,Other
+2003-02-01,8929.0,Arrivals,Other
+2003-03-01,7230.0,Arrivals,Other
+2003-04-01,6048.0,Arrivals,Other
+2003-05-01,5091.0,Arrivals,Other
+2003-06-01,5557.0,Arrivals,Other
+2003-07-01,126.0,Arrivals,Other
+2003-08-01,164.0,Arrivals,Other
+2003-09-01,123.0,Arrivals,Other
+2003-10-01,124.0,Arrivals,Other
+2003-11-01,111.0,Arrivals,Other
+2003-12-01,159.0,Arrivals,Other
+2004-01-01,102.0,Arrivals,Other
+2004-02-01,78.0,Arrivals,Other
+2004-03-01,100.0,Arrivals,Other
+2004-04-01,66.0,Arrivals,Other
+2004-05-01,52.0,Arrivals,Other
+2004-06-01,89.0,Arrivals,Other
+2004-07-01,95.0,Arrivals,Other
+2004-08-01,102.0,Arrivals,Other
+2004-09-01,109.0,Arrivals,Other
+2004-10-01,109.0,Arrivals,Other
+2004-11-01,111.0,Arrivals,Other
+2004-12-01,107.0,Arrivals,Other
+2005-01-01,126.0,Arrivals,Other
+2005-02-01,107.0,Arrivals,Other
+2005-03-01,96.0,Arrivals,Other
+2005-04-01,92.0,Arrivals,Other
+2005-05-01,94.0,Arrivals,Other
+2005-06-01,111.0,Arrivals,Other
+2005-07-01,84.0,Arrivals,Other
+2005-08-01,95.0,Arrivals,Other
+2005-09-01,63.0,Arrivals,Other
+2005-10-01,100.0,Arrivals,Other
+2005-11-01,83.0,Arrivals,Other
+2005-12-01,108.0,Arrivals,Other
+2006-01-01,118.0,Arrivals,Other
+2006-02-01,79.0,Arrivals,Other
+2006-03-01,90.0,Arrivals,Other
+2006-04-01,87.0,Arrivals,Other
+2006-05-01,100.0,Arrivals,Other
+2006-06-01,75.0,Arrivals,Other
+2006-07-01,105.0,Arrivals,Other
+2006-08-01,111.0,Arrivals,Other
+2006-09-01,104.0,Arrivals,Other
+2006-10-01,121.0,Arrivals,Other
+2006-11-01,125.0,Arrivals,Other
+2006-12-01,114.0,Arrivals,Other
+2007-01-01,102.0,Arrivals,Other
+2007-02-01,96.0,Arrivals,Other
+2007-03-01,69.0,Arrivals,Other
+2007-04-01,113.0,Arrivals,Other
+2007-05-01,87.0,Arrivals,Other
+2007-06-01,61.0,Arrivals,Other
+2007-07-01,90.0,Arrivals,Other
+2007-08-01,92.0,Arrivals,Other
+2007-09-01,124.0,Arrivals,Other
+2007-10-01,78.0,Arrivals,Other
+2007-11-01,102.0,Arrivals,Other
+2007-12-01,115.0,Arrivals,Other
+2008-01-01,99.0,Arrivals,Other
+2008-02-01,135.0,Arrivals,Other
+2008-03-01,103.0,Arrivals,Other
+2008-04-01,143.0,Arrivals,Other
+2008-05-01,121.0,Arrivals,Other
+2008-06-01,127.0,Arrivals,Other
+2008-07-01,165.0,Arrivals,Other
+2008-08-01,144.0,Arrivals,Other
+2008-09-01,127.0,Arrivals,Other
+2008-10-01,116.0,Arrivals,Other
+2008-11-01,121.0,Arrivals,Other
+2008-12-01,106.0,Arrivals,Other
+2009-01-01,90.0,Arrivals,Other
+2009-02-01,138.0,Arrivals,Other
+2009-03-01,148.0,Arrivals,Other
+2009-04-01,117.0,Arrivals,Other
+2009-05-01,145.0,Arrivals,Other
+2009-06-01,126.0,Arrivals,Other
+2009-07-01,158.0,Arrivals,Other
+2009-08-01,158.0,Arrivals,Other
+2009-09-01,166.0,Arrivals,Other
+2009-10-01,134.0,Arrivals,Other
+2009-11-01,60.0,Arrivals,Other
+2009-12-01,82.0,Arrivals,Other
+2010-01-01,89.0,Arrivals,Other
+2010-02-01,111.0,Arrivals,Other
+2010-03-01,88.0,Arrivals,Other
+2010-04-01,80.0,Arrivals,Other
+2010-05-01,76.0,Arrivals,Other
+2010-06-01,66.0,Arrivals,Other
+2010-07-01,103.0,Arrivals,Other
+2010-08-01,93.0,Arrivals,Other
+2010-09-01,95.0,Arrivals,Other
+2010-10-01,105.0,Arrivals,Other
+2010-11-01,82.0,Arrivals,Other
+2010-12-01,102.0,Arrivals,Other
+2011-01-01,71.0,Arrivals,Other
+2011-02-01,95.0,Arrivals,Other
+2011-03-01,98.0,Arrivals,Other
+2011-04-01,72.0,Arrivals,Other
+2011-05-01,64.0,Arrivals,Other
+2011-06-01,70.0,Arrivals,Other
+2011-07-01,127.0,Arrivals,Other
+2011-08-01,101.0,Arrivals,Other
+2011-09-01,102.0,Arrivals,Other
+2011-10-01,92.0,Arrivals,Other
+2011-11-01,102.0,Arrivals,Other
+2011-12-01,101.0,Arrivals,Other
+2012-01-01,115.0,Arrivals,Other
+2012-02-01,131.0,Arrivals,Other
+2012-03-01,119.0,Arrivals,Other
+2012-04-01,76.0,Arrivals,Other
+2012-05-01,78.0,Arrivals,Other
+2012-06-01,90.0,Arrivals,Other
+2012-07-01,96.0,Arrivals,Other
+2012-08-01,107.0,Arrivals,Other
+2012-09-01,100.0,Arrivals,Other
+2012-10-01,126.0,Arrivals,Other
+2012-11-01,116.0,Arrivals,Other
+2012-12-01,129.0,Arrivals,Other
+2013-01-01,110.0,Arrivals,Other
+2013-02-01,135.0,Arrivals,Other
+2013-03-01,86.0,Arrivals,Other
+2013-04-01,66.0,Arrivals,Other
+2013-05-01,81.0,Arrivals,Other
+2013-06-01,90.0,Arrivals,Other
+2013-07-01,114.0,Arrivals,Other
+2013-08-01,128.0,Arrivals,Other
+2013-09-01,130.0,Arrivals,Other
+2013-10-01,138.0,Arrivals,Other
+2013-11-01,160.0,Arrivals,Other
+2013-12-01,153.0,Arrivals,Other
+2014-01-01,144.0,Arrivals,Other
+2014-02-01,182.0,Arrivals,Other
+2014-03-01,109.0,Arrivals,Other
+2014-04-01,75.0,Arrivals,Other
+2014-05-01,70.0,Arrivals,Other
+2014-06-01,78.0,Arrivals,Other
+2014-07-01,102.0,Arrivals,Other
+2014-08-01,164.0,Arrivals,Other
+2014-09-01,113.0,Arrivals,Other
+2014-10-01,162.0,Arrivals,Other
+2014-11-01,154.0,Arrivals,Other
+2014-12-01,126.0,Arrivals,Other
+2015-01-01,139.0,Arrivals,Other
+2015-02-01,170.0,Arrivals,Other
+2015-03-01,124.0,Arrivals,Other
+2015-04-01,86.0,Arrivals,Other
+2015-05-01,86.0,Arrivals,Other
+2015-06-01,114.0,Arrivals,Other
+2015-07-01,113.0,Arrivals,Other
+2015-08-01,97.0,Arrivals,Other
+2015-09-01,101.0,Arrivals,Other
+2015-10-01,157.0,Arrivals,Other
+2015-11-01,126.0,Arrivals,Other
+2015-12-01,132.0,Arrivals,Other
+2016-01-01,101.0,Arrivals,Other
+2016-02-01,116.0,Arrivals,Other
+2016-03-01,119.0,Arrivals,Other
+2016-04-01,67.0,Arrivals,Other
+2016-05-01,83.0,Arrivals,Other
+2016-06-01,90.0,Arrivals,Other
+2016-07-01,96.0,Arrivals,Other
+2016-08-01,92.0,Arrivals,Other
+2016-09-01,89.0,Arrivals,Other
+2016-10-01,81.0,Arrivals,Other
+2016-11-01,131.0,Arrivals,Other
+2016-12-01,111.0,Arrivals,Other
+2017-01-01,93.0,Arrivals,Other
+2017-02-01,96.0,Arrivals,Other
+2017-03-01,110.0,Arrivals,Other
+2017-04-01,85.0,Arrivals,Other
+2017-05-01,43.0,Arrivals,Other
+2017-06-01,57.0,Arrivals,Other
+2017-07-01,68.0,Arrivals,Other
+2017-08-01,95.0,Arrivals,Other
+2017-09-01,93.0,Arrivals,Other
+2017-10-01,101.0,Arrivals,Other
+2017-11-01,118.0,Arrivals,Other
+2017-12-01,120.0,Arrivals,Other
+2018-01-01,107.0,Arrivals,Other
+2018-02-01,118.0,Arrivals,Other
+2018-03-01,120.0,Arrivals,Other
+2018-04-01,52.0,Arrivals,Other
+2018-05-01,51.0,Arrivals,Other
+2018-06-01,44.0,Arrivals,Other
+2018-07-01,82.0,Arrivals,Other
+2018-08-01,90.0,Arrivals,Other
+2018-09-01,85.0,Arrivals,Other
+2018-10-01,94.0,Arrivals,Other
+2018-11-01,99.0,Arrivals,Other
+2018-12-01,89.0,Arrivals,Other
+2019-01-01,115.0,Arrivals,Other
+2019-02-01,190.0,Arrivals,Other
+2019-03-01,111.0,Arrivals,Other
+2019-04-01,65.0,Arrivals,Other
+2019-05-01,61.0,Arrivals,Other
+2019-06-01,73.0,Arrivals,Other
+2019-07-01,81.0,Arrivals,Other
+2019-08-01,88.0,Arrivals,Other
+2019-09-01,202.0,Arrivals,Other
+2019-10-01,913.0,Arrivals,Other
+2019-11-01,1157.0,Arrivals,Other
+2019-12-01,248.0,Arrivals,Other
+2020-01-01,398.0,Arrivals,Other
+2020-02-01,1614.0,Arrivals,Other
+2020-03-01,1357.0,Arrivals,Other
+2020-04-01,8.0,Arrivals,Other
+2020-05-01,1.0,Arrivals,Other
+2020-06-01,32.0,Arrivals,Other
+2020-07-01,53.0,Arrivals,Other
+2020-08-01,52.0,Arrivals,Other
+2020-09-01,51.0,Arrivals,Other
+2020-10-01,39.0,Arrivals,Other
+2020-11-01,40.0,Arrivals,Other
+2020-12-01,42.0,Arrivals,Other
+2021-01-01,539.0,Arrivals,Other
+2021-02-01,825.0,Arrivals,Other
+2021-03-01,242.0,Arrivals,Other
+2021-04-01,31.0,Arrivals,Other
+2021-05-01,41.0,Arrivals,Other
+2021-06-01,54.0,Arrivals,Other
+2021-07-01,260.0,Arrivals,Other
+2021-08-01,181.0,Arrivals,Other
+2021-09-01,31.0,Arrivals,Other
+2021-10-01,242.0,Arrivals,Other
+2021-11-01,366.0,Arrivals,Other
+2021-12-01,251.0,Arrivals,Other
+2022-01-01,121.0,Arrivals,Other
+2022-02-01,286.0,Arrivals,Other
+2022-03-01,213.0,Arrivals,Other
+2022-04-01,186.0,Arrivals,Other
+2022-05-01,126.0,Arrivals,Other
+2022-06-01,69.0,Arrivals,Other
+2022-07-01,71.0,Arrivals,Other
+2022-08-01,105.0,Arrivals,Other
+2022-09-01,81.0,Arrivals,Other
+2022-10-01,90.0,Arrivals,Other
+2022-11-01,119.0,Arrivals,Other
+2022-12-01,100.0,Arrivals,Other
+2023-01-01,48.0,Arrivals,Other
+2023-02-01,125.0,Arrivals,Other
+2023-03-01,139.0,Arrivals,Other
+2023-04-01,73.0,Arrivals,Other
+2023-05-01,115.0,Arrivals,Other
+2023-06-01,108.0,Arrivals,Other
+2023-07-01,79.0,Arrivals,Other
+2023-08-01,72.0,Arrivals,Other
+2023-09-01,102.0,Arrivals,Other
+2023-10-01,51.0,Arrivals,Other
+2023-11-01,142.0,Arrivals,Other
+2023-12-01,85.0,Arrivals,Other
+2024-01-01,144.0,Arrivals,Other
+2024-02-01,89.0,Arrivals,Other
+2024-03-01,136.0,Arrivals,Other
+2024-04-01,140.0,Arrivals,Other
+2024-05-01,65.0,Arrivals,Other
+2024-06-01,65.0,Arrivals,Other
+2024-07-01,74.0,Arrivals,Other
+2024-08-01,89.0,Arrivals,Other
+2024-09-01,82.0,Arrivals,Other
+2024-10-01,83.0,Arrivals,Other
+2024-11-01,107.0,Arrivals,Other
+2024-12-01,65.0,Arrivals,Other
+2025-01-01,123.0,Arrivals,Other
+2025-02-01,76.0,Arrivals,Other
+2025-03-01,76.0,Arrivals,Other
+2025-04-01,51.0,Arrivals,Other
+2025-05-01,97.0,Arrivals,Other
+2025-06-01,98.0,Arrivals,Other
+2025-07-01,66.0,Arrivals,Other
+2025-08-01,78.0,Arrivals,Other
+2025-09-01,59.0,Arrivals,Other
+2025-10-01,131.0,Arrivals,Other
+2025-11-01,142.0,Arrivals,Other
+2025-12-01,63.0,Arrivals,Other
+2026-01-01,98.0,Arrivals,Other
+2001-01-01,10541.0,Arrivals,TOTAL
+2001-02-01,10448.0,Arrivals,TOTAL
+2001-03-01,7870.0,Arrivals,TOTAL
+2001-04-01,7666.0,Arrivals,TOTAL
+2001-05-01,6766.0,Arrivals,TOTAL
+2001-06-01,7820.0,Arrivals,TOTAL
+2001-07-01,9868.0,Arrivals,TOTAL
+2001-08-01,8876.0,Arrivals,TOTAL
+2001-09-01,10345.0,Arrivals,TOTAL
+2001-10-01,10549.0,Arrivals,TOTAL
+2001-11-01,11390.0,Arrivals,TOTAL
+2001-12-01,12458.0,Arrivals,TOTAL
+2002-01-01,13956.0,Arrivals,TOTAL
+2002-02-01,11982.0,Arrivals,TOTAL
+2002-03-01,10945.0,Arrivals,TOTAL
+2002-04-01,9338.0,Arrivals,TOTAL
+2002-05-01,8371.0,Arrivals,TOTAL
+2002-06-01,9531.0,Arrivals,TOTAL
+2002-07-01,11315.0,Arrivals,TOTAL
+2002-08-01,10751.0,Arrivals,TOTAL
+2002-09-01,11403.0,Arrivals,TOTAL
+2002-10-01,11075.0,Arrivals,TOTAL
+2002-11-01,12167.0,Arrivals,TOTAL
+2002-12-01,13212.0,Arrivals,TOTAL
+2003-01-01,14184.0,Arrivals,TOTAL
+2003-02-01,12109.0,Arrivals,TOTAL
+2003-03-01,10014.0,Arrivals,TOTAL
+2003-04-01,8572.0,Arrivals,TOTAL
+2003-05-01,7677.0,Arrivals,TOTAL
+2003-06-01,8206.0,Arrivals,TOTAL
+2003-07-01,10102.0,Arrivals,TOTAL
+2003-08-01,8931.0,Arrivals,TOTAL
+2003-09-01,9399.0,Arrivals,TOTAL
+2003-10-01,9380.0,Arrivals,TOTAL
+2003-11-01,9958.0,Arrivals,TOTAL
+2003-12-01,12059.0,Arrivals,TOTAL
+2004-01-01,11778.0,Arrivals,TOTAL
+2004-02-01,9876.0,Arrivals,TOTAL
+2004-03-01,7391.0,Arrivals,TOTAL
+2004-04-01,6822.0,Arrivals,TOTAL
+2004-05-01,6612.0,Arrivals,TOTAL
+2004-06-01,7023.0,Arrivals,TOTAL
+2004-07-01,8521.0,Arrivals,TOTAL
+2004-08-01,7630.0,Arrivals,TOTAL
+2004-09-01,8541.0,Arrivals,TOTAL
+2004-10-01,8408.0,Arrivals,TOTAL
+2004-11-01,9116.0,Arrivals,TOTAL
+2004-12-01,11778.0,Arrivals,TOTAL
+2005-01-01,10990.0,Arrivals,TOTAL
+2005-02-01,9456.0,Arrivals,TOTAL
+2005-03-01,7507.0,Arrivals,TOTAL
+2005-04-01,7468.0,Arrivals,TOTAL
+2005-05-01,6993.0,Arrivals,TOTAL
+2005-06-01,7231.0,Arrivals,TOTAL
+2005-07-01,8232.0,Arrivals,TOTAL
+2005-08-01,7972.0,Arrivals,TOTAL
+2005-09-01,8849.0,Arrivals,TOTAL
+2005-10-01,8630.0,Arrivals,TOTAL
+2005-11-01,8875.0,Arrivals,TOTAL
+2005-12-01,11779.0,Arrivals,TOTAL
+2006-01-01,10921.0,Arrivals,TOTAL
+2006-02-01,10110.0,Arrivals,TOTAL
+2006-03-01,8115.0,Arrivals,TOTAL
+2006-04-01,7496.0,Arrivals,TOTAL
+2006-05-01,6798.0,Arrivals,TOTAL
+2006-06-01,7621.0,Arrivals,TOTAL
+2006-07-01,9192.0,Arrivals,TOTAL
+2006-08-01,8674.0,Arrivals,TOTAL
+2006-09-01,9721.0,Arrivals,TOTAL
+2006-10-01,9379.0,Arrivals,TOTAL
+2006-11-01,10365.0,Arrivals,TOTAL
+2006-12-01,12295.0,Arrivals,TOTAL
+2007-01-01,11356.0,Arrivals,TOTAL
+2007-02-01,10610.0,Arrivals,TOTAL
+2007-03-01,8969.0,Arrivals,TOTAL
+2007-04-01,7731.0,Arrivals,TOTAL
+2007-05-01,7191.0,Arrivals,TOTAL
+2007-06-01,8049.0,Arrivals,TOTAL
+2007-07-01,8936.0,Arrivals,TOTAL
+2007-08-01,9413.0,Arrivals,TOTAL
+2007-09-01,9770.0,Arrivals,TOTAL
+2007-10-01,9322.0,Arrivals,TOTAL
+2007-11-01,10231.0,Arrivals,TOTAL
+2007-12-01,11872.0,Arrivals,TOTAL
+2008-01-01,11098.0,Arrivals,TOTAL
+2008-02-01,12026.0,Arrivals,TOTAL
+2008-03-01,9178.0,Arrivals,TOTAL
+2008-04-01,8426.0,Arrivals,TOTAL
+2008-05-01,8531.0,Arrivals,TOTAL
+2008-06-01,8856.0,Arrivals,TOTAL
+2008-07-01,10288.0,Arrivals,TOTAL
+2008-08-01,9784.0,Arrivals,TOTAL
+2008-09-01,9674.0,Arrivals,TOTAL
+2008-10-01,9898.0,Arrivals,TOTAL
+2008-11-01,10126.0,Arrivals,TOTAL
+2008-12-01,12109.0,Arrivals,TOTAL
+2009-01-01,11557.0,Arrivals,TOTAL
+2009-02-01,11576.0,Arrivals,TOTAL
+2009-03-01,8537.0,Arrivals,TOTAL
+2009-04-01,7452.0,Arrivals,TOTAL
+2009-05-01,7263.0,Arrivals,TOTAL
+2009-06-01,7459.0,Arrivals,TOTAL
+2009-07-01,9336.0,Arrivals,TOTAL
+2009-08-01,8256.0,Arrivals,TOTAL
+2009-09-01,8786.0,Arrivals,TOTAL
+2009-10-01,8567.0,Arrivals,TOTAL
+2009-11-01,8809.0,Arrivals,TOTAL
+2009-12-01,10667.0,Arrivals,TOTAL
+2010-01-01,10111.0,Arrivals,TOTAL
+2010-02-01,9864.0,Arrivals,TOTAL
+2010-03-01,7680.0,Arrivals,TOTAL
+2010-04-01,6669.0,Arrivals,TOTAL
+2010-05-01,6292.0,Arrivals,TOTAL
+2010-06-01,6719.0,Arrivals,TOTAL
+2010-07-01,8837.0,Arrivals,TOTAL
+2010-08-01,8309.0,Arrivals,TOTAL
+2010-09-01,8607.0,Arrivals,TOTAL
+2010-10-01,8674.0,Arrivals,TOTAL
+2010-11-01,8483.0,Arrivals,TOTAL
+2010-12-01,10254.0,Arrivals,TOTAL
+2011-01-01,9761.0,Arrivals,TOTAL
+2011-02-01,10310.0,Arrivals,TOTAL
+2011-03-01,7787.0,Arrivals,TOTAL
+2011-04-01,6869.0,Arrivals,TOTAL
+2011-05-01,6441.0,Arrivals,TOTAL
+2011-06-01,6553.0,Arrivals,TOTAL
+2011-07-01,9102.0,Arrivals,TOTAL
+2011-08-01,8318.0,Arrivals,TOTAL
+2011-09-01,8487.0,Arrivals,TOTAL
+2011-10-01,8051.0,Arrivals,TOTAL
+2011-11-01,8678.0,Arrivals,TOTAL
+2011-12-01,9849.0,Arrivals,TOTAL
+2012-01-01,9594.0,Arrivals,TOTAL
+2012-02-01,10455.0,Arrivals,TOTAL
+2012-03-01,8324.0,Arrivals,TOTAL
+2012-04-01,6211.0,Arrivals,TOTAL
+2012-05-01,6439.0,Arrivals,TOTAL
+2012-06-01,7226.0,Arrivals,TOTAL
+2012-07-01,8350.0,Arrivals,TOTAL
+2012-08-01,8127.0,Arrivals,TOTAL
+2012-09-01,8730.0,Arrivals,TOTAL
+2012-10-01,8571.0,Arrivals,TOTAL
+2012-11-01,9065.0,Arrivals,TOTAL
+2012-12-01,10670.0,Arrivals,TOTAL
+2013-01-01,10226.0,Arrivals,TOTAL
+2013-02-01,10032.0,Arrivals,TOTAL
+2013-03-01,8557.0,Arrivals,TOTAL
+2013-04-01,7324.0,Arrivals,TOTAL
+2013-05-01,7184.0,Arrivals,TOTAL
+2013-06-01,7532.0,Arrivals,TOTAL
+2013-07-01,9584.0,Arrivals,TOTAL
+2013-08-01,8931.0,Arrivals,TOTAL
+2013-09-01,9163.0,Arrivals,TOTAL
+2013-10-01,9699.0,Arrivals,TOTAL
+2013-11-01,10050.0,Arrivals,TOTAL
+2013-12-01,12000.0,Arrivals,TOTAL
+2014-01-01,11138.0,Arrivals,TOTAL
+2014-02-01,12196.0,Arrivals,TOTAL
+2014-03-01,9845.0,Arrivals,TOTAL
+2014-04-01,8439.0,Arrivals,TOTAL
+2014-05-01,8282.0,Arrivals,TOTAL
+2014-06-01,8947.0,Arrivals,TOTAL
+2014-07-01,11575.0,Arrivals,TOTAL
+2014-08-01,11218.0,Arrivals,TOTAL
+2014-09-01,11392.0,Arrivals,TOTAL
+2014-10-01,11218.0,Arrivals,TOTAL
+2014-11-01,11352.0,Arrivals,TOTAL
+2014-12-01,12578.0,Arrivals,TOTAL
+2015-01-01,13356.0,Arrivals,TOTAL
+2015-02-01,12639.0,Arrivals,TOTAL
+2015-03-01,11044.0,Arrivals,TOTAL
+2015-04-01,9064.0,Arrivals,TOTAL
+2015-05-01,9005.0,Arrivals,TOTAL
+2015-06-01,9476.0,Arrivals,TOTAL
+2015-07-01,12842.0,Arrivals,TOTAL
+2015-08-01,11893.0,Arrivals,TOTAL
+2015-09-01,12319.0,Arrivals,TOTAL
+2015-10-01,12623.0,Arrivals,TOTAL
+2015-11-01,12328.0,Arrivals,TOTAL
+2015-12-01,13536.0,Arrivals,TOTAL
+2016-01-01,13964.0,Arrivals,TOTAL
+2016-02-01,14488.0,Arrivals,TOTAL
+2016-03-01,11239.0,Arrivals,TOTAL
+2016-04-01,9546.0,Arrivals,TOTAL
+2016-05-01,9548.0,Arrivals,TOTAL
+2016-06-01,9856.0,Arrivals,TOTAL
+2016-07-01,13018.0,Arrivals,TOTAL
+2016-08-01,11113.0,Arrivals,TOTAL
+2016-09-01,12278.0,Arrivals,TOTAL
+2016-10-01,12234.0,Arrivals,TOTAL
+2016-11-01,12291.0,Arrivals,TOTAL
+2016-12-01,13549.0,Arrivals,TOTAL
+2017-01-01,14173.0,Arrivals,TOTAL
+2017-02-01,14098.0,Arrivals,TOTAL
+2017-03-01,10884.0,Arrivals,TOTAL
+2017-04-01,9123.0,Arrivals,TOTAL
+2017-05-01,9328.0,Arrivals,TOTAL
+2017-06-01,10168.0,Arrivals,TOTAL
+2017-07-01,12927.0,Arrivals,TOTAL
+2017-08-01,11232.0,Arrivals,TOTAL
+2017-09-01,11562.0,Arrivals,TOTAL
+2017-10-01,11789.0,Arrivals,TOTAL
+2017-11-01,11775.0,Arrivals,TOTAL
+2017-12-01,13043.0,Arrivals,TOTAL
+2018-01-01,14102.0,Arrivals,TOTAL
+2018-02-01,12924.0,Arrivals,TOTAL
+2018-03-01,11030.0,Arrivals,TOTAL
+2018-04-01,8749.0,Arrivals,TOTAL
+2018-05-01,9351.0,Arrivals,TOTAL
+2018-06-01,9571.0,Arrivals,TOTAL
+2018-07-01,12904.0,Arrivals,TOTAL
+2018-08-01,11765.0,Arrivals,TOTAL
+2018-09-01,12001.0,Arrivals,TOTAL
+2018-10-01,11794.0,Arrivals,TOTAL
+2018-11-01,11725.0,Arrivals,TOTAL
+2018-12-01,13098.0,Arrivals,TOTAL
+2019-01-01,14008.0,Arrivals,TOTAL
+2019-02-01,13210.0,Arrivals,TOTAL
+2019-03-01,10859.0,Arrivals,TOTAL
+2019-04-01,8702.0,Arrivals,TOTAL
+2019-05-01,10266.0,Arrivals,TOTAL
+2019-06-01,11185.0,Arrivals,TOTAL
+2019-07-01,14307.0,Arrivals,TOTAL
+2019-08-01,13953.0,Arrivals,TOTAL
+2019-09-01,14789.0,Arrivals,TOTAL
+2019-10-01,16829.0,Arrivals,TOTAL
+2019-11-01,18223.0,Arrivals,TOTAL
+2019-12-01,19411.0,Arrivals,TOTAL
+2020-01-01,19903.0,Arrivals,TOTAL
+2020-02-01,21073.0,Arrivals,TOTAL
+2020-03-01,16243.0,Arrivals,TOTAL
+2020-04-01,1135.0,Arrivals,TOTAL
+2020-05-01,1381.0,Arrivals,TOTAL
+2020-06-01,2450.0,Arrivals,TOTAL
+2020-07-01,3783.0,Arrivals,TOTAL
+2020-08-01,5025.0,Arrivals,TOTAL
+2020-09-01,5437.0,Arrivals,TOTAL
+2020-10-01,5063.0,Arrivals,TOTAL
+2020-11-01,4848.0,Arrivals,TOTAL
+2020-12-01,5103.0,Arrivals,TOTAL
+2021-01-01,5031.0,Arrivals,TOTAL
+2021-02-01,5025.0,Arrivals,TOTAL
+2021-03-01,4908.0,Arrivals,TOTAL
+2021-04-01,5613.0,Arrivals,TOTAL
+2021-05-01,5259.0,Arrivals,TOTAL
+2021-06-01,4833.0,Arrivals,TOTAL
+2021-07-01,5735.0,Arrivals,TOTAL
+2021-08-01,3039.0,Arrivals,TOTAL
+2021-09-01,2827.0,Arrivals,TOTAL
+2021-10-01,3934.0,Arrivals,TOTAL
+2021-11-01,4140.0,Arrivals,TOTAL
+2021-12-01,5115.0,Arrivals,TOTAL
+2022-01-01,3567.0,Arrivals,TOTAL
+2022-02-01,2916.0,Arrivals,TOTAL
+2022-03-01,7193.0,Arrivals,TOTAL
+2022-04-01,7292.0,Arrivals,TOTAL
+2022-05-01,7401.0,Arrivals,TOTAL
+2022-06-01,8166.0,Arrivals,TOTAL
+2022-07-01,11435.0,Arrivals,TOTAL
+2022-08-01,10198.0,Arrivals,TOTAL
+2022-09-01,12561.0,Arrivals,TOTAL
+2022-10-01,12824.0,Arrivals,TOTAL
+2022-11-01,17684.0,Arrivals,TOTAL
+2022-12-01,18203.0,Arrivals,TOTAL
+2023-01-01,18684.0,Arrivals,TOTAL
+2023-02-01,22670.0,Arrivals,TOTAL
+2023-03-01,24931.0,Arrivals,TOTAL
+2023-04-01,18347.0,Arrivals,TOTAL
+2023-05-01,19476.0,Arrivals,TOTAL
+2023-06-01,20146.0,Arrivals,TOTAL
+2023-07-01,18336.0,Arrivals,TOTAL
+2023-08-01,21403.0,Arrivals,TOTAL
+2023-09-01,18772.0,Arrivals,TOTAL
+2023-10-01,16166.0,Arrivals,TOTAL
+2023-11-01,15827.0,Arrivals,TOTAL
+2023-12-01,15135.0,Arrivals,TOTAL
+2024-01-01,14499.0,Arrivals,TOTAL
+2024-02-01,15619.0,Arrivals,TOTAL
+2024-03-01,13168.0,Arrivals,TOTAL
+2024-04-01,10185.0,Arrivals,TOTAL
+2024-05-01,10220.0,Arrivals,TOTAL
+2024-06-01,11663.0,Arrivals,TOTAL
+2024-07-01,12912.0,Arrivals,TOTAL
+2024-08-01,10879.0,Arrivals,TOTAL
+2024-09-01,10775.0,Arrivals,TOTAL
+2024-10-01,10452.0,Arrivals,TOTAL
+2024-11-01,10386.0,Arrivals,TOTAL
+2024-12-01,11698.0,Arrivals,TOTAL
+2025-01-01,11507.0,Arrivals,TOTAL
+2025-02-01,13892.0,Arrivals,TOTAL
+2025-03-01,10260.0,Arrivals,TOTAL
+2025-04-01,8676.0,Arrivals,TOTAL
+2025-05-01,9593.0,Arrivals,TOTAL
+2025-06-01,10964.0,Arrivals,TOTAL
+2025-07-01,12780.0,Arrivals,TOTAL
+2025-08-01,10360.0,Arrivals,TOTAL
+2025-09-01,11935.0,Arrivals,TOTAL
+2025-10-01,11255.0,Arrivals,TOTAL
+2025-11-01,10854.0,Arrivals,TOTAL
+2025-12-01,12562.0,Arrivals,TOTAL
+2026-01-01,14332.0,Arrivals,TOTAL

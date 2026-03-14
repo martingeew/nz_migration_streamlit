@@ -2,16 +2,14 @@ import glob
 import os
 
 import pandas as pd
-import numpy as np
 
 # --------------------------------------------------------------
 # 1. Define objective
 # --------------------------------------------------------------
 
 """
-Direct processing script for migration data with Direction and Citizenship breakdowns.
-This script handles complex header structures and converts them directly to long format
-without relying on external transformation functions.
+Direct processing script for migrant arrivals data with Direction and Visa Type breakdowns.
+Handles the 4-row header structure of ITM552201 raw CSVs and converts to long format.
 
 Designed to be reusable for future data releases.
 """
@@ -26,8 +24,8 @@ def read_complex_header_file(file_path):
 
     Expected structure:
     - Row 1: Title (skip)
-    - Row 2: Direction categories (Arrivals, Departures, Net)
-    - Row 3: Citizenship names
+    - Row 2: Direction category (Arrivals only)
+    - Row 3: Visa type names
     - Row 4: "Estimate" labels (skip)
     - Row 5+: Data
 
@@ -40,74 +38,59 @@ def read_complex_header_file(file_path):
 
     print(f"Reading file: {file_path}")
 
-    # Read the header rows to analyze structure
     header_df = pd.read_csv(file_path, nrows=4, header=None)
 
     print("Analyzing header structure...")
 
-    # Extract direction row (row 2, index 1)
     direction_row = header_df.iloc[1].fillna('').astype(str)
+    visa_row = header_df.iloc[2].fillna('').astype(str)
 
-    # Extract citizenship row (row 3, index 2)
-    citizenship_row = header_df.iloc[2].fillna('').astype(str)
-
-    # Build column names by combining direction and citizenship
     column_names = []
     current_direction = ""
 
-    for i, (direction, citizenship) in enumerate(zip(direction_row, citizenship_row)):
-        if i == 0:  # First column is Month
+    for i in range(len(direction_row)):
+        if i == 0:
             column_names.append("Month")
         else:
-            # Update direction if not empty
-            if direction.strip() and direction.strip() != '':
-                current_direction = direction.strip()
-
-            # Create combined column name
-            if citizenship.strip() and citizenship.strip() != '':
-                column_name = f"{current_direction}_{citizenship.strip()}"
-                column_names.append(column_name)
+            if direction_row.iloc[i].strip():
+                current_direction = direction_row.iloc[i].strip()
+            visa = visa_row.iloc[i].strip()
+            if visa:
+                column_names.append(f"{current_direction}_{visa}")
 
     print(f"Constructed {len(column_names)} column names")
     print(f"First few columns: {column_names[:5]}")
 
-    # Read the actual data starting from row 5 (index 4)
     data_df = pd.read_csv(file_path, skiprows=4, header=None)
 
-    # Ensure we have the right number of columns
     if len(column_names) > len(data_df.columns):
         print(f"Warning: More column names ({len(column_names)}) than data columns ({len(data_df.columns)})")
         column_names = column_names[:len(data_df.columns)]
     elif len(column_names) < len(data_df.columns):
         print(f"Warning: Fewer column names ({len(column_names)}) than data columns ({len(data_df.columns)})")
-        # Pad with generic names
         for i in range(len(column_names), len(data_df.columns)):
             column_names.append(f"Column_{i}")
 
-    # Assign column names
     data_df.columns = column_names
 
     print(f"Data shape: {data_df.shape}")
 
     return data_df
 
+
 def convert_to_long_format(df):
     """
     Convert the wide format DataFrame to long format directly.
 
     Parameters:
-    - df (pd.DataFrame): Wide format DataFrame with Month and Direction_Citizenship columns
+    - df (pd.DataFrame): Wide format DataFrame with Month and Direction_Visa columns
 
     Returns:
-    - pd.DataFrame: Long format DataFrame with Month, Count, Direction, Citizenship columns
+    - pd.DataFrame: Long format DataFrame with Month, Count, Direction, Visa columns
     """
 
     print("Converting to long format...")
 
-    # Filter out footer information - look for rows where Month doesn't match expected pattern
-    print("Filtering out footer information...")
-
-    # Keep only rows where the first column looks like a month (starts with year)
     month_pattern = r'^\d{4}M\d{2}$'
     valid_rows = df['Month'].astype(str).str.match(month_pattern, na=False)
 
@@ -117,52 +100,45 @@ def convert_to_long_format(df):
 
     print(f"Filtered dataset: {original_rows} -> {filtered_rows} rows ({original_rows - filtered_rows} footer rows removed)")
 
-    # Convert Month column to datetime
     print("Converting Month column to datetime...")
     df['Month'] = pd.to_datetime(df['Month'], format='%YM%m')
 
-    # Get all columns except Month
     value_columns = [col for col in df.columns if col != 'Month']
 
     print(f"Found {len(value_columns)} value columns")
 
-    # Melt the DataFrame to long format
     df_long = pd.melt(
         df,
         id_vars=['Month'],
         value_vars=value_columns,
-        var_name='Direction_Citizenship',
+        var_name='Direction_Visa',
         value_name='Count'
     )
 
     print(f"Melted DataFrame shape: {df_long.shape}")
 
-    # Split the Direction_Citizenship column
-    print("Splitting Direction_Citizenship column...")
+    print("Splitting Direction_Visa column...")
 
-    # Split on the first underscore to handle citizenship names with underscores
-    split_data = df_long['Direction_Citizenship'].str.split('_', n=1, expand=True)
+    split_data = df_long['Direction_Visa'].str.split('_', n=1, expand=True)
 
     if split_data.shape[1] != 2:
-        raise ValueError("Could not properly split Direction_Citizenship column")
+        raise ValueError("Could not properly split Direction_Visa column into 2 parts")
 
     df_long['Direction'] = split_data[0]
-    df_long['Citizenship'] = split_data[1]
+    df_long['Visa'] = split_data[1]
 
-    # Drop the combined column
-    df_long = df_long.drop('Direction_Citizenship', axis=1)
+    df_long = df_long.drop('Direction_Visa', axis=1)
 
-    # Reorder columns
-    df_long = df_long[['Month', 'Count', 'Direction', 'Citizenship']]
+    df_long = df_long[['Month', 'Count', 'Direction', 'Visa']]
 
-    # Convert Count to numeric, handling any non-numeric values
     df_long['Count'] = pd.to_numeric(df_long['Count'], errors='coerce')
 
     print(f"Final DataFrame shape: {df_long.shape}")
     print(f"Unique Directions: {df_long['Direction'].unique()}")
-    print(f"Number of unique Citizenships: {len(df_long['Citizenship'].unique())}")
+    print(f"Unique Visa types: {df_long['Visa'].unique()}")
 
     return df_long
+
 
 def validate_output(df):
     """
@@ -177,13 +153,11 @@ def validate_output(df):
 
     print("Validating output...")
 
-    # Check columns
-    expected_columns = ['Month', 'Count', 'Direction', 'Citizenship']
+    expected_columns = ['Month', 'Count', 'Direction', 'Visa']
     if list(df.columns) != expected_columns:
         print(f"FAIL Column mismatch. Expected: {expected_columns}, Got: {list(df.columns)}")
         return False
 
-    # Check data types
     if not pd.api.types.is_datetime64_any_dtype(df['Month']):
         print("FAIL Month column is not datetime type")
         return False
@@ -192,24 +166,20 @@ def validate_output(df):
         print("FAIL Count column is not numeric type")
         return False
 
-    # Check for missing values in key columns
-    if df['Direction'].isna().any():
-        print("FAIL Found missing values in Direction column")
-        return False
+    for col in ['Direction', 'Visa']:
+        if df[col].isna().any():
+            print(f"FAIL Found missing values in {col} column")
+            return False
 
-    if df['Citizenship'].isna().any():
-        print("FAIL Found missing values in Citizenship column")
-        return False
-
-    # Check expected Direction values
-    expected_directions = ['Arrivals', 'Departures', 'Net']
-    actual_directions = df['Direction'].unique()
-    if not all(direction in expected_directions for direction in actual_directions):
-        print(f"FAIL Unexpected Direction values: {actual_directions}")
+    expected_directions = {'Arrivals'}
+    actual_directions = set(df['Direction'].unique())
+    if not actual_directions.issubset(expected_directions):
+        print(f"FAIL Unexpected Direction values: {actual_directions - expected_directions}")
         return False
 
     print("OK Output validation passed")
     return True
+
 
 # --------------------------------------------------------------
 # 3. Main processing function
@@ -221,28 +191,23 @@ def process_migration_file(input_file, output_date_suffix):
 
     Parameters:
     - input_file (str): Path to input CSV file
-    - output_date_suffix (str): Date suffix for output files (e.g., "202509")
+    - output_date_suffix (str): Date suffix for output files (e.g., "20260314")
 
     Returns:
     - pd.DataFrame: Processed DataFrame
     """
 
     try:
-        # Read the file with complex headers
         df_raw = read_complex_header_file(input_file)
 
-        # Convert to long format
         df_processed = convert_to_long_format(df_raw)
 
-        # Validate the output
         if not validate_output(df_processed):
             raise ValueError("Output validation failed")
 
-        # Define output paths
-        output_pickle = f"../../data/interim/df_citizenship_direction_{output_date_suffix}.pkl"
-        output_csv = f"../../data/interim/df_citizenship_direction_{output_date_suffix}.csv"
+        output_pickle = f"../../data/interim/df_direction_visa_{output_date_suffix}.pkl"
+        output_csv = f"../../data/interim/df_direction_visa_{output_date_suffix}.csv"
 
-        # Save the processed data
         print(f"Saving processed data...")
         df_processed.to_pickle(output_pickle)
         df_processed.to_csv(output_csv, index=False)
@@ -251,31 +216,31 @@ def process_migration_file(input_file, output_date_suffix):
         print(f"   - {output_pickle}")
         print(f"   - {output_csv}")
 
-        # Print summary statistics
         print(f"\nSummary:")
         print(f"   - Total records: {len(df_processed):,}")
         print(f"   - Date range: {df_processed['Month'].min()} to {df_processed['Month'].max()}")
         print(f"   - Directions: {', '.join(df_processed['Direction'].unique())}")
-        print(f"   - Unique citizenships: {len(df_processed['Citizenship'].unique())}")
+        print(f"   - Unique visa types: {df_processed['Visa'].nunique()}")
 
         return df_processed
 
     except Exception as e:
-        print(f"FAIL Error during processing: {str(e)}")
+        print(f"Error during processing: {str(e)}")
         raise
+
 
 # --------------------------------------------------------------
 # 4. Script execution
 # --------------------------------------------------------------
 
 def main():
-    """Main execution function — auto-detects the latest ITM552301 raw file"""
+    """Main execution function — auto-detects the latest ITM552201 raw file"""
 
-    print("=== Direction/Citizenship Data Processing ===")
+    print("=== Arrivals by Visa Type Data Processing ===")
 
-    files = sorted(glob.glob("../../data/raw/ITM552301_*.csv"))
+    files = sorted(glob.glob("../../data/raw/ITM552201_*.csv"))
     if not files:
-        raise FileNotFoundError("No ITM552301_*.csv files found in data/raw/")
+        raise FileNotFoundError("No ITM552201_*.csv files found in data/raw/")
 
     input_file = files[-1]
     output_suffix = os.path.basename(input_file).split('_')[1]
@@ -286,6 +251,7 @@ def main():
 
     print("\n=== Processing Complete ===")
     print(f"Processed {len(df_result):,} records successfully")
+
 
 if __name__ == "__main__":
     main()

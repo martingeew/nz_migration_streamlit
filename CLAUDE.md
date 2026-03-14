@@ -30,10 +30,13 @@ streamlit run src/visualization/streamlit_app.py
 
 ### Data Processing
 ```bash
-# Process raw data files into interim format
+# Process raw data files into interim format (run each from src/data/)
 cd src/data
-python 001_process_data.py
+python process_direction_citizenship.py  # ITM552301 → df_citizenship_direction_{date}.pkl/csv
+python process_direction_age_sex.py      # ITM552101 → df_direction_age_sex_{date}.pkl/csv
+python process_arrivals_visatype.py      # ITM552201 → df_direction_visa_{date}.pkl/csv
 ```
+Each script auto-detects the latest matching `ITM55xxxx_*.csv` in `data/raw/` and derives the output date suffix from the filename.
 
 ### Data Download (automated)
 ```bash
@@ -60,8 +63,10 @@ playwright install chromium
 ### Key Components
 
 **Data Processing Pipeline:**
-- `src/data/data_processing.py` - Core transformation function `transform_dataframe_to_long_format()` that converts MultiIndex column structures to long format suitable for visualization
-- `src/data/001_process_data.py` - Main processing script that transforms raw CSV files with complex headers into standardized long-format datasets
+- `src/data/process_direction_citizenship.py` - Processes ITM552301 raw CSV → `df_citizenship_direction_{date}.pkl/csv`
+- `src/data/process_direction_age_sex.py` - Processes ITM552101 raw CSV → `df_direction_age_sex_{date}.pkl/csv`
+- `src/data/process_arrivals_visatype.py` - Processes ITM552201 raw CSV → `df_direction_visa_{date}.pkl/csv`
+- `src/data/data_processing.py` - Legacy `transform_dataframe_to_long_format()` utility (used by older scripts)
 
 **Visualization Applications:**
 - `src/visualization/streamlit_app_plotly.py` - Main interactive dashboard with time series plots, stacked area charts, and treemaps using Plotly
@@ -69,8 +74,8 @@ playwright install chromium
 - `src/visualization/visualize.py` - `ExploratoryDataAnalysis` class for programmatic plotting
 
 ### Data Flow
-1. Raw CSV files with MultiIndex headers are loaded from `data/raw/`
-2. `transform_dataframe_to_long_format()` processes them into long format with separate columns for attributes
+1. Raw CSV files are downloaded from Stats NZ Infoshare into `data/raw/` (filenames: `ITM55xxxx_YYYYMMDD_*.csv`)
+2. Each `process_*.py` script parses the multi-row headers directly and converts to long format
 3. Processed data is saved as both pickle and CSV in `data/interim/`
 4. Streamlit apps load pickle files for interactive visualization
 
