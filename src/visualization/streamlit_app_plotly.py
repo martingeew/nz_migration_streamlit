@@ -5,9 +5,11 @@ import plotly.graph_objects as go
 from datetime import datetime
 from io import StringIO
 
+import glob
 import os
 
 current_dir = os.path.dirname(__file__)
+interim_dir = os.path.join(current_dir, "../../data/interim")
 
 # Main title for the dashboard
 st.title("New Zealand Migration Trends")
@@ -37,32 +39,19 @@ def create_label(row):
         return f"{row['Direction']}, {row['Visa']}"
 
 
+def _latest_pkl(pattern):
+    """Return the path of the most recent .pkl file matching pattern."""
+    files = sorted(glob.glob(pattern))
+    if not files:
+        raise FileNotFoundError(f"No interim data files found matching: {pattern}")
+    return files[-1]
+
+
 # Function to load datasets
 @st.cache_data  # Use Streamlit's cache to load the data only once
-def load_data(breakdown):
-    # Get the current directory where the script is running
-    current_dir = os.path.dirname(__file__)
-
-    # Construct the path to the data file based on the breakdown
-    if breakdown == "Direction, Citizenship":
-        data_path = os.path.join(
-            current_dir, "../../data/interim/df_citizenship_direction_202509.pkl"
-        )
-    elif breakdown == "Direction, Age, Sex":
-        data_path = os.path.join(
-            current_dir, "../../data/interim/df_direction_age_sex_202312.pkl"
-        )
-    elif breakdown == "Direction, Visa":
-        data_path = os.path.join(
-            current_dir, "../../data/interim/df_direction_visa_202312.pkl"
-        )
-
-    # Load the data from the constructed path
+def load_data(data_path):
     df = pd.read_pickle(data_path)
-
-    # Ensure the Month column is datetime type
     df["Month"] = pd.to_datetime(df["Month"])
-
     return df
 
 
@@ -72,8 +61,16 @@ breakdown_type = st.selectbox(
     ["Direction, Citizenship", "Direction, Age, Sex", "Direction, Visa"],
 )
 
+# Resolve the latest interim file for the selected breakdown
+_patterns = {
+    "Direction, Citizenship": os.path.join(interim_dir, "df_citizenship_direction_*.pkl"),
+    "Direction, Age, Sex":    os.path.join(interim_dir, "df_direction_age_sex_*.pkl"),
+    "Direction, Visa":        os.path.join(interim_dir, "df_direction_visa_*.pkl"),
+}
+data_path = _latest_pkl(_patterns[breakdown_type])
+
 # Load the selected dataset
-df = load_data(breakdown_type)
+df = load_data(data_path)
 
 # Create tabs
 tab1, tab2, tab3 = st.tabs(["Time Series Plot", "Stacked Area Plots", "Tree Maps"])
