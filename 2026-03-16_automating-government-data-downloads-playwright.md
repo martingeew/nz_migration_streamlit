@@ -43,6 +43,8 @@ Playwright handles all of this natively, runs headless for scheduling, captures 
 
 This is also what makes it useful well beyond downloading government data. The same approach works for booking concert tickets at midnight, checking stock levels before they sell out, or filling in any form that requires human-equivalent interaction on a schedule.
 
+One exception: sites with login or CAPTCHAs. The Chrome Extension uses your existing browser session, so it's already past both. For those cases it's the easier option — Playwright can handle them (persistent browser profile, manual pause, or a paid solving service), but it's more work. For a public portal like Stats NZ, it's a non-issue.
+
 ---
 
 ### How Stats NZ Infoshare fights you (and how to win)
@@ -73,58 +75,13 @@ Both work end-to-end. They suit different situations.
 
 **The Claude Code slash command (`/download-stats-nz`)**
 
-A markdown file in `.claude/commands/` that gives Claude step-by-step instructions for navigating Infoshare using the Playwright MCP plugin. Run it inside a Claude Code session and it navigates the browser interactively, selecting variables and downloading the file to `data/raw/`.
-
-The key optimisation: consolidate all the listbox selections into a single `browser_evaluate` call rather than individual `browser_select_option` calls per option. For ITM552301 with its ~200 citizenship options, that's the difference between 200 round trips and 1. The JavaScript selects all options, dispatches the change events ASP.NET's UpdatePanel listeners need, sets the format dropdown to CSV, and returns `'done'`.
-
-```javascript
-() => {
-  const allListboxes = Array.from(document.querySelectorAll('[id$="_lbVariableOptions"]'));
-  allListboxes.forEach(lb => {
-    for (let i = 0; i < lb.options.length; i++) lb.options[i].selected = true;
-    lb.dispatchEvent(new Event('change', {bubbles: true}));
-  });
-  // Narrow to Estimate only (avoids the 100k cell limit)
-  allListboxes.forEach(lb => {
-    const opts = Array.from(lb.options);
-    if (opts.length > 1 && opts.some(o => o.text === 'Estimate')) {
-      opts.forEach(o => { o.selected = (o.text === 'Estimate'); });
-      lb.dispatchEvent(new Event('change', {bubbles: true}));
-    }
-  });
-  const dd = document.getElementById('ctl00_MainContent_dlOutputOptions');
-  for (let i = 0; i < dd.options.length; i++)
-    if (dd.options[i].text.includes('Comma delimited')) dd.options[i].selected = true;
-  dd.dispatchEvent(new Event('change', {bubbles: true}));
-  return 'done';
-}
-```
-
-Then submit via element ID — no snapshot lookup needed:
-
-```javascript
-() => { document.getElementById('ctl00_MainContent_btnGo').click(); return 'clicked'; }
-```
-
-The file downloads to `.playwright-mcp/` and a final Bash step copies it to `data/raw/` with the filename normalised to underscores.
+A markdown file in `.claude/commands/` that gives Claude step-by-step instructions for navigating Infoshare using the Playwright MCP plugin. Run it inside a Claude Code session and Claude navigates the browser interactively, selecting variables and downloading the file to `data/raw/`. It consolidates all the form selections into a single JavaScript call rather than clicking each option individually — for a dataset with ~200 citizenship options, that's a meaningful speedup.
 
 **The Python script (`download_stats_nz.py`)**
 
-Same logic, but runs unattended without Claude. The critical difference: you must wrap the submit click in `with page.expect_download() as download_info:` or the file ends up in a temp location and is lost.
+The same navigation logic, but packaged as a standalone script that runs without Claude. No LLM token cost per execution, fully schedulable with cron or Task Scheduler, and the download capture is more reliable for unattended runs.
 
-```python
-with page.expect_download() as download_info:
-    page.evaluate("document.getElementById('ctl00_MainContent_btnGo').click()")
-
-download = download_info.value
-download.save_as(output_dir / download.suggested_filename)
-```
-
-I use `download.suggested_filename` rather than constructing a name myself — Stats NZ embeds the dataset ID and a timestamp in the filename (`ITM552301_20260314_112426_6.csv`), which makes files trivially sortable and gives you provenance for free.
-
-All dataset-specific knowledge (tree path, listbox IDs, which options to select) lives in a `DATASETS` config dict. The execution logic is generic. Adding a fourth dataset means adding a new dict entry, not editing the script.
-
-The Python script is the better choice for scheduled runs — it doesn't need Claude running and `expect_download()` is more reliable than the MCP's download capture for unattended use. The slash command is better for one-off interactive downloads where you want to inspect what's happening as it runs.
+The Python script is the better choice for anything running on a schedule. The slash command is better for one-off interactive downloads where you want to see what's happening as it runs — or for building and testing the automation before converting it to a script.
 
 ---
 
@@ -200,3 +157,45 @@ You don't need to provide element IDs, CSS selectors, or the order to click thin
 - Whether multiple datasets need to be downloaded in one run
 - The destination directory for saved files
 - The first 6–8 rows of a sample raw file if you also want a processing step — header depth, forward-fill structure, and data shape are immediately visible from those rows and save Claude from having to download the file just to inspect it
+
+---
+
+**Stats NZ reference implementation**
+
+Here's what Claude produced for the Stats NZ case — useful as a reference when interpreting the prompt output for your own site.
+
+For the slash command, all listbox selections go in a single `browser_evaluate` call. This avoids one round trip per option (important when a listbox has 200+ entries) and dispatches the `change` events that ASP.NET's form listeners need:
+
+```javascript
+() => {
+  const allListboxes = Array.from(document.querySelectorAll('[id$="_lbVariableOptions"]'));
+  allListboxes.forEach(lb => {
+    for (let i = 0; i < lb.options.length; i++) lb.options[i].selected = true;
+    lb.dispatchEvent(new Event('change', {bubbles: true}));
+  });
+  // Narrow to Estimate only (avoids the 100k cell limit)
+  allListboxes.forEach(lb => {
+    const opts = Array.from(lb.options);
+    if (opts.length > 1 && opts.some(o => o.text === 'Estimate')) {
+      opts.forEach(o => { o.selected = (o.text === 'Estimate'); });
+      lb.dispatchEvent(new Event('change', {bubbles: true}));
+    }
+  });
+  const dd = document.getElementById('ctl00_MainContent_dlOutputOptions');
+  for (let i = 0; i < dd.options.length; i++)
+    if (dd.options[i].text.includes('Comma delimited')) dd.options[i].selected = true;
+  dd.dispatchEvent(new Event('change', {bubbles: true}));
+  return 'done';
+}
+```
+
+For the Python script, wrap the submit click in `expect_download()` — without this the file ends up in a temp location and is silently lost. `suggested_filename` preserves the server's own name, which for Stats NZ embeds the dataset ID and a timestamp:
+
+```python
+with page.expect_download() as download_info:
+    page.evaluate("document.getElementById('ctl00_MainContent_btnGo').click()")
+
+download = download_info.value
+download.save_as(output_dir / download.suggested_filename)
+# Saves as e.g. ITM552301_20260314_112426_6.csv
+```
