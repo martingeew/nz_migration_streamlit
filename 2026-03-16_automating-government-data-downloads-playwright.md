@@ -69,7 +69,7 @@ The Python script is the better choice for anything running on a schedule. The s
 
 ---
 
-### 5 patterns that work on any website
+### 6 patterns that work on any website
 
 These aren't Stats NZ-specific. I'd apply all of them the next time I need to automate any site that serves data through forms.
 
@@ -82,6 +82,8 @@ These aren't Stats NZ-specific. I'd apply all of them the next time I need to au
 **4. Know your data limits before automating selection.** Calculate `dimensions × options × time periods` before writing selection logic. Document the number. Use an explicit filter for oversized dimensions — not "select all".
 
 **5. Add a post-processing step to normalise the download.** Playwright MCP saves files with auto-generated names using hyphens; your project may expect a specific naming convention with underscores. Run a consistent cleanup step at the end of every download — rename the file, move it to the right folder — so the rest of your pipeline always sees the same format regardless of what the browser produced.
+
+**6. Verify the output before the script exits.** Check the file exists and has a non-zero size. For a scheduled script you're not watching, a silent failure — no file, empty file, wrong file — can go unnoticed until the dashboard breaks a month later.
 
 ---
 
