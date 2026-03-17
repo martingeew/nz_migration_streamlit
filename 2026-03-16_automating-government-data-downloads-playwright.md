@@ -1,10 +1,10 @@
 # No API? No Problem — Automating Government Data Downloads with Claude Code
 
-Every month I update a [NZ migration dashboard](https://autonomousecon.substack.com/p/new-zealands-millennial-migration?r=2o1mc). The underlying data comes from Stats NZ Infoshare — a legacy government portal with no public API, no direct download links, and a multi-step web form that requires clicking through a tree menu, selecting variables from listboxes, and hitting a submit button that triggers a file download.
+Every month I update a [NZ migration dashboard](https://autonomousecon.substack.com/p/new-zealands-millennial-migration?r=2o1mc). The underlying data comes from Stats NZ Infoshare — a legacy government portal with no public API, no direct download links, and a multi-step form you have to click through manually every time.
 
-Three separate datasets. Each requiring the same ritual. About 30 minutes of my month, every month, for as long as I keep the dashboard running.
+Three separate datasets. Each requiring the same ritual in addition to some follow-up formatting. About 30 minutes every month, for as long as I keep the dashboard running.
 
-This post shows you how I automated that process using Playwright browser automation — both as a Python script for unattended scheduled runs and as a Claude Code slash command for interactive use. The patterns apply to any government or institutional site that serves data through a form rather than an API.
+This post shows you how I automated that process using Playwright browser automation — both as a Python script for unattended scheduled runs and as a Claude Code slash command for interactive use. The patterns apply to any  website that serves data through a form rather than an API.
 
 > **[Video: Playwright MCP automation in action — navigating Stats NZ and downloading a CSV]**
 
@@ -12,7 +12,7 @@ This post shows you how I automated that process using Playwright browser automa
 
 ### The problem: 3 datasets, no API, 30 minutes of clicking each month
 
-Stats NZ publishes its migration data through Infoshare — a portal built on ASP.NET WebForms, a framework from the early 2000s that was already old when it was new. There is no API. There are no permanent download links. Every download starts from the homepage, navigates a tree structure, selects variable combinations from listboxes, and submits a form that checks whether your selection exceeds 100,000 cells before deciding whether to return a file.
+Stats NZ publishes its migration data through Infoshare — a portal built on ASP.NET WebForms, a framework from the early 2000s that was already old when it was new. There is no API. There are no permanent download links. Every download starts from the homepage, navigates a tree structure, selects variable combinations from listboxes, and submits a form to trigger a file download.
 
 The three datasets I need for the dashboard:
 
@@ -20,9 +20,9 @@ The three datasets I need for the dashboard:
 - **ITM552101** — migration by direction, age group, and sex (monthly)
 - **ITM552201** — migrant arrivals by visa type (monthly)
 
-None of this is complex. But 30 minutes of repetitive clicking per month, 12 months a year, adds up — and more than the time, it's the kind of task where skipping one month breaks the dashboard's data continuity.
+None of this is complex. But it's 30 minutes of clicking, every month, for as long as the dashboard runs. That's 6 hours a year just to keep the current datasets fresh. Add more datasets and that number grows. There's also the mental overhead of remembering to do it.
 
-The fix is browser automation. A script that navigates the site exactly as a human would, but runs in the background without you watching.
+To solve this problem, I needed browser automation. A script or tool that navigates the site exactly as a human would, but runs in the background without you watching.
 
 ---
 
@@ -37,49 +37,33 @@ Before building anything, I looked at four options:
 | **Firecrawl** | Not suitable — extracts page content as markdown, can't submit forms |
 | **Tavily** | Not suitable — a search API, no browser interaction at all |
 
-The key requirement is stateful form interaction: the site needs a session established from the homepage, the tree navigation updates server-side tokens at each level, and the final download is triggered by a button click — not a direct URL. Scraping tools that read page content don't help here. You need a browser that can click things.
+Headless means the browser runs as a background process with no visible window i.e. no screen required, no user watching. It behaves exactly like a normal browser but can be triggered from a script or a scheduler.
 
-Playwright handles all of this natively, runs headless for scheduling, captures downloads to a local directory, and has two interfaces: a Python library for scripted runs, and a Model Context Protocol (MCP) plugin that works interactively inside Claude Code sessions.
+The key requirement is that the site needs to be driven like a human would — start from the homepage, click through a tree menu, make selections, then hit a button to trigger the download. There's no shortcut URL you can hit directly. Scraping tools that just read page content don't help here. You need something that can actually click things.
 
-This is also what makes it useful well beyond downloading government data. The same approach works for booking concert tickets at midnight, checking stock levels before they sell out, or filling in any form that requires human-equivalent interaction on a schedule.
+Playwright handles all of this natively, runs headless for scheduling, captures downloads to a local directory. I tested it via two interfaces: a Python library for scripted runs, and a Model Context Protocol (MCP) plugin that works interactively inside Claude Code sessions.
 
-One exception: sites with login or CAPTCHAs. The Chrome Extension uses your existing browser session, so it's already past both. For those cases it's the easier option — Playwright can handle them (persistent browser profile, manual pause, or a paid solving service), but it's more work. For a public portal like Stats NZ, it's a non-issue.
+This is also what makes it useful well beyond downloading data. The same approach works for booking concert tickets, checking stock levels before they sell out, or filling in any form that requires human-equivalent interaction on a schedule.
 
----
-
-### How Stats NZ Infoshare fights you (and how to win)
-
-Three gotchas specific to Infoshare — and common to most ASP.NET WebForms sites:
-
-**1. You must start from the homepage every time.**
-
-Navigating directly to a dataset URL returns a session error. The homepage sets up invisible ASP.NET session state. Skip it and nothing works downstream. I hardcoded this as step 1 in both the Python script and the slash command, with a comment explaining why — so future me doesn't remove it.
-
-**2. Navigate the tree one click at a time.**
-
-The EVENTVALIDATION token that ASP.NET issues is only valid for nodes visible at the current level of the tree. Click Tourism → expand ITM → click a dataset. You cannot skip Tourism and click ITM directly — the server returns a `fatal_error` redirect. Each click has to wait for the page to fully load before the next one fires.
-
-In the Python script, this means calling `page.wait_for_load_state("networkidle")` after every intermediate tree click. In the MCP slash command, `browser_click` handles the wait automatically.
-
-**3. Select all — but check the cell limit first.**
-
-Stats NZ caps downloads at 100,000 cells. `directions × citizenships × months` for ITM552301 is around 8,000 cells — well within the limit. `directions × age groups × sex × estimate types × months` for ITM552101 is over 350,000 cells — well over.
-
-For ITM552101, I select only 13 grouped age bands and only the "Estimate" type. The cell count drops to around 60,000. I document this calculation as a comment in the script so the logic is visible when the data is updated next year.
+One exception: sites with login or CAPTCHAs. The Chrome Extension uses your existing browser session, so it's already gets past both. For those cases it's the easier option. Playwright can handle them (persistent browser profile, manual pause, or a paid solving service), but it's more work.
 
 ---
 
-### Two ways to automate it: slash command and Python script
+### Two ways to automate it: Claude slash command and Python script
 
 Both work end-to-end. They suit different situations.
 
 **The Claude Code slash command (`/download-stats-nz`)**
 
-A markdown file in `.claude/commands/` that gives Claude step-by-step instructions for navigating Infoshare using the Playwright MCP plugin. Run it inside a Claude Code session and Claude navigates the browser interactively, selecting variables and downloading the file to `data/raw/`. It consolidates all the form selections into a single JavaScript call rather than clicking each option individually — for a dataset with ~200 citizenship options, that's a meaningful speedup.
+A markdown file in `.claude/commands/` that gives Claude step-by-step instructions for navigating Infoshare using the Playwright MCP plugin. Run it inside a Claude Code session and Claude navigates the browser interactively, selecting variables and downloading the file to `data/raw/`. I have a separate command for each of the three datasets — `/download-stats-nz direction-citizenship`, `/download-stats-nz age-sex`, `/download-stats-nz visa-type` — so each one knows exactly which tree path to follow and which variables to select.
+
+The Playwright MCP plugin is an add-on for Claude Code that gives Claude direct control over a browser window. To set it up, just ask Claude Code to install the Playwright MCP plugin and it will walk you through the steps.
 
 **The Python script (`download_stats_nz.py`)**
 
-The same navigation logic, but packaged as a standalone script that runs without Claude. No LLM token cost per execution, fully schedulable with cron or Task Scheduler, and the download capture is more reliable for unattended runs.
+The same navigation logic, but written directly in Python using the Playwright library — no Claude involved. It runs without an active Claude session, has no LLM token cost, and can be scheduled with cron or Task Scheduler to run unattended.
+
+I have a post covering how to automate python scripts [here].
 
 The Python script is the better choice for anything running on a schedule. The slash command is better for one-off interactive downloads where you want to see what's happening as it runs — or for building and testing the automation before converting it to a script.
 
@@ -89,33 +73,31 @@ The Python script is the better choice for anything running on a schedule. The s
 
 These aren't Stats NZ-specific. I'd apply all of them the next time I need to automate any site that serves data through forms.
 
-**1. Always open the homepage.** Even if you know the direct URL. Many sites require a homepage visit to establish a server-side session. Document why in the code — so nobody removes it later thinking it's redundant.
+**1. Always open the homepage.** Even if you know the direct URL. Many sites require a homepage visit to establish a server-side session. Make it explicit in your slash command or script.
 
-**2. Navigate tree structures one click at a time.** Server-side navigation patterns issue tokens scoped to the current level. Jumping ahead invalidates them. Click and wait, then click and wait again.
+**2. Navigate tree structures one click at a time.** The site needs to register each click before the next one fires. Skip a level and you'll get an error. Click, wait for the page to update, then click again.
 
-**3. Use `browser_click` for navigation, `browser_evaluate` for DOM manipulation.** `browser_evaluate` in Claude Code resolves before ASP.NET postback navigation completes — you end up on a stale page. Reserve `evaluate` for in-page operations: selecting options, clicking submit buttons that trigger downloads (not page loads).
+**3. Use the Playwright `browser_click` command for moving between pages, and `browser_evaluate` for in-page actions like selecting from a listbox or clicking a download button.**
 
 **4. Know your data limits before automating selection.** Calculate `dimensions × options × time periods` before writing selection logic. Document the number. Use an explicit filter for oversized dimensions — not "select all".
 
-**5. Normalise filenames at the end.** Playwright MCP saves downloads with hyphens; your project may expect underscores. The mismatch is invisible until it breaks a downstream glob pattern. Add a rename step and document what the raw output looks like.
+**5. Add a post-processing step to normalise the download.** Playwright MCP saves files with auto-generated names using hyphens; your project may expect a specific naming convention with underscores. Run a consistent cleanup step at the end of every download — rename the file, move it to the right folder — so the rest of your pipeline always sees the same format regardless of what the browser produced.
 
 ---
 
-The next post covers what happens with the data once it lands in `data/raw/` — processing the raw multi-row-header CSVs into a clean long format and building the Streamlit dashboard on top.
-
-The `download_stats_nz.py` script and the `/download-stats-nz` slash command are both in the [project repo](#).
+The next post takes this further — automating the entire dashboard workflow end to end, so the data downloads, processes, and updates without me touching it at all.
 
 ---
 
 ### Bonus: Copy-and-paste prompts to build your own automation
 
-The prompts below are structured to work on any website — not just Stats NZ. Paste them into Claude with your website URL and a description of what you want, and you'll get a working slash command or Python script without having to learn any of the ASP.NET internals yourself. Each prompt includes the rules I learned the hard way so you don't have to repeat my mistakes.
+The prompts below are structured to work on any website — not just Stats NZ. Paste them into Claude with your website URL and a description of what you want, and you'll get a working slash command or Python script without having to figure out the site's internals yourself. Each prompt includes the rules I learned along the way so you don't have to repeat my mistakes.
 
 [PAYWALL]
 
 **For a Claude Code slash command:**
 
-> I want to automate downloading data from a website on a repeating basis. Please explore the website using the browser tools, then write a reusable slash command I can run whenever I need fresh data.
+> I want to automate downloading data from a website on a repeating basis. Please explore the website using the browser tools, then write a reusable slash command I can run whenever I need fresh data. Save it as a markdown file in `.claude/commands/` in my project repo.
 >
 > As you work, follow these rules — they come from hard experience:
 >
@@ -129,6 +111,7 @@ The prompts below are structured to work on any website — not just Stats NZ. P
 
 **What to provide before running:**
 - What data you want and which filters or breakdowns matter to you
+- A sample of the file you expect to get back, if you have one
 - Any known cell or row limits
 - Whether login is required (if so, handle credentials separately first)
 - Any buttons that submit forms, place orders, or delete things — name them explicitly so Claude avoids them
@@ -139,7 +122,7 @@ You don't need to provide element IDs, CSS selectors, or the order to click thin
 
 **For a scheduled Python Playwright script:**
 
-> I want a Python script using Playwright (`pip install playwright`) that automates downloading a file from a website. It should run unattended and be schedulable with cron or Task Scheduler.
+> I want a Python script using Playwright (`pip install playwright`) that automates downloading a file from a website. It should run unattended and be schedulable with cron or Task Scheduler. Set up a virtual environment in the repo for the project dependencies — see [this post](https://autonomousecon.substack.com/p/run-your-data-projects-like-a-professional?r=2o1mc) for how to structure it.
 >
 > Design rules — these come from hard experience:
 >
@@ -162,7 +145,7 @@ You don't need to provide element IDs, CSS selectors, or the order to click thin
 
 **Stats NZ reference implementation**
 
-Here's what Claude produced for the Stats NZ case — useful as a reference when interpreting the prompt output for your own site.
+The full Python script and slash command are in the [project repo on GitHub](https://github.com/martingeew/nz_migration_streamlit) — see `src/data/download_stats_nz.py` and `.claude/commands/download-stats-nz.md`. Here's a walkthrough of the key parts.
 
 For the slash command, all listbox selections go in a single `browser_evaluate` call. This avoids one round trip per option (important when a listbox has 200+ entries) and dispatches the `change` events that ASP.NET's form listeners need:
 
