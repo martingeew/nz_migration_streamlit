@@ -149,7 +149,7 @@ You don't need to provide element IDs, CSS selectors, or the order to click thin
 
 The full Python script and slash command are in the [project repo on GitHub](https://github.com/martingeew/nz_migration_streamlit) — see `src/data/download_stats_nz.py` and `.claude/commands/download-stats-nz.md`. Here's a walkthrough of the key parts.
 
-For the slash command, all listbox selections go in a single `browser_evaluate` call. This avoids one round trip per option (important when a listbox has 200+ entries) and dispatches the `change` events that ASP.NET's form listeners need:
+For the slash command, all listbox selections are made in one go using `browser_evaluate` rather than clicking each option individually. For a dataset with 200+ options, this makes a meaningful difference in speed:
 
 ```javascript
 () => {
