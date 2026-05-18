@@ -1,3 +1,4 @@
 .firecrawl/
 __pycache__/
 .playwright-mcp/
+itm-snapshot.md
