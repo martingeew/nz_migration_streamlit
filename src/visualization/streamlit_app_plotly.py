@@ -30,13 +30,39 @@ footer_text = """
 
 
 # Function to create a label for each unique combination
+REGION_COLORS = {
+    "Northland Region": "#e6194b",
+    "Auckland Region": "#3cb44b",
+    "Waikato Region": "#ffe119",
+    "Bay of Plenty Region": "#4363d8",
+    "Gisborne Region": "#f58231",
+    "Hawke's Bay Region": "#911eb4",
+    "Taranaki Region": "#42d4f4",
+    "Manawatu-Wanganui Region": "#f032e6",
+    "Wellington Region": "#bfef45",
+    "Tasman Region": "#fabed4",
+    "Nelson Region": "#469990",
+    "Marlborough Region": "#dcbeff",
+    "West Coast Region": "#9a6324",
+    "Canterbury Region": "#fffac8",
+    "Otago Region": "#800000",
+    "Southland Region": "#aaffc3",
+}
+
+REGIONAL_COUNCILS = list(REGION_COLORS.keys())
+
+
 def create_label(row):
     if breakdown_type == "Direction, Citizenship":
         return f"{row['Direction']}, {row['Citizenship']}"
     elif breakdown_type == "Direction, Age, Sex":
         return f"{row['Direction']}, {row['Sex']}, {row['Age Group']}"
-    elif breakdown_type == "Direction, Visa":  # New condition for Direction, Visa
+    elif breakdown_type == "Direction, Visa":
         return f"{row['Direction']}, {row['Visa']}"
+    elif breakdown_type == "Citizenship, Visa":
+        return f"{row['Visa']}, {row['Citizenship']}"
+    elif breakdown_type == "Direction, Region":
+        return f"{row['Direction']}, {row['Region']}"
 
 
 def _latest_pkl(pattern):
@@ -45,6 +71,41 @@ def _latest_pkl(pattern):
     if not files:
         raise FileNotFoundError(f"No interim data files found matching: {pattern}")
     return files[-1]
+
+
+def _apply_transform(df, transform, base_year=None):
+    """Apply a time series transform to the filtered dataframe.
+
+    Operates per-series (grouped by Label column). Returns the transformed
+    dataframe and a y-axis label string.
+    """
+    df = df.sort_values(["Label", "Month"]).copy()
+    if transform == "None":
+        return df, "Count"
+    elif transform == "Cumulative from base year":
+        df = df[df["Month"].dt.year >= int(base_year)]
+        df["Count"] = df.groupby("Label")["Count"].cumsum()
+        return df, f"Cumulative count (from {int(base_year)})"
+    elif transform == "3-month moving average":
+        df["Count"] = df.groupby("Label")["Count"].transform(
+            lambda s: s.rolling(3, min_periods=1).mean()
+        )
+        return df, "3-month moving average"
+    elif transform == "12-month moving average":
+        df["Count"] = df.groupby("Label")["Count"].transform(
+            lambda s: s.rolling(12, min_periods=1).mean()
+        )
+        return df, "12-month moving average"
+    elif transform == "3-month moving sum":
+        df["Count"] = df.groupby("Label")["Count"].transform(
+            lambda s: s.rolling(3, min_periods=1).sum()
+        )
+        return df, "3-month moving sum"
+    elif transform == "12-month moving sum":
+        df["Count"] = df.groupby("Label")["Count"].transform(
+            lambda s: s.rolling(12, min_periods=1).sum()
+        )
+        return df, "12-month moving sum"
 
 
 # Function to load datasets
@@ -58,7 +119,7 @@ def load_data(data_path):
 # Select breakdown type
 breakdown_type = st.selectbox(
     "Select the breakdown to explore:",
-    ["Direction, Citizenship", "Direction, Age, Sex", "Direction, Visa"],
+    ["Direction, Citizenship", "Direction, Age, Sex", "Direction, Visa", "Citizenship, Visa", "Direction, Region"],
 )
 
 # Resolve the latest interim file for the selected breakdown
@@ -66,6 +127,8 @@ _patterns = {
     "Direction, Citizenship": os.path.join(interim_dir, "df_citizenship_direction_*.pkl"),
     "Direction, Age, Sex":    os.path.join(interim_dir, "df_direction_age_sex_*.pkl"),
     "Direction, Visa":        os.path.join(interim_dir, "df_direction_visa_*.pkl"),
+    "Citizenship, Visa":      os.path.join(interim_dir, "df_citizenship_visa_*.pkl"),
+    "Direction, Region":      os.path.join(interim_dir, "df_direction_region_*.pkl"),
 }
 data_path = _latest_pkl(_patterns[breakdown_type])
 
@@ -125,9 +188,63 @@ with tab1:
         )
         filtered_df = df[df["Direction"].isin(directions) & df["Visa"].isin(visa)]
         plot_title = f"Permanent and long term arrivals by visa type"
+    elif breakdown_type == "Citizenship, Visa":
+        citizenship = st.multiselect(
+            "Select Citizenship:",
+            sorted(df["Citizenship"].unique()),
+            default=sorted(df["Citizenship"].unique())[:3],
+        )
+        visa = st.multiselect(
+            "Select visa type:",
+            [v for v in df["Visa"].unique() if v != "TOTAL"],
+            default=[v for v in df["Visa"].unique() if v not in ("TOTAL", "New Zealand and Australian citizens")][:3],
+        )
+        filtered_df = df[
+            df["Citizenship"].isin(citizenship)
+            & df["Visa"].isin(visa)
+        ]
+        plot_title = "Migrant arrivals by citizenship and visa type"
+    elif breakdown_type == "Direction, Region":
+        directions = st.multiselect(
+            "Select directions:",
+            df["Direction"].unique(),
+            default=["Arrivals"],
+        )
+        available_regions = [r for r in df["Region"].unique() if r != "TOTAL ALL AREAS"]
+        region = st.multiselect(
+            "Select region (regional councils shown by default):",
+            available_regions,
+            default=[r for r in REGIONAL_COUNCILS if r in available_regions],
+        )
+        filtered_df = df[
+            df["Direction"].isin(directions)
+            & df["Region"].isin(region)
+        ]
+        plot_title = "Migration by direction and NZ region"
 
     # Apply the function to create a new column 'Label' for plotting
     filtered_df["Label"] = filtered_df.apply(create_label, axis=1)
+
+    # ── Transform controls ──
+    st.markdown("---")
+    transform = st.selectbox(
+        "Transform",
+        [
+            "None",
+            "Cumulative from base year",
+            "3-month moving average",
+            "12-month moving average",
+            "3-month moving sum",
+            "12-month moving sum",
+        ],
+        key="transform_select",
+    )
+    base_year = None
+    if transform == "Cumulative from base year":
+        base_year = st.number_input(
+            "Base year", min_value=2001, max_value=2025, value=2022, step=1
+        )
+    filtered_df, y_label = _apply_transform(filtered_df, transform, base_year)
 
     # Plotting with Plotly
     fig = px.line(
@@ -140,7 +257,7 @@ with tab1:
     )  # Adding a horizontal line at y=0
     fig.add_hline(y=0, line_dash="dash", line_color="grey")
     fig.update_traces(marker=dict(size=4))
-    fig.update_layout(hovermode="closest")
+    fig.update_layout(hovermode="closest", yaxis_title=y_label)
     fig.update_layout(
         legend=dict(
             orientation="h",  # Horizontal orientation
@@ -171,11 +288,14 @@ with tab1:
 
 # Stacked Area Plots Tab
 with tab2:
-    direction = st.selectbox(
-        "Select Direction:",
-        df["Direction"].unique(),
-        key="direction_select",  # Use a consistent key for the direction selectbox across conditions
-    )
+    if breakdown_type not in ("Citizenship, Visa",):
+        direction = st.selectbox(
+            "Select Direction:",
+            df["Direction"].unique(),
+            key="direction_select",
+        )
+    else:
+        direction = "Arrivals"
 
     if breakdown_type == "Direction, Citizenship":
         citizenships = st.multiselect(
@@ -216,6 +336,39 @@ with tab2:
         filtered_df = df[(df["Direction"] == direction) & (df["Visa"].isin(visas))]
         pivot_columns = "Visa"
         plot_title = f"Stacked Area Plot of {direction} by Visa type"
+    elif breakdown_type == "Citizenship, Visa":
+        citizenships_area = st.multiselect(
+            "Select Citizenship:",
+            sorted(df["Citizenship"].unique()),
+            default=sorted(df["Citizenship"].unique())[:5],
+            key="citizenships_area",
+        )
+        visas_area = st.multiselect(
+            "Select Visa Type:",
+            [v for v in df["Visa"].unique() if v != "TOTAL"],
+            default=[v for v in df["Visa"].unique() if v != "TOTAL"],
+            key="visas_area",
+        )
+        filtered_df = df[
+            df["Citizenship"].isin(citizenships_area)
+            & df["Visa"].isin(visas_area)
+        ]
+        pivot_columns = "Visa"
+        plot_title = "Stacked Area: Arrivals by visa type"
+    elif breakdown_type == "Direction, Region":
+        available_regions_area = [r for r in df["Region"].unique() if r != "TOTAL ALL AREAS"]
+        regions_area = st.multiselect(
+            "Select regions:",
+            available_regions_area,
+            default=[r for r in REGIONAL_COUNCILS if r in available_regions_area],
+            key="regions_area",
+        )
+        filtered_df = df[
+            (df["Direction"] == direction)
+            & df["Region"].isin(regions_area)
+        ]
+        pivot_columns = "Region"
+        plot_title = f"Stacked Area: {direction} by NZ region"
 
     # Preparing data for the plot
     pivot_df = filtered_df.pivot_table(
@@ -230,6 +383,8 @@ with tab2:
         "Direction, Citizenship": "Citizenship",
         "Direction, Age, Sex": "Age Group",
         "Direction, Visa": "Visa",
+        "Citizenship, Visa": "Visa",
+        "Direction, Region": "Region",
     }
 
     # Use the breakdown_type to get the corresponding legend title text from the dictionary
@@ -520,6 +675,114 @@ with tab3:
         fig = go.Figure(
             go.Treemap(
                 labels=grouped_df["Visa"],
+                parents=grouped_df["Direction"],
+                values=grouped_df["Count"],
+                customdata=grouped_df["Percentage"],
+                marker_colors=grouped_df["Color"],
+                texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
+                hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+                branchvalues="total",
+            )
+        )
+
+    elif breakdown_type == "Citizenship, Visa":
+        visa_color_map = {
+            "Residence": "#E63946",
+            "Student": "#F1C40F",
+            "Visitor": "#2ECC71",
+            "Work": "#3498DB",
+            "New Zealand and Australian citizens": "#9B59B6",
+            "Other": "#E67E22",
+        }
+        direction_treemap = st.selectbox(
+            "Select Direction:", ["Arrivals"], key="direction_treemap_cv"
+        )
+        start_month = st.date_input(
+            "Start month",
+            value=datetime(2022, 1, 1),
+            key="start_month_cv",
+            min_value=min_date,
+            max_value=max_date,
+        )
+        end_month = st.date_input(
+            "End month",
+            value=datetime(2023, 12, 31),
+            key="end_month_cv",
+            min_value=min_date,
+            max_value=max_date,
+        )
+        filtered_df = df[
+            (df["Month"] >= pd.to_datetime(start_month))
+            & (df["Month"] <= pd.to_datetime(end_month))
+            & (df["Visa"] != "TOTAL")
+            & (df["Citizenship"] != "Total All Countries of Last Permanent Residence")
+        ]
+        grouped_df = filtered_df.groupby(["Visa", "Citizenship"], as_index=False)["Count"].sum()
+
+        # Two-level treemap: Visa (parent) → Citizenship (leaf)
+        visa_agg = grouped_df.groupby("Visa", as_index=False)["Count"].sum()
+        visa_agg["Percentage"] = (visa_agg["Count"] / visa_agg["Count"].sum() * 100).round(1)
+
+        leaf_pct_denom = grouped_df.groupby("Visa")["Count"].transform("sum")
+        grouped_df["Percentage"] = (grouped_df["Count"] / leaf_pct_denom * 100).round(1)
+
+        ids = list(visa_agg["Visa"]) + [
+            f"{r['Visa']}|{r['Citizenship']}" for _, r in grouped_df.iterrows()
+        ]
+        labels = list(visa_agg["Visa"]) + list(grouped_df["Citizenship"])
+        parents = [""] * len(visa_agg) + list(grouped_df["Visa"])
+        values = list(visa_agg["Count"]) + list(grouped_df["Count"])
+        customdata = list(visa_agg["Percentage"]) + list(grouped_df["Percentage"])
+        colors = [visa_color_map.get(v, "#aaaaaa") for v in visa_agg["Visa"]] + [
+            visa_color_map.get(r["Visa"], "#aaaaaa") for _, r in grouped_df.iterrows()
+        ]
+
+        fig = go.Figure(
+            go.Treemap(
+                ids=ids,
+                labels=labels,
+                parents=parents,
+                values=values,
+                customdata=customdata,
+                marker_colors=colors,
+                texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
+                hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+                branchvalues="total",
+            )
+        )
+
+    elif breakdown_type == "Direction, Region":
+        direction = st.selectbox(
+            "Select Direction:", df["Direction"].unique(), key="direction_treemap_region"
+        )
+        start_month = st.date_input(
+            "Start month",
+            value=datetime(2022, 1, 1),
+            key="start_month_region",
+            min_value=min_date,
+            max_value=max_date,
+        )
+        end_month = st.date_input(
+            "End month",
+            value=datetime(2023, 12, 31),
+            key="end_month_region",
+            min_value=min_date,
+            max_value=max_date,
+        )
+        filtered_df = df[
+            (df["Direction"] == direction)
+            & (df["Month"] >= pd.to_datetime(start_month))
+            & (df["Month"] <= pd.to_datetime(end_month))
+            & (df["Region"].isin(REGIONAL_COUNCILS))
+        ]
+        grouped_df = filtered_df.groupby(["Direction", "Region"], as_index=False)["Count"].sum()
+        total_by_dir = grouped_df.groupby("Direction")["Count"].transform("sum")
+        grouped_df["Percentage"] = (grouped_df["Count"] / total_by_dir * 100).round(1)
+        grouped_df["Color"] = grouped_df["Region"].map(REGION_COLORS)
+
+        fig = go.Figure(
+            go.Treemap(
+                labels=grouped_df["Region"],
                 parents=grouped_df["Direction"],
                 values=grouped_df["Count"],
                 customdata=grouped_df["Percentage"],

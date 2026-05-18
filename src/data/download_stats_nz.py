@@ -50,16 +50,42 @@ DATASETS = {
             "ctl00_MainContent_ctl09_lbVariableOptions": "all",  # Time
         },
     },
-    # Add further datasets here following the same pattern, e.g.:
-    # "itm553001": {
-    #     "name": "Estimated migrant arrivals by visa type (Monthly)",
-    #     "tree_path": [
-    #         "Tourism",
-    #         "International Travel and Migration - ITM",
-    #         "Estimated migrant arrivals by visa type, 12/16-month rule (Monthly)",
-    #     ],
-    #     "listboxes": { ... },
-    # },
+    "itm_citizenship_visa": {
+        "name": "Estimated migrant arrivals by citizenship, visa type and CLPR (Monthly)",
+        "tree_path": [
+            "Tourism",
+            "International Travel and Migration - ITM",
+            "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Monthly)",
+        ],
+        # Cell count: 1 direction × 1 CLPR × 7 visa types × 24 citizenships × 303 months ≈ 51k (< 100k limit)
+        # CLPR = Country of Last/First Permanent Residence; select Non-New Zealand only to exclude NZ-to-NZ moves
+        "listboxes": {
+            "ctl00_MainContent_ctl02_lbVariableOptions": "all",              # Direction (Arrivals only)
+            "ctl00_MainContent_ctl04_lbVariableOptions": ["Non-New Zealand"],  # CLPR: Non-NZ only
+            "ctl00_MainContent_ctl07_lbVariableOptions": "all",              # Visa type (all 7)
+            "ctl00_MainContent_ctl09_lbVariableOptions": "all",              # Citizenship (24 countries)
+            "ctl00_MainContent_ctl12_lbVariableOptions": ["Estimate"],       # Estimate type only
+            "ctl00_MainContent_ctl14_lbVariableOptions": "all",              # Time (all months)
+        },
+    },
+    "itm_direction_region": {
+        "name": "Estimated migration by direction, citizenship and NZ area (Monthly)",
+        "tree_path": [
+            "Tourism",
+            "International Travel and Migration - ITM",
+            "Estimated migration by direction, citizenship and NZ area, 12/16-month rule (Monthly)",
+        ],
+        # Cell count: 3 directions × 1 citizenship × 108 NZ areas × 143 months ≈ 46k (< 100k limit)
+        # Citizenship dimension limited to TOTAL to stay within cell cap
+        "listboxes": {
+            "ctl00_MainContent_ctl02_lbVariableOptions": ["Monthly"],              # Period: Monthly only
+            "ctl00_MainContent_ctl04_lbVariableOptions": "all",                    # Direction (Arrivals/Departures/Net)
+            "ctl00_MainContent_ctl07_lbVariableOptions": ["TOTAL ALL CITIZENSHIPS"],  # All citizenships combined
+            "ctl00_MainContent_ctl09_lbVariableOptions": "all",                    # NZ Area (108 regions)
+            "ctl00_MainContent_ctl12_lbVariableOptions": "all",                    # Estimate type (Estimate only)
+            "ctl00_MainContent_ctl14_lbVariableOptions": "all",                    # Time (all months)
+        },
+    },
 }
 
 RAW_DATA_DIR = Path(__file__).parent.parent.parent / "data" / "raw"
@@ -88,6 +114,9 @@ def select_specific_options(page, listbox_id: str, values: list[str]) -> None:
 
 def navigate_to_dataset(page, config: dict) -> None:
     """Step through the browse tree one level at a time, then land on SelectVariables."""
+    # Always start from a clean browse tree state
+    page.goto(INFOSHARE_HOME)
+    page.wait_for_selector(f"#{TREE_ID}")
     tree = page.locator(f"#{TREE_ID}")
     for step in config["tree_path"][:-1]:
         # Click each intermediate node and wait for the tree to update
@@ -118,8 +147,11 @@ def download_dataset(page, key: str, config: dict, output_dir: Path) -> Path:
     # Set format to CSV
     page.locator(f"#{FORMAT_DROPDOWN_ID}").select_option("Comma delimited (.csv)")
 
-    # Click submit and capture the download
-    with page.expect_download() as download_info:
+    # Accept any confirm dialog (e.g. "more than 256 columns" warning for wide datasets)
+    page.once("dialog", lambda d: d.accept())
+
+    # Click submit and capture the download (large datasets can take >30s)
+    with page.expect_download(timeout=180_000) as download_info:
         page.locator(f"#{SUBMIT_BUTTON_ID}").click()
 
     download = download_info.value
@@ -171,8 +203,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset",
         nargs="+",
-        help="Dataset key(s) to download. Defaults to all.",
-        choices=list(DATASETS.keys()),
+        help="Dataset key(s) to download. Defaults to all. Choices: " + ", ".join(DATASETS.keys()),
     )
     args = parser.parse_args()
     main(datasets_to_run=args.dataset)
