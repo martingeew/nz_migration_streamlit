@@ -9,7 +9,11 @@
       "mcp__plugin_playwright_playwright__browser_evaluate",
       "mcp__plugin_playwright_playwright__browser_wait_for",
       "Bash",
-      "Grep"
+      "Grep",
+      "mcp__notion-cloud__notion-search",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_fill_form",
+      "mcp__plugin_playwright_playwright__browser_select_option"
     ]
   }
 }
