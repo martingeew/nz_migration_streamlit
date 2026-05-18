@@ -1,1 +1,3 @@
 .firecrawl/
+__pycache__/
+.playwright-mcp/
