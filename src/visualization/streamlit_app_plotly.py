@@ -51,6 +51,86 @@ REGION_COLORS = {
 
 REGIONAL_COUNCILS = list(REGION_COLORS.keys())
 
+TERRITORIAL_AUTHORITIES_BY_REGION = {
+    "Northland Region": ["Far North District", "Whangarei District", "Kaipara District"],
+    "Auckland Region": ["Auckland"],
+    "Waikato Region": [
+        "Thames-Coromandel District", "Hauraki District", "Waikato District",
+        "Matamata-Piako District", "Hamilton City", "Waipa District",
+        "Otorohanga District", "South Waikato District", "Waitomo District", "Taupo District",
+    ],
+    "Bay of Plenty Region": [
+        "Western Bay of Plenty District", "Tauranga City", "Rotorua District",
+        "Whakatane District", "Kawerau District", "Opotiki District",
+    ],
+    "Gisborne Region": ["Gisborne District"],
+    "Hawke's Bay Region": ["Wairoa District", "Hastings District", "Napier City", "Central Hawke's Bay District"],
+    "Taranaki Region": ["New Plymouth District", "Stratford District", "South Taranaki District"],
+    "Manawatu-Wanganui Region": [
+        "Ruapehu District", "Whanganui District", "Rangitikei District",
+        "Manawatu District", "Palmerston North City", "Tararua District", "Horowhenua District",
+    ],
+    "Wellington Region": [
+        "Kapiti Coast District", "Porirua City", "Upper Hutt City", "Lower Hutt City",
+        "Wellington City", "Masterton District", "Carterton District", "South Wairarapa District",
+    ],
+    "Tasman Region": ["Tasman District"],
+    "Nelson Region": ["Nelson City"],
+    "Marlborough Region": ["Marlborough District", "Kaikoura District"],
+    "West Coast Region": ["Buller District", "Grey District", "Westland District"],
+    "Canterbury Region": [
+        "Hurunui District", "Waimakariri District", "Christchurch City", "Selwyn District",
+        "Ashburton District", "Timaru District", "Mackenzie District", "Waimate District",
+        "Chatham Islands Territory",
+    ],
+    "Otago Region": [
+        "Waitaki District", "Central Otago District", "Queenstown-Lakes District",
+        "Dunedin City", "Clutha District",
+    ],
+    "Southland Region": ["Southland District", "Gore District", "Invercargill City"],
+}
+
+AUCKLAND_LOCAL_BOARDS = [
+    "Albert-Eden local board area", "Devonport-Takapuna local board area",
+    "Franklin local board area", "Great Barrier local board area",
+    "Henderson-Massey local board area", "Hibiscus and Bays local board area",
+    "Howick local board area", "Kaipatiki local board area",
+    "Mangere-Otahuhu local board area", "Manurewa local board area",
+    "Maungakiekie-Tamaki local board area", "Orakei local board area",
+    "Otara-Papatoetoe local board area", "Papakura local board area",
+    "Puketapapa local board area", "Rodney local board area",
+    "Upper Harbour local board area", "Waiheke local board area",
+    "Waitakere Ranges local board area", "Waitemata local board area",
+    "Whau local board area",
+]
+
+ALL_TERRITORIAL_AUTHORITIES = [ta for tas in TERRITORIAL_AUTHORITIES_BY_REGION.values() for ta in tas]
+TA_TO_REGION = {ta: region for region, tas in TERRITORIAL_AUTHORITIES_BY_REGION.items() for ta in tas}
+
+AUCKLAND_LOCAL_BOARD_COLORS = {
+    "Albert-Eden local board area": "#1f77b4",
+    "Devonport-Takapuna local board area": "#ff7f0e",
+    "Franklin local board area": "#2ca02c",
+    "Great Barrier local board area": "#d62728",
+    "Henderson-Massey local board area": "#9467bd",
+    "Hibiscus and Bays local board area": "#8c564b",
+    "Howick local board area": "#e377c2",
+    "Kaipatiki local board area": "#7f7f7f",
+    "Mangere-Otahuhu local board area": "#bcbd22",
+    "Manurewa local board area": "#17becf",
+    "Maungakiekie-Tamaki local board area": "#aec7e8",
+    "Orakei local board area": "#ffbb78",
+    "Otara-Papatoetoe local board area": "#98df8a",
+    "Papakura local board area": "#ff9896",
+    "Puketapapa local board area": "#c5b0d5",
+    "Rodney local board area": "#c49c94",
+    "Upper Harbour local board area": "#f7b6d2",
+    "Waiheke local board area": "#c7c7c7",
+    "Waitakere Ranges local board area": "#dbdb8d",
+    "Waitemata local board area": "#9edae5",
+    "Whau local board area": "#393b79",
+}
+
 
 def create_label(row):
     if breakdown_type == "Direction, Citizenship":
@@ -210,17 +290,37 @@ with tab1:
             df["Direction"].unique(),
             default=["Arrivals"],
         )
-        available_regions = [r for r in df["Region"].unique() if r != "TOTAL ALL AREAS"]
-        region = st.multiselect(
-            "Select region (regional councils shown by default):",
-            available_regions,
-            default=[r for r in REGIONAL_COUNCILS if r in available_regions],
+        level_t1 = st.radio(
+            "Area level:",
+            ["Regional Councils", "Territorial Authorities", "Auckland Local Boards"],
+            key="level_t1_region",
         )
-        filtered_df = df[
-            df["Direction"].isin(directions)
-            & df["Region"].isin(region)
-        ]
-        plot_title = "Migration by direction and NZ region"
+        if level_t1 == "Regional Councils":
+            region_options_t1 = REGIONAL_COUNCILS
+            default_t1 = REGIONAL_COUNCILS
+        elif level_t1 == "Territorial Authorities":
+            filter_regions_t1 = st.multiselect(
+                "Filter by region:",
+                REGIONAL_COUNCILS,
+                default=REGIONAL_COUNCILS,
+                key="filter_regions_t1",
+            )
+            region_options_t1 = [
+                ta for r in filter_regions_t1
+                for ta in TERRITORIAL_AUTHORITIES_BY_REGION.get(r, [])
+            ]
+            default_t1 = region_options_t1[:5]
+        else:
+            region_options_t1 = AUCKLAND_LOCAL_BOARDS
+            default_t1 = AUCKLAND_LOCAL_BOARDS
+        region = st.multiselect(
+            "Select area:",
+            region_options_t1,
+            default=default_t1,
+            key="region_t1",
+        )
+        filtered_df = df[df["Direction"].isin(directions) & df["Region"].isin(region)]
+        plot_title = "Migration by direction and NZ area"
 
     # Apply the function to create a new column 'Label' for plotting
     filtered_df["Label"] = filtered_df.apply(create_label, axis=1)
@@ -356,11 +456,33 @@ with tab2:
         pivot_columns = "Visa"
         plot_title = "Stacked Area: Arrivals by visa type"
     elif breakdown_type == "Direction, Region":
-        available_regions_area = [r for r in df["Region"].unique() if r != "TOTAL ALL AREAS"]
+        level_t2 = st.radio(
+            "Area level:",
+            ["Regional Councils", "Territorial Authorities", "Auckland Local Boards"],
+            key="level_t2_region",
+        )
+        if level_t2 == "Regional Councils":
+            region_options_t2 = REGIONAL_COUNCILS
+            default_t2 = REGIONAL_COUNCILS
+        elif level_t2 == "Territorial Authorities":
+            filter_regions_t2 = st.multiselect(
+                "Filter by region:",
+                REGIONAL_COUNCILS,
+                default=["Auckland Region", "Canterbury Region", "Wellington Region"],
+                key="filter_regions_t2",
+            )
+            region_options_t2 = [
+                ta for r in filter_regions_t2
+                for ta in TERRITORIAL_AUTHORITIES_BY_REGION.get(r, [])
+            ]
+            default_t2 = region_options_t2[:5]
+        else:
+            region_options_t2 = AUCKLAND_LOCAL_BOARDS
+            default_t2 = AUCKLAND_LOCAL_BOARDS
         regions_area = st.multiselect(
-            "Select regions:",
-            available_regions_area,
-            default=[r for r in REGIONAL_COUNCILS if r in available_regions_area],
+            "Select areas:",
+            region_options_t2,
+            default=default_t2,
             key="regions_area",
         )
         filtered_df = df[
@@ -368,7 +490,7 @@ with tab2:
             & df["Region"].isin(regions_area)
         ]
         pivot_columns = "Region"
-        plot_title = f"Stacked Area: {direction} by NZ region"
+        plot_title = f"Stacked Area: {direction} by NZ area"
 
     # Preparing data for the plot
     pivot_df = filtered_df.pivot_table(
@@ -755,6 +877,11 @@ with tab3:
         direction = st.selectbox(
             "Select Direction:", df["Direction"].unique(), key="direction_treemap_region"
         )
+        level_t3 = st.radio(
+            "Area level:",
+            ["Regional Councils", "Territorial Authorities", "Auckland Local Boards"],
+            key="level_t3_region",
+        )
         start_month = st.date_input(
             "Start month",
             value=datetime(2022, 1, 1),
@@ -769,29 +896,102 @@ with tab3:
             min_value=min_date,
             max_value=max_date,
         )
-        filtered_df = df[
-            (df["Direction"] == direction)
-            & (df["Month"] >= pd.to_datetime(start_month))
-            & (df["Month"] <= pd.to_datetime(end_month))
-            & (df["Region"].isin(REGIONAL_COUNCILS))
-        ]
-        grouped_df = filtered_df.groupby(["Direction", "Region"], as_index=False)["Count"].sum()
-        total_by_dir = grouped_df.groupby("Direction")["Count"].transform("sum")
-        grouped_df["Percentage"] = (grouped_df["Count"] / total_by_dir * 100).round(1)
-        grouped_df["Color"] = grouped_df["Region"].map(REGION_COLORS)
-
-        fig = go.Figure(
-            go.Treemap(
-                labels=grouped_df["Region"],
-                parents=grouped_df["Direction"],
-                values=grouped_df["Count"],
-                customdata=grouped_df["Percentage"],
-                marker_colors=grouped_df["Color"],
-                texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
-                hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
-                branchvalues="total",
+        if level_t3 == "Regional Councils":
+            filtered_df = df[
+                (df["Direction"] == direction)
+                & (df["Month"] >= pd.to_datetime(start_month))
+                & (df["Month"] <= pd.to_datetime(end_month))
+                & (df["Region"].isin(REGIONAL_COUNCILS))
+            ]
+            grouped_df = filtered_df.groupby(["Direction", "Region"], as_index=False)["Count"].sum()
+            total_by_dir = grouped_df.groupby("Direction")["Count"].transform("sum")
+            grouped_df["Percentage"] = (grouped_df["Count"] / total_by_dir * 100).round(1)
+            grouped_df["Color"] = grouped_df["Region"].map(REGION_COLORS)
+            fig = go.Figure(
+                go.Treemap(
+                    labels=grouped_df["Region"],
+                    parents=grouped_df["Direction"],
+                    values=grouped_df["Count"],
+                    customdata=grouped_df["Percentage"],
+                    marker_colors=grouped_df["Color"],
+                    texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
+                    hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+                    branchvalues="total",
+                )
             )
-        )
+        elif level_t3 == "Territorial Authorities":
+            filtered_df = df[
+                (df["Direction"] == direction)
+                & (df["Month"] >= pd.to_datetime(start_month))
+                & (df["Month"] <= pd.to_datetime(end_month))
+                & (df["Region"].isin(ALL_TERRITORIAL_AUTHORITIES))
+            ]
+            leaf_df = filtered_df.groupby("Region", as_index=False)["Count"].sum()
+            leaf_df["ParentRegion"] = leaf_df["Region"].map(TA_TO_REGION)
+            leaf_df = leaf_df[leaf_df["ParentRegion"].notna()].copy()
+            region_agg = leaf_df.groupby("ParentRegion", as_index=False)["Count"].sum()
+            region_agg.rename(columns={"ParentRegion": "Region"}, inplace=True)
+            leaf_df["Percentage"] = (
+                leaf_df["Count"]
+                / leaf_df.groupby("ParentRegion")["Count"].transform("sum")
+                * 100
+            ).round(1)
+            region_agg["Percentage"] = (region_agg["Count"] / region_agg["Count"].sum() * 100).round(1)
+            ids = list(region_agg["Region"]) + [
+                f"{r['ParentRegion']}|{r['Region']}" for _, r in leaf_df.iterrows()
+            ]
+            labels = list(region_agg["Region"]) + list(leaf_df["Region"])
+            parents = [""] * len(region_agg) + list(leaf_df["ParentRegion"])
+            values = list(region_agg["Count"]) + list(leaf_df["Count"])
+            customdata = list(region_agg["Percentage"]) + list(leaf_df["Percentage"])
+            colors = [REGION_COLORS.get(r, "#aaaaaa") for r in region_agg["Region"]] + [
+                REGION_COLORS.get(r, "#aaaaaa") for r in leaf_df["ParentRegion"]
+            ]
+            grouped_df = leaf_df.rename(columns={"Region": "TA", "ParentRegion": "Region"})
+            fig = go.Figure(
+                go.Treemap(
+                    ids=ids,
+                    labels=labels,
+                    parents=parents,
+                    values=values,
+                    customdata=customdata,
+                    marker_colors=colors,
+                    texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
+                    hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+                    branchvalues="total",
+                )
+            )
+        else:  # Auckland Local Boards
+            filtered_df = df[
+                (df["Direction"] == direction)
+                & (df["Month"] >= pd.to_datetime(start_month))
+                & (df["Month"] <= pd.to_datetime(end_month))
+                & (df["Region"].isin(AUCKLAND_LOCAL_BOARDS))
+            ]
+            grouped_df = filtered_df.groupby("Region", as_index=False)["Count"].sum()
+            total = grouped_df["Count"].sum()
+            grouped_df["Percentage"] = (grouped_df["Count"] / total * 100).round(1)
+            ids = ["Auckland Region"] + list(grouped_df["Region"])
+            labels = ["Auckland Region"] + list(grouped_df["Region"])
+            parents = [""] + ["Auckland Region"] * len(grouped_df)
+            values = [total] + list(grouped_df["Count"])
+            customdata = [100.0] + list(grouped_df["Percentage"])
+            colors = [REGION_COLORS.get("Auckland Region", "#3cb44b")] + [
+                AUCKLAND_LOCAL_BOARD_COLORS.get(r, "#aaaaaa") for r in grouped_df["Region"]
+            ]
+            fig = go.Figure(
+                go.Treemap(
+                    ids=ids,
+                    labels=labels,
+                    parents=parents,
+                    values=values,
+                    customdata=customdata,
+                    marker_colors=colors,
+                    texttemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%",
+                    hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Share: %{customdata}%<extra></extra>",
+                    branchvalues="total",
+                )
+            )
 
     fig.update_layout(margin=dict(t=0, l=0, r=0, b=0))
     st.plotly_chart(fig, use_container_width=True)
