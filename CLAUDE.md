@@ -21,11 +21,8 @@ pip install -r requirements.txt
 
 ### Running the Application
 ```bash
-# Run the main Streamlit dashboard (recommended)
+# Run the main Streamlit dashboard
 streamlit run src/visualization/streamlit_app_plotly.py
-
-# Alternative basic matplotlib version
-streamlit run src/visualization/streamlit_app.py
 ```
 
 ### Data Processing
@@ -35,6 +32,8 @@ cd src/data
 python process_direction_citizenship.py  # ITM552301 → df_citizenship_direction_{date}.pkl/csv
 python process_direction_age_sex.py      # ITM552101 → df_direction_age_sex_{date}.pkl/csv
 python process_arrivals_visatype.py      # ITM552201 → df_direction_visa_{date}.pkl/csv
+python process_citizenship_visa.py       # ITM553001 → df_citizenship_visa_{date}.pkl/csv
+python process_direction_region.py       # ITM553701 → df_direction_region_{date}.pkl/csv
 ```
 Each script auto-detects the latest matching `ITM55xxxx_*.csv` in `data/raw/` and derives the output date suffix from the filename.
 
@@ -54,8 +53,6 @@ playwright install chromium
 ### Directory Structure
 - `src/data/` - Data processing scripts and utilities
 - `src/visualization/` - Streamlit applications and plotting utilities
-- `src/features/` - Business logic and feature engineering
-- `src/models/` - Machine learning models (if any)
 - `src/utility/` - Shared utilities like plot settings
 - `data/raw/` - Raw CSV files from Statistics NZ
 - `data/interim/` - Processed pickle and CSV files ready for visualization
@@ -66,11 +63,12 @@ playwright install chromium
 - `src/data/process_direction_citizenship.py` - Processes ITM552301 raw CSV → `df_citizenship_direction_{date}.pkl/csv`
 - `src/data/process_direction_age_sex.py` - Processes ITM552101 raw CSV → `df_direction_age_sex_{date}.pkl/csv`
 - `src/data/process_arrivals_visatype.py` - Processes ITM552201 raw CSV → `df_direction_visa_{date}.pkl/csv`
+- `src/data/process_citizenship_visa.py` - Processes ITM553001 raw CSV → `df_citizenship_visa_{date}.pkl/csv`
+- `src/data/process_direction_region.py` - Processes ITM553701 raw CSV → `df_direction_region_{date}.pkl/csv`
 - `src/data/data_processing.py` - Legacy `transform_dataframe_to_long_format()` utility (used by older scripts)
 
 **Visualization Applications:**
-- `src/visualization/streamlit_app_plotly.py` - Main interactive dashboard with time series plots, stacked area charts, and treemaps using Plotly
-- `src/visualization/streamlit_app.py` - Basic version using matplotlib
+- `src/visualization/streamlit_app_plotly.py` - Main interactive dashboard with time series plots, stacked area charts, and treemaps using Plotly; supports 5 breakdown types
 - `src/visualization/visualize.py` - `ExploratoryDataAnalysis` class for programmatic plotting
 
 ### Data Flow
@@ -87,6 +85,8 @@ Processed datasets follow this schema:
   - Direction/Citizenship: `Direction`, `Citizenship`
   - Direction/Age/Sex: `Direction`, `Age Group`, `Sex`
   - Direction/Visa: `Direction`, `Visa`
+  - Citizenship/Visa: `Citizenship`, `Visa`
+  - Direction/Region: `Direction`, `Region`
 
 ### Key Dependencies
 - **streamlit** - Web application framework
