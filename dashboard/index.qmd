@@ -1,0 +1,64 @@
+---
+title: "NZ Migration: Fact or Fiction"
+subtitle: "Political claims tested against monthly data from Statistics NZ"
+---
+
+---
+
+## The Kiwi Exodus
+
+Net NZ citizen migration turned sharply negative after 2022. The shaded band shows the pre-COVID historical average ± 1 standard deviation.
+
+```{=html}
+{{< include data/kiwi-exodus_main.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month sum.</p>
+
+Australian citizens are shown for comparison — Australia absorbs most departing Kiwis under the Trans-Tasman Travel Arrangement.
+
+```{=html}
+{{< include data/kiwi-exodus_split.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month sum.</p>
+
+---
+
+## India's Rising Share
+
+India has moved from around 5th to the #1 source country over the past decade. Each line tracks a country's annual arrivals ranking (rank 1 = most arrivals).
+
+```{=html}
+{{< include data/india-surge_bump.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM552301 — annual arrivals, non-NZ citizens.</p>
+
+India's share of non-NZ arrivals on a 12-month rolling average.
+
+```{=html}
+{{< include data/india-surge_share.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month average.</p>
+
+---
+
+## The Visa Mix Shift
+
+*Coming soon — student and work visa arrivals by month, with India CLPR breakdown.*
+
+---
+
+## Where They Land
+
+*Coming soon — net migration by Territorial Authority.*
+
+---
+
+<p class="data-source">
+Data: Statistics NZ International Travel and Migration, 12/16-month rule.
+Built by <a href="https://autonomousecon.substack.com">Autonomous Econ</a> |
+<a href="https://github.com/martingeew/nz_migration_streamlit">Source code</a>
+</p>

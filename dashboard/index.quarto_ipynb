@@ -1,0 +1,113 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"\"\n",
+        "page-layout: full\n",
+        "---"
+      ],
+      "id": "8ed1a12d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "#| output: asis\n",
+        "\n",
+        "# Story metadata for cards\n",
+        "stories = [\n",
+        "    {\n",
+        "        \"title\": \"The Kiwi Exodus\",\n",
+        "        \"teaser\": \"Are New Zealanders leaving in historically unprecedented numbers — and if so, who exactly is leaving?\",\n",
+        "        \"score_class\": \"score-mostly\",\n",
+        "        \"score_label\": \"Mostly Supported\",\n",
+        "        \"href\": \"stories/kiwi-exodus.html\",\n",
+        "    },\n",
+        "    {\n",
+        "        \"title\": \"India's Rising Share\",\n",
+        "        \"teaser\": \"India has risen to become the #1 source country for NZ arrivals. The data shows when, how fast, and by how much.\",\n",
+        "        \"score_class\": \"score-mostly\",\n",
+        "        \"score_label\": \"Mostly Supported\",\n",
+        "        \"href\": \"stories/india-surge.html\",\n",
+        "    },\n",
+        "    {\n",
+        "        \"title\": \"The Visa Mix Shift\",\n",
+        "        \"teaser\": \"Student and work visas have surged since borders reopened. A separate India-specific breakdown shows the visa profile of arrivals from India.\",\n",
+        "        \"score_class\": \"score-partly\",\n",
+        "        \"score_label\": \"Partly Supported\",\n",
+        "        \"href\": \"stories/visa-shift.html\",\n",
+        "    },\n",
+        "    {\n",
+        "        \"title\": \"Where They Land\",\n",
+        "        \"teaser\": \"Net migration is not evenly distributed. Auckland dominates inflows; many provincial TAs show net outflows.\",\n",
+        "        \"score_class\": \"score-partly\",\n",
+        "        \"score_label\": \"Partly Supported\",\n",
+        "        \"href\": \"stories/where-they-land.html\",\n",
+        "    },\n",
+        "]\n",
+        "\n",
+        "hero = \"\"\"\n",
+        "<div class=\"hero-block\">\n",
+        "  <h1>NZ Migration: Fact or Fiction</h1>\n",
+        "  <p class=\"lead\">\n",
+        "    Each chart on this site stress-tests a specific political claim against\n",
+        "    monthly data from Statistics NZ. Every story carries an evidence quality\n",
+        "    score — from <strong>Strongly Supported</strong> to <strong>Contradicted by data</strong> —\n",
+        "    so you can see exactly what the numbers do and don't show.\n",
+        "  </p>\n",
+        "  <p class=\"lead\" style=\"margin-top:8px; font-size:0.95rem; color:#777;\">\n",
+        "    Data: Statistics NZ International Travel and Migration (monthly, 12/16-month rule).\n",
+        "    Updated when Stats NZ releases new data, usually 6&ndash;8 weeks after month end.\n",
+        "  </p>\n",
+        "</div>\n",
+        "\"\"\"\n",
+        "\n",
+        "cards_html = '<div class=\"story-grid\">'\n",
+        "for s in stories:\n",
+        "    cards_html += f\"\"\"\n",
+        "  <div class=\"story-card\">\n",
+        "    <span class=\"score-badge {s['score_class']}\">{s['score_label']}</span>\n",
+        "    <h3>{s['title']}</h3>\n",
+        "    <p>{s['teaser']}</p>\n",
+        "    <a class=\"read-more\" href=\"{s['href']}\">Read the analysis &rarr;</a>\n",
+        "  </div>\"\"\"\n",
+        "cards_html += \"\\n</div>\"\n",
+        "\n",
+        "print(hero + cards_html)"
+      ],
+      "id": "82a0c97b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "\n",
+        "## About this dashboard\n",
+        "\n",
+        "This dashboard is built by [Autonomous Econ](https://autonomousecon.substack.com) — a newsletter covering Python and data for economists. All data is publicly available from Statistics New Zealand under Creative Commons Attribution 4.0.\n",
+        "\n",
+        "**Source code:** [github.com/martingeew/nz_migration_streamlit](https://github.com/martingeew/nz_migration_streamlit)\n",
+        "\n",
+        "**Exploratory dashboard:** The full interactive Streamlit app with all breakdowns is available separately."
+      ],
+      "id": "b784f4d1"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\marti\\py_projects\\nz_migration_streamlit\\.venv\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

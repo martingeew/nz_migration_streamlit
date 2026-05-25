@@ -1,0 +1,17 @@
+/*-- scss:rules --*/
+/* ── NZ Migration Dashboard ───────────────────────────────────────────────── */
+
+/* Light source attribution under charts */
+.data-source {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+/* Section spacing */
+h2 {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid #EEEEEE;
+}
