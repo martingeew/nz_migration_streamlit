@@ -57,11 +57,11 @@ DATASETS = {
             "International Travel and Migration - ITM",
             "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-month rule (Monthly)",
         ],
-        # Cell count: 1 direction × 1 CLPR × 7 visa types × 24 citizenships × 303 months ≈ 51k (< 100k limit)
-        # CLPR = Country of Last/First Permanent Residence; select Non-New Zealand only to exclude NZ-to-NZ moves
+        # Cell count: 1 direction × 1 CLPR × 7 visa types × 24 citizenships × 303 months ≈ 7k (< 100k limit)
+        # CLPR = Country of Last/First Permanent Residence; select India only for India-focused analysis
         "listboxes": {
-            "ctl00_MainContent_ctl02_lbVariableOptions": "all",              # Direction (Arrivals only)
-            "ctl00_MainContent_ctl04_lbVariableOptions": ["Non-New Zealand"],  # CLPR: Non-NZ only
+            "ctl00_MainContent_ctl02_lbVariableOptions": "all",              # Direction (all)
+            "ctl00_MainContent_ctl04_lbVariableOptions": ["India"],          # CLPR: India only
             "ctl00_MainContent_ctl07_lbVariableOptions": "all",              # Visa type (all 7)
             "ctl00_MainContent_ctl09_lbVariableOptions": "all",              # Citizenship (24 countries)
             "ctl00_MainContent_ctl12_lbVariableOptions": ["Estimate"],       # Estimate type only
