@@ -1,0 +1,14 @@
+# Dashboard build and Quarto rendering dependencies
+# Python 3.11+
+
+# Data
+pandas>=2.1.0
+numpy>=1.26.0
+
+# Charts
+plotly>=5.18.0
+
+# Quarto Python execution kernel
+jupyter>=1.0.0
+ipykernel>=6.27.0
+nbformat>=5.9.0
