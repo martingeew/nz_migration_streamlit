@@ -5,6 +5,9 @@ itm-snapshot.md
 blog/
 .venv/
 
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
+
 # Quarto build cache
 dashboard/.quarto/
 
