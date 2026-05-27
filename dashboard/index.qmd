@@ -47,7 +47,19 @@ India's share of non-NZ arrivals on a 12-month rolling average.
 
 ## The Visa Mix Shift
 
-*Coming soon — student and work visa arrivals by month, with India CLPR breakdown.*
+Student and work visa arrivals surged after the border reopened in 2022. The second chart shows the same breakdown for arrivals whose last permanent residence was India.
+
+```{=html}
+{{< include data/visa-shift_overall.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM552201 — monthly arrivals by visa type.</p>
+
+```{=html}
+{{< include data/visa-shift_india_clpr.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM553001 — arrivals where Country of Last Permanent Residence = India.</p>
 
 ---
 

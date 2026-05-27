@@ -47,7 +47,7 @@ def _write_fact_check_report(stories: list, output_dir: Path) -> None:
         lines.append("\n\n---\n\n")
     path = output_dir / "fact_check_report.md"
     path.write_text("".join(lines), encoding="utf-8")
-    print(f"  Fact-check report → {path}")
+    print(f"  Fact-check report saved: {path}")
 
 
 def main() -> None:
@@ -73,7 +73,7 @@ def main() -> None:
     for story in stories:
         story.run()
 
-    print("\n── Fact-check report ──")
+    print("\n--- Fact-check report ---")
     repo_root = Path(__file__).parent.parent
     _write_fact_check_report(stories, repo_root / "output")
 

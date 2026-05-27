@@ -41,36 +41,20 @@ RAW_PATTERN = "ITM55*_*.csv"
 # ── Helpers ────────────────────────────────────────────────────────────────────
 
 def _find_raw_file() -> Path:
-    """Find the most recently downloaded CLPR raw CSV."""
-    # The itm_citizenship_visa download produces a file that contains
-    # multiple CLPR/Visa/Citizenship combinations. We need to find it.
-    # Look for any ITM55 file that we haven't previously processed.
-    already_known = {
-        "ITM552101",  # direction × age × sex
-        "ITM552201",  # direction × visa
-        "ITM552301",  # direction × citizenship
-        "ITM553001",  # citizenship × visa
-        "ITM553701",  # direction × region
-    }
-    candidates = []
-    for f in sorted(RAW_DIR.glob(RAW_PATTERN)):
-        prefix = f.name[:9]  # e.g. "ITM552101"
-        if prefix not in already_known:
-            candidates.append(f)
+    """Find the most recently downloaded CLPR raw CSV (ITM553001).
 
-    if not candidates:
-        # Fallback: look for any ITM55 file newer than the itm553701 file
-        all_files = sorted(RAW_DIR.glob("ITM55*.csv"), key=lambda p: p.stat().st_mtime)
-        if all_files:
-            candidates = [all_files[-1]]
-
-    if not candidates:
-        raise FileNotFoundError(
-            f"No CLPR raw CSV found in {RAW_DIR}. "
-            "Run: python src/data/download_stats_nz.py --dataset itm_citizenship_visa"
-        )
-    # Use the most recently modified file
-    return max(candidates, key=lambda p: p.stat().st_mtime)
+    The CLPR dataset (citizenship × visa type × CLPR) is published under
+    ITM553001 on Stats NZ Infoshare.
+    """
+    candidates = sorted(
+        RAW_DIR.glob("ITM553001_*.csv"), key=lambda p: p.stat().st_mtime
+    )
+    if candidates:
+        return candidates[-1]
+    raise FileNotFoundError(
+        f"No CLPR raw CSV (ITM553001) found in {RAW_DIR}. "
+        "Run: python src/data/download_stats_nz.py --dataset itm_citizenship_visa"
+    )
 
 
 def _parse_month(s: str) -> pd.Timestamp | None:
@@ -83,21 +67,26 @@ def _parse_month(s: str) -> pd.Timestamp | None:
 # ── Main processing ────────────────────────────────────────────────────────────
 
 def process(raw_path: Path) -> pd.DataFrame:
-    """Parse the raw CLPR CSV into long-format DataFrame.
+    """Parse the raw CLPR CSV (ITM553001) into long-format DataFrame.
 
-    The raw file has a complex multi-row header. We read it without a header
-    and reconstruct the column index from the first several rows.
+    The raw file header structure (6 rows):
+        Row 0: Dataset title — skip when building column names
+        Row 1: Direction       ("Arrivals")
+        Row 2: Citizenship     ("Non-New Zealand" aggregate)
+        Row 3: Visa type       (Residence | Student | Visitor | Work | NZ/AU | Other | TOTAL)
+        Row 4: CLPR country    (UAE | Australia | ... | India | ... | Total)
+        Row 5: Estimate type   ("Estimate") — skipped
 
     Args:
-        raw_path: Path to the raw CSV file.
+        raw_path: Path to the raw ITM553001 CSV file.
 
     Returns:
-        Long-format DataFrame with columns:
+        Long-format DataFrame filtered to CLPR = India with columns:
         Month, Count, Direction, CLPR, Visa, Citizenship
     """
     print(f"Processing: {raw_path.name}")
 
-    # Read raw CSV (no header) to inspect structure
+    # Read raw CSV without header
     raw = pd.read_csv(raw_path, header=None, dtype=str)
 
     # Find the first data row (matches YYYYM## format in col 0)
@@ -113,24 +102,17 @@ def process(raw_path: Path) -> pd.DataFrame:
     n_header_rows = data_start
     print(f"  Header rows: {n_header_rows}, data starts at row {data_start}")
 
-    # Extract header rows
-    header_rows = raw.iloc[:n_header_rows, :].fillna(method="ffill", axis=1)
+    # Forward-fill each header row across columns so sparse labels propagate
+    header_rows = raw.iloc[:n_header_rows, :].ffill(axis=1)
 
-    # The column labels are built from stacking all header rows
-    # Typical structure (4-6 header rows depending on dataset version):
-    #   Row 0: Direction (e.g. "Arrivals")
-    #   Row 1: CLPR (e.g. "India")
-    #   Row 2: Visa type (e.g. "Work")
-    #   Row 3: Citizenship (e.g. "India")
-    #   Row 4: Estimate type (e.g. "Estimate") — may be absent
-    #   Row 5+: More levels
-
-    # Build column names by joining non-empty unique parts
+    # Build column names by joining non-empty unique parts.
+    # Start from row 1 to skip the dataset title in row 0.
+    # Also skip "estimate" rows (not useful as a dimension label).
     col_parts = []
     for col_idx in range(1, raw.shape[1]):  # skip Month column (col 0)
         parts = []
-        seen = set()
-        for row_idx in range(n_header_rows):
+        seen: set[str] = set()
+        for row_idx in range(1, n_header_rows):  # row 0 = title, skip it
             val = str(header_rows.iloc[row_idx, col_idx]).strip()
             if val and val not in seen and val.lower() not in ("nan", "estimate"):
                 parts.append(val)
@@ -149,36 +131,40 @@ def process(raw_path: Path) -> pd.DataFrame:
     counts["Month"] = months.values
     long = counts.melt(id_vars=["Month"], var_name="combo", value_name="Count")
 
-    # Parse the combo column (Direction|CLPR|Visa|Citizenship)
+    # Parse combo into dimensions.
+    # With row 0 skipped, each combo has 3–4 parts:
+    #   Direction | Citizenship | Visa | CLPR country   (4 parts — expected)
+    #   Direction | Visa | CLPR country                 (3 parts — fallback)
     combo_parts = long["combo"].str.split("|", expand=True)
     n_parts = combo_parts.shape[1]
+    print(f"  Column parts per combo: {n_parts}  (sample: {long['combo'].iloc[0]})")
 
-    # Assign based on expected number of header rows
-    # Minimum: Direction, Visa, Citizenship (3 parts)
-    # With CLPR: Direction, CLPR, Visa, Citizenship (4 parts)
     if n_parts >= 4:
         long["Direction"] = combo_parts[0]
-        long["CLPR"] = combo_parts[1]
+        long["Citizenship"] = combo_parts[1]
         long["Visa"] = combo_parts[2]
-        long["Citizenship"] = combo_parts[3]
+        long["CLPR"] = combo_parts[3]
     elif n_parts == 3:
         long["Direction"] = combo_parts[0]
-        long["CLPR"] = "India"  # inferred from download config (India only)
+        long["Citizenship"] = "Non-New Zealand"
         long["Visa"] = combo_parts[1]
-        long["Citizenship"] = combo_parts[2]
+        long["CLPR"] = combo_parts[2]
     else:
         raise ValueError(f"Unexpected number of column parts: {n_parts}. Check header structure.")
 
     long["Count"] = pd.to_numeric(long["Count"], errors="coerce")
     long = long.dropna(subset=["Month"])
-    long = long[["Month", "Count", "Direction", "CLPR", "Visa", "Citizenship"]]
-    long = long.sort_values(["Month", "Direction", "CLPR", "Visa", "Citizenship"]).reset_index(drop=True)
 
-    print(f"  Rows: {len(long):,}")
+    # Filter to India CLPR only — that's the focus of this story
+    long = long[long["CLPR"] == "India"].copy()
+
+    long = long[["Month", "Count", "Direction", "CLPR", "Visa", "Citizenship"]]
+    long = long.sort_values(["Month", "Direction", "Visa"]).reset_index(drop=True)
+
+    print(f"  Rows (CLPR = India): {len(long):,}")
     print(f"  Directions: {long['Direction'].unique()}")
-    print(f"  CLPRs: {long['CLPR'].unique()}")
     print(f"  Visas: {long['Visa'].unique()}")
-    print(f"  Citizenships (first 5): {long['Citizenship'].unique()[:5]}")
+    print(f"  Date range: {long['Month'].min()} to {long['Month'].max()}")
 
     return long
 
