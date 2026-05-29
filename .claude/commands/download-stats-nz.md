@@ -6,6 +6,12 @@ Download the latest NZ migration CSV from Stats NZ Infoshare using the Playwrigh
 - `direction-citizenship` — ITM552301: Estimated migration by direction and country of citizenship (Monthly)
 - `direction-age-sex` — ITM552101: Estimated migration by direction, age group and sex (Monthly)
 - `arrivals-visatype` — ITM552201: Estimated migrant arrivals by visa type (Monthly)
+- `direction-region-total` — ITM553701: Estimated migration by direction, citizenship and NZ area — TOTAL ALL CITIZENSHIPS
+- `direction-region-nz` — ITM553701: same dataset — New Zealand citizens only
+- `direction-region-au` — ITM553701: same dataset — Australia citizens only
+- `direction-region-non-nz` — ITM553701: same dataset — Non-New Zealand citizens only
+
+> ITM553701 requires 4 separate requests (one per citizenship) to stay under the 100k cell limit: 108 NZ areas × 3 directions × ~305 months ≈ 98,820 cells per download.
 
 ---
 
@@ -21,9 +27,25 @@ Wait for the browse tree to be visible before proceeding.
 
 Use `browser_click` on the "Tourism" link in the browse tree. The response snapshot will contain the expanded subtree — use the ref from that snapshot for the next step.
 
+> If `browser_click` fails due to strict-mode violations (multiple matches), use JS instead — the Tourism node has a stable element ID:
+> ```javascript
+> () => { document.getElementById('ctl00_MainContent_tvBrowseNodest9').click(); return 'clicked'; }
+> ```
+
 **3. Expand International Travel and Migration - ITM**
 
 Use `browser_click` on the "International Travel and Migration - ITM" link.
+
+> If `browser_click` fails, use JS:
+> ```javascript
+> () => { document.getElementById('ctl00_MainContent_tvBrowseNodest11').click(); return 'clicked'; }
+> ```
+>
+> **For `direction-region-*` only**: after expanding ITM, you can skip steps 3–4 entirely and trigger the postback directly from the homepage to load the SelectVariables page in one call:
+> ```javascript
+> () => { __doPostBack('ctl00$MainContent$tvBrowseNodes', 'sTourism\\International Travel and Migration - ITM\\Tourism*|*International Travel and Migration - ITM*|*ITM553701.px'); return 'done'; }
+> ```
+> This navigates straight to SelectVariables.aspx with a valid session — no tree clicking needed.
 
 > The ITM subtree is large — the snapshot will exceed the inline limit and be saved to a temp file (this is expected and harmless; the click still succeeds).
 >
@@ -45,6 +67,7 @@ Grep `itm-snapshot.md` for the pattern matching your argument, then use `browser
 | `direction-citizenship` | `ITM552301` | ITM552301  |
 | `direction-age-sex`    | `ITM552101`  | ITM552101  |
 | `arrivals-visatype`    | `ITM552201`  | ITM552201  |
+| `direction-region-*`   | `ITM553701`  | ITM553701  |
 
 The page will navigate to SelectVariables.aspx.
 
@@ -112,6 +135,47 @@ return 'done';
 
 > Selecting "Estimate" only avoids exceeding the 100,000 cell limit.
 
+**`direction-region-*`** — detect listboxes dynamically (element IDs for ITM553701 are not fixed); select one citizenship, all directions/areas/time, Estimate only:
+
+The `TARGET` constant changes per argument:
+
+| Argument | TARGET |
+|---|---|
+| `direction-region-total` | `"TOTAL ALL CITIZENSHIPS"` |
+| `direction-region-nz` | `"New Zealand"` |
+| `direction-region-au` | `"Australia"` |
+| `direction-region-non-nz` | `"Non-New Zealand"` |
+
+```javascript
+() => {
+  const TARGET = "TOTAL ALL CITIZENSHIPS"; // replace with correct value per argument (see table above)
+  const listboxes = Array.from(document.querySelectorAll('[id$="_lbVariableOptions"]'));
+  listboxes.forEach(lb => {
+    const opts = Array.from(lb.options);
+    const texts = opts.map(o => o.text);
+    if (texts.some(t => t === 'Rolling Annual')) {
+      // Period type listbox — Monthly only
+      opts.forEach(o => { o.selected = (o.text === 'Monthly'); });
+    } else if (texts.some(t => t === 'TOTAL ALL CITIZENSHIPS')) {
+      // Citizenship listbox — select target citizenship only
+      opts.forEach(o => { o.selected = (o.text === TARGET); });
+    } else if (texts.some(t => t === 'Estimate')) {
+      // Estimate type listbox — Estimate only
+      opts.forEach(o => { o.selected = (o.text === 'Estimate'); });
+    } else {
+      // Direction, NZ area, Time — select all
+      opts.forEach(o => { o.selected = true; });
+    }
+    lb.dispatchEvent(new Event('change', {bubbles: true}));
+  });
+  const dd = document.getElementById('ctl00_MainContent_dlOutputOptions');
+  for (let i = 0; i < dd.options.length; i++)
+    if (dd.options[i].text.includes('Comma delimited')) dd.options[i].selected = true;
+  dd.dispatchEvent(new Event('change', {bubbles: true}));
+  return 'done';
+}
+```
+
 **6. Submit and capture download**
 
 Use `browser_evaluate` to click btnGo by its stable element ID — no snapshot needed:
@@ -137,11 +201,26 @@ cp "$src" "$dest"
 
 Expected filename prefixes per dataset: `ITM552301_`, `ITM552101_`, `ITM552201_`.
 
+**For `direction-region-*` arguments**, rename with a citizenship slug so all 4 files coexist in `data/raw/` without collision:
+
+```powershell
+# Windows PowerShell — replace $slug with: total / nz / au / non_nz
+$file = Get-ChildItem ".playwright-mcp/*.csv" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+$date = (Get-Date -Format "yyyyMMdd")
+$slug = "total"  # change per argument: total / nz / au / non_nz
+Copy-Item $file.FullName "data/raw/ITM553701_${slug}_${date}.csv"
+```
+
+Output filenames: `ITM553701_total_YYYYMMDD.csv`, `ITM553701_nz_YYYYMMDD.csv`, `ITM553701_au_YYYYMMDD.csv`, `ITM553701_non_nz_YYYYMMDD.csv`.
+
+> `process_direction_region.py` currently globs `ITM553701_*.csv` and picks the latest — it will need updating to handle the 4-file format.
+
 **8. Confirm**
 
 Print the filename that was saved to `data/raw/`, e.g.:
 ```
 Downloaded: data/raw/ITM552101_20260314_XXXXXX_XX.csv
+Downloaded: data/raw/ITM553701_nz_20260529.csv
 ```
 
 ---
@@ -157,3 +236,9 @@ Downloaded: data/raw/ITM552101_20260314_XXXXXX_XX.csv
 | direction-age-sex: Sex listbox       | `ctl00_MainContent_ctl07_lbVariableOptions`     |
 | direction-age-sex: Estimate listbox  | `ctl00_MainContent_ctl09_lbVariableOptions`     |
 | direction-age-sex: Time listbox      | `ctl00_MainContent_ctl12_lbVariableOptions`     |
+| direction-region-*: Period type listbox   | `ctl00_MainContent_ctl02_lbVariableOptions` (Monthly / Rolling Annual) |
+| direction-region-*: Direction listbox     | `ctl00_MainContent_ctl04_lbVariableOptions` |
+| direction-region-*: Citizenship listbox   | `ctl00_MainContent_ctl07_lbVariableOptions` |
+| direction-region-*: NZ Area listbox       | `ctl00_MainContent_ctl09_lbVariableOptions` (108 areas) |
+| direction-region-*: Estimate listbox      | `ctl00_MainContent_ctl12_lbVariableOptions` |
+| direction-region-*: Time listbox          | `ctl00_MainContent_ctl14_lbVariableOptions` |
