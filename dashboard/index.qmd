@@ -65,7 +65,21 @@ Student and work visa arrivals surged after the border reopened in 2022. The sec
 
 ## Where They Land
 
-*Coming soon — net migration by Territorial Authority.*
+Net migration since 2022 is negative across every Territorial Authority — the Kiwi exodus has outpaced inbound migration at the local level. Auckland and Wellington show the largest net outflows. The map shows cumulative net migration by TA since January 2022.
+
+```{=html}
+{{< include data/where-they-land_map.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM553701 — net migration by NZ area, 12/16-month rule.</p>
+
+The TAs with the least and most net outflow over the most recent 12 months.
+
+```{=html}
+{{< include data/where-they-land_top_bottom.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM553701 — net migration by NZ area, 12/16-month rule.</p>
 
 ---
 

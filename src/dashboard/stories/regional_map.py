@@ -102,10 +102,12 @@ class RegionalMapStory(BaseStory):
             return False
         return True
 
-    def _ta_net(self, df: pd.DataFrame, start: str = "2022-01") -> pd.DataFrame:
-        """Cumulative net migration by TA since start date."""
+    def _ta_by_direction(
+        self, df: pd.DataFrame, direction: str = "Arrivals", start: str = "2022-01"
+    ) -> pd.DataFrame:
+        """Cumulative migration by TA and direction since start date."""
         ta_df = df[
-            (df["Direction"] == "Net")
+            (df["Direction"] == direction)
             & (df["Month"] >= start)
             & (df["Region"].apply(self._is_ta))
         ]
@@ -113,7 +115,7 @@ class RegionalMapStory(BaseStory):
             ta_df.groupby("Region")["Count"]
             .sum()
             .reset_index()
-            .rename(columns={"Region": "ta_name", "Count": "net"})
+            .rename(columns={"Region": "ta_name", "Count": "value"})
         )
         return cumulative
 
@@ -127,8 +129,13 @@ class RegionalMapStory(BaseStory):
     # ── Figure builders ────────────────────────────────────────────────────────
 
     def _build_map(self, df: pd.DataFrame) -> go.Figure:
-        """Choropleth map: cumulative net migration by TA (2022+)."""
-        ta_net = self._ta_net(df)
+        """Choropleth map: cumulative net migration by TA (2022+).
+
+        All TAs show net negative since 2022 (Kiwi exodus exceeds attributed arrivals).
+        Scale capped at -10k; Auckland (-27k) and Wellington (-10k) clamp to darkest.
+        Sequential red scale: light pink = near 0, dark red = large net outflow.
+        """
+        ta_data = self._ta_by_direction(df, direction="Net")
         geojson = self._load_geojson()
 
         fig = go.Figure()
@@ -136,18 +143,13 @@ class RegionalMapStory(BaseStory):
         if geojson is None:
             # Fallback: horizontal bar chart when GeoJSON not available
             print("  [regional-map] GeoJSON not found — using bar chart fallback.")
-            ta_sorted = ta_net.sort_values("net", ascending=True)
+            ta_sorted = ta_data.sort_values("value", ascending=True)
             fig.add_trace(
                 go.Bar(
-                    x=ta_sorted["net"],
+                    x=ta_sorted["value"],
                     y=ta_sorted["ta_name"],
                     orientation="h",
-                    marker=dict(
-                        color=ta_sorted["net"],
-                        colorscale=[[0, "#C0392B"], [0.5, "#FFFFFF"], [1, "#045275"]],
-                        cmid=0,
-                        showscale=True,
-                    ),
+                    marker_color="#C0392B",
                     hovertemplate="%{y}: %{x:,.0f}<extra></extra>",
                 )
             )
@@ -156,43 +158,35 @@ class RegionalMapStory(BaseStory):
                 title=dict(
                     text=(
                         "Net migration by Territorial Authority (2022–present)<br>"
-                        "<sub>Cumulative net — GeoJSON pending download for map view</sub>"
+                        "<sub>Cumulative net — GeoJSON pending for map view</sub>"
                     ),
                     x=0.0,
                     font_size=18,
                 ),
-                xaxis=dict(title=None, showgrid=True, gridcolor="#EEEEEE"),
+                xaxis=dict(title=None, showgrid=True, gridcolor="#EEEEEE",
+                           tickformat=".0s"),
                 yaxis=dict(title=None, tickfont=dict(size=10)),
                 margin=dict(l=160, r=20, t=90, b=40),
             )
             return fig
 
-        # Map the GeoJSON feature name field — inspect the first feature
-        # to determine the correct property key
-        first_props = geojson["features"][0]["properties"]
-        name_key = next(
-            (k for k in ["TA2023_V1_00_NAME", "TA2022_V1_00_NAME", "TA_NAME", "name", "NAME"]
-             if k in first_props),
-            list(first_props.keys())[0],
-        )
-
+        # Use ta_name_ascii for joining — strips macrons to match migration data names.
+        # Full uncapped range: Auckland (~-27k) at darkest, near-zero TAs at lightest.
         fig.add_trace(
             go.Choropleth(
                 geojson=geojson,
-                featureidkey=f"properties.{name_key}",
-                locations=ta_net["ta_name"],
-                z=ta_net["net"],
+                featureidkey="properties.ta_name_ascii",
+                locations=ta_data["ta_name"],
+                z=ta_data["value"],
                 colorscale=[
-                    [0.0, "#C0392B"],
-                    [0.45, "#FDFEFE"],
-                    [0.5, "#FDFEFE"],
-                    [0.55, "#FDFEFE"],
-                    [1.0, "#045275"],
+                    [0.0, "#922B21"],   # dark red — largest net outflow
+                    [0.3, "#C0392B"],
+                    [0.6, "#E8A89C"],
+                    [1.0, "#FDECEA"],   # very light pink — near zero outflow
                 ],
-                zmid=0,
                 colorbar=dict(
-                    title="Net migration",
-                    tickformat=",",
+                    title="Net",
+                    tickformat=".0s",   # formats -5000 as "-5k", -25000 as "-25k"
                     len=0.6,
                 ),
                 hovertemplate="<b>%{location}</b><br>Net: %{z:,.0f}<extra></extra>",
@@ -210,7 +204,7 @@ class RegionalMapStory(BaseStory):
             title=dict(
                 text=(
                     "Net migration by Territorial Authority (Jan 2022–present)<br>"
-                    "<sub>Cumulative net migration — blue = net inflow, red = net outflow</sub>"
+                    "<sub>Darker red = larger net outflow</sub>"
                 ),
                 x=0.0,
                 font_size=18,
@@ -230,18 +224,21 @@ class RegionalMapStory(BaseStory):
         latest_month = df["Month"].max()
         start = latest_month - pd.DateOffset(months=12)
 
-        ta_net = self._ta_net(df, start=str(start.date()))
-        ta_sorted = ta_net.sort_values("net", ascending=False)
+        ta_data = self._ta_by_direction(df, direction="Net", start=str(start.date()))
+        ta_sorted = ta_data.sort_values("value", ascending=False)
 
         top10 = ta_sorted.head(10)
         bottom10 = ta_sorted.tail(10)
-        combined = pd.concat([top10, bottom10]).sort_values("net", ascending=True)
+        combined = pd.concat([top10, bottom10]).drop_duplicates().sort_values(
+            "value", ascending=True
+        )
 
-        colors = ["#C0392B" if v < 0 else "#045275" for v in combined["net"]]
+        # All values <= 0: colour by magnitude — darker = larger outflow
+        colors = ["#C0392B" if v < 0 else "#045275" for v in combined["value"]]
 
         fig = go.Figure(
             go.Bar(
-                x=combined["net"],
+                x=combined["value"],
                 y=combined["ta_name"],
                 orientation="h",
                 marker_color=colors,
@@ -253,13 +250,18 @@ class RegionalMapStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Top and bottom 10 TAs: net migration (last 12 months)<br>"
-                    "<sub>Blue = net inflow, red = net outflow</sub>"
+                    "Least and most net outflow by TA (last 12 months)<br>"
+                    "<sub>All TAs net negative since 2022 — Kiwi departures exceed attributed arrivals</sub>"
                 ),
                 x=0.0,
                 font_size=18,
             ),
-            xaxis=dict(showgrid=True, gridcolor="#EEEEEE", tickformat=",", title=None),
+            xaxis=dict(
+                showgrid=True,
+                gridcolor="#EEEEEE",
+                tickformat=".0s",
+                title=None,
+            ),
             yaxis=dict(title=None, tickfont=dict(size=11)),
             margin=dict(l=160, r=20, t=90, b=40),
             showlegend=False,
