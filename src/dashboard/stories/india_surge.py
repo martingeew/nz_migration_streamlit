@@ -69,6 +69,16 @@ _EXCLUDE_REGIONS = {
     "Sub-Saharan Africa",
 }
 
+# Countries shown in the stacked net-migration area chart
+_NET_AREA_COUNTRIES = [
+    "China, People's Republic of",
+    "India",
+    "Philippines",
+    "Sri Lanka",
+    "United Kingdom",
+    "Fiji",
+]
+
 # ── Story class ────────────────────────────────────────────────────────────────
 
 
@@ -139,7 +149,100 @@ class IndiaSurgeStory(BaseStory):
 
         return pd.DataFrame(shares).dropna(how="all")
 
+    def _net_by_country(self, df: pd.DataFrame, countries: list) -> tuple:
+        """Rolling 12-month net migration for named countries + Other.
+
+        Returns (net_rolling DataFrame, countries list) where net_rolling has
+        one column per country plus 'Other'.
+        """
+        filtered = df[~df["Citizenship"].isin(_EXCLUDE | _EXCLUDE_REGIONS)]
+
+        arr = (
+            filtered[filtered["Direction"] == "Arrivals"]
+            .groupby(["Month", "Citizenship"])["Count"].sum()
+            .unstack(fill_value=0)
+        )
+        dep = (
+            filtered[filtered["Direction"] == "Departures"]
+            .groupby(["Month", "Citizenship"])["Count"].sum()
+            .unstack(fill_value=0)
+        )
+        all_cols = arr.columns.union(dep.columns)
+        net = arr.reindex(columns=all_cols, fill_value=0) - dep.reindex(columns=all_cols, fill_value=0)
+        net_rolling = net.rolling(12, min_periods=12).sum().dropna(how="all")
+
+        out = net_rolling[countries].copy()
+        out["Other"] = net_rolling.drop(columns=countries).sum(axis=1)
+        return out, countries
+
     # ── Figure builders ────────────────────────────────────────────────────────
+
+    def _build_net_area(self, df: pd.DataFrame) -> go.Figure:
+        """Stacked area: rolling 12-month net migration by country (excl NZ)."""
+        net, top_n = self._net_by_country(df, _NET_AREA_COUNTRIES)
+
+        _GREY = "rgba(180,180,180,0.5)"
+        _GREY_LINE = "#BBBBBB"
+
+        fig = go.Figure()
+
+        # Stack Other at the bottom (grey), then top-N countries above
+        other = net["Other"].dropna()
+        fig.add_trace(go.Scatter(
+            x=other.index, y=other.values,
+            name="Other",
+            stackgroup="one",
+            mode="lines",
+            line=dict(color=_GREY_LINE, width=0.5),
+            fillcolor=_GREY,
+            hovertemplate="<b>Other</b><br>%{x|%b %Y}: %{y:,.0f}<extra></extra>",
+        ))
+
+        for country in reversed(top_n):
+            color = _COUNTRY_COLORS.get(country, "#AAAAAA")
+            series = net[country].dropna()
+            fig.add_trace(go.Scatter(
+                x=series.index, y=series.values,
+                name=_short_name(country),
+                stackgroup="one",
+                mode="lines",
+                line=dict(color=color, width=0.5),
+                fillcolor=color,
+                hovertemplate=(
+                    f"<b>{_short_name(country)}</b><br>"
+                    "%{x|%b %Y}: %{y:,.0f}<extra></extra>"
+                ),
+            ))
+
+        # Legend positioned top-left (stacked areas — direct mid-band labels not practical)
+        fig.update_layout(
+            template=PLOTLY_TEMPLATE,
+            title=dict(
+                text=(
+                    "Net international migration to NZ by source country<br>"
+                    "<sub>Rolling 12-month sum — non-NZ citizens</sub>"
+                ),
+                x=0.0,
+                font_size=18,
+            ),
+            xaxis=dict(tickangle=0, showgrid=False, tickformat="%Y"),
+            yaxis=dict(
+                gridcolor="#EEEEEE",
+                tickformat=",.0f",
+                rangemode="tozero",
+            ),
+            legend=dict(
+                orientation="h",
+                yanchor="top",
+                y=-0.12,
+                xanchor="left",
+                x=0,
+            ),
+            showlegend=True,
+            margin=dict(l=20, r=20, t=90, b=80),
+            hovermode="x unified",
+        )
+        return fig
 
     def _build_share(self, df: pd.DataFrame, n: int = 5) -> go.Figure:
         """Rolling 12-month share of non-NZ arrivals — top N source countries."""
@@ -228,6 +331,7 @@ class IndiaSurgeStory(BaseStory):
     def build_figures(self) -> Dict[str, go.Figure]:
         df = self.loader.load_citizenship_direction()
         return {
+            "net_area": self._build_net_area(df),
             "share": self._build_share(df, n=5),
         }
 

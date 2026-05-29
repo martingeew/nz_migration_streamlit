@@ -27,13 +27,21 @@ Australian citizens are shown for comparison — Australia absorbs most departin
 
 ## India's Rising Share
 
-India has become the dominant source country for non-NZ arrivals over the past decade. The chart shows each top-5 country's rolling 12-month share of total non-NZ arrivals.
+The composition of net migration has shifted markedly since 2022. India and China now dominate inflows, while the "Other" category has compressed as migration becomes more concentrated.
+
+```{=html}
+{{< include data/india-surge_net_area.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month net migration (arrivals minus departures), non-NZ citizens. Top 5 countries by net migration in the most recent 12 months.</p>
+
+The share chart shows each country's arrivals as a proportion of all non-NZ arrivals on a 12-month rolling average.
 
 ```{=html}
 {{< include data/india-surge_share.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month average. Top 5 countries ranked by arrivals in the 12 months to the most recent data point.</p>
+<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month average.</p>
 
 ---
 
