@@ -1,6 +1,6 @@
 # NZ Migration — Fact-Check Report
 
-_Generated 2026-05-27_
+_Generated 2026-05-29_
 
 ---
 
@@ -64,12 +64,12 @@ _Generated 2026-05-27_
 
 **Source:** Erica Stanford, Minister of Immigration, Beehive press release, April 2024
 
-**Evidence:** Net migration is highly concentrated — Auckland alone accounts for the majority of positive net inflows. Several provincial Territorial Authorities show net outflows. The map confirms geographic concentration, but 'unsustainable pressure' requires housing and infrastructure capacity data not included here.
+**Evidence:** Net international migration is highly concentrated geographically — Auckland and Hamilton dominate inflows in absolute terms, but per-capita rates reveal significant variation. Queenstown-Lakes shows the highest per-capita inflow (~71 per 1,000), while a small number of TAs recorded net outflows over the three years ended June 2025. 'Unsustainable pressure' requires housing and infrastructure capacity data not included here.
 
 **Caveats:**
-- Stats NZ regional migration is based on the 12/16-month rule (intended migrants), not short-stay visitors.
-- Regional data covers intended last/next usual residence — actual settlement patterns may differ from declared destination.
-- Building consent and rental data (Issue 2 in the full plan) is needed to quantify 'pressure on services'.
+- Migration figures are Stats NZ official subnational population estimates (components-of-change method), not the monthly 12/16-month migration rule counts.
+- Regional data covers intended usual residence — actual settlement patterns may differ from initial destination.
+- Population denominator is the 2025 provisional estimate, applied uniformly across the full three-year window.
 
 
 ---

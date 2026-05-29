@@ -65,21 +65,27 @@ Student and work visa arrivals surged after the border reopened in 2022. The sec
 
 ## Where They Land
 
-Net migration since 2022 is negative across every Territorial Authority — the Kiwi exodus has outpaced inbound migration at the local level. Auckland and Wellington show the largest net outflows. The map shows cumulative net migration by TA since January 2022.
+International migration is concentrated in a handful of Territorial Authorities. Auckland and Hamilton lead by absolute numbers, but smaller TAs like Queenstown-Lakes rank higher on a per-capita basis. The map shows cumulative net international migration per 1,000 residents over the three years ended June 2025 — teal indicates net inflow, red indicates net outflow.
 
 ```{=html}
 {{< include data/where-they-land_map.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM553701 — net migration by NZ area, 12/16-month rule.</p>
+<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries). Net international migration = sum of annual net flows, years ended June 2023, 2024 and 2025. Rate per 1,000 = cumulative net ÷ 2025 population × 1,000.</p>
 
-The TAs with the least and most net outflow over the most recent 12 months.
+The top 5 TAs by per-capita inflow, and the top 5 Auckland local board areas by per-capita net international migration.
 
 ```{=html}
-{{< include data/where-they-land_top_bottom.html >}}
+{{< include data/where-they-land_top_inflow.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM553701 — net migration by NZ area, 12/16-month rule.</p>
+<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries).</p>
+
+```{=html}
+{{< include data/where-they-land_auckland_albs.html >}}
+```
+
+<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries).</p>
 
 ---
 
