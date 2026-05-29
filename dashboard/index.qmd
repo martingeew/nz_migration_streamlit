@@ -27,21 +27,13 @@ Australian citizens are shown for comparison — Australia absorbs most departin
 
 ## India's Rising Share
 
-India has moved from around 5th to the #1 source country over the past decade. Each line tracks a country's annual arrivals ranking (rank 1 = most arrivals).
-
-```{=html}
-{{< include data/india-surge_bump.html >}}
-```
-
-<p class="data-source">Source: Statistics NZ ITM552301 — annual arrivals, non-NZ citizens.</p>
-
-India's share of non-NZ arrivals on a 12-month rolling average.
+India has become the dominant source country for non-NZ arrivals over the past decade. The chart shows each top-5 country's rolling 12-month share of total non-NZ arrivals.
 
 ```{=html}
 {{< include data/india-surge_share.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month average.</p>
+<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month average. Top 5 countries ranked by arrivals in the 12 months to the most recent data point.</p>
 
 ---
 

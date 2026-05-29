@@ -5,8 +5,7 @@ Stress-tests the claim that India has become the dominant source of migrants
 to New Zealand, and that this will increase further.
 
 Charts:
-    bump   — Bump chart: top source country rankings by year (2010–present)
-    share  — India's % share of total non-NZ arrivals (12-month rolling)
+    share  — Rolling 12-month share of non-NZ arrivals for top 5 source countries
 
 Data: df_citizenship_direction_*.pkl
     Columns: Month, Count, Direction, Citizenship
@@ -55,6 +54,21 @@ _EXCLUDE = {
     "Not elsewhere specified/other",
 }
 
+_EXCLUDE_REGIONS = {
+    "Asia",
+    "Europe",
+    "Oceania and Antarctica",
+    "North-East Asia",
+    "South-East Asia",
+    "Southern and Central Asia",
+    "North-West Europe",
+    "Southern and Eastern Europe",
+    "The Americas",
+    "Africa and the Middle East",
+    "North Africa and the Middle East",
+    "Sub-Saharan Africa",
+}
+
 # ── Story class ────────────────────────────────────────────────────────────────
 
 
@@ -94,160 +108,77 @@ class IndiaSurgeStory(BaseStory):
 
     # ── Private transforms ─────────────────────────────────────────────────────
 
-    def _annual_rankings(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Annual arrivals by citizenship, ranked within each year."""
-        arrivals = df[
-            (df["Direction"] == "Arrivals")
-            & (~df["Citizenship"].isin(_EXCLUDE))
-        ].copy()
-
-        arrivals["Year"] = arrivals["Month"].dt.year
-        annual = (
-            arrivals.groupby(["Year", "Citizenship"])["Count"]
-            .sum()
-            .reset_index()
-        )
-
-        # Rank: 1 = most arrivals
-        annual["Rank"] = annual.groupby("Year")["Count"].rank(
-            ascending=False, method="min"
-        ).astype(int)
-        return annual
-
-    def _india_share(self, df: pd.DataFrame) -> pd.Series:
-        """India's rolling 12-month share of non-NZ arrivals."""
+    def _top_countries_share(self, df: pd.DataFrame, n: int = 5) -> pd.DataFrame:
+        """Rolling 12-month share of non-NZ arrivals for the top N countries."""
         non_nz = df[
             (df["Direction"] == "Arrivals")
-            & (~df["Citizenship"].isin(_EXCLUDE))
+            & (~df["Citizenship"].isin(_EXCLUDE | _EXCLUDE_REGIONS))
         ]
-        india = (
-            non_nz[non_nz["Citizenship"] == "India"]
-            .set_index("Month")["Count"]
-            .sort_index()
-        )
-        total = (
-            non_nz.groupby("Month")["Count"]
+        total = non_nz.groupby("Month")["Count"].sum().sort_index()
+
+        # Identify top N by arrivals in the most recent 12 months of data
+        max_month = non_nz["Month"].max()
+        cutoff = max_month - pd.DateOffset(months=11)
+        top_n = (
+            non_nz[non_nz["Month"] >= cutoff]
+            .groupby("Citizenship")["Count"]
             .sum()
-            .sort_index()
-        )
-        share = (india / total * 100).rolling(12, min_periods=12).mean()
-        return share.dropna()
-
-    # ── Figure builders ────────────────────────────────────────────────────────
-
-    def _build_bump(self, df: pd.DataFrame) -> go.Figure:
-        """Bump chart: top 10 source country rankings 2010–present."""
-        annual = self._annual_rankings(df)
-
-        # Top 10 countries by total arrivals across all years
-        top_countries = (
-            annual.groupby("Citizenship")["Count"]
-            .sum()
-            .nlargest(10)
+            .nlargest(n)
             .index.tolist()
         )
 
-        # Filter to 2010+ for readability
-        plot_data = annual[
-            (annual["Citizenship"].isin(top_countries))
-            & (annual["Year"] >= 2010)
-        ]
+        shares: dict = {}
+        for country in top_n:
+            monthly = (
+                non_nz[non_nz["Citizenship"] == country]
+                .set_index("Month")["Count"]
+                .sort_index()
+                .reindex(total.index, fill_value=0)
+            )
+            shares[country] = (monthly / total * 100).rolling(12, min_periods=12).mean()
 
-        # Exclude the current (partial) year
-        max_full_year = plot_data["Year"].max()
-        plot_data = plot_data[plot_data["Year"] < max_full_year]
+        return pd.DataFrame(shares).dropna(how="all")
+
+    # ── Figure builders ────────────────────────────────────────────────────────
+
+    def _build_share(self, df: pd.DataFrame, n: int = 5) -> go.Figure:
+        """Rolling 12-month share of non-NZ arrivals — top N source countries."""
+        shares = self._top_countries_share(df, n=n)
 
         fig = go.Figure()
 
-        for country in top_countries:
-            cdata = plot_data[plot_data["Citizenship"] == country].sort_values("Year")
-            if cdata.empty:
-                continue
-
+        for country in shares.columns:
+            series = shares[country].dropna()
             color = _COUNTRY_COLORS.get(country, "#AAAAAA")
             is_india = country == "India"
 
-            # Label only at the last year
-            labels = [""] * len(cdata)
-            labels[-1] = _short_name(country)
-
             fig.add_trace(
                 go.Scatter(
-                    x=cdata["Year"],
-                    y=cdata["Rank"],
-                    mode="lines+markers+text",
+                    x=series.index,
+                    y=series.values,
+                    mode="lines",
                     name=_short_name(country),
-                    text=labels,
-                    textposition="middle right",
-                    textfont=dict(size=11, color=color),
-                    line=dict(
-                        color=color,
-                        width=3.5 if is_india else 1.5,
-                    ),
-                    marker=dict(
-                        size=8 if is_india else 5,
-                        color=color,
-                    ),
+                    line=dict(color=color, width=2.5 if is_india else 1.5),
                     hovertemplate=(
                         f"<b>{_short_name(country)}</b><br>"
-                        "%{x}: Rank %{y}<extra></extra>"
+                        "%{x|%b %Y}: %{y:.1f}%<extra></extra>"
                     ),
                 )
             )
 
-        fig.update_layout(
-            template=PLOTLY_TEMPLATE,
-            title=dict(
-                text=(
-                    "Source country rankings: arrivals to NZ (non-NZ citizens)<br>"
-                    "<sub>Annual total arrivals &mdash; rank 1 = largest source country</sub>"
-                ),
-                x=0.0,
-                font_size=18,
-            ),
-            yaxis=dict(
-                autorange="reversed",
-                tickvals=list(range(1, 11)),
-                ticktext=[f"#{i}" for i in range(1, 11)],
-                gridcolor="#EEEEEE",
-                title=None,
-            ),
-            xaxis=dict(
-                showgrid=False,
-                tickangle=0,
-                dtick=1,
-                title=None,
-            ),
-            legend=dict(
-                orientation="h",
-                yanchor="bottom",
-                y=-0.30,
+            # Direct label at end of line
+            fig.add_annotation(
+                x=series.index[-1],
+                y=float(series.values[-1]),
+                text=_short_name(country),
+                showarrow=False,
                 xanchor="left",
-                x=0,
-            ),
-            margin=dict(l=20, r=120, t=90, b=80),
-            hovermode="closest",
-        )
-        return fig
-
-    def _build_share(self, df: pd.DataFrame) -> go.Figure:
-        """India's % share of non-NZ arrivals (12-month rolling average)."""
-        share = self._india_share(df)
-
-        fig = go.Figure()
-        fig.add_trace(
-            go.Scatter(
-                x=share.index,
-                y=share.values,
-                mode="lines",
-                line=dict(color=_COUNTRY_COLORS["India"], width=2.5),
-                hovertemplate="%{x|%b %Y}: %{y:.1f}%<extra></extra>",
-                name="India share",
+                xshift=8,
+                font=dict(size=11, color=color),
             )
-        )
 
-        # AEWV reform vertical line + annotation (using shapes avoids Plotly 5.18 bug)
-        y_max = float(share.max())
+        # AEWV reform vertical line
+        y_max = float(shares.max().max())
         fig.update_layout(
             shapes=[
                 dict(
@@ -257,7 +188,7 @@ class IndiaSurgeStory(BaseStory):
                     line=dict(color="#888", width=1.5, dash="dot"),
                 )
             ],
-            annotations=[
+            annotations=fig.layout.annotations + (
                 dict(
                     x="2024-04-01",
                     y=y_max * 0.95,
@@ -266,16 +197,16 @@ class IndiaSurgeStory(BaseStory):
                     font=dict(size=11, color="#555"),
                     xanchor="left",
                     xshift=6,
-                )
-            ],
+                ),
+            ),
         )
 
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "India's share of non-NZ-citizen arrivals to NZ<br>"
-                    "<sub>Rolling 12-month average &mdash; % of total non-NZ arrivals</sub>"
+                    "Share of non-NZ-citizen arrivals to NZ — top 5 source countries<br>"
+                    "<sub>Rolling 12-month average — % of total non-NZ arrivals</sub>"
                 ),
                 x=0.0,
                 font_size=18,
@@ -287,7 +218,7 @@ class IndiaSurgeStory(BaseStory):
                 rangemode="tozero",
             ),
             showlegend=False,
-            margin=dict(l=20, r=20, t=90, b=60),
+            margin=dict(l=20, r=100, t=90, b=60),
             hovermode="x unified",
         )
         return fig
@@ -297,8 +228,7 @@ class IndiaSurgeStory(BaseStory):
     def build_figures(self) -> Dict[str, go.Figure]:
         df = self.loader.load_citizenship_direction()
         return {
-            "bump": self._build_bump(df),
-            "share": self._build_share(df),
+            "share": self._build_share(df, n=5),
         }
 
     def run(self) -> None:

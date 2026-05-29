@@ -3,6 +3,9 @@ __pycache__/
 .playwright-mcp/
 itm-snapshot.md
 blog/
+
+# Screenshots
+*.png
 .venv/
 
 # Claude Code local settings (machine-specific)
