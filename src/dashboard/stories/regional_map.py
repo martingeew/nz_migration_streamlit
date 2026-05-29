@@ -285,19 +285,18 @@ class RegionalMapStory(BaseStory):
         return merged[["display_name", "net", "population", "value_per1k"]]
 
     def _build_top_inflow(self, ta_df: pd.DataFrame) -> go.Figure:
-        """Bar chart: 5 TAs with highest per-capita net international migration inflow."""
-        top5 = (
+        """Bar chart: top 10 TAs by per-capita net international migration inflow."""
+        top10 = (
             ta_df.sort_values("value_per1k", ascending=False)
-            .head(5)
+            .head(10)
             .sort_values("value_per1k", ascending=True)
         )
-        abs_labels = [f"+{v:,.0f}" if v >= 0 else f"{v:,.0f}" for v in top5["net"]]
-        max_val = top5["value_per1k"].max()
+        abs_labels = [f"+{v:,.0f}" if v >= 0 else f"{v:,.0f}" for v in top10["net"]]
 
         fig = go.Figure(
             go.Bar(
-                x=top5["value_per1k"],
-                y=top5["ta_name"],
+                x=top10["value_per1k"],
+                y=top10["ta_name"],
                 orientation="h",
                 marker_color="#045275",
                 text=abs_labels,
@@ -310,7 +309,7 @@ class RegionalMapStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Highest net international migration per 1,000 population — top 5 TAs<br>"
+                    "Highest net international migration per 1,000 population — top 10 TAs<br>"
                     "<sub>Cumulative change June 2022–June 2025  |  Numbers show absolute net count</sub>"
                 ),
                 x=0.0,
@@ -319,31 +318,26 @@ class RegionalMapStory(BaseStory):
             xaxis=dict(
                 showgrid=True,
                 gridcolor="#EEEEEE",
-                tickformat=".1f",
+                tickformat=".0f",
                 title=None,
-                range=[0, max_val * 1.4],
+                range=[0, 120],
             ),
             yaxis=dict(title=None, tickfont=dict(size=11)),
-            margin=dict(l=180, r=20, t=90, b=40),
+            margin=dict(l=220, r=20, t=90, b=40),
             showlegend=False,
-            height=350,
+            height=450,
         )
         return fig
 
     def _build_auckland_albs(self, alb_df: pd.DataFrame) -> go.Figure:
-        """Bar chart: top 5 Auckland local board areas by per-capita net international migration."""
-        top5 = (
-            alb_df.sort_values("value_per1k", ascending=False)
-            .head(5)
-            .sort_values("value_per1k", ascending=True)
-        )
-        abs_labels = [f"+{v:,.0f}" for v in top5["net"]]
-        max_val = top5["value_per1k"].max()
+        """Bar chart: all Auckland local board areas by per-capita net international migration."""
+        all_albs = alb_df.sort_values("value_per1k", ascending=True)
+        abs_labels = [f"+{v:,.0f}" for v in all_albs["net"]]
 
         fig = go.Figure(
             go.Bar(
-                x=top5["value_per1k"],
-                y=top5["display_name"],
+                x=all_albs["value_per1k"],
+                y=all_albs["display_name"],
                 orientation="h",
                 marker_color="#045275",
                 text=abs_labels,
@@ -365,14 +359,14 @@ class RegionalMapStory(BaseStory):
             xaxis=dict(
                 showgrid=True,
                 gridcolor="#EEEEEE",
-                tickformat=".1f",
+                tickformat=".0f",
                 title=None,
-                range=[0, max_val * 1.4],
+                range=[0, 120],
             ),
             yaxis=dict(title=None, tickfont=dict(size=11)),
-            margin=dict(l=200, r=20, t=90, b=40),
+            margin=dict(l=220, r=20, t=90, b=40),
             showlegend=False,
-            height=350,
+            height=700,
         )
         return fig
 
