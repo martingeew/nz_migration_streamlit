@@ -10,7 +10,7 @@ Run from repo root. Each script auto-detects the latest matching raw file in `da
 | `src/data/process_direction_age_sex.py` | ITM552101 | `df_direction_age_sex_{date}.pkl/csv` |
 | `src/data/process_arrivals_visatype.py` | ITM552201 | `df_direction_visa_{date}.pkl/csv` |
 | `src/data/process_clpr_india_visa.py` | ITM553001 | `df_clpr_india_visa_{date}.pkl/csv` |
-| `src/data/process_direction_region.py` | ITM553701 | `df_direction_region_{date}.pkl/csv` |
+| `src/data/process_direction_region.py` | ITM553701 (4 files: total/nz/au/non_nz) | `df_direction_region_{date}.pkl/csv` |
 
 Download latest raw files first: `python src/data/download_stats_nz.py`
 
@@ -22,7 +22,7 @@ Download latest raw files first: `python src/data/download_stats_nz.py`
 | df_direction_age_sex | Month, Count, Direction, Age Group, Sex |
 | df_direction_visa | Month, Count, Direction, Visa |
 | df_clpr_india_visa | Month, Count, Direction, CLPR, Visa, Citizenship |
-| df_direction_region | Month, Count, Direction, Region |
+| df_direction_region | Month, Count, Direction, Citizenship, Region |
 
 All `Month` columns are `pd.Timestamp`. `Count` is `float64` in new files, `int64` in legacy 202312 reference files — both are fine.
 
@@ -36,7 +36,7 @@ Stats NZ Infoshare files have multi-row headers before data rows (first data row
 | ITM552101 | 5 | title / direction / age group / sex / estimate |
 | ITM552201 | 4 | title / direction / visa type / estimate |
 | ITM553001 | 6 | title / direction / citizenship / visa type / CLPR country / estimate |
-| ITM553701 | 6 | title / period / direction / citizenship / NZ area / estimate |
+| ITM553701 | 6 | title / period / direction / citizenship / NZ area / estimate — row 3 (citizenship) is now extracted per file, not skipped |
 
 ## ITM553001 (CLPR dataset) — specifics
 

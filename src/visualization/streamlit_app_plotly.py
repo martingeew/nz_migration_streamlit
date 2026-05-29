@@ -49,7 +49,7 @@ REGION_COLORS = {
     "Southland Region": "#aaffc3",
 }
 
-REGIONAL_COUNCILS = list(REGION_COLORS.keys())
+REGIONAL_COUNCILS = list(REGION_COLORS.keys()) + ["Area Outside Region", "999 Not applicable/not stated"]
 
 TERRITORIAL_AUTHORITIES_BY_REGION = {
     "Northland Region": ["Far North District", "Whangarei District", "Kaipara District"],
@@ -141,7 +141,7 @@ def create_label(row):
         return f"{row['Direction']}, {row['Visa']}"
     elif breakdown_type == "Citizenship, Visa":
         return f"{row['Visa']}, {row['Citizenship']}"
-    elif breakdown_type == "Direction, Region":
+    elif breakdown_type == "Direction, Region, Citizenship":
         return f"{row['Direction']}, {row['Region']}"
 
 
@@ -199,7 +199,7 @@ def load_data(data_path):
 # Select breakdown type
 breakdown_type = st.selectbox(
     "Select the breakdown to explore:",
-    ["Direction, Citizenship", "Direction, Age, Sex", "Direction, Visa", "Citizenship, Visa", "Direction, Region"],
+    ["Direction, Citizenship", "Direction, Age, Sex", "Direction, Visa", "Citizenship, Visa", "Direction, Region, Citizenship"],
 )
 
 # Resolve the latest interim file for the selected breakdown
@@ -208,7 +208,7 @@ _patterns = {
     "Direction, Age, Sex":    os.path.join(interim_dir, "df_direction_age_sex_*.pkl"),
     "Direction, Visa":        os.path.join(interim_dir, "df_direction_visa_*.pkl"),
     "Citizenship, Visa":      os.path.join(interim_dir, "df_citizenship_visa_*.pkl"),
-    "Direction, Region":      os.path.join(interim_dir, "df_direction_region_*.pkl"),
+    "Direction, Region, Citizenship":      os.path.join(interim_dir, "df_direction_region_*.pkl"),
 }
 data_path = _latest_pkl(_patterns[breakdown_type])
 
@@ -284,11 +284,17 @@ with tab1:
             & df["Visa"].isin(visa)
         ]
         plot_title = "Migrant arrivals by citizenship and visa type"
-    elif breakdown_type == "Direction, Region":
+    elif breakdown_type == "Direction, Region, Citizenship":
         directions = st.multiselect(
             "Select directions:",
             df["Direction"].unique(),
             default=["Arrivals"],
+        )
+        citizenship_t1 = st.selectbox(
+            "Citizenship:",
+            ["TOTAL ALL CITIZENSHIPS", "New Zealand", "Australia", "Non-New Zealand"],
+            index=0,
+            key="dr_citizenship_tab1",
         )
         level_t1 = st.radio(
             "Area level:",
@@ -319,7 +325,11 @@ with tab1:
             default=default_t1,
             key="region_t1",
         )
-        filtered_df = df[df["Direction"].isin(directions) & df["Region"].isin(region)]
+        filtered_df = df[
+            df["Direction"].isin(directions)
+            & (df["Citizenship"] == citizenship_t1)
+            & df["Region"].isin(region)
+        ]
         plot_title = "Migration by direction and NZ area"
 
     # Apply the function to create a new column 'Label' for plotting
@@ -455,7 +465,13 @@ with tab2:
         ]
         pivot_columns = "Visa"
         plot_title = "Stacked Area: Arrivals by visa type"
-    elif breakdown_type == "Direction, Region":
+    elif breakdown_type == "Direction, Region, Citizenship":
+        citizenship_t2 = st.selectbox(
+            "Citizenship:",
+            ["TOTAL ALL CITIZENSHIPS", "New Zealand", "Australia", "Non-New Zealand"],
+            index=0,
+            key="dr_citizenship_tab2",
+        )
         level_t2 = st.radio(
             "Area level:",
             ["Regional Councils", "Territorial Authorities", "Auckland Local Boards"],
@@ -487,6 +503,7 @@ with tab2:
         )
         filtered_df = df[
             (df["Direction"] == direction)
+            & (df["Citizenship"] == citizenship_t2)
             & df["Region"].isin(regions_area)
         ]
         pivot_columns = "Region"
@@ -506,7 +523,7 @@ with tab2:
         "Direction, Age, Sex": "Age Group",
         "Direction, Visa": "Visa",
         "Citizenship, Visa": "Visa",
-        "Direction, Region": "Region",
+        "Direction, Region, Citizenship": "Region",
     }
 
     # Use the breakdown_type to get the corresponding legend title text from the dictionary
@@ -873,9 +890,15 @@ with tab3:
             )
         )
 
-    elif breakdown_type == "Direction, Region":
+    elif breakdown_type == "Direction, Region, Citizenship":
         direction = st.selectbox(
             "Select Direction:", df["Direction"].unique(), key="direction_treemap_region"
+        )
+        citizenship_t3 = st.selectbox(
+            "Citizenship:",
+            ["TOTAL ALL CITIZENSHIPS", "New Zealand", "Australia", "Non-New Zealand"],
+            index=0,
+            key="dr_citizenship_tab3",
         )
         level_t3 = st.radio(
             "Area level:",
@@ -899,6 +922,7 @@ with tab3:
         if level_t3 == "Regional Councils":
             filtered_df = df[
                 (df["Direction"] == direction)
+                & (df["Citizenship"] == citizenship_t3)
                 & (df["Month"] >= pd.to_datetime(start_month))
                 & (df["Month"] <= pd.to_datetime(end_month))
                 & (df["Region"].isin(REGIONAL_COUNCILS))
@@ -922,6 +946,7 @@ with tab3:
         elif level_t3 == "Territorial Authorities":
             filtered_df = df[
                 (df["Direction"] == direction)
+                & (df["Citizenship"] == citizenship_t3)
                 & (df["Month"] >= pd.to_datetime(start_month))
                 & (df["Month"] <= pd.to_datetime(end_month))
                 & (df["Region"].isin(ALL_TERRITORIAL_AUTHORITIES))
@@ -964,6 +989,7 @@ with tab3:
         else:  # Auckland Local Boards
             filtered_df = df[
                 (df["Direction"] == direction)
+                & (df["Citizenship"] == citizenship_t3)
                 & (df["Month"] >= pd.to_datetime(start_month))
                 & (df["Month"] <= pd.to_datetime(end_month))
                 & (df["Region"].isin(AUCKLAND_LOCAL_BOARDS))
