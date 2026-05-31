@@ -15,13 +15,18 @@ Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 whil
 
 <p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month sum.</p>
 
-Australian citizens are shown for comparison — Australia absorbs most departing Kiwis under the Trans-Tasman Travel Arrangement.
+---
+
+## Age Profile of Migration
+
+Net migration is dominated by people in their 20s and 30s throughout the series, but the current post-2022 cycle has seen those cohorts reach levels far above anything in the pre-COVID baseline. The treemaps show how the age composition of cumulative net inflows compares across the two periods.
 
 ```{=html}
-{{< include data/kiwi-exodus_split.html >}}
+{{< include data/kiwi-exodus_age_net.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month sum.</p>
+<p class="data-source">Source: Statistics NZ ITM552101 — rolling 12-month net migration (arrivals minus departures), all citizenships.</p>
+
 
 ---
 

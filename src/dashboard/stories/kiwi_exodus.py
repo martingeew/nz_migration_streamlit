@@ -5,18 +5,18 @@ Stress-tests the claim that NZ citizens are leaving in historically large
 numbers due to domestic economic conditions.
 
 Charts:
-    main   — Rolling 12-month net NZ citizen migration with pre-COVID baseline band
-    split  — NZ citizen net migration: Australia vs rest-of-world
+    main          — Rolling 12-month net NZ and non-NZ citizen migration
+    age_net      — Rolling 12-month net migration by age group (stacked area)
 
-Data: df_citizenship_direction_*.pkl
-    Columns: Month, Count, Direction, Citizenship
+Data:
+    df_citizenship_direction_*.pkl  — Columns: Month, Count, Direction, Citizenship
+    df_direction_age_sex_*.pkl      — Columns: Month, Count, Direction, Age Group, Sex
 """
 
 from __future__ import annotations
 
 from typing import Dict, TYPE_CHECKING
 
-import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
@@ -32,6 +32,17 @@ _BLUE = "#045275"
 _RED = "#C0392B"
 _GREY = "#AAAAAA"
 _BAND_FILL = "rgba(4, 82, 117, 0.10)"
+
+# Age group bins and palette (youngest = lightest, oldest = darkest)
+_AGE_BINS: dict[str, list[str]] = {
+    "Under 20": ["Under 15 Years", "15-19 Years"],
+    "20s": ["20-24 Years", "25-29 Years"],
+    "30s": ["30-34 Years", "35-39 Years"],
+    "40s": ["40-44 Years", "45-49 Years"],
+    "50s–64": ["50-54 Years", "55-59 Years", "60-64 Years"],
+    "65+": ["65 Years and Over"],
+}
+_AGE_COLOURS = ["#B7E6A5", "#7CCBA2", "#46AEA0", "#089099", "#00718B", "#045275"]
 
 # ── Story class ────────────────────────────────────────────────────────────────
 
@@ -99,37 +110,21 @@ class KiwiExodusStory(BaseStory):
         net = (arr - dep).sort_index()
         return net.rolling(12, min_periods=12).sum()
 
-    def _get_australia_split(self, df: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
-        """12-month rolling net NZ citizens: Australia vs rest-of-world."""
-        nz = df[df["Citizenship"] == "New Zealand"].copy()
+    def _monthly_age_net(self, df_age: pd.DataFrame) -> pd.DataFrame:
+        """Monthly net migration (arrivals minus departures) by binned age group."""
+        age_map: dict[str, str] = {
+            age: bin_name
+            for bin_name, raw_ages in _AGE_BINS.items()
+            for age in raw_ages
+        }
+        sex_total = df_age["Sex"].str.lower().str.contains("total")
+        d = df_age[sex_total & (df_age["Age Group"] != "Total All Ages")].copy()
+        d["Age Bin"] = d["Age Group"].map(age_map)
+        d = d.dropna(subset=["Age Bin"])
 
-        def _net_rolling(direction_filter: pd.DataFrame, dest: str) -> pd.Series:
-            arr = (
-                direction_filter[direction_filter["Direction"] == "Arrivals"]
-                .set_index("Month")["Count"]
-            )
-            dep = (
-                direction_filter[direction_filter["Direction"] == "Departures"]
-                .set_index("Month")["Count"]
-            )
-            return (arr - dep).sort_index().rolling(12, min_periods=12).sum()
-
-        # Net NZ citizen flows to/from Australia are approximated by the total
-        # net minus non-Australia net (Stats NZ does not publish
-        # citizenship × country-of-travel cross-tabs in this dataset).
-        # We use total net as the main signal; Australia split requires the
-        # citizenship-direction total-net column which covers all destinations.
-        total_net = _net_rolling(nz, "total")
-
-        # Use the pre-computed "Net" direction column for the Australia split
-        au = (
-            df[(df["Citizenship"] == "Australia") & (df["Direction"] == "Net")]
-            .set_index("Month")["Count"]
-            .sort_index()
-            .rolling(12, min_periods=12)
-            .sum()
-        )
-        return total_net, au
+        arr = d[d["Direction"] == "Arrivals"].groupby(["Month", "Age Bin"])["Count"].sum()
+        dep = d[d["Direction"] == "Departures"].groupby(["Month", "Age Bin"])["Count"].sum()
+        return (arr - dep).rename("Net").reset_index()
 
     # ── Figure builders ────────────────────────────────────────────────────────
 
@@ -240,58 +235,40 @@ class KiwiExodusStory(BaseStory):
         )
         return fig
 
-    def _build_split(self, df: pd.DataFrame) -> go.Figure:
-        """NZ citizen net migration vs Australian citizen net migration (as proxy for cross-Tasman)."""
-        nz_net = self._get_nz_net(df).dropna()
-
-        # Australian citizens net (proxy for Tasman flow dynamics — not NZ-to-Aus breakdown)
-        au_net = (
-            df[
-                (df["Citizenship"] == "Australia")
-                & (df["Direction"] == "Net")
-            ]
-            .set_index("Month")["Count"]
-            .sort_index()
-            .rolling(12, min_periods=12)
-            .sum()
-            .dropna()
-        )
-
-        start = "2015"
-        nz_plot = nz_net[start:]
-        au_plot = au_net[start:]
+    def _build_age_net(self, df_age: pd.DataFrame) -> go.Figure:
+        """Stacked area of rolling 12-month net migration by age group."""
+        monthly = self._monthly_age_net(df_age)
 
         fig = go.Figure()
-
-        fig.add_trace(
-            go.Scatter(
-                x=nz_plot.index,
-                y=nz_plot.values,
-                mode="lines",
-                name="NZ citizens (net)",
-                line=dict(color=_BLUE, width=2.5),
-                hovertemplate="%{x|%b %Y}: %{y:,.0f}<extra></extra>",
+        for bin_name, colour in zip(_AGE_BINS, _AGE_COLOURS):
+            s = (
+                monthly[monthly["Age Bin"] == bin_name]
+                .set_index("Month")["Net"]
+                .sort_index()
+                .rolling(12, min_periods=12)
+                .sum()
+                .dropna()
+                .loc["2005":]
             )
-        )
-        fig.add_trace(
-            go.Scatter(
-                x=au_plot.index,
-                y=au_plot.values,
-                mode="lines",
-                name="Australian citizens (net)",
-                line=dict(color="#F39C12", width=2, dash="dash"),
-                hovertemplate="%{x|%b %Y}: %{y:,.0f}<extra></extra>",
+            fig.add_trace(
+                go.Scatter(
+                    x=s.index,
+                    y=s.values,
+                    mode="lines",
+                    name=bin_name,
+                    stackgroup="one",
+                    line=dict(width=0.5, color=colour),
+                    fillcolor=colour,
+                    hovertemplate=f"{bin_name}: %{{y:,.0f}}<extra></extra>",
+                )
             )
-        )
-
-        fig.add_hline(y=0, line_color="#999", line_width=1)
 
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Net migration by citizenship: NZ vs Australian citizens<br>"
-                    "<sub>Rolling 12-month total &mdash; shows cross-Tasman dynamics</sub>"
+                    "Net migration by age group<br>"
+                    "<sub>Rolling 12-month total — all citizenships combined</sub>"
                 ),
                 x=0.0,
                 font_size=18,
@@ -304,8 +281,9 @@ class KiwiExodusStory(BaseStory):
                 y=-0.30,
                 xanchor="left",
                 x=0,
+                traceorder="normal",
             ),
-            margin=dict(l=20, r=20, t=90, b=80),
+            margin=dict(l=20, r=20, t=90, b=100),
             hovermode="x unified",
         )
         return fig
@@ -314,9 +292,10 @@ class KiwiExodusStory(BaseStory):
 
     def build_figures(self) -> Dict[str, go.Figure]:
         df = self.loader.load_citizenship_direction()
+        df_age = self.loader.load_direction_age_sex()
         return {
             "main": self._build_main(df),
-            "split": self._build_split(df),
+            "age_net": self._build_age_net(df_age),
         }
 
     def run(self) -> None:

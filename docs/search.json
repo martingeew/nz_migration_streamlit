@@ -4,7 +4,7 @@
     "href": "index.html#the-kiwi-exodus",
     "title": "NZ Migration: Fact or Fiction",
     "section": "The Kiwi Exodus",
-    "text": "The Kiwi Exodus\nNet NZ citizen migration peaked at +24,572 in the 12 months to October 2020 while the border was closed and departures collapsed. By March 2026 it stood at -36,538. Over the same 12 months, non-NZ citizens (including Australians) recorded a net +60,787 — down from the post-reopening peak of +176,489 in October 2023.\n                                                \n\n\nSource: Statistics NZ ITM552301 — rolling 12-month sum.\n\nAustralian citizens are shown for comparison — Australia absorbs most departing Kiwis under the Trans-Tasman Travel Arrangement.\n                                                \n\n\nSource: Statistics NZ ITM552301 — rolling 12-month sum."
+    "text": "The Kiwi Exodus\nNet NZ citizen migration peaked at +24,572 in the 12 months to October 2020 while the border was closed and departures collapsed. By March 2026 it stood at -36,538. Over the same 12 months, non-NZ citizens (including Australians) recorded a net +60,787 — down from the post-reopening peak of +176,489 in October 2023.\n                                                \n\n\nSource: Statistics NZ ITM552301 — rolling 12-month sum."
   },
   {
     "objectID": "index.html#indias-rising-share",
@@ -26,5 +26,12 @@
     "title": "NZ Migration: Fact or Fiction",
     "section": "Where They Land",
     "text": "Where They Land\nInternational migration is concentrated in a handful of Territorial Authorities. Auckland and Hamilton lead by absolute numbers, but smaller TAs like Queenstown-Lakes rank higher on a per-capita basis. The map shows cumulative net international migration per 1,000 residents over the three years ended June 2025 — teal indicates net inflow, red indicates net outflow.\n                                                \n\n\nSource: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries). Net international migration = sum of annual net flows, years ended June 2023, 2024 and 2025. Rate per 1,000 = cumulative net ÷ 2025 population × 1,000.\n\nThe top 5 TAs by per-capita inflow, and the top 5 Auckland local board areas by per-capita net international migration.\n                                                \n\n\nSource: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries).\n\n                                                \n\n\nSource: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries).\n\n\n\nData: Statistics NZ International Travel and Migration, 12/16-month rule. Built by Autonomous Econ | Source code"
+  },
+  {
+    "objectID": "index.html#age-profile-of-migration",
+    "href": "index.html#age-profile-of-migration",
+    "title": "NZ Migration: Fact or Fiction",
+    "section": "Age Profile of Migration",
+    "text": "Age Profile of Migration\nNet migration is dominated by people in their 20s and 30s throughout the series, but the current post-2022 cycle has seen those cohorts reach levels far above anything in the pre-COVID baseline. The treemaps show how the age composition of cumulative net inflows compares across the two periods.\n                                                \n\n\nSource: Statistics NZ ITM552101 — rolling 12-month net migration (arrivals minus departures), all citizenships."
   }
 ]
