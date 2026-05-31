@@ -7,7 +7,7 @@ subtitle: "Political claims tested against monthly data from Statistics NZ"
 
 ## The Kiwi Exodus
 
-Net NZ citizen migration turned sharply negative after 2022. The shaded band shows the pre-COVID historical average ± 1 standard deviation.
+Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 while the border was closed and departures collapsed. By March 2026 it stood at -36,538. Over the same 12 months, non-NZ citizens (including Australians) recorded a net +60,787 — down from the post-reopening peak of +176,489 in October 2023.
 
 ```{=html}
 {{< include data/kiwi-exodus_main.html >}}

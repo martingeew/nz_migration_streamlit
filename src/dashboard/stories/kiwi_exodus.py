@@ -86,6 +86,19 @@ class KiwiExodusStory(BaseStory):
         net = (arr - dep).sort_index()
         return net.rolling(12, min_periods=12).sum()
 
+    def _get_non_nz_net(self, df: pd.DataFrame) -> pd.Series:
+        """Rolling 12-month net non-NZ citizen migration (includes Australians)."""
+        arr = (
+            df[(df["Citizenship"] == "Non-New Zealand") & (df["Direction"] == "Arrivals")]
+            .set_index("Month")["Count"]
+        )
+        dep = (
+            df[(df["Citizenship"] == "Non-New Zealand") & (df["Direction"] == "Departures")]
+            .set_index("Month")["Count"]
+        )
+        net = (arr - dep).sort_index()
+        return net.rolling(12, min_periods=12).sum()
+
     def _get_australia_split(self, df: pd.DataFrame) -> tuple[pd.Series, pd.Series]:
         """12-month rolling net NZ citizens: Australia vs rest-of-world."""
         nz = df[df["Citizenship"] == "New Zealand"].copy()
@@ -121,94 +134,87 @@ class KiwiExodusStory(BaseStory):
     # ── Figure builders ────────────────────────────────────────────────────────
 
     def _build_main(self, df: pd.DataFrame) -> go.Figure:
-        """Rolling 12-month net NZ citizen migration + pre-COVID baseline band."""
-        net = self._get_nz_net(df).dropna()
+        """Rolling 12-month net NZ and non-NZ citizen migration."""
+        net_nz = self._get_nz_net(df).dropna()
+        net_non_nz = self._get_non_nz_net(df).dropna()
 
-        # Pre-COVID baseline: 2001–2019
-        baseline = net["2001":"2019"]
-        mean_val = baseline.mean()
-        std_val = baseline.std()
+        # Historical means (2001–2019)
+        mean_val = net_nz["2001":"2019"].mean()
+        mean_non_nz_val = net_non_nz["2001":"2019"].mean()
 
-        # Show data from 2005 onwards for clarity
-        net_plot = net["2005":]
+        # Show data from 2005 onwards
+        net_nz_plot = net_nz["2005":]
+        net_non_nz_plot = net_non_nz["2005":]
 
         fig = go.Figure()
 
-        # Baseline band
-        x_band = list(net_plot.index) + list(net_plot.index[::-1])
-        y_band = (
-            [mean_val + std_val] * len(net_plot)
-            + [mean_val - std_val] * len(net_plot)
-        )
-        fig.add_trace(
-            go.Scatter(
-                x=x_band,
-                y=y_band,
-                fill="toself",
-                fillcolor=_BAND_FILL,
-                line=dict(color="rgba(0,0,0,0)"),
-                hoverinfo="skip",
-                showlegend=True,
-                name="Pre-COVID average ±1 SD (2001–2019)",
-            )
+        # Border closure shaded area (Mar 2020 – Aug 2022)
+        fig.add_vrect(
+            x0="2020-03-01",
+            x1="2022-08-01",
+            fillcolor="rgba(200, 200, 200, 0.25)",
+            line_width=0,
+            annotation_text="Border closed",
+            annotation_position="top left",
+            annotation=dict(font_size=10, font_color=_GREY, showarrow=False),
         )
 
-        # Baseline mean line
+        # Historical mean line (NZ citizens)
         fig.add_trace(
             go.Scatter(
-                x=net_plot.index,
-                y=[mean_val] * len(net_plot),
+                x=net_nz_plot.index,
+                y=[mean_val] * len(net_nz_plot),
                 mode="lines",
                 line=dict(color=_GREY, dash="dot", width=1.5),
-                name=f"Historical mean ({mean_val:,.0f})",
+                name=f"NZ citizen historical mean ({mean_val:,.0f})",
                 hoverinfo="skip",
             )
         )
 
-        # Main net line
+        # Historical mean line (non-NZ citizens)
         fig.add_trace(
             go.Scatter(
-                x=net_plot.index,
-                y=net_plot.values,
+                x=net_non_nz_plot.index,
+                y=[mean_non_nz_val] * len(net_non_nz_plot),
                 mode="lines",
-                line=dict(color=_BLUE, width=2.5),
-                name="Net NZ citizen migration (12-month rolling)",
+                line=dict(color=_RED, dash="dot", width=1.5),
+                name=f"Non-NZ citizen historical mean ({mean_non_nz_val:,.0f})",
+                hoverinfo="skip",
+            )
+        )
+
+        # Non-NZ citizen net line (includes Australians)
+        fig.add_trace(
+            go.Scatter(
+                x=net_non_nz_plot.index,
+                y=net_non_nz_plot.values,
+                mode="lines",
+                line=dict(color=_RED, width=2.5),
+                name="Net non-NZ citizen migration (incl. Australians)",
                 hovertemplate="%{x|%b %Y}: %{y:,.0f}<extra></extra>",
             )
         )
 
-        # Annotations: policy events
-        annotations = [
-            dict(
-                x="2020-03-01",
-                y=net_plot.min() * 0.95,
-                text="Border<br>closed",
-                showarrow=True,
-                arrowhead=2,
-                arrowcolor=_GREY,
-                font=dict(size=11, color=_GREY),
-                ax=0,
-                ay=40,
-            ),
-            dict(
-                x="2022-08-01",
-                y=net_plot["2022-08-01"],
-                text="Borders<br>reopen",
-                showarrow=True,
-                arrowhead=2,
-                arrowcolor=_GREY,
-                font=dict(size=11, color=_GREY),
-                ax=0,
-                ay=-40,
-            ),
-        ]
+        # NZ citizen net line
+        fig.add_trace(
+            go.Scatter(
+                x=net_nz_plot.index,
+                y=net_nz_plot.values,
+                mode="lines",
+                line=dict(color=_BLUE, width=2.5),
+                name="Net NZ citizen migration",
+                hovertemplate="%{x|%b %Y}: %{y:,.0f}<extra></extra>",
+            )
+        )
+
+        y_max = int(max(net_non_nz_plot.max(), mean_non_nz_val) * 1.08)
 
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "NZ citizens: net migration (arrivals minus departures)<br>"
-                    "<sub>Rolling 12-month total &mdash; negative = more leaving than arriving</sub>"
+                    "NZ and non-NZ citizens: rolling 12-month net migration<br>"
+                    "<sub>Arrivals minus departures — negative = more leaving than arriving</sub>"
                 ),
                 x=0.0,
                 font_size=18,
@@ -220,8 +226,8 @@ class KiwiExodusStory(BaseStory):
                 zeroline=True,
                 zerolinecolor="#999",
                 zerolinewidth=1,
+                range=[-100000, y_max],
             ),
-            annotations=annotations,
             legend=dict(
                 orientation="h",
                 yanchor="bottom",
@@ -229,7 +235,7 @@ class KiwiExodusStory(BaseStory):
                 xanchor="left",
                 x=0,
             ),
-            margin=dict(l=20, r=20, t=90, b=80),
+            margin=dict(l=20, r=20, t=90, b=100),
             hovermode="x unified",
         )
         return fig
