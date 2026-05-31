@@ -36,6 +36,27 @@ PALETTE = [
     "#089099", "#00718B", "#045275",
 ]
 
+# Border closure vertical lines — add to any stacked area chart
+BORDER_SHAPES = [
+    dict(
+        type="line", x0="2020-03-01", x1="2020-03-01", y0=0, y1=1, yref="paper",
+        line=dict(color="#999999", width=1.5, dash="dot"),
+    ),
+    dict(
+        type="line", x0="2022-08-01", x1="2022-08-01", y0=0, y1=1, yref="paper",
+        line=dict(color="#999999", width=1.5, dash="dot"),
+    ),
+]
+
+BORDER_ANNOTATIONS = [
+    dict(
+        x="2020-03-01", y=0.97, yref="paper",
+        text="Border closed", showarrow=False,
+        xanchor="left", xshift=4, yanchor="top",
+        font=dict(size=9, color="#888888"),
+    ),
+]
+
 SCORE_LEVELS = [
     "strongly_supported",
     "mostly_supported",

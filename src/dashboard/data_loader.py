@@ -90,6 +90,12 @@ class DataLoader:
         """CLPR=India × Visa × Citizenship (monthly, arrivals).
 
         Columns: Month, Count, Direction, CLPR, Visa, Citizenship
-        Loaded from df_clpr_india_visa_*.pkl (processed from the itm_citizenship_visa raw file).
         """
         return self._load_latest("df_clpr_india_visa")
+
+    def load_clpr_china_visa(self) -> pd.DataFrame:
+        """CLPR=China × Visa × Citizenship (monthly, arrivals).
+
+        Columns: Month, Count, Direction, CLPR, Visa, Citizenship
+        """
+        return self._load_latest("df_clpr_china_visa")

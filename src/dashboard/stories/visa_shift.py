@@ -2,15 +2,17 @@
 Story 3 — The Visa Mix Shift.
 
 Shows how the composition of arrivals by visa type has changed over time,
-and provides an India-specific breakdown using CLPR data.
+and provides CLPR breakdowns for India and China.
 
 Charts:
-    overall   — Stacked area: monthly arrivals by visa type (all citizenships)
+    overall    — Stacked area: monthly arrivals by visa type (all citizenships)
     india_clpr — Stacked area: monthly arrivals where CLPR = India, by visa type
+    china_clpr — Stacked area: monthly arrivals where CLPR = China, by visa type
 
 Data:
-    df_direction_visa_*.pkl         → Columns: Month, Count, Direction, Visa
-    df_clpr_india_visa_*.pkl        → Columns: Month, Count, Direction, CLPR, Visa, Citizenship
+    df_direction_visa_*.pkl    → Columns: Month, Count, Direction, Visa
+    df_clpr_india_visa_*.pkl   → Columns: Month, Count, Direction, CLPR, Visa, Citizenship
+    df_clpr_china_visa_*.pkl   → Columns: Month, Count, Direction, CLPR, Visa, Citizenship
 """
 
 from __future__ import annotations
@@ -20,7 +22,7 @@ from typing import Dict, TYPE_CHECKING
 import pandas as pd
 import plotly.graph_objects as go
 
-from src.dashboard.base import BaseStory, FactCheck, PLOTLY_TEMPLATE
+from src.dashboard.base import BaseStory, FactCheck, PLOTLY_TEMPLATE, BORDER_SHAPES, BORDER_ANNOTATIONS
 from src.dashboard.export import save_all_charts
 
 if TYPE_CHECKING:
@@ -46,14 +48,6 @@ _VISA_ORDER = [
     "Student",
     "Visitor",
     "Other",
-]
-
-# Policy event annotations
-_EVENTS = [
-    dict(x="2020-03-01", label="Border<br>closed", ay=50),
-    dict(x="2022-05-01", label="AEWV<br>launched", ay=-50),
-    dict(x="2022-08-01", label="Borders<br>reopen", ay=50),
-    dict(x="2024-04-01", label="AEWV<br>reforms", ay=-50),
 ]
 
 # ── Story class ────────────────────────────────────────────────────────────────
@@ -122,28 +116,6 @@ class VisaShiftStory(BaseStory):
                 )
             )
 
-        # Policy annotations
-        annotations = []
-        for ev in _EVENTS:
-            try:
-                y_max = pivot.sum(axis=1).max()
-                annotations.append(
-                    dict(
-                        x=ev["x"],
-                        y=y_max * 0.95,
-                        text=ev["label"],
-                        showarrow=True,
-                        arrowhead=2,
-                        arrowcolor="#888",
-                        font=dict(size=10, color="#555"),
-                        ax=0,
-                        ay=ev["ay"],
-                        bgcolor="rgba(255,255,255,0.7)",
-                    )
-                )
-            except Exception:
-                pass
-
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
@@ -165,7 +137,8 @@ class VisaShiftStory(BaseStory):
                 xanchor="left",
                 x=0,
             ),
-            annotations=annotations,
+            shapes=list(BORDER_SHAPES),
+            annotations=list(BORDER_ANNOTATIONS),
             margin=dict(l=20, r=20, t=90, b=100),
             hovermode="x unified",
         )
@@ -191,8 +164,8 @@ class VisaShiftStory(BaseStory):
             subtitle="Monthly arrivals — all citizenships",
         )
 
-    def _build_india_clpr(self, df_clpr: pd.DataFrame) -> go.Figure:
-        """Stacked area: arrivals where CLPR = India, by visa type."""
+    def _build_clpr(self, df_clpr: pd.DataFrame, country: str) -> go.Figure:
+        """Stacked area: arrivals for a given CLPR country, by visa type."""
         arrivals = df_clpr[
             (df_clpr["Direction"] == "Arrivals")
             & (~df_clpr["Visa"].str.upper().str.contains("TOTAL", na=False))
@@ -206,11 +179,15 @@ class VisaShiftStory(BaseStory):
         )
         return self._stacked_area(
             pivot,
-            title="NZ arrivals by visa type — CLPR: India",
-            subtitle=(
-                "Monthly arrivals whose Country of Last Permanent Residence is India"
-            ),
+            title=f"NZ arrivals by visa type — CLPR: {country}",
+            subtitle=f"Monthly arrivals whose Country of Last Permanent Residence is {country}",
         )
+
+    def _build_india_clpr(self, df_clpr: pd.DataFrame) -> go.Figure:
+        return self._build_clpr(df_clpr, "India")
+
+    def _build_china_clpr(self, df_clpr: pd.DataFrame) -> go.Figure:
+        return self._build_clpr(df_clpr, "China")
 
     # ── Public interface ───────────────────────────────────────────────────────
 
@@ -220,28 +197,31 @@ class VisaShiftStory(BaseStory):
             "overall": self._build_overall(df_visa),
         }
         try:
-            df_clpr = self.loader.load_clpr_india_visa()
-            figs["india_clpr"] = self._build_india_clpr(df_clpr)
+            df_india = self.loader.load_clpr_india_visa()
+            figs["india_clpr"] = self._build_india_clpr(df_india)
         except FileNotFoundError:
-            print("  [visa-shift] CLPR India data not yet downloaded — skipping india_clpr chart.")
+            print("  [visa-shift] CLPR India data not found — skipping india_clpr chart.")
+        try:
+            df_china = self.loader.load_clpr_china_visa()
+            figs["china_clpr"] = self._build_china_clpr(df_china)
+        except FileNotFoundError:
+            print("  [visa-shift] CLPR China data not found — skipping china_clpr chart.")
         return figs
 
     def run(self) -> None:
         print(f"\n[{self.title}]")
         figs = self.build_figures()
         save_all_charts(self.slug, figs, self.output_dir)
-        # If CLPR chart wasn't built, save a styled placeholder so the
-        # {{< include >}} in the .qmd doesn't fail.
-        clpr_path = self.output_dir / f"{self.slug}_india_clpr.html"
-        if not clpr_path.exists():
-            clpr_path.write_text(
-                """<div style="background:#FFF3CD; border-left:4px solid #F39C12;
-                   padding:14px 18px; border-radius:4px; margin:24px 0;">
-                  <strong>Data pending:</strong> The India CLPR breakdown requires a separate
-                  Stats NZ table (Estimated migrant arrivals by citizenship, visa type and CLPR).
-                  Run <code>python src/data/download_stats_nz.py --dataset itm_citizenship_visa</code>
-                  then <code>python src/data/process_clpr_india_visa.py</code> to enable this chart.
-                </div>""",
-                encoding="utf-8",
-            )
-            print(f"  Saved placeholder: {self.slug}_india_clpr.html")
+        for key, label in [("india_clpr", "India"), ("china_clpr", "China")]:
+            path = self.output_dir / f"{self.slug}_{key}.html"
+            if not path.exists():
+                path.write_text(
+                    f"""<div style="background:#FFF3CD; border-left:4px solid #F39C12;
+                       padding:14px 18px; border-radius:4px; margin:24px 0;">
+                      <strong>Data pending:</strong> Run
+                      <code>python src/data/process_clpr_india_visa.py</code>
+                      to generate the CLPR {label} breakdown.
+                    </div>""",
+                    encoding="utf-8",
+                )
+                print(f"  Saved placeholder: {self.slug}_{key}.html")

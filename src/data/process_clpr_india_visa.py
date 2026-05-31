@@ -81,7 +81,7 @@ def process(raw_path: Path) -> pd.DataFrame:
         raw_path: Path to the raw ITM553001 CSV file.
 
     Returns:
-        Long-format DataFrame filtered to CLPR = India with columns:
+        Long-format DataFrame (all CLPR countries) with columns:
         Month, Count, Direction, CLPR, Visa, Citizenship
     """
     print(f"Processing: {raw_path.name}")
@@ -155,18 +155,33 @@ def process(raw_path: Path) -> pd.DataFrame:
     long["Count"] = pd.to_numeric(long["Count"], errors="coerce")
     long = long.dropna(subset=["Month"])
 
-    # Filter to India CLPR only — that's the focus of this story
-    long = long[long["CLPR"] == "India"].copy()
-
     long = long[["Month", "Count", "Direction", "CLPR", "Visa", "Citizenship"]]
     long = long.sort_values(["Month", "Direction", "Visa"]).reset_index(drop=True)
 
-    print(f"  Rows (CLPR = India): {len(long):,}")
-    print(f"  Directions: {long['Direction'].unique()}")
-    print(f"  Visas: {long['Visa'].unique()}")
-    print(f"  Date range: {long['Month'].min()} to {long['Month'].max()}")
-
     return long
+
+
+def _filter_clpr(long: pd.DataFrame, clpr: str) -> pd.DataFrame:
+    """Filter long-format data to a single CLPR country."""
+    filtered = long[long["CLPR"] == clpr].copy().reset_index(drop=True)
+    print(f"  Rows (CLPR = {clpr}): {len(filtered):,}")
+    if len(filtered):
+        print(f"  Visas: {filtered['Visa'].unique()}")
+        print(f"  Date range: {filtered['Month'].min()} to {filtered['Month'].max()}")
+    else:
+        print(f"  WARNING: no rows matched CLPR = {clpr!r}")
+        print(f"  Available CLPR values: {sorted(long['CLPR'].unique())}")
+    return filtered
+
+
+def _save(df: pd.DataFrame, slug: str, date_suffix: str) -> None:
+    out_name = f"df_clpr_{slug}_visa_{date_suffix}"
+    pkl_path = INTERIM_DIR / f"{out_name}.pkl"
+    csv_path = INTERIM_DIR / f"{out_name}.csv"
+    df.to_pickle(pkl_path)
+    df.to_csv(csv_path, index=False)
+    print(f"  Saved: {pkl_path.name}")
+    print(f"  Saved: {csv_path.name}")
 
 
 def main() -> None:
@@ -176,17 +191,13 @@ def main() -> None:
     date_match = re.search(r"_(\d{8})_", raw_path.name)
     date_suffix = date_match.group(1) if date_match else datetime.now().strftime("%Y%m%d")
 
-    df = process(raw_path)
+    long = process(raw_path)
 
-    out_name = f"df_clpr_india_visa_{date_suffix}"
-    pkl_path = INTERIM_DIR / f"{out_name}.pkl"
-    csv_path = INTERIM_DIR / f"{out_name}.csv"
+    print("\n--- India ---")
+    _save(_filter_clpr(long, "India"), "india", date_suffix)
 
-    df.to_pickle(pkl_path)
-    df.to_csv(csv_path, index=False)
-
-    print(f"\nSaved: {pkl_path.name}")
-    print(f"Saved: {csv_path.name}")
+    print("\n--- China ---")
+    _save(_filter_clpr(long, "China, People's Republic of"), "china", date_suffix)
 
 
 if __name__ == "__main__":

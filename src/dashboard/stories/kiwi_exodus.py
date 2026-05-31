@@ -20,7 +20,7 @@ from typing import Dict, TYPE_CHECKING
 import pandas as pd
 import plotly.graph_objects as go
 
-from src.dashboard.base import BaseStory, FactCheck, PLOTLY_TEMPLATE, PALETTE
+from src.dashboard.base import BaseStory, FactCheck, PLOTLY_TEMPLATE, PALETTE, BORDER_SHAPES, BORDER_ANNOTATIONS
 from src.dashboard.export import save_all_charts
 
 if TYPE_CHECKING:
@@ -283,6 +283,8 @@ class KiwiExodusStory(BaseStory):
                 x=0,
                 traceorder="normal",
             ),
+            shapes=list(BORDER_SHAPES),
+            annotations=list(BORDER_ANNOTATIONS),
             margin=dict(l=20, r=20, t=90, b=100),
             hovermode="x unified",
         )

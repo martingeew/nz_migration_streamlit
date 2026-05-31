@@ -19,7 +19,7 @@ Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 whil
 
 ## Age Profile of Migration
 
-Net migration is dominated by people in their 20s and 30s throughout the series, but the current post-2022 cycle has seen those cohorts reach levels far above anything in the pre-COVID baseline. The treemaps show how the age composition of cumulative net inflows compares across the two periods.
+Net migration is dominated by people in their 20s and 30s throughout the series. The post-2022 cycle saw those cohorts reach levels far above anything in the pre-COVID baseline before the recent slowdown.
 
 ```{=html}
 {{< include data/kiwi-exodus_age_net.html >}}
@@ -38,7 +38,7 @@ The composition of net migration has shifted markedly since 2022. India and Chin
 {{< include data/india-surge_net_area.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month net migration (arrivals minus departures), non-NZ citizens. Top 5 countries by net migration in the most recent 12 months.</p>
+<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month net migration (arrivals minus departures), non-NZ citizens. China, India, Philippines, Sri Lanka, UK, Fiji plus Other.</p>
 
 The share chart shows each country's arrivals as a proportion of all non-NZ arrivals on a 12-month rolling average.
 
@@ -65,6 +65,12 @@ Student and work visa arrivals surged after the border reopened in 2022. The sec
 ```
 
 <p class="data-source">Source: Statistics NZ ITM553001 — arrivals where Country of Last Permanent Residence = India.</p>
+
+```{=html}
+{{< include data/visa-shift_china_clpr.html >}}
+```
+
+<p class="data-source">Source: Statistics NZ ITM553001 — arrivals where Country of Last Permanent Residence = China.</p>
 
 ---
 
