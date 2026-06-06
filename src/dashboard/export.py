@@ -49,7 +49,7 @@ def save_chart_html(
         str(path),
         full_html=False,
         include_plotlyjs=include_plotlyjs,
-        config={"displayModeBar": True, "responsive": True},
+        config={"displayModeBar": False, "responsive": True, "scrollZoom": False},
     )
     print(f"  Saved chart: {path.name}")
 

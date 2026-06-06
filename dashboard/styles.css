@@ -15,3 +15,11 @@ h2 {
   padding-top: 16px;
   border-top: 1px solid #EEEEEE;
 }
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .modebar { display: none !important; }
+  .plotly-graph-div { margin-bottom: 1.5rem; overflow: hidden; }
+  h2 { margin-top: 24px; padding-top: 8px; }
+  .data-source { font-size: 11px; }
+}

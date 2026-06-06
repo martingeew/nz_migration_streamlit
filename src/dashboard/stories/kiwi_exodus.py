@@ -208,11 +208,11 @@ class KiwiExodusStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "NZ and non-NZ citizens: rolling 12-month net migration<br>"
-                    "<sub>Arrivals minus departures — negative = more leaving than arriving</sub>"
+                    "Net NZ and non-NZ citizen migration<br>"
+                    "<sub>Rolling 12-month sum — negative = more leaving than arriving</sub>"
                 ),
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             xaxis=dict(tickangle=0, showgrid=False, tickformat="%Y"),
             yaxis=dict(
@@ -271,7 +271,7 @@ class KiwiExodusStory(BaseStory):
                     "<sub>Rolling 12-month total — all citizenships combined</sub>"
                 ),
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             xaxis=dict(tickangle=0, showgrid=False, tickformat="%Y"),
             yaxis=dict(gridcolor="#EEEEEE", tickformat=","),

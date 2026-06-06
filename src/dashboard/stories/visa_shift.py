@@ -121,7 +121,7 @@ class VisaShiftStory(BaseStory):
             title=dict(
                 text=f"{title}<br><sub>{subtitle}</sub>",
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             xaxis=dict(
                 tickangle=0,

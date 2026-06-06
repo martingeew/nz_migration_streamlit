@@ -218,11 +218,11 @@ class IndiaSurgeStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Net international migration to NZ by source country<br>"
+                    "Net migration to NZ by source country<br>"
                     "<sub>Rolling 12-month sum — non-NZ citizens</sub>"
                 ),
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             xaxis=dict(tickangle=0, showgrid=False, tickformat="%Y"),
             yaxis=dict(
@@ -309,11 +309,11 @@ class IndiaSurgeStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Share of non-NZ-citizen arrivals to NZ — top 5 source countries<br>"
+                    "Non-NZ arrivals by source country — top 5<br>"
                     "<sub>Rolling 12-month average — % of total non-NZ arrivals</sub>"
                 ),
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             xaxis=dict(tickangle=0, showgrid=False, tickformat="%Y"),
             yaxis=dict(
@@ -322,7 +322,7 @@ class IndiaSurgeStory(BaseStory):
                 rangemode="tozero",
             ),
             showlegend=False,
-            margin=dict(l=20, r=100, t=90, b=60),
+            margin=dict(l=20, r=70, t=90, b=60),
             hovermode="x unified",
         )
         return fig

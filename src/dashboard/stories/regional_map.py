@@ -197,11 +197,11 @@ class RegionalMapStory(BaseStory):
                 height=900,
                 title=dict(
                     text=(
-                        "Net international migration per 1k population by TA<br>"
+                        "Net migration per 1,000 population by TA<br>"
                         "<sub>Cumulative change June 2022–June 2025 — GeoJSON pending for map view</sub>"
                     ),
                     x=0.0,
-                    font_size=18,
+                    font_size=14,
                 ),
                 xaxis=dict(title=None, showgrid=True, gridcolor="#EEEEEE", tickformat=".1f"),
                 yaxis=dict(title=None, tickfont=dict(size=10)),
@@ -240,11 +240,11 @@ class RegionalMapStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Net international migration per 1,000 population by TA<br>"
+                    "Net migration per 1,000 population by TA<br>"
                     "<sub>Cumulative change June 2022–June 2025  |  Teal = net inflow  |  Red = net outflow</sub>"
                 ),
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             geo=dict(showframe=False, showcoastlines=False, projection_type="mercator"),
             margin=dict(l=0, r=0, t=90, b=20),
@@ -309,11 +309,11 @@ class RegionalMapStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Highest net international migration per 1,000 population — top 10 TAs<br>"
+                    "Top 10 TAs by per-capita net migration<br>"
                     "<sub>Cumulative change June 2022–June 2025  |  Numbers show absolute net count</sub>"
                 ),
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             xaxis=dict(
                 showgrid=True,
@@ -350,11 +350,11 @@ class RegionalMapStory(BaseStory):
             template=PLOTLY_TEMPLATE,
             title=dict(
                 text=(
-                    "Auckland local board areas — net international migration per 1,000 population<br>"
+                    "Auckland boards: net migration per 1,000 population<br>"
                     "<sub>Cumulative change June 2022–June 2025  |  Numbers show absolute net count</sub>"
                 ),
                 x=0.0,
-                font_size=18,
+                font_size=14,
             ),
             xaxis=dict(
                 showgrid=True,
