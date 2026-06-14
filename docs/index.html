@@ -68,6 +68,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth >= 768) return;
+  setTimeout(function() {
+    document.querySelectorAll('.plotly-graph-div').forEach(function(div) {
+      if (!div.data) return;
+      Plotly.relayout(div, { hovermode: 'closest' });
+    });
+  }, 500);
+});
+</script>
 
 
 </head>
