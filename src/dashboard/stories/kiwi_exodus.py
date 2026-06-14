@@ -239,9 +239,10 @@ class KiwiExodusStory(BaseStory):
         """Stacked area of rolling 12-month net migration by age group."""
         monthly = self._monthly_age_net(df_age)
 
-        fig = go.Figure()
-        for bin_name, colour in zip(_AGE_BINS, _AGE_COLOURS):
-            s = (
+        # Pre-compute all rolling series so we can derive row totals for % share
+        rolling: dict[str, pd.Series] = {}
+        for bin_name in _AGE_BINS:
+            rolling[bin_name] = (
                 monthly[monthly["Age Bin"] == bin_name]
                 .set_index("Month")["Net"]
                 .sort_index()
@@ -250,16 +251,26 @@ class KiwiExodusStory(BaseStory):
                 .dropna()
                 .loc["2005":]
             )
+
+        row_totals = (
+            pd.DataFrame(rolling).fillna(0).sum(axis=1).replace(0, float("nan"))
+        )
+
+        fig = go.Figure()
+        for bin_name, colour in zip(_AGE_BINS, _AGE_COLOURS):
+            s = rolling[bin_name]
+            pct = (s / row_totals.reindex(s.index) * 100).fillna(0).values
             fig.add_trace(
                 go.Scatter(
                     x=s.index,
                     y=s.values,
+                    customdata=pct,
                     mode="lines",
                     name=bin_name,
                     stackgroup="one",
                     line=dict(width=0.5, color=colour),
                     fillcolor=colour,
-                    hovertemplate=f"{bin_name}: %{{y:,.0f}}<extra></extra>",
+                    hovertemplate=f"{bin_name}: %{{y:,.0f}} (%{{customdata:.1f}}%)<extra></extra>",
                 )
             )
 

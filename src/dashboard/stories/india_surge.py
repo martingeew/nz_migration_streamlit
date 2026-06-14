@@ -186,23 +186,29 @@ class IndiaSurgeStory(BaseStory):
 
         fig = go.Figure()
 
+        row_totals = net.sum(axis=1).replace(0, float("nan"))
+
         # Stack Other at the bottom (grey), then top-N countries above
         other = net["Other"].dropna()
+        pct_other = (net["Other"] / row_totals * 100).reindex(other.index).fillna(0).values
         fig.add_trace(go.Scatter(
             x=other.index, y=other.values,
+            customdata=pct_other,
             name="Other",
             stackgroup="one",
             mode="lines",
             line=dict(color=_GREY_LINE, width=0.5),
             fillcolor=_GREY,
-            hovertemplate="<b>Other</b><br>%{x|%b %Y}: %{y:,.0f}<extra></extra>",
+            hovertemplate="<b>Other</b><br>%{x|%b %Y}: %{y:,.0f} (%{customdata:.1f}% of non-NZ net)<extra></extra>",
         ))
 
         for country in reversed(top_n):
             color = _COUNTRY_COLORS.get(country, "#AAAAAA")
             series = net[country].dropna()
+            pct = (net[country] / row_totals * 100).reindex(series.index).fillna(0).values
             fig.add_trace(go.Scatter(
                 x=series.index, y=series.values,
+                customdata=pct,
                 name=_short_name(country),
                 stackgroup="one",
                 mode="lines",
@@ -210,7 +216,7 @@ class IndiaSurgeStory(BaseStory):
                 fillcolor=color,
                 hovertemplate=(
                     f"<b>{_short_name(country)}</b><br>"
-                    "%{x|%b %Y}: %{y:,.0f}<extra></extra>"
+                    "%{x|%b %Y}: %{y:,.0f} (%{customdata:.1f}% of non-NZ net)<extra></extra>"
                 ),
             ))
 

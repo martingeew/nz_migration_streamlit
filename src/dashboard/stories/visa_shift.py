@@ -99,20 +99,23 @@ class VisaShiftStory(BaseStory):
         """Build a stacked area figure from a pivot (Month × Visa)."""
         fig = go.Figure()
 
-        for visa in _VISA_ORDER:
-            if visa not in pivot.columns:
-                continue
+        active_visas = [v for v in _VISA_ORDER if v in pivot.columns]
+        row_totals = pivot[active_visas].fillna(0).sum(axis=1).replace(0, float("nan"))
+
+        for visa in active_visas:
             series = pivot[visa].fillna(0)
+            pct = (series / row_totals * 100).fillna(0).values
             fig.add_trace(
                 go.Scatter(
                     x=series.index,
                     y=series.values,
+                    customdata=pct,
                     mode="lines",
                     stackgroup="one",
                     name=visa,
                     line=dict(width=0, color=_VISA_COLORS.get(visa, "#AAAAAA")),
                     fillcolor=_VISA_COLORS.get(visa, "#AAAAAA"),
-                    hovertemplate=f"<b>{visa}</b><br>%{{x|%b %Y}}: %{{y:,.0f}}<extra></extra>",
+                    hovertemplate=f"<b>{visa}</b><br>%{{x|%b %Y}}: %{{y:,.0f}} (%{{customdata:.1f}}%)<extra></extra>",
                 )
             )
 
@@ -157,11 +160,14 @@ class VisaShiftStory(BaseStory):
             .sum()
             .unstack("Visa")
             .sort_index()
+            .rolling(12, min_periods=12)
+            .sum()
+            .dropna(how="all")
         )
         return self._stacked_area(
             pivot,
             title="NZ arrivals by visa type",
-            subtitle="Monthly arrivals — all citizenships",
+            subtitle="Rolling 12-month sum — all citizenships",
         )
 
     def _build_clpr(self, df_clpr: pd.DataFrame, country: str) -> go.Figure:
@@ -176,11 +182,14 @@ class VisaShiftStory(BaseStory):
             .sum()
             .unstack("Visa")
             .sort_index()
+            .rolling(12, min_periods=12)
+            .sum()
+            .dropna(how="all")
         )
         return self._stacked_area(
             pivot,
             title=f"NZ arrivals by visa type — CLPR: {country}",
-            subtitle=f"Monthly arrivals whose Country of Last Permanent Residence is {country}",
+            subtitle=f"Rolling 12-month sum — CLPR: {country}",
         )
 
     def _build_india_clpr(self, df_clpr: pd.DataFrame) -> go.Figure:
