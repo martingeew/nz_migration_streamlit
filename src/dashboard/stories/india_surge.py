@@ -239,14 +239,14 @@ class IndiaSurgeStory(BaseStory):
             legend=dict(
                 orientation="h",
                 yanchor="top",
-                y=-0.12,
+                y=-0.15,
                 xanchor="left",
                 x=0,
             ),
             showlegend=True,
             shapes=list(BORDER_SHAPES),
             annotations=list(BORDER_ANNOTATIONS),
-            margin=dict(l=20, r=20, t=90, b=80),
+            margin=dict(l=20, r=20, t=90, b=150),
             hovermode="x unified",
         )
         return fig

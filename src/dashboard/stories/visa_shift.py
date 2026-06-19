@@ -50,6 +50,10 @@ _VISA_ORDER = [
     "Other",
 ]
 
+_VISA_SHORT_NAMES: dict[str, str] = {
+    "New Zealand and Australian citizens": "NZ & AU citizens",
+}
+
 # ── Story class ────────────────────────────────────────────────────────────────
 
 
@@ -112,7 +116,7 @@ class VisaShiftStory(BaseStory):
                     customdata=pct,
                     mode="lines",
                     stackgroup="one",
-                    name=visa,
+                    name=_VISA_SHORT_NAMES.get(visa, visa),
                     line=dict(width=0, color=_VISA_COLORS.get(visa, "#AAAAAA")),
                     fillcolor=_VISA_COLORS.get(visa, "#AAAAAA"),
                     hovertemplate=f"<b>{visa}</b><br>%{{x|%b %Y}}: %{{y:,.0f}} (%{{customdata:.1f}}%)<extra></extra>",
@@ -135,14 +139,14 @@ class VisaShiftStory(BaseStory):
             yaxis=dict(gridcolor="#EEEEEE", tickformat=","),
             legend=dict(
                 orientation="h",
-                yanchor="bottom",
-                y=-0.35,
+                yanchor="top",
+                y=-0.12,
                 xanchor="left",
                 x=0,
             ),
             shapes=list(BORDER_SHAPES),
             annotations=list(BORDER_ANNOTATIONS),
-            margin=dict(l=20, r=20, t=90, b=100),
+            margin=dict(l=20, r=20, t=90, b=150),
             hovermode="x unified",
         )
         return fig

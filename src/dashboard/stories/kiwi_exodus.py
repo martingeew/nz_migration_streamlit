@@ -161,7 +161,7 @@ class KiwiExodusStory(BaseStory):
                 y=[mean_val] * len(net_nz_plot),
                 mode="lines",
                 line=dict(color=_GREY, dash="dot", width=1.5),
-                name=f"NZ citizen historical mean ({mean_val:,.0f})",
+                name=f"NZ mean: {mean_val:,.0f}",
                 hoverinfo="skip",
             )
         )
@@ -173,7 +173,7 @@ class KiwiExodusStory(BaseStory):
                 y=[mean_non_nz_val] * len(net_non_nz_plot),
                 mode="lines",
                 line=dict(color=_RED, dash="dot", width=1.5),
-                name=f"Non-NZ citizen historical mean ({mean_non_nz_val:,.0f})",
+                name=f"Non-NZ mean: {mean_non_nz_val:,.0f}",
                 hoverinfo="skip",
             )
         )
@@ -185,7 +185,7 @@ class KiwiExodusStory(BaseStory):
                 y=net_non_nz_plot.values,
                 mode="lines",
                 line=dict(color=_RED, width=2.5),
-                name="Net non-NZ citizen migration (incl. Australians)",
+                name="Non-NZ migration (incl. AU)",
                 hovertemplate="%{x|%b %Y}: %{y:,.0f}<extra></extra>",
             )
         )
@@ -225,12 +225,12 @@ class KiwiExodusStory(BaseStory):
             ),
             legend=dict(
                 orientation="h",
-                yanchor="bottom",
-                y=-0.30,
+                yanchor="top",
+                y=-0.15,
                 xanchor="left",
                 x=0,
             ),
-            margin=dict(l=20, r=20, t=90, b=100),
+            margin=dict(l=20, r=20, t=90, b=160),
             hovermode="x unified",
         )
         return fig
@@ -288,15 +288,15 @@ class KiwiExodusStory(BaseStory):
             yaxis=dict(gridcolor="#EEEEEE", tickformat=","),
             legend=dict(
                 orientation="h",
-                yanchor="bottom",
-                y=-0.30,
+                yanchor="top",
+                y=-0.12,
                 xanchor="left",
                 x=0,
                 traceorder="normal",
             ),
             shapes=list(BORDER_SHAPES),
             annotations=list(BORDER_ANNOTATIONS),
-            margin=dict(l=20, r=20, t=90, b=100),
+            margin=dict(l=20, r=20, t=90, b=140),
             hovermode="x unified",
         )
         return fig
