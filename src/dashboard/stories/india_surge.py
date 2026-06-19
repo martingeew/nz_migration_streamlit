@@ -13,6 +13,7 @@ Data: df_citizenship_direction_*.pkl
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Dict, TYPE_CHECKING
 
 import pandas as pd
@@ -23,6 +24,19 @@ from src.dashboard.export import save_all_charts
 
 if TYPE_CHECKING:
     from src.dashboard.data_loader import DataLoader
+
+# ── Skill level colour map ────────────────────────────────────────────────────
+# Diverging: teal = high skill (1), red = low skill (5)
+
+_SKILL_COLORS: dict[str, str] = {
+    "Skill level 1": "#045275",
+    "Skill level 2": "#089099",
+    "Skill level 3": "#46AEA0",
+    "Skill level 4": "#F4A261",
+    "Skill level 5": "#C0392B",
+}
+_SKILL_ORDER = ["Skill level 5", "Skill level 4", "Skill level 3", "Skill level 2", "Skill level 1"]
+_SKILL_DATA_PATH = Path(__file__).parents[3] / "data" / "raw" / "mbie_w3_work_occupations_nationality_skill_level.csv"
 
 # ── Country colour map ─────────────────────────────────────────────────────────
 # Consistent with streamlit_app_plotly.py colour conventions
@@ -101,7 +115,11 @@ class IndiaSurgeStory(BaseStory):
                 "India has been the #1 source country for NZ arrivals since 2022, "
                 "rising from around 5th place a decade ago. India's share of "
                 "non-NZ-citizen arrivals has roughly tripled since 2015. The trend "
-                "pre-dates Peters' speech and is strongly supported by monthly data."
+                "pre-dates Peters' speech and is strongly supported by monthly data. "
+                "India's ANZSCO Level 4–5 (lower-skill) work visa share rose from "
+                "~22% in 2015/16 to ~56% in 2023/24, with a structural break at the "
+                "2022 AEWV launch. However, China (66%) and Vietnam (66%) have higher "
+                "low-skill shares than India — the pattern is not India-specific."
             ),
             caveats=[
                 (
@@ -109,9 +127,13 @@ class IndiaSurgeStory(BaseStory):
                     "the historical trend but cannot verify future volumes."
                 ),
                 (
+                    "ANZSCO skill level is not recorded for ~40% of work visa approvals "
+                    "in the MBIE dataset — skill-level proportions reflect categorised "
+                    "records only and may not represent the full intake."
+                ),
+                (
                     "Whether Indian arrivals 'take Kiwi jobs' requires labour market "
-                    "and ANZSCO skill-level data (INZ work visa files) — not yet "
-                    "included in this dashboard."
+                    "outcome data by visa type — not available in public datasets."
                 ),
             ],
         )
@@ -342,13 +364,158 @@ class IndiaSurgeStory(BaseStory):
         )
         return fig
 
+    def _build_skill_shift(self, df_skills: pd.DataFrame) -> go.Figure:
+        """100% stacked bar: India approved work visa skill mix by financial year."""
+        india = df_skills[
+            (df_skills["Nationality"] == "India")
+            & (df_skills["Decision Type"] == "Approved")
+            & (df_skills["Occupation Skill Level"] != "(not recorded)")
+            & (~df_skills["Financial Year"].str.startswith("2025"))
+        ]
+        pivot = (
+            india.groupby(["Financial Year", "Occupation Skill Level"])["Count"]
+            .sum()
+            .unstack(fill_value=0)
+        )
+
+        fig = go.Figure()
+        for skill in _SKILL_ORDER:
+            if skill not in pivot.columns:
+                continue
+            n = skill.split()[-1]
+            label = f"Level {n} (highest)" if n == "1" else f"Level {n} (lowest)" if n == "5" else f"Level {n}"
+            fig.add_trace(go.Bar(
+                name=label,
+                x=pivot.index,
+                y=pivot[skill],
+                marker_color=_SKILL_COLORS[skill],
+                hovertemplate=f"<b>{skill}</b><br>%{{x}}: %{{y:,}} approved<extra></extra>",
+            ))
+
+        fig.update_layout(
+            template=PLOTLY_TEMPLATE,
+            barmode="stack",
+            barnorm="fraction",
+            title=dict(
+                text=(
+                    "India work visa skill mix — shifting lower since AEWV<br>"
+                    "<sub>Approved work visas by ANZSCO skill level — excludes ~40% with no recorded occupation</sub>"
+                ),
+                x=0.0,
+                font_size=14,
+            ),
+            xaxis=dict(tickangle=0, showgrid=False),
+            yaxis=dict(gridcolor="#EEEEEE", tickformat=".0%"),
+            legend=dict(
+                orientation="h", yanchor="top", y=-0.15,
+                xanchor="left", x=0, traceorder="reversed",
+            ),
+            annotations=[
+                dict(
+                    x="2022/23", xref="x", y=1.1, yref="paper",
+                    text="AEWV<br>launched", showarrow=True,
+                    arrowhead=2, arrowcolor="#888", arrowsize=0.8,
+                    font=dict(size=9, color="#555"),
+                    ax=0, ay=-30, xanchor="center", yanchor="bottom",
+                ),
+                dict(
+                    x="2023/24", xref="x", y=1.1, yref="paper",
+                    text="AEWV<br>reforms", showarrow=True,
+                    arrowhead=2, arrowcolor="#888", arrowsize=0.8,
+                    font=dict(size=9, color="#555"),
+                    ax=0, ay=-30, xanchor="center", yanchor="bottom",
+                ),
+            ],
+            margin=dict(l=20, r=20, t=120, b=150),
+            hovermode="x unified",
+        )
+        return fig
+
+    def _build_country_skill(self, df_skills: pd.DataFrame) -> go.Figure:
+        """Horizontal 100% stacked bar: work visa skill mix, top 10 countries, 2023/24."""
+        recent = df_skills[
+            (df_skills["Financial Year"] == "2023/24")
+            & (df_skills["Decision Type"] == "Approved")
+            & (df_skills["Occupation Skill Level"] != "(not recorded)")
+        ]
+        top10 = (
+            recent.groupby("Nationality")["Count"].sum().nlargest(10).index.tolist()
+        )
+        filtered = recent[recent["Nationality"].isin(top10)]
+        pivot = (
+            filtered.groupby(["Nationality", "Occupation Skill Level"])["Count"]
+            .sum()
+            .unstack(fill_value=0)
+        )
+        # Sort ascending so highest lo-skill appears at top of horizontal chart
+        lo_cols = [c for c in ["Skill level 4", "Skill level 5"] if c in pivot.columns]
+        total = pivot.sum(axis=1)
+        lo_share = pivot[lo_cols].sum(axis=1) / total
+        pivot = pivot.loc[lo_share.sort_values(ascending=True).index]
+
+        fig = go.Figure()
+        for skill in _SKILL_ORDER:
+            if skill not in pivot.columns:
+                continue
+            n = skill.split()[-1]
+            label = f"Level {n} (highest)" if n == "1" else f"Level {n} (lowest)" if n == "5" else f"Level {n}"
+            fig.add_trace(go.Bar(
+                name=label,
+                y=pivot.index,
+                x=pivot[skill],
+                orientation="h",
+                marker_color=_SKILL_COLORS[skill],
+                hovertemplate=f"<b>{skill}</b><br>%{{y}}: %{{x:,}} approved<extra></extra>",
+            ))
+
+        # Annotate lo-skill % on the right for each country
+        annotations = []
+        for country in pivot.index:
+            pct = lo_share[country] * 100
+            annotations.append(dict(
+                x=1.01, xref="paper",
+                y=country, yref="y",
+                text=f"{pct:.0f}%",
+                showarrow=False,
+                font=dict(size=10, color="#C0392B" if country == "India" else "#555"),
+                xanchor="left",
+                yanchor="middle",
+            ))
+
+        fig.update_layout(
+            template=PLOTLY_TEMPLATE,
+            barmode="stack",
+            barnorm="fraction",
+            title=dict(
+                text=(
+                    "Work visa skill mix — India vs top 10 source countries (2023/24)<br>"
+                    "<sub>% Level 4–5 (lower-skill) shown at right — ANZSCO levels, approved work visas</sub>"
+                ),
+                x=0.0,
+                font_size=14,
+            ),
+            xaxis=dict(tickformat=".0%", showgrid=False),
+            yaxis=dict(gridcolor="#EEEEEE"),
+            legend=dict(
+                orientation="h", yanchor="top", y=-0.12,
+                xanchor="left", x=0, traceorder="reversed",
+            ),
+            annotations=annotations,
+            margin=dict(l=20, r=60, t=90, b=130),
+            hovermode="y unified",
+        )
+        return fig
+
     # ── Public interface ───────────────────────────────────────────────────────
 
     def build_figures(self) -> Dict[str, go.Figure]:
         df = self.loader.load_citizenship_direction()
+        df_skills = pd.read_csv(_SKILL_DATA_PATH)
         return {
             "net_area": self._build_net_area(df),
             "share": self._build_share(df, n=5),
+            "skill_shift": self._build_skill_shift(df_skills),
+            "country_skill": self._build_country_skill(df_skills),
         }
 
     def run(self) -> None:

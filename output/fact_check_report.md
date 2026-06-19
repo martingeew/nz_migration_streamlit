@@ -29,11 +29,12 @@ _Generated 2026-06-19_
 
 **Source:** Winston Peters, NZ First Leader, State of the Nation address, March 2026
 
-**Evidence:** India has been the #1 source country for NZ arrivals since 2022, rising from around 5th place a decade ago. India's share of non-NZ-citizen arrivals has roughly tripled since 2015. The trend pre-dates Peters' speech and is strongly supported by monthly data.
+**Evidence:** India has been the #1 source country for NZ arrivals since 2022, rising from around 5th place a decade ago. India's share of non-NZ-citizen arrivals has roughly tripled since 2015. The trend pre-dates Peters' speech and is strongly supported by monthly data. India's ANZSCO Level 4–5 (lower-skill) work visa share rose from ~22% in 2015/16 to ~56% in 2023/24, with a structural break at the 2022 AEWV launch. However, China (66%) and Vietnam (66%) have higher low-skill shares than India — the pattern is not India-specific.
 
 **Caveats:**
 - Peters' claim is partly forward-looking; current data confirms the historical trend but cannot verify future volumes.
-- Whether Indian arrivals 'take Kiwi jobs' requires labour market and ANZSCO skill-level data (INZ work visa files) — not yet included in this dashboard.
+- ANZSCO skill level is not recorded for ~40% of work visa approvals in the MBIE dataset — skill-level proportions reflect categorised records only and may not represent the full intake.
+- Whether Indian arrivals 'take Kiwi jobs' requires labour market outcome data by visa type — not available in public datasets.
 
 
 ---
