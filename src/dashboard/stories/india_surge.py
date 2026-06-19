@@ -377,6 +377,10 @@ class IndiaSurgeStory(BaseStory):
             .sum()
             .unstack(fill_value=0)
         )
+        # Shorten labels "2015/16" → "15/16" for mobile readability
+        pivot.index = [fy[2:] for fy in pivot.index]
+        # Show every other year to prevent crowding at narrow widths
+        sparse_ticks = [pivot.index[i] for i in range(0, len(pivot.index), 2)]
 
         fig = go.Figure()
         for skill in _SKILL_ORDER:
@@ -404,29 +408,13 @@ class IndiaSurgeStory(BaseStory):
                 x=0.0,
                 font_size=14,
             ),
-            xaxis=dict(tickangle=0, showgrid=False),
+            xaxis=dict(tickangle=0, showgrid=False, tickvals=sparse_ticks),
             yaxis=dict(gridcolor="#EEEEEE", tickformat=".0%"),
             legend=dict(
                 orientation="h", yanchor="top", y=-0.15,
                 xanchor="left", x=0, traceorder="reversed",
             ),
-            annotations=[
-                dict(
-                    x="2022/23", xref="x", y=1.1, yref="paper",
-                    text="AEWV<br>launched", showarrow=True,
-                    arrowhead=2, arrowcolor="#888", arrowsize=0.8,
-                    font=dict(size=9, color="#555"),
-                    ax=0, ay=-30, xanchor="center", yanchor="bottom",
-                ),
-                dict(
-                    x="2023/24", xref="x", y=1.1, yref="paper",
-                    text="AEWV<br>reforms", showarrow=True,
-                    arrowhead=2, arrowcolor="#888", arrowsize=0.8,
-                    font=dict(size=9, color="#555"),
-                    ax=0, ay=-30, xanchor="center", yanchor="bottom",
-                ),
-            ],
-            margin=dict(l=20, r=20, t=120, b=150),
+            margin=dict(l=20, r=20, t=90, b=150),
             hovermode="x unified",
         )
         return fig
@@ -497,11 +485,12 @@ class IndiaSurgeStory(BaseStory):
             xaxis=dict(tickformat=".0%", showgrid=False),
             yaxis=dict(gridcolor="#EEEEEE"),
             legend=dict(
-                orientation="h", yanchor="top", y=-0.12,
+                orientation="h", yanchor="top", y=-0.10,
                 xanchor="left", x=0, traceorder="reversed",
             ),
             annotations=annotations,
-            margin=dict(l=20, r=60, t=90, b=130),
+            height=520,
+            margin=dict(l=20, r=70, t=90, b=120),
             hovermode="y unified",
         )
         return fig
