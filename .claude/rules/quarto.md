@@ -5,7 +5,8 @@
 ```bash
 python src/build_dashboard.py   # 1. Generate chart HTML → dashboard/data/*.html
 quarto render dashboard/        # 2. Render site → docs/
-quarto preview dashboard/       # 3. Local preview at http://localhost:7xxx/
+# 3. Verify desktop + mobile layout before pushing:
+/preview-dashboard --section "#section-id"
 git add docs/ && git commit && git push   # 4. Deploy to GitHub Pages
 ```
 
