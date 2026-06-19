@@ -276,19 +276,22 @@ class IndiaSurgeStory(BaseStory):
                 )
             )
 
-            # Direct label at end of line
+            # Label pinned to right edge of chart in paper coords — doesn't expand x-axis
             fig.add_annotation(
-                x=series.index[-1],
+                x=1.0,
+                xref="paper",
+                xanchor="left",
+                xshift=6,
                 y=float(series.values[-1]),
+                yref="y",
                 text=_short_name(country),
                 showarrow=False,
-                xanchor="left",
-                xshift=8,
                 font=dict(size=11, color=color),
             )
 
         # AEWV reform vertical line
         y_max = float(shares.max().max())
+        x_end = shares.index[-1] + pd.DateOffset(months=3)
         fig.update_layout(
             shapes=[
                 dict(
@@ -305,8 +308,8 @@ class IndiaSurgeStory(BaseStory):
                     text="AEWV reforms",
                     showarrow=False,
                     font=dict(size=11, color="#555"),
-                    xanchor="left",
-                    xshift=6,
+                    xanchor="right",
+                    xshift=-6,
                 ),
             ),
         )
@@ -321,14 +324,20 @@ class IndiaSurgeStory(BaseStory):
                 x=0.0,
                 font_size=14,
             ),
-            xaxis=dict(tickangle=0, showgrid=False, tickformat="%Y"),
+            xaxis=dict(
+                tickangle=0,
+                showgrid=False,
+                tickformat="%Y",
+                range=[shares.index[0], x_end],
+            ),
             yaxis=dict(
                 gridcolor="#EEEEEE",
                 ticksuffix="%",
                 rangemode="tozero",
+                automargin=True,
             ),
             showlegend=False,
-            margin=dict(l=20, r=70, t=90, b=60),
+            margin=dict(l=0, r=90, t=90, b=60),
             hovermode="x unified",
         )
         return fig
