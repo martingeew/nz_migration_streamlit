@@ -59,6 +59,14 @@ def _norm_ta(name: str) -> str:
     return s.strip()
 
 
+def _shorten_ta_name(name: str) -> str:
+    """Strip common TA suffixes to reduce label width on mobile."""
+    for suffix in (" District", " City", " Region"):
+        if name.endswith(suffix):
+            return name[: -len(suffix)]
+    return name
+
+
 # ── Story class ────────────────────────────────────────────────────────────────
 
 
@@ -292,11 +300,13 @@ class RegionalMapStory(BaseStory):
             .sort_values("value_per1k", ascending=True)
         )
         abs_labels = [f"+{v:,.0f}" if v >= 0 else f"{v:,.0f}" for v in top10["net"]]
+        short_names = [_shorten_ta_name(n) for n in top10["ta_name"]]
+        x_max = top10["value_per1k"].max()
 
         fig = go.Figure(
             go.Bar(
                 x=top10["value_per1k"],
-                y=top10["ta_name"],
+                y=short_names,
                 orientation="h",
                 marker_color="#045275",
                 text=abs_labels,
@@ -320,9 +330,10 @@ class RegionalMapStory(BaseStory):
                 gridcolor="#EEEEEE",
                 tickformat=".0f",
                 title=None,
+                range=[0, x_max * 1.35],
             ),
             yaxis=dict(title=None, tickfont=dict(size=11), automargin=True),
-            margin=dict(l=5, r=80, t=90, b=40),
+            margin=dict(l=5, r=20, t=90, b=40),
             showlegend=False,
             height=450,
         )
@@ -332,6 +343,7 @@ class RegionalMapStory(BaseStory):
         """Bar chart: all Auckland local board areas by per-capita net international migration."""
         all_albs = alb_df.sort_values("value_per1k", ascending=True)
         abs_labels = [f"+{v:,.0f}" for v in all_albs["net"]]
+        x_max = all_albs["value_per1k"].max()
 
         fig = go.Figure(
             go.Bar(
@@ -360,9 +372,10 @@ class RegionalMapStory(BaseStory):
                 gridcolor="#EEEEEE",
                 tickformat=".0f",
                 title=None,
+                range=[0, x_max * 1.35],
             ),
-            yaxis=dict(title=None, tickfont=dict(size=11), automargin=True),
-            margin=dict(l=5, r=80, t=90, b=40),
+            yaxis=dict(title=None, tickfont=dict(size=10), automargin=True),
+            margin=dict(l=5, r=20, t=90, b=40),
             showlegend=False,
             height=700,
         )
