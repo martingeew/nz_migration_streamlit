@@ -365,7 +365,7 @@ class IndiaSurgeStory(BaseStory):
         return fig
 
     def _build_skill_shift(self, df_skills: pd.DataFrame) -> go.Figure:
-        """100% stacked bar: India approved work visa skill mix by financial year."""
+        """100% horizontal stacked bar: India approved work visa skill mix by financial year."""
         india = df_skills[
             (df_skills["Nationality"] == "India")
             & (df_skills["Decision Type"] == "Approved")
@@ -379,8 +379,6 @@ class IndiaSurgeStory(BaseStory):
         )
         # Shorten labels "2015/16" → "15/16" for mobile readability
         pivot.index = [fy[2:] for fy in pivot.index]
-        # Show every other year to prevent crowding at narrow widths
-        sparse_ticks = [pivot.index[i] for i in range(0, len(pivot.index), 2)]
 
         fig = go.Figure()
         for skill in _SKILL_ORDER:
@@ -390,10 +388,11 @@ class IndiaSurgeStory(BaseStory):
             label = f"Level {n} (highest)" if n == "1" else f"Level {n} (lowest)" if n == "5" else f"Level {n}"
             fig.add_trace(go.Bar(
                 name=label,
-                x=pivot.index,
-                y=pivot[skill],
+                y=pivot.index,
+                x=pivot[skill],
+                orientation="h",
                 marker_color=_SKILL_COLORS[skill],
-                hovertemplate=f"<b>{skill}</b><br>%{{x}}: %{{y:,}} approved<extra></extra>",
+                hovertemplate=f"<b>{skill}</b><br>%{{y}}: %{{x:,}} approved<extra></extra>",
             ))
 
         fig.update_layout(
@@ -408,14 +407,15 @@ class IndiaSurgeStory(BaseStory):
                 x=0.0,
                 font_size=14,
             ),
-            xaxis=dict(tickangle=0, showgrid=False, tickvals=sparse_ticks),
-            yaxis=dict(gridcolor="#EEEEEE", tickformat=".0%"),
+            xaxis=dict(tickformat=".0%", showgrid=False),
+            yaxis=dict(gridcolor="#EEEEEE"),
             legend=dict(
-                orientation="h", yanchor="top", y=-0.15,
+                orientation="h", yanchor="top", y=-0.10,
                 xanchor="left", x=0, traceorder="reversed",
             ),
-            margin=dict(l=20, r=20, t=90, b=150),
-            hovermode="x unified",
+            height=480,
+            margin=dict(l=20, r=20, t=90, b=120),
+            hovermode="y unified",
         )
         return fig
 
