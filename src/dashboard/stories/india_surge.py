@@ -36,7 +36,7 @@ _SKILL_COLORS: dict[str, str] = {
     "Skill level 5": "#C0392B",
 }
 _SKILL_ORDER = ["Skill level 5", "Skill level 4", "Skill level 3", "Skill level 2", "Skill level 1"]
-_SKILL_DATA_PATH = Path(__file__).parents[3] / "data" / "raw" / "mbie_w3_work_occupations_nationality_skill_level.csv"
+_SKILL_DATA_PATH = Path(__file__).parents[3] / "data" / "raw" / "mbie_w3_work_occupations_nationality_skill_level_may_years.csv"
 
 # ── Country colour map ─────────────────────────────────────────────────────────
 # Consistent with streamlit_app_plotly.py colour conventions
@@ -117,9 +117,10 @@ class IndiaSurgeStory(BaseStory):
                 "non-NZ-citizen arrivals has roughly tripled since 2015. The trend "
                 "pre-dates Peters' speech and is strongly supported by monthly data. "
                 "India's ANZSCO Level 4–5 (lower-skill) work visa share rose from "
-                "~22% in 2015/16 to ~56% in 2023/24, with a structural break at the "
-                "2022 AEWV launch. However, China (66%) and Vietnam (66%) have higher "
-                "low-skill shares than India — the pattern is not India-specific."
+                "~15% in the year ended May 2017 to ~36% in the year ended May 2026, "
+                "with a structural break at the 2022 AEWV launch. However, Vietnam "
+                "(49%) and Fiji (48%) both have higher lower-skill shares — the pattern "
+                "is not India-specific. China (11%) has a strongly high-skill profile."
             ),
             caveats=[
                 (
@@ -365,20 +366,18 @@ class IndiaSurgeStory(BaseStory):
         return fig
 
     def _build_skill_shift(self, df_skills: pd.DataFrame) -> go.Figure:
-        """100% horizontal stacked bar: India approved work visa skill mix by financial year."""
+        """100% horizontal stacked bar: India approved work visa skill mix by year ended May."""
         india = df_skills[
             (df_skills["Nationality"] == "India")
             & (df_skills["Decision Type"] == "Approved")
             & (df_skills["Occupation Skill Level"] != "(not recorded)")
-            & (~df_skills["Financial Year"].str.startswith("2025"))
+            & (df_skills["Year Ended May"] != "2016 PARTIAL (Jul-May)")
         ]
         pivot = (
-            india.groupby(["Financial Year", "Occupation Skill Level"])["Count"]
+            india.groupby(["Year Ended May", "Occupation Skill Level"])["Count"]
             .sum()
             .unstack(fill_value=0)
         )
-        # Shorten labels "2015/16" → "15/16" for mobile readability
-        pivot.index = [fy[2:] for fy in pivot.index]
 
         fig = go.Figure()
         for skill in _SKILL_ORDER:
@@ -402,7 +401,7 @@ class IndiaSurgeStory(BaseStory):
             title=dict(
                 text=(
                     "India work visa skill mix — shifting lower since AEWV<br>"
-                    "<sub>Approved work visas by ANZSCO skill level — excludes ~40% with no recorded occupation</sub>"
+                    "<sub>Approved work visas by ANZSCO skill level, year ended May — excludes ~40% with no recorded occupation</sub>"
                 ),
                 x=0.0,
                 font_size=14,
@@ -420,9 +419,9 @@ class IndiaSurgeStory(BaseStory):
         return fig
 
     def _build_country_skill(self, df_skills: pd.DataFrame) -> go.Figure:
-        """Horizontal 100% stacked bar: work visa skill mix, top 10 countries, 2023/24."""
+        """Horizontal 100% stacked bar: work visa skill mix, top 10 countries, year ended May 2026."""
         recent = df_skills[
-            (df_skills["Financial Year"] == "2023/24")
+            (df_skills["Year Ended May"] == "2026")
             & (df_skills["Decision Type"] == "Approved")
             & (df_skills["Occupation Skill Level"] != "(not recorded)")
         ]
@@ -476,7 +475,7 @@ class IndiaSurgeStory(BaseStory):
             barnorm="fraction",
             title=dict(
                 text=(
-                    "Work visa skill mix — India vs top 10 source countries (2023/24)<br>"
+                    "Work visa skill mix — India vs top 10 source countries (year ended May 2026)<br>"
                     "<sub>% Level 4–5 (lower-skill) shown at right — ANZSCO levels, approved work visas</sub>"
                 ),
                 x=0.0,

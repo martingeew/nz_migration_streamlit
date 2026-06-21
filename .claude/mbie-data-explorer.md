@@ -19,7 +19,8 @@ URL: https://mbienz.shinyapps.io/migration_data_explorer/
 | LP1 | Limited Purpose Decisions | Limited purpose visa decisions |
 
 Datasets downloaded to `data/raw/`:
-- `mbie_w3_work_occupations_nationality_skill_level.csv` — W3, Nationality × Occupation Skill Level × Financial Year
+- `mbie_w3_work_occupations_nationality_skill_level_may_years.csv` — W3, Nationality × Occupation Skill Level × "12-mths to Date (Year Ended May)" — 2017–2026; used in dashboard skill charts
+- `mbie_w3_work_occupations_nationality_skill_level.csv` — W3, same dimensions but Financial Year aggregation (superseded by may_years file)
 - `mbie_s1_student_decisions_nationality_institution.csv` — S1, Nationality × Institution Type × Financial Year
 
 ---
