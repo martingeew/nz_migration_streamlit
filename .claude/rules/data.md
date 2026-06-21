@@ -61,6 +61,15 @@ Dataset: "Estimated migrant arrivals by citizenship, visa type and CLPR, 12/16-m
 Interim files: `df_{slug}_{YYYYMMDD}.pkl` and `.csv` where date comes from the raw filename.
 `DataLoader` picks the lexicographically latest file matching each pattern.
 
+## MBIE data
+
+Raw CSVs from the MBIE Migration Data Explorer live in `data/raw/` with prefix `mbie_`:
+- `mbie_w3_work_occupations_nationality_skill_level.csv`
+- `mbie_s1_student_decisions_nationality_institution.csv`
+
+For dataset codes, dimension hierarchy, Application Substream/Criteria values,
+AEWV policy context, and data quirks: see `.claude/mbie-data-explorer.md`.
+
 ## Windows print() encoding
 
 Use **ASCII-only characters** in all `print()` statements in data scripts. Unicode box-drawing (`──`), arrows (`→`), and emoji (`✅`) crash with `UnicodeEncodeError` on Windows cp1252 terminal. Use dashes (`---`), `"to"`, and plain text instead.

@@ -50,3 +50,7 @@ nz_migration_streamlit/
 @.claude/rules/data.md
 @.claude/rules/quarto.md
 @.claude/rules/streamlit.md
+
+## Reference
+
+@.claude/mbie-data-explorer.md
