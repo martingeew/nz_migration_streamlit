@@ -3,8 +3,8 @@ project:
   output-dir: ../docs
 
 website:
-  title: "NZ Migration: Fact or Fiction"
-  description: "Political claims about NZ migration tested against monthly data from Statistics NZ."
+  title: "NZ Migration: What the Data Shows"
+  description: "Monthly migration trends tracked with Statistics NZ data, built by Autonomous Econ."
   repo-url: https://github.com/martingeew/nz_migration_streamlit
   navbar:
     left:

@@ -1,6 +1,6 @@
 ---
-title: "NZ Migration: Fact or Fiction"
-subtitle: "Political claims tested against monthly data from Statistics NZ"
+title: "NZ Migration: What the Data Shows"
+subtitle: "Monthly migration trends tracked with Statistics NZ data — built by [Autonomous Econ](https://autonomousecon.substack.com)"
 ---
 
 ---
