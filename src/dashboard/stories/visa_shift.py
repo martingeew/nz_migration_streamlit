@@ -126,7 +126,7 @@ class VisaShiftStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=f"{title}<br><sub>{subtitle}</sub>",
+                text=title,
                 x=0.0,
                 font_size=14,
             ),
@@ -146,7 +146,7 @@ class VisaShiftStory(BaseStory):
             ),
             shapes=list(BORDER_SHAPES),
             annotations=list(BORDER_ANNOTATIONS),
-            margin=dict(l=20, r=20, t=90, b=150),
+            margin=dict(l=20, r=20, t=60, b=150),
             hovermode="x unified",
         )
         return fig

@@ -246,10 +246,7 @@ class IndiaSurgeStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=(
-                    "Net migration to NZ by source country<br>"
-                    "<sub>Rolling 12-month sum — non-NZ citizens</sub>"
-                ),
+                text="Net migration to NZ by source country",
                 x=0.0,
                 font_size=14,
             ),
@@ -269,7 +266,7 @@ class IndiaSurgeStory(BaseStory):
             showlegend=True,
             shapes=list(BORDER_SHAPES),
             annotations=list(BORDER_ANNOTATIONS),
-            margin=dict(l=20, r=20, t=90, b=150),
+            margin=dict(l=20, r=20, t=60, b=150),
             hovermode="x unified",
         )
         return fig
@@ -340,10 +337,7 @@ class IndiaSurgeStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=(
-                    "Non-NZ arrivals by source country — top 5<br>"
-                    "<sub>Rolling 12-month average — % of total non-NZ arrivals</sub>"
-                ),
+                text="Non-NZ arrivals by source country — top 5",
                 x=0.0,
                 font_size=14,
             ),
@@ -360,7 +354,7 @@ class IndiaSurgeStory(BaseStory):
                 automargin=True,
             ),
             showlegend=False,
-            margin=dict(l=0, r=90, t=90, b=60),
+            margin=dict(l=0, r=90, t=60, b=60),
             hovermode="x unified",
         )
         return fig
@@ -399,10 +393,7 @@ class IndiaSurgeStory(BaseStory):
             barmode="stack",
             barnorm="fraction",
             title=dict(
-                text=(
-                    "India work visa skill mix — shifting lower since AEWV<br>"
-                    "<sub>Approved work visas by ANZSCO skill level, year ended May — excludes ~40% with no recorded occupation</sub>"
-                ),
+                text="India work visas: shifting toward lower-skill roles",
                 x=0.0,
                 font_size=14,
             ),
@@ -413,7 +404,7 @@ class IndiaSurgeStory(BaseStory):
                 xanchor="left", x=0, traceorder="reversed",
             ),
             height=480,
-            margin=dict(l=20, r=20, t=90, b=120),
+            margin=dict(l=20, r=20, t=60, b=120),
             hovermode="y unified",
         )
         return fig
@@ -474,10 +465,7 @@ class IndiaSurgeStory(BaseStory):
             barmode="stack",
             barnorm="fraction",
             title=dict(
-                text=(
-                    "Work visa skill mix — India vs top 10 source countries (year ended May 2026)<br>"
-                    "<sub>% Level 4–5 (lower-skill) shown at right — ANZSCO levels, approved work visas</sub>"
-                ),
+                text="Work visa skill mix by nationality (May 2026)",
                 x=0.0,
                 font_size=14,
             ),
@@ -489,7 +477,7 @@ class IndiaSurgeStory(BaseStory):
             ),
             annotations=annotations,
             height=520,
-            margin=dict(l=20, r=70, t=90, b=120),
+            margin=dict(l=20, r=70, t=60, b=120),
             hovermode="y unified",
         )
         return fig

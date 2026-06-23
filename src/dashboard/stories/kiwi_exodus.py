@@ -207,10 +207,7 @@ class KiwiExodusStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=(
-                    "Net NZ and non-NZ citizen migration<br>"
-                    "<sub>Rolling 12-month sum — negative = more leaving than arriving</sub>"
-                ),
+                text="Net NZ and non-NZ citizen migration",
                 x=0.0,
                 font_size=14,
             ),
@@ -230,7 +227,7 @@ class KiwiExodusStory(BaseStory):
                 xanchor="left",
                 x=0,
             ),
-            margin=dict(l=20, r=20, t=90, b=160),
+            margin=dict(l=20, r=20, t=60, b=160),
             hovermode="x unified",
         )
         return fig
@@ -277,10 +274,7 @@ class KiwiExodusStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=(
-                    "Net migration by age group<br>"
-                    "<sub>Rolling 12-month total — all citizenships combined</sub>"
-                ),
+                text="Net migration by age group",
                 x=0.0,
                 font_size=14,
             ),
@@ -296,7 +290,7 @@ class KiwiExodusStory(BaseStory):
             ),
             shapes=list(BORDER_SHAPES),
             annotations=list(BORDER_ANNOTATIONS),
-            margin=dict(l=20, r=20, t=90, b=140),
+            margin=dict(l=20, r=20, t=60, b=140),
             hovermode="x unified",
         )
         return fig

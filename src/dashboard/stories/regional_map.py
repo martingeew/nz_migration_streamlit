@@ -204,16 +204,13 @@ class RegionalMapStory(BaseStory):
             fig.update_layout(
                 height=900,
                 title=dict(
-                    text=(
-                        "Net migration per 1,000 population by TA<br>"
-                        "<sub>Cumulative change June 2022–June 2025 — GeoJSON pending for map view</sub>"
-                    ),
+                    text="Net migration per 1,000 population by TA",
                     x=0.0,
                     font_size=14,
                 ),
                 xaxis=dict(title=None, showgrid=True, gridcolor="#EEEEEE", tickformat=".1f"),
                 yaxis=dict(title=None, tickfont=dict(size=10)),
-                margin=dict(l=160, r=20, t=90, b=40),
+                margin=dict(l=160, r=20, t=60, b=40),
             )
             return fig
 
@@ -247,15 +244,12 @@ class RegionalMapStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=(
-                    "Net migration per 1,000 population by TA<br>"
-                    "<sub>Cumulative change June 2022–June 2025  |  Teal = net inflow  |  Red = net outflow</sub>"
-                ),
+                text="Net migration per 1,000 population by TA",
                 x=0.0,
                 font_size=14,
             ),
             geo=dict(showframe=False, showcoastlines=False, projection_type="mercator"),
-            margin=dict(l=0, r=0, t=90, b=20),
+            margin=dict(l=0, r=0, t=60, b=20),
             height=650,
         )
         return fig
@@ -318,10 +312,7 @@ class RegionalMapStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=(
-                    "Top 10 TAs by per-capita net migration<br>"
-                    "<sub>Cumulative change June 2022–June 2025  |  Numbers show absolute net count</sub>"
-                ),
+                text="Top 10 TAs by per-capita net migration",
                 x=0.0,
                 font_size=14,
             ),
@@ -333,7 +324,7 @@ class RegionalMapStory(BaseStory):
                 range=[0, x_max * 1.35],
             ),
             yaxis=dict(title=None, tickfont=dict(size=11), automargin=True),
-            margin=dict(l=5, r=20, t=90, b=40),
+            margin=dict(l=5, r=20, t=60, b=40),
             showlegend=False,
             height=450,
         )
@@ -360,10 +351,7 @@ class RegionalMapStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=(
-                    "Auckland boards: net migration per 1,000 population<br>"
-                    "<sub>Cumulative change June 2022–June 2025  |  Numbers show absolute net count</sub>"
-                ),
+                text="Auckland boards: per-capita net migration",
                 x=0.0,
                 font_size=14,
             ),
@@ -375,7 +363,7 @@ class RegionalMapStory(BaseStory):
                 range=[0, x_max * 1.35],
             ),
             yaxis=dict(title=None, tickfont=dict(size=10), automargin=True),
-            margin=dict(l=5, r=20, t=90, b=40),
+            margin=dict(l=5, r=20, t=60, b=40),
             showlegend=False,
             height=700,
         )
