@@ -1,6 +1,6 @@
 # NZ Migration — Fact-Check Report
 
-_Generated 2026-06-21_
+_Generated 2026-06-23_
 
 ---
 
