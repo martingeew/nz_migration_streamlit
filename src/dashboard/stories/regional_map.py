@@ -5,9 +5,9 @@ NZ choropleth showing net international migration by Territorial Authority,
 scaled by TA population (net per 1,000 residents).
 
 Charts:
-    map          — Choropleth: total net international migration per 1k population by TA
-    top_inflow   — Bar chart: 5 TAs with highest per-capita net inflow
-    top_outflow  — Bar chart: 5 TAs with lowest per-capita net migration (outflow or near-zero)
+    map              — Choropleth: total net international migration per 1k population by TA
+    top_inflow       — Bar chart: 10 TAs with highest per-capita net inflow
+    auckland_map     — Choropleth: Auckland local board areas, net per 1k population
 
 Data: data/raw/subnational_pop_2018_2025.csv
     Stats NZ subnational population components (year ended 30 June 2018-2025)
@@ -32,6 +32,7 @@ from src.dashboard.export import save_all_charts
 # ── Constants ──────────────────────────────────────────────────────────────────
 
 _GEOJSON_PATH = Path(__file__).parent.parent.parent.parent / "dashboard" / "assets" / "nz_ta.geojson"
+_GEOJSON_ALB_PATH = Path(__file__).parent.parent.parent.parent / "dashboard" / "assets" / "auckland_albs.geojson"
 _RAW_DIR = Path(__file__).parent.parent.parent.parent / "data" / "raw"
 
 _SUBNATIONAL_CSV = "subnational_pop_2018_2025.csv"
@@ -182,6 +183,13 @@ class RegionalMapStory(BaseStory):
         with open(_GEOJSON_PATH, encoding="utf-8") as f:
             return json.load(f)
 
+    @staticmethod
+    def _load_alb_geojson() -> Optional[dict]:
+        if not _GEOJSON_ALB_PATH.exists():
+            return None
+        with open(_GEOJSON_ALB_PATH, encoding="utf-8") as f:
+            return json.load(f)
+
     # ── Figure builders ────────────────────────────────────────────────────────
 
     def _build_map(self, ta_df: pd.DataFrame) -> go.Figure:
@@ -284,7 +292,11 @@ class RegionalMapStory(BaseStory):
         merged["display_name"] = merged["area_name"].str.replace(
             r"\s+local board area$", "", regex=True, case=False
         )
-        return merged[["display_name", "net", "population", "value_per1k"]]
+        # ASCII key matches alb_name_ascii in the GeoJSON (featureidkey)
+        merged["alb_name_ascii"] = merged["display_name"].apply(
+            lambda s: unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+        )
+        return merged[["display_name", "alb_name_ascii", "net", "population", "value_per1k"]]
 
     def _build_top_inflow(self, ta_df: pd.DataFrame) -> go.Figure:
         """Bar chart: top 10 TAs by per-capita net international migration inflow."""
@@ -369,6 +381,59 @@ class RegionalMapStory(BaseStory):
         )
         return fig
 
+    def _build_alb_map(self, alb_df: pd.DataFrame) -> go.Figure:
+        """Choropleth: Auckland local board areas — net international migration per 1k population."""
+        geojson = self._load_alb_geojson()
+        fig = go.Figure()
+
+        if geojson is None:
+            print("  [regional-map] ALB GeoJSON not found — run scripts/process_alb_geojson.py first.")
+            return fig
+
+        fig.add_trace(
+            go.Choropleth(
+                geojson=geojson,
+                featureidkey="properties.alb_name_ascii",
+                locations=alb_df["alb_name_ascii"],
+                z=alb_df["value_per1k"],
+                customdata=alb_df[["net", "display_name"]],
+                colorscale=_DIVERGING_SCALE,
+                zmid=0,
+                colorbar=dict(
+                    title="Net<br>per 1k<br>pop",
+                    tickformat=".1f",
+                    nticks=8,
+                    len=0.6,
+                ),
+                hovertemplate=(
+                    "<b>%{customdata[1]}</b><br>"
+                    "Net / 1k pop: %{z:.1f}<br>"
+                    "Net absolute: %{customdata[0]:,.0f}"
+                    "<extra></extra>"
+                ),
+                marker_line_color="#BBBBBB",
+                marker_line_width=0.5,
+            )
+        )
+
+        fig.update_geos(
+            visible=False,
+            lataxis_range=[-37.6, -36.0],
+            lonaxis_range=[174.0, 175.5],
+        )
+        fig.update_layout(
+            template=PLOTLY_TEMPLATE,
+            title=dict(
+                text="Auckland local boards: net per 1k pop",
+                x=0.0,
+                font_size=14,
+            ),
+            geo=dict(showframe=False, showcoastlines=False, projection_type="mercator"),
+            margin=dict(l=0, r=0, t=60, b=0),
+            height=500,
+        )
+        return fig
+
     # ── Public interface ───────────────────────────────────────────────────────
 
     def build_figures(self) -> Dict[str, go.Figure]:
@@ -378,7 +443,7 @@ class RegionalMapStory(BaseStory):
         return {
             "map": self._build_map(ta_df),
             "top_inflow": self._build_top_inflow(ta_df),
-            "auckland_albs": self._build_auckland_albs(alb_df),
+            "auckland_map": self._build_alb_map(alb_df),
         }
 
     def run(self) -> None:

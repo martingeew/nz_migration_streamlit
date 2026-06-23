@@ -89,7 +89,7 @@ International migration is concentrated in a handful of Territorial Authorities.
 
 <p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries). Net international migration = sum of annual net flows, years ended June 2023, 2024 and 2025. Rate per 1,000 = cumulative net ÷ 2025 population × 1,000.</p>
 
-The top 5 TAs by per-capita inflow, and the top 5 Auckland local board areas by per-capita net international migration.
+The top 5 TAs by per-capita inflow, and a closer look at the 21 Auckland local board areas.
 
 ```{=html}
 {{< include data/where-they-land_top_inflow.html >}}
@@ -98,10 +98,10 @@ The top 5 TAs by per-capita inflow, and the top 5 Auckland local board areas by 
 <p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries).</p>
 
 ```{=html}
-{{< include data/where-they-land_auckland_albs.html >}}
+{{< include data/where-they-land_auckland_map.html >}}
 ```
 
-<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries).</p>
+<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries). Boundaries: Stats NZ Territorial Authority Local Board 2025 (Clipped).</p>
 
 <p class="data-source">
 Built by <a href="https://autonomousecon.substack.com">Autonomous Econ</a> |
