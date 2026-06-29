@@ -5,18 +5,21 @@ Shows how the composition of arrivals by visa type has changed over time,
 and provides CLPR breakdowns for India and China.
 
 Charts:
-    overall    — Stacked area: monthly arrivals by visa type (all citizenships)
-    india_clpr — Stacked area: monthly arrivals where CLPR = India, by visa type
-    china_clpr — Stacked area: monthly arrivals where CLPR = China, by visa type
+    w1_decisions — Line: monthly approved work visa decisions by substream (MBIE W1)
+    overall      — Stacked area: monthly arrivals by visa type (all citizenships)
+    india_clpr   — Stacked area: monthly arrivals where CLPR = India, by visa type
+    china_clpr   — Stacked area: monthly arrivals where CLPR = China, by visa type
 
 Data:
-    df_direction_visa_*.pkl    → Columns: Month, Count, Direction, Visa
-    df_clpr_india_visa_*.pkl   → Columns: Month, Count, Direction, CLPR, Visa, Citizenship
-    df_clpr_china_visa_*.pkl   → Columns: Month, Count, Direction, CLPR, Visa, Citizenship
+    mbie_w1_work_decisions_monthly.csv  → Columns: Date, Decision Type, Application Substream, Count
+    df_direction_visa_*.pkl             → Columns: Month, Count, Direction, Visa
+    df_clpr_india_visa_*.pkl            → Columns: Month, Count, Direction, CLPR, Visa, Citizenship
+    df_clpr_china_visa_*.pkl            → Columns: Month, Count, Direction, CLPR, Visa, Citizenship
 """
 
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Dict, TYPE_CHECKING
 
 import pandas as pd
@@ -27,6 +30,32 @@ from src.dashboard.export import save_all_charts
 
 if TYPE_CHECKING:
     from src.dashboard.data_loader import DataLoader
+
+_W1_DATA_PATH = Path(__file__).parents[3] / "data" / "raw" / "mbie_w1_work_decisions_monthly.csv"
+
+# ── W1 substream colour map ───────────────────────────────────────────────────
+
+_W1_SUBSTREAM_COLORS: dict[str, str] = {
+    "Skilled Work": "#2980B9",
+    "Working Holiday": "#27AE60",
+    "Relationship": "#8E44AD",
+    "Work -RSE": "#F39C12",
+    "Job Search": "#E74C3C",
+    "Other": "#95A5A6",
+}
+
+_W1_SUBSTREAM_LABELS: dict[str, str] = {
+    "Skilled Work": "Skilled / AEWV",
+    "Work -RSE": "RSE",
+    "Job Search": "Post-study open",
+}
+
+# Substreams rolled into "Other" in the W1 chart
+_W1_OTHER_SUBSTREAMS = {
+    "Work to Residence", "Humanitarian", "Approved In Principle",
+    "Section 61", "LTBV/Investor", "Business Investor", "Crew", "IPT Order",
+    "Skilled Migrant",
+}
 
 # ── Visa colour map ────────────────────────────────────────────────────────────
 # Consistent with streamlit_app_plotly.py visa_color_map
@@ -153,6 +182,90 @@ class VisaShiftStory(BaseStory):
 
     # ── Figure builders ────────────────────────────────────────────────────────
 
+    def _build_w1_decisions(self, df_w1: pd.DataFrame) -> go.Figure:
+        """Line chart: 3-month rolling approved work visa decisions by substream."""
+        approved = df_w1[df_w1["Decision Type"] == "Approved"].copy()
+        approved["Date"] = pd.to_datetime(approved["Date"])
+        approved["Category"] = approved["Application Substream"].apply(
+            lambda s: "Other" if s in _W1_OTHER_SUBSTREAMS else s
+        )
+
+        pivot = (
+            approved.groupby(["Date", "Category"])["Count"]
+            .sum()
+            .unstack("Category")
+            .sort_index()
+            .rolling(12, min_periods=12)
+            .sum()
+            .dropna(how="all")
+        )
+
+        category_order = ["Skilled Work", "Working Holiday", "Relationship", "Work -RSE", "Job Search", "Other"]
+        active = [c for c in category_order if c in pivot.columns]
+
+        fig = go.Figure()
+        for cat in active:
+            series = pivot[cat].dropna()
+            color = _W1_SUBSTREAM_COLORS.get(cat, "#AAAAAA")
+            label = _W1_SUBSTREAM_LABELS.get(cat, cat)
+            fig.add_trace(go.Scatter(
+                x=series.index,
+                y=series.values,
+                mode="lines",
+                name=label,
+                line=dict(color=color, width=2),
+                hovertemplate=f"<b>{label}</b><br>%{{x|%b %Y}}: %{{y:,.0f}}<extra></extra>",
+            ))
+            # Direct label pinned to right edge
+            fig.add_annotation(
+                x=1.0, xref="paper", xanchor="left", xshift=6,
+                y=float(series.values[-1]), yref="y",
+                text=label, showarrow=False,
+                font=dict(size=10, color=color),
+            )
+
+        # Policy change markers
+        y_max = float(pivot[active].max().max())
+        x_end = pivot.index[-1] + pd.DateOffset(months=2)
+        fig.update_layout(
+            template=PLOTLY_TEMPLATE,
+            title=dict(text="Approved work visa decisions", x=0.0, font_size=14),
+            xaxis=dict(
+                tickangle=0, showgrid=False, tickformat="%Y",
+                rangeslider_visible=False,
+                range=[pivot.index[0], x_end],
+            ),
+            yaxis=dict(gridcolor="#EEEEEE", tickformat=",", rangemode="tozero"),
+            showlegend=False,
+            shapes=[
+                dict(
+                    type="line", x0="2022-07-01", x1="2022-07-01", y0=0, y1=1,
+                    yref="paper", line=dict(color="#999999", width=1.5, dash="dot"),
+                ),
+                dict(
+                    type="line", x0="2024-04-01", x1="2024-04-01", y0=0, y1=1,
+                    yref="paper", line=dict(color="#999999", width=1.5, dash="dot"),
+                ),
+            ],
+            annotations=list(fig.layout.annotations) + [
+                dict(
+                    x="2022-07-01", y=0.97, yref="paper",
+                    text="AEWV launch", showarrow=False,
+                    xanchor="left", xshift=4, yanchor="top",
+                    font=dict(size=9, color="#888888"),
+                ),
+                dict(
+                    x="2024-04-01", y=0.80, yref="paper",
+                    text="AEWV reforms", showarrow=False,
+                    xanchor="left", xshift=4, yanchor="top",
+                    font=dict(size=9, color="#888888"),
+                ),
+            ],
+            margin=dict(l=20, r=100, t=60, b=60),
+            hovermode="x unified",
+        )
+        return fig
+
     def _build_overall(self, df_visa: pd.DataFrame) -> go.Figure:
         """Stacked area: all arrivals by visa type."""
         arrivals = df_visa[
@@ -206,9 +319,13 @@ class VisaShiftStory(BaseStory):
 
     def build_figures(self) -> Dict[str, go.Figure]:
         df_visa = self.loader.load_direction_visa()
-        figs: Dict[str, go.Figure] = {
-            "overall": self._build_overall(df_visa),
-        }
+        figs: Dict[str, go.Figure] = {}
+        try:
+            df_w1 = pd.read_csv(_W1_DATA_PATH)
+            figs["w1_decisions"] = self._build_w1_decisions(df_w1)
+        except FileNotFoundError:
+            print("  [visa-shift] W1 data not found — skipping w1_decisions chart.")
+        figs["overall"] = self._build_overall(df_visa)
         try:
             df_india = self.loader.load_clpr_india_visa()
             figs["india_clpr"] = self._build_india_clpr(df_india)

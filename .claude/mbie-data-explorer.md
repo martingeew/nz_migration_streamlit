@@ -111,6 +111,21 @@ what is the skill composition of approved roles.
 
 ---
 
+## Application Substream — Application Criteria breakdown (verified)
+
+### Job Search substream (W1)
+Contains three Application Criteria:
+
+| Application Criteria | Approved decisions (total series) | Share |
+|---|---|---|
+| Post-study — Open | 156,519 | 99.3% |
+| Silver Fern Job Search | 1,059 | 0.7% |
+| Job Search | 3 | ~0% |
+
+The substream is effectively the **Post-study Open work visa** — granted to international students who completed study in NZ and want to stay and look for work. Label as "Post-study open" not "Job Search". Verified by filtering W1 to Application Substream = Job Search and downloading Application Criteria breakdown.
+
+---
+
 ## Data quirks
 
 - **"(not recorded)" in Occupation Skill Level**: ~40% of W3 approvals have no

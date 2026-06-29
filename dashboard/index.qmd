@@ -59,7 +59,15 @@ India's lower-skill share (36%) is above countries like the UK (16%) and China (
 
 ## Work visas, not students, powered the surge
 
-Student and work visa arrivals surged after the border reopened in 2022. The second chart shows the same breakdown for arrivals whose last permanent residence was India.
+Approved work visa decisions peaked sharply in late 2022 as the AEWV replaced Essential Skills. Skilled Work approvals have since moderated following the April 2024 reforms, while Working Holiday and Relationship visas have recovered from their COVID-era lows.
+
+```{=html}
+{{< include data/visa-shift_w1_decisions.html >}}
+```
+
+<p class="data-source">Source: MBIE Migration Data Explorer — W1 Work Decisions, approved decisions by application substream. Rolling 12-month sum.</p>
+
+The arrivals chart below shows the same surge in visa mix terms — what proportion of people crossing the border held each visa type.
 
 ```{=html}
 {{< include data/visa-shift_overall.html >}}
