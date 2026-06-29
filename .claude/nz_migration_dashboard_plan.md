@@ -242,43 +242,6 @@ QES industry breakdown in Infoshare is straightforward. Matching QES ANZSIC code
 
 ---
 
-## Issue 7 — Student Visa Backdoor to Residency
-
-**Priority score: 11/15**
-Data ease: 4 | Update frequency: 3 | Journalism impact: 4
-
-### The Claim
-International students are using study visas as a cheap pathway to permanent residency, rather than filling genuine skill gaps. Political source: Labour's Andrew Little, 2017 — "a third of international students studying at private training establishments say they plan to work or seek residency here after study." The 2026 SMC reforms explicitly changed points settings "to attract more international students" — which NZ First frames as institutionalising the backdoor. https://www.nzherald.co.nz/nz/politics/immigration-minister-erica-stanford-unveils-two-new-pathways-to-residency-for-skilled-migrants-including-tradies/
-
-### Data Sources
-
-| Source | URL | Format | Cadence |
-|--------|-----|--------|---------|
-| INZ — Student Visa Application Decisions | https://www.immigration.govt.nz/study/for-education-providers/data-and-processing-times-for-international-student-visas/offshore-student-visa-application-decision-data/ | Excel | Annual |
-| INZ — Residence approvals by previous visa type | https://www.immigration.govt.nz/about-us/research-and-statistics/statistics/ | Excel | Annual |
-| INZ — Work Visa Approvals (post-study) | https://www.immigration.govt.nz/about-us/research-and-statistics/research-reports/work-visa-data | Excel | Annual |
-
-### Variables to Extract
-- Student visa approvals by institution type (university vs. private training establishment) and nationality
-- Residence approvals: filter by `previous visa type held = student visa`
-- Calculate: % of SMC and AEWV-to-residence grants that previously held a student visa
-- Time series: this ratio over 5 fiscal years
-
-### Key Visualisations
-1. Sankey diagram: student visa → post-study work visa → residence (show the pipeline volumes)
-2. Stacked bar: residence approvals by previous visa type — how large is the student-to-resident stream vs. direct skilled migrant stream?
-3. Institution type breakdown: university students vs. PTE students in the pipeline
-
-### Stress-Test Logic
-- If a high share of residency grants flow from ex-student-visa holders in Level 4–5 ANZSCO roles, the backdoor claim is supported
-- Compare pre-2017 (pre-reforms) vs. post-2022 (AEWV era) to see if the pipeline expanded or contracted
-- The 2026 SMC reform (points for NZ qualifications) is a policy admission that the pipeline is real — use the INZ announcement text as context
-
-### Notes
-The "previous visa type" variable is the critical one — confirm it exists in the residence approvals dataset before committing to this panel. May require OIA if not in public tables.
-
----
-
 ## Issue 8 — Sector Dependency / Migration as Substitute for Training
 
 **Priority score: 10/15**
@@ -476,7 +439,7 @@ Phase 1 (Weeks 1–2): Core Stats NZ panels
   → Build reusable Stats NZ Infoshare downloader module
 
 Phase 2 (Weeks 3–4): INZ data panels
-  → Issues 3, 7 (work visa + student visa Excel parsing)
+  → Issue 3 (work visa Excel parsing)
   → Build reusable INZ Excel parser with ANZSCO lookup table
 
 Phase 3 (Weeks 5–6): MBIE/enforcement panels
@@ -519,7 +482,6 @@ Phase 6 (Weeks 11–12): Dashboard integration + automation
 |--------------|----------------------|---------|
 | MSD | Sponsorship debt recovery amounts, Parent Category, annual 2018–2025 | High (Issue 10) |
 | NZ Police | 501 deportee reoffending breakdown: charge type, year, gang affiliation flag | High (Issue 9) |
-| INZ | Previous visa type held at time of SMC/residence approval, by nationality, 2018–2025 | Medium (Issue 7) |
 | MSD | NZ Super recipients who arrived in NZ after age 55, by year, 2015–2025 | Medium (Issue 10) |
 
 ---
