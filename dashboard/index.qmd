@@ -43,7 +43,7 @@ Two trends stand out since the border reopened in 2022. India's share of non-NZ 
 
 ## Work visas, not students, powered the surge
 
-The arrivals chart shows the surge in visa mix terms — what proportion of people crossing the border held each visa type.
+Work visa arrivals overtook every other category after the border reopened in 2022 — including NZ and Australian citizens — and remained the single largest arrival group through 2023. Student arrivals surged simultaneously, reaching levels well above the pre-COVID peak before moderating in 2024–25.
 
 ```{=html}
 {{< include data/visa-shift_overall.html >}}
