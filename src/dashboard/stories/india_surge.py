@@ -385,7 +385,8 @@ class IndiaSurgeStory(BaseStory):
                 x=pivot[skill],
                 orientation="h",
                 marker_color=_SKILL_COLORS[skill],
-                hovertemplate=f"<b>{skill}</b><br>%{{y}}: %{{x:,}} approved<extra></extra>",
+                customdata=pivot[skill].values,
+                hovertemplate=f"<b>{skill}</b><br>%{{y}}: %{{x:.1%}} (%{{customdata:,}})<extra></extra>",
             ))
 
         fig.update_layout(
@@ -443,7 +444,8 @@ class IndiaSurgeStory(BaseStory):
                 x=pivot[skill],
                 orientation="h",
                 marker_color=_SKILL_COLORS[skill],
-                hovertemplate=f"<b>{skill}</b><br>%{{y}}: %{{x:,}} approved<extra></extra>",
+                customdata=pivot[skill].values,
+                hovertemplate=f"<b>{skill}</b><br>%{{y}}: %{{x:.1%}} (%{{customdata:,}})<extra></extra>",
             ))
 
         # Annotate lo-skill % on the right for each country
