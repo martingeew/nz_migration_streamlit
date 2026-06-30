@@ -59,11 +59,15 @@ Approved work visa decisions peaked sharply in late 2022 as the Accredited Emplo
 
 <p class="data-source">Source: MBIE Migration Data Explorer</p>
 
+For arrivals whose last permanent residence was India, Work visas account for the overwhelming majority of post-2022 volumes — Residence and Student visas together remain a relatively small share.
+
 ```{=html}
 {{< include data/visa-shift_india_clpr.html >}}
 ```
 
 <p class="data-source">Source: Statistics NZ ITM553001</p>
+
+China arrivals tell a different story: Student visas make up a consistently larger share than for India, and the overall volume has not recovered to its pre-COVID peak — unlike India, where arrivals surpassed previous highs by 2023.
 
 ```{=html}
 {{< include data/visa-shift_china_clpr.html >}}
