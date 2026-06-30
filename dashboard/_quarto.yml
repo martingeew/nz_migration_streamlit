@@ -7,9 +7,6 @@ website:
   description: "Monthly migration trends tracked with Statistics NZ data, built by Autonomous Econ."
   repo-url: https://github.com/martingeew/nz_migration_streamlit
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
     right:
       - text: "Source code"
         href: https://github.com/martingeew/nz_migration_streamlit
