@@ -309,29 +309,10 @@ class IndiaSurgeStory(BaseStory):
                 font=dict(size=11, color=color),
             )
 
-        # AEWV reform vertical line
-        y_max = float(shares.max().max())
         x_end = shares.index[-1] + pd.DateOffset(months=3)
         fig.update_layout(
-            shapes=[
-                dict(
-                    type="line",
-                    x0="2024-04-01", x1="2024-04-01",
-                    y0=0, y1=y_max,
-                    line=dict(color="#888", width=1.5, dash="dot"),
-                )
-            ],
-            annotations=fig.layout.annotations + (
-                dict(
-                    x="2024-04-01",
-                    y=y_max * 0.95,
-                    text="AEWV reforms",
-                    showarrow=False,
-                    font=dict(size=11, color="#555"),
-                    xanchor="right",
-                    xshift=-6,
-                ),
-            ),
+            shapes=list(BORDER_SHAPES),
+            annotations=fig.layout.annotations + tuple(BORDER_ANNOTATIONS),
         )
 
         fig.update_layout(

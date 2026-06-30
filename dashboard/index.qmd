@@ -33,7 +33,7 @@ The composition of net migration has shifted markedly since 2022. India and Chin
 
 <p class="data-source">Source: Statistics NZ ITM552301</p>
 
-The share chart shows each country's arrivals as a proportion of all non-NZ arrivals on a 12-month rolling average.
+Two trends stand out since the border reopened in 2022. India's share of non-NZ arrivals climbed sharply, overtaking China to become the single largest source country — at times accounting for more than one in four non-NZ arrivals. China's share, which led before COVID, has not recovered to the same extent and has trended downward since 2023.
 
 ```{=html}
 {{< include data/india-surge_share.html >}}
