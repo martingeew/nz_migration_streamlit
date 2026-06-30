@@ -5,7 +5,7 @@ subtitle: "Migration trends tracked with Statistics NZ and MBIE data — built b
 
 ## Kiwis are leaving faster than they return
 
-Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 while the border was closed and departures collapsed. By March 2026 it stood at -36,538. Over the same 12 months, non-NZ citizens (including Australians) recorded a net +60,787 — down from the post-reopening peak of +176,489 in October 2023.
+Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 while the border was closed and departures collapsed. By March 2026 it stood at -36,538. Over the same 12 months, non-NZ citizens (including Australians) recorded a net +60,787, down from the post-reopening peak of +176,489 in October 2023.
 
 ```{=html}
 {{< include data/kiwi-exodus_main.html >}}
@@ -13,9 +13,9 @@ Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 whil
 
 <p class="data-source">Source: Statistics NZ ITM552301</p>
 
-## The post-COVID surge was overwhelmingly young
+## The post-COVID surge has been dominated by migrants in prime-working age groups
 
-Net migration is dominated by people in their 20s and 30s throughout the series. The 30s age group in particular accounts for a much larger share of net migration than it did in the pre-COVID baseline, a shift that has persisted even as overall volumes have moderated.
+Net migration is dominated by people 30 and under throughout the series. The 30-40s age groups in particular account for a much larger share of net migration than in the pre-COVID baseline, a shift that has persisted even as overall volumes have moderated.
 
 ```{=html}
 {{< include data/kiwi-exodus_age_net.html >}}
@@ -33,7 +33,7 @@ The composition of net migration has shifted markedly since 2022. India and Chin
 
 <p class="data-source">Source: Statistics NZ ITM552301</p>
 
-Two trends stand out since the border reopened in 2022. India's share of non-NZ arrivals climbed sharply, overtaking China to become the single largest source country — at times accounting for more than one in four non-NZ arrivals. China's share, which led before COVID, has not recovered to the same extent and has trended downward since 2023.
+Two trends stand out since the border reopened in 2022. India's share of non-NZ arrivals climbed sharply, overtaking China to become the single largest source country, at times accounting for more than one in four non-NZ arrivals.
 
 ```{=html}
 {{< include data/india-surge_share.html >}}
@@ -43,7 +43,7 @@ Two trends stand out since the border reopened in 2022. India's share of non-NZ 
 
 ## Work visas, not students, powered the surge
 
-Work visa arrivals overtook every other category after the border reopened in 2022 — including NZ and Australian citizens — and remained the single largest arrival group through 2023. Student arrivals surged simultaneously, reaching levels well above the pre-COVID peak before moderating in 2024–25.
+Work visa arrivals overtook every other category after the border reopened in 2022, including NZ and Australian citizens, and remained the single largest arrival group through 2023.
 
 ```{=html}
 {{< include data/visa-shift_overall.html >}}
@@ -59,7 +59,7 @@ Approved work visa decisions peaked sharply in late 2022 as the Accredited Emplo
 
 <p class="data-source">Source: MBIE Migration Data Explorer</p>
 
-For arrivals whose last permanent residence was India, Work visas account for the overwhelming majority of post-2022 volumes — Residence and Student visas together remain a relatively small share.
+For arrivals whose last permanent residence was India, Work visas account for the overwhelming majority of post-2022 volumes, with Residence and Student visas together remaining a relatively small share.
 
 ```{=html}
 {{< include data/visa-shift_india_clpr.html >}}
@@ -67,7 +67,7 @@ For arrivals whose last permanent residence was India, Work visas account for th
 
 <p class="data-source">Source: Statistics NZ ITM553001</p>
 
-China arrivals tell a different story: Student visas make up a consistently larger share than for India, and the overall volume has not recovered to its pre-COVID peak — unlike India, where arrivals surpassed previous highs by 2023.
+China arrivals tell a different story: Student visas make up a consistently larger share than for India.
 
 ```{=html}
 {{< include data/visa-shift_china_clpr.html >}}
@@ -86,7 +86,7 @@ India's work visa intake has shifted from high-skill toward lower-skill roles si
 <p class="data-source">Source: MBIE Migration Data Explorer</p>
 <p class="data-source">Note: W3 covers records where Immigration New Zealand (INZ) captured an occupation (~60% of approved work visa decisions). Open work right holders (Working Holiday, Relationship) are largely excluded. Roles with no recorded skill level are excluded from proportions.</p>
 
-India's lower-skill share (36%) is above countries like the UK (16%) and China (11%) — but Vietnam (49%) and Fiji (48%) rank higher. The pattern is not India-specific.
+India's lower-skill share (36%) is above countries like the UK (16%) and China (11%), but Vietnam (49%) and Fiji (48%) rank higher. The pattern is not India-specific.
 
 ```{=html}
 {{< include data/india-surge_country_skill.html >}}
@@ -97,7 +97,7 @@ India's lower-skill share (36%) is above countries like the UK (16%) and China (
 
 ## South Island TAs lead on a per capita basis
 
-International migration is concentrated in a handful of Territorial Authorities. Auckland and Hamilton lead by absolute numbers, but South Island TAs — Queenstown-Lakes in particular — rank far higher on a per-capita basis.
+International migration is concentrated in a handful of Territorial Authorities. Auckland and Hamilton lead by absolute numbers, but South Island TAs, Queenstown-Lakes in particular, rank far higher on a per-capita basis.
 
 ```{=html}
 {{< include data/where-they-land_map.html >}}
@@ -113,7 +113,7 @@ International migration is concentrated in a handful of Territorial Authorities.
 <p class="data-source">Source: Statistics NZ, Subnational population estimates at 30 June 2025</p>
 <p class="data-source">Note: Population estimates are provisional.</p>
 
-Within Auckland, the variation is just as striking. Ōtara-Papatoetoe recorded 102 net migrants per 1,000 residents over the three years ended June 2025 — nearly eight times the rate of Rodney (1.2 per 1,000) at the other end of the scale.
+Within Auckland, Ōtara-Papatoetoe recorded 102 net migrants per 1,000 residents over the three years ended June 2025, nearly eight times the rate of Rodney (1.2 per 1,000) at the other end of the scale.
 
 ```{=html}
 {{< include data/where-they-land_auckland_map.html >}}
