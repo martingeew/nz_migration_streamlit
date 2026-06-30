@@ -89,6 +89,7 @@ India's work visa intake has shifted from high-skill toward lower-skill roles si
 
 <p class="chart-subtitle">W3 Work Occupations, approved work visas by nationality and ANZSCO skill level (12-month periods ended May 2017–2026).</p>
 <p class="data-source">Source: MBIE Migration Data Explorer</p>
+<p class="data-source">Note: W3 covers records where INZ captured an occupation (~60% of approved work visa decisions). Open work right holders (Working Holiday, Relationship) are largely excluded. Roles with no recorded skill level are excluded from proportions.</p>
 
 India's lower-skill share (36%) is above countries like the UK (16%) and China (11%) — but Vietnam (49%) and Fiji (48%) rank higher. The pattern is not India-specific.
 
@@ -98,6 +99,7 @@ India's lower-skill share (36%) is above countries like the UK (16%) and China (
 
 <p class="chart-subtitle">W3 Work Occupations, year ended May 2026. Top 10 source countries by approved work visa volume.</p>
 <p class="data-source">Source: MBIE Migration Data Explorer</p>
+<p class="data-source">Note: W3 covers records where INZ captured an occupation (~60% of approved work visa decisions). Open work right holders (Working Holiday, Relationship) are largely excluded. Roles with no recorded skill level are excluded from proportions.</p>
 
 ## Auckland absorbs most arrivals; Queenstown punches above its weight
 
