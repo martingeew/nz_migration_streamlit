@@ -11,7 +11,8 @@ Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 whil
 {{< include data/kiwi-exodus_main.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month sum.</p>
+<p class="chart-subtitle">Rolling 12-month sum.</p>
+<p class="data-source">Source: Statistics NZ ITM552301</p>
 
 ## The post-COVID surge was overwhelmingly young
 
@@ -21,7 +22,8 @@ Net migration is dominated by people in their 20s and 30s throughout the series.
 {{< include data/kiwi-exodus_age_net.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552101 — rolling 12-month net migration (arrivals minus departures), all citizenships.</p>
+<p class="chart-subtitle">Rolling 12-month net migration (arrivals minus departures), all citizenships.</p>
+<p class="data-source">Source: Statistics NZ ITM552101</p>
 
 ## India now supplies one in four non-NZ arrivals
 
@@ -31,7 +33,8 @@ The composition of net migration has shifted markedly since 2022. India and Chin
 {{< include data/india-surge_net_area.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month net migration (arrivals minus departures), non-NZ citizens. China, India, Philippines, Sri Lanka, UK, Fiji plus Other.</p>
+<p class="chart-subtitle">Rolling 12-month net migration (arrivals minus departures), non-NZ citizens. China, India, Philippines, Sri Lanka, UK, Fiji plus Other.</p>
+<p class="data-source">Source: Statistics NZ ITM552301</p>
 
 The share chart shows each country's arrivals as a proportion of all non-NZ arrivals on a 12-month rolling average.
 
@@ -39,7 +42,8 @@ The share chart shows each country's arrivals as a proportion of all non-NZ arri
 {{< include data/india-surge_share.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552301 — rolling 12-month average.</p>
+<p class="chart-subtitle">Rolling 12-month average share of non-NZ arrivals.</p>
+<p class="data-source">Source: Statistics NZ ITM552301</p>
 
 ## Work visas, not students, powered the surge
 
@@ -49,7 +53,8 @@ The arrivals chart shows the surge in visa mix terms — what proportion of peop
 {{< include data/visa-shift_overall.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM552201 — monthly arrivals by visa type.</p>
+<p class="chart-subtitle">Monthly arrivals by visa type.</p>
+<p class="data-source">Source: Statistics NZ ITM552201</p>
 
 Approved work visa decisions peaked sharply in late 2022 as the AEWV replaced Essential Skills. Skilled Work approvals have since moderated following the April 2024 reforms, while Working Holiday and Relationship visas have recovered from their COVID-era lows.
 
@@ -57,19 +62,22 @@ Approved work visa decisions peaked sharply in late 2022 as the AEWV replaced Es
 {{< include data/visa-shift_w1_decisions.html >}}
 ```
 
-<p class="data-source">Source: MBIE Migration Data Explorer — W1 Work Decisions, approved decisions by application substream. Rolling 12-month sum.</p>
+<p class="chart-subtitle">W1 Work Decisions, approved decisions by application substream. Rolling 12-month sum.</p>
+<p class="data-source">Source: MBIE Migration Data Explorer</p>
 
 ```{=html}
 {{< include data/visa-shift_india_clpr.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM553001 — arrivals where Country of Last Permanent Residence = India.</p>
+<p class="chart-subtitle">Arrivals where Country of Last Permanent Residence = India.</p>
+<p class="data-source">Source: Statistics NZ ITM553001</p>
 
 ```{=html}
 {{< include data/visa-shift_china_clpr.html >}}
 ```
 
-<p class="data-source">Source: Statistics NZ ITM553001 — arrivals where Country of Last Permanent Residence = China.</p>
+<p class="chart-subtitle">Arrivals where Country of Last Permanent Residence = China.</p>
+<p class="data-source">Source: Statistics NZ ITM553001</p>
 
 ## Lower-skill work visa share reaches 49% for some nationalities
 
@@ -79,7 +87,8 @@ India's work visa intake has shifted from high-skill toward lower-skill roles si
 {{< include data/india-surge_skill_shift.html >}}
 ```
 
-<p class="data-source">Source: MBIE Migration Data Explorer — W3 Work Occupations, approved work visas by nationality and ANZSCO skill level (12-month periods ended May 2017–2026).</p>
+<p class="chart-subtitle">W3 Work Occupations, approved work visas by nationality and ANZSCO skill level (12-month periods ended May 2017–2026).</p>
+<p class="data-source">Source: MBIE Migration Data Explorer</p>
 
 India's lower-skill share (36%) is above countries like the UK (16%) and China (11%) — but Vietnam (49%) and Fiji (48%) rank higher. The pattern is not India-specific.
 
@@ -87,7 +96,8 @@ India's lower-skill share (36%) is above countries like the UK (16%) and China (
 {{< include data/india-surge_country_skill.html >}}
 ```
 
-<p class="data-source">Source: MBIE Migration Data Explorer — W3 Work Occupations, year ended May 2026. Top 10 source countries by approved work visa volume.</p>
+<p class="chart-subtitle">W3 Work Occupations, year ended May 2026. Top 10 source countries by approved work visa volume.</p>
+<p class="data-source">Source: MBIE Migration Data Explorer</p>
 
 ## Auckland absorbs most arrivals; Queenstown punches above its weight
 
@@ -97,7 +107,9 @@ International migration is concentrated in a handful of Territorial Authorities.
 {{< include data/where-they-land_map.html >}}
 ```
 
-<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries). Net international migration = sum of annual net flows, years ended June 2023, 2024 and 2025. Rate per 1,000 = cumulative net ÷ 2025 population × 1,000.</p>
+<p class="chart-subtitle">Net international migration = sum of annual net flows, years ended June 2023–2025. Rate per 1,000 = cumulative net ÷ 2025 population × 1,000.</p>
+<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025</p>
+<p class="data-source">Note: Data is provisional (2025 boundaries).</p>
 
 The top 5 TAs by per-capita inflow, and a closer look at the 21 Auckland local board areas.
 
@@ -105,13 +117,16 @@ The top 5 TAs by per-capita inflow, and a closer look at the 21 Auckland local b
 {{< include data/where-they-land_top_inflow.html >}}
 ```
 
-<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries).</p>
+<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025</p>
+<p class="data-source">Note: Data is provisional (2025 boundaries).</p>
 
 ```{=html}
 {{< include data/where-they-land_auckland_map.html >}}
 ```
 
-<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025 (provisional, 2025 boundaries). Boundaries: Stats NZ Territorial Authority Local Board 2025 (Clipped).</p>
+<p class="chart-subtitle">Boundaries: Stats NZ Territorial Authority Local Board 2025 (Clipped).</p>
+<p class="data-source">Source: Stats NZ, Subnational population estimates at 30 June 2025</p>
+<p class="data-source">Note: Data is provisional (2025 boundaries).</p>
 
 <p class="data-source">
 Built by <a href="https://autonomousecon.substack.com">Autonomous Econ</a> |

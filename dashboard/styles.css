@@ -1,6 +1,14 @@
 /*-- scss:rules --*/
 /* ── NZ Migration Dashboard ───────────────────────────────────────────────── */
 
+/* Descriptive subtitle directly below chart */
+.chart-subtitle {
+  font-size: 13px;
+  color: #555;
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+
 /* Light source attribution under charts */
 .data-source {
   font-size: 12px;
