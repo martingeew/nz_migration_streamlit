@@ -324,7 +324,7 @@ class RegionalMapStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text="Top 10 territorial authorities by per-capita net migration<br><sub>Three years ended June 2025</sub>",
+                text="Top 10 territorial authorities by per-capita net migration and absolute increase<br><sub>Three years ended June 2025</sub>",
                 x=0.0,
                 font_size=14,
             ),
