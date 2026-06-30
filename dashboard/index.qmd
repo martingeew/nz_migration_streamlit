@@ -106,14 +106,14 @@ International migration is concentrated in a handful of Territorial Authorities.
 <p class="data-source">Source: Statistics NZ, Subnational population estimates at 30 June 2025</p>
 <p class="data-source">Note: Population estimates are provisional.</p>
 
-The top 5 TAs by per-capita inflow, and a closer look at the 21 Auckland local board areas.
-
 ```{=html}
 {{< include data/where-they-land_top_inflow.html >}}
 ```
 
 <p class="data-source">Source: Statistics NZ, Subnational population estimates at 30 June 2025</p>
 <p class="data-source">Note: Population estimates are provisional.</p>
+
+Within Auckland, the variation is just as striking. Ōtara-Papatoetoe recorded 102 net migrants per 1,000 residents over the three years ended June 2025 — nearly eight times the rate of Rodney (1.2 per 1,000) at the other end of the scale.
 
 ```{=html}
 {{< include data/where-they-land_auckland_map.html >}}
