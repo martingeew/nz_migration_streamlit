@@ -51,7 +51,7 @@ The arrivals chart shows the surge in visa mix terms — what proportion of peop
 
 <p class="data-source">Source: Statistics NZ ITM552201</p>
 
-Approved work visa decisions peaked sharply in late 2022 as the AEWV replaced Essential Skills. Skilled Work approvals have since moderated following the April 2024 reforms, while Working Holiday and Relationship visas have recovered from their COVID-era lows.
+Approved work visa decisions peaked sharply in late 2022 as the Accredited Employer Work Visa (AEWV) replaced Essential Skills. Skilled Work approvals have since moderated following the April 2024 reforms, while the Recognised Seasonal Employer (RSE) scheme, Working Holiday, and Relationship visas have maintained steadier trends.
 
 ```{=html}
 {{< include data/visa-shift_w1_decisions.html >}}
@@ -80,7 +80,7 @@ India's work visa intake has shifted from high-skill toward lower-skill roles si
 ```
 
 <p class="data-source">Source: MBIE Migration Data Explorer</p>
-<p class="data-source">Note: W3 covers records where INZ captured an occupation (~60% of approved work visa decisions). Open work right holders (Working Holiday, Relationship) are largely excluded. Roles with no recorded skill level are excluded from proportions.</p>
+<p class="data-source">Note: W3 covers records where Immigration New Zealand (INZ) captured an occupation (~60% of approved work visa decisions). Open work right holders (Working Holiday, Relationship) are largely excluded. Roles with no recorded skill level are excluded from proportions.</p>
 
 India's lower-skill share (36%) is above countries like the UK (16%) and China (11%) — but Vietnam (49%) and Fiji (48%) rank higher. The pattern is not India-specific.
 
