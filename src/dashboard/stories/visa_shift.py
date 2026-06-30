@@ -155,7 +155,7 @@ class VisaShiftStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text=title,
+                text=f"{title}<br><sub>{subtitle}</sub>",
                 x=0.0,
                 font_size=14,
             ),
@@ -229,7 +229,7 @@ class VisaShiftStory(BaseStory):
         x_end = pivot.index[-1] + pd.DateOffset(months=2)
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
-            title=dict(text="Approved work visa decisions", x=0.0, font_size=14),
+            title=dict(text="Approved work visa decisions by application substream<br><sub>Rolling 12-month sum</sub>", x=0.0, font_size=14),
             xaxis=dict(
                 tickangle=0, showgrid=False, tickformat="%Y",
                 rangeslider_visible=False,
@@ -284,7 +284,7 @@ class VisaShiftStory(BaseStory):
         return self._stacked_area(
             pivot,
             title="NZ arrivals by visa type",
-            subtitle="Rolling 12-month sum — all citizenships",
+            subtitle="Rolling 12-month sum, all citizenships",
         )
 
     def _build_clpr(self, df_clpr: pd.DataFrame, country: str) -> go.Figure:
@@ -305,8 +305,8 @@ class VisaShiftStory(BaseStory):
         )
         return self._stacked_area(
             pivot,
-            title=f"NZ arrivals by visa type — CLPR: {country}",
-            subtitle=f"Rolling 12-month sum — CLPR: {country}",
+            title=f"NZ arrivals by visa type: country of last permanent residence = {country}",
+            subtitle="Rolling 12-month sum",
         )
 
     def _build_india_clpr(self, df_clpr: pd.DataFrame) -> go.Figure:

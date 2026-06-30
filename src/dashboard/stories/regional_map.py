@@ -212,7 +212,7 @@ class RegionalMapStory(BaseStory):
             fig.update_layout(
                 height=900,
                 title=dict(
-                    text="Net migration per 1,000 population by TA",
+                    text="Net migration per 1,000 population by territorial authority<br><sub>Sum, three years ended June 2025</sub>",
                     x=0.0,
                     font_size=14,
                 ),
@@ -324,7 +324,7 @@ class RegionalMapStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text="Top 10 TAs by per-capita net migration",
+                text="Top 10 territorial authorities by per-capita net migration<br><sub>Three years ended June 2025</sub>",
                 x=0.0,
                 font_size=14,
             ),
@@ -363,7 +363,7 @@ class RegionalMapStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text="Auckland boards: per-capita net migration",
+                text="Auckland local boards: per-capita net migration<br><sub>Three years ended June 2025</sub>",
                 x=0.0,
                 font_size=14,
             ),
@@ -434,7 +434,7 @@ class RegionalMapStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text="Auckland local boards: net migration per 1,000 population",
+                text="Net migration per 1,000 population: Auckland Local Board Areas<br><sub>Sum, three years ended June 2025</sub>",
                 x=0.0,
                 font_size=14,
             ),

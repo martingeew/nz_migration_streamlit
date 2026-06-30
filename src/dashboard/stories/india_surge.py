@@ -246,7 +246,7 @@ class IndiaSurgeStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text="Net migration to NZ by source country",
+                text="Net migration of non-NZ citizens by nationality<br><sub>Rolling 12-month sum</sub>",
                 x=0.0,
                 font_size=14,
             ),
@@ -337,7 +337,7 @@ class IndiaSurgeStory(BaseStory):
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text="Non-NZ arrivals by source country — top 5",
+                text="Share of non-NZ arrivals by nationality<br><sub>Rolling 12-month average</sub>",
                 x=0.0,
                 font_size=14,
             ),
@@ -394,7 +394,7 @@ class IndiaSurgeStory(BaseStory):
             barmode="stack",
             barnorm="fraction",
             title=dict(
-                text="India work visas: shifting toward lower-skill roles",
+                text="Work visa skill level by year: India<br><sub>Approved work visas, 12-month periods ended May 2017–2026</sub>",
                 x=0.0,
                 font_size=14,
             ),
@@ -467,7 +467,7 @@ class IndiaSurgeStory(BaseStory):
             barmode="stack",
             barnorm="fraction",
             title=dict(
-                text="Work visa skill mix by nationality (May 2026)",
+                text="Work visa skill level by nationality<br><sub>Approved work visas, year ended May 2026, top 10 source countries</sub>",
                 x=0.0,
                 font_size=14,
             ),
