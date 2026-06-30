@@ -15,7 +15,7 @@ Net NZ citizen migration peaked at +24,572 in the 12 months to October 2020 whil
 
 ## The post-COVID surge has been dominated by migrants in prime-working age groups
 
-Net migration is dominated by people 30 and under throughout the series. The 30-40s age groups in particular account for a much larger share of net migration than in the pre-COVID baseline, a shift that has persisted even as overall volumes have moderated.
+Net migration is dominated by people 30 and under throughout the series. The 30-40s age groups in particular account for a much larger share of net migration than in the pre-COVID baseline.
 
 ```{=html}
 {{< include data/kiwi-exodus_age_net.html >}}
