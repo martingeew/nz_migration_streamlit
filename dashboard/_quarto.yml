@@ -3,8 +3,8 @@ project:
   output-dir: ../docs
 
 website:
-  title: "NZ Migration: What the Data Shows"
-  description: "Monthly migration trends tracked with Statistics NZ data, built by Autonomous Econ."
+  title: "New Zealand Migration Tracker"
+  description: "Migration trends tracked with Statistics NZ and MBIE data, built by Autonomous Econ."
   repo-url: https://github.com/martingeew/nz_migration_streamlit
   navbar:
     right:

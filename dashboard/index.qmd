@@ -1,6 +1,6 @@
 ---
-title: "NZ Migration: What the Data Shows"
-subtitle: "Monthly migration trends tracked with Statistics NZ data — built by [Autonomous Econ](https://autonomousecon.substack.com)"
+title: "New Zealand Migration Tracker"
+subtitle: "Migration trends tracked with Statistics NZ and MBIE data — built by [Autonomous Econ](https://autonomousecon.substack.com)"
 ---
 
 ## Kiwis are leaving faster than they return
