@@ -382,7 +382,11 @@ class RegionalMapStory(BaseStory):
         return fig
 
     def _build_alb_map(self, alb_df: pd.DataFrame) -> go.Figure:
-        """Choropleth: Auckland local board areas — net international migration per 1k population."""
+        """Choropleth: Auckland local board areas — net international migration per 1k population.
+
+        Main view zooms on the Auckland landmass; Great Barrier Island shown as a
+        framed inset (top-right) so inner-city boards are legible.
+        """
         geojson = self._load_alb_geojson()
         fig = go.Figure()
 
@@ -390,47 +394,73 @@ class RegionalMapStory(BaseStory):
             print("  [regional-map] ALB GeoJSON not found — run scripts/process_alb_geojson.py first.")
             return fig
 
-        fig.add_trace(
-            go.Choropleth(
-                geojson=geojson,
-                featureidkey="properties.alb_name_ascii",
-                locations=alb_df["alb_name_ascii"],
-                z=alb_df["value_per1k"],
-                customdata=alb_df[["net", "display_name"]],
-                colorscale=_DIVERGING_SCALE,
-                zmid=0,
-                colorbar=dict(
-                    title="Net<br>per 1k<br>pop",
-                    tickformat=".1f",
-                    nticks=8,
-                    len=0.6,
-                ),
-                hovertemplate=(
-                    "<b>%{customdata[1]}</b><br>"
-                    "Net / 1k pop: %{z:.1f}<br>"
-                    "Net absolute: %{customdata[0]:,.0f}"
-                    "<extra></extra>"
-                ),
-                marker_line_color="#BBBBBB",
-                marker_line_width=0.5,
-            )
+        shared = dict(
+            geojson=geojson,
+            featureidkey="properties.alb_name_ascii",
+            locations=alb_df["alb_name_ascii"],
+            z=alb_df["value_per1k"],
+            customdata=alb_df[["net", "display_name"]],
+            colorscale=_DIVERGING_SCALE,
+            zmid=0,
+            hovertemplate=(
+                "<b>%{customdata[1]}</b><br>"
+                "Net / 1k pop: %{z:.1f}<br>"
+                "Net absolute: %{customdata[0]:,.0f}"
+                "<extra></extra>"
+            ),
+            marker_line_color="#BBBBBB",
+            marker_line_width=0.5,
         )
 
-        fig.update_geos(
-            visible=False,
-            lataxis_range=[-37.6, -36.0],
-            lonaxis_range=[174.0, 175.5],
-        )
+        # Main map — Auckland landmass
+        fig.add_trace(go.Choropleth(
+            **shared,
+            colorbar=dict(
+                title="Net<br>per 1k<br>pop",
+                tickformat=".1f",
+                nticks=8,
+                len=0.6,
+            ),
+            geo="geo",
+        ))
+
+        # Great Barrier inset — shares colorscale, no duplicate colorbar
+        fig.add_trace(go.Choropleth(
+            **shared,
+            showscale=False,
+            geo="geo2",
+        ))
+
         fig.update_layout(
             template=PLOTLY_TEMPLATE,
             title=dict(
-                text="Auckland local boards: net per 1k pop",
+                text="Auckland local boards: net migration per 1,000 population",
                 x=0.0,
                 font_size=14,
             ),
-            geo=dict(showframe=False, showcoastlines=False, projection_type="mercator"),
+            geo=dict(
+                domain=dict(x=[0, 1], y=[0, 1]),
+                visible=False,
+                showframe=False,
+                showcoastlines=False,
+                projection_type="mercator",
+                lataxis_range=[-37.15, -36.35],
+                lonaxis_range=[174.4, 175.05],
+            ),
+            geo2=dict(
+                domain=dict(x=[0.70, 0.97], y=[0.63, 0.97]),
+                visible=False,
+                showframe=True,
+                framecolor="#AAAAAA",
+                framewidth=1,
+                showcoastlines=False,
+                projection_type="mercator",
+                lataxis_range=[-36.4, -35.85],
+                lonaxis_range=[175.05, 175.75],
+                bgcolor="#F5F5F5",
+            ),
             margin=dict(l=0, r=0, t=60, b=0),
-            height=500,
+            height=550,
         )
         return fig
 
