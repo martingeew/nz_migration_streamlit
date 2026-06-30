@@ -95,7 +95,7 @@ India's lower-skill share (36%) is above countries like the UK (16%) and China (
 <p class="data-source">Source: MBIE Migration Data Explorer</p>
 <p class="data-source">Note: W3 covers records where INZ captured an occupation (~60% of approved work visa decisions). Open work right holders (Working Holiday, Relationship) are largely excluded. Roles with no recorded skill level are excluded from proportions.</p>
 
-## South Island TAs lead on a per capita basis
+## Auckland absorbs the most arrivals; South Island TAs lead on a per capita basis
 
 International migration is concentrated in a handful of Territorial Authorities. Auckland and Hamilton lead by absolute numbers, but South Island TAs, Queenstown-Lakes in particular, rank far higher on a per-capita basis.
 
