@@ -1,0 +1,81 @@
+---
+title: "Two migration stories in one line"
+subtitle: "Closeread prototype"
+---
+
+::: {.prototype-header}
+
+# Two migration stories in one line
+
+[New Zealand's net migration hit a record 135,529 in the year to October 2023. The headline number hid two opposite movements underneath it.]{.standfirst}
+
+*Prototype A of 3 — Quarto + Closeread. Scroll to advance.*
+
+:::
+
+::: {.cr-section}
+
+## Net migration, 2001 to today {focus-on="cr-total"}
+
+Each point is the net gain of migrants over the previous 12 months. The line spent two decades between 10,000 and 70,000.
+
+## Then came the post-border surge {focus-on="cr-peak"}
+
+Net migration peaked at 135,529 in the year to October 2023, far above anything in the previous two decades.
+
+## One line, two very different stories {focus-on="cr-split"}
+
+Splitting by citizenship shows the total hides an offset. Non-New Zealand citizens drove the surge while New Zealand citizens left in growing numbers.
+
+## New Zealanders left at a record rate {focus-on="cr-trough"}
+
+Net migration of New Zealand citizens bottomed at -45,915 in the year to April 2024.
+
+## Where it sits now {focus-on="cr-latest"}
+
+The total has fallen back to 24,250 in the year to March 2026.
+
+::: {#cr-total}
+```{=html}
+{{< include charts/step-total.html >}}
+```
+:::
+
+::: {#cr-peak}
+```{=html}
+{{< include charts/step-peak.html >}}
+```
+:::
+
+::: {#cr-split}
+```{=html}
+{{< include charts/step-split.html >}}
+```
+:::
+
+::: {#cr-trough}
+```{=html}
+{{< include charts/step-trough.html >}}
+```
+:::
+
+::: {#cr-latest}
+```{=html}
+{{< include charts/step-latest.html >}}
+```
+:::
+
+:::
+
+::: {.prototype-footer}
+
+## What this prototype shows
+
+Closeread swaps between five pre-rendered Plotly figures. It does not animate
+between them, so the transition is a cross-fade rather than a line redraw.
+Getting a true redraw would mean writing the Plotly transition calls by hand,
+at which point the extension is doing less of the work.
+
+<p class="data-source">Source: Statistics NZ ITM552301 — migrant arrivals and departures by citizenship. 12-month rolling sum.</p>
+
+:::

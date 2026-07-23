@@ -1,0 +1,83 @@
+/*-- scss:rules --*/
+
+.cr-section .sticky-col .plotly-graph-div {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+/* Plotly writes an inline pixel width on its own wrapper; clamp it so a
+   700px default cannot force the page to scroll sideways on mobile. */
+.cr-section .plotly-graph-div,
+.cr-section .plotly-graph-div .svg-container,
+.cr-section .plotly-graph-div svg {
+  max-width: 100% !important;
+}
+
+/* No overflow property here: .sticky-col is the direct parent of the sticky
+   .sticky-col-stack, and any overflow value other than `visible`/`clip` on an
+   ancestor disables position:sticky. */
+.cr-section .sticky-col {
+  max-width: 100%;
+}
+
+.prototype-header {
+  max-width: 42rem;
+  margin: 4rem auto 6rem;
+  padding: 0 1.5rem;
+}
+
+.prototype-header h1 {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.prototype-header .standfirst {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.prototype-footer {
+  max-width: 42rem;
+  margin: 6rem auto 4rem;
+  padding: 0 1.5rem;
+  color: #555;
+}
+
+.data-source {
+  font-size: 0.8rem;
+  color: #95a5a6;
+  margin-top: 2rem;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────────────────
+   Closeread's sticky column keeps a ~700px width at narrow viewports, which
+   pushes the page sideways. Force the column and its stack back to the
+   viewport width. */
+
+@media (max-width: 720px) {
+  body {
+    /* `clip`, not `hidden`: an ancestor with overflow:hidden silently disables
+       position:sticky on every descendant, which unpins the chart. */
+    overflow-x: clip;
+  }
+
+  .cr-section,
+  .cr-section .sticky-col,
+  .cr-section .sticky-col-stack,
+  .cr-section .sticky {
+    width: 100% !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+  }
+
+  .cr-section .sticky-col-stack {
+    height: 55vh !important;
+  }
+
+  .prototype-header,
+  .prototype-footer {
+    max-width: 100%;
+  }
+}

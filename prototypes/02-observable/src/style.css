@@ -1,0 +1,122 @@
+@import url("observablehq:default.css");
+@import url("observablehq:theme-air.css");
+
+:root {
+  --scrolly-max: 62rem;
+}
+
+/* ── Hero ─────────────────────────────────────────────────────────────────── */
+
+.hero {
+  max-width: 42rem;
+  margin: 4rem auto 6rem;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  max-width: none;
+}
+
+.hero .standfirst {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--theme-foreground-muted);
+}
+
+.hero .kicker {
+  font-size: 0.85rem;
+  color: var(--theme-foreground-faint);
+  margin-top: 1.5rem;
+}
+
+/* ── Scrollytelling layout ────────────────────────────────────────────────── */
+
+.scrolly {
+  display: grid;
+  grid-template-columns: 1fr 22rem;
+  gap: 3rem;
+  max-width: var(--scrolly-max);
+  margin: 0 auto;
+  align-items: start;
+}
+
+.scrolly-graphic {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* Grid tracks default to min-width:auto, so the SVG would otherwise widen
+     the column past the container and force a horizontal scrollbar. */
+  min-width: 0;
+}
+
+.scrolly-narrative {
+  padding: 40vh 0;
+}
+
+.scrolly-step {
+  margin-bottom: 80vh;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--theme-background-alt);
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.scrolly-step.is-active {
+  opacity: 1;
+}
+
+.scrolly-step h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  border: none;
+  padding: 0;
+  max-width: none;
+}
+
+.scrolly-step p {
+  margin: 0;
+  line-height: 1.55;
+  max-width: none;
+}
+
+/* ── Outro ────────────────────────────────────────────────────────────────── */
+
+.outro {
+  max-width: 42rem;
+  margin: 6rem auto 4rem;
+}
+
+.data-source {
+  font-size: 0.8rem;
+  color: var(--theme-foreground-faint);
+  margin-top: 2rem;
+}
+
+/* ── Mobile: graphic pins to the top, narrative flows beneath ─────────────── */
+
+@media (max-width: 720px) {
+  .scrolly {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .scrolly-graphic {
+    height: 55vh;
+    background: var(--theme-background);
+    z-index: 2;
+  }
+
+  .scrolly-narrative {
+    padding: 0;
+  }
+
+  .scrolly-step {
+    margin-bottom: 60vh;
+  }
+}

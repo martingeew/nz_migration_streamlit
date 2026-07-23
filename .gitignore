@@ -18,3 +18,14 @@ dashboard/.quarto/
 dashboard/data/
 
 # docs/ is committed to repo (GitHub Pages serves from it — do NOT ignore)
+
+# ── Scrollytelling prototypes ────────────────────────────────────────────────
+# Source is committed; build output, deps, and generated data are not.
+prototypes/*/node_modules/
+prototypes/*/dist/
+prototypes/data/
+prototypes/01-closeread/charts/
+prototypes/01-closeread/index.html
+prototypes/01-closeread/index_files/
+prototypes/01-closeread/.quarto/
+prototypes/02-observable/src/.observablehq/
