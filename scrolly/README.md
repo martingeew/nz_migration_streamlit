@@ -1,7 +1,8 @@
 # Who is actually arriving in New Zealand
 
-A scroll-driven data story on NZ migration: five stacked-area charts, nine steps, one
-chart pinned to the top of the screen while the commentary scrolls past underneath it.
+A scroll-driven data story on NZ migration: thirteen steps over five stacked-area charts
+and two choropleths, with the graphic pinned to the top of the screen while the commentary
+scrolls past underneath it.
 
 Built from the `scrollytelling-starter` Claude skill as the worked example for
 `blog/2026-07-23_nyt-scrollytelling-python-stack.md`. Stack is Vite + Svelte 5 +
@@ -49,8 +50,16 @@ Hand-edited, and why:
 
 - **`data/build.py`** — the skill ships an example builder; this one reads the repo's
   interim pkl files through `src/dashboard/data_loader.py` and emits 25 series across
-  five charts. Every number quoted in the commentary is computed here rather than typed,
-  so the prose cannot drift from the data.
+  five charts, plus two choropleths. Every number quoted in the commentary is computed
+  here rather than typed, so the prose cannot drift from the data. The map values reuse
+  `RegionalMapStory`'s loaders from the Quarto dashboard, so both products count the same
+  people. Needs `geopandas` and `shapely`, imported only by the map step.
+- **`src/lib/MapChart.svelte`** — new. d3-geo choropleth with a diverging scale, band
+  highlighting, and leader-line annotations that dodge vertically so labels never overlap.
+  Labels anchor to the map's drawn edge rather than a fixed gutter, and clamp to their own
+  estimated text width so nothing runs off a phone screen. See `data/story.schema.md` for
+  the map contract and the d3-geo winding trap, which cost the most time here by a wide
+  margin.
 - **`src/lib/Chart.svelte`** — rewritten from an animated line chart to stacked areas
   with `d3.stack`, a mirrored mode for the arrivals-above / departures-below chart, and
   band highlighting. The skill's tweened y-domain survived the rewrite and is what makes

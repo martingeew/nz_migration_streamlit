@@ -62,6 +62,8 @@ component knowing anything about the data.
 }
 ```
 
+- `kind`: `"series"` for a time-series chart, `"map"` for a choropleth. `App.svelte`
+  picks the component from this.
 - `keys`: the stack order, **bottom band first**.
 - `mode`: `"stack"` stacks the keys with `d3.stack`; `"mirror"` areas each key from zero
   instead, which is how the arrivals-above / departures-below chart is drawn.
@@ -72,6 +74,56 @@ component knowing anything about the data.
   longer fit.
 - `title` / `subtitle`: drawn above the chart, matching the Quarto dashboard's
   `title<br><sub>subtitle</sub>` convention.
+
+## Map charts **[extended]**
+
+A `kind: "map"` chart is a choropleth drawn by `MapChart.svelte`. Geometry lives in
+`src/data/maps.json`, not here, keyed by the same join name as `values`:
+
+```json
+"akl-map": {
+  "kind": "map",
+  "map": "auckland",
+  "title": "...", "subtitle": "...",
+  "scale": {"domain": [0, 40.8, 71.5, 102.1], "range": ["#2A3038", "#2C7FA8", "#5CBBAB", "#C8E9A0"]},
+  "fitExclude": [],
+  "fitBBox": [[174.4, -37.15], [175.05, -36.35]],
+  "values": {
+    "Otara-Papatoetoe": {"label": "Ōtara-Papatoetoe", "per1k": 102.1, "net": 10100}
+  }
+}
+```
+
+- `map`: which entry of `maps.json` to draw.
+- `scale`: `domain`/`range` arrays fed straight to `d3.scaleLinear`. Built in Python so
+  the neutral colour lands exactly on zero when the data goes negative.
+- `values`: keyed by the geometry's `properties.key`. `label` carries the display name,
+  so macrons survive even though the join key is ASCII.
+- `fitBBox`: an optional lon/lat window to frame instead of the features. Auckland needs
+  it, because Rodney runs far north and Great Barrier sits 60 km offshore; fitting to the
+  features leaves the urban boards unreadably small. The geography is clipped to this
+  window, so areas running past it end at a deliberate edge.
+- `fitExclude`: a lighter alternative — keep a feature drawn but out of the fit.
+- A step's `highlight` lists area keys. Those get an outline, keep full opacity while the
+  rest drop back, and receive a leader line out to a label showing name, rate per 1,000
+  and absolute net.
+
+### The winding trap
+
+`d3-geo` treats a spherical polygon's interior as the side to the **right** of the ring,
+the opposite of GeoJSON RFC 7946. Wind a ring the other way and d3 reads it as the whole
+globe: `fitExtent` then dutifully scales the planet into the frame and every real area
+collapses to a pixel or two. Plotly draws in the plane and never notices, which is why
+the Quarto dashboard renders these same files without complaint.
+
+`build.py` pins clockwise winding on every part, and drops islands below a
+tolerance-derived area threshold — Whangarei ships 74 parts and simplification collapsed
+one of its smallest into a degenerate ring, which was enough to break the whole map. Any
+polygon you synthesise in the front end needs the same winding; the `fitBBox` rectangle
+is built clockwise for exactly this reason.
+
+To check geometry before blaming the renderer: `d3.geoArea(feature)` returns about 4π
+(12.57) for anything being read as the whole sphere, against ~1e-4 for a real TA.
 
 ## `steps` — the narrative
 
