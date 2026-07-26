@@ -88,7 +88,8 @@
     220000
    ],
    "title": "Non-NZ citizen arrivals, departures and net migration",
-   "subtitle": "Rolling 12-month sum, arrivals above the line and departures below"
+   "subtitle": "Rolling 12-month sum, arrivals above the line and departures below",
+   "kind": "series"
   },
   "age": {
    "keys": [
@@ -105,7 +106,8 @@
     245000
    ],
    "title": "Migrant arrivals by age group",
-   "subtitle": "Rolling 12-month sum, all citizenships"
+   "subtitle": "Rolling 12-month sum, all citizenships",
+   "kind": "series"
   },
   "nationality": {
    "keys": [
@@ -122,7 +124,8 @@
     245000
    ],
    "title": "Non-NZ citizen arrivals by nationality",
-   "subtitle": "Rolling 12-month sum, top five source countries"
+   "subtitle": "Rolling 12-month sum, top five source countries",
+   "kind": "series"
   },
   "india": {
    "keys": [
@@ -138,7 +141,8 @@
     40000
    ],
    "title": "Arrivals by visa type: last permanent residence India",
-   "subtitle": "Rolling 12-month sum"
+   "subtitle": "Rolling 12-month sum",
+   "kind": "series"
   },
   "china": {
    "keys": [
@@ -154,7 +158,507 @@
     40000
    ],
    "title": "Arrivals by visa type: last permanent residence China",
-   "subtitle": "Rolling 12-month sum"
+   "subtitle": "Rolling 12-month sum",
+   "kind": "series"
+  },
+  "nz-map": {
+   "kind": "map",
+   "map": "nz",
+   "title": "Net migration per 1,000 residents by territorial authority",
+   "subtitle": "Three years ended June 2025",
+   "scale": {
+    "domain": [
+     -4.854368932038835,
+     0,
+     28.327137546468403,
+     49.5724907063197,
+     70.817843866171
+    ],
+    "range": [
+     "#E8705F",
+     "#2A3038",
+     "#2C7FA8",
+     "#5CBBAB",
+     "#C8E9A0"
+    ]
+   },
+   "fitExclude": [],
+   "fitBBox": null,
+   "values": {
+    "Ashburton District": {
+     "label": "Ashburton",
+     "per1k": 61.0,
+     "net": 2280
+    },
+    "Auckland": {
+     "label": "Auckland",
+     "per1k": 55.0,
+     "net": 99800
+    },
+    "Buller District": {
+     "label": "Buller",
+     "per1k": 26.3,
+     "net": 280
+    },
+    "Carterton District": {
+     "label": "Carterton",
+     "per1k": -4.9,
+     "net": -50
+    },
+    "Central Hawke's Bay District": {
+     "label": "Central Hawke's Bay",
+     "per1k": 7.5,
+     "net": 120
+    },
+    "Central Otago District": {
+     "label": "Central Otago",
+     "per1k": 21.7,
+     "net": 560
+    },
+    "Chatham Islands Territory": {
+     "label": "Chatham Islands Territory",
+     "per1k": 0.0,
+     "net": 0
+    },
+    "Christchurch City": {
+     "label": "Christchurch",
+     "per1k": 33.6,
+     "net": 14080
+    },
+    "Clutha District": {
+     "label": "Clutha",
+     "per1k": 37.8,
+     "net": 710
+    },
+    "Dunedin City": {
+     "label": "Dunedin",
+     "per1k": 17.6,
+     "net": 2340
+    },
+    "Far North District": {
+     "label": "Far North",
+     "per1k": 10.3,
+     "net": 760
+    },
+    "Gisborne District": {
+     "label": "Gisborne",
+     "per1k": 32.4,
+     "net": 1710
+    },
+    "Gore District": {
+     "label": "Gore",
+     "per1k": 25.5,
+     "net": 330
+    },
+    "Grey District": {
+     "label": "Grey",
+     "per1k": 27.4,
+     "net": 400
+    },
+    "Hamilton City": {
+     "label": "Hamilton",
+     "per1k": 66.1,
+     "net": 12700
+    },
+    "Hastings District": {
+     "label": "Hastings",
+     "per1k": 27.7,
+     "net": 2450
+    },
+    "Hauraki District": {
+     "label": "Hauraki",
+     "per1k": 20.4,
+     "net": 450
+    },
+    "Horowhenua District": {
+     "label": "Horowhenua",
+     "per1k": 20.1,
+     "net": 770
+    },
+    "Hurunui District": {
+     "label": "Hurunui",
+     "per1k": 28.6,
+     "net": 410
+    },
+    "Invercargill City": {
+     "label": "Invercargill",
+     "per1k": 48.3,
+     "net": 2800
+    },
+    "Kaikoura District": {
+     "label": "Kaikoura",
+     "per1k": 32.3,
+     "net": 140
+    },
+    "Kaipara District": {
+     "label": "Kaipara",
+     "per1k": 14.9,
+     "net": 400
+    },
+    "Kapiti Coast District": {
+     "label": "Kapiti Coast",
+     "per1k": 9.1,
+     "net": 530
+    },
+    "Kawerau District": {
+     "label": "Kawerau",
+     "per1k": 3.9,
+     "net": 30
+    },
+    "Lower Hutt City": {
+     "label": "Lower Hutt",
+     "per1k": 34.9,
+     "net": 3990
+    },
+    "Mackenzie District": {
+     "label": "Mackenzie",
+     "per1k": 68.8,
+     "net": 380
+    },
+    "Manawatu District": {
+     "label": "Manawatu",
+     "per1k": 11.2,
+     "net": 380
+    },
+    "Marlborough District": {
+     "label": "Marlborough",
+     "per1k": 12.2,
+     "net": 620
+    },
+    "Masterton District": {
+     "label": "Masterton",
+     "per1k": 22.5,
+     "net": 650
+    },
+    "Matamata-Piako District": {
+     "label": "Matamata-Piako",
+     "per1k": 33.7,
+     "net": 1320
+    },
+    "Napier City": {
+     "label": "Napier",
+     "per1k": 31.9,
+     "net": 2120
+    },
+    "Nelson City": {
+     "label": "Nelson",
+     "per1k": 30.0,
+     "net": 1630
+    },
+    "New Plymouth District": {
+     "label": "New Plymouth",
+     "per1k": 17.6,
+     "net": 1590
+    },
+    "Palmerston North City": {
+     "label": "Palmerston North",
+     "per1k": 32.3,
+     "net": 2920
+    },
+    "Porirua City": {
+     "label": "Porirua",
+     "per1k": 5.9,
+     "net": 360
+    },
+    "Queenstown-Lakes District": {
+     "label": "Queenstown-Lakes",
+     "per1k": 70.8,
+     "net": 3810
+    },
+    "Rangitikei District": {
+     "label": "Rangitikei",
+     "per1k": 18.8,
+     "net": 300
+    },
+    "Rotorua District": {
+     "label": "Rotorua",
+     "per1k": 40.5,
+     "net": 3160
+    },
+    "Ruapehu District": {
+     "label": "Ruapehu",
+     "per1k": 15.6,
+     "net": 210
+    },
+    "Selwyn District": {
+     "label": "Selwyn",
+     "per1k": 13.1,
+     "net": 1150
+    },
+    "South Taranaki District": {
+     "label": "South Taranaki",
+     "per1k": 19.8,
+     "net": 590
+    },
+    "South Waikato District": {
+     "label": "South Waikato",
+     "per1k": 19.2,
+     "net": 500
+    },
+    "South Wairarapa District": {
+     "label": "South Wairarapa",
+     "per1k": -0.8,
+     "net": -10
+    },
+    "Southland District": {
+     "label": "Southland",
+     "per1k": 58.7,
+     "net": 1990
+    },
+    "Stratford District": {
+     "label": "Stratford",
+     "per1k": 9.5,
+     "net": 100
+    },
+    "Tararua District": {
+     "label": "Tararua",
+     "per1k": 9.5,
+     "net": 180
+    },
+    "Tasman District": {
+     "label": "Tasman",
+     "per1k": 1.0,
+     "net": 60
+    },
+    "Taupo District": {
+     "label": "Taupo",
+     "per1k": 32.3,
+     "net": 1380
+    },
+    "Tauranga City": {
+     "label": "Tauranga",
+     "per1k": 26.9,
+     "net": 4330
+    },
+    "Thames-Coromandel District": {
+     "label": "Thames-Coromandel",
+     "per1k": 11.5,
+     "net": 370
+    },
+    "Timaru District": {
+     "label": "Timaru",
+     "per1k": 37.0,
+     "net": 1830
+    },
+    "Upper Hutt City": {
+     "label": "Upper Hutt",
+     "per1k": 9.5,
+     "net": 450
+    },
+    "Waikato District": {
+     "label": "Waikato",
+     "per1k": 6.1,
+     "net": 560
+    },
+    "Waimakariri District": {
+     "label": "Waimakariri",
+     "per1k": -0.3,
+     "net": -20
+    },
+    "Waimate District": {
+     "label": "Waimate",
+     "per1k": 62.7,
+     "net": 530
+    },
+    "Waipa District": {
+     "label": "Waipa",
+     "per1k": 16.6,
+     "net": 1030
+    },
+    "Wairoa District": {
+     "label": "Wairoa",
+     "per1k": 16.8,
+     "net": 150
+    },
+    "Waitaki District": {
+     "label": "Waitaki",
+     "per1k": 45.1,
+     "net": 1110
+    },
+    "Waitomo District": {
+     "label": "Waitomo",
+     "per1k": 32.2,
+     "net": 320
+    },
+    "Wellington City": {
+     "label": "Wellington",
+     "per1k": 12.5,
+     "net": 2630
+    },
+    "Western Bay of Plenty District": {
+     "label": "Western Bay of Plenty",
+     "per1k": 27.5,
+     "net": 1650
+    },
+    "Westland District": {
+     "label": "Westland",
+     "per1k": 49.8,
+     "net": 470
+    },
+    "Whakatane District": {
+     "label": "Whakatane",
+     "per1k": 17.7,
+     "net": 680
+    },
+    "Whanganui District": {
+     "label": "Whanganui",
+     "per1k": 18.1,
+     "net": 890
+    },
+    "Whangarei District": {
+     "label": "Whangarei",
+     "per1k": 20.1,
+     "net": 2020
+    },
+    "Opotiki District": {
+     "label": "Opotiki",
+     "per1k": 10.7,
+     "net": 110
+    },
+    "Otorohanga District": {
+     "label": "Otorohanga",
+     "per1k": 21.5,
+     "net": 230
+    }
+   }
+  },
+  "akl-map": {
+   "kind": "map",
+   "map": "auckland",
+   "title": "Net migration per 1,000 residents: Auckland local boards",
+   "subtitle": "Three years ended June 2025",
+   "scale": {
+    "domain": [
+     0,
+     40.84934277047523,
+     71.48634984833164,
+     102.12335692618807
+    ],
+    "range": [
+     "#2A3038",
+     "#2C7FA8",
+     "#5CBBAB",
+     "#C8E9A0"
+    ]
+   },
+   "fitExclude": [],
+   "fitBBox": [
+    [
+     174.4,
+     -37.15
+    ],
+    [
+     175.05,
+     -36.35
+    ]
+   ],
+   "values": {
+    "Albert-Eden": {
+     "label": "Albert-Eden",
+     "per1k": 49.4,
+     "net": 5080
+    },
+    "Aotea/Great Barrier": {
+     "label": "Aotea/Great Barrier",
+     "per1k": 8.0,
+     "net": 10
+    },
+    "Devonport-Takapuna": {
+     "label": "Devonport-Takapuna",
+     "per1k": 43.5,
+     "net": 2660
+    },
+    "Franklin": {
+     "label": "Franklin",
+     "per1k": 14.1,
+     "net": 1270
+    },
+    "Henderson-Massey": {
+     "label": "Henderson-Massey",
+     "per1k": 56.6,
+     "net": 7880
+    },
+    "Hibiscus and Bays": {
+     "label": "Hibiscus and Bays",
+     "per1k": 24.7,
+     "net": 2990
+    },
+    "Howick": {
+     "label": "Howick",
+     "per1k": 74.5,
+     "net": 12900
+    },
+    "Kaipatiki": {
+     "label": "Kaip\u0101tiki",
+     "per1k": 62.7,
+     "net": 5990
+    },
+    "Manurewa": {
+     "label": "Manurewa",
+     "per1k": 62.4,
+     "net": 6890
+    },
+    "Maungakiekie-Tamaki": {
+     "label": "Maungakiekie-T\u0101maki",
+     "per1k": 68.0,
+     "net": 5990
+    },
+    "Mangere-Otahuhu": {
+     "label": "M\u0101ngere-\u014ct\u0101huhu",
+     "per1k": 60.3,
+     "net": 5180
+    },
+    "Papakura": {
+     "label": "Papakura",
+     "per1k": 56.7,
+     "net": 4770
+    },
+    "Puketapapa": {
+     "label": "Puket\u0101papa",
+     "per1k": 90.2,
+     "net": 5700
+    },
+    "Rodney": {
+     "label": "Rodney",
+     "per1k": 1.2,
+     "net": 100
+    },
+    "Upper Harbour": {
+     "label": "Upper Harbour",
+     "per1k": 49.5,
+     "net": 4180
+    },
+    "Waiheke": {
+     "label": "Waiheke",
+     "per1k": 36.3,
+     "net": 340
+    },
+    "Waitemata": {
+     "label": "Waitemat\u0101",
+     "per1k": 88.5,
+     "net": 7870
+    },
+    "Waitakere Ranges": {
+     "label": "Wait\u0101kere Ranges",
+     "per1k": 12.1,
+     "net": 690
+    },
+    "Whau": {
+     "label": "Whau",
+     "per1k": 87.6,
+     "net": 8000
+    },
+    "Orakei": {
+     "label": "\u014cr\u0101kei",
+     "per1k": 13.9,
+     "net": 1210
+    },
+    "Otara-Papatoetoe": {
+     "label": "\u014ctara-Papatoetoe",
+     "per1k": 102.1,
+     "net": 10100
+    }
+   }
   }
  },
  "steps": [
@@ -225,7 +729,41 @@
     "cn_student"
    ],
    "title": "China is the mirror image",
-   "body": "Student visas make up 42% of arrivals from China in the year to March 2026, 6,221 people, and they held their level while work visas fell from a peak of 11,214 in the year to September 2023 to 3,163. For India the student band covers 31%."
+   "body": "Student visas make up 42% of arrivals from China in the year to March 2026, 6,221 people, and they held their level while work visas fell from a peak of 11,214 in the year to September 2023 to 3,163. For India the student band covers 31%. Now to where all these people end up."
+  },
+  {
+   "chart": "nz-map",
+   "highlight": [],
+   "title": "Where they actually land",
+   "body": "Net international migration per 1,000 residents by territorial authority, over the three years ended June 2025. Rates run from -4.9 to 70.8, and 3 of 67 authorities recorded a net outflow."
+  },
+  {
+   "chart": "nz-map",
+   "highlight": [
+    "Queenstown-Lakes District",
+    "Mackenzie District",
+    "Hamilton City",
+    "Waimate District",
+    "Ashburton District"
+   ],
+   "title": "The highest rates are not the biggest places",
+   "body": "Queenstown-Lakes leads at 70.8 per 1,000, but that is only 3,810 people. Hamilton sits just behind it on the rate while taking 12,700, the largest absolute intake of the five."
+  },
+  {
+   "chart": "akl-map",
+   "highlight": [],
+   "title": "Auckland is not one place either",
+   "body": "The same measure across Auckland's local board areas. The spread inside the city, 1.2 to 102.1 per 1,000, is wider than the spread across the country as a whole."
+  },
+  {
+   "chart": "akl-map",
+   "highlight": [
+    "Otara-Papatoetoe",
+    "Puketapapa",
+    "Waitemata"
+   ],
+   "title": "South and central Auckland absorb the most",
+   "body": "\u014ctara-Papatoetoe took 10,100 people, 102 per 1,000 residents, against 1.2 in Rodney at the other end of the city. Sources and notes follow below."
   }
  ],
  "series": [

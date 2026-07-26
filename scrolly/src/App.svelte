@@ -7,9 +7,25 @@
 
   import data from "./data/story.json";
   import Chart from "./lib/Chart.svelte";
+  import MapChart from "./lib/MapChart.svelte";
   import Scrolly from "./lib/Scrolly.svelte";
 
   let step = $state(0);
+
+  // Two graphic components, each of which only understands its own kind of chart.
+  // Rather than swap them, both stay mounted and cross-fade, and each is fed the
+  // most recent step of its own kind. So the time-series chart holds its last
+  // frame behind the maps instead of being handed a map definition it cannot draw.
+  const kindOf = (i) => data.charts[data.steps[i].chart].kind ?? "series";
+
+  function lastOfKind(upTo, kind) {
+    for (let i = upTo; i >= 0; i -= 1) if (kindOf(i) === kind) return i;
+    return null;
+  }
+
+  const showMap = $derived(kindOf(step) === "map");
+  const seriesStep = $derived(lastOfKind(step, "series") ?? 0);
+  const mapStep = $derived(lastOfKind(step, "map"));
 </script>
 
 <header class="hero">
@@ -21,7 +37,16 @@
 
 <Scrolly steps={data.steps} bind:active={step}>
   {#snippet graphic()}
-    <Chart {step} />
+    <div class="graphic-stack">
+      <div class="graphic-layer" class:faded={showMap}>
+        <Chart step={seriesStep} />
+      </div>
+      {#if mapStep !== null}
+        <div class="graphic-layer" class:faded={!showMap}>
+          <MapChart step={mapStep} />
+        </div>
+      {/if}
+    </div>
   {/snippet}
 
   {#snippet narrative(s)}
@@ -89,6 +114,25 @@
     font-size: 0.85rem;
     color: var(--faint);
     margin-top: 1.5rem;
+  }
+
+  /* The two graphic layers occupy the same box so one can fade into the other. */
+  .graphic-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+  }
+
+  .graphic-layer {
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .graphic-layer.faded {
+    opacity: 0;
+    pointer-events: none;
   }
 
   .outro {

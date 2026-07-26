@@ -1,0 +1,394 @@
+<script>
+  import * as d3 from "d3";
+  // Static build-time data, imported rather than passed as props. Geometry lives
+  // in its own file: it is far larger than the story and never read by eye.
+  import data from "../data/story.json";
+  import maps from "../data/maps.json";
+
+  let {step} = $props();
+
+  const HEADER_H = 62;   // px reserved above the map for title + subtitle
+  const PAD = 10;
+  // Gutter kept clear on each side for annotation labels. The projection is fitted
+  // inside what is left, so a label never has to sit on top of the map.
+  const GUTTER = 146;
+  const GUTTER_NARROW = 92;
+  const LINE_H = 15;
+  const LABEL_SLOT = LINE_H * 3 + 14;  // three lines of text plus breathing room
+  const NO_DATA = "#1B2026";
+
+  let width = $state(900);
+  let height = $state(520);
+
+  const activeStep = $derived(data.steps[step]);
+  const chartId = $derived(activeStep.chart);
+  const chart = $derived(data.charts[chartId]);
+  const geo = $derived(maps[chart.map]);
+  const plotHeight = $derived(Math.max(220, height - HEADER_H));
+  const gutter = $derived(width < 720 ? GUTTER_NARROW : GUTTER);
+
+  const color = $derived(
+    d3.scaleLinear().domain(chart.scale.domain).range(chart.scale.range).clamp(true)
+  );
+
+  // ── Projection ───────────────────────────────────────────────────────────────
+  // Fitted to the features worth framing, not all of them: Great Barrier sits 60km
+  // off Auckland and would shrink the city to a corner if it drove the fit. It is
+  // still drawn and coloured, just allowed to fall outside the frame.
+
+  /** What the projection should frame: an explicit lon/lat window when the chart
+   *  gives one, otherwise the features worth showing. */
+  const fitTarget = $derived.by(() => {
+    if (chart.fitBBox) {
+      const [[west, south], [east, north]] = chart.fitBBox;
+      // Clockwise, like every other ring here: wound the other way d3-geo reads
+      // this as the whole globe and fitExtent scales the planet into the frame.
+      return {
+        type: "Polygon",
+        coordinates: [[[west, south], [west, north], [east, north], [east, south], [west, south]]]
+      };
+    }
+    const exclude = new Set(chart.fitExclude ?? []);
+    return {
+      type: "FeatureCollection",
+      features: geo.features.filter((f) => !exclude.has(f.properties.key))
+    };
+  });
+
+  const projection = $derived(
+    d3.geoMercator().fitExtent(
+      [[gutter + PAD, PAD], [width - gutter - PAD, plotHeight - PAD]],
+      fitTarget
+    )
+  );
+
+  const path = $derived(d3.geoPath(projection));
+
+  // Where the map actually ended up. A tall, narrow country fitted into a wide box
+  // is height-constrained, so it leaves a lot of empty space either side. Anchoring
+  // labels to the drawn edge rather than to the reserved gutter keeps the leader
+  // lines short instead of running them across that emptiness.
+  const mapBounds = $derived(path.bounds(fitTarget));
+
+  // ── Annotations ──────────────────────────────────────────────────────────────
+
+  /** Centroid of a feature's largest polygon, so a leader points at land rather
+   *  than at the sea between two islands. */
+  function landCentroid(feature) {
+    const geometry = feature.geometry;
+    if (geometry.type !== "MultiPolygon") return path.centroid(feature);
+
+    let best = null;
+    let bestArea = -Infinity;
+    for (const rings of geometry.coordinates) {
+      const part = {type: "Polygon", coordinates: rings};
+      const area = Math.abs(path.area({type: "Feature", geometry: part}));
+      if (area > bestArea) {
+        bestArea = area;
+        best = part;
+      }
+    }
+    return path.centroid({type: "Feature", geometry: best});
+  }
+
+  /** Push overlapping labels apart in place: down first, then back up if the
+   *  column has run past the bottom, so a crowded side stays inside the frame. */
+  function dodge(items, slot, top, bottom) {
+    items.sort((a, b) => a.y - b.y);
+    for (let i = 1; i < items.length; i += 1) {
+      items[i].y = Math.max(items[i].y, items[i - 1].y + slot);
+    }
+    if (items.length && items.at(-1).y > bottom) {
+      items.at(-1).y = bottom;
+      for (let i = items.length - 2; i >= 0; i -= 1) {
+        items[i].y = Math.min(items[i].y, items[i + 1].y - slot);
+      }
+    }
+    for (let i = 0; i < items.length; i += 1) {
+      items[i].y = Math.max(items[i].y, top + i * slot);
+    }
+    return items;
+  }
+
+  const annotations = $derived.by(() => {
+    const keys = activeStep.highlight ?? [];
+    if (keys.length === 0) return [];
+
+    const middle = width / 2;
+    const items = [];
+    for (const key of keys) {
+      const feature = geo.features.find((f) => f.properties.key === key);
+      const value = chart.values[key];
+      if (!feature || !value) continue;
+      const [cx, cy] = landCentroid(feature);
+      if (!Number.isFinite(cx) || !Number.isFinite(cy)) continue;
+      items.push({key, cx, cy, y: cy, side: cx < middle ? "left" : "right", ...value});
+    }
+
+    const top = PAD + LABEL_SLOT / 2;
+    const bottom = plotHeight - PAD - LABEL_SLOT / 2;
+    for (const side of ["left", "right"]) {
+      dodge(items.filter((i) => i.side === side), LABEL_SLOT, top, bottom);
+    }
+    return items;
+  });
+
+  // How much room the widest label in this set actually needs. Estimated from the
+  // character count rather than measured, because the anchor has to be known
+  // before the text is laid out. The reserved gutter is a fit hint, not a
+  // guarantee: on a phone it is narrower than a long area name, so clamping to
+  // the gutter alone pushes text off screen.
+  const labelWidth = $derived.by(() => {
+    let longest = 0;
+    for (const a of annotations) {
+      longest = Math.max(
+        longest,
+        a.label.length,
+        `${a.per1k} per 1,000`.length,
+        `${formatNet(a.net)} people`.length
+      );
+    }
+    return Math.min(190, longest * 6.7 + 10);
+  });
+
+  // Labels sit just outside the drawn map, pulled in far enough that their text
+  // always fits on screen.
+  const anchorX = (side) =>
+    side === "left"
+      ? Math.max(labelWidth + PAD, mapBounds[0][0] - 26)
+      : Math.min(width - labelWidth - PAD, mapBounds[1][0] + 26);
+
+  const elbowX = (side) => anchorX(side) + (side === "left" ? 14 : -14);
+  const leader = (a) => `${a.cx},${a.cy} ${elbowX(a.side)},${a.y} ${anchorX(a.side)},${a.y}`;
+
+  // ── Fills ────────────────────────────────────────────────────────────────────
+
+  const highlighted = $derived(new Set(activeStep.highlight ?? []));
+  const isDim = (key) => highlighted.size > 0 && !highlighted.has(key);
+  const fillFor = (key) => {
+    const value = chart.values[key];
+    return value ? color(value.per1k) : NO_DATA;
+  };
+
+  // ── Legend ───────────────────────────────────────────────────────────────────
+  // The colour scale is piecewise, so the gradient stops have to sit at the same
+  // proportional offsets as the domain breaks rather than being evenly spaced.
+
+  const legend = $derived.by(() => {
+    const domain = chart.scale.domain;
+    const lo = domain[0];
+    const hi = domain.at(-1);
+    const span = hi - lo || 1;
+    return {
+      lo,
+      hi,
+      zero: lo < 0 ? ((0 - lo) / span) * 100 : null,
+      stops: domain.map((d, i) => ({
+        offset: ((d - lo) / span) * 100,
+        color: chart.scale.range[i]
+      }))
+    };
+  });
+
+  const formatNet = (n) => (n >= 0 ? "+" : "") + d3.format(",.0f")(n);
+  const gradientId = $derived(`legend-${chartId}`);
+  const showLegend = $derived(width >= 720 || annotations.length === 0);
+  const clipId = $derived(`clip-${chartId}`);
+
+  // A framed map is clipped to its window, so areas that run past it (Rodney's
+  // northern half here) end at a deliberate edge rather than at the SVG's.
+  const clipRect = $derived.by(() => {
+    if (!chart.fitBBox) return null;
+    const [[x0, y0], [x1, y1]] = mapBounds;
+    return {x: x0, y: y0, width: x1 - x0, height: y1 - y0};
+  });
+</script>
+
+<div class="map" bind:clientWidth={width} bind:clientHeight={height}>
+  <div class="map-header" style:padding-left="{gutter}px">
+    {#key chartId}
+      <h2 class="map-title">{chart.title}</h2>
+      <p class="map-subtitle">{chart.subtitle}</p>
+    {/key}
+  </div>
+
+  <svg {width} height={plotHeight} role="img" aria-label={chart.title}>
+    {#key chartId}
+      <g class="layer">
+        {#if clipRect}
+          <defs>
+            <clipPath id={clipId}>
+              <rect {...clipRect} />
+            </clipPath>
+          </defs>
+        {/if}
+
+        <!-- Only the geography is clipped. Leader lines and labels sit outside the
+             frame by design, so they must stay out of the clip. -->
+        <g clip-path={clipRect ? `url(#${clipId})` : null}>
+          {#each geo.features as feature (feature.properties.key)}
+            {@const key = feature.properties.key}
+            <path
+              class="region"
+              class:dim={isDim(key)}
+              d={path(feature)}
+              fill={fillFor(key)}
+            />
+          {/each}
+
+          <!-- highlighted outlines, over every fill so no neighbour covers them -->
+          {#each geo.features as feature (feature.properties.key)}
+            {#if highlighted.has(feature.properties.key)}
+              <path class="region-outline" d={path(feature)} />
+            {/if}
+          {/each}
+        </g>
+
+        <!-- leader lines and labels -->
+        {#each annotations as a (a.key)}
+          <g class="annotation">
+            <polyline class="leader" points={leader(a)} />
+            <circle class="leader-dot" cx={a.cx} cy={a.cy} r="3" />
+            <text
+              class="annotation-text"
+              x={anchorX(a.side)}
+              y={a.y}
+              text-anchor={a.side === "left" ? "end" : "start"}
+            >
+              <tspan class="annotation-name" x={anchorX(a.side)} dy="-{LINE_H * 0.5}">{a.label}</tspan>
+              <tspan class="annotation-value" x={anchorX(a.side)} dy={LINE_H}>{a.per1k} per 1,000</tspan>
+              <tspan class="annotation-value" x={anchorX(a.side)} dy={LINE_H}>{formatNet(a.net)} people</tspan>
+            </text>
+          </g>
+        {/each}
+
+        <!-- Legend, centred under the map so it stays clear of the label columns.
+             A phone has no room for both, and an annotated step already states the
+             exact figures, so there the legend gives way to the labels. -->
+        {#if showLegend}
+        <g class="legend" transform="translate({width / 2 - 75},{plotHeight - 24})">
+          <defs>
+            <linearGradient id={gradientId} x1="0%" x2="100%">
+              {#each legend.stops as stop}
+                <stop offset="{stop.offset}%" stop-color={stop.color} />
+              {/each}
+            </linearGradient>
+          </defs>
+          <!-- backing, so the legend stays readable where the map runs behind it -->
+          <rect class="legend-backing" x="-10" y="-18" width="170" height="46" rx="3" />
+          <rect width="150" height="8" rx="1" fill="url(#{gradientId})" />
+          <text class="legend-tick" x="0" y="20">{legend.lo.toFixed(0)}</text>
+          <text class="legend-tick" x="150" y="20" text-anchor="end">{legend.hi.toFixed(0)}</text>
+          {#if legend.zero !== null}
+            <line class="legend-zero" x1={legend.zero * 1.5} x2={legend.zero * 1.5} y1="-2" y2="10" />
+          {/if}
+          <text class="legend-title" x="0" y="-6">Net per 1,000 residents</text>
+        </g>
+        {/if}
+      </g>
+    {/key}
+  </svg>
+</div>
+
+<style>
+  .map {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .map-header {
+    height: 62px;
+    flex: none;
+  }
+
+  .map-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .map-subtitle {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0.15rem 0 0;
+  }
+
+  .map-header :global(h2),
+  .map-header :global(p),
+  .layer {
+    animation: fade-in 0.45s ease both;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  svg {
+    overflow: hidden;
+  }
+
+  .region {
+    stroke: var(--bg);
+    stroke-width: 0.5;
+    fill-opacity: 1;
+    transition: fill-opacity 0.4s ease;
+  }
+
+  .region.dim {
+    fill-opacity: 0.28;
+  }
+
+  .region-outline {
+    fill: none;
+    stroke: var(--fg);
+    stroke-width: 1.4;
+  }
+
+  .leader {
+    fill: none;
+    stroke: var(--fg);
+    stroke-width: 1;
+    opacity: 0.55;
+  }
+
+  .leader-dot {
+    fill: var(--fg);
+  }
+
+  .annotation-name {
+    font-size: 0.82rem;
+    font-weight: 700;
+    fill: var(--fg);
+  }
+
+  .annotation-value {
+    font-size: 0.75rem;
+    fill: var(--muted);
+  }
+
+  .legend-backing {
+    fill: var(--bg);
+    opacity: 0.82;
+  }
+
+  .legend-tick {
+    font-size: 0.68rem;
+    fill: var(--tick);
+  }
+
+  .legend-title {
+    font-size: 0.68rem;
+    fill: var(--faint);
+  }
+
+  .legend-zero {
+    stroke: var(--fg);
+    stroke-width: 1;
+    opacity: 0.6;
+  }
+</style>

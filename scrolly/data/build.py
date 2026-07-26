@@ -36,13 +36,26 @@ REPO_ROOT = SCROLLY_ROOT.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 from src.dashboard.data_loader import DataLoader  # noqa: E402
+from src.dashboard.stories.regional_map import RegionalMapStory  # noqa: E402
 
 # ── Paths and constants ───────────────────────────────────────────────────────
 
 OUT_JSON = SCROLLY_ROOT / "src" / "data" / "story.json"
+OUT_MAPS = SCROLLY_ROOT / "src" / "data" / "maps.json"
 
 ROLLING_WINDOW = 12  # months — annual running total, the standard presentation
 START = "2005"       # first year shown on the x-axis
+
+# Geometry lives in a second file rather than story.json: it is two orders of
+# magnitude larger than the time series and never read by eye.
+ASSETS = REPO_ROOT / "dashboard" / "assets"
+COORD_DP = 4  # ~11 m, well under a pixel at either map's scale
+
+# simplify tolerance in degrees, chosen per map scale
+MAP_SOURCES: Dict[str, Dict[str, Any]] = {
+    "nz": {"path": ASSETS / "nz_ta.geojson", "key": "ta_name_ascii", "tolerance": 0.01},
+    "auckland": {"path": ASSETS / "auckland_albs.geojson", "key": "alb_name_ascii", "tolerance": 0.001},
+}
 
 # ── Header text ───────────────────────────────────────────────────────────────
 
@@ -191,6 +204,37 @@ CHARTS: Dict[str, Dict[str, Any]] = {
     },
 }
 
+# Every chart carries a `kind` so the front end knows which component draws it.
+for _chart in CHARTS.values():
+    _chart["kind"] = "series"
+
+# ── Map colours ───────────────────────────────────────────────────────────────
+# Same family as the age bands, so a bright cell means a lot of people wherever
+# it appears. The neutral end sits close to the page background, so a region near
+# zero recedes rather than reading as a colour.
+
+_MAP_NEUTRAL = "#2A3038"
+_MAP_RED = "#E8705F"
+_MAP_STOPS = ["#2C7FA8", "#5CBBAB", "#C8E9A0"]
+
+
+def _map_scale(lo: float, hi: float) -> Dict[str, List[Any]]:
+    """Colour stops for a choropleth, as domain/range arrays for d3.scaleLinear.
+
+    Negative values get their own red arm with the neutral pinned at zero, so the
+    colour break always falls on zero rather than mid-range.
+    """
+    if lo < 0:
+        return {
+            "domain": [lo, 0, hi * 0.4, hi * 0.7, hi],
+            "range": [_MAP_RED, _MAP_NEUTRAL] + _MAP_STOPS,
+        }
+    return {
+        "domain": [0, hi * 0.4, hi * 0.7, hi],
+        "range": [_MAP_NEUTRAL] + _MAP_STOPS,
+    }
+
+
 # ── Source data mappings ──────────────────────────────────────────────────────
 
 # Same six bins as src/dashboard/stories/kiwi_exodus.py, keyed to series names.
@@ -314,6 +358,198 @@ def _records(wide: pd.DataFrame) -> List[Dict[str, Any]]:
     ]
 
 
+# ── Map geometry ──────────────────────────────────────────────────────────────
+
+
+def _round_ring(ring: List[Any], dp: int) -> List[List[float]] | None:
+    """Round a ring's coordinates, dropping points that collapse onto each other."""
+    out: List[List[float]] = []
+    for x, y in ring:
+        point = [round(float(x), dp), round(float(y), dp)]
+        if not out or point != out[-1]:
+            out.append(point)
+    # A ring needs three distinct corners plus the closing point to enclose area.
+    return out if len(out) >= 4 else None
+
+
+def _round_geometry(geom: Dict[str, Any], dp: int) -> Dict[str, Any] | None:
+    """Round every ring of a Polygon or MultiPolygon, dropping any that collapse."""
+    if geom["type"] == "Polygon":
+        rings = [r for r in (_round_ring(r, dp) for r in geom["coordinates"]) if r]
+        return {"type": "Polygon", "coordinates": rings} if rings else None
+
+    polygons = []
+    for polygon in geom["coordinates"]:
+        rings = [r for r in (_round_ring(r, dp) for r in polygon) if r]
+        if rings:
+            polygons.append(rings)
+    return {"type": "MultiPolygon", "coordinates": polygons} if polygons else None
+
+
+def _clean_geometry(geometry: Any, tolerance: float) -> Any:
+    """Drop sub-pixel islands and force clockwise winding on every polygon part.
+
+    Two traps, both of which make d3-geo read a shape as the whole globe rather
+    than as a region, at which point fitExtent scales the planet into the frame
+    and every real area collapses to a pixel or two:
+
+    1. Winding. d3-geo treats a spherical polygon's interior as the side to the
+       right of the ring, which is the opposite of GeoJSON RFC 7946. Stats NZ
+       shapefiles happen to use the convention d3 wants, but simplification can
+       flip an individual part, so it is worth pinning rather than assuming.
+       Plotly draws in the plane and never cares, which is why the Quarto
+       dashboard renders these same files without complaint.
+    2. Slivers. Whangarei ships 74 parts, most of them tiny offshore islands.
+       Simplifying at this tolerance collapses the smallest into degenerate rings
+       whose winding is meaningless, and one of those was enough to break the
+       whole map.
+    """
+    from shapely.geometry import MultiPolygon
+    from shapely.geometry.polygon import orient
+
+    # An island smaller than a quarter of the simplify tolerance squared cannot
+    # register at the scale this map is drawn at.
+    min_area = (tolerance ** 2) / 4
+
+    if geometry.geom_type == "Polygon":
+        return orient(geometry, sign=-1.0)
+    if geometry.geom_type == "MultiPolygon":
+        parts = [orient(p, sign=-1.0) for p in geometry.geoms if p.area >= min_area]
+        # Never return an empty geometry: keep the largest part if all look small.
+        if not parts:
+            largest = max(geometry.geoms, key=lambda p: p.area)
+            parts = [orient(largest, sign=-1.0)]
+        return MultiPolygon(parts)
+    return geometry
+
+
+def _load_map(name: str) -> Dict[str, Any]:
+    """Read one GeoJSON asset, simplify it and strip it to a single join key.
+
+    The dashboard's assets carry 17 decimal places and properties the map does not
+    need. Simplifying and rounding takes the pair from 1.1 MB to under 300 KB with
+    no visible change at these scales.
+    """
+    import geopandas as gpd  # imported here: only the map step needs it
+
+    source = MAP_SOURCES[name]
+    frame = gpd.read_file(source["path"])
+    tolerance = source["tolerance"]
+    frame["geometry"] = frame.geometry.simplify(tolerance).apply(
+        lambda g: _clean_geometry(g, tolerance)
+    )
+
+    features = []
+    dropped = []
+    for _, row in frame.iterrows():
+        geometry = _round_geometry(row.geometry.__geo_interface__, COORD_DP)
+        if geometry is None:
+            dropped.append(row[source["key"]])
+            continue
+        features.append({
+            "type": "Feature",
+            "properties": {"key": row[source["key"]]},
+            "geometry": geometry,
+        })
+    if dropped:
+        print("  [maps] " + name + ": dropped after simplify: " + ", ".join(dropped))
+    return {"type": "FeatureCollection", "features": features}
+
+
+# ── Map data ──────────────────────────────────────────────────────────────────
+
+
+def _shorten(name: str) -> str:
+    """Trim TA suffixes so annotation labels stay narrow."""
+    for suffix in (" District", " City", " Region"):
+        if name.endswith(suffix):
+            return name[: -len(suffix)]
+    return name
+
+
+def _nz_map_values() -> pd.DataFrame:
+    """Net international migration per 1,000 residents by territorial authority."""
+    net_by_ta, pop_by_ta = RegionalMapStory._load_subnational()
+    frame = RegionalMapStory._build_ta_df(net_by_ta, pop_by_ta)
+    frame["key"] = frame["ta_name"]
+    frame["label"] = frame["ta_name"].apply(_shorten)
+    return frame[["key", "label", "net", "value_per1k"]]
+
+
+def _auckland_map_values() -> pd.DataFrame:
+    """The same measure for Auckland local board areas."""
+    frame = RegionalMapStory._load_albs()
+    return frame.rename(columns={"alb_name_ascii": "key", "display_name": "label"})[
+        ["key", "label", "net", "value_per1k"]
+    ]
+
+
+def _drop_unvalued(map_name: str, geometry: Dict[str, Any], values: pd.DataFrame) -> None:
+    """Remove features with no value, in place.
+
+    Not just tidiness. The TA file carries an "Area Outside Territorial Authority"
+    polygon covering the whole EEZ whose rings wind the wrong way, so d3-geo reads
+    it as the entire sphere minus New Zealand. Left in, it fills the frame and
+    fitExtent scales the world into the box, leaving the real authorities a couple
+    of pixels wide.
+    """
+    keys = set(values["key"])
+    keep = [f for f in geometry["features"] if f["properties"]["key"] in keys]
+    dropped = sorted(
+        f["properties"]["key"] for f in geometry["features"] if f["properties"]["key"] not in keys
+    )
+    if dropped:
+        print("  [maps] " + map_name + ": dropped, no value: " + ", ".join(dropped))
+    geometry["features"] = keep
+
+
+def _map_chart(
+    map_name: str,
+    values: pd.DataFrame,
+    geometry: Dict[str, Any],
+    title: str,
+    subtitle: str,
+    fit_exclude: List[str] | None = None,
+    fit_bbox: List[List[float]] | None = None,
+) -> Dict[str, Any]:
+    """Assemble a map chart definition, warning about any join misses."""
+    _drop_unvalued(map_name, geometry, values)
+
+    keys_in_geometry = {f["properties"]["key"] for f in geometry["features"]}
+    unmatched = sorted(set(values["key"]) - keys_in_geometry)
+    if unmatched:
+        print("  [maps] " + map_name + ": no geometry for " + ", ".join(unmatched))
+
+    lo = float(values["value_per1k"].min())
+    hi = float(values["value_per1k"].max())
+    return {
+        "kind": "map",
+        "map": map_name,
+        "title": title,
+        "subtitle": subtitle,
+        "scale": _map_scale(lo, hi),
+        "fitExclude": fit_exclude or [],
+        "fitBBox": fit_bbox,
+        "values": {
+            row["key"]: {
+                "label": row["label"],
+                "per1k": round(float(row["value_per1k"]), 1),
+                "net": int(round(float(row["net"]))),
+            }
+            for _, row in values.iterrows()
+        },
+    }
+
+
+def _top_keys(values: pd.DataFrame, count: int) -> List[str]:
+    """The `count` areas with the highest per-1,000 rate, highest first."""
+    return (
+        values.sort_values("value_per1k", ascending=False)
+        .head(count)["key"]
+        .tolist()
+    )
+
+
 # ── Narrative ─────────────────────────────────────────────────────────────────
 
 
@@ -322,8 +558,67 @@ def _month_label(month: pd.Timestamp) -> str:
     return month.strftime("%B %Y")
 
 
+def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
+    """The four map steps. `highlight` names the areas to colour and annotate."""
+    nz_sorted = nz.sort_values("value_per1k", ascending=False)
+    akl_sorted = akl.sort_values("value_per1k", ascending=False)
+    nz_top = nz_sorted.head(5)
+    akl_top = akl_sorted.head(3)
+    akl_low = akl_sorted.iloc[-1]
+    nz_negative = int((nz["value_per1k"] < 0).sum())
+
+    return [
+        {
+            "chart": "nz-map",
+            "highlight": [],
+            "title": "Where they actually land",
+            "body": (
+                "Net international migration per 1,000 residents by territorial "
+                f"authority, over the three years ended June 2025. Rates run from "
+                f"{nz['value_per1k'].min():.1f} to {nz['value_per1k'].max():.1f}, and "
+                f"{nz_negative} of {len(nz)} authorities recorded a net outflow."
+            ),
+        },
+        {
+            "chart": "nz-map",
+            "highlight": _top_keys(nz, 5),
+            "title": "The highest rates are not the biggest places",
+            "body": (
+                f"{nz_top.iloc[0]['label']} leads at "
+                f"{nz_top.iloc[0]['value_per1k']:.1f} per 1,000, but that is only "
+                f"{nz_top.iloc[0]['net']:,.0f} people. "
+                f"{nz_top.iloc[2]['label']} sits just behind it on the rate while "
+                f"taking {nz_top.iloc[2]['net']:,.0f}, the largest absolute intake of "
+                "the five."
+            ),
+        },
+        {
+            "chart": "akl-map",
+            "highlight": [],
+            "title": "Auckland is not one place either",
+            "body": (
+                "The same measure across Auckland's local board areas. The spread "
+                f"inside the city, {akl_low['value_per1k']:.1f} to "
+                f"{akl_sorted.iloc[0]['value_per1k']:.1f} per 1,000, is wider than "
+                "the spread across the country as a whole."
+            ),
+        },
+        {
+            "chart": "akl-map",
+            "highlight": _top_keys(akl, 3),
+            "title": "South and central Auckland absorb the most",
+            "body": (
+                f"{akl_top.iloc[0]['label']} took {akl_top.iloc[0]['net']:,.0f} people, "
+                f"{akl_top.iloc[0]['value_per1k']:.0f} per 1,000 residents, against "
+                f"{akl_low['value_per1k']:.1f} in {akl_low['label']} at the other end "
+                "of the city. Sources and notes follow below."
+            ),
+        },
+    ]
+
+
 def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
-    """The nine scroll steps, with every figure read from the data.
+    """The nine time-series scroll steps, with every figure read from the data.
 
     `chart` names the entry in CHARTS to draw; `highlight` lists the bands the
     commentary is about, which stay solid while the rest fade back.
@@ -461,6 +756,7 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
                 f"visas fell from a peak of {wide['cn_work'].max():,.0f} in the year to "
                 f"{_month_label(cn_work_peak_month)} to {last['cn_work']:,.0f}. For India "
                 f"the student band covers {india_share['in_student'].loc[latest]:.0f}%."
+                " Now to where all these people end up."
             ),
         },
     ]
@@ -503,10 +799,43 @@ def build_wide(quiet: bool = False) -> pd.DataFrame:
     return wide[expected]
 
 
-def build_story(quiet: bool = False) -> Dict[str, Any]:
-    """Assemble the full story.json contract as a dict."""
+def build_maps() -> tuple[Dict[str, Any], Dict[str, Any], List[Dict[str, Any]]]:
+    """Build the two map charts, their geometry, and the four map steps.
+
+    Returns (geometries, chart definitions, steps). Geometry is written to its own
+    file; the chart definitions carry only the values and colour scale.
+    """
+    geometries = {name: _load_map(name) for name in MAP_SOURCES}
+    nz_values = _nz_map_values()
+    akl_values = _auckland_map_values()
+
+    charts = {
+        "nz-map": _map_chart(
+            "nz", nz_values, geometries["nz"],
+            title="Net migration per 1,000 residents by territorial authority",
+            subtitle="Three years ended June 2025",
+        ),
+        "akl-map": _map_chart(
+            "auckland", akl_values, geometries["auckland"],
+            title="Net migration per 1,000 residents: Auckland local boards",
+            subtitle="Three years ended June 2025",
+            # Great Barrier sits 60 km offshore and Rodney runs far north, so
+            # fitting to the features leaves the urban boards too small to read.
+            # Frame the city instead, on the same window the Quarto dashboard uses,
+            # and let the rest fall outside the clip.
+            fit_bbox=[[174.4, -37.15], [175.05, -36.35]],
+        ),
+    }
+    return geometries, charts, _map_steps(nz_values, akl_values)
+
+
+def build_story(quiet: bool = False) -> tuple[Dict[str, Any], Dict[str, Any]]:
+    """Assemble the story.json contract and the map geometry alongside it."""
     wide = build_wide(quiet=quiet)
-    return {
+    geometries, map_charts, map_steps = build_maps()
+
+    charts = {**CHARTS, **map_charts}
+    story = {
         "meta": {
             "title": TITLE,
             "standfirst": STANDFIRST,
@@ -522,10 +851,11 @@ def build_story(quiet: bool = False) -> Dict[str, Any]:
         "colors": COLORS,
         "labels": LABELS,
         "annotations": {},
-        "charts": CHARTS,
-        "steps": _steps(wide),
+        "charts": charts,
+        "steps": _steps(wide) + map_steps,
         "series": _records(wide),
     }
+    return story, geometries
 
 
 def _print_summary(story: Dict[str, Any]) -> None:
@@ -549,22 +879,41 @@ def _print_summary(story: Dict[str, Any]) -> None:
         print(f"{name:<18}{low:>10,.0f}{high:>12,.0f}   [{lo:,} to {hi:,}]{flag}")
 
 
+def _print_map_summary(story: Dict[str, Any], geometries: Dict[str, Any]) -> None:
+    """Per-map feature count, value coverage and rate range."""
+    print()
+    print("Map            features  valued   per-1k range")
+    print("-" * 62)
+    for name, chart in story["charts"].items():
+        if chart.get("kind") != "map":
+            continue
+        rates = [v["per1k"] for v in chart["values"].values()]
+        features = len(geometries[chart["map"]]["features"])
+        print(f"{name:<15}{features:>8}{len(rates):>9}   "
+              f"{min(rates):>6.1f} to {max(rates):<6.1f}")
+
+
 def main() -> None:
     print("Building the NZ migration scrollytelling contract")
     print("-" * 60)
 
-    story = build_story()
+    story, geometries = build_story()
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps(story, indent=1), encoding="utf-8")
+    OUT_MAPS.write_text(json.dumps(geometries, separators=(",", ":")), encoding="utf-8")
 
     print()
     _print_summary(story)
+    _print_map_summary(story, geometries)
     print()
     meta = story["meta"]
     print(f"Months: {meta['months']:,} ({meta['start']} to {meta['end']})")
-    print(f"Series: {len(story['colors'])}   Steps: {len(story['steps'])}")
+    print(f"Series: {len(story['colors'])}   Charts: {len(story['charts'])}   "
+          f"Steps: {len(story['steps'])}")
     print(f"Wrote {OUT_JSON.relative_to(REPO_ROOT)} "
           f"({OUT_JSON.stat().st_size / 1024:,.0f} KB)")
+    print(f"Wrote {OUT_MAPS.relative_to(REPO_ROOT)} "
+          f"({OUT_MAPS.stat().st_size / 1024:,.0f} KB)")
 
 
 if __name__ == "__main__":
