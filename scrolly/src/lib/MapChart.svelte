@@ -13,8 +13,11 @@
   // inside what is left, so a label never has to sit on top of the map.
   const GUTTER = 146;
   const GUTTER_NARROW = 92;
-  const LINE_H = 15;
-  const LABEL_SLOT = LINE_H * 3 + 14;  // three lines of text plus breathing room
+  // The left rail every other block on the page sits on: Chart.svelte's margin,
+  // the narrative's padding, the hero. The title belongs on this, NOT on the
+  // gutter, which is only about where annotation labels may go.
+  const RAIL = 52;
+  const RAIL_NARROW = 42;
   const NO_DATA = "#1B2026";
 
   let width = $state(900);
@@ -25,7 +28,15 @@
   const chart = $derived(data.charts[chartId]);
   const geo = $derived(maps[chart.map]);
   const plotHeight = $derived(Math.max(220, height - HEADER_H));
-  const gutter = $derived(width < 720 ? GUTTER_NARROW : GUTTER);
+  const narrow = $derived(width < 720);
+  const gutter = $derived(narrow ? GUTTER_NARROW : GUTTER);
+  const rail = $derived(narrow ? RAIL_NARROW : RAIL);
+
+  // One label size at every width. These track the font sizes in the stylesheet:
+  // LINE_H is the leading, CHAR_W the average glyph width used to reserve room.
+  const LINE_H = 14;
+  const LABEL_SLOT = LINE_H * 3 + 13;  // three lines plus breathing room
+  const CHAR_W = 6.2;
 
   const color = $derived(
     d3.scaleLinear().domain(chart.scale.domain).range(chart.scale.range).clamp(true)
@@ -55,12 +66,45 @@
     };
   });
 
-  const projection = $derived(
-    d3.geoMercator().fitExtent(
-      [[gutter + PAD, PAD], [width - gutter - PAD, plotHeight - PAD]],
-      fitTarget
-    )
-  );
+  // How much room the widest label in this set needs, estimated from character
+  // count because the layout has to be known before the text is laid out. Read
+  // from the step's values rather than from `annotations`, which needs this.
+  const labelWidth = $derived.by(() => {
+    let longest = 0;
+    for (const key of activeStep.highlight ?? []) {
+      const v = chart.values[key];
+      if (!v) continue;
+      longest = Math.max(
+        longest,
+        v.label.length,
+        `${v.per1k.toFixed(1)} per 1,000`.length,
+        `${formatNet(v.net)} people`.length
+      );
+    }
+    return Math.min(190, longest * CHAR_W + 10);
+  });
+
+  // The extent depends only on the width, the gutter and the plot height, never on
+  // how many areas the step annotates. That is deliberate: it keeps the map exactly
+  // the same size on the overview step and on the annotated one, so scrolling
+  // between them moves labels rather than resizing the country.
+  const projection = $derived.by(() => {
+    const extent = [[gutter + PAD, PAD], [width - gutter - PAD, plotHeight - PAD]];
+    const p = d3.geoMercator().fitExtent(extent, fitTarget);
+
+    // fitExtent centres what it fits. That is right when labels fall on both
+    // sides, but a map whose areas all sit in one half sends every label the same
+    // way, and the centred map then leaves a big hole on the other side. `align`
+    // is set per chart rather than inferred from the annotations, so it cannot
+    // change between a chart's overview step and its annotated one.
+    if ((chart.align ?? "center") === "left") {
+      const bounds = d3.geoPath(p).bounds(fitTarget);
+      const shift = extent[0][0] - bounds[0][0];
+      const [tx, ty] = p.translate();
+      p.translate([tx + shift, ty]);
+    }
+    return p;
+  });
 
   const path = $derived(d3.geoPath(projection));
 
@@ -110,11 +154,12 @@
     return items;
   }
 
+  /** Each annotation, fully positioned: where its text sits, how it is anchored,
+   *  and the leader path back to its area. The two layouts differ only here. */
   const annotations = $derived.by(() => {
     const keys = activeStep.highlight ?? [];
     if (keys.length === 0) return [];
 
-    const middle = width / 2;
     const items = [];
     for (const key of keys) {
       const feature = geo.features.find((f) => f.properties.key === key);
@@ -122,7 +167,17 @@
       if (!feature || !value) continue;
       const [cx, cy] = landCentroid(feature);
       if (!Number.isFinite(cx) || !Number.isFinite(cy)) continue;
-      items.push({key, cx, cy, y: cy, side: cx < middle ? "left" : "right", ...value});
+      items.push({key, cx, cy, ...value});
+    }
+
+    // A stack down each side, split by which half of the *map* the area sits in,
+    // then pushed apart so no two labels collide. Splitting on the container's
+    // midpoint instead sends every label the same way as soon as the map is not
+    // centred in it.
+    const middle = (mapBounds[0][0] + mapBounds[1][0]) / 2;
+    for (const item of items) {
+      item.side = item.cx < middle ? "left" : "right";
+      item.y = item.cy;
     }
 
     const top = PAD + LABEL_SLOT / 2;
@@ -130,36 +185,20 @@
     for (const side of ["left", "right"]) {
       dodge(items.filter((i) => i.side === side), LABEL_SLOT, top, bottom);
     }
+
+    for (const item of items) {
+      // Just outside the drawn map, pulled in far enough that the text still fits.
+      const x = item.side === "left"
+        ? Math.max(labelWidth + PAD, mapBounds[0][0] - 26)
+        : Math.min(width - labelWidth - PAD, mapBounds[1][0] + 26);
+      const elbow = x + (item.side === "left" ? 14 : -14);
+      item.tx = x;
+      item.ty = item.y - LINE_H * 0.5;
+      item.anchor = item.side === "left" ? "end" : "start";
+      item.leader = `${item.cx},${item.cy} ${elbow},${item.y} ${x},${item.y}`;
+    }
     return items;
   });
-
-  // How much room the widest label in this set actually needs. Estimated from the
-  // character count rather than measured, because the anchor has to be known
-  // before the text is laid out. The reserved gutter is a fit hint, not a
-  // guarantee: on a phone it is narrower than a long area name, so clamping to
-  // the gutter alone pushes text off screen.
-  const labelWidth = $derived.by(() => {
-    let longest = 0;
-    for (const a of annotations) {
-      longest = Math.max(
-        longest,
-        a.label.length,
-        `${a.per1k} per 1,000`.length,
-        `${formatNet(a.net)} people`.length
-      );
-    }
-    return Math.min(190, longest * 6.7 + 10);
-  });
-
-  // Labels sit just outside the drawn map, pulled in far enough that their text
-  // always fits on screen.
-  const anchorX = (side) =>
-    side === "left"
-      ? Math.max(labelWidth + PAD, mapBounds[0][0] - 26)
-      : Math.min(width - labelWidth - PAD, mapBounds[1][0] + 26);
-
-  const elbowX = (side) => anchorX(side) + (side === "left" ? 14 : -14);
-  const leader = (a) => `${a.cx},${a.cy} ${elbowX(a.side)},${a.y} ${anchorX(a.side)},${a.y}`;
 
   // ── Fills ────────────────────────────────────────────────────────────────────
 
@@ -205,7 +244,7 @@
 </script>
 
 <div class="map" bind:clientWidth={width} bind:clientHeight={height}>
-  <div class="map-header" style:padding-left="{gutter}px">
+  <div class="map-header" style:padding-left="{rail}px">
     {#key chartId}
       <h2 class="map-title">{chart.title}</h2>
       <p class="map-subtitle">{chart.subtitle}</p>
@@ -244,20 +283,15 @@
           {/each}
         </g>
 
-        <!-- leader lines and labels -->
+        <!-- leader lines and labels, positioned in placeInColumns/placeInBands -->
         {#each annotations as a (a.key)}
           <g class="annotation">
-            <polyline class="leader" points={leader(a)} />
+            <polyline class="leader" points={a.leader} />
             <circle class="leader-dot" cx={a.cx} cy={a.cy} r="3" />
-            <text
-              class="annotation-text"
-              x={anchorX(a.side)}
-              y={a.y}
-              text-anchor={a.side === "left" ? "end" : "start"}
-            >
-              <tspan class="annotation-name" x={anchorX(a.side)} dy="-{LINE_H * 0.5}">{a.label}</tspan>
-              <tspan class="annotation-value" x={anchorX(a.side)} dy={LINE_H}>{a.per1k} per 1,000</tspan>
-              <tspan class="annotation-value" x={anchorX(a.side)} dy={LINE_H}>{formatNet(a.net)} people</tspan>
+            <text class="annotation-text" x={a.tx} y={a.ty} text-anchor={a.anchor}>
+              <tspan class="annotation-name" x={a.tx}>{a.label}</tspan>
+              <tspan class="annotation-value" x={a.tx} dy={LINE_H}>{a.per1k.toFixed(1)} per 1,000</tspan>
+              <tspan class="annotation-value" x={a.tx} dy={LINE_H}>{formatNet(a.net)} people</tspan>
             </text>
           </g>
         {/each}
@@ -266,7 +300,10 @@
              A phone has no room for both, and an annotated step already states the
              exact figures, so there the legend gives way to the labels. -->
         {#if showLegend}
-        <g class="legend" transform="translate({width / 2 - 75},{plotHeight - 24})">
+        <g
+          class="legend"
+          transform="translate({(mapBounds[0][0] + mapBounds[1][0]) / 2 - 75},{plotHeight - 24})"
+        >
           <defs>
             <linearGradient id={gradientId} x1="0%" x2="100%">
               {#each legend.stops as stop}
@@ -360,14 +397,16 @@
     fill: var(--fg);
   }
 
+  /* One size at every width. LINE_H and CHAR_W in the script are set from these,
+     so a change here needs a matching change there. */
   .annotation-name {
-    font-size: 0.82rem;
+    font-size: 0.76rem;
     font-weight: 700;
     fill: var(--fg);
   }
 
   .annotation-value {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     fill: var(--muted);
   }
 

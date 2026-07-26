@@ -184,6 +184,7 @@
    },
    "fitExclude": [],
    "fitBBox": null,
+   "align": "center",
    "values": {
     "Ashburton District": {
      "label": "Ashburton",
@@ -552,6 +553,7 @@
      -36.35
     ]
    ],
+   "align": "left",
    "values": {
     "Albert-Eden": {
      "label": "Albert-Eden",
@@ -744,10 +746,11 @@
     "Mackenzie District",
     "Hamilton City",
     "Waimate District",
-    "Ashburton District"
+    "Ashburton District",
+    "Auckland"
    ],
    "title": "The highest rates are not the biggest places",
-   "body": "Queenstown-Lakes leads at 70.8 per 1,000, but that is only 3,810 people. Hamilton sits just behind it on the rate while taking 12,700, the largest absolute intake of the five."
+   "body": "Queenstown-Lakes leads at 70.8 per 1,000, but that is only 3,810 people. Auckland sits 7th on the rate at 55.0 and takes 99,800, 52% of the national total. A per-capita leader board is a list of small places."
   },
   {
    "chart": "akl-map",

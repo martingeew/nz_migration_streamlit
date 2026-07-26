@@ -511,6 +511,7 @@ def _map_chart(
     subtitle: str,
     fit_exclude: List[str] | None = None,
     fit_bbox: List[List[float]] | None = None,
+    align: str = "center",
 ) -> Dict[str, Any]:
     """Assemble a map chart definition, warning about any join misses."""
     _drop_unvalued(map_name, geometry, values)
@@ -530,6 +531,7 @@ def _map_chart(
         "scale": _map_scale(lo, hi),
         "fitExclude": fit_exclude or [],
         "fitBBox": fit_bbox,
+        "align": align,
         "values": {
             row["key"]: {
                 "label": row["label"],
@@ -550,6 +552,13 @@ def _top_keys(values: pd.DataFrame, count: int) -> List[str]:
     )
 
 
+def _ordinal(n: int) -> str:
+    """1 -> '1st', 7 -> '7th'."""
+    if 11 <= n % 100 <= 13:
+        return f"{n}th"
+    return f"{n}" + {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+
+
 # ── Narrative ─────────────────────────────────────────────────────────────────
 
 
@@ -567,6 +576,16 @@ def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
     akl_low = akl_sorted.iloc[-1]
     nz_negative = int((nz["value_per1k"] < 0).sum())
 
+    # The top five by rate are all small places, so the biggest destination in the
+    # country never appears among them. Naming it alongside is the whole point of
+    # this step: it is where the rate and the volume stories part company.
+    biggest = nz.loc[nz["net"].idxmax()]
+    biggest_rank = int(nz_sorted["key"].tolist().index(biggest["key"])) + 1
+    biggest_share = biggest["net"] / nz["net"].sum() * 100
+    nz_highlight = _top_keys(nz, 5)
+    if biggest["key"] not in nz_highlight:
+        nz_highlight.append(biggest["key"])
+
     return [
         {
             "chart": "nz-map",
@@ -581,15 +600,16 @@ def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
         },
         {
             "chart": "nz-map",
-            "highlight": _top_keys(nz, 5),
+            "highlight": nz_highlight,
             "title": "The highest rates are not the biggest places",
             "body": (
                 f"{nz_top.iloc[0]['label']} leads at "
                 f"{nz_top.iloc[0]['value_per1k']:.1f} per 1,000, but that is only "
-                f"{nz_top.iloc[0]['net']:,.0f} people. "
-                f"{nz_top.iloc[2]['label']} sits just behind it on the rate while "
-                f"taking {nz_top.iloc[2]['net']:,.0f}, the largest absolute intake of "
-                "the five."
+                f"{nz_top.iloc[0]['net']:,.0f} people. {biggest['label']} sits "
+                f"{_ordinal(biggest_rank)} on the rate at "
+                f"{biggest['value_per1k']:.1f} and takes {biggest['net']:,.0f}, "
+                f"{biggest_share:.0f}% of the national total. A per-capita leader "
+                "board is a list of small places."
             ),
         },
         {
@@ -824,6 +844,10 @@ def build_maps() -> tuple[Dict[str, Any], Dict[str, Any], List[Dict[str, Any]]]:
             # Frame the city instead, on the same window the Quarto dashboard uses,
             # and let the rest fall outside the clip.
             fit_bbox=[[174.4, -37.15], [175.05, -36.35]],
+            # Every board worth naming sits in the eastern half, so all three
+            # labels go right. Centring the frame would leave a hole on the left
+            # and crowd the labels against the right edge.
+            align="left",
         ),
     }
     return geometries, charts, _map_steps(nz_values, akl_values)
