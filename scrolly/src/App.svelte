@@ -129,4 +129,26 @@
     line-height: 1.6;
     color: var(--muted);
   }
+
+  /* A phone gives the text a much narrower column and less height beneath the
+     chart, so the desktop sizes run to too many lines. */
+  @media (max-width: 720px) {
+    .hero h1 {
+      margin-bottom: 0.75rem;
+    }
+
+    .standfirst {
+      font-size: 1rem;
+    }
+
+    :global(.scrolly-step h2) {
+      font-size: 1.1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    :global(.scrolly-step p) {
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+  }
 </style>
