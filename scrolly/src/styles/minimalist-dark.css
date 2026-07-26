@@ -1,0 +1,21 @@
+/* Minimalist dark theme. Structural CSS lives in app.css and the components;
+   this file only sets colour tokens, so switching themes is a one-line import
+   swap in App.svelte. Note: the teal-green series colours live in story.json,
+   not here - they read well on both backgrounds. */
+
+:root {
+  color-scheme: dark;
+
+  --bg: #111418;       /* page background */
+  --fg: #e8eaed;       /* body text */
+  --muted: #a8b0b8;    /* standfirst, secondary text */
+  --faint: #6b7580;    /* kicker, source line */
+
+  --grid: #262b31;     /* chart gridlines */
+  --zero: #3a4149;     /* chart zero baseline */
+  --tick: #8a939c;     /* axis tick labels */
+
+  --panel: rgba(17, 20, 24, 0.82);  /* narrative card over the chart */
+  --panel-border: #2a3038;          /* narrative card border */
+  --code-bg: #1e242b;               /* inline code */
+}

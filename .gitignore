@@ -29,3 +29,8 @@ prototypes/01-closeread/index.html
 prototypes/01-closeread/index_files/
 prototypes/01-closeread/.quarto/
 prototypes/02-observable/src/.observablehq/
+
+# ── Scrollytelling story (scrolly/) ──────────────────────────────────────────
+# src/data/story.json IS committed so `npm run dev` works without running Python.
+scrolly/node_modules/
+scrolly/dist/

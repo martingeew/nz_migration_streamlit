@@ -1,0 +1,23 @@
+{
+  "name": "nz-migration-scrolly",
+  "private": true,
+  "type": "module",
+  "description": "Who is actually arriving in New Zealand - a scrollytelling data story built with Vite + Svelte + Scrollama + D3",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "scrollama": "^3.2.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "svelte": "^5.0.0",
+    "vite": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

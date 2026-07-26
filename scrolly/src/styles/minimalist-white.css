@@ -1,0 +1,20 @@
+/* Minimalist white theme. Structural CSS lives in app.css and the components;
+   this file only sets colour tokens, so switching themes is a one-line import
+   swap in App.svelte. */
+
+:root {
+  color-scheme: light;
+
+  --bg: #ffffff;       /* page background */
+  --fg: #1a1a1a;       /* body text */
+  --muted: #555555;    /* standfirst, secondary text */
+  --faint: #999999;    /* kicker, source line */
+
+  --grid: #eeeeee;     /* chart gridlines */
+  --zero: #cccccc;     /* chart zero baseline */
+  --tick: #888888;     /* axis tick labels */
+
+  --panel: rgba(255, 255, 255, 0.85);  /* narrative card over the chart */
+  --panel-border: #e4e8e8;             /* narrative card border */
+  --code-bg: #f2f4f4;                  /* inline code */
+}
