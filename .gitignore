@@ -31,6 +31,10 @@ prototypes/01-closeread/.quarto/
 prototypes/02-observable/src/.observablehq/
 
 # ── Scrollytelling story (scrolly/) ──────────────────────────────────────────
-# src/data/story.json IS committed so `npm run dev` works without running Python.
+# src/data/story.json and src/data/maps.json ARE committed, so `npm run dev`
+# works on a fresh clone without running Python.
 scrolly/node_modules/
 scrolly/dist/
+
+# Working build log for the scrolly demo. Kept locally, not part of the repo.
+progress.md
