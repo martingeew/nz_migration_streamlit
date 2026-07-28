@@ -10,6 +10,7 @@ Inputs:
     data/interim/df_direction_age_sex_*.pkl
     data/interim/df_clpr_india_visa_*.pkl
     data/interim/df_clpr_china_visa_*.pkl
+    data/interim/df_clpr_philippines_visa_*.pkl
 
 Outputs:
     scrolly/src/data/story.json — meta + colors + labels + charts + steps + series.
@@ -128,6 +129,12 @@ COLORS: Dict[str, str] = {
     "cn_visitor": _GREEN,
     "cn_residence": _RED,
     "cn_other": _GREY,
+    # Chart 6 — Philippines CLPR by visa
+    "ph_work": _BLUE,
+    "ph_student": _YELLOW,
+    "ph_visitor": _GREEN,
+    "ph_residence": _RED,
+    "ph_other": _GREY,
 }
 
 LABELS: Dict[str, str] = {
@@ -156,6 +163,11 @@ LABELS: Dict[str, str] = {
     "cn_visitor": "Visitor",
     "cn_residence": "Residence",
     "cn_other": "Other",
+    "ph_work": "Work",
+    "ph_student": "Student",
+    "ph_visitor": "Visitor",
+    "ph_residence": "Residence",
+    "ph_other": "Other",
 }
 
 # ── Chart definitions ─────────────────────────────────────────────────────────
@@ -200,6 +212,13 @@ CHARTS: Dict[str, Dict[str, Any]] = {
         "mode": "stack",
         "y": [0, 40000],
         "title": "Arrivals by visa type: last permanent residence China",
+        "subtitle": "Rolling 12-month sum",
+    },
+    "philippines": {
+        "keys": ["ph_work", "ph_student", "ph_visitor", "ph_residence", "ph_other"],
+        "mode": "stack",
+        "y": [0, 40000],
+        "title": "Arrivals by visa type: last permanent residence Philippines",
         "subtitle": "Rolling 12-month sum",
     },
 }
@@ -637,7 +656,7 @@ def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
 
 
 def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
-    """The ten time-series scroll steps, with every figure read from the data.
+    """The eleven time-series scroll steps, with every figure read from the data.
 
     `chart` names the entry in CHARTS to draw; `highlight` lists the bands the
     commentary is about, which stay solid while the rest fade back.
@@ -660,20 +679,27 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
     mid_peak_month = mid_share.idxmax()
     baseline = pd.Timestamp("2019-03-01")
 
-    # Chart 3 — the India plus China share of non-NZ arrivals, now against 2005.
+    # Chart 3 — the India, China and Philippines share of non-NZ arrivals, now
+    # against 2005.
     cit_keys = CHARTS["nationality"]["keys"]
     cit_total = wide[cit_keys].sum(axis=1)
     cit_share = wide[cit_keys].div(cit_total, axis=0) * 100
-    two_share = cit_share["cit_india"] + cit_share["cit_china"]
+    three_share = cit_share["cit_india"] + cit_share["cit_china"] + cit_share["cit_philippines"]
     first = wide.index[0]
 
-    # Charts 4 and 5 — visa mix for India and China arrivals.
+    # Charts 4-6 — visa mix for India, China and Philippines arrivals.
     india_total = wide[CHARTS["india"]["keys"]].sum(axis=1)
     china_total = wide[CHARTS["china"]["keys"]].sum(axis=1)
+    philippines_total = wide[CHARTS["philippines"]["keys"]].sum(axis=1)
     india_share = wide[CHARTS["india"]["keys"]].div(india_total, axis=0) * 100
     china_share = wide[CHARTS["china"]["keys"]].div(china_total, axis=0) * 100
+    philippines_share = wide[CHARTS["philippines"]["keys"]].div(philippines_total, axis=0) * 100
     work_peak_month = wide["in_work"].idxmax()
     cn_work_peak_month = wide["cn_work"].idxmax()
+    # The Philippines chart's own peak, not a fixed date: work and residence
+    # visas grew in lockstep from the border's August 2022 reopening to here.
+    ph_peak_month = philippines_total.idxmax()
+    ph_reopen = pd.Timestamp("2022-08-01")
 
     return [
         {
@@ -746,13 +772,14 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
         },
         {
             "chart": "nationality",
-            "highlight": ["cit_india", "cit_china"],
-            "title": "India and China now dominate inflows",
+            "highlight": ["cit_india", "cit_china", "cit_philippines"],
+            "title": "India, China and the Philippines now dominate inflows",
             "body": (
-                f"The two countries supplied {last['cit_india'] + last['cit_china']:,.0f} "
+                f"The three countries supplied "
+                f"{last['cit_india'] + last['cit_china'] + last['cit_philippines']:,.0f} "
                 f"of {cit_total.loc[latest]:,.0f} non-NZ arrivals in the year to "
-                f"{latest_label}, a combined {two_share.loc[latest]:.0f}%. In "
-                f"{_month_label(first)} they accounted for {two_share.loc[first]:.0f}%."
+                f"{latest_label}, a combined {three_share.loc[latest]:.0f}%. In "
+                f"{_month_label(first)} they accounted for {three_share.loc[first]:.0f}%."
             ),
         },
         {
@@ -764,6 +791,22 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
                 "visa they held. Arrivals from India peaked at "
                 f"{india_total.max():,.0f}, against {cit_total.max():,.0f} from other "
                 "countries."
+            ),
+        },
+        {
+            "chart": "philippines",
+            "highlight": ["ph_work", "ph_residence"],
+            "title": "Work and residence visas powered the Philippines surge",
+            "body": (
+                f"Once the border fully reopened in {_month_label(ph_reopen)}, work and "
+                f"residence visa arrivals grew almost in lockstep, up to "
+                f"{philippines_share['ph_work'].loc[ph_peak_month]:.0f}% and "
+                f"{philippines_share['ph_residence'].loc[ph_peak_month]:.0f}% of "
+                f"{philippines_total.max():,.0f} arrivals in the year to "
+                f"{_month_label(ph_peak_month)}. Both have since fallen back: visitor "
+                f"visas are now the largest band, at "
+                f"{philippines_share['ph_visitor'].loc[latest]:.0f}% in the year to "
+                f"{latest_label}."
             ),
         },
         {
@@ -799,7 +842,7 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
 
 
 def build_wide(quiet: bool = False) -> pd.DataFrame:
-    """Join all five charts into one month-indexed frame of 24 series."""
+    """Join all six charts into one month-indexed frame of 30 series."""
     loader = DataLoader(base_path=REPO_ROOT)
 
     def _load() -> tuple[pd.DataFrame, ...]:
@@ -808,13 +851,14 @@ def build_wide(quiet: bool = False) -> pd.DataFrame:
             loader.load_direction_age_sex(),
             loader.load_clpr_india_visa(),
             loader.load_clpr_china_visa(),
+            loader.load_clpr_philippines_visa(),
         )
 
     if quiet:
         with redirect_stdout(io.StringIO()):
-            df_cit, df_age, df_india, df_china = _load()
+            df_cit, df_age, df_india, df_china, df_philippines = _load()
     else:
-        df_cit, df_age, df_india, df_china = _load()
+        df_cit, df_age, df_india, df_china, df_philippines = _load()
 
     parts = [
         _flows(df_cit),
@@ -822,6 +866,7 @@ def build_wide(quiet: bool = False) -> pd.DataFrame:
         _nationality(df_cit),
         _clpr_visa(df_india, "in_"),
         _clpr_visa(df_china, "cn_"),
+        _clpr_visa(df_philippines, "ph_"),
     ]
     wide = pd.concat(parts, axis=1).dropna()
 

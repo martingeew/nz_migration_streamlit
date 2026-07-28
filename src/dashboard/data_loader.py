@@ -99,3 +99,10 @@ class DataLoader:
         Columns: Month, Count, Direction, CLPR, Visa, Citizenship
         """
         return self._load_latest("df_clpr_china_visa")
+
+    def load_clpr_philippines_visa(self) -> pd.DataFrame:
+        """CLPR=Philippines × Visa × Citizenship (monthly, arrivals).
+
+        Columns: Month, Count, Direction, CLPR, Visa, Citizenship
+        """
+        return self._load_latest("df_clpr_philippines_visa")

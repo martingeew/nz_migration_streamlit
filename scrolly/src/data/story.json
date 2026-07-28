@@ -46,7 +46,12 @@
   "cn_student": "#F2C14E",
   "cn_visitor": "#7FD1B9",
   "cn_residence": "#E8705F",
-  "cn_other": "#6B7580"
+  "cn_other": "#6B7580",
+  "ph_work": "#5BA8DE",
+  "ph_student": "#F2C14E",
+  "ph_visitor": "#7FD1B9",
+  "ph_residence": "#E8705F",
+  "ph_other": "#6B7580"
  },
  "labels": {
   "flow_arrivals": "Arrivals",
@@ -73,7 +78,12 @@
   "cn_student": "Student",
   "cn_visitor": "Visitor",
   "cn_residence": "Residence",
-  "cn_other": "Other"
+  "cn_other": "Other",
+  "ph_work": "Work",
+  "ph_student": "Student",
+  "ph_visitor": "Visitor",
+  "ph_residence": "Residence",
+  "ph_other": "Other"
  },
  "annotations": {},
  "charts": {
@@ -159,6 +169,23 @@
     40000
    ],
    "title": "Arrivals by visa type: last permanent residence China",
+   "subtitle": "Rolling 12-month sum",
+   "kind": "series"
+  },
+  "philippines": {
+   "keys": [
+    "ph_work",
+    "ph_student",
+    "ph_visitor",
+    "ph_residence",
+    "ph_other"
+   ],
+   "mode": "stack",
+   "y": [
+    0,
+    40000
+   ],
+   "title": "Arrivals by visa type: last permanent residence Philippines",
    "subtitle": "Rolling 12-month sum",
    "kind": "series"
   },
@@ -713,16 +740,26 @@
    "chart": "nationality",
    "highlight": [
     "cit_india",
-    "cit_china"
+    "cit_china",
+    "cit_philippines"
    ],
-   "title": "India and China now dominate inflows",
-   "body": "The two countries supplied 35,532 of 109,208 non-NZ arrivals in the year to March 2026, a combined 33%. In January 2005 they accounted for 16%."
+   "title": "India, China and the Philippines now dominate inflows",
+   "body": "The three countries supplied 46,036 of 109,208 non-NZ arrivals in the year to March 2026, a combined 42%. In January 2005 they accounted for 17%."
   },
   {
    "chart": "india",
    "highlight": [],
    "title": "Zooming in on India",
    "body": "These are arrivals whose last permanent residence was India, split by the visa they held. Arrivals from India peaked at 38,468, against 211,842 from other countries."
+  },
+  {
+   "chart": "philippines",
+   "highlight": [
+    "ph_work",
+    "ph_residence"
+   ],
+   "title": "Work and residence visas powered the Philippines surge",
+   "body": "Once the border fully reopened in August 2022, work and residence visa arrivals grew almost in lockstep, up to 36% and 37% of 31,521 arrivals in the year to October 2023. Both have since fallen back: visitor visas are now the largest band, at 33% in the year to March 2026."
   },
   {
    "chart": "india",
@@ -803,7 +840,12 @@
    "cn_student": 2431,
    "cn_visitor": 897,
    "cn_residence": 1514,
-   "cn_other": 151
+   "cn_other": 151,
+   "ph_work": 64,
+   "ph_student": 102,
+   "ph_visitor": 489,
+   "ph_residence": 262,
+   "ph_other": 55
   },
   {
    "month": "2005-02",
@@ -831,7 +873,12 @@
    "cn_student": 2218,
    "cn_visitor": 889,
    "cn_residence": 1379,
-   "cn_other": 149
+   "cn_other": 149,
+   "ph_work": 70,
+   "ph_student": 104,
+   "ph_visitor": 499,
+   "ph_residence": 267,
+   "ph_other": 55
   },
   {
    "month": "2005-03",
@@ -859,7 +906,12 @@
    "cn_student": 2140,
    "cn_visitor": 905,
    "cn_residence": 1348,
-   "cn_other": 151
+   "cn_other": 151,
+   "ph_work": 82,
+   "ph_student": 101,
+   "ph_visitor": 497,
+   "ph_residence": 259,
+   "ph_other": 57
   },
   {
    "month": "2005-04",
@@ -887,7 +939,12 @@
    "cn_student": 2041,
    "cn_visitor": 886,
    "cn_residence": 1290,
-   "cn_other": 154
+   "cn_other": 154,
+   "ph_work": 87,
+   "ph_student": 108,
+   "ph_visitor": 499,
+   "ph_residence": 278,
+   "ph_other": 58
   },
   {
    "month": "2005-05",
@@ -915,7 +972,12 @@
    "cn_student": 1974,
    "cn_visitor": 901,
    "cn_residence": 1287,
-   "cn_other": 149
+   "cn_other": 149,
+   "ph_work": 92,
+   "ph_student": 119,
+   "ph_visitor": 519,
+   "ph_residence": 307,
+   "ph_other": 61
   },
   {
    "month": "2005-06",
@@ -943,7 +1005,12 @@
    "cn_student": 1916,
    "cn_visitor": 913,
    "cn_residence": 1257,
-   "cn_other": 151
+   "cn_other": 151,
+   "ph_work": 104,
+   "ph_student": 133,
+   "ph_visitor": 518,
+   "ph_residence": 311,
+   "ph_other": 66
   },
   {
    "month": "2005-07",
@@ -971,7 +1038,12 @@
    "cn_student": 1801,
    "cn_visitor": 906,
    "cn_residence": 1210,
-   "cn_other": 134
+   "cn_other": 134,
+   "ph_work": 109,
+   "ph_student": 141,
+   "ph_visitor": 544,
+   "ph_residence": 294,
+   "ph_other": 65
   },
   {
    "month": "2005-08",
@@ -999,7 +1071,12 @@
    "cn_student": 1795,
    "cn_visitor": 925,
    "cn_residence": 1226,
-   "cn_other": 135
+   "cn_other": 135,
+   "ph_work": 113,
+   "ph_student": 136,
+   "ph_visitor": 558,
+   "ph_residence": 280,
+   "ph_other": 61
   },
   {
    "month": "2005-09",
@@ -1027,7 +1104,12 @@
    "cn_student": 1758,
    "cn_visitor": 920,
    "cn_residence": 1208,
-   "cn_other": 131
+   "cn_other": 131,
+   "ph_work": 138,
+   "ph_student": 134,
+   "ph_visitor": 586,
+   "ph_residence": 274,
+   "ph_other": 56
   },
   {
    "month": "2005-10",
@@ -1055,7 +1137,12 @@
    "cn_student": 1703,
    "cn_visitor": 923,
    "cn_residence": 1191,
-   "cn_other": 143
+   "cn_other": 143,
+   "ph_work": 180,
+   "ph_student": 140,
+   "ph_visitor": 612,
+   "ph_residence": 262,
+   "ph_other": 58
   },
   {
    "month": "2005-11",
@@ -1083,7 +1170,12 @@
    "cn_student": 1686,
    "cn_visitor": 921,
    "cn_residence": 1193,
-   "cn_other": 140
+   "cn_other": 140,
+   "ph_work": 216,
+   "ph_student": 146,
+   "ph_visitor": 657,
+   "ph_residence": 265,
+   "ph_other": 58
   },
   {
    "month": "2005-12",
@@ -1111,7 +1203,12 @@
    "cn_student": 1676,
    "cn_visitor": 935,
    "cn_residence": 1153,
-   "cn_other": 134
+   "cn_other": 134,
+   "ph_work": 248,
+   "ph_student": 177,
+   "ph_visitor": 681,
+   "ph_residence": 279,
+   "ph_other": 49
   },
   {
    "month": "2006-01",
@@ -1139,7 +1236,12 @@
    "cn_student": 1614,
    "cn_visitor": 938,
    "cn_residence": 1153,
-   "cn_other": 130
+   "cn_other": 130,
+   "ph_work": 335,
+   "ph_student": 212,
+   "ph_visitor": 733,
+   "ph_residence": 275,
+   "ph_other": 48
   },
   {
    "month": "2006-02",
@@ -1167,7 +1269,12 @@
    "cn_student": 1652,
    "cn_visitor": 950,
    "cn_residence": 1218,
-   "cn_other": 126
+   "cn_other": 126,
+   "ph_work": 404,
+   "ph_student": 232,
+   "ph_visitor": 739,
+   "ph_residence": 277,
+   "ph_other": 53
   },
   {
    "month": "2006-03",
@@ -1195,7 +1302,12 @@
    "cn_student": 1657,
    "cn_visitor": 957,
    "cn_residence": 1267,
-   "cn_other": 117
+   "cn_other": 117,
+   "ph_work": 491,
+   "ph_student": 266,
+   "ph_visitor": 763,
+   "ph_residence": 295,
+   "ph_other": 62
   },
   {
    "month": "2006-04",
@@ -1223,7 +1335,12 @@
    "cn_student": 1643,
    "cn_visitor": 973,
    "cn_residence": 1307,
-   "cn_other": 118
+   "cn_other": 118,
+   "ph_work": 557,
+   "ph_student": 298,
+   "ph_visitor": 788,
+   "ph_residence": 278,
+   "ph_other": 66
   },
   {
    "month": "2006-05",
@@ -1251,7 +1368,12 @@
    "cn_student": 1645,
    "cn_visitor": 962,
    "cn_residence": 1319,
-   "cn_other": 115
+   "cn_other": 115,
+   "ph_work": 611,
+   "ph_student": 328,
+   "ph_visitor": 830,
+   "ph_residence": 255,
+   "ph_other": 68
   },
   {
    "month": "2006-06",
@@ -1279,7 +1401,12 @@
    "cn_student": 1693,
    "cn_visitor": 965,
    "cn_residence": 1356,
-   "cn_other": 110
+   "cn_other": 110,
+   "ph_work": 682,
+   "ph_student": 358,
+   "ph_visitor": 898,
+   "ph_residence": 254,
+   "ph_other": 64
   },
   {
    "month": "2006-07",
@@ -1307,7 +1434,12 @@
    "cn_student": 1738,
    "cn_visitor": 991,
    "cn_residence": 1360,
-   "cn_other": 116
+   "cn_other": 116,
+   "ph_work": 766,
+   "ph_student": 395,
+   "ph_visitor": 891,
+   "ph_residence": 273,
+   "ph_other": 66
   },
   {
    "month": "2006-08",
@@ -1335,7 +1467,12 @@
    "cn_student": 1717,
    "cn_visitor": 995,
    "cn_residence": 1339,
-   "cn_other": 116
+   "cn_other": 116,
+   "ph_work": 874,
+   "ph_student": 445,
+   "ph_visitor": 964,
+   "ph_residence": 288,
+   "ph_other": 67
   },
   {
    "month": "2006-09",
@@ -1363,7 +1500,12 @@
    "cn_student": 1771,
    "cn_visitor": 987,
    "cn_residence": 1358,
-   "cn_other": 113
+   "cn_other": 113,
+   "ph_work": 997,
+   "ph_student": 511,
+   "ph_visitor": 987,
+   "ph_residence": 288,
+   "ph_other": 76
   },
   {
    "month": "2006-10",
@@ -1391,7 +1533,12 @@
    "cn_student": 1820,
    "cn_visitor": 1002,
    "cn_residence": 1349,
-   "cn_other": 108
+   "cn_other": 108,
+   "ph_work": 1138,
+   "ph_student": 600,
+   "ph_visitor": 1020,
+   "ph_residence": 297,
+   "ph_other": 72
   },
   {
    "month": "2006-11",
@@ -1419,7 +1566,12 @@
    "cn_student": 1872,
    "cn_visitor": 1031,
    "cn_residence": 1374,
-   "cn_other": 112
+   "cn_other": 112,
+   "ph_work": 1310,
+   "ph_student": 670,
+   "ph_visitor": 1072,
+   "ph_residence": 313,
+   "ph_other": 74
   },
   {
    "month": "2006-12",
@@ -1447,7 +1599,12 @@
    "cn_student": 1899,
    "cn_visitor": 1039,
    "cn_residence": 1383,
-   "cn_other": 118
+   "cn_other": 118,
+   "ph_work": 1395,
+   "ph_student": 731,
+   "ph_visitor": 1144,
+   "ph_residence": 318,
+   "ph_other": 73
   },
   {
    "month": "2007-01",
@@ -1475,7 +1632,12 @@
    "cn_student": 1996,
    "cn_visitor": 1039,
    "cn_residence": 1378,
-   "cn_other": 114
+   "cn_other": 114,
+   "ph_work": 1437,
+   "ph_student": 748,
+   "ph_visitor": 1158,
+   "ph_residence": 330,
+   "ph_other": 73
   },
   {
    "month": "2007-02",
@@ -1503,7 +1665,12 @@
    "cn_student": 1956,
    "cn_visitor": 1024,
    "cn_residence": 1279,
-   "cn_other": 123
+   "cn_other": 123,
+   "ph_work": 1502,
+   "ph_student": 780,
+   "ph_visitor": 1205,
+   "ph_residence": 344,
+   "ph_other": 66
   },
   {
    "month": "2007-03",
@@ -1531,7 +1698,12 @@
    "cn_student": 1983,
    "cn_visitor": 1035,
    "cn_residence": 1220,
-   "cn_other": 122
+   "cn_other": 122,
+   "ph_work": 1589,
+   "ph_student": 826,
+   "ph_visitor": 1354,
+   "ph_residence": 348,
+   "ph_other": 57
   },
   {
    "month": "2007-04",
@@ -1559,7 +1731,12 @@
    "cn_student": 2002,
    "cn_visitor": 1045,
    "cn_residence": 1184,
-   "cn_other": 125
+   "cn_other": 125,
+   "ph_work": 1645,
+   "ph_student": 874,
+   "ph_visitor": 1417,
+   "ph_residence": 362,
+   "ph_other": 59
   },
   {
    "month": "2007-05",
@@ -1587,7 +1764,12 @@
    "cn_student": 2007,
    "cn_visitor": 1050,
    "cn_residence": 1146,
-   "cn_other": 130
+   "cn_other": 130,
+   "ph_work": 1701,
+   "ph_student": 916,
+   "ph_visitor": 1511,
+   "ph_residence": 378,
+   "ph_other": 56
   },
   {
    "month": "2007-06",
@@ -1615,7 +1797,12 @@
    "cn_student": 2019,
    "cn_visitor": 1055,
    "cn_residence": 1114,
-   "cn_other": 125
+   "cn_other": 125,
+   "ph_work": 1804,
+   "ph_student": 940,
+   "ph_visitor": 1559,
+   "ph_residence": 403,
+   "ph_other": 57
   },
   {
    "month": "2007-07",
@@ -1643,7 +1830,12 @@
    "cn_student": 2050,
    "cn_visitor": 1033,
    "cn_residence": 1058,
-   "cn_other": 118
+   "cn_other": 118,
+   "ph_work": 1852,
+   "ph_student": 958,
+   "ph_visitor": 1595,
+   "ph_residence": 427,
+   "ph_other": 54
   },
   {
    "month": "2007-08",
@@ -1671,7 +1863,12 @@
    "cn_student": 2147,
    "cn_visitor": 1045,
    "cn_residence": 1043,
-   "cn_other": 111
+   "cn_other": 111,
+   "ph_work": 1952,
+   "ph_student": 1004,
+   "ph_visitor": 1625,
+   "ph_residence": 443,
+   "ph_other": 54
   },
   {
    "month": "2007-09",
@@ -1699,7 +1896,12 @@
    "cn_student": 2189,
    "cn_visitor": 1046,
    "cn_residence": 1021,
-   "cn_other": 125
+   "cn_other": 125,
+   "ph_work": 2060,
+   "ph_student": 1006,
+   "ph_visitor": 1719,
+   "ph_residence": 444,
+   "ph_other": 52
   },
   {
    "month": "2007-10",
@@ -1727,7 +1929,12 @@
    "cn_student": 2266,
    "cn_visitor": 1020,
    "cn_residence": 1060,
-   "cn_other": 119
+   "cn_other": 119,
+   "ph_work": 2027,
+   "ph_student": 956,
+   "ph_visitor": 1758,
+   "ph_residence": 454,
+   "ph_other": 53
   },
   {
    "month": "2007-11",
@@ -1755,7 +1962,12 @@
    "cn_student": 2303,
    "cn_visitor": 990,
    "cn_residence": 1028,
-   "cn_other": 121
+   "cn_other": 121,
+   "ph_work": 1947,
+   "ph_student": 938,
+   "ph_visitor": 1760,
+   "ph_residence": 469,
+   "ph_other": 48
   },
   {
    "month": "2007-12",
@@ -1783,7 +1995,12 @@
    "cn_student": 2343,
    "cn_visitor": 987,
    "cn_residence": 1035,
-   "cn_other": 112
+   "cn_other": 112,
+   "ph_work": 1969,
+   "ph_student": 899,
+   "ph_visitor": 1732,
+   "ph_residence": 487,
+   "ph_other": 53
   },
   {
    "month": "2008-01",
@@ -1811,7 +2028,12 @@
    "cn_student": 2398,
    "cn_visitor": 973,
    "cn_residence": 1015,
-   "cn_other": 111
+   "cn_other": 111,
+   "ph_work": 1981,
+   "ph_student": 885,
+   "ph_visitor": 1734,
+   "ph_residence": 481,
+   "ph_other": 52
   },
   {
    "month": "2008-02",
@@ -1839,7 +2061,12 @@
    "cn_student": 2546,
    "cn_visitor": 993,
    "cn_residence": 1034,
-   "cn_other": 107
+   "cn_other": 107,
+   "ph_work": 2027,
+   "ph_student": 900,
+   "ph_visitor": 1816,
+   "ph_residence": 494,
+   "ph_other": 64
   },
   {
    "month": "2008-03",
@@ -1867,7 +2094,12 @@
    "cn_student": 2625,
    "cn_visitor": 1009,
    "cn_residence": 1051,
-   "cn_other": 115
+   "cn_other": 115,
+   "ph_work": 2073,
+   "ph_student": 885,
+   "ph_visitor": 1745,
+   "ph_residence": 506,
+   "ph_other": 62
   },
   {
    "month": "2008-04",
@@ -1895,7 +2127,12 @@
    "cn_student": 2669,
    "cn_visitor": 1009,
    "cn_residence": 1052,
-   "cn_other": 113
+   "cn_other": 113,
+   "ph_work": 2080,
+   "ph_student": 890,
+   "ph_visitor": 1794,
+   "ph_residence": 562,
+   "ph_other": 56
   },
   {
    "month": "2008-05",
@@ -1923,7 +2160,12 @@
    "cn_student": 2745,
    "cn_visitor": 1024,
    "cn_residence": 1080,
-   "cn_other": 110
+   "cn_other": 110,
+   "ph_work": 2140,
+   "ph_student": 905,
+   "ph_visitor": 1827,
+   "ph_residence": 580,
+   "ph_other": 56
   },
   {
    "month": "2008-06",
@@ -1951,7 +2193,12 @@
    "cn_student": 2776,
    "cn_visitor": 1026,
    "cn_residence": 1082,
-   "cn_other": 130
+   "cn_other": 130,
+   "ph_work": 2212,
+   "ph_student": 968,
+   "ph_visitor": 1856,
+   "ph_residence": 597,
+   "ph_other": 55
   },
   {
    "month": "2008-07",
@@ -1979,7 +2226,12 @@
    "cn_student": 3026,
    "cn_visitor": 1066,
    "cn_residence": 1108,
-   "cn_other": 147
+   "cn_other": 147,
+   "ph_work": 2317,
+   "ph_student": 993,
+   "ph_visitor": 1901,
+   "ph_residence": 599,
+   "ph_other": 58
   },
   {
    "month": "2008-08",
@@ -2007,7 +2259,12 @@
    "cn_student": 3096,
    "cn_visitor": 1057,
    "cn_residence": 1149,
-   "cn_other": 158
+   "cn_other": 158,
+   "ph_work": 2347,
+   "ph_student": 1006,
+   "ph_visitor": 1888,
+   "ph_residence": 631,
+   "ph_other": 59
   },
   {
    "month": "2008-09",
@@ -2035,7 +2292,12 @@
    "cn_student": 3086,
    "cn_visitor": 1056,
    "cn_residence": 1149,
-   "cn_other": 156
+   "cn_other": 156,
+   "ph_work": 2272,
+   "ph_student": 1029,
+   "ph_visitor": 1856,
+   "ph_residence": 664,
+   "ph_other": 58
   },
   {
    "month": "2008-10",
@@ -2063,7 +2325,12 @@
    "cn_student": 3140,
    "cn_visitor": 1086,
    "cn_residence": 1133,
-   "cn_other": 166
+   "cn_other": 166,
+   "ph_work": 2277,
+   "ph_student": 1034,
+   "ph_visitor": 1846,
+   "ph_residence": 664,
+   "ph_other": 57
   },
   {
    "month": "2008-11",
@@ -2091,7 +2358,12 @@
    "cn_student": 3133,
    "cn_visitor": 1115,
    "cn_residence": 1145,
-   "cn_other": 165
+   "cn_other": 165,
+   "ph_work": 2278,
+   "ph_student": 1051,
+   "ph_visitor": 1791,
+   "ph_residence": 671,
+   "ph_other": 60
   },
   {
    "month": "2008-12",
@@ -2119,7 +2391,12 @@
    "cn_student": 3109,
    "cn_visitor": 1093,
    "cn_residence": 1127,
-   "cn_other": 179
+   "cn_other": 179,
+   "ph_work": 2249,
+   "ph_student": 1080,
+   "ph_visitor": 1775,
+   "ph_residence": 661,
+   "ph_other": 58
   },
   {
    "month": "2009-01",
@@ -2147,7 +2424,12 @@
    "cn_student": 3039,
    "cn_visitor": 1098,
    "cn_residence": 1153,
-   "cn_other": 183
+   "cn_other": 183,
+   "ph_work": 2207,
+   "ph_student": 1115,
+   "ph_visitor": 1721,
+   "ph_residence": 689,
+   "ph_other": 58
   },
   {
    "month": "2009-02",
@@ -2175,7 +2457,12 @@
    "cn_student": 3113,
    "cn_visitor": 1121,
    "cn_residence": 1172,
-   "cn_other": 192
+   "cn_other": 192,
+   "ph_work": 2167,
+   "ph_student": 1133,
+   "ph_visitor": 1621,
+   "ph_residence": 680,
+   "ph_other": 51
   },
   {
    "month": "2009-03",
@@ -2203,7 +2490,12 @@
    "cn_student": 3104,
    "cn_visitor": 1108,
    "cn_residence": 1162,
-   "cn_other": 195
+   "cn_other": 195,
+   "ph_work": 2058,
+   "ph_student": 1125,
+   "ph_visitor": 1537,
+   "ph_residence": 683,
+   "ph_other": 51
   },
   {
    "month": "2009-04",
@@ -2231,7 +2523,12 @@
    "cn_student": 3127,
    "cn_visitor": 1104,
    "cn_residence": 1157,
-   "cn_other": 193
+   "cn_other": 193,
+   "ph_work": 2024,
+   "ph_student": 1124,
+   "ph_visitor": 1415,
+   "ph_residence": 673,
+   "ph_other": 52
   },
   {
    "month": "2009-05",
@@ -2259,7 +2556,12 @@
    "cn_student": 3110,
    "cn_visitor": 1102,
    "cn_residence": 1137,
-   "cn_other": 193
+   "cn_other": 193,
+   "ph_work": 1985,
+   "ph_student": 1096,
+   "ph_visitor": 1275,
+   "ph_residence": 673,
+   "ph_other": 50
   },
   {
    "month": "2009-06",
@@ -2287,7 +2589,12 @@
    "cn_student": 3091,
    "cn_visitor": 1110,
    "cn_residence": 1149,
-   "cn_other": 172
+   "cn_other": 172,
+   "ph_work": 1872,
+   "ph_student": 1056,
+   "ph_visitor": 1155,
+   "ph_residence": 656,
+   "ph_other": 48
   },
   {
    "month": "2009-07",
@@ -2315,7 +2622,12 @@
    "cn_student": 3066,
    "cn_visitor": 1104,
    "cn_residence": 1149,
-   "cn_other": 162
+   "cn_other": 162,
+   "ph_work": 1716,
+   "ph_student": 1051,
+   "ph_visitor": 1065,
+   "ph_residence": 655,
+   "ph_other": 49
   },
   {
    "month": "2009-08",
@@ -2343,7 +2655,12 @@
    "cn_student": 3150,
    "cn_visitor": 1076,
    "cn_residence": 1122,
-   "cn_other": 156
+   "cn_other": 156,
+   "ph_work": 1561,
+   "ph_student": 1000,
+   "ph_visitor": 985,
+   "ph_residence": 616,
+   "ph_other": 51
   },
   {
    "month": "2009-09",
@@ -2371,7 +2688,12 @@
    "cn_student": 3246,
    "cn_visitor": 1097,
    "cn_residence": 1123,
-   "cn_other": 155
+   "cn_other": 155,
+   "ph_work": 1479,
+   "ph_student": 979,
+   "ph_visitor": 932,
+   "ph_residence": 606,
+   "ph_other": 48
   },
   {
    "month": "2009-10",
@@ -2399,7 +2721,12 @@
    "cn_student": 3248,
    "cn_visitor": 1094,
    "cn_residence": 1115,
-   "cn_other": 141
+   "cn_other": 141,
+   "ph_work": 1376,
+   "ph_student": 962,
+   "ph_visitor": 881,
+   "ph_residence": 591,
+   "ph_other": 50
   },
   {
    "month": "2009-11",
@@ -2427,7 +2754,12 @@
    "cn_student": 3285,
    "cn_visitor": 1088,
    "cn_residence": 1116,
-   "cn_other": 133
+   "cn_other": 133,
+   "ph_work": 1293,
+   "ph_student": 917,
+   "ph_visitor": 846,
+   "ph_residence": 569,
+   "ph_other": 46
   },
   {
    "month": "2009-12",
@@ -2455,7 +2787,12 @@
    "cn_student": 3288,
    "cn_visitor": 1110,
    "cn_residence": 1135,
-   "cn_other": 123
+   "cn_other": 123,
+   "ph_work": 1221,
+   "ph_student": 860,
+   "ph_visitor": 802,
+   "ph_residence": 580,
+   "ph_other": 44
   },
   {
    "month": "2010-01",
@@ -2483,7 +2820,12 @@
    "cn_student": 3391,
    "cn_visitor": 1124,
    "cn_residence": 1130,
-   "cn_other": 118
+   "cn_other": 118,
+   "ph_work": 1158,
+   "ph_student": 822,
+   "ph_visitor": 806,
+   "ph_residence": 586,
+   "ph_other": 42
   },
   {
    "month": "2010-02",
@@ -2511,7 +2853,12 @@
    "cn_student": 3305,
    "cn_visitor": 1110,
    "cn_residence": 1085,
-   "cn_other": 102
+   "cn_other": 102,
+   "ph_work": 1077,
+   "ph_student": 768,
+   "ph_visitor": 788,
+   "ph_residence": 576,
+   "ph_other": 44
   },
   {
    "month": "2010-03",
@@ -2539,7 +2886,12 @@
    "cn_student": 3327,
    "cn_visitor": 1138,
    "cn_residence": 1138,
-   "cn_other": 91
+   "cn_other": 91,
+   "ph_work": 1007,
+   "ph_student": 752,
+   "ph_visitor": 800,
+   "ph_residence": 588,
+   "ph_other": 42
   },
   {
    "month": "2010-04",
@@ -2567,7 +2919,12 @@
    "cn_student": 3312,
    "cn_visitor": 1154,
    "cn_residence": 1132,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 937,
+   "ph_student": 707,
+   "ph_visitor": 803,
+   "ph_residence": 579,
+   "ph_other": 40
   },
   {
    "month": "2010-05",
@@ -2595,7 +2952,12 @@
    "cn_student": 3314,
    "cn_visitor": 1166,
    "cn_residence": 1182,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 836,
+   "ph_student": 691,
+   "ph_visitor": 782,
+   "ph_residence": 610,
+   "ph_other": 43
   },
   {
    "month": "2010-06",
@@ -2623,7 +2985,12 @@
    "cn_student": 3320,
    "cn_visitor": 1160,
    "cn_residence": 1189,
-   "cn_other": 91
+   "cn_other": 91,
+   "ph_work": 744,
+   "ph_student": 662,
+   "ph_visitor": 780,
+   "ph_residence": 622,
+   "ph_other": 50
   },
   {
    "month": "2010-07",
@@ -2651,7 +3018,12 @@
    "cn_student": 3285,
    "cn_visitor": 1140,
    "cn_residence": 1190,
-   "cn_other": 84
+   "cn_other": 84,
+   "ph_work": 698,
+   "ph_student": 670,
+   "ph_visitor": 771,
+   "ph_residence": 624,
+   "ph_other": 47
   },
   {
    "month": "2010-08",
@@ -2679,7 +3051,12 @@
    "cn_student": 3332,
    "cn_visitor": 1159,
    "cn_residence": 1219,
-   "cn_other": 81
+   "cn_other": 81,
+   "ph_work": 661,
+   "ph_student": 697,
+   "ph_visitor": 784,
+   "ph_residence": 650,
+   "ph_other": 43
   },
   {
    "month": "2010-09",
@@ -2707,7 +3084,12 @@
    "cn_student": 3318,
    "cn_visitor": 1147,
    "cn_residence": 1209,
-   "cn_other": 73
+   "cn_other": 73,
+   "ph_work": 611,
+   "ph_student": 714,
+   "ph_visitor": 743,
+   "ph_residence": 662,
+   "ph_other": 44
   },
   {
    "month": "2010-10",
@@ -2735,7 +3117,12 @@
    "cn_student": 3331,
    "cn_visitor": 1149,
    "cn_residence": 1228,
-   "cn_other": 82
+   "cn_other": 82,
+   "ph_work": 615,
+   "ph_student": 757,
+   "ph_visitor": 778,
+   "ph_residence": 682,
+   "ph_other": 44
   },
   {
    "month": "2010-11",
@@ -2763,7 +3150,12 @@
    "cn_student": 3327,
    "cn_visitor": 1140,
    "cn_residence": 1251,
-   "cn_other": 84
+   "cn_other": 84,
+   "ph_work": 636,
+   "ph_student": 774,
+   "ph_visitor": 768,
+   "ph_residence": 688,
+   "ph_other": 50
   },
   {
    "month": "2010-12",
@@ -2791,7 +3183,12 @@
    "cn_student": 3353,
    "cn_visitor": 1150,
    "cn_residence": 1235,
-   "cn_other": 86
+   "cn_other": 86,
+   "ph_work": 637,
+   "ph_student": 792,
+   "ph_visitor": 768,
+   "ph_residence": 678,
+   "ph_other": 58
   },
   {
    "month": "2011-01",
@@ -2819,7 +3216,12 @@
    "cn_student": 3418,
    "cn_visitor": 1181,
    "cn_residence": 1255,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 666,
+   "ph_student": 807,
+   "ph_visitor": 753,
+   "ph_residence": 675,
+   "ph_other": 60
   },
   {
    "month": "2011-02",
@@ -2847,7 +3249,12 @@
    "cn_student": 3572,
    "cn_visitor": 1174,
    "cn_residence": 1293,
-   "cn_other": 86
+   "cn_other": 86,
+   "ph_work": 682,
+   "ph_student": 866,
+   "ph_visitor": 781,
+   "ph_residence": 695,
+   "ph_other": 56
   },
   {
    "month": "2011-03",
@@ -2875,7 +3282,12 @@
    "cn_student": 3582,
    "cn_visitor": 1174,
    "cn_residence": 1311,
-   "cn_other": 89
+   "cn_other": 89,
+   "ph_work": 701,
+   "ph_student": 883,
+   "ph_visitor": 793,
+   "ph_residence": 650,
+   "ph_other": 61
   },
   {
    "month": "2011-04",
@@ -2903,7 +3315,12 @@
    "cn_student": 3659,
    "cn_visitor": 1189,
    "cn_residence": 1340,
-   "cn_other": 90
+   "cn_other": 90,
+   "ph_work": 723,
+   "ph_student": 876,
+   "ph_visitor": 784,
+   "ph_residence": 684,
+   "ph_other": 70
   },
   {
    "month": "2011-05",
@@ -2931,7 +3348,12 @@
    "cn_student": 3724,
    "cn_visitor": 1202,
    "cn_residence": 1348,
-   "cn_other": 87
+   "cn_other": 87,
+   "ph_work": 743,
+   "ph_student": 877,
+   "ph_visitor": 794,
+   "ph_residence": 653,
+   "ph_other": 76
   },
   {
    "month": "2011-06",
@@ -2959,7 +3381,12 @@
    "cn_student": 3734,
    "cn_visitor": 1217,
    "cn_residence": 1368,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 761,
+   "ph_student": 903,
+   "ph_visitor": 813,
+   "ph_residence": 653,
+   "ph_other": 82
   },
   {
    "month": "2011-07",
@@ -2987,7 +3414,12 @@
    "cn_student": 3953,
    "cn_visitor": 1255,
    "cn_residence": 1389,
-   "cn_other": 95
+   "cn_other": 95,
+   "ph_work": 799,
+   "ph_student": 965,
+   "ph_visitor": 830,
+   "ph_residence": 629,
+   "ph_other": 85
   },
   {
    "month": "2011-08",
@@ -3015,7 +3447,12 @@
    "cn_student": 3919,
    "cn_visitor": 1307,
    "cn_residence": 1424,
-   "cn_other": 94
+   "cn_other": 94,
+   "ph_work": 814,
+   "ph_student": 931,
+   "ph_visitor": 798,
+   "ph_residence": 621,
+   "ph_other": 94
   },
   {
    "month": "2011-09",
@@ -3043,7 +3480,12 @@
    "cn_student": 4003,
    "cn_visitor": 1321,
    "cn_residence": 1459,
-   "cn_other": 97
+   "cn_other": 97,
+   "ph_work": 819,
+   "ph_student": 901,
+   "ph_visitor": 820,
+   "ph_residence": 596,
+   "ph_other": 94
   },
   {
    "month": "2011-10",
@@ -3071,7 +3513,12 @@
    "cn_student": 4107,
    "cn_visitor": 1339,
    "cn_residence": 1453,
-   "cn_other": 91
+   "cn_other": 91,
+   "ph_work": 819,
+   "ph_student": 856,
+   "ph_visitor": 771,
+   "ph_residence": 583,
+   "ph_other": 93
   },
   {
    "month": "2011-11",
@@ -3099,7 +3546,12 @@
    "cn_student": 4173,
    "cn_visitor": 1411,
    "cn_residence": 1484,
-   "cn_other": 91
+   "cn_other": 91,
+   "ph_work": 849,
+   "ph_student": 887,
+   "ph_visitor": 788,
+   "ph_residence": 579,
+   "ph_other": 92
   },
   {
    "month": "2011-12",
@@ -3127,7 +3579,12 @@
    "cn_student": 4154,
    "cn_visitor": 1430,
    "cn_residence": 1542,
-   "cn_other": 92
+   "cn_other": 92,
+   "ph_work": 857,
+   "ph_student": 873,
+   "ph_visitor": 811,
+   "ph_residence": 585,
+   "ph_other": 91
   },
   {
    "month": "2012-01",
@@ -3155,7 +3612,12 @@
    "cn_student": 4204,
    "cn_visitor": 1423,
    "cn_residence": 1557,
-   "cn_other": 90
+   "cn_other": 90,
+   "ph_work": 845,
+   "ph_student": 876,
+   "ph_visitor": 863,
+   "ph_residence": 579,
+   "ph_other": 92
   },
   {
    "month": "2012-02",
@@ -3183,7 +3645,12 @@
    "cn_student": 4276,
    "cn_visitor": 1439,
    "cn_residence": 1572,
-   "cn_other": 85
+   "cn_other": 85,
+   "ph_work": 863,
+   "ph_student": 911,
+   "ph_visitor": 833,
+   "ph_residence": 579,
+   "ph_other": 97
   },
   {
    "month": "2012-03",
@@ -3211,7 +3678,12 @@
    "cn_student": 4332,
    "cn_visitor": 1445,
    "cn_residence": 1568,
-   "cn_other": 85
+   "cn_other": 85,
+   "ph_work": 855,
+   "ph_student": 1018,
+   "ph_visitor": 820,
+   "ph_residence": 612,
+   "ph_other": 95
   },
   {
    "month": "2012-04",
@@ -3239,7 +3711,12 @@
    "cn_student": 4317,
    "cn_visitor": 1432,
    "cn_residence": 1596,
-   "cn_other": 87
+   "cn_other": 87,
+   "ph_work": 862,
+   "ph_student": 1025,
+   "ph_visitor": 823,
+   "ph_residence": 568,
+   "ph_other": 93
   },
   {
    "month": "2012-05",
@@ -3267,7 +3744,12 @@
    "cn_student": 4274,
    "cn_visitor": 1450,
    "cn_residence": 1628,
-   "cn_other": 92
+   "cn_other": 92,
+   "ph_work": 869,
+   "ph_student": 1016,
+   "ph_visitor": 811,
+   "ph_residence": 592,
+   "ph_other": 95
   },
   {
    "month": "2012-06",
@@ -3295,7 +3777,12 @@
    "cn_student": 4332,
    "cn_visitor": 1513,
    "cn_residence": 1675,
-   "cn_other": 94
+   "cn_other": 94,
+   "ph_work": 879,
+   "ph_student": 958,
+   "ph_visitor": 812,
+   "ph_residence": 579,
+   "ph_other": 81
   },
   {
    "month": "2012-07",
@@ -3323,7 +3810,12 @@
    "cn_student": 4299,
    "cn_visitor": 1539,
    "cn_residence": 1656,
-   "cn_other": 90
+   "cn_other": 90,
+   "ph_work": 898,
+   "ph_student": 852,
+   "ph_visitor": 812,
+   "ph_residence": 594,
+   "ph_other": 81
   },
   {
    "month": "2012-08",
@@ -3351,7 +3843,12 @@
    "cn_student": 4225,
    "cn_visitor": 1532,
    "cn_residence": 1637,
-   "cn_other": 92
+   "cn_other": 92,
+   "ph_work": 905,
+   "ph_student": 837,
+   "ph_visitor": 846,
+   "ph_residence": 592,
+   "ph_other": 77
   },
   {
    "month": "2012-09",
@@ -3379,7 +3876,12 @@
    "cn_student": 4180,
    "cn_visitor": 1553,
    "cn_residence": 1641,
-   "cn_other": 92
+   "cn_other": 92,
+   "ph_work": 977,
+   "ph_student": 812,
+   "ph_visitor": 821,
+   "ph_residence": 612,
+   "ph_other": 74
   },
   {
    "month": "2012-10",
@@ -3407,7 +3909,12 @@
    "cn_student": 4123,
    "cn_visitor": 1567,
    "cn_residence": 1651,
-   "cn_other": 93
+   "cn_other": 93,
+   "ph_work": 1034,
+   "ph_student": 800,
+   "ph_visitor": 846,
+   "ph_residence": 632,
+   "ph_other": 80
   },
   {
    "month": "2012-11",
@@ -3435,7 +3942,12 @@
    "cn_student": 4009,
    "cn_visitor": 1506,
    "cn_residence": 1654,
-   "cn_other": 94
+   "cn_other": 94,
+   "ph_work": 1020,
+   "ph_student": 772,
+   "ph_visitor": 834,
+   "ph_residence": 620,
+   "ph_other": 76
   },
   {
    "month": "2012-12",
@@ -3463,7 +3975,12 @@
    "cn_student": 3970,
    "cn_visitor": 1501,
    "cn_residence": 1634,
-   "cn_other": 90
+   "cn_other": 90,
+   "ph_work": 1029,
+   "ph_student": 788,
+   "ph_visitor": 827,
+   "ph_residence": 604,
+   "ph_other": 84
   },
   {
    "month": "2013-01",
@@ -3491,7 +4008,12 @@
    "cn_student": 4081,
    "cn_visitor": 1546,
    "cn_residence": 1628,
-   "cn_other": 103
+   "cn_other": 103,
+   "ph_work": 1036,
+   "ph_student": 768,
+   "ph_visitor": 823,
+   "ph_residence": 613,
+   "ph_other": 90
   },
   {
    "month": "2013-02",
@@ -3519,7 +4041,12 @@
    "cn_student": 3955,
    "cn_visitor": 1562,
    "cn_residence": 1609,
-   "cn_other": 109
+   "cn_other": 109,
+   "ph_work": 1028,
+   "ph_student": 690,
+   "ph_visitor": 793,
+   "ph_residence": 595,
+   "ph_other": 86
   },
   {
    "month": "2013-03",
@@ -3547,7 +4074,12 @@
    "cn_student": 3918,
    "cn_visitor": 1584,
    "cn_residence": 1604,
-   "cn_other": 103
+   "cn_other": 103,
+   "ph_work": 1042,
+   "ph_student": 572,
+   "ph_visitor": 812,
+   "ph_residence": 602,
+   "ph_other": 92
   },
   {
    "month": "2013-04",
@@ -3575,7 +4107,12 @@
    "cn_student": 3886,
    "cn_visitor": 1644,
    "cn_residence": 1580,
-   "cn_other": 101
+   "cn_other": 101,
+   "ph_work": 1074,
+   "ph_student": 582,
+   "ph_visitor": 800,
+   "ph_residence": 610,
+   "ph_other": 89
   },
   {
    "month": "2013-05",
@@ -3603,7 +4140,12 @@
    "cn_student": 3875,
    "cn_visitor": 1661,
    "cn_residence": 1516,
-   "cn_other": 104
+   "cn_other": 104,
+   "ph_work": 1107,
+   "ph_student": 593,
+   "ph_visitor": 799,
+   "ph_residence": 585,
+   "ph_other": 84
   },
   {
    "month": "2013-06",
@@ -3631,7 +4173,12 @@
    "cn_student": 3783,
    "cn_visitor": 1640,
    "cn_residence": 1462,
-   "cn_other": 104
+   "cn_other": 104,
+   "ph_work": 1122,
+   "ph_student": 624,
+   "ph_visitor": 779,
+   "ph_residence": 585,
+   "ph_other": 92
   },
   {
    "month": "2013-07",
@@ -3659,7 +4206,12 @@
    "cn_student": 3961,
    "cn_visitor": 1691,
    "cn_residence": 1473,
-   "cn_other": 105
+   "cn_other": 105,
+   "ph_work": 1113,
+   "ph_student": 653,
+   "ph_visitor": 771,
+   "ph_residence": 577,
+   "ph_other": 101
   },
   {
    "month": "2013-08",
@@ -3687,7 +4239,12 @@
    "cn_student": 4058,
    "cn_visitor": 1695,
    "cn_residence": 1470,
-   "cn_other": 108
+   "cn_other": 108,
+   "ph_work": 1172,
+   "ph_student": 693,
+   "ph_visitor": 742,
+   "ph_residence": 564,
+   "ph_other": 100
   },
   {
    "month": "2013-09",
@@ -3715,7 +4272,12 @@
    "cn_student": 4096,
    "cn_visitor": 1700,
    "cn_residence": 1474,
-   "cn_other": 110
+   "cn_other": 110,
+   "ph_work": 1154,
+   "ph_student": 717,
+   "ph_visitor": 764,
+   "ph_residence": 545,
+   "ph_other": 112
   },
   {
    "month": "2013-10",
@@ -3743,7 +4305,12 @@
    "cn_student": 4165,
    "cn_visitor": 1724,
    "cn_residence": 1493,
-   "cn_other": 118
+   "cn_other": 118,
+   "ph_work": 1206,
+   "ph_student": 775,
+   "ph_visitor": 752,
+   "ph_residence": 517,
+   "ph_other": 112
   },
   {
    "month": "2013-11",
@@ -3771,7 +4338,12 @@
    "cn_student": 4228,
    "cn_visitor": 1797,
    "cn_residence": 1489,
-   "cn_other": 122
+   "cn_other": 122,
+   "ph_work": 1226,
+   "ph_student": 790,
+   "ph_visitor": 773,
+   "ph_residence": 533,
+   "ph_other": 125
   },
   {
    "month": "2013-12",
@@ -3799,7 +4371,12 @@
    "cn_student": 4268,
    "cn_visitor": 1860,
    "cn_residence": 1528,
-   "cn_other": 122
+   "cn_other": 122,
+   "ph_work": 1227,
+   "ph_student": 779,
+   "ph_visitor": 790,
+   "ph_residence": 547,
+   "ph_other": 125
   },
   {
    "month": "2014-01",
@@ -3827,7 +4404,12 @@
    "cn_student": 4355,
    "cn_visitor": 1902,
    "cn_residence": 1518,
-   "cn_other": 125
+   "cn_other": 125,
+   "ph_work": 1266,
+   "ph_student": 784,
+   "ph_visitor": 775,
+   "ph_residence": 538,
+   "ph_other": 118
   },
   {
    "month": "2014-02",
@@ -3855,7 +4437,12 @@
    "cn_student": 4561,
    "cn_visitor": 1967,
    "cn_residence": 1579,
-   "cn_other": 137
+   "cn_other": 137,
+   "ph_work": 1356,
+   "ph_student": 865,
+   "ph_visitor": 818,
+   "ph_residence": 549,
+   "ph_other": 123
   },
   {
    "month": "2014-03",
@@ -3883,7 +4470,12 @@
    "cn_student": 4623,
    "cn_visitor": 1979,
    "cn_residence": 1593,
-   "cn_other": 147
+   "cn_other": 147,
+   "ph_work": 1413,
+   "ph_student": 913,
+   "ph_visitor": 847,
+   "ph_residence": 526,
+   "ph_other": 116
   },
   {
    "month": "2014-04",
@@ -3911,7 +4503,12 @@
    "cn_student": 4685,
    "cn_visitor": 2014,
    "cn_residence": 1628,
-   "cn_other": 146
+   "cn_other": 146,
+   "ph_work": 1452,
+   "ph_student": 957,
+   "ph_visitor": 916,
+   "ph_residence": 524,
+   "ph_other": 117
   },
   {
    "month": "2014-05",
@@ -3939,7 +4536,12 @@
    "cn_student": 4724,
    "cn_visitor": 2029,
    "cn_residence": 1695,
-   "cn_other": 139
+   "cn_other": 139,
+   "ph_work": 1498,
+   "ph_student": 982,
+   "ph_visitor": 945,
+   "ph_residence": 531,
+   "ph_other": 120
   },
   {
    "month": "2014-06",
@@ -3967,7 +4569,12 @@
    "cn_student": 4788,
    "cn_visitor": 2094,
    "cn_residence": 1747,
-   "cn_other": 141
+   "cn_other": 141,
+   "ph_work": 1637,
+   "ph_student": 1019,
+   "ph_visitor": 988,
+   "ph_residence": 522,
+   "ph_other": 123
   },
   {
    "month": "2014-07",
@@ -3995,7 +4602,12 @@
    "cn_student": 5141,
    "cn_visitor": 2249,
    "cn_residence": 1762,
-   "cn_other": 145
+   "cn_other": 145,
+   "ph_work": 1757,
+   "ph_student": 1083,
+   "ph_visitor": 1039,
+   "ph_residence": 509,
+   "ph_other": 112
   },
   {
    "month": "2014-08",
@@ -4023,7 +4635,12 @@
    "cn_student": 5222,
    "cn_visitor": 2401,
    "cn_residence": 1830,
-   "cn_other": 148
+   "cn_other": 148,
+   "ph_work": 1868,
+   "ph_student": 1115,
+   "ph_visitor": 1109,
+   "ph_residence": 532,
+   "ph_other": 135
   },
   {
    "month": "2014-09",
@@ -4051,7 +4668,12 @@
    "cn_student": 5391,
    "cn_visitor": 2457,
    "cn_residence": 1872,
-   "cn_other": 144
+   "cn_other": 144,
+   "ph_work": 1903,
+   "ph_student": 1183,
+   "ph_visitor": 1115,
+   "ph_residence": 544,
+   "ph_other": 125
   },
   {
    "month": "2014-10",
@@ -4079,7 +4701,12 @@
    "cn_student": 5450,
    "cn_visitor": 2513,
    "cn_residence": 1906,
-   "cn_other": 135
+   "cn_other": 135,
+   "ph_work": 1901,
+   "ph_student": 1171,
+   "ph_visitor": 1150,
+   "ph_residence": 567,
+   "ph_other": 122
   },
   {
    "month": "2014-11",
@@ -4107,7 +4734,12 @@
    "cn_student": 5487,
    "cn_visitor": 2562,
    "cn_residence": 1906,
-   "cn_other": 131
+   "cn_other": 131,
+   "ph_work": 1960,
+   "ph_student": 1286,
+   "ph_visitor": 1143,
+   "ph_residence": 590,
+   "ph_other": 117
   },
   {
    "month": "2014-12",
@@ -4135,7 +4767,12 @@
    "cn_student": 5495,
    "cn_visitor": 2597,
    "cn_residence": 1919,
-   "cn_other": 131
+   "cn_other": 131,
+   "ph_work": 2000,
+   "ph_student": 1324,
+   "ph_visitor": 1150,
+   "ph_residence": 572,
+   "ph_other": 103
   },
   {
    "month": "2015-01",
@@ -4163,7 +4800,12 @@
    "cn_student": 5720,
    "cn_visitor": 2737,
    "cn_residence": 1961,
-   "cn_other": 124
+   "cn_other": 124,
+   "ph_work": 2023,
+   "ph_student": 1374,
+   "ph_visitor": 1177,
+   "ph_residence": 596,
+   "ph_other": 105
   },
   {
    "month": "2015-02",
@@ -4191,7 +4833,12 @@
    "cn_student": 5757,
    "cn_visitor": 2775,
    "cn_residence": 1889,
-   "cn_other": 110
+   "cn_other": 110,
+   "ph_work": 1962,
+   "ph_student": 1406,
+   "ph_visitor": 1169,
+   "ph_residence": 618,
+   "ph_other": 107
   },
   {
    "month": "2015-03",
@@ -4219,7 +4866,12 @@
    "cn_student": 5819,
    "cn_visitor": 2921,
    "cn_residence": 1940,
-   "cn_other": 104
+   "cn_other": 104,
+   "ph_work": 2071,
+   "ph_student": 1484,
+   "ph_visitor": 1154,
+   "ph_residence": 636,
+   "ph_other": 108
   },
   {
    "month": "2015-04",
@@ -4247,7 +4899,12 @@
    "cn_student": 5890,
    "cn_visitor": 2973,
    "cn_residence": 1981,
-   "cn_other": 108
+   "cn_other": 108,
+   "ph_work": 2107,
+   "ph_student": 1520,
+   "ph_visitor": 1150,
+   "ph_residence": 627,
+   "ph_other": 118
   },
   {
    "month": "2015-05",
@@ -4275,7 +4932,12 @@
    "cn_student": 5841,
    "cn_visitor": 3058,
    "cn_residence": 2007,
-   "cn_other": 108
+   "cn_other": 108,
+   "ph_work": 2149,
+   "ph_student": 1631,
+   "ph_visitor": 1161,
+   "ph_residence": 640,
+   "ph_other": 118
   },
   {
    "month": "2015-06",
@@ -4303,7 +4965,12 @@
    "cn_student": 5889,
    "cn_visitor": 3182,
    "cn_residence": 2012,
-   "cn_other": 108
+   "cn_other": 108,
+   "ph_work": 2136,
+   "ph_student": 1731,
+   "ph_visitor": 1148,
+   "ph_residence": 673,
+   "ph_other": 114
   },
   {
    "month": "2015-07",
@@ -4331,7 +4998,12 @@
    "cn_student": 6042,
    "cn_visitor": 3128,
    "cn_residence": 1989,
-   "cn_other": 98
+   "cn_other": 98,
+   "ph_work": 2193,
+   "ph_student": 1842,
+   "ph_visitor": 1136,
+   "ph_residence": 688,
+   "ph_other": 113
   },
   {
    "month": "2015-08",
@@ -4359,7 +5031,12 @@
    "cn_student": 6120,
    "cn_visitor": 3200,
    "cn_residence": 1987,
-   "cn_other": 88
+   "cn_other": 88,
+   "ph_work": 2195,
+   "ph_student": 1943,
+   "ph_visitor": 1146,
+   "ph_residence": 701,
+   "ph_other": 93
   },
   {
    "month": "2015-09",
@@ -4387,7 +5064,12 @@
    "cn_student": 6153,
    "cn_visitor": 3271,
    "cn_residence": 1983,
-   "cn_other": 91
+   "cn_other": 91,
+   "ph_work": 2270,
+   "ph_student": 2019,
+   "ph_visitor": 1191,
+   "ph_residence": 716,
+   "ph_other": 93
   },
   {
    "month": "2015-10",
@@ -4415,7 +5097,12 @@
    "cn_student": 6207,
    "cn_visitor": 3364,
    "cn_residence": 2028,
-   "cn_other": 96
+   "cn_other": 96,
+   "ph_work": 2252,
+   "ph_student": 2204,
+   "ph_visitor": 1218,
+   "ph_residence": 728,
+   "ph_other": 93
   },
   {
    "month": "2015-11",
@@ -4443,7 +5130,12 @@
    "cn_student": 6200,
    "cn_visitor": 3389,
    "cn_residence": 2082,
-   "cn_other": 97
+   "cn_other": 97,
+   "ph_work": 2265,
+   "ph_student": 2375,
+   "ph_visitor": 1239,
+   "ph_residence": 712,
+   "ph_other": 88
   },
   {
    "month": "2015-12",
@@ -4471,7 +5163,12 @@
    "cn_student": 6191,
    "cn_visitor": 3489,
    "cn_residence": 2129,
-   "cn_other": 102
+   "cn_other": 102,
+   "ph_work": 2298,
+   "ph_student": 2377,
+   "ph_visitor": 1277,
+   "ph_residence": 762,
+   "ph_other": 101
   },
   {
    "month": "2016-01",
@@ -4499,7 +5196,12 @@
    "cn_student": 6281,
    "cn_visitor": 3585,
    "cn_residence": 2162,
-   "cn_other": 103
+   "cn_other": 103,
+   "ph_work": 2273,
+   "ph_student": 2461,
+   "ph_visitor": 1301,
+   "ph_residence": 738,
+   "ph_other": 101
   },
   {
    "month": "2016-02",
@@ -4527,7 +5229,12 @@
    "cn_student": 6381,
    "cn_visitor": 3757,
    "cn_residence": 2257,
-   "cn_other": 98
+   "cn_other": 98,
+   "ph_work": 2345,
+   "ph_student": 2538,
+   "ph_visitor": 1369,
+   "ph_residence": 738,
+   "ph_other": 92
   },
   {
    "month": "2016-03",
@@ -4555,7 +5262,12 @@
    "cn_student": 6274,
    "cn_visitor": 3776,
    "cn_residence": 2306,
-   "cn_other": 95
+   "cn_other": 95,
+   "ph_work": 2271,
+   "ph_student": 2512,
+   "ph_visitor": 1392,
+   "ph_residence": 783,
+   "ph_other": 91
   },
   {
    "month": "2016-04",
@@ -4583,7 +5295,12 @@
    "cn_student": 6233,
    "cn_visitor": 3847,
    "cn_residence": 2289,
-   "cn_other": 92
+   "cn_other": 92,
+   "ph_work": 2236,
+   "ph_student": 2485,
+   "ph_visitor": 1391,
+   "ph_residence": 815,
+   "ph_other": 81
   },
   {
    "month": "2016-05",
@@ -4611,7 +5328,12 @@
    "cn_student": 6215,
    "cn_visitor": 3879,
    "cn_residence": 2318,
-   "cn_other": 92
+   "cn_other": 92,
+   "ph_work": 2239,
+   "ph_student": 2434,
+   "ph_visitor": 1445,
+   "ph_residence": 862,
+   "ph_other": 82
   },
   {
    "month": "2016-06",
@@ -4639,7 +5361,12 @@
    "cn_student": 6212,
    "cn_visitor": 3925,
    "cn_residence": 2334,
-   "cn_other": 95
+   "cn_other": 95,
+   "ph_work": 2172,
+   "ph_student": 2342,
+   "ph_visitor": 1471,
+   "ph_residence": 876,
+   "ph_other": 83
   },
   {
    "month": "2016-07",
@@ -4667,7 +5394,12 @@
    "cn_student": 6304,
    "cn_visitor": 4167,
    "cn_residence": 2447,
-   "cn_other": 105
+   "cn_other": 105,
+   "ph_work": 2091,
+   "ph_student": 2262,
+   "ph_visitor": 1461,
+   "ph_residence": 911,
+   "ph_other": 92
   },
   {
    "month": "2016-08",
@@ -4695,7 +5427,12 @@
    "cn_student": 6173,
    "cn_visitor": 4272,
    "cn_residence": 2507,
-   "cn_other": 110
+   "cn_other": 110,
+   "ph_work": 2091,
+   "ph_student": 2221,
+   "ph_visitor": 1444,
+   "ph_residence": 922,
+   "ph_other": 90
   },
   {
    "month": "2016-09",
@@ -4723,7 +5460,12 @@
    "cn_student": 6186,
    "cn_visitor": 4377,
    "cn_residence": 2604,
-   "cn_other": 102
+   "cn_other": 102,
+   "ph_work": 2084,
+   "ph_student": 2173,
+   "ph_visitor": 1468,
+   "ph_residence": 928,
+   "ph_other": 94
   },
   {
    "month": "2016-10",
@@ -4751,7 +5493,12 @@
    "cn_student": 6051,
    "cn_visitor": 4417,
    "cn_residence": 2691,
-   "cn_other": 95
+   "cn_other": 95,
+   "ph_work": 2180,
+   "ph_student": 2029,
+   "ph_visitor": 1478,
+   "ph_residence": 957,
+   "ph_other": 93
   },
   {
    "month": "2016-11",
@@ -4779,7 +5526,12 @@
    "cn_student": 6035,
    "cn_visitor": 4513,
    "cn_residence": 2748,
-   "cn_other": 93
+   "cn_other": 93,
+   "ph_work": 2153,
+   "ph_student": 1826,
+   "ph_visitor": 1505,
+   "ph_residence": 971,
+   "ph_other": 90
   },
   {
    "month": "2016-12",
@@ -4807,7 +5559,12 @@
    "cn_student": 6043,
    "cn_visitor": 4549,
    "cn_residence": 2760,
-   "cn_other": 86
+   "cn_other": 86,
+   "ph_work": 2145,
+   "ph_student": 1829,
+   "ph_visitor": 1495,
+   "ph_residence": 985,
+   "ph_other": 81
   },
   {
    "month": "2017-01",
@@ -4835,7 +5592,12 @@
    "cn_student": 5950,
    "cn_visitor": 4620,
    "cn_residence": 2786,
-   "cn_other": 81
+   "cn_other": 81,
+   "ph_work": 2232,
+   "ph_student": 1778,
+   "ph_visitor": 1497,
+   "ph_residence": 1038,
+   "ph_other": 83
   },
   {
    "month": "2017-02",
@@ -4863,7 +5625,12 @@
    "cn_student": 5891,
    "cn_visitor": 4624,
    "cn_residence": 2866,
-   "cn_other": 80
+   "cn_other": 80,
+   "ph_work": 2257,
+   "ph_student": 1707,
+   "ph_visitor": 1464,
+   "ph_residence": 1063,
+   "ph_other": 89
   },
   {
    "month": "2017-03",
@@ -4891,7 +5658,12 @@
    "cn_student": 5882,
    "cn_visitor": 4695,
    "cn_residence": 2769,
-   "cn_other": 82
+   "cn_other": 82,
+   "ph_work": 2292,
+   "ph_student": 1656,
+   "ph_visitor": 1413,
+   "ph_residence": 1051,
+   "ph_other": 91
   },
   {
    "month": "2017-04",
@@ -4919,7 +5691,12 @@
    "cn_student": 5889,
    "cn_visitor": 4655,
    "cn_residence": 2764,
-   "cn_other": 86
+   "cn_other": 86,
+   "ph_work": 2380,
+   "ph_student": 1680,
+   "ph_visitor": 1386,
+   "ph_residence": 1073,
+   "ph_other": 92
   },
   {
    "month": "2017-05",
@@ -4947,7 +5724,12 @@
    "cn_student": 5887,
    "cn_visitor": 4684,
    "cn_residence": 2727,
-   "cn_other": 89
+   "cn_other": 89,
+   "ph_work": 2463,
+   "ph_student": 1691,
+   "ph_visitor": 1381,
+   "ph_residence": 1067,
+   "ph_other": 83
   },
   {
    "month": "2017-06",
@@ -4975,7 +5757,12 @@
    "cn_student": 5974,
    "cn_visitor": 4712,
    "cn_residence": 2798,
-   "cn_other": 85
+   "cn_other": 85,
+   "ph_work": 2582,
+   "ph_student": 1763,
+   "ph_visitor": 1365,
+   "ph_residence": 1070,
+   "ph_other": 79
   },
   {
    "month": "2017-07",
@@ -5003,7 +5790,12 @@
    "cn_student": 5646,
    "cn_visitor": 4643,
    "cn_residence": 2783,
-   "cn_other": 75
+   "cn_other": 75,
+   "ph_work": 2681,
+   "ph_student": 1818,
+   "ph_visitor": 1415,
+   "ph_residence": 1094,
+   "ph_other": 72
   },
   {
    "month": "2017-08",
@@ -5031,7 +5823,12 @@
    "cn_student": 5597,
    "cn_visitor": 4586,
    "cn_residence": 2721,
-   "cn_other": 71
+   "cn_other": 71,
+   "ph_work": 2714,
+   "ph_student": 1825,
+   "ph_visitor": 1460,
+   "ph_residence": 1084,
+   "ph_other": 69
   },
   {
    "month": "2017-09",
@@ -5059,7 +5856,12 @@
    "cn_student": 5459,
    "cn_visitor": 4601,
    "cn_residence": 2635,
-   "cn_other": 73
+   "cn_other": 73,
+   "ph_work": 2744,
+   "ph_student": 1842,
+   "ph_visitor": 1470,
+   "ph_residence": 1086,
+   "ph_other": 63
   },
   {
    "month": "2017-10",
@@ -5087,7 +5889,12 @@
    "cn_student": 5389,
    "cn_visitor": 4593,
    "cn_residence": 2494,
-   "cn_other": 78
+   "cn_other": 78,
+   "ph_work": 2773,
+   "ph_student": 1865,
+   "ph_visitor": 1473,
+   "ph_residence": 1042,
+   "ph_other": 61
   },
   {
    "month": "2017-11",
@@ -5115,7 +5922,12 @@
    "cn_student": 5339,
    "cn_visitor": 4569,
    "cn_residence": 2438,
-   "cn_other": 78
+   "cn_other": 78,
+   "ph_work": 2919,
+   "ph_student": 1847,
+   "ph_visitor": 1454,
+   "ph_residence": 1016,
+   "ph_other": 65
   },
   {
    "month": "2017-12",
@@ -5143,7 +5955,12 @@
    "cn_student": 5316,
    "cn_visitor": 4530,
    "cn_residence": 2390,
-   "cn_other": 78
+   "cn_other": 78,
+   "ph_work": 2943,
+   "ph_student": 1853,
+   "ph_visitor": 1450,
+   "ph_residence": 977,
+   "ph_other": 66
   },
   {
    "month": "2018-01",
@@ -5171,7 +5988,12 @@
    "cn_student": 5144,
    "cn_visitor": 4525,
    "cn_residence": 2355,
-   "cn_other": 76
+   "cn_other": 76,
+   "ph_work": 3071,
+   "ph_student": 1846,
+   "ph_visitor": 1461,
+   "ph_residence": 941,
+   "ph_other": 64
   },
   {
    "month": "2018-02",
@@ -5199,7 +6021,12 @@
    "cn_student": 4864,
    "cn_visitor": 4411,
    "cn_residence": 2194,
-   "cn_other": 80
+   "cn_other": 80,
+   "ph_work": 3112,
+   "ph_student": 1821,
+   "ph_visitor": 1456,
+   "ph_residence": 892,
+   "ph_other": 59
   },
   {
    "month": "2018-03",
@@ -5227,7 +6054,12 @@
    "cn_student": 4854,
    "cn_visitor": 4438,
    "cn_residence": 2222,
-   "cn_other": 90
+   "cn_other": 90,
+   "ph_work": 3137,
+   "ph_student": 1817,
+   "ph_visitor": 1533,
+   "ph_residence": 844,
+   "ph_other": 54
   },
   {
    "month": "2018-04",
@@ -5255,7 +6087,12 @@
    "cn_student": 4777,
    "cn_visitor": 4419,
    "cn_residence": 2171,
-   "cn_other": 86
+   "cn_other": 86,
+   "ph_work": 3124,
+   "ph_student": 1795,
+   "ph_visitor": 1560,
+   "ph_residence": 794,
+   "ph_other": 50
   },
   {
    "month": "2018-05",
@@ -5283,7 +6120,12 @@
    "cn_student": 4742,
    "cn_visitor": 4418,
    "cn_residence": 2147,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 3109,
+   "ph_student": 1772,
+   "ph_visitor": 1559,
+   "ph_residence": 733,
+   "ph_other": 53
   },
   {
    "month": "2018-06",
@@ -5311,7 +6153,12 @@
    "cn_student": 4748,
    "cn_visitor": 4365,
    "cn_residence": 2019,
-   "cn_other": 80
+   "cn_other": 80,
+   "ph_work": 3123,
+   "ph_student": 1762,
+   "ph_visitor": 1550,
+   "ph_residence": 693,
+   "ph_other": 56
   },
   {
    "month": "2018-07",
@@ -5339,7 +6186,12 @@
    "cn_student": 4508,
    "cn_visitor": 4408,
    "cn_residence": 1971,
-   "cn_other": 76
+   "cn_other": 76,
+   "ph_work": 3098,
+   "ph_student": 1702,
+   "ph_visitor": 1526,
+   "ph_residence": 639,
+   "ph_other": 51
   },
   {
    "month": "2018-08",
@@ -5367,7 +6219,12 @@
    "cn_student": 4430,
    "cn_visitor": 4489,
    "cn_residence": 1915,
-   "cn_other": 76
+   "cn_other": 76,
+   "ph_work": 3127,
+   "ph_student": 1688,
+   "ph_visitor": 1514,
+   "ph_residence": 604,
+   "ph_other": 50
   },
   {
    "month": "2018-09",
@@ -5395,7 +6252,12 @@
    "cn_student": 4317,
    "cn_visitor": 4611,
    "cn_residence": 1897,
-   "cn_other": 78
+   "cn_other": 78,
+   "ph_work": 3147,
+   "ph_student": 1656,
+   "ph_visitor": 1495,
+   "ph_residence": 562,
+   "ph_other": 55
   },
   {
    "month": "2018-10",
@@ -5423,7 +6285,12 @@
    "cn_student": 4269,
    "cn_visitor": 4686,
    "cn_residence": 1885,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 3164,
+   "ph_student": 1650,
+   "ph_visitor": 1481,
+   "ph_residence": 547,
+   "ph_other": 56
   },
   {
    "month": "2018-11",
@@ -5451,7 +6318,12 @@
    "cn_student": 4240,
    "cn_visitor": 4692,
    "cn_residence": 1850,
-   "cn_other": 80
+   "cn_other": 80,
+   "ph_work": 3128,
+   "ph_student": 1631,
+   "ph_visitor": 1476,
+   "ph_residence": 554,
+   "ph_other": 54
   },
   {
    "month": "2018-12",
@@ -5479,7 +6351,12 @@
    "cn_student": 4226,
    "cn_visitor": 4729,
    "cn_residence": 1841,
-   "cn_other": 78
+   "cn_other": 78,
+   "ph_work": 3151,
+   "ph_student": 1638,
+   "ph_visitor": 1499,
+   "ph_residence": 539,
+   "ph_other": 59
   },
   {
    "month": "2019-01",
@@ -5507,7 +6384,12 @@
    "cn_student": 4019,
    "cn_visitor": 4651,
    "cn_residence": 1855,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 3094,
+   "ph_student": 1645,
+   "ph_visitor": 1477,
+   "ph_residence": 517,
+   "ph_other": 57
   },
   {
    "month": "2019-02",
@@ -5535,7 +6417,12 @@
    "cn_student": 3921,
    "cn_visitor": 4713,
    "cn_residence": 1906,
-   "cn_other": 80
+   "cn_other": 80,
+   "ph_work": 3244,
+   "ph_student": 1651,
+   "ph_visitor": 1469,
+   "ph_residence": 502,
+   "ph_other": 56
   },
   {
    "month": "2019-03",
@@ -5563,7 +6450,12 @@
    "cn_student": 3856,
    "cn_visitor": 4596,
    "cn_residence": 1927,
-   "cn_other": 71
+   "cn_other": 71,
+   "ph_work": 3302,
+   "ph_student": 1661,
+   "ph_visitor": 1451,
+   "ph_residence": 488,
+   "ph_other": 59
   },
   {
    "month": "2019-04",
@@ -5591,7 +6483,12 @@
    "cn_student": 3791,
    "cn_visitor": 4598,
    "cn_residence": 1973,
-   "cn_other": 70
+   "cn_other": 70,
+   "ph_work": 3324,
+   "ph_student": 1698,
+   "ph_visitor": 1454,
+   "ph_residence": 470,
+   "ph_other": 60
   },
   {
    "month": "2019-05",
@@ -5619,7 +6516,12 @@
    "cn_student": 3800,
    "cn_visitor": 4642,
    "cn_residence": 2018,
-   "cn_other": 66
+   "cn_other": 66,
+   "ph_work": 3498,
+   "ph_student": 1774,
+   "ph_visitor": 1507,
+   "ph_residence": 463,
+   "ph_other": 58
   },
   {
    "month": "2019-06",
@@ -5647,7 +6549,12 @@
    "cn_student": 3704,
    "cn_visitor": 4689,
    "cn_residence": 2100,
-   "cn_other": 69
+   "cn_other": 69,
+   "ph_work": 3559,
+   "ph_student": 1756,
+   "ph_visitor": 1541,
+   "ph_residence": 452,
+   "ph_other": 54
   },
   {
    "month": "2019-07",
@@ -5675,7 +6582,12 @@
    "cn_student": 3477,
    "cn_visitor": 4667,
    "cn_residence": 2132,
-   "cn_other": 77
+   "cn_other": 77,
+   "ph_work": 3542,
+   "ph_student": 1735,
+   "ph_visitor": 1595,
+   "ph_residence": 446,
+   "ph_other": 56
   },
   {
    "month": "2019-08",
@@ -5703,7 +6615,12 @@
    "cn_student": 3413,
    "cn_visitor": 4647,
    "cn_residence": 2235,
-   "cn_other": 75
+   "cn_other": 75,
+   "ph_work": 3611,
+   "ph_student": 1727,
+   "ph_visitor": 1602,
+   "ph_residence": 443,
+   "ph_other": 54
   },
   {
    "month": "2019-09",
@@ -5731,7 +6648,12 @@
    "cn_student": 3402,
    "cn_visitor": 4575,
    "cn_residence": 2341,
-   "cn_other": 78
+   "cn_other": 78,
+   "ph_work": 3695,
+   "ph_student": 1681,
+   "ph_visitor": 1616,
+   "ph_residence": 448,
+   "ph_other": 50
   },
   {
    "month": "2019-10",
@@ -5759,7 +6681,12 @@
    "cn_student": 3408,
    "cn_visitor": 4648,
    "cn_residence": 2474,
-   "cn_other": 68
+   "cn_other": 68,
+   "ph_work": 3728,
+   "ph_student": 1666,
+   "ph_visitor": 1678,
+   "ph_residence": 457,
+   "ph_other": 47
   },
   {
    "month": "2019-11",
@@ -5787,7 +6714,12 @@
    "cn_student": 3385,
    "cn_visitor": 4836,
    "cn_residence": 2625,
-   "cn_other": 71
+   "cn_other": 71,
+   "ph_work": 3804,
+   "ph_student": 1711,
+   "ph_visitor": 1763,
+   "ph_residence": 441,
+   "ph_other": 44
   },
   {
    "month": "2019-12",
@@ -5815,7 +6747,12 @@
    "cn_student": 3407,
    "cn_visitor": 5234,
    "cn_residence": 2748,
-   "cn_other": 76
+   "cn_other": 76,
+   "ph_work": 3820,
+   "ph_student": 1707,
+   "ph_visitor": 1867,
+   "ph_residence": 457,
+   "ph_other": 39
   },
   {
    "month": "2020-01",
@@ -5843,7 +6780,12 @@
    "cn_student": 3510,
    "cn_visitor": 5529,
    "cn_residence": 2825,
-   "cn_other": 78
+   "cn_other": 78,
+   "ph_work": 3800,
+   "ph_student": 1707,
+   "ph_visitor": 1918,
+   "ph_residence": 439,
+   "ph_other": 95
   },
   {
    "month": "2020-02",
@@ -5871,7 +6813,12 @@
    "cn_student": 3143,
    "cn_visitor": 5333,
    "cn_residence": 2925,
-   "cn_other": 79
+   "cn_other": 79,
+   "ph_work": 3799,
+   "ph_student": 1719,
+   "ph_visitor": 2010,
+   "ph_residence": 469,
+   "ph_other": 95
   },
   {
    "month": "2020-03",
@@ -5899,7 +6846,12 @@
    "cn_student": 3051,
    "cn_visitor": 5074,
    "cn_residence": 2829,
-   "cn_other": 77
+   "cn_other": 77,
+   "ph_work": 3684,
+   "ph_student": 1710,
+   "ph_visitor": 2020,
+   "ph_residence": 476,
+   "ph_other": 95
   },
   {
    "month": "2020-04",
@@ -5927,7 +6879,12 @@
    "cn_student": 2900,
    "cn_visitor": 4822,
    "cn_residence": 2691,
-   "cn_other": 75
+   "cn_other": 75,
+   "ph_work": 3450,
+   "ph_student": 1555,
+   "ph_visitor": 1901,
+   "ph_residence": 436,
+   "ph_other": 93
   },
   {
    "month": "2020-05",
@@ -5955,7 +6912,12 @@
    "cn_student": 2802,
    "cn_visitor": 4485,
    "cn_residence": 2564,
-   "cn_other": 74
+   "cn_other": 74,
+   "ph_work": 3018,
+   "ph_student": 1347,
+   "ph_visitor": 1696,
+   "ph_residence": 396,
+   "ph_other": 90
   },
   {
    "month": "2020-06",
@@ -5983,7 +6945,12 @@
    "cn_student": 2562,
    "cn_visitor": 4093,
    "cn_residence": 2453,
-   "cn_other": 67
+   "cn_other": 67,
+   "ph_work": 2668,
+   "ph_student": 1194,
+   "ph_visitor": 1563,
+   "ph_residence": 352,
+   "ph_other": 86
   },
   {
    "month": "2020-07",
@@ -6011,7 +6978,12 @@
    "cn_student": 1883,
    "cn_visitor": 3603,
    "cn_residence": 2372,
-   "cn_other": 56
+   "cn_other": 56,
+   "ph_work": 2428,
+   "ph_student": 1037,
+   "ph_visitor": 1424,
+   "ph_residence": 325,
+   "ph_other": 83
   },
   {
    "month": "2020-08",
@@ -6039,7 +7011,12 @@
    "cn_student": 1637,
    "cn_visitor": 3142,
    "cn_residence": 2308,
-   "cn_other": 54
+   "cn_other": 54,
+   "ph_work": 2044,
+   "ph_student": 877,
+   "ph_visitor": 1300,
+   "ph_residence": 326,
+   "ph_other": 82
   },
   {
    "month": "2020-09",
@@ -6067,7 +7044,12 @@
    "cn_student": 1298,
    "cn_visitor": 2725,
    "cn_residence": 2107,
-   "cn_other": 45
+   "cn_other": 45,
+   "ph_work": 1696,
+   "ph_student": 783,
+   "ph_visitor": 1173,
+   "ph_residence": 317,
+   "ph_other": 81
   },
   {
    "month": "2020-10",
@@ -6095,7 +7077,12 @@
    "cn_student": 1019,
    "cn_visitor": 2261,
    "cn_residence": 1955,
-   "cn_other": 43
+   "cn_other": 43,
+   "ph_work": 1377,
+   "ph_student": 674,
+   "ph_visitor": 1035,
+   "ph_residence": 335,
+   "ph_other": 81
   },
   {
    "month": "2020-11",
@@ -6123,7 +7110,12 @@
    "cn_student": 871,
    "cn_visitor": 1769,
    "cn_residence": 1757,
-   "cn_other": 43
+   "cn_other": 43,
+   "ph_work": 1040,
+   "ph_student": 513,
+   "ph_visitor": 893,
+   "ph_residence": 374,
+   "ph_other": 79
   },
   {
    "month": "2020-12",
@@ -6151,7 +7143,12 @@
    "cn_student": 781,
    "cn_visitor": 1050,
    "cn_residence": 1586,
-   "cn_other": 36
+   "cn_other": 36,
+   "ph_work": 849,
+   "ph_student": 417,
+   "ph_visitor": 678,
+   "ph_residence": 335,
+   "ph_other": 71
   },
   {
    "month": "2021-01",
@@ -6179,7 +7176,12 @@
    "cn_student": 214,
    "cn_visitor": 347,
    "cn_residence": 1429,
-   "cn_other": 27
+   "cn_other": 27,
+   "ph_work": 610,
+   "ph_student": 289,
+   "ph_visitor": 555,
+   "ph_residence": 335,
+   "ph_other": 21
   },
   {
    "month": "2021-02",
@@ -6207,7 +7209,12 @@
    "cn_student": 152,
    "cn_visitor": 217,
    "cn_residence": 1274,
-   "cn_other": 26
+   "cn_other": 26,
+   "ph_work": 208,
+   "ph_student": 111,
+   "ph_visitor": 424,
+   "ph_residence": 314,
+   "ph_other": 18
   },
   {
    "month": "2021-03",
@@ -6235,7 +7242,12 @@
    "cn_student": 72,
    "cn_visitor": 199,
    "cn_residence": 1296,
-   "cn_other": 25
+   "cn_other": 25,
+   "ph_work": 58,
+   "ph_student": 17,
+   "ph_visitor": 315,
+   "ph_residence": 326,
+   "ph_other": 15
   },
   {
    "month": "2021-04",
@@ -6263,7 +7275,12 @@
    "cn_student": 89,
    "cn_visitor": 218,
    "cn_residence": 1391,
-   "cn_other": 27
+   "cn_other": 27,
+   "ph_work": 73,
+   "ph_student": 21,
+   "ph_visitor": 398,
+   "ph_residence": 366,
+   "ph_other": 15
   },
   {
    "month": "2021-05",
@@ -6291,7 +7308,12 @@
    "cn_student": 126,
    "cn_visitor": 248,
    "cn_residence": 1499,
-   "cn_other": 34
+   "cn_other": 34,
+   "ph_work": 77,
+   "ph_student": 21,
+   "ph_visitor": 429,
+   "ph_residence": 430,
+   "ph_other": 16
   },
   {
    "month": "2021-06",
@@ -6319,7 +7341,12 @@
    "cn_student": 381,
    "cn_visitor": 267,
    "cn_residence": 1533,
-   "cn_other": 41
+   "cn_other": 41,
+   "ph_work": 96,
+   "ph_student": 30,
+   "ph_visitor": 500,
+   "ph_residence": 503,
+   "ph_other": 16
   },
   {
    "month": "2021-07",
@@ -6347,7 +7374,12 @@
    "cn_student": 495,
    "cn_visitor": 278,
    "cn_residence": 1605,
-   "cn_other": 47
+   "cn_other": 47,
+   "ph_work": 94,
+   "ph_student": 38,
+   "ph_visitor": 528,
+   "ph_residence": 579,
+   "ph_other": 17
   },
   {
    "month": "2021-08",
@@ -6375,7 +7407,12 @@
    "cn_student": 540,
    "cn_visitor": 271,
    "cn_residence": 1540,
-   "cn_other": 51
+   "cn_other": 51,
+   "ph_work": 123,
+   "ph_student": 66,
+   "ph_visitor": 553,
+   "ph_residence": 570,
+   "ph_other": 19
   },
   {
    "month": "2021-09",
@@ -6403,7 +7440,12 @@
    "cn_student": 568,
    "cn_visitor": 278,
    "cn_residence": 1565,
-   "cn_other": 51
+   "cn_other": 51,
+   "ph_work": 135,
+   "ph_student": 76,
+   "ph_visitor": 589,
+   "ph_residence": 556,
+   "ph_other": 18
   },
   {
    "month": "2021-10",
@@ -6431,7 +7473,12 @@
    "cn_student": 589,
    "cn_visitor": 278,
    "cn_residence": 1540,
-   "cn_other": 58
+   "cn_other": 58,
+   "ph_work": 151,
+   "ph_student": 99,
+   "ph_visitor": 581,
+   "ph_residence": 538,
+   "ph_other": 24
   },
   {
    "month": "2021-11",
@@ -6459,7 +7506,12 @@
    "cn_student": 601,
    "cn_visitor": 279,
    "cn_residence": 1482,
-   "cn_other": 54
+   "cn_other": 54,
+   "ph_work": 174,
+   "ph_student": 112,
+   "ph_visitor": 617,
+   "ph_residence": 501,
+   "ph_other": 24
   },
   {
    "month": "2021-12",
@@ -6487,7 +7539,12 @@
    "cn_student": 630,
    "cn_visitor": 273,
    "cn_residence": 1480,
-   "cn_other": 64
+   "cn_other": 64,
+   "ph_work": 197,
+   "ph_student": 121,
+   "ph_visitor": 698,
+   "ph_residence": 507,
+   "ph_other": 22
   },
   {
    "month": "2022-01",
@@ -6515,7 +7572,12 @@
    "cn_student": 637,
    "cn_visitor": 277,
    "cn_residence": 1418,
-   "cn_other": 65
+   "cn_other": 65,
+   "ph_work": 204,
+   "ph_student": 130,
+   "ph_visitor": 681,
+   "ph_residence": 501,
+   "ph_other": 14
   },
   {
    "month": "2022-02",
@@ -6543,7 +7605,12 @@
    "cn_student": 647,
    "cn_visitor": 264,
    "cn_residence": 1368,
-   "cn_other": 67
+   "cn_other": 67,
+   "ph_work": 208,
+   "ph_student": 135,
+   "ph_visitor": 678,
+   "ph_residence": 490,
+   "ph_other": 14
   },
   {
    "month": "2022-03",
@@ -6571,7 +7638,12 @@
    "cn_student": 674,
    "cn_visitor": 242,
    "cn_residence": 1354,
-   "cn_other": 69
+   "cn_other": 69,
+   "ph_work": 200,
+   "ph_student": 143,
+   "ph_visitor": 739,
+   "ph_residence": 593,
+   "ph_other": 13
   },
   {
    "month": "2022-04",
@@ -6599,7 +7671,12 @@
    "cn_student": 701,
    "cn_visitor": 250,
    "cn_residence": 1352,
-   "cn_other": 75
+   "cn_other": 75,
+   "ph_work": 232,
+   "ph_student": 163,
+   "ph_visitor": 719,
+   "ph_residence": 733,
+   "ph_other": 13
   },
   {
    "month": "2022-05",
@@ -6627,7 +7704,12 @@
    "cn_student": 728,
    "cn_visitor": 434,
    "cn_residence": 1336,
-   "cn_other": 75
+   "cn_other": 75,
+   "ph_work": 277,
+   "ph_student": 176,
+   "ph_visitor": 832,
+   "ph_residence": 882,
+   "ph_other": 13
   },
   {
    "month": "2022-06",
@@ -6655,7 +7737,12 @@
    "cn_student": 722,
    "cn_visitor": 571,
    "cn_residence": 1387,
-   "cn_other": 73
+   "cn_other": 73,
+   "ph_work": 291,
+   "ph_student": 180,
+   "ph_visitor": 976,
+   "ph_residence": 1120,
+   "ph_other": 14
   },
   {
    "month": "2022-07",
@@ -6683,7 +7770,12 @@
    "cn_student": 1305,
    "cn_visitor": 805,
    "cn_residence": 1427,
-   "cn_other": 70
+   "cn_other": 70,
+   "ph_work": 330,
+   "ph_student": 275,
+   "ph_visitor": 1319,
+   "ph_residence": 1299,
+   "ph_other": 13
   },
   {
    "month": "2022-08",
@@ -6711,7 +7803,12 @@
    "cn_student": 1469,
    "cn_visitor": 906,
    "cn_residence": 1563,
-   "cn_other": 66
+   "cn_other": 66,
+   "ph_work": 359,
+   "ph_student": 290,
+   "ph_visitor": 1645,
+   "ph_residence": 1696,
+   "ph_other": 12
   },
   {
    "month": "2022-09",
@@ -6739,7 +7836,12 @@
    "cn_student": 1973,
    "cn_visitor": 1094,
    "cn_residence": 1665,
-   "cn_other": 69
+   "cn_other": 69,
+   "ph_work": 576,
+   "ph_student": 371,
+   "ph_visitor": 1865,
+   "ph_residence": 2196,
+   "ph_other": 12
   },
   {
    "month": "2022-10",
@@ -6767,7 +7869,12 @@
    "cn_student": 2478,
    "cn_visitor": 1365,
    "cn_residence": 1753,
-   "cn_other": 71
+   "cn_other": 71,
+   "ph_work": 880,
+   "ph_student": 456,
+   "ph_visitor": 2137,
+   "ph_residence": 2604,
+   "ph_other": 5
   },
   {
    "month": "2022-11",
@@ -6795,7 +7902,12 @@
    "cn_student": 2775,
    "cn_visitor": 1593,
    "cn_residence": 1844,
-   "cn_other": 72
+   "cn_other": 72,
+   "ph_work": 1791,
+   "ph_student": 537,
+   "ph_visitor": 2750,
+   "ph_residence": 3350,
+   "ph_other": 10
   },
   {
    "month": "2022-12",
@@ -6823,7 +7935,12 @@
    "cn_student": 3084,
    "cn_visitor": 1873,
    "cn_residence": 1982,
-   "cn_other": 68
+   "cn_other": 68,
+   "ph_work": 2354,
+   "ph_student": 638,
+   "ph_visitor": 3272,
+   "ph_residence": 3877,
+   "ph_other": 14
   },
   {
    "month": "2023-01",
@@ -6851,7 +7968,12 @@
    "cn_student": 3784,
    "cn_visitor": 2182,
    "cn_residence": 2144,
-   "cn_other": 69
+   "cn_other": 69,
+   "ph_work": 3199,
+   "ph_student": 776,
+   "ph_visitor": 3530,
+   "ph_residence": 4314,
+   "ph_other": 14
   },
   {
    "month": "2023-02",
@@ -6879,7 +8001,12 @@
    "cn_student": 5652,
    "cn_visitor": 2420,
    "cn_residence": 2282,
-   "cn_other": 67
+   "cn_other": 67,
+   "ph_work": 4492,
+   "ph_student": 987,
+   "ph_visitor": 3935,
+   "ph_residence": 5170,
+   "ph_other": 14
   },
   {
    "month": "2023-03",
@@ -6907,7 +8034,12 @@
    "cn_student": 6221,
    "cn_visitor": 2765,
    "cn_residence": 2511,
-   "cn_other": 67
+   "cn_other": 67,
+   "ph_work": 6220,
+   "ph_student": 1160,
+   "ph_visitor": 4577,
+   "ph_residence": 6717,
+   "ph_other": 14
   },
   {
    "month": "2023-04",
@@ -6935,7 +8067,12 @@
    "cn_student": 6553,
    "cn_visitor": 3012,
    "cn_residence": 2643,
-   "cn_other": 65
+   "cn_other": 65,
+   "ph_work": 7185,
+   "ph_student": 1276,
+   "ph_visitor": 4941,
+   "ph_residence": 7413,
+   "ph_other": 13
   },
   {
    "month": "2023-05",
@@ -6963,7 +8100,12 @@
    "cn_student": 6755,
    "cn_visitor": 3030,
    "cn_residence": 2716,
-   "cn_other": 68
+   "cn_other": 68,
+   "ph_work": 8156,
+   "ph_student": 1405,
+   "ph_visitor": 5323,
+   "ph_residence": 8349,
+   "ph_other": 12
   },
   {
    "month": "2023-06",
@@ -6991,7 +8133,12 @@
    "cn_student": 6970,
    "cn_visitor": 3172,
    "cn_residence": 2834,
-   "cn_other": 69
+   "cn_other": 69,
+   "ph_work": 9014,
+   "ph_student": 1587,
+   "ph_visitor": 5659,
+   "ph_residence": 9333,
+   "ph_other": 16
   },
   {
    "month": "2023-07",
@@ -7019,7 +8166,12 @@
    "cn_student": 7258,
    "cn_visitor": 3206,
    "cn_residence": 2895,
-   "cn_other": 76
+   "cn_other": 76,
+   "ph_work": 9692,
+   "ph_student": 1675,
+   "ph_visitor": 5684,
+   "ph_residence": 10182,
+   "ph_other": 17
   },
   {
    "month": "2023-08",
@@ -7047,7 +8199,12 @@
    "cn_student": 7483,
    "cn_visitor": 3525,
    "cn_residence": 3024,
-   "cn_other": 80
+   "cn_other": 80,
+   "ph_work": 10634,
+   "ph_student": 1931,
+   "ph_visitor": 5916,
+   "ph_residence": 11287,
+   "ph_other": 16
   },
   {
    "month": "2023-09",
@@ -7075,7 +8232,12 @@
    "cn_student": 7366,
    "cn_visitor": 3643,
    "cn_residence": 3060,
-   "cn_other": 84
+   "cn_other": 84,
+   "ph_work": 11148,
+   "ph_student": 2125,
+   "ph_visitor": 6119,
+   "ph_residence": 11615,
+   "ph_other": 20
   },
   {
    "month": "2023-10",
@@ -7103,7 +8265,12 @@
    "cn_student": 7159,
    "cn_visitor": 3580,
    "cn_residence": 3039,
-   "cn_other": 77
+   "cn_other": 77,
+   "ph_work": 11462,
+   "ph_student": 2172,
+   "ph_visitor": 6193,
+   "ph_residence": 11673,
+   "ph_other": 21
   },
   {
    "month": "2023-11",
@@ -7131,7 +8298,12 @@
    "cn_student": 7077,
    "cn_visitor": 3573,
    "cn_residence": 3119,
-   "cn_other": 82
+   "cn_other": 82,
+   "ph_work": 11041,
+   "ph_student": 2253,
+   "ph_visitor": 5978,
+   "ph_residence": 11476,
+   "ph_other": 24
   },
   {
    "month": "2023-12",
@@ -7159,7 +8331,12 @@
    "cn_student": 6934,
    "cn_visitor": 3515,
    "cn_residence": 3123,
-   "cn_other": 84
+   "cn_other": 84,
+   "ph_work": 10772,
+   "ph_student": 2343,
+   "ph_visitor": 5780,
+   "ph_residence": 11294,
+   "ph_other": 23
   },
   {
    "month": "2024-01",
@@ -7187,7 +8364,12 @@
    "cn_student": 6881,
    "cn_visitor": 3504,
    "cn_residence": 3136,
-   "cn_other": 93
+   "cn_other": 93,
+   "ph_work": 10364,
+   "ph_student": 2347,
+   "ph_visitor": 5754,
+   "ph_residence": 11263,
+   "ph_other": 26
   },
   {
    "month": "2024-02",
@@ -7215,7 +8397,12 @@
    "cn_student": 5853,
    "cn_visitor": 3509,
    "cn_residence": 3182,
-   "cn_other": 91
+   "cn_other": 91,
+   "ph_work": 9528,
+   "ph_student": 2336,
+   "ph_visitor": 5654,
+   "ph_residence": 10754,
+   "ph_other": 28
   },
   {
    "month": "2024-03",
@@ -7243,7 +8430,12 @@
    "cn_student": 5551,
    "cn_visitor": 3359,
    "cn_residence": 3099,
-   "cn_other": 88
+   "cn_other": 88,
+   "ph_work": 8202,
+   "ph_student": 2299,
+   "ph_visitor": 5236,
+   "ph_residence": 9388,
+   "ph_other": 32
   },
   {
    "month": "2024-04",
@@ -7271,7 +8463,12 @@
    "cn_student": 5489,
    "cn_visitor": 3304,
    "cn_residence": 3044,
-   "cn_other": 91
+   "cn_other": 91,
+   "ph_work": 7504,
+   "ph_student": 2291,
+   "ph_visitor": 5066,
+   "ph_residence": 8715,
+   "ph_other": 34
   },
   {
    "month": "2024-05",
@@ -7299,7 +8496,12 @@
    "cn_student": 5393,
    "cn_visitor": 3240,
    "cn_residence": 2985,
-   "cn_other": 89
+   "cn_other": 89,
+   "ph_work": 6781,
+   "ph_student": 2297,
+   "ph_visitor": 4839,
+   "ph_residence": 7744,
+   "ph_other": 34
   },
   {
    "month": "2024-06",
@@ -7327,7 +8529,12 @@
    "cn_student": 5382,
    "cn_visitor": 3187,
    "cn_residence": 2929,
-   "cn_other": 89
+   "cn_other": 89,
+   "ph_work": 6256,
+   "ph_student": 2404,
+   "ph_visitor": 4577,
+   "ph_residence": 6764,
+   "ph_other": 29
   },
   {
    "month": "2024-07",
@@ -7355,7 +8562,12 @@
    "cn_student": 5466,
    "cn_visitor": 3234,
    "cn_residence": 2921,
-   "cn_other": 88
+   "cn_other": 88,
+   "ph_work": 5773,
+   "ph_student": 2471,
+   "ph_visitor": 4379,
+   "ph_residence": 5911,
+   "ph_other": 31
   },
   {
    "month": "2024-08",
@@ -7383,7 +8595,12 @@
    "cn_student": 5362,
    "cn_visitor": 3012,
    "cn_residence": 2743,
-   "cn_other": 89
+   "cn_other": 89,
+   "ph_work": 5027,
+   "ph_student": 2384,
+   "ph_visitor": 4059,
+   "ph_residence": 4554,
+   "ph_other": 31
   },
   {
    "month": "2024-09",
@@ -7411,7 +8628,12 @@
    "cn_student": 5328,
    "cn_visitor": 2872,
    "cn_residence": 2690,
-   "cn_other": 93
+   "cn_other": 93,
+   "ph_work": 4491,
+   "ph_student": 2288,
+   "ph_visitor": 3770,
+   "ph_residence": 3870,
+   "ph_other": 27
   },
   {
    "month": "2024-10",
@@ -7439,7 +8661,12 @@
    "cn_student": 5401,
    "cn_visitor": 2819,
    "cn_residence": 2696,
-   "cn_other": 96
+   "cn_other": 96,
+   "ph_work": 4025,
+   "ph_student": 2291,
+   "ph_visitor": 3591,
+   "ph_residence": 3541,
+   "ph_other": 27
   },
   {
    "month": "2024-11",
@@ -7467,7 +8694,12 @@
    "cn_student": 5383,
    "cn_visitor": 2788,
    "cn_residence": 2673,
-   "cn_other": 92
+   "cn_other": 92,
+   "ph_work": 3678,
+   "ph_student": 2238,
+   "ph_visitor": 3362,
+   "ph_residence": 3111,
+   "ph_other": 19
   },
   {
    "month": "2024-12",
@@ -7495,7 +8727,12 @@
    "cn_student": 5450,
    "cn_visitor": 2771,
    "cn_residence": 2652,
-   "cn_other": 87
+   "cn_other": 87,
+   "ph_work": 3512,
+   "ph_student": 2198,
+   "ph_visitor": 3193,
+   "ph_residence": 2874,
+   "ph_other": 18
   },
   {
    "month": "2025-01",
@@ -7523,7 +8760,12 @@
    "cn_student": 5566,
    "cn_visitor": 2680,
    "cn_residence": 2606,
-   "cn_other": 82
+   "cn_other": 82,
+   "ph_work": 3194,
+   "ph_student": 2201,
+   "ph_visitor": 3092,
+   "ph_residence": 2558,
+   "ph_other": 16
   },
   {
    "month": "2025-02",
@@ -7551,7 +8793,12 @@
    "cn_student": 5774,
    "cn_visitor": 2651,
    "cn_residence": 2601,
-   "cn_other": 83
+   "cn_other": 83,
+   "ph_work": 2929,
+   "ph_student": 2205,
+   "ph_visitor": 2937,
+   "ph_residence": 2384,
+   "ph_other": 17
   },
   {
    "month": "2025-03",
@@ -7579,7 +8826,12 @@
    "cn_student": 5806,
    "cn_visitor": 2660,
    "cn_residence": 2568,
-   "cn_other": 82
+   "cn_other": 82,
+   "ph_work": 2686,
+   "ph_student": 2201,
+   "ph_visitor": 2839,
+   "ph_residence": 2197,
+   "ph_other": 13
   },
   {
    "month": "2025-04",
@@ -7607,7 +8859,12 @@
    "cn_student": 5810,
    "cn_visitor": 2614,
    "cn_residence": 2513,
-   "cn_other": 75
+   "cn_other": 75,
+   "ph_work": 2492,
+   "ph_student": 2197,
+   "ph_visitor": 2740,
+   "ph_residence": 2090,
+   "ph_other": 11
   },
   {
    "month": "2025-05",
@@ -7635,7 +8892,12 @@
    "cn_student": 5804,
    "cn_visitor": 2626,
    "cn_residence": 2532,
-   "cn_other": 73
+   "cn_other": 73,
+   "ph_work": 2439,
+   "ph_student": 2224,
+   "ph_visitor": 2742,
+   "ph_residence": 2135,
+   "ph_other": 10
   },
   {
    "month": "2025-06",
@@ -7663,7 +8925,12 @@
    "cn_student": 5881,
    "cn_visitor": 2610,
    "cn_residence": 2521,
-   "cn_other": 71
+   "cn_other": 71,
+   "ph_work": 2321,
+   "ph_student": 2143,
+   "ph_visitor": 2703,
+   "ph_residence": 1993,
+   "ph_other": 10
   },
   {
    "month": "2025-07",
@@ -7691,7 +8958,12 @@
    "cn_student": 5952,
    "cn_visitor": 2522,
    "cn_residence": 2412,
-   "cn_other": 66
+   "cn_other": 66,
+   "ph_work": 2314,
+   "ph_student": 2128,
+   "ph_visitor": 2748,
+   "ph_residence": 1841,
+   "ph_other": 13
   },
   {
    "month": "2025-08",
@@ -7719,7 +8991,12 @@
    "cn_student": 5912,
    "cn_visitor": 2539,
    "cn_residence": 2415,
-   "cn_other": 66
+   "cn_other": 66,
+   "ph_work": 2286,
+   "ph_student": 2044,
+   "ph_visitor": 2742,
+   "ph_residence": 1807,
+   "ph_other": 13
   },
   {
    "month": "2025-09",
@@ -7747,7 +9024,12 @@
    "cn_student": 5977,
    "cn_visitor": 2605,
    "cn_residence": 2425,
-   "cn_other": 57
+   "cn_other": 57,
+   "ph_work": 2276,
+   "ph_student": 2011,
+   "ph_visitor": 2787,
+   "ph_residence": 1798,
+   "ph_other": 15
   },
   {
    "month": "2025-10",
@@ -7775,7 +9057,12 @@
    "cn_student": 5909,
    "cn_visitor": 2611,
    "cn_residence": 2414,
-   "cn_other": 55
+   "cn_other": 55,
+   "ph_work": 2356,
+   "ph_student": 1976,
+   "ph_visitor": 2783,
+   "ph_residence": 1735,
+   "ph_other": 15
   },
   {
    "month": "2025-11",
@@ -7803,7 +9090,12 @@
    "cn_student": 5877,
    "cn_visitor": 2636,
    "cn_residence": 2393,
-   "cn_other": 51
+   "cn_other": 51,
+   "ph_work": 2390,
+   "ph_student": 1961,
+   "ph_visitor": 2773,
+   "ph_residence": 1699,
+   "ph_other": 17
   },
   {
    "month": "2025-12",
@@ -7831,7 +9123,12 @@
    "cn_student": 5859,
    "cn_visitor": 2704,
    "cn_residence": 2364,
-   "cn_other": 51
+   "cn_other": 51,
+   "ph_work": 2368,
+   "ph_student": 1911,
+   "ph_visitor": 2782,
+   "ph_residence": 1667,
+   "ph_other": 16
   },
   {
    "month": "2026-01",
@@ -7859,7 +9156,12 @@
    "cn_student": 5901,
    "cn_visitor": 2801,
    "cn_residence": 2360,
-   "cn_other": 47
+   "cn_other": 47,
+   "ph_work": 2372,
+   "ph_student": 1883,
+   "ph_visitor": 2765,
+   "ph_residence": 1628,
+   "ph_other": 17
   },
   {
    "month": "2026-02",
@@ -7887,7 +9189,12 @@
    "cn_student": 6098,
    "cn_visitor": 2841,
    "cn_residence": 2293,
-   "cn_other": 47
+   "cn_other": 47,
+   "ph_work": 2375,
+   "ph_student": 1796,
+   "ph_visitor": 2772,
+   "ph_residence": 1545,
+   "ph_other": 15
   },
   {
    "month": "2026-03",
@@ -7915,7 +9222,12 @@
    "cn_student": 6221,
    "cn_visitor": 2976,
    "cn_residence": 2298,
-   "cn_other": 48
+   "cn_other": 48,
+   "ph_work": 2464,
+   "ph_student": 1733,
+   "ph_visitor": 2822,
+   "ph_residence": 1517,
+   "ph_other": 16
   }
  ]
 }

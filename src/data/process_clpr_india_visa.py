@@ -199,6 +199,9 @@ def main() -> None:
     print("\n--- China ---")
     _save(_filter_clpr(long, "China, People's Republic of"), "china", date_suffix)
 
+    print("\n--- Philippines ---")
+    _save(_filter_clpr(long, "Philippines"), "philippines", date_suffix)
+
 
 if __name__ == "__main__":
     main()
