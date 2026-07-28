@@ -35,7 +35,7 @@
     </a>
   </p>
   <h1>{data.meta.title}</h1>
-  <p class="last-update">Last update: {data.meta.last_update}</p>
+  <p class="last-update">Last update: {data.meta.generated_label}</p>
   <p class="standfirst">{data.meta.standfirst}</p>
   <p class="kicker">Scroll to advance.</p>
 </header>
@@ -117,6 +117,7 @@
 
   .last-update {
     font-size: 0.85rem;
+    font-style: italic;
     color: var(--faint);
     margin: 0 0 1.25rem;
   }

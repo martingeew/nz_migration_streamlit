@@ -69,12 +69,25 @@ _SKILL_LO_LEVELS = ["Skill level 4", "Skill level 5"]  # ANZSCO 4-5, the "lower-
 # ── Header text ───────────────────────────────────────────────────────────────
 
 TITLE = "Who is actually arriving in New Zealand"
-STANDFIRST = (
-    "Non-New Zealand citizen arrivals reached 211,842 in the year to October 2023, "
-    "close to three times the pre-COVID norm. Scroll to see how old those arrivals "
-    "were, where they came from, and what visas they held."
-)
 BYLINE = "Built by Autonomous Econ"
+
+
+def _standfirst(wide: pd.DataFrame) -> str:
+    """Read the peak-arrivals claim from the data so a revision cannot go stale.
+
+    The 12/16-month rule revises provisional months, which has already once
+    moved this peak (211,842 to 209,930 for the same October 2023 month), so
+    the figure is computed here rather than hardcoded.
+    """
+    arr = wide["flow_arrivals"]
+    peak = arr.max()
+    pre_covid = arr.loc["2010":"2013"].mean()
+    return (
+        f"Non-New Zealand citizen arrivals reached {peak:,.0f} in the year to "
+        f"{_month_label(arr.idxmax())}, close to {peak / pre_covid:.0f} times the "
+        "pre-COVID norm. Scroll to see how old those arrivals were, where they "
+        "came from, and what visas they held."
+    )
 
 SOURCES = [
     "Statistics NZ ITM552301 — migrant arrivals and departures by citizenship.",
@@ -970,14 +983,16 @@ def build_story(quiet: bool = False) -> tuple[Dict[str, Any], Dict[str, Any]]:
     geometries, map_charts, map_steps = build_maps()
 
     charts = {**CHARTS, **map_charts}
+    today = date.today()
     story = {
         "meta": {
             "title": TITLE,
-            "standfirst": STANDFIRST,
+            "standfirst": _standfirst(wide),
             "byline": BYLINE,
             "sources": SOURCES,
             "notes": NOTES,
-            "generated": date.today().isoformat(),
+            "generated": today.isoformat(),
+            "generated_label": f"{today.day} {today.strftime('%B %Y')}",
             "unit": f"{ROLLING_WINDOW}-month rolling sum",
             "months": len(wide),
             "start": wide.index[0].strftime("%Y-%m"),

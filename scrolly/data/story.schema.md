@@ -29,7 +29,8 @@ point annotations.
   "byline": "Built by Autonomous Econ",
   "sources": ["Statistics NZ ITM552301 - ..."],
   "notes": ["Every series is a rolling 12-month sum, ..."],
-  "generated": "2026-07-26", "unit": "12-month rolling sum",
+  "generated": "2026-07-26", "generated_label": "26 July 2026",
+  "unit": "12-month rolling sum",
   "months": 255, "start": "2005-01", "end": "2026-03"
 }
 ```
@@ -37,6 +38,11 @@ point annotations.
 **[extended]** `sources` and `notes` are arrays rather than the skill's single `source`
 string. `App.svelte` renders both in the footer, so they appear only once the reader has
 scrolled past the last step.
+
+**[extended]** `generated` is the build date in ISO form; `generated_label` is the
+same date formatted for display (`"26 July 2026"`). `App.svelte` shows
+`generated_label` under the heading, in italics — it is when the report was built,
+not the latest data month (`meta.end`).
 
 ## `series` — the data
 
