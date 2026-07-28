@@ -11,8 +11,8 @@
   const PAD = 10;
   // Gutter kept clear on each side for annotation labels. The projection is fitted
   // inside what is left, so a label never has to sit on top of the map.
-  const GUTTER = 146;
-  const GUTTER_NARROW = 92;
+  const GUTTER = 124;
+  const GUTTER_NARROW = 78;
   // The left rail every other block on the page sits on: Chart.svelte's margin,
   // the narrative's padding, the hero. The title belongs on this, NOT on the
   // gutter, which is only about where annotation labels may go.
@@ -177,7 +177,24 @@
     const middle = (mapBounds[0][0] + mapBounds[1][0]) / 2;
     for (const item of items) {
       item.side = item.cx < middle ? "left" : "right";
+      item.dist = Math.abs(item.cx - middle);
       item.y = item.cy;
+    }
+
+    // Geography alone can strand every label on one side: a cluster of areas that
+    // all sit south-west of centre sends the whole column left and leaves the
+    // right column empty. Rebalance by count, moving whichever items sit closest
+    // to the midline (the ones with the weakest geographic reason to be on their
+    // side) to the emptier column until the two differ by at most one.
+    let left = items.filter((i) => i.side === "left");
+    let right = items.filter((i) => i.side === "right");
+    while (Math.abs(left.length - right.length) > 1) {
+      const [from, to, flip] =
+        left.length > right.length ? [left, right, "right"] : [right, left, "left"];
+      from.sort((a, b) => a.dist - b.dist);
+      const moved = from.shift();
+      moved.side = flip;
+      to.push(moved);
     }
 
     const top = PAD + LABEL_SLOT / 2;
