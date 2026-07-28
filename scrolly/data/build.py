@@ -841,9 +841,10 @@ def build_maps() -> tuple[Dict[str, Any], Dict[str, Any], List[Dict[str, Any]]]:
             subtitle="Three years ended June 2025",
             # Great Barrier sits 60 km offshore and Rodney runs far north, so
             # fitting to the features leaves the urban boards too small to read.
-            # Frame the city instead, on the same window the Quarto dashboard uses,
+            # Frame the city instead, cropping the top 25% off the Quarto
+            # dashboard's window (little more than open water and rural Rodney),
             # and let the rest fall outside the clip.
-            fit_bbox=[[174.4, -37.15], [175.05, -36.35]],
+            fit_bbox=[[174.4, -37.15], [175.05, -36.55]],
             # Every board worth naming sits in the eastern half, so all three
             # labels go right. Centring the frame would leave a hole on the left
             # and crowd the labels against the right edge.

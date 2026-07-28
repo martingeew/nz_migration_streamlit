@@ -14,7 +14,7 @@
    "Country of last permanent residence (CLPR) is where a person lived before arriving, which is a closer match for 'from India' than citizenship alone.",
    "Figures use the 12/16-month rule and the latest months are provisional."
   ],
-  "generated": "2026-07-26",
+  "generated": "2026-07-28",
   "unit": "12-month rolling sum",
   "months": 255,
   "start": "2005-01",
@@ -550,7 +550,7 @@
     ],
     [
      175.05,
-     -36.35
+     -36.55
     ]
    ],
    "align": "left",

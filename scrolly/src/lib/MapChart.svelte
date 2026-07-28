@@ -13,6 +13,10 @@
   // inside what is left, so a label never has to sit on top of the map.
   const GUTTER = 124;
   const GUTTER_NARROW = 78;
+  // Room reserved at the bottom of the plot for the legend, so it never has to
+  // share space with the map. Reserved whether or not the legend is currently
+  // shown - see the note on `projection` below for why.
+  const LEGEND_H = 50;
   // The left rail every other block on the page sits on: Chart.svelte's margin,
   // the narrative's padding, the hero. The title belongs on this, NOT on the
   // gutter, which is only about where annotation labels may go.
@@ -87,9 +91,14 @@
   // The extent depends only on the width, the gutter and the plot height, never on
   // how many areas the step annotates. That is deliberate: it keeps the map exactly
   // the same size on the overview step and on the annotated one, so scrolling
-  // between them moves labels rather than resizing the country.
+  // between them moves labels rather than resizing the country. LEGEND_H is
+  // reserved here too, unconditionally, so the map's scale never shifts between a
+  // step that shows the legend and one that hides it for annotations.
   const projection = $derived.by(() => {
-    const extent = [[gutter + PAD, PAD], [width - gutter - PAD, plotHeight - PAD]];
+    const extent = [
+      [gutter + PAD, PAD],
+      [width - gutter - PAD, plotHeight - PAD - LEGEND_H]
+    ];
     const p = d3.geoMercator().fitExtent(extent, fitTarget);
 
     // fitExtent centres what it fits. That is right when labels fall on both
@@ -314,12 +323,14 @@
         {/each}
 
         <!-- Legend, centred under the map so it stays clear of the label columns.
-             A phone has no room for both, and an annotated step already states the
-             exact figures, so there the legend gives way to the labels. -->
+             Sits in the LEGEND_H band the projection leaves free below the map, so
+             it never overlaps the geography. A phone has no room for both legend
+             and labels, and an annotated step already states the exact figures, so
+             there the legend gives way to the labels. -->
         {#if showLegend}
         <g
           class="legend"
-          transform="translate({(mapBounds[0][0] + mapBounds[1][0]) / 2 - 75},{plotHeight - 24})"
+          transform="translate({(mapBounds[0][0] + mapBounds[1][0]) / 2 - 75},{plotHeight - LEGEND_H + 18})"
         >
           <defs>
             <linearGradient id={gradientId} x1="0%" x2="100%">
