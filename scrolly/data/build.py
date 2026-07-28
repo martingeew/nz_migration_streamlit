@@ -11,6 +11,7 @@ Inputs:
     data/interim/df_clpr_india_visa_*.pkl
     data/interim/df_clpr_china_visa_*.pkl
     data/interim/df_clpr_philippines_visa_*.pkl
+    data/raw/mbie_w3_work_occupations_nationality_skill_level_may_years.csv
 
 Outputs:
     scrolly/src/data/story.json — meta + colors + labels + charts + steps + series.
@@ -58,6 +59,13 @@ MAP_SOURCES: Dict[str, Dict[str, Any]] = {
     "auckland": {"path": ASSETS / "auckland_albs.geojson", "key": "alb_name_ascii", "tolerance": 0.001},
 }
 
+# MBIE's occupation-level work visa dataset, same file the Quarto dashboard's
+# skill-level charts read (src/dashboard/stories/india_surge.py).
+MBIE_SKILL_PATH = (
+    REPO_ROOT / "data" / "raw" / "mbie_w3_work_occupations_nationality_skill_level_may_years.csv"
+)
+_SKILL_LO_LEVELS = ["Skill level 4", "Skill level 5"]  # ANZSCO 4-5, the "lower-skill" cut
+
 # ── Header text ───────────────────────────────────────────────────────────────
 
 TITLE = "Who is actually arriving in New Zealand"
@@ -73,6 +81,8 @@ SOURCES = [
     "Statistics NZ ITM552101 — migrant arrivals and departures by age group and sex.",
     "Statistics NZ ITM553001 — migrant arrivals by citizenship, visa type and country "
     "of last permanent residence, 12/16-month rule.",
+    "MBIE Migration Data Explorer, W3 — approved work visa decisions by nationality "
+    "and occupation skill level, year ended May.",
 ]
 
 NOTES = [
@@ -82,6 +92,11 @@ NOTES = [
     "Country of last permanent residence (CLPR) is where a person lived before "
     "arriving, which is a closer match for 'from India' than citizenship alone.",
     "Figures use the 12/16-month rule and the latest months are provisional.",
+    "Skill-level figures cover approved work visas where MBIE recorded an "
+    "occupation, about 60% of decisions; open work-right holders such as "
+    "Working Holiday and Relationship visas are largely excluded. They run on "
+    "a year-ended-May calendar, a different measure to the arrivals figures "
+    "elsewhere on this page.",
 ]
 
 # ── Colours ───────────────────────────────────────────────────────────────────
@@ -586,6 +601,26 @@ def _month_label(month: pd.Timestamp) -> str:
     return month.strftime("%B %Y")
 
 
+def _work_visa_lo_skill_share(mbie: pd.DataFrame, nationality: str) -> pd.Series:
+    """Lower-skill (ANZSCO 4-5) share of approved work visas, by year ended May.
+
+    Indexed by 'Year Ended May' (e.g. '2026'). Records with no occupation
+    captured - about 40% of approvals, mostly open work-right holders such as
+    Working Holiday and Relationship visas - are excluded from the total,
+    matching the Quarto dashboard's skill-level charts.
+    """
+    d = mbie[
+        (mbie["Nationality"] == nationality)
+        & (mbie["Decision Type"] == "Approved")
+        & (mbie["Occupation Skill Level"] != "(not recorded)")
+        & (mbie["Year Ended May"] != "2016 PARTIAL (Jul-May)")
+    ]
+    pivot = d.groupby(["Year Ended May", "Occupation Skill Level"])["Count"].sum().unstack(fill_value=0)
+    pct = pivot.div(pivot.sum(axis=1), axis=0) * 100
+    lo_cols = [c for c in _SKILL_LO_LEVELS if c in pct.columns]
+    return pct[lo_cols].sum(axis=1)
+
+
 def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
     """The four map steps. `highlight` names the areas to colour and annotate."""
     nz_sorted = nz.sort_values("value_per1k", ascending=False)
@@ -695,11 +730,19 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
     china_share = wide[CHARTS["china"]["keys"]].div(china_total, axis=0) * 100
     philippines_share = wide[CHARTS["philippines"]["keys"]].div(philippines_total, axis=0) * 100
     work_peak_month = wide["in_work"].idxmax()
-    cn_work_peak_month = wide["cn_work"].idxmax()
     # The Philippines chart's own peak, not a fixed date: work and residence
     # visas grew in lockstep from the border's August 2022 reopening to here.
     ph_peak_month = philippines_total.idxmax()
     ph_reopen = pd.Timestamp("2022-08-01")
+
+    # Skill level of approved work visas, MBIE's occupation dataset rather than
+    # Stats NZ arrivals - a different measure (decisions, not people arriving)
+    # on a different calendar (year ended May), so its own local variable names.
+    mbie = pd.read_csv(MBIE_SKILL_PATH)
+    in_lo_skill = _work_visa_lo_skill_share(mbie, "India")
+    cn_lo_skill = _work_visa_lo_skill_share(mbie, "China")
+    ph_lo_skill = _work_visa_lo_skill_share(mbie, "Philippines")
+    skill_latest = in_lo_skill.index[-1]  # '2026' - same for every country
 
     return [
         {
@@ -794,31 +837,34 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
             ),
         },
         {
-            "chart": "philippines",
-            "highlight": ["ph_work", "ph_residence"],
-            "title": "Work and residence visas powered the Philippines surge",
-            "body": (
-                f"Once the border fully reopened in {_month_label(ph_reopen)}, work and "
-                f"residence visa arrivals grew almost in lockstep, up to "
-                f"{philippines_share['ph_work'].loc[ph_peak_month]:.0f}% and "
-                f"{philippines_share['ph_residence'].loc[ph_peak_month]:.0f}% of "
-                f"{philippines_total.max():,.0f} arrivals in the year to "
-                f"{_month_label(ph_peak_month)}. Both have since fallen back: visitor "
-                f"visas are now the largest band, at "
-                f"{philippines_share['ph_visitor'].loc[latest]:.0f}% in the year to "
-                f"{latest_label}."
-            ),
-        },
-        {
             "chart": "india",
             "highlight": ["in_work"],
-            "title": "Work visas, not students, powered the surge",
+            "title": "Work visas powered the surge",
             "body": (
                 f"Work visa arrivals peaked at {wide['in_work'].max():,.0f} in the year to "
                 f"{_month_label(work_peak_month)}, {india_share['in_work'].max():.0f}% of "
                 "all India arrivals, as the Accredited Employer Work Visa replaced "
                 f"Essential Skills. The April 2024 reforms cut that band to "
-                f"{last['in_work']:,.0f} by {latest_label}."
+                f"{last['in_work']:,.0f} by {latest_label}, and shifted its skill mix too: "
+                f"MBIE's lower-skill share peaked at {in_lo_skill.max():.0f}% in "
+                f"{in_lo_skill.idxmax()} before falling back to "
+                f"{in_lo_skill.loc[skill_latest]:.0f}%."
+            ),
+        },
+        {
+            "chart": "philippines",
+            "highlight": ["ph_work", "ph_residence"],
+            "title": "Work and residence visas powered the surge",
+            "body": (
+                f"Once the border reopened in {_month_label(ph_reopen)}, work and residence "
+                f"visas grew almost in lockstep, reaching "
+                f"{philippines_share['ph_work'].loc[ph_peak_month]:.0f}% and "
+                f"{philippines_share['ph_residence'].loc[ph_peak_month]:.0f}% of "
+                f"{philippines_total.max():,.0f} arrivals by {_month_label(ph_peak_month)}. "
+                f"Visitor visas are now the largest band, at "
+                f"{philippines_share['ph_visitor'].loc[latest]:.0f}%. Its work visas also "
+                f"skew more lower-skill than India's or China's, at "
+                f"{ph_lo_skill.loc[skill_latest]:.0f}%."
             ),
         },
         {
@@ -827,12 +873,13 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
             "title": "China is the mirror image",
             "body": (
                 f"Student visas make up {china_share['cn_student'].loc[latest]:.0f}% of "
-                f"arrivals from China in the year to {latest_label} "
-                f"({last['cn_student']:,.0f} people) and they held their level while work "
-                f"visas fell from a peak of {wide['cn_work'].max():,.0f} in the year to "
-                f"{_month_label(cn_work_peak_month)} to {last['cn_work']:,.0f}. For India "
-                f"the student band covers {india_share['in_student'].loc[latest]:.0f}%."
-                " Now to where all these people end up."
+                f"China's arrivals ({last['cn_student']:,.0f} people) while work visas fell "
+                f"from a peak of {wide['cn_work'].max():,.0f} to {last['cn_work']:,.0f}. For "
+                f"India the student share is {india_share['in_student'].loc[latest]:.0f}%. "
+                f"China's work visas stay the most skilled: MBIE's lower-skill share is just "
+                f"{cn_lo_skill.loc[skill_latest]:.0f}%, against "
+                f"{in_lo_skill.loc[skill_latest]:.0f}% for India and "
+                f"{ph_lo_skill.loc[skill_latest]:.0f}% for the Philippines."
             ),
         },
     ]

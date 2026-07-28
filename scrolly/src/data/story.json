@@ -6,13 +6,15 @@
   "sources": [
    "Statistics NZ ITM552301 \u2014 migrant arrivals and departures by citizenship.",
    "Statistics NZ ITM552101 \u2014 migrant arrivals and departures by age group and sex.",
-   "Statistics NZ ITM553001 \u2014 migrant arrivals by citizenship, visa type and country of last permanent residence, 12/16-month rule."
+   "Statistics NZ ITM553001 \u2014 migrant arrivals by citizenship, visa type and country of last permanent residence, 12/16-month rule.",
+   "MBIE Migration Data Explorer, W3 \u2014 approved work visa decisions by nationality and occupation skill level, year ended May."
   ],
   "notes": [
    "Every series is a rolling 12-month sum, so each point counts the previous year.",
    "Stats NZ does not publish the age breakdown split by citizenship, so the age chart covers all citizenships. Every other chart is non-New Zealand citizens.",
    "Country of last permanent residence (CLPR) is where a person lived before arriving, which is a closer match for 'from India' than citizenship alone.",
-   "Figures use the 12/16-month rule and the latest months are provisional."
+   "Figures use the 12/16-month rule and the latest months are provisional.",
+   "Skill-level figures cover approved work visas where MBIE recorded an occupation, about 60% of decisions; open work-right holders such as Working Holiday and Relationship visas are largely excluded. They run on a year-ended-May calendar, a different measure to the arrivals figures elsewhere on this page."
   ],
   "generated": "2026-07-28",
   "unit": "12-month rolling sum",
@@ -753,21 +755,21 @@
    "body": "These are arrivals whose last permanent residence was India, split by the visa they held. Arrivals from India peaked at 38,468, against 211,842 from other countries."
   },
   {
+   "chart": "india",
+   "highlight": [
+    "in_work"
+   ],
+   "title": "Work visas powered the surge",
+   "body": "Work visa arrivals peaked at 16,404 in the year to February 2024, 43% of all India arrivals, as the Accredited Employer Work Visa replaced Essential Skills. The April 2024 reforms cut that band to 3,635 by March 2026, and shifted its skill mix too: MBIE's lower-skill share peaked at 57% in 2024 before falling back to 36%."
+  },
+  {
    "chart": "philippines",
    "highlight": [
     "ph_work",
     "ph_residence"
    ],
-   "title": "Work and residence visas powered the Philippines surge",
-   "body": "Once the border fully reopened in August 2022, work and residence visa arrivals grew almost in lockstep, up to 36% and 37% of 31,521 arrivals in the year to October 2023. Both have since fallen back: visitor visas are now the largest band, at 33% in the year to March 2026."
-  },
-  {
-   "chart": "india",
-   "highlight": [
-    "in_work"
-   ],
-   "title": "Work visas, not students, powered the surge",
-   "body": "Work visa arrivals peaked at 16,404 in the year to February 2024, 43% of all India arrivals, as the Accredited Employer Work Visa replaced Essential Skills. The April 2024 reforms cut that band to 3,635 by March 2026."
+   "title": "Work and residence visas powered the surge",
+   "body": "Once the border reopened in August 2022, work and residence visas grew almost in lockstep, reaching 36% and 37% of 31,521 arrivals by October 2023. Visitor visas are now the largest band, at 33%. Its work visas also skew more lower-skill than India's or China's, at 37%."
   },
   {
    "chart": "china",
@@ -775,7 +777,7 @@
     "cn_student"
    ],
    "title": "China is the mirror image",
-   "body": "Student visas make up 42% of arrivals from China in the year to March 2026 (6,221 people) and they held their level while work visas fell from a peak of 11,214 in the year to September 2023 to 3,163. For India the student band covers 31%. Now to where all these people end up."
+   "body": "Student visas make up 42% of China's arrivals (6,221 people) while work visas fell from a peak of 11,214 to 3,163. For India the student share is 31%. China's work visas stay the most skilled: MBIE's lower-skill share is just 11%, against 36% for India and 37% for the Philippines."
   },
   {
    "chart": "nz-map",
