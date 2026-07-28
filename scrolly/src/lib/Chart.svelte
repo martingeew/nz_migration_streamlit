@@ -163,8 +163,15 @@
   });
 
   // ── Right-edge labels ────────────────────────────────────────────────────────
-  // Placed at the vertical midpoint of each band's last value, then pushed apart
+  // Placed at the vertical midpoint of each band's last value, then decluttered
   // so thin neighbouring bands do not print on top of each other.
+  //
+  // A one-directional push (top to bottom) cascades: a cluster of three or four
+  // close-valued bands drags every label below it down by one gap each, so the
+  // last label can end up displaced by 30-40px from the band it names, even
+  // past the axis it should sit beside. Two passes - push down from the top,
+  // pull up from the bottom - then averaging the two spreads the cluster around
+  // its true position instead of dragging it toward one end.
 
   const labels = $derived.by(() => {
     const minShare = width < 720 ? LABEL_MIN_SHARE_NARROW : LABEL_MIN_SHARE;
@@ -175,10 +182,17 @@
     if (chart.line) placed.push({key: chart.line, y: yScale(last[chart.line])});
 
     placed.sort((a, b) => a.y - b.y);
-    for (let i = 1; i < placed.length; i += 1) {
-      const gap = placed[i].y - placed[i - 1].y;
-      if (gap < LABEL_GAP) placed[i].y = placed[i - 1].y + LABEL_GAP;
+
+    const down = placed.map((p) => p.y);
+    for (let i = 1; i < down.length; i += 1) {
+      down[i] = Math.max(down[i], down[i - 1] + LABEL_GAP);
     }
+    const up = placed.map((p) => p.y);
+    for (let i = up.length - 2; i >= 0; i -= 1) {
+      up[i] = Math.min(up[i], up[i + 1] - LABEL_GAP);
+    }
+    placed.forEach((p, i) => { p.y = (down[i] + up[i]) / 2; });
+
     return placed;
   });
 

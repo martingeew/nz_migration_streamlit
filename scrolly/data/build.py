@@ -637,7 +637,7 @@ def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
 
 
 def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
-    """The nine time-series scroll steps, with every figure read from the data.
+    """The ten time-series scroll steps, with every figure read from the data.
 
     `chart` names the entry in CHARTS to draw; `highlight` lists the bands the
     commentary is about, which stay solid while the rest fade back.
@@ -728,6 +728,20 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
                 f"{mid_share.loc[baseline]:.0f}% in the year to "
                 f"{_month_label(baseline)}. They have since settled back to "
                 f"{mid_share.loc[latest]:.0f}%."
+            ),
+        },
+        {
+            "chart": "nationality",
+            "highlight": [],
+            "title": "Three names beyond India and China",
+            "body": (
+                f"The UK and Australia are named because they were the two largest "
+                f"non-NZ sources in {_month_label(first)}, at "
+                f"{cit_share['cit_uk'].loc[first]:.0f}% and "
+                f"{cit_share['cit_australia'].loc[first]:.0f}% of arrivals. The "
+                f"Philippines is named too: from {cit_share['cit_philippines'].loc[first]:.1f}% "
+                f"back then it has grown to {cit_share['cit_philippines'].loc[latest]:.0f}%, "
+                "now bigger than the UK or Australia on their own."
             ),
         },
         {
@@ -871,6 +885,7 @@ def build_story(quiet: bool = False) -> tuple[Dict[str, Any], Dict[str, Any]]:
             "months": len(wide),
             "start": wide.index[0].strftime("%Y-%m"),
             "end": wide.index[-1].strftime("%Y-%m"),
+            "last_update": _month_label(wide.index[-1]),
         },
         "colors": COLORS,
         "labels": LABELS,

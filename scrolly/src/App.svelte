@@ -35,6 +35,7 @@
     </a>
   </p>
   <h1>{data.meta.title}</h1>
+  <p class="last-update">Last update: {data.meta.last_update}</p>
   <p class="standfirst">{data.meta.standfirst}</p>
   <p class="kicker">Scroll to advance.</p>
 </header>
@@ -69,9 +70,6 @@
   {#each data.meta.notes as note}
     <p class="data-note">{note}</p>
   {/each}
-  <p class="data-note">
-    Data to {data.meta.end}, generated {data.meta.generated}. {data.meta.byline}.
-  </p>
 </footer>
 
 <style>
@@ -114,7 +112,13 @@
   .hero h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     line-height: 1.1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .last-update {
+    font-size: 0.85rem;
+    color: var(--faint);
+    margin: 0 0 1.25rem;
   }
 
   .standfirst {

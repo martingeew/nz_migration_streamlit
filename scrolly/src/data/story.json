@@ -18,7 +18,8 @@
   "unit": "12-month rolling sum",
   "months": 255,
   "start": "2005-01",
-  "end": "2026-03"
+  "end": "2026-03",
+  "last_update": "March 2026"
  },
  "colors": {
   "flow_arrivals": "#5BA8DE",
@@ -701,6 +702,12 @@
    ],
    "title": "The 30s and 40s peaked with the post-Covid surge",
    "body": "Prime-working-age arrivals reached 43% of the total in the year to September 2023, up from 33% in the year to March 2019. They have since settled back to 34%."
+  },
+  {
+   "chart": "nationality",
+   "highlight": [],
+   "title": "Three names beyond India and China",
+   "body": "The UK and Australia are named because they were the two largest non-NZ sources in January 2005, at 19% and 10% of arrivals. The Philippines is named too: from 1.6% back then it has grown to 10%, now bigger than the UK or Australia on their own."
   },
   {
    "chart": "nationality",
