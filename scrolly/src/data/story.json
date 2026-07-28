@@ -14,7 +14,8 @@
    "Stats NZ does not publish the age breakdown split by citizenship, so the age chart covers all citizenships. Every other chart is non-New Zealand citizens.",
    "Country of last permanent residence (CLPR) is where a person lived before arriving, which is a closer match for 'from India' than citizenship alone.",
    "Figures use the 12/16-month rule and the latest months are provisional.",
-   "Skill-level figures cover approved work visas where MBIE recorded an occupation, about 60% of decisions; open work-right holders such as Working Holiday and Relationship visas are largely excluded. They run on a year-ended-May calendar, a different measure to the arrivals figures elsewhere on this page."
+   "Skill-level figures cover approved work visas where MBIE recorded an occupation, about 60% of decisions; open work-right holders such as Working Holiday and Relationship visas are largely excluded. They run on a year-ended-May calendar, a different measure to the arrivals figures elsewhere on this page.",
+   "'Lower-skill' follows MBIE's ANZSCO skill-level scale: Level 1 is the highest, typically a bachelor's degree or higher, and Level 5 the lowest, typically no formal qualification beyond secondary school. This story counts Levels 4 and 5 combined as lower-skill."
   ],
   "generated": "2026-07-28",
   "unit": "12-month rolling sum",
@@ -769,7 +770,7 @@
     "ph_residence"
    ],
    "title": "Work and residence visas powered the surge",
-   "body": "Once the border reopened in August 2022, work and residence visas grew almost in lockstep, reaching 36% and 37% of 31,521 arrivals by October 2023. Visitor visas are now the largest band, at 33%. Its work visas run about as lower-skill as India's and far above China's: 37% in 2026 against 36% and 11%."
+   "body": "Once the border reopened in August 2022, work and residence visas grew almost in lockstep, reaching 36% and 37% of 31,521 arrivals by October 2023. Visitor visas are now the largest band, at 33%. Work visa holders have a similar share of low-skilled visas as India: 37% in 2026."
   },
   {
    "chart": "china",

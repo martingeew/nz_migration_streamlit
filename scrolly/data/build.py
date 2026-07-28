@@ -97,6 +97,10 @@ NOTES = [
     "Working Holiday and Relationship visas are largely excluded. They run on "
     "a year-ended-May calendar, a different measure to the arrivals figures "
     "elsewhere on this page.",
+    "'Lower-skill' follows MBIE's ANZSCO skill-level scale: Level 1 is the "
+    "highest, typically a bachelor's degree or higher, and Level 5 the "
+    "lowest, typically no formal qualification beyond secondary school. This "
+    "story counts Levels 4 and 5 combined as lower-skill.",
 ]
 
 # ── Colours ───────────────────────────────────────────────────────────────────
@@ -863,11 +867,9 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
                 f"{philippines_share['ph_residence'].loc[ph_peak_month]:.0f}% of "
                 f"{philippines_total.max():,.0f} arrivals by {_month_label(ph_peak_month)}. "
                 f"Visitor visas are now the largest band, at "
-                f"{philippines_share['ph_visitor'].loc[latest]:.0f}%. Its work visas run about "
-                f"as lower-skill as India's and far above China's: "
-                f"{ph_lo_skill.loc[skill_latest]:.0f}% in {skill_latest} against "
-                f"{in_lo_skill.loc[skill_latest]:.0f}% and "
-                f"{cn_lo_skill.loc[skill_latest]:.0f}%."
+                f"{philippines_share['ph_visitor'].loc[latest]:.0f}%. Work visa holders have "
+                f"a similar share of low-skilled visas as India: "
+                f"{ph_lo_skill.loc[skill_latest]:.0f}% in {skill_latest}."
             ),
         },
         {
