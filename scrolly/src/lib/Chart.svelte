@@ -14,9 +14,11 @@
   const FADE_MS = 450;       // cross-fade between charts
   const LABEL_GAP = 13;      // minimum px between two right-edge labels
   // Thin bands lose their label rather than stack up in the right margin. A
-  // phone has less room for the pile, so it drops them sooner.
+  // phone has less room for the pile, so it drops them sooner - but 0.08 was
+  // dropping legitimate bands (age 50-64 and 65+, at 7% and 4%), not just
+  // slivers, so it only trims genuinely thin ones now.
   const LABEL_MIN_SHARE = 0.03;
-  const LABEL_MIN_SHARE_NARROW = 0.08;
+  const LABEL_MIN_SHARE_NARROW = 0.04;
 
   // Border closure, marked the same way the Quarto dashboard marks it.
   const BORDER_MARKS = [
