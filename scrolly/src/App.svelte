@@ -29,7 +29,11 @@
 </script>
 
 <header class="hero">
-  <p class="byline">{data.meta.byline}</p>
+  <p class="byline">
+    <a href="https://autonomousecon.substack.com" target="_blank" rel="noopener">
+      {data.meta.byline} 🔗
+    </a>
+  </p>
   <h1>{data.meta.title}</h1>
   <p class="standfirst">{data.meta.standfirst}</p>
   <p class="kicker">Scroll to advance.</p>
@@ -96,6 +100,15 @@
     text-transform: uppercase;
     color: var(--faint);
     margin: 0 0 1rem;
+  }
+
+  .byline a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .byline a:hover {
+    text-decoration: underline;
   }
 
   .hero h1 {

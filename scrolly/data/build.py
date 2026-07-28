@@ -107,8 +107,8 @@ COLORS: Dict[str, str] = {
     "age_20s": "#C8E9A0",
     "age_30s": "#8ED4A8",
     "age_40s": "#5CBBAB",
-    "age_50_64": "#37A0AE",
-    "age_65p": "#2C7FA8",
+    "age_50_64": "#4FB8C4",
+    "age_65p": "#4AA0C2",
     # Chart 3 — arrivals by nationality
     "cit_india": _RED,
     "cit_china": _YELLOW,
@@ -169,7 +169,7 @@ CHARTS: Dict[str, Dict[str, Any]] = {
         "mode": "mirror",
         "y": [-60000, 220000],
         "title": "Non-NZ citizen arrivals, departures and net migration",
-        "subtitle": "Rolling 12-month sum, arrivals above the line and departures below",
+        "subtitle": "Rolling 12-month sum",
     },
     "age": {
         "keys": ["age_u20", "age_20s", "age_30s", "age_40s", "age_50_64", "age_65p"],
@@ -608,8 +608,7 @@ def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
                 f"{nz_top.iloc[0]['net']:,.0f} people. {biggest['label']} sits "
                 f"{_ordinal(biggest_rank)} on the rate at "
                 f"{biggest['value_per1k']:.1f} and takes {biggest['net']:,.0f}, "
-                f"{biggest_share:.0f}% of the national total. A per-capita leader "
-                "board is a list of small places."
+                f"{biggest_share:.0f}% of the national total."
             ),
         },
         {
@@ -631,7 +630,7 @@ def _map_steps(nz: pd.DataFrame, akl: pd.DataFrame) -> List[Dict[str, Any]]:
                 f"{akl_top.iloc[0]['label']} took {akl_top.iloc[0]['net']:,.0f} people, "
                 f"{akl_top.iloc[0]['value_per1k']:.0f} per 1,000 residents, against "
                 f"{akl_low['value_per1k']:.1f} in {akl_low['label']} at the other end "
-                "of the city. Sources and notes follow below."
+                "of the city."
             ),
         },
     ]
@@ -649,7 +648,6 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
 
     # Chart 1 — how far arrivals moved against how little departures did.
     arr = wide["flow_arrivals"]
-    dep = -wide["flow_departures"]
     arr_peak_month = arr.idxmax()
 
     # Chart 2 — age shares now, and where the 30s-40s share peaked.
@@ -683,9 +681,9 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
             "highlight": [],
             "title": "Two decades of migrant flows",
             "body": (
-                "Every point counts the previous 12 months. Arrivals of non-New Zealand "
-                "citizens sit above the line, their departures below it, and the white "
-                "line is the net difference between the two."
+                "Arrivals of non-New Zealand citizens sit above the line, their "
+                "departures below it, and the white line is the net difference "
+                "between the two."
             ),
         },
         {
@@ -693,9 +691,9 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
             "highlight": ["flow_arrivals"],
             "title": "Arrivals did all the moving",
             "body": (
-                f"Arrivals ran from a low of {arr.min():,.0f} to a peak of {arr.max():,.0f} "
-                f"in the year to {_month_label(arr_peak_month)}. Departures stayed inside a "
-                f"band of {dep.min():,.0f} to {dep.max():,.0f} across the same two decades."
+                f"Arrivals drive the cycles, hitting a low of {arr.min():,.0f} as "
+                f"borders closed to a peak of {arr.max():,.0f} in the year to "
+                f"{_month_label(arr_peak_month)}."
             ),
         },
         {
@@ -723,7 +721,7 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
         {
             "chart": "age",
             "highlight": ["age_30s", "age_40s"],
-            "title": "The 30s and 40s peaked with the surge",
+            "title": "The 30s and 40s peaked with the post-Covid surge",
             "body": (
                 f"Prime-working-age arrivals reached {mid_share.max():.0f}% of the total "
                 f"in the year to {_month_label(mid_peak_month)}, up from "
@@ -746,11 +744,12 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
         {
             "chart": "india",
             "highlight": [],
-            "title": "Zoom in on India",
+            "title": "Zooming in on India",
             "body": (
                 "These are arrivals whose last permanent residence was India, split by the "
-                "visa they held. Watch the axis: the whole chart peaks at "
-                f"{india_total.max():,.0f}, against {cit_total.max():,.0f} on the last one."
+                "visa they held. Arrivals from India peaked at "
+                f"{india_total.max():,.0f}, against {cit_total.max():,.0f} from other "
+                "countries."
             ),
         },
         {
@@ -771,8 +770,8 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
             "title": "China is the mirror image",
             "body": (
                 f"Student visas make up {china_share['cn_student'].loc[latest]:.0f}% of "
-                f"arrivals from China in the year to {latest_label}, "
-                f"{last['cn_student']:,.0f} people, and they held their level while work "
+                f"arrivals from China in the year to {latest_label} "
+                f"({last['cn_student']:,.0f} people) and they held their level while work "
                 f"visas fell from a peak of {wide['cn_work'].max():,.0f} in the year to "
                 f"{_month_label(cn_work_peak_month)} to {last['cn_work']:,.0f}. For India "
                 f"the student band covers {india_share['in_student'].loc[latest]:.0f}%."

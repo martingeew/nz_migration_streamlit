@@ -28,8 +28,8 @@
   "age_20s": "#C8E9A0",
   "age_30s": "#8ED4A8",
   "age_40s": "#5CBBAB",
-  "age_50_64": "#37A0AE",
-  "age_65p": "#2C7FA8",
+  "age_50_64": "#4FB8C4",
+  "age_65p": "#4AA0C2",
   "cit_india": "#E8705F",
   "cit_china": "#F2C14E",
   "cit_philippines": "#A98CD6",
@@ -88,7 +88,7 @@
     220000
    ],
    "title": "Non-NZ citizen arrivals, departures and net migration",
-   "subtitle": "Rolling 12-month sum, arrivals above the line and departures below",
+   "subtitle": "Rolling 12-month sum",
    "kind": "series"
   },
   "age": {
@@ -668,7 +668,7 @@
    "chart": "flows",
    "highlight": [],
    "title": "Two decades of migrant flows",
-   "body": "Every point counts the previous 12 months. Arrivals of non-New Zealand citizens sit above the line, their departures below it, and the white line is the net difference between the two."
+   "body": "Arrivals of non-New Zealand citizens sit above the line, their departures below it, and the white line is the net difference between the two."
   },
   {
    "chart": "flows",
@@ -676,7 +676,7 @@
     "flow_arrivals"
    ],
    "title": "Arrivals did all the moving",
-   "body": "Arrivals ran from a low of 18,261 to a peak of 211,842 in the year to October 2023. Departures stayed inside a band of 35,353 to 57,945 across the same two decades."
+   "body": "Arrivals drive the cycles, hitting a low of 18,261 as borders closed to a peak of 211,842 in the year to October 2023."
   },
   {
    "chart": "age",
@@ -699,7 +699,7 @@
     "age_30s",
     "age_40s"
    ],
-   "title": "The 30s and 40s peaked with the surge",
+   "title": "The 30s and 40s peaked with the post-Covid surge",
    "body": "Prime-working-age arrivals reached 43% of the total in the year to September 2023, up from 33% in the year to March 2019. They have since settled back to 34%."
   },
   {
@@ -714,8 +714,8 @@
   {
    "chart": "india",
    "highlight": [],
-   "title": "Zoom in on India",
-   "body": "These are arrivals whose last permanent residence was India, split by the visa they held. Watch the axis: the whole chart peaks at 38,468, against 211,842 on the last one."
+   "title": "Zooming in on India",
+   "body": "These are arrivals whose last permanent residence was India, split by the visa they held. Arrivals from India peaked at 38,468, against 211,842 from other countries."
   },
   {
    "chart": "india",
@@ -731,7 +731,7 @@
     "cn_student"
    ],
    "title": "China is the mirror image",
-   "body": "Student visas make up 42% of arrivals from China in the year to March 2026, 6,221 people, and they held their level while work visas fell from a peak of 11,214 in the year to September 2023 to 3,163. For India the student band covers 31%. Now to where all these people end up."
+   "body": "Student visas make up 42% of arrivals from China in the year to March 2026 (6,221 people) and they held their level while work visas fell from a peak of 11,214 in the year to September 2023 to 3,163. For India the student band covers 31%. Now to where all these people end up."
   },
   {
    "chart": "nz-map",
@@ -750,7 +750,7 @@
     "Auckland"
    ],
    "title": "The highest rates are not the biggest places",
-   "body": "Queenstown-Lakes leads at 70.8 per 1,000, but that is only 3,810 people. Auckland sits 7th on the rate at 55.0 and takes 99,800, 52% of the national total. A per-capita leader board is a list of small places."
+   "body": "Queenstown-Lakes leads at 70.8 per 1,000, but that is only 3,810 people. Auckland sits 7th on the rate at 55.0 and takes 99,800, 52% of the national total."
   },
   {
    "chart": "akl-map",
@@ -766,7 +766,7 @@
     "Waitemata"
    ],
    "title": "South and central Auckland absorb the most",
-   "body": "\u014ctara-Papatoetoe took 10,100 people, 102 per 1,000 residents, against 1.2 in Rodney at the other end of the city. Sources and notes follow below."
+   "body": "\u014ctara-Papatoetoe took 10,100 people, 102 per 1,000 residents, against 1.2 in Rodney at the other end of the city."
   }
  ],
  "series": [
