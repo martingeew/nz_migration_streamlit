@@ -859,7 +859,7 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
         {
             "chart": "philippines",
             "highlight": ["ph_work", "ph_residence"],
-            "title": "Work and residence visas powered the surge",
+            "title": "The Philippines has more varied visa types",
             "body": (
                 f"Once the border reopened in {_month_label(ph_reopen)}, work and residence "
                 f"visas grew almost in lockstep, reaching "
@@ -875,7 +875,7 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
         {
             "chart": "china",
             "highlight": ["cn_student"],
-            "title": "China is the mirror image",
+            "title": "Students dominate China's arrivals",
             "body": (
                 f"Student visas make up {china_share['cn_student'].loc[latest]:.0f}% of "
                 f"China's arrivals ({last['cn_student']:,.0f} people) while work visas fell "
