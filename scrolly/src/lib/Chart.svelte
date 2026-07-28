@@ -13,12 +13,18 @@
   const TWEEN_MS = 700;      // y-axis retarget
   const FADE_MS = 450;       // cross-fade between charts
   const LABEL_GAP = 13;      // minimum px between two right-edge labels
-  // Thin bands lose their label rather than stack up in the right margin. A
-  // phone has less room for the pile, so it drops them sooner - but 0.08 was
-  // dropping legitimate bands (age 50-64 and 65+, at 7% and 4%), not just
-  // slivers, so it only trims genuinely thin ones now.
-  const LABEL_MIN_SHARE = 0.03;
-  const LABEL_MIN_SHARE_NARROW = 0.04;
+  // Thin bands lose their label rather than stack up in the right margin.
+  // The real "_other" catch-all bands sit under 0.5% of the stack, while
+  // every named band across every chart sits above 3.8% - a wide gap - so
+  // one threshold well below that gap is enough, on both mobile and desktop.
+  // A tighter mobile-only threshold (previously 0.04, before that 0.08) kept
+  // clipping legitimate bands as their share drifted a few tenths of a point
+  // release to release (age 65+ at 3.87%, UK at 3.97% both fell under 0.04
+  // after the May 2026 data refresh) - the space this filter is protecting is
+  // vertical label crowding, which the decluttering pass below already
+  // handles, not something that needs a stricter cutoff on a narrow screen.
+  const LABEL_MIN_SHARE = 0.015;
+  const LABEL_MIN_SHARE_NARROW = 0.015;
 
   // Border closure, marked the same way the Quarto dashboard marks it.
   const BORDER_MARKS = [
