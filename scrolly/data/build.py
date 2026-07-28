@@ -846,9 +846,10 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
                 "all India arrivals, as the Accredited Employer Work Visa replaced "
                 f"Essential Skills. The April 2024 reforms cut that band to "
                 f"{last['in_work']:,.0f} by {latest_label}, and shifted its skill mix too: "
-                f"MBIE's lower-skill share peaked at {in_lo_skill.max():.0f}% in "
+                f"the lower-skill share peaked at {in_lo_skill.max():.0f}% in "
                 f"{in_lo_skill.idxmax()} before falling back to "
-                f"{in_lo_skill.loc[skill_latest]:.0f}%."
+                f"{in_lo_skill.loc[skill_latest]:.0f}% in {skill_latest}, according to MBIE "
+                "data."
             ),
         },
         {
@@ -862,9 +863,11 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
                 f"{philippines_share['ph_residence'].loc[ph_peak_month]:.0f}% of "
                 f"{philippines_total.max():,.0f} arrivals by {_month_label(ph_peak_month)}. "
                 f"Visitor visas are now the largest band, at "
-                f"{philippines_share['ph_visitor'].loc[latest]:.0f}%. Its work visas also "
-                f"skew more lower-skill than India's or China's, at "
-                f"{ph_lo_skill.loc[skill_latest]:.0f}%."
+                f"{philippines_share['ph_visitor'].loc[latest]:.0f}%. Its work visas run about "
+                f"as lower-skill as India's and far above China's: "
+                f"{ph_lo_skill.loc[skill_latest]:.0f}% in {skill_latest} against "
+                f"{in_lo_skill.loc[skill_latest]:.0f}% and "
+                f"{cn_lo_skill.loc[skill_latest]:.0f}%."
             ),
         },
         {
@@ -876,8 +879,8 @@ def _steps(wide: pd.DataFrame) -> List[Dict[str, Any]]:
                 f"China's arrivals ({last['cn_student']:,.0f} people) while work visas fell "
                 f"from a peak of {wide['cn_work'].max():,.0f} to {last['cn_work']:,.0f}. For "
                 f"India the student share is {india_share['in_student'].loc[latest]:.0f}%. "
-                f"China's work visas stay the most skilled: MBIE's lower-skill share is just "
-                f"{cn_lo_skill.loc[skill_latest]:.0f}%, against "
+                f"China's work visas stay the most skilled: its lower-skill share was just "
+                f"{cn_lo_skill.loc[skill_latest]:.0f}% in {skill_latest}, against "
                 f"{in_lo_skill.loc[skill_latest]:.0f}% for India and "
                 f"{ph_lo_skill.loc[skill_latest]:.0f}% for the Philippines."
             ),
