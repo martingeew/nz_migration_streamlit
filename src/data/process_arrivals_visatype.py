@@ -3,6 +3,9 @@ import os
 
 import pandas as pd
 
+# Resolve data/ from this file's location so the script runs from any directory
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data")
+
 # --------------------------------------------------------------
 # 1. Define objective
 # --------------------------------------------------------------
@@ -205,8 +208,8 @@ def process_migration_file(input_file, output_date_suffix):
         if not validate_output(df_processed):
             raise ValueError("Output validation failed")
 
-        output_pickle = f"../../data/interim/df_direction_visa_{output_date_suffix}.pkl"
-        output_csv = f"../../data/interim/df_direction_visa_{output_date_suffix}.csv"
+        output_pickle = f"{DATA_DIR}/interim/df_direction_visa_{output_date_suffix}.pkl"
+        output_csv = f"{DATA_DIR}/interim/df_direction_visa_{output_date_suffix}.csv"
 
         print(f"Saving processed data...")
         df_processed.to_pickle(output_pickle)
@@ -238,7 +241,7 @@ def main():
 
     print("=== Arrivals by Visa Type Data Processing ===")
 
-    files = sorted(glob.glob("../../data/raw/ITM552201_*.csv"))
+    files = sorted(glob.glob(f"{DATA_DIR}/raw/ITM552201_*.csv"))
     if not files:
         raise FileNotFoundError("No ITM552201_*.csv files found in data/raw/")
 

@@ -9,7 +9,8 @@ Run from repo root. Each script auto-detects the latest matching raw file in `da
 | `src/data/process_direction_citizenship.py` | ITM552301 | `df_citizenship_direction_{date}.pkl/csv` |
 | `src/data/process_direction_age_sex.py` | ITM552101 | `df_direction_age_sex_{date}.pkl/csv` |
 | `src/data/process_arrivals_visatype.py` | ITM552201 | `df_direction_visa_{date}.pkl/csv` |
-| `src/data/process_clpr_india_visa.py` | ITM553001 | `df_clpr_india_visa_{date}.pkl/csv` |
+| `src/data/process_clpr_india_visa.py` | ITM553001 | `df_clpr_india_visa_{date}.pkl/csv` (also china, philippines) |
+| `src/data/process_citizenship_visa.py` | ITM553001 | `df_citizenship_visa_{date}.pkl/csv` (Streamlit "Citizenship, Visa"; `Citizenship` col = CLPR country) |
 | `src/data/process_direction_region.py` | ITM553701 (4 files: total/nz/au/non_nz) | `df_direction_region_{date}.pkl/csv` |
 
 Download latest raw files first: `python src/data/download_stats_nz.py`

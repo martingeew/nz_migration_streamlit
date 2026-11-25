@@ -1,14 +1,20 @@
 """
 Process Stats NZ ITM553001 raw CSV (citizenship x visa type) into long-format interim data.
 
-Input:  data/raw/ITM553001_*.csv  (6-row header, 175 data columns: 7 visa types x 25 citizenships)
+Input:  data/raw/ITM553001_*.csv  (6-row header, 168 data columns: 7 visa types x 24 CLPR countries)
+        Downloaded with Direction = Arrivals and Citizenship = Non-New Zealand only.
 Output: data/interim/df_citizenship_visa_{YYYYMMDD}.pkl / .csv
 
 Schema:
     Month         datetime64[ns]
     Count         float64
     Visa          object  (Residence, Student, Visitor, Work, NZ and AU citizens, Other, TOTAL)
-    Citizenship   object  (24 countries + Total All Countries...)
+    Citizenship   object  (24 values: 22 countries + Not Stated + Total All Countries of Last
+                           Permanent Residence)
+
+Note: the "Citizenship" column holds the CLPR country (country of last permanent
+residence), not citizenship. Every row is Non-New Zealand citizens. The column name is
+kept because the Streamlit app's "Citizenship, Visa" breakdown reads it.
 """
 
 from __future__ import annotations
